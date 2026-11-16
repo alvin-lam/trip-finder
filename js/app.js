@@ -12,7 +12,7 @@
     prefs: E.normalizePrefs({}),
     results: null,
     focusRegion: null,
-    explore: { q: "", region: "", month: 0, interest: "", cost: 5 },
+    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "" },
     saved: new Set(),
   };
 
@@ -21,6 +21,30 @@
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const SEG_COLORS = ["#d9572b", "#1f7a74", "#7a5ab8", "#b8862b"];
+  const KIND_LABELS = { country: "Country", microstate: "Microstate", territory: "Territory", micronation: "Micronation" };
+  const KIND_PLURAL = { country: "countries", microstate: "microstates", territory: "territories", micronation: "micronations" };
+
+  // Small pill naming the kind of place, with the full political status as a tooltip.
+  function kindTag(c) {
+    if (c.kind === "country") return "";
+    return `<span class="kind kind--${c.kind}" title="${esc(c.status)}">${KIND_LABELS[c.kind]}</span>`;
+  }
+
+  // Territories and micronations need their status spelled out; for countries
+  // and microstates the region is more useful (the pill already says "Microstate").
+  function placeMeta(c) {
+    return c.kind === "territory" || c.kind === "micronation" ? esc(c.status) : esc(c.regionObj.name);
+  }
+
+  function kindCounts() {
+    const n = {};
+    index.countries.forEach((c) => (n[c.kind] = (n[c.kind] || 0) + 1));
+    const parts = Object.keys(KIND_PLURAL)
+      .filter((k) => n[k])
+      .map((k) => `${n[k]} ${KIND_PLURAL[k]}`);
+    return parts.length > 1 ? `${parts.slice(0, -1).join(", ")} and ${parts[parts.length - 1]}` : parts[0];
+  }
+
   const POP_LABELS = { 1: "Hidden gem", 2: "Lesser known", 3: "Popular", 4: "Very popular", 5: "Iconic" };
   const interestLabel = Object.fromEntries(index.interests.map((i) => [i.id, i]));
 
@@ -156,7 +180,7 @@
         <div>
           <p class="eyebrow">Trip finder</p>
           <h1>Not sure where to go next?</h1>
-          <p class="hero__lead">Answer five quick questions about what you enjoy, when you can travel and what you want to spend. We will rank ${index.regions.length} world regions, ${index.countries.length} countries and ${index.cities.length} cities, then sketch a route for your trip.</p>
+          <p class="hero__lead">Answer five quick questions about what you enjoy, when you can travel and what you want to spend. We will rank ${index.regions.length} world regions and ${kindCounts()}, covering ${index.cities.length} cities and places, then sketch a route for your trip.</p>
           <div class="row">
             <button class="btn btn--primary" data-action="start">Find my destination →</button>
             ${hasPrev ? `<button class="btn btn--ghost" data-action="show-results">See my last results</button>` : ""}
@@ -421,7 +445,7 @@
 
       <section class="section" aria-labelledby="h-countries">
         <div class="section__head">
-          <h3 id="h-countries">2. ${focus ? `Countries in ${esc(focus.region.name)}` : "Top countries"}</h3>
+          <h3 id="h-countries">2. ${focus ? `Destinations in ${esc(focus.region.name)}` : "Top destinations"}</h3>
           <span class="muted" style="font-size:.9rem">Suggested route for ${E.LENGTHS[state.prefs.length].days} days included</span>
         </div>
         <div class="cards">
@@ -461,7 +485,7 @@
           <span class="card__flag" aria-hidden="true">${c.flag}</span>
           <div class="card__title">
             <h3>${esc(c.name)}${isTop ? `<span class="pill">Best match</span>` : ""}</h3>
-            <div class="card__meta">${esc(c.regionObj.name)}</div>
+            <div class="card__meta">${kindTag(c)}${placeMeta(c)}</div>
           </div>
           ${ring(cr.score, "ring--lg")}
         </div>
@@ -473,7 +497,7 @@
         ${monthStrip(c.best, state.prefs.month)}
         <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span></div>
         <div class="itinerary">
-          <div class="itinerary__title">Suggested ${days}-day route</div>
+          <div class="itinerary__title">${cr.spareDays > 0 ? `Suggested ${days}-day stop` : `Suggested ${days}-day route`}</div>
           <div class="itinerary__bar">
             ${cr.itinerary
               .map(
@@ -486,13 +510,21 @@
             ${cr.itinerary
               .map(
                 (s, i) =>
-                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button><span class="muted">${s.days} days</span></li>`
+                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button><span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
               )
               .join("")}
           </ol>
-          ${cr.pairWith ? `<div class="itinerary__pair">Got extra time? Pair it with ${cr.pairWith.flag} <a href="#" data-action="open-country" data-id="${cr.pairWith.id}">${esc(cr.pairWith.name)}</a>.</div>` : ""}
+          ${
+            cr.pairWith
+              ? `<div class="itinerary__pair">${
+                  cr.spareDays > 0
+                    ? `Spend the other ${cr.spareDays} ${cr.spareDays === 1 ? "day" : "days"} in`
+                    : "Got extra time? Pair it with"
+                } ${cr.pairWith.flag} <a href="#" data-action="open-country" data-id="${cr.pairWith.id}">${esc(cr.pairWith.name)}</a>.</div>`
+              : ""
+          }
         </div>
-        <details class="more">
+        ${cr.cities.length > 1 ? `<details class="more">
           <summary>All ${cr.cities.length} places ranked</summary>
           <ul class="city-list">
             ${cr.cities
@@ -509,9 +541,9 @@
               )
               .join("")}
           </ul>
-        </details>
+        </details>` : ""}
         <div class="card__actions">
-          <button class="btn btn--ghost btn--sm" data-action="save" data-kind="country" data-id="${c.id}">${state.saved.has(`country:${c.id}`) ? "♥ Saved" : "♡ Save country"}</button>
+          <button class="btn btn--ghost btn--sm" data-action="save" data-kind="country" data-id="${c.id}">${state.saved.has(`country:${c.id}`) ? "♥ Saved" : `♡ Save ${KIND_LABELS[c.kind].toLowerCase()}`}</button>
           <button class="btn btn--ghost btn--sm" data-action="open-city" data-id="${cr.cities[0].city.id}">Details</button>
         </div>
       </article>`;
@@ -537,12 +569,16 @@
           <label>Great for<select class="select" data-filter="interest"><option value="">Anything</option>${index.interests
             .map((i) => `<option value="${i.id}">${i.icon} ${esc(i.label)}</option>`)
             .join("")}</select></label>
+          <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
+            .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
+            .join("")}</select></label>
           <label>Max cost<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to ${E.COST_LABELS[c]}`}</option>`)
             .join("")}</select></label>
         </div>
         <div id="explore-results"></div>`;
       el.querySelector('[data-filter="region"]').value = state.explore.region;
+      el.querySelector('[data-filter="kind"]').value = state.explore.kind;
       el.querySelector('[data-filter="month"]').value = state.explore.month;
       el.querySelector('[data-filter="interest"]').value = state.explore.interest;
       el.querySelector('[data-filter="cost"]').value = state.explore.cost;
@@ -559,9 +595,14 @@
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
         const countries = r.countries
-          .filter((c) => c.cost <= f.cost)
+          .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind))
           .map((c) => {
-            const countryHit = !q || c.name.toLowerCase().includes(q) || r.name.toLowerCase().includes(q) || c.blurb.toLowerCase().includes(q);
+            const countryHit =
+              !q ||
+              c.name.toLowerCase().includes(q) ||
+              r.name.toLowerCase().includes(q) ||
+              c.blurb.toLowerCase().includes(q) ||
+              (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             const cities = c.cities.filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
@@ -603,7 +644,7 @@
       <article class="card">
         <div class="card__head">
           <span class="card__flag" aria-hidden="true">${c.flag}</span>
-          <div class="card__title"><h3>${esc(c.name)}</h3><div class="card__meta">Best: ${esc(E.formatMonths(c.best))}</div></div>
+          <div class="card__title"><h3>${esc(c.name)}</h3><div class="card__meta">${kindTag(c)}${c.kind === "territory" || c.kind === "micronation" ? `${esc(c.status)} · ` : ""}Best: ${esc(E.formatMonths(c.best))}</div></div>
           ${heart("country", c.id, c.name)}
         </div>
         <p class="card__blurb">${esc(c.blurb)}</p>
@@ -706,7 +747,7 @@
         <span class="card__flag" aria-hidden="true">${city.country.flag}</span>
         <div style="flex:1;min-width:0">
           <h2 id="detail-title" style="margin:0">${esc(city.name)}</h2>
-          <div class="card__meta">${esc(city.country.name)} · ${esc(city.region.name)}</div>
+          <div class="card__meta">${city.name === city.country.name ? "" : `${esc(city.country.name)} · `}${esc(city.region.name)}${city.country.kind === "country" ? "" : `<br />${kindTag(city.country)}${esc(city.country.status)}`}</div>
         </div>
         ${res ? ring(res.score, "ring--lg") : ""}
       </div>
@@ -918,7 +959,7 @@
       render();
     },
     "clear-filters": () => {
-      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5 };
+      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
     },

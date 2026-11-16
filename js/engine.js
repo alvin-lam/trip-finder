@@ -81,7 +81,7 @@
     const countries = [];
     const cities = [];
     for (const raw of data.COUNTRIES) {
-      const country = { ...raw, cities: [] };
+      const country = { ...raw, kind: raw.kind || "country", maxDays: raw.maxDays || Infinity, cities: [] };
       const region = regionById[raw.region];
       if (!region) throw new Error(`Unknown region ${raw.region} for ${raw.name}`);
       country.regionObj = region;
@@ -295,17 +295,20 @@
   }
 
   /** Split trip days across the chosen stops, weighting by score. */
-  function planItinerary(scoredCities, lengthKey) {
+  // Small places get a capped stay; the rest of the trip goes elsewhere.
+  function planItinerary(scoredCities, lengthKey, maxDays = Infinity) {
     const L = LENGTHS[lengthKey] || LENGTHS.week;
-    const stops = scoredCities.slice(0, Math.min(L.stops, scoredCities.length));
-    if (!stops.length) return [];
-    if (stops.length === 1) return [{ city: stops[0].city, days: L.days }];
+    const total = Math.min(L.days, maxDays);
     const minDays = 2;
-    const spare = L.days - minDays * stops.length;
+    const nStops = Math.min(L.stops, scoredCities.length, Math.max(1, Math.floor(total / minDays)));
+    const stops = scoredCities.slice(0, nStops);
+    if (!stops.length) return [];
+    if (stops.length === 1) return [{ city: stops[0].city, days: total }];
+    const spare = total - minDays * stops.length;
     const weightSum = stops.reduce((a, s) => a + s.score, 0) || 1;
     const plan = stops.map((s) => ({ city: s.city, days: minDays + Math.floor((spare * s.score) / weightSum) }));
     let used = plan.reduce((a, p) => a + p.days, 0);
-    for (let i = 0; used < L.days; i = (i + 1) % plan.length, used++) plan[i].days++;
+    for (let i = 0; used < total; i = (i + 1) % plan.length, used++) plan[i].days++;
     return plan;
   }
 
@@ -338,11 +341,15 @@
       let score = top.reduce((a, r) => a + r.score, 0) / k;
       // Longer trips favour countries that can fill the time with several good stops.
       if (list.length < L.stops) score -= (L.stops - list.length) * 2;
+      // A place you can see in a day or two fits a long trip less well on its own.
+      if (country.maxDays < L.days) score *= 0.85 + (0.15 * country.maxDays) / L.days;
+      const itinerary = planItinerary(list, prefs.length, country.maxDays);
       countryResults.push({
         country,
         score: Math.max(0, Math.round(score)),
         cities: list,
-        itinerary: planItinerary(list, prefs.length),
+        itinerary,
+        spareDays: L.days - itinerary.reduce((a, s) => a + s.days, 0),
         reasons: mergeReasons(top, labels),
         warnings: mergeWarnings(top),
       });
@@ -353,16 +360,24 @@
       .filter((r) => !excluded.has(r.id))
       .map((region) => {
         const cs = countryResults.filter((c) => c.country.region === region.id);
-        const top = cs.slice(0, 2);
+        // Micronations are curiosities; they appear in lists but do not drive region rankings.
+        const top = cs.filter((c) => c.country.kind !== "micronation").slice(0, 2);
         const score = top.length ? Math.round(top.reduce((a, c) => a + c.score, 0) / top.length) : 0;
         return { region, score, countries: cs };
       })
       .sort((a, b) => b.score - a.score);
 
-    // For long trips, suggest pairing the top country with a neighbour in the same region.
+    // Suggest a partner when the trip has spare days or is long: the related
+    // country if there is one (Monaco -> France), else the best neighbour in the region.
     for (const c of countryResults) {
-      if (prefs.length === "long") {
-        const partner = countryResults.find((o) => o !== c && o.country.region === c.country.region);
+      if (prefs.length === "long" || c.spareDays > 0) {
+        const related = c.country.of && countryResults.find((o) => o.country.id === c.country.of);
+        const partner =
+          related ||
+          countryResults.find(
+            (o) => o !== c && o.country.region === c.country.region && o.country.kind !== "micronation" && o.spareDays === 0
+          ) ||
+          countryResults.find((o) => o !== c && o.country.region === c.country.region);
         c.pairWith = partner ? partner.country : null;
       }
     }

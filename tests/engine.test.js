@@ -7,11 +7,14 @@ const index = E.buildIndex(data);
 
 test("dataset is well formed", () => {
   assert.equal(index.regions.length, 12);
+  assert.equal(new Set(index.countries.map((c) => c.id)).size, index.countries.length, "country ids unique");
   for (const c of index.countries) {
     assert.equal(c.temps.length, 12, `${c.name} temps`);
     assert.ok(c.cost >= 1 && c.cost <= 5, `${c.name} cost`);
     assert.ok(c.best.every((m) => m >= 1 && m <= 12), `${c.name} months`);
-    assert.ok(c.cities.length >= 2, `${c.name} cities`);
+    assert.ok(c.cities.length >= (c.kind === "country" ? 2 : 1), `${c.name} cities`);
+    assert.ok(["country", "microstate", "territory", "micronation"].includes(c.kind), `${c.name} kind`);
+    if (c.kind !== "country") assert.ok(c.status, `${c.name} status`);
   }
   assert.equal(new Set(index.cities.map((c) => c.id)).size, index.cities.length, "city ids unique");
 });
@@ -49,7 +52,9 @@ test("itinerary fills the whole trip", () => {
     const r = E.recommend(index, { length });
     for (const c of r.countries) {
       const days = c.itinerary.reduce((a, s) => a + s.days, 0);
-      assert.equal(days, E.LENGTHS[length].days, `${c.country.name} ${length}`);
+      assert.equal(days, Math.min(E.LENGTHS[length].days, c.country.maxDays), `${c.country.name} ${length}`);
+      assert.equal(days + c.spareDays, E.LENGTHS[length].days);
+      if (c.spareDays > 0) assert.ok(c.pairWith, `${c.country.name} should suggest somewhere for spare days`);
     }
   }
 });
@@ -82,4 +87,20 @@ test("temperatures and distances show metric and imperial", () => {
   assert.match(text, /°C \(\d+°F\)/);
   assert.match(text, /km \([\d,]+ mi\)/);
   assert.doesNotMatch(text.replace(/°C \(-?\d+°F\)/g, "").replace(/km \([\d,]+ mi\)/g, ""), /°C|km/);
+});
+
+test("microstates, territories and micronations appear in results", () => {
+  const r = E.recommend(index, { interests: { beach: 2, relax: 2 }, month: 2, climate: "hot", budget: 4 });
+  const kinds = new Set(r.countries.map((c) => c.country.kind));
+  for (const k of ["country", "microstate", "territory", "micronation"]) assert.ok(kinds.has(k), k);
+  const top10 = r.countries.slice(0, 10).map((c) => c.country.kind);
+  assert.ok(top10.includes("territory"), "Caribbean or Pacific territories should rank for luxury beach trips");
+});
+
+test("tiny places pair with their neighbour instead of filling a long trip", () => {
+  const r = E.recommend(index, { interests: { culture: 2 }, length: "two" });
+  const va = r.countries.find((c) => c.country.id === "va");
+  assert.equal(va.itinerary.reduce((a, s) => a + s.days, 0), 1);
+  assert.equal(va.spareDays, 13);
+  assert.equal(va.pairWith.id, "it");
 });
