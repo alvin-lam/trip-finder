@@ -361,3 +361,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .lgbtq-note--welcoming { background: var(--teal-soft); }
 .lgbtq-note--caution { background: var(--warn-soft); }
 .lgbtq-note .muted { font-size: 0.8rem; }
+
+/* Travel advisories: the strongest warning colour, kept on theme tokens. */
+:root { --danger: #b3261e; --danger-soft: #fbe3e1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --danger: #f2a49d; --danger-soft: #3d1a18; } }
+:root[data-theme="dark"] { --danger: #f2a49d; --danger-soft: #3d1a18; }
+.fact--advisory-avoid { background: var(--danger-soft); color: var(--danger); font-weight: 600; }
+.fact--advisory-reconsider { background: var(--warn-soft); color: var(--warn); font-weight: 600; }
+.lgbtq-note.advisory-note--avoid { background: var(--danger-soft); }
+.lgbtq-note.advisory-note--avoid b { color: var(--danger); }
+.advisory-notice { margin: 0 0 14px; font-size: 0.88rem; color: var(--muted); background: var(--surface-2); border-radius: var(--radius-sm); padding: 10px 12px; }
+.linkish { border: 0; background: none; padding: 0; color: var(--teal); font-weight: 600; text-decoration: underline; cursor: pointer; font-size: inherit; }

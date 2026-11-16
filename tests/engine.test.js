@@ -6,13 +6,13 @@ const E = require("../js/engine.js");
 const index = E.buildIndex(data);
 
 test("dataset is well formed", () => {
-  assert.equal(index.regions.length, 12);
+  assert.equal(index.regions.length, 13);
   assert.equal(new Set(index.countries.map((c) => c.id)).size, index.countries.length, "country ids unique");
   for (const c of index.countries) {
     assert.equal(c.temps.length, 12, `${c.name} temps`);
     assert.ok(c.cost >= 1 && c.cost <= 5, `${c.name} cost`);
     assert.ok(c.best.every((m) => m >= 1 && m <= 12), `${c.name} months`);
-    assert.ok(c.cities.length >= (c.kind === "country" ? 2 : 1), `${c.name} cities`);
+    assert.ok(c.cities.length >= 1, `${c.name} cities`);
     assert.ok(["country", "microstate", "territory", "micronation"].includes(c.kind), `${c.name} kind`);
     if (c.kind !== "country") assert.ok(c.status, `${c.name} status`);
   }
@@ -133,4 +133,32 @@ test("families get family-friendly places nudged up", () => {
   const share = (r) => r.cities.slice(0, 20).filter((c) => c.city.family).length;
   assert.ok(share(family) >= share(couple));
   assert.ok(family.cities.find((c) => c.city.family).reasons.includes("Family friendly"));
+});
+
+test("every sovereign country is included", () => {
+  const sovereign = index.countries.filter((c) => c.kind === "country" || c.kind === "microstate");
+  // 193 UN members plus Vatican City, Palestine, Taiwan and Kosovo.
+  assert.equal(sovereign.length, 197);
+  for (const id of ["de", "ng", "kz", "tv", "va", "ps", "tw", "xk", "ss", "kp"]) assert.ok(index.countryById[id], id);
+});
+
+test("do-not-travel destinations are hidden unless requested", () => {
+  const prefs = { interests: { culture: 2 } };
+  const r = E.recommend(index, prefs);
+  assert.ok(r.countries.every((c) => !c.country.advisory || c.country.advisory.level !== "avoid"));
+  assert.ok(r.hiddenAvoid.length >= 15);
+  const all = E.recommend(index, prefs, { includeAvoid: true });
+  const sy = all.countries.find((c) => c.country.id === "sy");
+  assert.ok(sy && sy.warnings[0] === "Travel advisory: avoid all travel");
+  assert.equal(all.hiddenAvoid.length, 0);
+  const il = r.countries.find((c) => c.country.id === "il");
+  assert.equal(il.warnings[0], "Travel advisory: reconsider travel");
+});
+
+test("share codes round-trip with the newest region excluded", () => {
+  const p = { interests: { culture: 1 }, home: "caribbean", exclude: ["wne", "cas"] };
+  const code = E.encodePrefs(p, index);
+  assert.deepEqual(E.decodePrefs(code, index), E.normalizePrefs(p));
+  // Links made before the new region still decode.
+  assert.ok(E.decodePrefs("r-110200000502120100000", index));
 });

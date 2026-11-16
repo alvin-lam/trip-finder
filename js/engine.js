@@ -120,6 +120,8 @@
       const entry = (data.LGBTQ || {})[c.id];
       if (data.LGBTQ && !entry) throw new Error(`No LGBTQ+ entry for ${c.name}`);
       c.lgbtq = entry ? { level: entry[0], note: entry[1] } : null;
+      const adv = (data.ADVISORY || {})[c.id];
+      c.advisory = adv ? { level: adv[0], note: adv[1] } : null;
     }
     return {
       regions,
@@ -260,6 +262,9 @@
     for (const k in w) total += w[k] * parts[k];
     // Strong mismatches on interests should sink a place even when logistics fit.
     total *= 0.75 + 0.25 * interest;
+    // Travel advisories: a firm penalty for "reconsider", a heavy one for "avoid" (only scored when shown).
+    const adv = city.country.advisory;
+    if (adv) total *= adv.level === "avoid" ? 0.6 : 0.88;
     // Families get a gentle nudge toward places that work well with children.
     if (prefs.company === "family") total *= city.family ? 1.04 : 0.97;
 
@@ -286,6 +291,7 @@
     }
     if (city.family && prefs.company === "family") reasons.push("Family friendly");
     if (city.unesco && (prefs.interests.culture || 0) > 0) reasons.push("UNESCO World Heritage Site");
+    if (adv) warnings.unshift(adv.level === "avoid" ? "Travel advisory: avoid all travel" : "Travel advisory: reconsider travel");
     if (prefs.vibe === "hidden" && city.pop <= 2) reasons.push("Off the beaten path");
     if (prefs.vibe === "iconic" && city.pop >= 5) reasons.push("A world-famous highlight");
 
@@ -333,7 +339,7 @@
   }
 
   /** Main entry point: rank regions, countries and cities. */
-  function recommend(index, rawPrefs) {
+  function recommend(index, rawPrefs, options = {}) {
     const prefs = normalizePrefs(rawPrefs);
     const labels = Object.fromEntries(index.interests.map((i) => [i.id, i.label]));
     const ctx = {
@@ -345,7 +351,11 @@
     const L = LENGTHS[prefs.length] || LENGTHS.week;
     const excluded = new Set(prefs.exclude);
 
-    const cityResults = index.cities.filter((c) => !excluded.has(c.region.id)).map((c) => scoreCity(c, prefs, ctx));
+    // Places under "avoid all travel" advisories stay out of recommendations unless asked for.
+    const isAvoid = (c) => c.country.advisory && c.country.advisory.level === "avoid";
+    const inRegion = index.cities.filter((c) => !excluded.has(c.region.id));
+    const hiddenAvoid = options.includeAvoid ? [] : [...new Set(inRegion.filter(isAvoid).map((c) => c.country))];
+    const cityResults = inRegion.filter((c) => options.includeAvoid || !isAvoid(c)).map((c) => scoreCity(c, prefs, ctx));
     const byCountry = new Map();
     for (const r of cityResults) {
       if (!byCountry.has(r.city.country.id)) byCountry.set(r.city.country.id, []);
@@ -403,7 +413,7 @@
     }
 
     cityResults.sort((a, b) => b.score - a.score);
-    return { prefs, regions: regionResults, countries: countryResults, cities: cityResults };
+    return { prefs, regions: regionResults, countries: countryResults, cities: cityResults, hiddenAvoid };
   }
 
   function mergeReasons(top, labels) {
@@ -466,7 +476,7 @@
 
   function decodePrefs(code, index) {
     const p = normalizePrefs({});
-    const m = /^r-([0-2]{8})(\d\d)(\d)(\d)(\d)(\d)(\d)(\d\d)(\d)([0-9a-f]{3})$/.exec(code || "");
+    const m = /^r-([0-2]{8})(\d\d)(\d)(\d)(\d)(\d)(\d)(\d\d)(\d)([0-9a-f]{3,4})$/.exec(code || "");
     if (!m) return null;
     TAG_ORDER.forEach((t, i) => {
       const v = Number(m[1][i]);

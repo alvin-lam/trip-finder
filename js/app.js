@@ -14,6 +14,7 @@
     focusRegion: null,
     explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "" },
     saved: new Set(),
+    includeAvoid: false, // show destinations under "avoid all travel" advisories in results
   };
 
   // ---------- Helpers ----------
@@ -76,6 +77,27 @@
     if (!n) return "";
     const total = country.cities.length;
     return `<span class="fact fact--family">👨‍👩‍👧 Family friendly${total > 1 ? `: ${n === total ? "all" : n} of ${total} places` : ""}</span>`;
+  }
+
+  const ADVISORY_LABELS = { avoid: "Do not travel advisory", reconsider: "Reconsider travel advisory" };
+
+  function advisoryFact(country) {
+    if (!country.advisory) return "";
+    const { level, note } = country.advisory;
+    return `<span class="fact fact--advisory-${level}" title="${esc(note)}">${level === "avoid" ? "⛔" : "⚠️"} ${ADVISORY_LABELS[level]}</span>`;
+  }
+
+  // Explains that some destinations are hidden, with a button to show or hide them.
+  function advisoryNotice(r) {
+    if (state.includeAvoid) {
+      return `<p class="advisory-notice">Showing destinations under do-not-travel advisories, ranked lower. <button class="linkish" data-action="toggle-avoid">Hide them</button></p>`;
+    }
+    const n = r.hiddenAvoid.length;
+    if (!n) return "";
+    return `<p class="advisory-notice">${n} ${n === 1 ? "destination" : "destinations"} where many governments advise against all travel ${n === 1 ? "is" : "are"} hidden, such as ${r.hiddenAvoid
+      .slice(0, 3)
+      .map((c) => esc(c.name))
+      .join(", ")}. <button class="linkish" data-action="toggle-avoid">Show them anyway</button></p>`;
   }
 
   const POP_LABELS = { 1: "Hidden gem", 2: "Lesser known", 3: "Popular", 4: "Very popular", 5: "Iconic" };
@@ -399,7 +421,7 @@
 
   // ---------- Plan: results ----------
   function runRecommend() {
-    state.results = E.recommend(index, state.prefs);
+    state.results = E.recommend(index, state.prefs, { includeAvoid: state.includeAvoid });
     persist();
   }
 
@@ -481,6 +503,7 @@
           <h3 id="h-countries">2. ${focus ? `Destinations in ${esc(focus.region.name)}` : "Top destinations"}</h3>
           <span class="muted" style="font-size:.9rem">Suggested route for ${E.LENGTHS[state.prefs.length].days} days included</span>
         </div>
+        ${advisoryNotice(r)}
         <div class="cards">
           ${countries.map((c) => countryResultCard(c, c === best)).join("")}
         </div>
@@ -528,7 +551,7 @@
           ${cr.warnings.map((x) => `<li class="warn">${esc(x)}</li>`).join("")}
         </ul>
         ${monthStrip(c.best, state.prefs.month)}
-        <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span>${unescoFact(c)}${familyFact(c)}${lgbtqFact(c)}</div>
+        <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span>${unescoFact(c)}${familyFact(c)}${lgbtqFact(c)}${advisoryFact(c)}</div>
         <div class="itinerary">
           <div class="itinerary__title">${cr.spareDays > 0 ? `Suggested ${days}-day stop` : `Suggested ${days}-day route`}</div>
           <div class="itinerary__bar">
@@ -605,7 +628,7 @@
           <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}</select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO sites</option><option value="family">Family friendly</option><option value="lgbtq">LGBTQ+ welcoming</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO sites</option><option value="family">Family friendly</option><option value="lgbtq">LGBTQ+ welcoming</option><option value="safe">No travel advisory</option></select></label>
           <label>Max cost<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to ${E.COST_LABELS[c]}`}</option>`)
             .join("")}</select></label>
@@ -644,6 +667,7 @@
               if (f.only === "unesco" && !city.unesco) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "lgbtq" && (!c.lgbtq || c.lgbtq.level !== "welcoming")) return false;
+              if (f.only === "safe" && c.advisory) return false;
               if (!q || countryHit) return true;
               return (
                 city.name.toLowerCase().includes(q) ||
@@ -688,7 +712,7 @@
         </div>
         <p class="card__blurb">${esc(c.blurb)}</p>
         ${monthStrip(c.best, state.explore.month)}
-        <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span>${lgbtqFact(c)}</div>
+        <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span>${lgbtqFact(c)}${advisoryFact(c)}</div>
         <ul class="city-list">
           ${cities
             .map(
@@ -803,6 +827,14 @@
       }
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
       ${
+        city.country.advisory
+          ? `<div class="lgbtq-note lgbtq-note--caution advisory-note--${city.country.advisory.level}">
+              <b>${city.country.advisory.level === "avoid" ? "⛔" : "⚠️"} ${ADVISORY_LABELS[city.country.advisory.level]}.</b> ${esc(city.country.advisory.note)}
+              <span class="muted">Advisories change quickly. Check your government's current travel advice before planning anything.</span>
+            </div>`
+          : ""
+      }
+      ${
         city.country.lgbtq
           ? `<div class="lgbtq-note lgbtq-note--${city.country.lgbtq.level}">
               <b>${city.country.lgbtq.level === "caution" ? "⚠️" : "🏳️‍🌈"} ${LGBTQ_LABELS[city.country.lgbtq.level]}.</b> ${esc(city.country.lgbtq.note)}
@@ -812,7 +844,7 @@
       }
       <div class="facts">
         ${costFact(city.country.cost)}
-        <span class="fact">👥 ${POP_LABELS[city.pop]}</span>
+        ${city.country.advisory && city.country.advisory.level === "avoid" ? "" : `<span class="fact">👥 ${POP_LABELS[city.pop]}</span>`}
         <span class="fact">💱 ${esc(city.country.currency)}</span>
         <span class="fact">🗣️ ${esc(city.country.language)}</span>
       </div>
@@ -1015,6 +1047,11 @@
       state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
+    },
+    "toggle-avoid": () => {
+      state.includeAvoid = !state.includeAvoid;
+      runRecommend();
+      renderPlan();
     },
     surprise,
     share,
