@@ -986,6 +986,8 @@
   });
 
   // ---------- Boot ----------
+  // Keep the copyright year current.
+  document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
   load();
   readHash();
   setView(state.view);
