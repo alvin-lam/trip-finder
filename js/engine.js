@@ -206,8 +206,18 @@
     return w;
   }
 
-  function fmtKm(km) {
-    return km >= 1000 ? `${(Math.round(km / 100) / 10).toLocaleString("en-US")}k km` : `${Math.round(km)} km`;
+  const cToF = (c) => Math.round((c * 9) / 5 + 32);
+
+  /** Temperature in both systems, e.g. "24°C (75°F)". */
+  function fmtTemp(c) {
+    return `${Math.round(c)}°C (${cToF(c)}°F)`;
+  }
+
+  /** Distance in both systems, rounded for readability, e.g. "1,400 km (870 mi)". */
+  function fmtDistance(km) {
+    const round = (v) => (v >= 1000 ? Math.round(v / 100) * 100 : Math.round(v / 10) * 10);
+    const n = (v) => round(v).toLocaleString("en-US");
+    return `${n(km)} km (${n(km * 0.621371)} mi)`;
   }
 
   /** Score a single city against the visitor's preferences. */
@@ -247,14 +257,14 @@
       else warnings.push(`${MONTHS_LONG[prefs.month - 1]} is off season (best: ${formatMonths(city.best)})`);
     }
     if (prefs.climate !== "any") {
-      if (climate === 1) reasons.push(`${CLIMATES[prefs.climate].label} weather, around ${temp}°C`);
-      else if (climate < 0.6) warnings.push(`Around ${temp}°C, outside your ${CLIMATES[prefs.climate].label.toLowerCase()} preference`);
+      if (climate === 1) reasons.push(`${CLIMATES[prefs.climate].label} weather, around ${fmtTemp(temp)}`);
+      else if (climate < 0.6) warnings.push(`Around ${fmtTemp(temp)}, outside your ${CLIMATES[prefs.climate].label.toLowerCase()} preference`);
     }
     if (budget >= 1 && prefs.budget < 4) reasons.push(`Fits a ${BUDGETS[prefs.budget].label.toLowerCase()} budget`);
     else if (budget < 0.7) warnings.push(`Pricier than your budget (${COST_DAILY[city.country.cost]} a day)`);
     if (km !== null && prefs.distance !== "any") {
-      if (distance >= 0.7) reasons.push(`About ${fmtKm(km)} from home`);
-      else if (distance < 0.35) warnings.push(`About ${fmtKm(km)} from home`);
+      if (distance >= 0.7) reasons.push(`About ${fmtDistance(km)} from home`);
+      else if (distance < 0.35) warnings.push(`About ${fmtDistance(km)} from home`);
     }
     if (prefs.vibe === "hidden" && city.pop <= 2) reasons.push("Off the beaten path");
     if (prefs.vibe === "iconic" && city.pop >= 5) reasons.push("A world-famous highlight");
@@ -458,6 +468,9 @@
     planItinerary,
     formatMonths,
     haversineKm,
+    cToF,
+    fmtTemp,
+    fmtDistance,
     seasonScore,
     climateScore,
     budgetScore,

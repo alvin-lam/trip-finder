@@ -20,7 +20,6 @@
   const $ = (sel, el = document) => el.querySelector(sel);
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-  const toF = (c) => Math.round((c * 9) / 5 + 32);
   const SEG_COLORS = ["#d9572b", "#1f7a74", "#7a5ab8", "#b8862b"];
   const POP_LABELS = { 1: "Hidden gem", 2: "Lesser known", 3: "Popular", 4: "Very popular", 5: "Iconic" };
   const interestLabel = Object.fromEntries(index.interests.map((i) => [i.id, i]));
@@ -673,7 +672,7 @@
               <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)}</span><span class="city-row__blurb">${city.country.flag} ${esc(city.country.name)}</span></button></td>
               ${state.results ? `<td data-label="Match">${s === null ? "–" : `${s}%`}</td>` : ""}
               <td data-label="Best time">${esc(E.formatMonths(city.best))}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
-              <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}">${t}°C / ${toF(t)}°F</td>
+              <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}>${E.fmtTemp(t)}</td>
               <td data-label="Cost" title="${E.COST_DAILY[city.country.cost]} per day">${E.COST_LABELS[city.country.cost]}</td>
               <td data-label="Great for">${esc(topStrengths(city).join(", ") || "All-rounder")}</td>
               <td>${heart("city", city.id, city.name)}</td>
@@ -738,15 +737,15 @@
           ${temps
             .map((t, i) => {
               const h = 12 + ((t - tMin) / (tMax - tMin || 1)) * 70;
-              return `<div class="temps__col ${city.best.includes(i + 1) ? "is-best" : ""} ${month === i + 1 ? "is-sel" : ""}" title="${E.MONTHS_LONG[i]}: ${t}°C / ${toF(t)}°F">
-                <span class="temps__val">${t}°</span><div class="temps__bar" style="height:${h}%"></div><span class="temps__m">${E.MONTHS[i][0]}</span></div>`;
+              return `<div class="temps__col ${city.best.includes(i + 1) ? "is-best" : ""} ${month === i + 1 ? "is-sel" : ""}" title="${E.MONTHS_LONG[i]}: ${E.fmtTemp(t)}">
+                <span class="temps__val">${t}°<span class="u">C</span><br />${E.cToF(t)}°<span class="u">F</span></span><div class="temps__bar" style="height:${h}%"></div><span class="temps__m">${E.MONTHS[i][0]}</span></div>`;
             })
             .join("")}
         </div>
         <div class="legend" style="margin-top:8px">
           <span><i style="background:var(--teal)"></i>Best months (${esc(E.formatMonths(city.best))})</span>
           ${month ? `<span><i style="background:var(--accent)"></i>Your month</span>` : ""}
-          <span>Average daily high, °C</span>
+          <span>Average daily high: °C on top, °F below</span>
         </div>
       </div>
       ${

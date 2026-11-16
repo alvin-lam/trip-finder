@@ -71,3 +71,15 @@ test("month ranges wrap around the new year", () => {
   assert.equal(E.formatMonths([11, 12, 1, 2]), "Nov–Feb");
   assert.equal(E.formatMonths([4, 5, 6, 9, 10]), "Apr–Jun, Sep–Oct");
 });
+
+test("temperatures and distances show metric and imperial", () => {
+  assert.equal(E.fmtTemp(24), "24°C (75°F)");
+  assert.equal(E.fmtTemp(-2), "-2°C (28°F)");
+  assert.equal(E.fmtDistance(1394), "1,400 km (870 mi)");
+  assert.equal(E.fmtDistance(11234), "11,200 km (7,000 mi)");
+  const r = E.recommend(index, { interests: { beach: 2 }, month: 1, climate: "hot", home: "uk", distance: "far" });
+  const text = r.countries.flatMap((c) => [...c.reasons, ...c.warnings]).join(" | ");
+  assert.match(text, /°C \(\d+°F\)/);
+  assert.match(text, /km \([\d,]+ mi\)/);
+  assert.doesNotMatch(text.replace(/°C \(-?\d+°F\)/g, "").replace(/km \([\d,]+ mi\)/g, ""), /°C|km/);
+});

@@ -293,12 +293,12 @@ table.compare { border-collapse: collapse; width: 100%; min-width: 640px; font-s
 .detail__close { position: absolute; top: 12px; right: 12px; }
 .detail__hero { display: flex; gap: 14px; align-items: center; padding-right: 40px; }
 .detail__hero .card__flag { font-size: 2.8rem; }
-.temps { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; align-items: end; height: 110px; }
+.temps { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4px; align-items: end; height: 140px; }
 .temps__col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 3px; height: 100%; }
 .temps__bar { width: 100%; border-radius: 4px 4px 0 0; background: var(--ring-track); min-height: 4px; }
 .temps__col.is-best .temps__bar { background: var(--teal); }
 .temps__col.is-sel .temps__bar { background: var(--accent); }
-.temps__val { font-size: 0.62rem; color: var(--muted); }
+.temps__val { font-size: 0.6rem; line-height: 1.15; text-align: center; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .temps__m { font-size: 0.62rem; color: var(--muted); }
 .legend { display: flex; gap: 14px; font-size: 0.78rem; color: var(--muted); flex-wrap: wrap; }
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
@@ -328,3 +328,4 @@ table.compare { border-collapse: collapse; width: 100%; min-width: 640px; font-s
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
 .share-box { display: grid; gap: 6px; max-width: 640px; margin-top: -4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
 .footer__copy { margin: 6px 0 0; font-family: var(--brand); font-size: 1rem; color: var(--text); }
+@media (max-width: 560px) { .temps__val .u { display: none; } }
