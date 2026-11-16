@@ -116,3 +116,21 @@ test("UNESCO World Heritage tags attach to real places", () => {
   assert.ok(r.cities.find((c) => c.city.id === "it-rome").reasons.includes("UNESCO World Heritage Site"));
   assert.throws(() => E.buildIndex({ ...data, UNESCO: { "zz-nowhere": "Fake" } }), /matches no place/);
 });
+
+test("every destination has an LGBTQ+ note and family tags resolve", () => {
+  for (const c of index.countries) {
+    assert.ok(c.lgbtq && ["welcoming", "mixed", "caution"].includes(c.lgbtq.level), c.name);
+    assert.ok(c.lgbtq.note.length > 10, c.name);
+  }
+  assert.equal(index.cities.filter((c) => c.family).length, Object.keys(data.FAMILY).length);
+  assert.throws(() => E.buildIndex({ ...data, FAMILY: { "zz-nowhere": "x" } }), /matches no place/);
+});
+
+test("families get family-friendly places nudged up", () => {
+  const base = { interests: { beach: 1, nature: 1 }, month: 7 };
+  const couple = E.recommend(index, { ...base, company: "couple" });
+  const family = E.recommend(index, { ...base, company: "family" });
+  const share = (r) => r.cities.slice(0, 20).filter((c) => c.city.family).length;
+  assert.ok(share(family) >= share(couple));
+  assert.ok(family.cities.find((c) => c.city.family).reasons.includes("Family friendly"));
+});

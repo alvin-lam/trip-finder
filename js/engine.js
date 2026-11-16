@@ -99,6 +99,7 @@
           blurb,
           best: bestOverride || raw.best,
           unesco: null,
+          family: null,
           country,
           region,
         };
@@ -110,6 +111,15 @@
     for (const [id, site] of Object.entries(data.UNESCO || {})) {
       if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
       cityById[id].unesco = site;
+    }
+    for (const [id, why] of Object.entries(data.FAMILY || {})) {
+      if (!cityById[id]) throw new Error(`FAMILY entry ${id} matches no place`);
+      cityById[id].family = why;
+    }
+    for (const c of countries) {
+      const entry = (data.LGBTQ || {})[c.id];
+      if (data.LGBTQ && !entry) throw new Error(`No LGBTQ+ entry for ${c.name}`);
+      c.lgbtq = entry ? { level: entry[0], note: entry[1] } : null;
     }
     return {
       regions,
@@ -250,6 +260,8 @@
     for (const k in w) total += w[k] * parts[k];
     // Strong mismatches on interests should sink a place even when logistics fit.
     total *= 0.75 + 0.25 * interest;
+    // Families get a gentle nudge toward places that work well with children.
+    if (prefs.company === "family") total *= city.family ? 1.04 : 0.97;
 
     const reasons = [];
     const warnings = [];
@@ -272,6 +284,7 @@
       if (distance >= 0.7) reasons.push(`About ${fmtDistance(km)} from home`);
       else if (distance < 0.35) warnings.push(`About ${fmtDistance(km)} from home`);
     }
+    if (city.family && prefs.company === "family") reasons.push("Family friendly");
     if (city.unesco && (prefs.interests.culture || 0) > 0) reasons.push("UNESCO World Heritage Site");
     if (prefs.vibe === "hidden" && city.pop <= 2) reasons.push("Off the beaten path");
     if (prefs.vibe === "iconic" && city.pop >= 5) reasons.push("A world-famous highlight");
