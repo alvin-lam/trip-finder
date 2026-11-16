@@ -327,7 +327,7 @@ table.compare { border-collapse: collapse; width: 100%; min-width: 640px; font-s
 /* Band above the sticky header on phones with a notch. */
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
 .share-box { display: grid; gap: 6px; max-width: 640px; margin-top: -4px; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
-.footer__copy { margin: 6px 0 0; font-family: var(--brand); font-size: 1rem; color: var(--text); }
+.footer__copy { margin: 1.5em 0 0; font-family: var(--brand); font-size: 1rem; color: var(--text); }
 @media (max-width: 560px) { .temps__val .u { display: none; } }
 .footer__copy a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .footer__copy a:hover { color: var(--accent); }
