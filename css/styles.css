@@ -267,7 +267,7 @@ details.more > *:not(summary) { margin-top: 10px; }
 .tagbar.is-liked span { background: var(--accent); }
 
 /* ---------- Explore ---------- */
-.filters { display: grid; grid-template-columns: 2fr repeat(5, 1fr); gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); position: sticky; top: 62px; z-index: 10; }
+.filters { display: grid; grid-template-columns: 2fr repeat(6, minmax(0, 1fr)); gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); position: sticky; top: 62px; z-index: 10; }
 .filters label { font-size: 0.75rem; font-weight: 700; color: var(--muted); display: grid; gap: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
 .filters .select, .filters .input { max-width: none; padding: 9px 10px; }
 @media (max-width: 860px) { .filters { grid-template-columns: 1fr 1fr; position: static; } .filters label:first-child { grid-column: 1 / -1; } }
@@ -335,3 +335,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .kind--territory { background: var(--teal-soft); color: var(--teal); border-color: transparent; }
 .kind--microstate { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
 .kind--micronation { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+
+/* UNESCO World Heritage label: UNESCO blue, defined as tokens for both themes. */
+:root { --unesco: #0b5fa5; --unesco-soft: #e3effa; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --unesco: #8cc4f2; --unesco-soft: #16304a; } }
+:root[data-theme="dark"] { --unesco: #8cc4f2; --unesco-soft: #16304a; }
+.unesco { display: inline-block; font-family: var(--font); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 1px 6px; border-radius: 4px; margin-left: 4px; vertical-align: 1px; background: var(--unesco-soft); color: var(--unesco); white-space: nowrap; }
+.unesco-line { margin: 0; font-size: 0.9rem; color: var(--muted); }
+.unesco-line .unesco { margin: 0 4px 0 0; }
+.unesco-line b { color: var(--text); font-weight: 600; }
+.fact--unesco { background: var(--unesco-soft); color: var(--unesco); }
+.itinerary__legend .unesco { margin-left: 0; }

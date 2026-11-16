@@ -12,7 +12,7 @@
     prefs: E.normalizePrefs({}),
     results: null,
     focusRegion: null,
-    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "" },
+    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", heritage: "" },
     saved: new Set(),
   };
 
@@ -43,6 +43,19 @@
       .filter((k) => n[k])
       .map((k) => `${n[k]} ${KIND_PLURAL[k]}`);
     return parts.length > 1 ? `${parts.slice(0, -1).join(", ")} and ${parts[parts.length - 1]}` : parts[0];
+  }
+
+  // Compact UNESCO World Heritage label; the full site name is in the tooltip.
+  function unescoTag(city) {
+    if (!city.unesco) return "";
+    return `<span class="unesco" title="UNESCO World Heritage: ${esc(city.unesco)}" aria-label="UNESCO World Heritage Site">UNESCO</span>`;
+  }
+
+  function unescoFact(country) {
+    const n = country.cities.filter((c) => c.unesco).length;
+    if (!n) return "";
+    const all = n === country.cities.length;
+    return `<span class="fact fact--unesco">🏛️ UNESCO World Heritage in ${all && n > 1 ? "all" : n} of ${country.cities.length} ${country.cities.length === 1 ? "place" : "places"}</span>`;
   }
 
   const POP_LABELS = { 1: "Hidden gem", 2: "Lesser known", 3: "Popular", 4: "Very popular", 5: "Iconic" };
@@ -465,7 +478,7 @@
             <div class="city-card">
               ${ring(c.score)}
               <button class="city-card__main" data-action="open-city" data-id="${c.city.id}">
-                <div class="city-card__name">${esc(c.city.name)}</div>
+                <div class="city-card__name">${esc(c.city.name)} ${unescoTag(c.city)}</div>
                 <div class="city-card__sub">${c.city.country.flag} ${esc(c.city.country.name)} · ${esc(topStrengths(c.city, 2).join(", ") || c.city.region.name)}</div>
               </button>
               ${heart("city", c.city.id, c.city.name)}
@@ -495,7 +508,7 @@
           ${cr.warnings.map((x) => `<li class="warn">${esc(x)}</li>`).join("")}
         </ul>
         ${monthStrip(c.best, state.prefs.month)}
-        <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span></div>
+        <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span>${unescoFact(c)}</div>
         <div class="itinerary">
           <div class="itinerary__title">${cr.spareDays > 0 ? `Suggested ${days}-day stop` : `Suggested ${days}-day route`}</div>
           <div class="itinerary__bar">
@@ -510,7 +523,7 @@
             ${cr.itinerary
               .map(
                 (s, i) =>
-                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button><span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
+                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button>${unescoTag(s.city)}<span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
               )
               .join("")}
           </ol>
@@ -533,7 +546,7 @@
               <li class="city-row">
                 <span class="score-chip">${s.score}</span>
                 <button class="city-row__main" data-action="open-city" data-id="${s.city.id}">
-                  <span class="city-row__name">${esc(s.city.name)}</span>
+                  <span class="city-row__name">${esc(s.city.name)} ${unescoTag(s.city)}</span>
                   <span class="city-row__blurb">${esc(s.city.blurb)}</span>
                 </button>
                 ${heart("city", s.city.id, s.city.name)}
@@ -572,6 +585,7 @@
           <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}</select></label>
+          <label>Heritage<select class="select" data-filter="heritage"><option value="">Any place</option><option value="unesco">UNESCO sites</option></select></label>
           <label>Max cost<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to ${E.COST_LABELS[c]}`}</option>`)
             .join("")}</select></label>
@@ -582,6 +596,7 @@
       el.querySelector('[data-filter="month"]').value = state.explore.month;
       el.querySelector('[data-filter="interest"]').value = state.explore.interest;
       el.querySelector('[data-filter="cost"]').value = state.explore.cost;
+      el.querySelector('[data-filter="heritage"]').value = state.explore.heritage;
     }
     $("#explore-results", el).innerHTML = exploreResultsHTML();
   }
@@ -606,10 +621,12 @@
             const cities = c.cities.filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
+              if (f.heritage === "unesco" && !city.unesco) return false;
               if (!q || countryHit) return true;
               return (
                 city.name.toLowerCase().includes(q) ||
                 city.blurb.toLowerCase().includes(q) ||
+                (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
             });
@@ -656,7 +673,7 @@
               (city) => `
             <li class="city-row">
               <button class="city-row__main" data-action="open-city" data-id="${city.id}">
-                <span class="city-row__name">${esc(city.name)}</span>
+                <span class="city-row__name">${esc(city.name)} ${unescoTag(city)}</span>
                 <span class="city-row__blurb">${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
               </button>
               ${heart("city", city.id, city.name)}
@@ -710,7 +727,7 @@
             const t = E.tempFor(city, month);
             const s = scoreOf(city);
             return `<tr>
-              <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)}</span><span class="city-row__blurb">${city.country.flag} ${esc(city.country.name)}</span></button></td>
+              <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)} ${unescoTag(city)}</span><span class="city-row__blurb">${city.country.flag} ${esc(city.country.name)}</span></button></td>
               ${state.results ? `<td data-label="Match">${s === null ? "–" : `${s}%`}</td>` : ""}
               <td data-label="Best time">${esc(E.formatMonths(city.best))}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
               <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}>${E.fmtTemp(t)}</td>
@@ -755,6 +772,11 @@
       ${
         res
           ? `<ul class="reasons">${res.reasons.map((x) => `<li>${esc(x)}</li>`).join("")}${res.warnings.map((x) => `<li class="warn">${esc(x)}</li>`).join("")}</ul>`
+          : ""
+      }
+      ${
+        city.unesco
+          ? `<p class="unesco-line"><span class="unesco">UNESCO</span> World Heritage Site: <b>${esc(city.unesco)}</b></p>`
           : ""
       }
       <div class="facts">
@@ -959,7 +981,7 @@
       render();
     },
     "clear-filters": () => {
-      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "" };
+      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", heritage: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
     },

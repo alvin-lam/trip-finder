@@ -5,7 +5,8 @@ An interactive trip finder that helps visitors decide which region, country and 
 ## Features
 
 - **Five-step quiz.** Interests (like or must-have), travel month, trip length, daily budget, ideal weather, travel companions, crowd preference, home region and excluded regions.
-- **Ranked results.** The app ranks 12 world regions and 83 destinations: 49 countries, 10 microstates (such as Monaco and Singapore), 20 territories (such as Puerto Rico and French Polynesia) and 4 visitable micronations (such as Užupis). Together they cover 211 cities and places. Each match comes with plain-language reasons and warnings, such as "July is off season" or "Pricier than your budget".
+- **Ranked results.** The app ranks 12 world regions and 83 destinations: 49 countries, 10 microstates (such as Monaco and Singapore), 20 territories (such as Puerto Rico and French Polynesia) and 4 visitable micronations (such as Užupis). Together they cover 238 cities and places. Each match comes with plain-language reasons and warnings, such as "July is off season" or "Pricier than your budget".
+- **UNESCO World Heritage labels.** 125 places that are, or contain, a World Heritage Site carry a UNESCO tag, with the site name in the details view. Country cards count their heritage places, culture lovers see it as a match reason, and Explore can filter to UNESCO sites only.
 - **Stay limits.** Tiny places get a capped stay, such as one day for Vatican City, and the app suggests where to spend the rest of the trip.
 - **Suggested route.** Each country card splits your trip days across its best stops. For trips of three weeks or more, it also suggests a neighbouring country to pair with.
 - **Place details.** A details view for each city shows interest ratings, a 12-month temperature chart with the best months marked, typical cost, currency and language.
@@ -56,6 +57,6 @@ js/app.js         UI rendering and interactions
 tests/            Node test suite for the engine
 ```
 
-To add a destination, append a city to a country's `cities` array in `js/data.js`. The comment at the top of that file explains the format. Microstates, territories and micronations also take `kind`, `status` (shown to visitors), an optional `of` (a related country id used for pairing) and an optional `maxDays`.
+To add a destination, append a city to a country's `cities` array in `js/data.js`. The comment at the top of that file explains the format. Microstates, territories and micronations also take `kind`, `status` (shown to visitors), an optional `of` (a related country id used for pairing) and an optional `maxDays`. To label a place as UNESCO World Heritage, add its id and site name to the `UNESCO` map in the same file; the app refuses to load if an id does not match a place.
 
 Temperatures, costs and seasons are rough planning guides, not authoritative travel advice.

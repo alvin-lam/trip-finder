@@ -98,6 +98,7 @@
           pop,
           blurb,
           best: bestOverride || raw.best,
+          unesco: null,
           country,
           region,
         };
@@ -105,13 +106,18 @@
         cities.push(city);
       }
     }
+    const cityById = Object.fromEntries(cities.map((c) => [c.id, c]));
+    for (const [id, site] of Object.entries(data.UNESCO || {})) {
+      if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
+      cityById[id].unesco = site;
+    }
     return {
       regions,
       countries,
       cities,
       regionById,
       countryById: Object.fromEntries(countries.map((c) => [c.id, c])),
-      cityById: Object.fromEntries(cities.map((c) => [c.id, c])),
+      cityById,
       homes: data.HOMES,
       interests: data.INTERESTS,
     };
@@ -266,6 +272,7 @@
       if (distance >= 0.7) reasons.push(`About ${fmtDistance(km)} from home`);
       else if (distance < 0.35) warnings.push(`About ${fmtDistance(km)} from home`);
     }
+    if (city.unesco && (prefs.interests.culture || 0) > 0) reasons.push("UNESCO World Heritage Site");
     if (prefs.vibe === "hidden" && city.pop <= 2) reasons.push("Off the beaten path");
     if (prefs.vibe === "iconic" && city.pop >= 5) reasons.push("A world-famous highlight");
 

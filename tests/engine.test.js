@@ -104,3 +104,15 @@ test("tiny places pair with their neighbour instead of filling a long trip", () 
   assert.equal(va.spareDays, 13);
   assert.equal(va.pairWith.id, "it");
 });
+
+test("UNESCO World Heritage tags attach to real places", () => {
+  const tagged = index.cities.filter((c) => c.unesco);
+  assert.equal(tagged.length, Object.keys(data.UNESCO).length);
+  for (const id of ["it-rome", "es-granada", "jp-nara", "mx-chichen-itza", "va-vatican-city"]) {
+    assert.ok(index.cityById[id] && index.cityById[id].unesco, id);
+  }
+  assert.equal(index.cityById["th-phuket"].unesco, null);
+  const r = E.recommend(index, { interests: { culture: 2 } });
+  assert.ok(r.cities.find((c) => c.city.id === "it-rome").reasons.includes("UNESCO World Heritage Site"));
+  assert.throws(() => E.buildIndex({ ...data, UNESCO: { "zz-nowhere": "Fake" } }), /matches no place/);
+});
