@@ -158,7 +158,7 @@
   }
 
   function costFact(cost) {
-    return `<span class="fact" title="Typical daily spend per person"><b>${E.COST_LABELS[cost]}</b> ${E.COST_DAILY[cost]}/day</span>`;
+    return `<span class="fact" title="Typical daily spend per person in US dollars (USD), covering a bed, food and local transport"><b>${E.COST_LABELS[cost]}</b> ${E.COST_DAILY[cost]}/day</span>`;
   }
 
   function topStrengths(city, n = 3) {
@@ -292,7 +292,7 @@
     },
     {
       title: "Budget and weather",
-      sub: "Daily budget per person, covering a bed, food and local transport.",
+      sub: "Daily budget per person in US dollars (USD), covering a bed, food and local transport.",
       body: () => `
         <div class="field">
           <span class="field__label">Daily budget</span>
@@ -631,8 +631,8 @@
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}</select></label>
           <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO sites</option><option value="family">Family friendly</option><option value="lgbtq">LGBTQ+ welcoming</option><option value="safe">No travel advisory</option></select></label>
-          <label>Max cost<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
-            .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to ${E.COST_LABELS[c]}`}</option>`)
+          <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
+            .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
         </div>
         <div id="explore-results"></div>`;
@@ -769,7 +769,7 @@
       ${
         sortedCities.length
           ? `<div class="compare-wrap"><table class="compare">
-        <thead><tr><th>Place</th>${state.results ? "<th>Match</th>" : ""}<th>Best time</th><th>${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}</th><th>Cost</th><th>Great for</th><th><span class="sr-only">Remove</span></th></tr></thead>
+        <thead><tr><th>Place</th>${state.results ? "<th>Match</th>" : ""}<th>Best time</th><th>${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}</th><th>Daily cost (USD)</th><th>Great for</th><th><span class="sr-only">Remove</span></th></tr></thead>
         <tbody>${sortedCities
           .map((city) => {
             const t = E.tempFor(city, month);
@@ -779,7 +779,7 @@
               ${state.results ? `<td data-label="Match">${s === null ? "–" : `${s}%`}</td>` : ""}
               <td data-label="Best time">${esc(E.formatMonths(city.best))}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
               <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}>${E.fmtTemp(t)}</td>
-              <td data-label="Cost" title="${E.COST_DAILY[city.country.cost]} per day">${E.COST_LABELS[city.country.cost]}</td>
+              <td data-label="Daily cost (USD)">${E.COST_DAILY[city.country.cost]}</td>
               <td data-label="Great for">${esc(topStrengths(city).join(", ") || "All-rounder")}</td>
               <td>${heart("city", city.id, city.name)}</td>
             </tr>`;

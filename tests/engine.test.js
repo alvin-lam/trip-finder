@@ -162,3 +162,14 @@ test("share codes round-trip with the newest region excluded", () => {
   // Links made before the new region still decode.
   assert.ok(E.decodePrefs("r-110200000502120100000", index));
 });
+
+test("every country beyond Vatican City offers at least two places", () => {
+  const sovereign = index.countries.filter((c) => c.kind === "country" || c.kind === "microstate");
+  const single = sovereign.filter((c) => c.cities.length < 2).map((c) => c.id);
+  assert.deepEqual(single, ["va"]);
+});
+
+test("daily spending is labelled in US dollars", () => {
+  for (const v of Object.values(E.COST_DAILY)) assert.match(v, /US\$/);
+  for (const b of Object.values(E.BUDGETS)) assert.match(b.range, /US\$/);
+});

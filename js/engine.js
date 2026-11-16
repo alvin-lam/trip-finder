@@ -15,14 +15,15 @@
   };
 
   const BUDGETS = {
-    1: { label: "Shoestring", range: "under $70 a day", maxCost: 1 },
-    2: { label: "Moderate", range: "$70 to $150 a day", maxCost: 2.5 },
-    3: { label: "Comfortable", range: "$150 to $300 a day", maxCost: 4 },
-    4: { label: "Luxury", range: "$300+ a day", maxCost: 5 },
+    1: { label: "Shoestring", range: "under US$70 a day", maxCost: 1 },
+    2: { label: "Moderate", range: "US$70 to US$150 a day", maxCost: 2.5 },
+    3: { label: "Comfortable", range: "US$150 to US$300 a day", maxCost: 4 },
+    4: { label: "Luxury", range: "US$300+ a day", maxCost: 5 },
   };
 
   const COST_LABELS = { 1: "$", 2: "$$", 3: "$$$", 4: "$$$$", 5: "$$$$$" };
-  const COST_DAILY = { 1: "~$40–70", 2: "~$70–120", 3: "~$120–180", 4: "~$180–280", 5: "$280+" };
+  // Typical daily spend per person, always in US dollars so places can be compared.
+  const COST_DAILY = { 1: "~US$40–70", 2: "~US$70–120", 3: "~US$120–180", 4: "~US$180–280", 5: "US$280+" };
 
   const CLIMATES = {
     any: { label: "No preference" },
