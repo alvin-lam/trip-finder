@@ -61,7 +61,10 @@ test("scores stay within 0-100", () => {
 
 test("preferences survive a share-link round trip", () => {
   const p = { interests: { food: 2, nature: 1 }, month: 9, length: "two", budget: 3, climate: "mild", company: "family", vibe: "hidden", home: "eu-w", distance: "far", exclude: ["oce"] };
-  assert.deepEqual(E.decodePrefs(E.encodePrefs(p)), E.normalizePrefs(p));
+  const code = E.encodePrefs(p, index);
+  assert.match(code, /^[A-Za-z0-9-]+$/);
+  assert.deepEqual(E.decodePrefs(code, index), E.normalizePrefs(p));
+  assert.equal(E.decodePrefs("r-garbage", index), null);
 });
 
 test("month ranges wrap around the new year", () => {

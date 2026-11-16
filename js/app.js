@@ -104,14 +104,15 @@
 
   function syncHash() {
     let h = state.view;
-    if (state.view === "plan" && state.stage === "results") h = `results?${E.encodePrefs(state.prefs)}`;
+    if (state.view === "plan" && state.stage === "results") h = E.encodePrefs(state.prefs, index);
     if (location.hash.slice(1) !== h) history.replaceState(null, "", `#${h}`);
   }
 
   function readHash() {
-    const h = decodeURIComponent(location.hash.slice(1));
-    if (h.startsWith("results?")) {
-      state.prefs = E.decodePrefs(h.slice(8));
+    const h = location.hash.slice(1);
+    const shared = h.startsWith("r-") ? E.decodePrefs(h, index) : null;
+    if (shared) {
+      state.prefs = shared;
       state.stage = "results";
       state.view = "plan";
       runRecommend();
@@ -387,6 +388,10 @@
           <button class="btn btn--ghost btn--sm" data-action="surprise">🎲 Surprise me</button>
           <button class="btn btn--ghost btn--sm" data-action="restart">Start over</button>
         </div>
+      </div>
+      <div class="share-box" id="share-box" hidden>
+        <label for="share-url">Link to these results</label>
+        <input class="input" id="share-url" readonly onclick="this.select()" />
       </div>
 
       <section class="section" aria-labelledby="h-regions">
@@ -795,17 +800,31 @@
     openCity(pick.id);
   }
 
-  async function share() {
-    const url = `${location.origin}${location.pathname}#results?${E.encodePrefs(state.prefs)}`;
+  function shareUrl() {
+    // When hosted inside a viewer frame, a meta tag names the public page URL.
+    const meta = document.querySelector('meta[name="wtt:share-base"]');
+    const base = meta ? meta.content : `${location.origin}${location.pathname}`;
+    return `${base}#${E.encodePrefs(state.prefs, index)}`;
+  }
+
+  function share() {
+    const url = shareUrl();
+    const box = $("#share-box");
+    if (box) {
+      box.hidden = false;
+      const input = $("#share-url");
+      input.value = url;
+      input.focus();
+      input.select();
+    }
+    // Clipboard writes must start inside the click handler.
     try {
-      if (navigator.share && matchMedia("(pointer: coarse)").matches) {
-        await navigator.share({ title: "My travel matches", url });
-        return;
-      }
-      await navigator.clipboard.writeText(url);
-      toast("Link copied. Anyone with it sees these results.");
+      navigator.clipboard
+        .writeText(url)
+        .then(() => toast("Link copied. Anyone with it sees these results."))
+        .catch(() => toast("Select the link below and copy it."));
     } catch (_) {
-      prompt("Copy this link to share your results:", url);
+      toast("Select the link below and copy it.");
     }
   }
 
@@ -882,8 +901,19 @@
     },
     "close-detail": closeDetail,
     save: (el) => toggleSaved(el.dataset.kind, el.dataset.id),
-    "clear-saved": () => {
-      if (!confirm("Remove everything from your shortlist?")) return;
+    "clear-saved": (el) => {
+      // Two-step confirmation inside the page (native confirm dialogs may be blocked).
+      if (el.dataset.armed !== "1") {
+        el.dataset.armed = "1";
+        el.textContent = "Tap again to clear all";
+        setTimeout(() => {
+          if (el.isConnected) {
+            el.dataset.armed = "";
+            el.textContent = "Clear shortlist";
+          }
+        }, 4000);
+        return;
+      }
       state.saved.clear();
       persist();
       render();

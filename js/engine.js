@@ -384,44 +384,61 @@
     return top.length ? top[0].warnings.slice(0, 2) : [];
   }
 
-  /** Compact, URL-safe encoding of preferences for sharing. */
-  function encodePrefs(prefs) {
+  // Option lists for the compact share code. Append only, never reorder,
+  // or links shared earlier will decode differently.
+  const CODE_LENGTHS = ["weekend", "week", "two", "long"];
+  const CODE_CLIMATES = ["any", "hot", "warm", "mild", "cool"];
+  const CODE_COMPANY = ["solo", "couple", "family", "friends"];
+  const CODE_VIBES = ["mix", "iconic", "hidden"];
+  const CODE_DISTANCES = ["any", "near", "medium", "far"];
+
+  /**
+   * Encode preferences as a short code of letters, digits and hyphens, e.g.
+   * "r-110200000502120100000", so it can live in a plain #hash.
+   */
+  function encodePrefs(prefs, index) {
     const p = normalizePrefs(prefs);
-    const i = TAG_ORDER.map((t) => p.interests[t] || 0).join("");
-    const parts = [
-      `i=${i}`,
-      `m=${p.month}`,
-      `l=${p.length}`,
-      `b=${p.budget}`,
-      `c=${p.climate}`,
-      `w=${p.company}`,
-      `v=${p.vibe}`,
-      `h=${p.home}`,
-      `d=${p.distance}`,
-      `x=${p.exclude.join(",")}`,
-    ];
-    return parts.join("&");
+    const idx = (list, v) => Math.max(0, list.indexOf(v));
+    const homeIdx = index.homes.findIndex((h) => h.id === p.home) + 1;
+    let mask = 0;
+    index.regions.forEach((r, i) => {
+      if (p.exclude.includes(r.id)) mask |= 1 << i;
+    });
+    return [
+      "r-",
+      TAG_ORDER.map((t) => p.interests[t] || 0).join(""),
+      String(p.month).padStart(2, "0"),
+      idx(CODE_LENGTHS, p.length),
+      p.budget,
+      idx(CODE_CLIMATES, p.climate),
+      idx(CODE_COMPANY, p.company),
+      idx(CODE_VIBES, p.vibe),
+      String(homeIdx).padStart(2, "0"),
+      idx(CODE_DISTANCES, p.distance),
+      mask.toString(16).padStart(3, "0"),
+    ].join("");
   }
 
-  function decodePrefs(str) {
-    const q = new URLSearchParams(str);
+  function decodePrefs(code, index) {
     const p = normalizePrefs({});
-    const i = q.get("i") || "";
-    TAG_ORDER.forEach((t, idx) => {
-      const v = Number(i[idx] || 0);
-      if (v === 1 || v === 2) p.interests[t] = v;
+    const m = /^r-([0-2]{8})(\d\d)(\d)(\d)(\d)(\d)(\d)(\d\d)(\d)([0-9a-f]{3})$/.exec(code || "");
+    if (!m) return null;
+    TAG_ORDER.forEach((t, i) => {
+      const v = Number(m[1][i]);
+      if (v) p.interests[t] = v;
     });
-    const m = Number(q.get("m"));
-    if (m >= 0 && m <= 12) p.month = m;
-    if (LENGTHS[q.get("l")]) p.length = q.get("l");
-    const b = Number(q.get("b"));
-    if (BUDGETS[b]) p.budget = b;
-    if (CLIMATES[q.get("c")]) p.climate = q.get("c");
-    if (COMPANY_BOOST[q.get("w")]) p.company = q.get("w");
-    if (["mix", "iconic", "hidden"].includes(q.get("v"))) p.vibe = q.get("v");
-    p.home = q.get("h") || "";
-    if (["any", "near", "medium", "far"].includes(q.get("d"))) p.distance = q.get("d");
-    p.exclude = (q.get("x") || "").split(",").filter(Boolean);
+    const month = Number(m[2]);
+    if (month <= 12) p.month = month;
+    p.length = CODE_LENGTHS[Number(m[3])] || p.length;
+    if (BUDGETS[Number(m[4])]) p.budget = Number(m[4]);
+    p.climate = CODE_CLIMATES[Number(m[5])] || p.climate;
+    p.company = CODE_COMPANY[Number(m[6])] || p.company;
+    p.vibe = CODE_VIBES[Number(m[7])] || p.vibe;
+    const home = index.homes[Number(m[8]) - 1];
+    p.home = home ? home.id : "";
+    p.distance = CODE_DISTANCES[Number(m[9])] || p.distance;
+    const mask = parseInt(m[10], 16);
+    p.exclude = index.regions.filter((r, i) => mask & (1 << i)).map((r) => r.id);
     return p;
   }
 
