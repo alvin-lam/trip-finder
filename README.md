@@ -18,6 +18,19 @@ An interactive trip finder that helps visitors decide which region, country and 
 - **Shareable links.** Your answers are encoded in the URL, so a link reproduces the same results.
 - Light and dark themes, mobile layout and keyboard support.
 
+## Install and offline use
+
+The app is a Progressive Web App. `manifest.webmanifest` and the icons in `img/` make it installable, and `sw.js` caches the app so it works offline after the first visit.
+
+`js/install.js` prompts visitors to add it to their home screen:
+
+- **Chrome, Edge and Android:** an Install button opens the browser's own install dialog.
+- **iPhone and iPad:** browsers there have no install API, so the prompt shows the steps (tap Share, then Add to Home Screen).
+
+The prompt appears only after the visitor sees results or spends 25 seconds on the page. It never appears once the app is installed or inside an embedded frame, and it stays hidden for 30 days after being dismissed.
+
+**When you ship changes,** bump `CACHE` in `sw.js` (for example `wtt-v2`) and add any new files to its `SHELL` list, so returning visitors get the new version. Service workers need HTTPS (GitHub Pages provides it) and do not run from a local `file://` page.
+
 ## Run it
 
 No build step or dependencies are needed. Open `index.html` in a browser, or serve the folder:

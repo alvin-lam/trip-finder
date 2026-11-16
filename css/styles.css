@@ -372,3 +372,16 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .lgbtq-note.advisory-note--avoid b { color: var(--danger); }
 .advisory-notice { margin: 0 0 14px; font-size: 0.88rem; color: var(--muted); background: var(--surface-2); border-radius: var(--radius-sm); padding: 10px 12px; }
 .linkish { border: 0; background: none; padding: 0; color: var(--teal); font-weight: 600; text-decoration: underline; cursor: pointer; font-size: inherit; }
+
+/* Add to Home Screen prompt: a card pinned to the bottom, clear of the phone's home bar. */
+.install { position: fixed; z-index: 60; left: max(12px, env(safe-area-inset-left, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); margin: 0 auto; max-width: 460px; display: flex; gap: 12px; align-items: flex-start; padding: 14px 40px 14px 14px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22); transform: translateY(calc(100% + 24px)); opacity: 0; transition: transform 0.25s ease, opacity 0.25s ease; }
+.install.is-on { transform: none; opacity: 1; }
+.install__icon { width: 48px; height: 48px; border-radius: 11px; flex: none; }
+.install__text { min-width: 0; }
+.install__text h2 { font-family: var(--font); font-size: 0.98rem; font-weight: 700; margin: 0 0 4px; letter-spacing: 0; }
+.install__text p { margin: 0 0 10px; font-size: 0.88rem; color: var(--muted); }
+.install__steps { margin: 4px 0 10px; padding-left: 18px; font-size: 0.88rem; color: var(--muted); display: grid; gap: 4px; }
+.install__steps b, .install__text p b { color: var(--text); }
+.install__share { width: 16px; height: 16px; vertical-align: -3px; color: var(--teal); }
+.install__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.install__close { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border: 0; border-radius: 50%; background: var(--surface-2); color: var(--muted); cursor: pointer; font-size: 0.8rem; }

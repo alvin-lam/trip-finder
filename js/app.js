@@ -422,6 +422,8 @@
   // ---------- Plan: results ----------
   function runRecommend() {
     state.results = E.recommend(index, state.prefs, { includeAvoid: state.includeAvoid });
+    // Lets the install prompt know the visitor has seen value from the app.
+    window.dispatchEvent(new Event("wtt:engaged"));
     persist();
   }
 

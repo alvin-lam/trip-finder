@@ -1,0 +1,16 @@
+{
+  "name": "Where to Travel | All Trips Considered",
+  "short_name": "Where to Travel",
+  "description": "Answer a few quick questions and get ranked regions, countries and cities to visit, with a suggested itinerary.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf7f2",
+  "theme_color": "#005bd9",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
