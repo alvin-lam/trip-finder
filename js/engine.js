@@ -106,6 +106,7 @@
           isCapital: false,
           metros: [],
           nationalParks: [],
+          alsoIn: [],
           unesco: null,
           family: null,
           country,
@@ -163,12 +164,27 @@
     }
     markNationalParks(countries, data.NP_EXTRA || {});
 
+    // A site shared by several countries keeps one place, which is also listed under
+    // the other countries in Explore: { placeId: [countryId, ...] }.
+    const byCountryId = Object.fromEntries(countries.map((c) => [c.id, c]));
+    for (const c of countries) c.linked = [];
+    for (const [id, ids] of Object.entries(data.LINKED || {})) {
+      const city = cityById[id];
+      if (!city) throw new Error(`LINKED entry ${id} matches no place`);
+      city.alsoIn = ids.map((cid) => {
+        const other = byCountryId[cid];
+        if (!other) throw new Error(`LINKED entry ${id} points at unknown country ${cid}`);
+        other.linked.push(city);
+        return other;
+      });
+    }
+
     return {
       regions,
       countries,
       cities,
       regionById,
-      countryById: Object.fromEntries(countries.map((c) => [c.id, c])),
+      countryById: byCountryId,
       cityById,
       homes: data.HOMES,
       interests: data.INTERESTS,

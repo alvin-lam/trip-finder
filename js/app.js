@@ -711,7 +711,7 @@
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             const matches = q && f.only !== "unesco" ? factMatches(c, q) : [];
             const matched = (kind) => matches.some((m) => m.kind === kind);
-            const cities = c.cities.filter((city) => {
+            const cities = c.cities.concat(c.linked).filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
               if (f.only === "unesco" && !city.unesco) return false;
@@ -840,36 +840,44 @@
     }</div>`;
   }
 
-  function exploreRow(city) {
+  // A shared site listed under another country names the country that holds it.
+  function exploreRow(city, home) {
+    const shared = home && city.country !== home ? `${city.country.flag} Shared with ${esc(city.country.name)} · ` : "";
     return `
             <li class="city-row">
               <button class="city-row__main" data-action="open-city" data-id="${city.id}">
                 <span class="city-row__name">${esc(city.name)} ${placeTags(city)}</span>
-                <span class="city-row__blurb">${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
+                <span class="city-row__blurb">${shared}${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
               </button>
               ${heart("city", city.id, city.name)}
             </li>`;
   }
 
   function exploreCountryCard(c, cities, matches = []) {
-    const byArea = cities.some((x) => x.area);
+    const byArea = cities.some((x) => x.area && x.country === c);
+    const SHARED = "Shared with other countries";
+    const groupOf = (x) => (x.country === c ? x.area || "Other places" : SHARED);
+    const rank = (g) => (g === SHARED ? "~~" : g === "Other places" ? "~" : g);
     let list;
     if (byArea) {
       const groups = new Map();
-      for (const city of [...cities].sort((a, b) => a.area.localeCompare(b.area))) {
-        if (!groups.has(city.area)) groups.set(city.area, []);
-        groups.get(city.area).push(city);
+      for (const city of [...cities].sort((a, b) => rank(groupOf(a)).localeCompare(rank(groupOf(b))))) {
+        const g = groupOf(city);
+        if (!groups.has(g)) groups.set(g, []);
+        groups.get(g).push(city);
       }
       list = `<p class="area-summary">${
-        cities.length === c.cities.length && AREA_SUMMARY[c.id] ? `Places in ${AREA_SUMMARY[c.id]}` : `Places in ${groups.size} of ${new Set(c.cities.map((x) => x.area)).size} ${AREA_NOUN[c.id] || "areas"}`
+        cities.filter((x) => x.country === c).length === c.cities.length && AREA_SUMMARY[c.id]
+          ? `Places in ${AREA_SUMMARY[c.id]}`
+          : `Places in ${new Set(cities.filter((x) => x.country === c && x.area).map((x) => x.area)).size} of ${new Set(c.cities.map((x) => x.area).filter(Boolean)).size} ${AREA_NOUN[c.id] || "areas"}`
       }</p>
         <div class="area-groups">${[...groups]
           .map(
-            ([area, list]) => `<section class="area-group"><h4>${esc(area)}</h4><ul class="city-list">${list.map(exploreRow).join("")}</ul></section>`
+            ([area, list]) => `<section class="area-group"><h4>${esc(area)}</h4><ul class="city-list">${list.map((x) => exploreRow(x, c)).join("")}</ul></section>`
           )
           .join("")}</div>`;
     } else {
-      list = `<ul class="city-list">${cities.map(exploreRow).join("")}</ul>`;
+      list = `<ul class="city-list">${cities.map((x) => exploreRow(x, c)).join("")}</ul>`;
     }
     return `
       <article class="card${byArea ? " card--wide" : ""}">
@@ -982,6 +990,7 @@
           ? `<p class="unesco-line"><span class="unesco">UNESCO</span> World Heritage Site: <b>${esc(city.unesco)}</b></p>`
           : ""
       }
+      ${city.alsoIn.length ? `<p class="unesco-line">🌍 Shared site, also listed under ${city.alsoIn.map((o) => `${o.flag} ${esc(o.name)}`).join(", ")}</p>` : ""}
       ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
       ${city.metros
