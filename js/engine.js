@@ -210,8 +210,11 @@
   // famous parks list.
   function markNationalParks(countries, extra) {
     for (const c of countries) {
+      // "Hawaii Volcanoes National Park" and "Hawaiʻi Volcanoes National Park", or a park and
+      // its "Reserve", count as one park.
+      const parkKey = (name) => name.normalize("NFD").replace(/[^A-Za-z ]/g, "").replace(/ Reserve$/, "").toLowerCase();
       const add = (city, name) => {
-        if (city && !city.nationalParks.includes(name)) city.nationalParks.push(name);
+        if (city && !city.nationalParks.some((p) => parkKey(p) === parkKey(name))) city.nationalParks.push(name);
       };
       for (const site of c.sites || []) {
         if (site.type === "National Park" || site.type === "National Park Reserve") {

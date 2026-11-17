@@ -289,3 +289,13 @@ test("UK places are grouped by England, Scotland, Wales and Northern Ireland", (
   assert.equal(index.cityById["gb-stonehenge"].area, "England");
   assert.ok(index.cityById["gb-stonehenge"].unesco.startsWith("Stonehenge"));
 });
+
+test("every UNESCO World Heritage Site in the US and Canada has a place", () => {
+  const sites = (ids) => new Set(index.cities.filter((c) => ids.includes(c.country.id) && c.unesco).map((c) => c.unesco));
+  // The US list includes La Fortaleza in Puerto Rico.
+  assert.equal(sites(["us", "pr"]).size, 27);
+  assert.equal(sites(["ca"]).size, 22);
+  assert.equal(index.cityById["us-mesa-verde-national-park"].area, "Colorado");
+  assert.equal(index.cityById["ca-lunenburg"].unesco, "Old Town Lunenburg");
+  assert.deepEqual(index.cityById["us-hawai-i-volcanoes-national-park"].nationalParks.length, 1);
+});
