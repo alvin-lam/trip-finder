@@ -228,16 +228,28 @@ test("no UNESCO Biosphere Reserve data remains", () => {
   assert.doesNotMatch(text, /biosphere/i);
 });
 
-test("the 100 largest US metro areas are each linked to a place", () => {
-  assert.equal(data.US_METROS.length, 100);
-  assert.deepEqual(data.US_METROS.map((m) => m[0]), Array.from({ length: 100 }, (_, i) => i + 1));
-  const linked = index.countryById.us.cities.flatMap((c) => c.metros);
-  assert.equal(linked.length, 100);
-  const place = (rank) => index.countryById.us.cities.find((c) => c.metros.some((m) => m.rank === rank));
+test("all 387 US metro areas are each linked to a place", () => {
+  assert.equal(data.US_METROS.length, 387);
+  assert.deepEqual(data.US_METROS.map((m) => m[0]), Array.from({ length: 387 }, (_, i) => i + 1));
+  const us = index.countryById.us.cities;
+  assert.equal(us.flatMap((c) => c.metros).length, 387);
+  const place = (rank) => us.find((c) => c.metros.some((m) => m.rank === rank));
   assert.equal(place(1).name, "New York City");
-  assert.equal(place(4).name, "Dallas & Fort Worth");
   assert.equal(place(100).name, "New Haven");
-  assert.ok(index.countryById.us.cities.every((c) => c.area && c.temps));
+  assert.equal(place(299).name, "Grand Canyon");
+  assert.equal(place(387).name, "Carson City");
+  assert.ok(us.every((c) => c.area && c.temps && c.temps.length === 12));
+  assert.equal(new Set(us.map((c) => c.name)).size, us.length, "US place names are unique");
+});
+
+test("Puerto Rico's 6 and Mexico's 74 metro areas are each linked to a place", () => {
+  assert.equal(index.countryById.pr.cities.flatMap((c) => c.metros).length, 6);
+  const mx = index.countryById.mx.cities;
+  assert.equal(mx.flatMap((c) => c.metros).length, 74);
+  assert.equal(new Set(mx.map((c) => c.area)).size, 32, "every Mexican state has a place");
+  assert.ok(mx.every((c) => c.area && c.temps));
+  const tij = mx.find((c) => c.name === "Tijuana");
+  assert.ok(E.tempFor(tij, 7) < E.tempFor(mx.find((c) => c.name === "Mexicali"), 7));
 });
 
 test("all 41 Canadian census metropolitan areas are each linked to a place", () => {

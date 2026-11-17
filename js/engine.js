@@ -119,9 +119,9 @@
       if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
       cityById[id].unesco = site;
     }
-    // Link each top-100 US metro and each Canadian census metropolitan area to the
-    // place that covers it.
-    for (const [countryId, list] of [["us", data.US_METROS], ["ca", data.CA_METROS]]) {
+    // Link every metro area in the US, Puerto Rico, Canada and Mexico to the place
+    // that covers it.
+    for (const [countryId, list] of [["us", data.US_METROS], ["pr", data.PR_METROS], ["ca", data.CA_METROS], ["mx", data.MX_METROS]]) {
       const country = countries.find((c) => c.id === countryId);
       for (const [rank, name, population, placeName] of list || []) {
         const place = country && country.cities.find((x) => x.name === placeName);

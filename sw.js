@@ -2,7 +2,7 @@
  * Service worker: makes the app installable and usable offline.
  * Bump CACHE when shipping changes so returning visitors get fresh files.
  */
-const CACHE = "wtt-v15";
+const CACHE = "wtt-v16";
 const SHELL = [
   "./",
   "index.html",
