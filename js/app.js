@@ -752,7 +752,7 @@
 
   // Parks and trails and capitals whose names contain the search text.
   // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
-  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails", site: "🏞️ Park system" };
+  const FACT_LABELS = { capital: "🏛️ Capital" };
   function factMatches(c, q) {
     if (q.length < 3) return [];
     if (!c.facts) return siteMatches(c, q);
@@ -812,8 +812,8 @@
 
   const MATCHES_SHOWN = 8;
   function matchItem(m, q) {
-    // Parks and trails and Parks Canada matches show without a kind label.
-    const kind = m.kind === "park" || m.system === "Parks Canada" ? "" : `<span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> `;
+    // Only capitals carry a kind label; parks, trails and park system sites show just their names.
+    const kind = m.kind === "capital" ? `<span class="search-matches__kind">${FACT_LABELS.capital}</span> ` : "";
     return `<li>${kind}${
       m.place
         ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
