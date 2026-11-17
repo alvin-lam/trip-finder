@@ -954,7 +954,7 @@
     if (!city) return;
     const res = state.results ? state.results.cities.find((r) => r.city === city) : null;
     const month = state.prefs.month;
-    const temps = city.country.temps;
+    const temps = city.temps || city.country.temps;
     const tMin = Math.min(...temps, 0);
     const tMax = Math.max(...temps);
     const liked = (t) => (state.prefs.interests[t] || 0) > 0;
