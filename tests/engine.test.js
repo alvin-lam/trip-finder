@@ -320,3 +320,16 @@ test("every World Heritage Site has a place", () => {
   assert.equal(index.cityById["eg-pyramids-of-giza"].unesco.startsWith("Memphis"), true);
   assert.equal(index.cityById["gb-hadrian-s-wall"].area, "England");
 });
+
+test("Also in lists nearby places first", () => {
+  const potsdam = index.cityById["de-potsdam"];
+  assert.ok(potsdam.ll, "Potsdam has coordinates");
+  const near = E.nearestPlaces(potsdam, potsdam.country.cities.concat(potsdam.country.linked));
+  assert.ok(!near.some((x) => x.city === potsdam));
+  assert.ok(near[0].km < 50, `${near[0].city.name} is ${near[0].km} km away`);
+  for (let k = 1; k < near.length && near[k].km !== null; k++) assert.ok(near[k].km >= near[k - 1].km);
+  assert.equal(E.fmtDistance(4), "4 km (2 mi)");
+  const withLL = index.cities.filter((c) => c.ll).length;
+  // The coordinate lookup is still running; raise this once every place has them.
+  assert.ok(withLL / index.cities.length > 0.65, `${withLL} of ${index.cities.length} places have coordinates`);
+});

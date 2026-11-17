@@ -107,6 +107,7 @@
           metros: [],
           nationalParks: [],
           alsoIn: [],
+          ll: null,
           unesco: null,
           family: null,
           country,
@@ -163,6 +164,12 @@
       }
     }
     markNationalParks(countries, data.NP_EXTRA || {});
+
+    // Coordinates of each place, [lat, lon], used to list nearby places first.
+    for (const [id, ll] of Object.entries(data.COORDS || {})) {
+      if (!cityById[id]) throw new Error(`COORDS entry ${id} matches no place`);
+      cityById[id].ll = ll;
+    }
 
     // A site shared by several countries keeps one place, which is also listed under
     // the other countries in Explore: { placeId: [countryId, ...] }.
@@ -364,9 +371,27 @@
 
   /** Distance in both systems, rounded for readability, e.g. "1,400 km (870 mi)". */
   function fmtDistance(km) {
-    const round = (v) => (v >= 1000 ? Math.round(v / 100) * 100 : Math.round(v / 10) * 10);
+    const round = (v) => (v >= 1000 ? Math.round(v / 100) * 100 : v >= 100 ? Math.round(v / 10) * 10 : Math.max(1, Math.round(v)));
     const n = (v) => round(v).toLocaleString("en-US");
     return `${n(km)} km (${n(km * 0.621371)} mi)`;
+  }
+
+  /**
+   * Other places sorted nearest first: [{ city, km }]. Places without coordinates
+   * follow, most popular first, with km null.
+   */
+  function nearestPlaces(city, list) {
+    const others = list.filter((x) => x !== city);
+    const withKm = others.map((x) => ({
+      city: x,
+      km: city.ll && x.ll ? haversineKm(city.ll[0], city.ll[1], x.ll[0], x.ll[1]) : null,
+    }));
+    return withKm.sort((a, b) => {
+      if (a.km !== null && b.km !== null) return a.km - b.km;
+      if (a.km !== null) return -1;
+      if (b.km !== null) return 1;
+      return b.city.pop - a.city.pop;
+    });
   }
 
   /** Score a single city against the visitor's preferences. */
@@ -648,6 +673,7 @@
     cToF,
     fmtTemp,
     fmtDistance,
+    nearestPlaces,
     seasonScore,
     climateScore,
     budgetScore,

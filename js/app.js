@@ -841,20 +841,24 @@
   }
 
   // A shared site listed under another country names the country that holds it.
-  function exploreRow(city, home) {
+  function exploreRow(city, home, showArea = false) {
     const shared = home && city.country !== home ? `${city.country.flag} Shared with ${esc(city.country.name)} · ` : "";
+    const where = showArea && city.area && city.country === home ? `${esc(city.area)} · ` : "";
     return `
             <li class="city-row">
               <button class="city-row__main" data-action="open-city" data-id="${city.id}">
                 <span class="city-row__name">${esc(city.name)} ${placeTags(city)}</span>
-                <span class="city-row__blurb">${shared}${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
+                <span class="city-row__blurb">${shared}${where}${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
               </button>
               ${heart("city", city.id, city.name)}
             </li>`;
   }
 
+  // Countries with more than this many places in the results are grouped by their
+  // states, provinces, cantons, departments or prefectures.
+  const GROUP_OVER = 5;
   function exploreCountryCard(c, cities, matches = []) {
-    const byArea = cities.some((x) => x.area && x.country === c);
+    const byArea = cities.length > GROUP_OVER && cities.some((x) => x.area && x.country === c);
     const SHARED = "Shared with other countries";
     const groupOf = (x) => (x.country === c ? x.area || "Other places" : SHARED);
     const rank = (g) => (g === SHARED ? "~~" : g === "Other places" ? "~" : g);
@@ -877,7 +881,7 @@
           )
           .join("")}</div>`;
     } else {
-      list = `<ul class="city-list">${cities.map((x) => exploreRow(x, c)).join("")}</ul>`;
+      list = `<ul class="city-list">${cities.map((x) => exploreRow(x, c, true)).join("")}</ul>`;
     }
     return `
       <article class="card${byArea ? " card--wide" : ""}">
@@ -967,7 +971,12 @@
     const tMin = Math.min(...temps, 0);
     const tMax = Math.max(...temps);
     const liked = (t) => (state.prefs.interests[t] || 0) > 0;
-    const others = city.country.cities.filter((c) => c !== city);
+    // Other places in the same country, nearest first; the first five show, the rest
+    // sit behind a "Show more" toggle.
+    const others = E.nearestPlaces(city, city.country.cities.concat(city.country.linked));
+    const ALSO_SHOWN = 5;
+    const alsoChip = ({ city: o, km }) =>
+      `<button class="chip" data-action="open-city" data-id="${o.id}">${esc(o.name)}${km !== null ? ` <span class="chip__dist">${E.fmtDistance(km)}</span>` : ""}</button>`;
     const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${city.name}, ${city.country.name}`)}`;
     $("#detail-body").innerHTML = `
       <button class="icon-btn detail__close" data-action="close-detail" aria-label="Close">✕</button>
@@ -1054,9 +1063,17 @@
       </div>
       ${
         others.length
-          ? `<div><h3>Also in ${esc(city.country.name)}</h3><div class="chips">${others
-              .map((o) => `<button class="chip" data-action="open-city" data-id="${o.id}">${esc(o.name)}</button>`)
-              .join("")}</div></div>`
+          ? `<div class="also-in"><h3>Also in ${esc(city.country.name)}</h3>${city.ll ? `<p class="also-in__note">Nearest first</p>` : ""}<div class="chips">${others
+              .slice(0, ALSO_SHOWN)
+              .map(alsoChip)
+              .join("")}</div>${
+              others.length > ALSO_SHOWN
+                ? `<details class="more also-in__more"><summary>Show ${others.length - ALSO_SHOWN} more</summary><div class="chips">${others
+                    .slice(ALSO_SHOWN)
+                    .map(alsoChip)
+                    .join("")}</div></details>`
+                : ""
+            }</div>`
           : ""
       }
       <div class="row">

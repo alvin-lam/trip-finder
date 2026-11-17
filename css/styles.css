@@ -250,6 +250,11 @@ details.more { min-width: 0; }
 details.more summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--teal); list-style: none; }
 details.more summary::-webkit-details-marker { display: none; }
 details.more summary::before { content: "▸ "; }
+.chip__dist { font-weight: 500; font-size: 0.8rem; color: var(--muted); margin-left: 4px; white-space: nowrap; }
+.also-in__note { margin: -4px 0 8px; font-size: 0.82rem; color: var(--muted); }
+.also-in__more { margin-top: 10px; }
+.also-in .chip { text-align: left; }
+.also-in__more .chips { margin-top: 10px; }
 details.more[open] summary::before { content: "▾ "; }
 details.more > *:not(summary) { margin-top: 10px; }
 
