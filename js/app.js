@@ -84,12 +84,12 @@
   }
 
   // Capital, financial hub and famous parks and trails for a destination.
-  function keyFacts(c) {
+  function keyFacts(c, { showHub = true } = {}) {
     if (!c.facts) return "";
     const { capital, hub, parks } = c.facts;
     return `<dl class="keyfacts">
       <div><dt>🏛️ Capital</dt><dd>${esc(capital)}</dd></div>
-      <div><dt>💼 Financial hub</dt><dd>${esc(hub)}</dd></div>
+      ${showHub ? `<div><dt>💼 Financial hub</dt><dd>${esc(hub)}</dd></div>` : ""}
       <div><dt>🥾 Parks &amp; trails</dt><dd>${parks.map(esc).join(" · ")}</dd></div>
     </dl>`;
   }
@@ -901,7 +901,7 @@
         <span class="fact">💱 ${esc(city.country.currency)}</span>
         <span class="fact">🗣️ ${esc(city.country.language)}</span>
       </div>
-      ${city.country.facts ? `<div><h3>About ${esc(city.country.name)}</h3>${keyFacts(city.country)}</div>` : ""}
+      ${city.country.facts ? `<div><h3>About ${esc(city.country.name)}</h3>${keyFacts(city.country, { showHub: false })}</div>` : ""}
       <div>
         <h3>What it's great for</h3>
         <div class="tagbars">
