@@ -282,3 +282,10 @@ test("Puerto Rico places are grouped by informal region", () => {
   assert.equal(new Set(pr.map((c) => c.area)).size, 6);
   assert.equal(index.cityById["pr-culebra"].area, "Vieques & Culebra");
 });
+
+test("UK places are grouped by England, Scotland, Wales and Northern Ireland", () => {
+  const gb = index.countryById.gb.cities;
+  assert.deepEqual([...new Set(gb.map((c) => c.area))].sort(), ["England", "Northern Ireland", "Scotland", "Wales"]);
+  assert.equal(index.cityById["gb-stonehenge"].area, "England");
+  assert.ok(index.cityById["gb-stonehenge"].unesco.startsWith("Stonehenge"));
+});
