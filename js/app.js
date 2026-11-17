@@ -82,13 +82,12 @@
     return capitalTags(city) + unescoTag(city) + familyTag(city);
   }
 
-  // Capital, financial hub and famous parks and trails for a destination.
-  function keyFacts(c, { showHub = true } = {}) {
+  // Capital and famous parks and trails for a destination.
+  function keyFacts(c) {
     if (!c.facts) return "";
-    const { capital, hub, parks } = c.facts;
+    const { capital, parks } = c.facts;
     return `<dl class="keyfacts">
       <div><dt>🏛️ Capital</dt><dd>${esc(capital)}</dd></div>
-      ${showHub ? `<div><dt>💼 Financial hub</dt><dd>${esc(hub)}</dd></div>` : ""}
       <div><dt>🥾 Parks &amp; trails</dt><dd>${parks.map(esc).join(" · ")}</dd></div>
     </dl>`;
   }
@@ -708,9 +707,7 @@
                 city.blurb.toLowerCase().includes(q) ||
                 (city.area && city.area.toLowerCase().includes(q)) ||
                 (q.includes("capital") && city.isCapital) ||
-                ((q.includes("financial") || q.includes("hub")) && city.isHub) ||
                 (city.isCapital && matched("capital")) ||
-                (city.isHub && matched("hub")) ||
                 matches.some((m) => m.place === city) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
@@ -730,7 +727,7 @@
 
     return (
       `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${
-        factTotal ? ` · ${factTotal} matching ${factTotal === 1 ? "park, trail, capital or financial hub" : "parks, trails, capitals or financial hubs"}` : ""
+        factTotal ? ` · ${factTotal} matching ${factTotal === 1 ? "park, trail or capital" : "parks, trails or capitals"}` : ""
       }</p>` +
       blocks
         .map(
@@ -745,9 +742,9 @@
     );
   }
 
-  // Parks and trails, capitals and financial hubs whose names contain the search text.
-  // Each match links to the place that holds it when there is one (Yellowstone, Zurich).
-  const FACT_LABELS = { capital: "🏛️ Capital", hub: "💼 Financial hub", park: "🥾 Parks & trails" };
+  // Parks and trails and capitals whose names contain the search text.
+  // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
+  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails" };
   function factMatches(c, q) {
     if (!c.facts || q.length < 3) return [];
     const out = [];
@@ -761,7 +758,6 @@
     // Prefer the place named by the search (Cape Town among South Africa's three capitals).
     const byQuery = c.cities.find((x) => x.name.toLowerCase().includes(q));
     if (c.facts.capital.toLowerCase().includes(q)) out.push({ kind: "capital", label: c.facts.capital, place: byQuery || c.cities.find((x) => x.isCapital) });
-    if (c.facts.hub.toLowerCase().includes(q)) out.push({ kind: "hub", label: c.facts.hub, place: byQuery || c.cities.find((x) => x.isHub) });
     for (const park of c.facts.parks) if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
     return out;
   }
@@ -951,7 +947,7 @@
         <span class="fact">💱 ${esc(city.country.currency)}</span>
         <span class="fact">🗣️ ${esc(city.country.language)}</span>
       </div>
-      ${city.country.facts ? `<div><h3>About ${esc(city.country.name)}</h3>${keyFacts(city.country, { showHub: false })}</div>` : ""}
+      ${city.country.facts ? `<div><h3>About ${esc(city.country.name)}</h3>${keyFacts(city.country)}</div>` : ""}
       <div>
         <h3>What it's great for</h3>
         <div class="tagbars">

@@ -189,15 +189,16 @@ test("places use their own climate when they have one", () => {
   assert.ok(E.tempFor(alaska, 1) < 0 && E.tempFor(miami, 1) > 20);
 });
 
-test("every destination except micronations has capital, hub and parks facts", () => {
+test("every destination except micronations has capital and parks facts", () => {
   for (const c of index.countries) {
     if (c.kind === "micronation") continue;
-    assert.ok(c.facts && c.facts.capital && c.facts.hub && c.facts.parks.length >= 1, c.name);
+    assert.ok(c.facts && c.facts.capital && c.facts.parks.length >= 1, c.name);
+    assert.equal(c.facts.hub, undefined, c.name);
   }
   const tag = (id) => index.countryById[id].cities.filter((x) => x.isCapital).map((x) => x.name);
   assert.deepEqual(tag("fr"), ["Paris"]);
   assert.deepEqual(tag("us"), ["Washington, D.C."]);
   assert.deepEqual(tag("ca"), ["Ottawa"]);
   assert.deepEqual(tag("pf"), ["Tahiti"]);
-  assert.deepEqual(index.countryById.ch.cities.filter((x) => x.isHub).map((x) => x.name), ["Zurich"]);
+  assert.deepEqual(tag("ch"), ["Bern"]);
 });

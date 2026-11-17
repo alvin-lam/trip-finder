@@ -104,7 +104,6 @@
           area: (extra && extra.area) || null,
           temps: (extra && extra.temps) || null,
           isCapital: false,
-          isHub: false,
           unesco: null,
           family: null,
           country,
@@ -129,12 +128,11 @@
       c.lgbtq = entry ? { level: entry[0], note: entry[1] } : null;
       const f = (data.FACTS || {})[c.id];
       if (data.FACTS && !f && c.kind !== "micronation") throw new Error(`No facts entry for ${c.name}`);
-      c.facts = f ? { capital: f[0], hub: f[1], parks: f[2] } : null;
+      c.facts = f ? { capital: f[0], parks: f[1] } : null;
       if (c.facts) {
-        const alias = f[3] || {};
+        const alias = f[2] || {};
         for (const city of c.cities) {
           city.isCapital = alias.capitalPlace ? city.name === alias.capitalPlace : namesPlace(c.facts.capital, city.name);
-          city.isHub = alias.hubPlace ? city.name === alias.hubPlace : namesPlace(c.facts.hub, city.name);
         }
         for (const [key, name] of Object.entries(alias)) {
           if (!c.cities.some((x) => x.name === name)) throw new Error(`${key} "${name}" matches no place in ${c.name}`);
@@ -155,7 +153,7 @@
     };
   }
 
-  // True when a capital or hub description ("Paris (La Défense)") names this place
+  // True when a capital description ("Kuala Lumpur (administrative centre: Putrajaya)") names this place
   // ("Paris", or "Tunis & Sidi Bou Said" for "Tunis").
   function namesPlace(desc, placeName) {
     const norm = (x) => slug(x).replace(/-/g, " ");
