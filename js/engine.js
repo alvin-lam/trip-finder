@@ -114,6 +114,9 @@
       }
     }
     const cityById = Object.fromEntries(cities.map((c) => [c.id, c]));
+    for (const id of Object.keys(data.BIOSPHERE || {})) {
+      if (!countries.some((c) => c.id === id)) throw new Error(`BIOSPHERE entry ${id} matches no destination`);
+    }
     for (const [id, site] of Object.entries(data.UNESCO || {})) {
       if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
       cityById[id].unesco = site;

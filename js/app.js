@@ -679,7 +679,7 @@
     const q = f.q.trim().toLowerCase();
     const interestQ = index.interests.find((i) => q && i.label.toLowerCase().includes(q));
     let total = 0;
-    let factTotal = 0;
+    const kindTotals = {};
     const blocks = index.regions
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
@@ -694,7 +694,7 @@
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             let matches = q ? factMatches(c, q) : [];
             if (f.only === "unesco" && !q) {
-              matches = c.biosphere.map((name) => ({ kind: "biosphere", label: name, detail: "UNESCO Biosphere Reserve" }));
+              matches = c.biosphere.map((name) => ({ kind: "biosphere", label: name }));
             } else if (f.only === "unesco") {
               matches = matches.filter((m) => m.kind === "biosphere");
             }
@@ -722,7 +722,7 @@
           })
           .filter((x) => x.cities.length || x.matches.length);
         total += countries.reduce((a, x) => a + x.cities.length, 0);
-        factTotal += countries.reduce((a, x) => a + x.matches.length, 0);
+        for (const x of countries) for (const m of x.matches) kindTotals[m.kind] = (kindTotals[m.kind] || 0) + 1;
         return { r, countries };
       })
       .filter((b) => b.countries.length);
@@ -731,9 +731,7 @@
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
     return (
-      `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${
-        factTotal ? ` · ${factTotal} matching ${factTotal === 1 ? "park, trail, protected site or capital" : "parks, trails, protected sites or capitals"}` : ""
-      }</p>` +
+      `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>` +
       blocks
         .map(
           ({ r, countries }) => `
@@ -747,9 +745,20 @@
     );
   }
 
+  // "· 3 parks, trails or capitals · 88 national park system sites · 2 UNESCO Biosphere Reserves"
+  function matchSummary(t) {
+    const n = (k) => t[k] || 0;
+    const parts = [];
+    const facts = n("capital") + n("park");
+    if (facts) parts.push(`${facts} matching ${facts === 1 ? "park, trail or capital" : "parks, trails or capitals"}`);
+    if (n("site")) parts.push(`${n("site")} national park system ${n("site") === 1 ? "site" : "sites"}`);
+    if (n("biosphere")) parts.push(`${n("biosphere")} UNESCO Biosphere ${n("biosphere") === 1 ? "Reserve" : "Reserves"}`);
+    return parts.map((x) => ` · ${x}`).join("");
+  }
+
   // Parks and trails and capitals whose names contain the search text.
   // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
-  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails", site: "🏞️ Park system", biosphere: "🌿 Biosphere" };
+  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails", site: "🏞️ Park system", biosphere: "🌿 UNESCO Biosphere Reserve" };
   function factMatches(c, q) {
     if (q.length < 3) return [];
     if (!c.facts) return siteMatches(c, q);
@@ -782,7 +791,7 @@
     }
     for (const name of c.biosphere) {
       const byKind = q.length >= 4 && "unesco biosphere reserve".includes(q);
-      if (name.toLowerCase().includes(q) || byKind) out.push({ kind: "biosphere", label: name, detail: "UNESCO Biosphere Reserve" });
+      if (name.toLowerCase().includes(q) || byKind) out.push({ kind: "biosphere", label: name });
     }
     return out;
   }

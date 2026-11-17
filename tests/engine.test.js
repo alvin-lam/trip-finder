@@ -206,10 +206,25 @@ test("every destination except micronations has capital and parks facts", () => 
 test("US National Park System and Parks Canada sites are loaded", () => {
   const us = index.countryById.us.sites;
   const ca = index.countryById.ca.sites;
-  assert.equal(us.filter((x) => x.type === "National Park").length, 63);
+  assert.ok(us.length >= 430, `US sites: ${us.length}`);
+  for (const n of ["Yellowstone National Park", "Statue of Liberty National Monument", "Manzanar National Historic Site", "Blue Ridge Parkway", "Cape Cod National Seashore"]) {
+    assert.ok(us.some((x) => x.name === n), n);
+  }
+  assert.ok(us.filter((x) => x.type === "National Park").length >= 63);
   assert.ok(us.every((x) => x.system === "US National Park System" && x.area));
   assert.equal(ca.filter((x) => x.type === "National Park").length, 37);
-  assert.ok(ca.some((x) => x.type === "National Park Reserve") && ca.some((x) => x.type === "National Urban Park"));
+  assert.ok(ca.filter((x) => x.type === "National Historic Site").length >= 160);
+  for (const n of ["Pituamkek National Park Reserve", "Rouge National Urban Park", "Fortress of Louisbourg National Historic Site", "Fort Langley National Historic Site"]) {
+    assert.ok(ca.some((x) => x.name === n), n);
+  }
   assert.equal(new Set(us.map((x) => x.name)).size, us.length, "no duplicate US sites");
   assert.equal(new Set(ca.map((x) => x.name)).size, ca.length, "no duplicate Canadian sites");
+});
+
+test("UNESCO Biosphere Reserves are loaded for most countries", () => {
+  const withReserves = index.countries.filter((c) => c.biosphere.length);
+  assert.ok(withReserves.length >= 120, `countries: ${withReserves.length}`);
+  assert.ok(withReserves.reduce((a, c) => a + c.biosphere.length, 0) >= 700);
+  assert.ok(index.countryById.ca.biosphere.includes("Charlevoix"));
+  assert.ok(index.countryById.mx.biosphere.includes("Sian Ka'an"));
 });
