@@ -335,7 +335,7 @@ test("Also in lists nearby places first", () => {
 });
 
 test("places in the grouped countries all have a subdivision", () => {
-  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br", "ru", "ir", "tr", "au", "gr", "pl", "pt", "se", "ar", "pe", "be", "cz"]) {
+  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br", "ru", "ir", "tr", "au", "gr", "pl", "pt", "se", "ar", "pe", "be", "cz", "id", "ma", "et", "dk", "bg", "vn", "ph", "lk", "ke", "co", "at", "fi"]) {
     const c = index.countryById[id];
     assert.ok(c.areaTerm, `${c.name} has a term`);
     assert.ok(c.cities.every((x) => x.area), `${c.name} places all have a subdivision`);
