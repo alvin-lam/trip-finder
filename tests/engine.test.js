@@ -334,8 +334,8 @@ test("Also in lists nearby places first", () => {
   assert.ok(withLL / index.cities.length > 0.65, `${withLL} of ${index.cities.length} places have coordinates`);
 });
 
-test("places in the 12 grouped countries all have a subdivision", () => {
-  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za"]) {
+test("places in the grouped countries all have a subdivision", () => {
+  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br"]) {
     const c = index.countryById[id];
     assert.ok(c.areaTerm, `${c.name} has a term`);
     assert.ok(c.cities.every((x) => x.area), `${c.name} places all have a subdivision`);
