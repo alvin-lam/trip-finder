@@ -75,7 +75,6 @@
   function capitalTags(city) {
     let out = "";
     if (city.isCapital) out += `<span class="ptag ptag--capital" title="Capital: ${esc(city.country.facts.capital)}">CAPITAL</span>`;
-    if (city.isHub) out += `<span class="ptag ptag--hub" title="Financial hub: ${esc(city.country.facts.hub)}">FINANCIAL HUB</span>`;
     return out;
   }
 

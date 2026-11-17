@@ -388,7 +388,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Capital and financial-hub tags, and the key-facts block. */
 .ptag { display: inline-block; font-family: var(--font); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 1px 6px; border-radius: 4px; margin-left: 4px; vertical-align: 1px; white-space: nowrap; background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
-.ptag--hub { color: var(--muted); }
 .keyfacts { margin: 0; display: grid; gap: 6px; font-size: 0.85rem; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--surface-2); }
 .keyfacts div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 8px; }
 .keyfacts dt { color: var(--muted); font-weight: 600; }
