@@ -285,19 +285,38 @@ test("Puerto Rico places are grouped by informal region", () => {
 
 test("UK places are grouped by England, Scotland, Wales and Northern Ireland", () => {
   const gb = index.countryById.gb.cities;
-  assert.deepEqual([...new Set(gb.map((c) => c.area))].sort(), ["England", "Northern Ireland", "Scotland", "Wales"]);
+  assert.deepEqual([...new Set(gb.map((c) => c.area))].sort(), ["England", "Northern Ireland", "Overseas Territories", "Scotland", "Wales"]);
   assert.equal(index.cityById["gb-stonehenge"].area, "England");
   assert.ok(index.cityById["gb-stonehenge"].unesco.startsWith("Stonehenge"));
 });
 
 test("every UNESCO World Heritage Site in the US, Canada and Mexico has a place", () => {
-  const sites = (ids) => new Set(index.cities.filter((c) => ids.includes(c.country.id) && c.unesco).map((c) => c.unesco));
+  // A shared site's single place counts for every country it is listed under.
+  const sites = (ids) =>
+    new Set(index.cities.filter((c) => c.unesco && (ids.includes(c.country.id) || c.alsoIn.some((o) => ids.includes(o.id)))).map((c) => c.unesco));
   // The US list includes La Fortaleza in Puerto Rico.
   assert.equal(sites(["us", "pr"]).size, 27);
   assert.equal(sites(["ca"]).size, 22);
-  assert.equal(sites(["mx"]).size, 35);
+  assert.equal(sites(["mx"]).size, 36);
   assert.equal(index.cityById["mx-teotihuacan"].area, "State of Mexico");
   assert.equal(index.cityById["us-mesa-verde-national-park"].area, "Colorado");
   assert.equal(index.cityById["ca-lunenburg"].unesco, "Old Town Lunenburg");
   assert.deepEqual(index.cityById["us-hawai-i-volcanoes-national-park"].nationalParks.length, 1);
+});
+
+test("shared World Heritage Sites keep one place listed under each country", () => {
+  const forest = index.cityById["by-bia-owieza-forest"];
+  assert.deepEqual(forest.alsoIn.map((c) => c.id), ["pl"]);
+  assert.ok(index.countryById.pl.linked.includes(forest));
+  assert.equal(index.cityById["ua-carpathians"].alsoIn.length, 17);
+  const moravian = index.cityById["de-moravian-church-settlements"];
+  assert.deepEqual(moravian.alsoIn.map((c) => c.id).sort(), ["dk", "gb", "us"]);
+  assert.equal(index.cityById["us-lehigh-valley-allentown-bethlehem"].unesco, null);
+});
+
+test("every World Heritage Site has a place", () => {
+  const sites = new Set(index.cities.filter((c) => c.unesco).map((c) => c.unesco));
+  assert.ok(sites.size >= 1200, `${sites.size} distinct sites`);
+  assert.equal(index.cityById["eg-pyramids-of-giza"].unesco.startsWith("Memphis"), true);
+  assert.equal(index.cityById["gb-hadrian-s-wall"].area, "England");
 });
