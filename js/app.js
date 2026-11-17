@@ -876,11 +876,15 @@
     const byArea = cities.length > GROUP_OVER && cities.some((x) => x.area && x.country === c);
     const SHARED = "Shared with other countries";
     const groupOf = (x) => (x.country === c ? x.area || "Other places" : SHARED);
-    const rank = (g) => (g === SHARED ? "~~" : g === "Other places" ? "~" : g);
+    // Own subdivisions alphabetically, then "Other places", then shared sites.
+    const order = (a, b) => {
+      const w = (g) => (g === SHARED ? 2 : g === "Other places" ? 1 : 0);
+      return w(a) - w(b) || a.localeCompare(b);
+    };
     let list;
     if (byArea) {
       const groups = new Map();
-      for (const city of [...cities].sort((a, b) => rank(groupOf(a)).localeCompare(rank(groupOf(b))))) {
+      for (const city of [...cities].sort((a, b) => order(groupOf(a), groupOf(b)))) {
         const g = groupOf(city);
         if (!groups.has(g)) groups.set(g, []);
         groups.get(g).push(city);

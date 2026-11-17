@@ -333,3 +333,15 @@ test("Also in lists nearby places first", () => {
   // The coordinate lookup is still running; raise this once every place has them.
   assert.ok(withLL / index.cities.length > 0.65, `${withLL} of ${index.cities.length} places have coordinates`);
 });
+
+test("places in the 12 grouped countries all have a subdivision", () => {
+  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za"]) {
+    const c = index.countryById[id];
+    assert.ok(c.areaTerm, `${c.name} has a term`);
+    assert.ok(c.cities.every((x) => x.area), `${c.name} places all have a subdivision`);
+  }
+  assert.equal(index.countryById.es.areaTerm, "autonomous communities");
+  assert.equal(index.cityById["es-barcelona"].area, "Catalonia");
+  assert.equal(index.cityById["de-berlin"].area, "Berlin");
+  assert.equal(index.cityById["hk-sai-kung"].area, "New Territories");
+});
