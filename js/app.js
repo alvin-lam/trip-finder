@@ -781,7 +781,7 @@
     for (const site of c.sites) {
       const byName = site.name.toLowerCase().includes(q);
       const byKind = q.length >= 4 && `${site.type} ${site.system}`.toLowerCase().includes(q);
-      if (byName || byKind) out.push({ kind: "site", label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: placeForSite(c, site) });
+      if (byName || byKind) out.push({ kind: "site", system: site.system, label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: placeForSite(c, site) });
     }
     return out;
   }
@@ -812,7 +812,9 @@
 
   const MATCHES_SHOWN = 8;
   function matchItem(m, q) {
-    return `<li><span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> ${
+    // Parks Canada matches show without a kind label; their province is enough.
+    const kind = m.system === "Parks Canada" ? "" : `<span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> `;
+    return `<li>${kind}${
       m.place
         ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
         : `<span>${highlight(m.label, q)}</span>`
