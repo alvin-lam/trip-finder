@@ -812,8 +812,8 @@
 
   const MATCHES_SHOWN = 8;
   function matchItem(m, q) {
-    // Parks Canada matches show without a kind label; their province is enough.
-    const kind = m.system === "Parks Canada" ? "" : `<span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> `;
+    // Parks and trails and Parks Canada matches show without a kind label.
+    const kind = m.kind === "park" || m.system === "Parks Canada" ? "" : `<span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> `;
     return `<li>${kind}${
       m.place
         ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
