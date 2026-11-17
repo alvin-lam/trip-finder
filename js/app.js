@@ -692,12 +692,7 @@
               r.name.toLowerCase().includes(q) ||
               c.blurb.toLowerCase().includes(q) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
-            let matches = q ? factMatches(c, q) : [];
-            if (f.only === "unesco" && !q) {
-              matches = c.biosphere.map((name) => ({ kind: "biosphere", label: name }));
-            } else if (f.only === "unesco") {
-              matches = matches.filter((m) => m.kind === "biosphere");
-            }
+            const matches = q && f.only !== "unesco" ? factMatches(c, q) : [];
             const matched = (kind) => matches.some((m) => m.kind === kind);
             const cities = c.cities.filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
@@ -745,20 +740,19 @@
     );
   }
 
-  // "· 3 parks, trails or capitals · 88 national park system sites · 2 UNESCO Biosphere Reserves"
+  // "· 3 parks, trails or capitals · 88 national park system sites"
   function matchSummary(t) {
     const n = (k) => t[k] || 0;
     const parts = [];
     const facts = n("capital") + n("park");
     if (facts) parts.push(`${facts} matching ${facts === 1 ? "park, trail or capital" : "parks, trails or capitals"}`);
     if (n("site")) parts.push(`${n("site")} national park system ${n("site") === 1 ? "site" : "sites"}`);
-    if (n("biosphere")) parts.push(`${n("biosphere")} UNESCO Biosphere ${n("biosphere") === 1 ? "Reserve" : "Reserves"}`);
     return parts.map((x) => ` · ${x}`).join("");
   }
 
   // Parks and trails and capitals whose names contain the search text.
   // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
-  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails", site: "🏞️ Park system", biosphere: "🌿 UNESCO Biosphere Reserve" };
+  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails", site: "🏞️ Park system" };
   function factMatches(c, q) {
     if (q.length < 3) return [];
     if (!c.facts) return siteMatches(c, q);
@@ -779,7 +773,7 @@
     return out.concat(siteMatches(c, q).filter((m) => !seen.has(m.label.toLowerCase())));
   }
 
-  // US National Park System and Parks Canada sites, and UNESCO Biosphere Reserves.
+  // US National Park System and Parks Canada sites.
   // A search matches a site's name, or (from four letters) its designation or system,
   // so "national monument" or "parks canada" list every matching site.
   function siteMatches(c, q) {
@@ -788,10 +782,6 @@
       const byName = site.name.toLowerCase().includes(q);
       const byKind = q.length >= 4 && `${site.type} ${site.system}`.toLowerCase().includes(q);
       if (byName || byKind) out.push({ kind: "site", label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: placeForSite(c, site) });
-    }
-    for (const name of c.biosphere) {
-      const byKind = q.length >= 4 && "unesco biosphere reserve".includes(q);
-      if (name.toLowerCase().includes(q) || byKind) out.push({ kind: "biosphere", label: name });
     }
     return out;
   }

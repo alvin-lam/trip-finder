@@ -221,10 +221,9 @@ test("US National Park System and Parks Canada sites are loaded", () => {
   assert.equal(new Set(ca.map((x) => x.name)).size, ca.length, "no duplicate Canadian sites");
 });
 
-test("UNESCO Biosphere Reserves are loaded for most countries", () => {
-  const withReserves = index.countries.filter((c) => c.biosphere.length);
-  assert.ok(withReserves.length >= 120, `countries: ${withReserves.length}`);
-  assert.ok(withReserves.reduce((a, c) => a + c.biosphere.length, 0) >= 700);
-  assert.ok(index.countryById.ca.biosphere.includes("Charlevoix"));
-  assert.ok(index.countryById.mx.biosphere.includes("Sian Ka'an"));
+test("no UNESCO Biosphere Reserve data remains", () => {
+  assert.equal(data.BIOSPHERE, undefined);
+  assert.ok(index.countries.every((c) => c.biosphere === undefined));
+  const text = JSON.stringify(data.COUNTRIES) + JSON.stringify(data.FACTS);
+  assert.doesNotMatch(text, /biosphere/i);
 });

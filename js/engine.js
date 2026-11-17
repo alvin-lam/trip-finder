@@ -114,9 +114,6 @@
       }
     }
     const cityById = Object.fromEntries(cities.map((c) => [c.id, c]));
-    for (const id of Object.keys(data.BIOSPHERE || {})) {
-      if (!countries.some((c) => c.id === id)) throw new Error(`BIOSPHERE entry ${id} matches no destination`);
-    }
     for (const [id, site] of Object.entries(data.UNESCO || {})) {
       if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
       cityById[id].unesco = site;
@@ -143,7 +140,6 @@
       }
       const ps = (data.PARK_SYSTEMS || {})[c.id];
       c.sites = ps ? ps.sites.map(([name, type, area]) => ({ name, type, area, system: ps.system })) : [];
-      c.biosphere = ((data.BIOSPHERE || {})[c.id] || []).slice();
       const adv = (data.ADVISORY || {})[c.id];
       c.advisory = adv ? { level: adv[0], note: adv[1] } : null;
     }
