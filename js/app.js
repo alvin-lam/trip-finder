@@ -96,6 +96,7 @@
 
   // Places in the US and Canada carry a state or province.
   const AREA_SUMMARY = { us: "all 50 states and D.C.", ca: "all 10 provinces and 3 territories" };
+  const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories" };
   function placeWhere(city) {
     return city.area ? `${esc(city.area)}, ${esc(city.country.name)}` : esc(city.country.name);
   }
@@ -646,7 +647,7 @@
         <h2>Explore regions, countries and cities</h2>
         <p class="muted">Filter by month, interest or cost, or search for a place you have in mind.</p>
         <div class="filters" id="explore-filters">
-          <label>Search<input class="input" type="search" data-filter="q" placeholder="e.g. Kyoto, safari, Portugal" value="${esc(state.explore.q)}" /></label>
+          <label>Search<input class="input" type="search" data-filter="q" placeholder="Places, capitals, parks or trails" value="${esc(state.explore.q)}" /></label>
           <label>Region<select class="select" data-filter="region"><option value="">All regions</option>${index.regions
             .map((r) => `<option value="${r.id}">${esc(r.name)}</option>`)
             .join("")}</select></label>
@@ -680,6 +681,7 @@
     const q = f.q.trim().toLowerCase();
     const interestQ = index.interests.find((i) => q && i.label.toLowerCase().includes(q));
     let total = 0;
+    let factTotal = 0;
     const blocks = index.regions
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
@@ -691,8 +693,9 @@
               c.name.toLowerCase().includes(q) ||
               r.name.toLowerCase().includes(q) ||
               c.blurb.toLowerCase().includes(q) ||
-              (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q))) ||
-              (c.facts && [c.facts.capital, c.facts.hub, ...c.facts.parks].some((x) => x.toLowerCase().includes(q)));
+              (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
+            const matches = q ? factMatches(c, q) : [];
+            const matched = (kind) => matches.some((m) => m.kind === kind);
             const cities = c.cities.filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
@@ -707,14 +710,18 @@
                 (city.area && city.area.toLowerCase().includes(q)) ||
                 (q.includes("capital") && city.isCapital) ||
                 ((q.includes("financial") || q.includes("hub")) && city.isHub) ||
+                (city.isCapital && matched("capital")) ||
+                (city.isHub && matched("hub")) ||
+                matches.some((m) => m.place === city) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
             });
-            return { c, cities };
+            return { c, cities, matches };
           })
-          .filter((x) => x.cities.length);
+          .filter((x) => x.cities.length || x.matches.length);
         total += countries.reduce((a, x) => a + x.cities.length, 0);
+        factTotal += countries.reduce((a, x) => a + x.matches.length, 0);
         return { r, countries };
       })
       .filter((b) => b.countries.length);
@@ -723,18 +730,61 @@
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
     return (
-      `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found</p>` +
+      `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${
+        factTotal ? ` · ${factTotal} matching ${factTotal === 1 ? "park, trail, capital or financial hub" : "parks, trails, capitals or financial hubs"}` : ""
+      }</p>` +
       blocks
         .map(
           ({ r, countries }) => `
         <section class="region-block">
           <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${r.icon}</span><h3 style="margin:0">${esc(r.name)}</h3></div>
           <p class="muted">${esc(r.blurb)}</p>
-          <div class="cards">${countries.map(({ c, cities }) => exploreCountryCard(c, cities)).join("")}</div>
+          <div class="cards">${countries.map(({ c, cities, matches }) => exploreCountryCard(c, cities, matches)).join("")}</div>
         </section>`
         )
         .join("")
     );
+  }
+
+  // Parks and trails, capitals and financial hubs whose names contain the search text.
+  // Each match links to the place that holds it when there is one (Yellowstone, Zurich).
+  const FACT_LABELS = { capital: "🏛️ Capital", hub: "💼 Financial hub", park: "🥾 Parks & trails" };
+  function factMatches(c, q) {
+    if (!c.facts || q.length < 3) return [];
+    const out = [];
+    const findPlace = (label) => {
+      const l = label.toLowerCase();
+      return (
+        c.cities.find((x) => x.unesco && x.unesco.toLowerCase() === l) ||
+        c.cities.find((x) => x.name.length >= 4 && l.includes(x.name.toLowerCase().split(/ & |, | \(/)[0]))
+      );
+    };
+    // Prefer the place named by the search (Cape Town among South Africa's three capitals).
+    const byQuery = c.cities.find((x) => x.name.toLowerCase().includes(q));
+    if (c.facts.capital.toLowerCase().includes(q)) out.push({ kind: "capital", label: c.facts.capital, place: byQuery || c.cities.find((x) => x.isCapital) });
+    if (c.facts.hub.toLowerCase().includes(q)) out.push({ kind: "hub", label: c.facts.hub, place: byQuery || c.cities.find((x) => x.isHub) });
+    for (const park of c.facts.parks) if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
+    return out;
+  }
+
+  function highlight(text, q) {
+    const i = text.toLowerCase().indexOf(q);
+    if (!q || i < 0) return esc(text);
+    return `${esc(text.slice(0, i))}<mark>${esc(text.slice(i, i + q.length))}</mark>${esc(text.slice(i + q.length))}`;
+  }
+
+  function matchBlock(matches) {
+    if (!matches.length) return "";
+    const q = state.explore.q.trim().toLowerCase();
+    return `<ul class="search-matches" aria-label="Search matches">${matches
+      .map(
+        (m) => `<li><span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> ${
+          m.place
+            ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
+            : `<span>${highlight(m.label, q)}</span>`
+        }</li>`
+      )
+      .join("")}</ul>`;
   }
 
   function exploreRow(city) {
@@ -748,7 +798,7 @@
             </li>`;
   }
 
-  function exploreCountryCard(c, cities) {
+  function exploreCountryCard(c, cities, matches = []) {
     const byArea = cities.some((x) => x.area);
     let list;
     if (byArea) {
@@ -758,7 +808,7 @@
         groups.get(city.area).push(city);
       }
       list = `<p class="area-summary">${
-        cities.length === c.cities.length && AREA_SUMMARY[c.id] ? `Places in ${AREA_SUMMARY[c.id]}` : `Places in ${groups.size} of ${new Set(c.cities.map((x) => x.area)).size} areas`
+        cities.length === c.cities.length && AREA_SUMMARY[c.id] ? `Places in ${AREA_SUMMARY[c.id]}` : `Places in ${groups.size} of ${new Set(c.cities.map((x) => x.area)).size} ${AREA_NOUN[c.id] || "areas"}`
       }</p>
         <div class="area-groups">${[...groups]
           .map(
@@ -778,8 +828,9 @@
         <p class="card__blurb">${esc(c.blurb)}</p>
         ${monthStrip(c.best, state.explore.month)}
         <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span>${lgbtqFact(c)}${advisoryFact(c)}</div>
+        ${matchBlock(matches)}
         ${keyFacts(c)}
-        ${list}
+        ${cities.length ? list : ""}
       </article>`;
   }
 

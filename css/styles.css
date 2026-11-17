@@ -401,3 +401,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .area-groups { columns: 3 240px; column-gap: 16px; }
 .area-group { break-inside: avoid; margin-bottom: 12px; }
 .area-group h4 { margin: 0 0 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
+
+/* What a search matched among parks and trails, capitals and financial hubs. */
+.search-matches { list-style: none; margin: 0; padding: 10px 12px; display: grid; gap: 6px; border-radius: var(--radius-sm); border: 1.5px solid var(--accent); background: var(--accent-soft); font-size: 0.9rem; }
+.search-matches li { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.search-matches__kind { font-size: 0.78rem; font-weight: 700; color: var(--muted); }
+.search-matches .linkish { text-align: left; }
+mark { background: var(--accent); color: var(--accent-ink); border-radius: 3px; padding: 0 2px; }
