@@ -165,6 +165,14 @@
     }
     markNationalParks(countries, data.NP_EXTRA || {});
 
+    // The state, province, canton, department or prefecture of places outside North
+    // America and the UK, and each country's word for these subdivisions.
+    for (const [id, area] of Object.entries(data.AREAS || {})) {
+      if (!cityById[id]) throw new Error(`AREAS entry ${id} matches no place`);
+      if (!cityById[id].area) cityById[id].area = area;
+    }
+    for (const c of countries) c.areaTerm = (data.AREA_TERMS || {})[c.id] || null;
+
     // Coordinates of each place, [lat, lon], used to list nearby places first.
     for (const [id, ll] of Object.entries(data.COORDS || {})) {
       if (!cityById[id]) throw new Error(`COORDS entry ${id} matches no place`);

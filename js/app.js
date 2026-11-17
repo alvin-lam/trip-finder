@@ -873,7 +873,7 @@
       list = `<p class="area-summary">${
         cities.filter((x) => x.country === c).length === c.cities.length && AREA_SUMMARY[c.id]
           ? `Places in ${AREA_SUMMARY[c.id]}`
-          : `Places in ${new Set(cities.filter((x) => x.country === c && x.area).map((x) => x.area)).size} of ${new Set(c.cities.map((x) => x.area).filter(Boolean)).size} ${AREA_NOUN[c.id] || "areas"}`
+          : `Places in ${new Set(cities.filter((x) => x.country === c && x.area).map((x) => x.area)).size} of ${new Set(c.cities.map((x) => x.area).filter(Boolean)).size} ${AREA_NOUN[c.id] || c.areaTerm || "areas"}`
       }</p>
         <div class="area-groups">${[...groups]
           .map(
