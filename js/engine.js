@@ -138,6 +138,9 @@
           if (!c.cities.some((x) => x.name === name)) throw new Error(`${key} "${name}" matches no place in ${c.name}`);
         }
       }
+      const ps = (data.PARK_SYSTEMS || {})[c.id];
+      c.sites = ps ? ps.sites.map(([name, type, area]) => ({ name, type, area, system: ps.system })) : [];
+      c.biosphere = ((data.BIOSPHERE || {})[c.id] || []).slice();
       const adv = (data.ADVISORY || {})[c.id];
       c.advisory = adv ? { level: adv[0], note: adv[1] } : null;
     }

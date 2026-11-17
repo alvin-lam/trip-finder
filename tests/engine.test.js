@@ -202,3 +202,14 @@ test("every destination except micronations has capital and parks facts", () => 
   assert.deepEqual(tag("pf"), ["Tahiti"]);
   assert.deepEqual(tag("ch"), ["Bern"]);
 });
+
+test("US National Park System and Parks Canada sites are loaded", () => {
+  const us = index.countryById.us.sites;
+  const ca = index.countryById.ca.sites;
+  assert.equal(us.filter((x) => x.type === "National Park").length, 63);
+  assert.ok(us.every((x) => x.system === "US National Park System" && x.area));
+  assert.equal(ca.filter((x) => x.type === "National Park").length, 37);
+  assert.ok(ca.some((x) => x.type === "National Park Reserve") && ca.some((x) => x.type === "National Urban Park"));
+  assert.equal(new Set(us.map((x) => x.name)).size, us.length, "no duplicate US sites");
+  assert.equal(new Set(ca.map((x) => x.name)).size, ca.length, "no duplicate Canadian sites");
+});

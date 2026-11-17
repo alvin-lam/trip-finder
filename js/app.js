@@ -692,7 +692,12 @@
               r.name.toLowerCase().includes(q) ||
               c.blurb.toLowerCase().includes(q) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
-            const matches = q ? factMatches(c, q) : [];
+            let matches = q ? factMatches(c, q) : [];
+            if (f.only === "unesco" && !q) {
+              matches = c.biosphere.map((name) => ({ kind: "biosphere", label: name, detail: "UNESCO Biosphere Reserve" }));
+            } else if (f.only === "unesco") {
+              matches = matches.filter((m) => m.kind === "biosphere");
+            }
             const matched = (kind) => matches.some((m) => m.kind === kind);
             const cities = c.cities.filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
@@ -727,7 +732,7 @@
 
     return (
       `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${
-        factTotal ? ` · ${factTotal} matching ${factTotal === 1 ? "park, trail or capital" : "parks, trails or capitals"}` : ""
+        factTotal ? ` · ${factTotal} matching ${factTotal === 1 ? "park, trail, protected site or capital" : "parks, trails, protected sites or capitals"}` : ""
       }</p>` +
       blocks
         .map(
@@ -744,9 +749,10 @@
 
   // Parks and trails and capitals whose names contain the search text.
   // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
-  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails" };
+  const FACT_LABELS = { capital: "🏛️ Capital", park: "🥾 Parks & trails", site: "🏞️ Park system", biosphere: "🌿 Biosphere" };
   function factMatches(c, q) {
-    if (!c.facts || q.length < 3) return [];
+    if (q.length < 3) return [];
+    if (!c.facts) return siteMatches(c, q);
     const out = [];
     const findPlace = (label) => {
       const l = label.toLowerCase();
@@ -759,7 +765,44 @@
     const byQuery = c.cities.find((x) => x.name.toLowerCase().includes(q));
     if (c.facts.capital.toLowerCase().includes(q)) out.push({ kind: "capital", label: c.facts.capital, place: byQuery || c.cities.find((x) => x.isCapital) });
     for (const park of c.facts.parks) if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
+    // A site already listed under parks and trails is not repeated.
+    const seen = new Set(out.map((m) => m.label.toLowerCase()));
+    return out.concat(siteMatches(c, q).filter((m) => !seen.has(m.label.toLowerCase())));
+  }
+
+  // US National Park System and Parks Canada sites, and UNESCO Biosphere Reserves.
+  // A search matches a site's name, or (from four letters) its designation or system,
+  // so "national monument" or "parks canada" list every matching site.
+  function siteMatches(c, q) {
+    const out = [];
+    for (const site of c.sites) {
+      const byName = site.name.toLowerCase().includes(q);
+      const byKind = q.length >= 4 && `${site.type} ${site.system}`.toLowerCase().includes(q);
+      if (byName || byKind) out.push({ kind: "site", label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: placeForSite(c, site) });
+    }
+    for (const name of c.biosphere) {
+      const byKind = q.length >= 4 && "unesco biosphere reserve".includes(q);
+      if (name.toLowerCase().includes(q) || byKind) out.push({ kind: "biosphere", label: name, detail: "UNESCO Biosphere Reserve" });
+    }
     return out;
+  }
+
+  // Links a site to a place of ours in the same state or province with a matching name
+  // (Yellowstone National Park -> Yellowstone; Banff National Park -> Banff).
+  function placeForSite(c, site) {
+    const l = site.name.toLowerCase();
+    const sameArea = c.cities.filter((x) => !x.area || site.area.includes(x.area));
+    const byName = sameArea.find((x) => {
+      const head = x.name.toLowerCase().split(/ & |, | \(/)[0];
+      return head.length >= 4 && (l === head || l.startsWith(head + " "));
+    });
+    if (byName) return byName;
+    // Otherwise a place in the same state whose description names the site
+    // ("Utah National Parks" mentions Zion, Arches and Bryce).
+    const key = site.name.split(" ")[0];
+    if (key.length < 4) return null;
+    const word = new RegExp(`\\b${key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`);
+    return sameArea.find((x) => x.area && word.test(x.blurb)) || null;
   }
 
   function highlight(text, q) {
@@ -768,18 +811,24 @@
     return `${esc(text.slice(0, i))}<mark>${esc(text.slice(i, i + q.length))}</mark>${esc(text.slice(i + q.length))}`;
   }
 
-  function matchBlock(matches) {
+  const MATCHES_SHOWN = 8;
+  function matchItem(m, q) {
+    return `<li><span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> ${
+      m.place
+        ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
+        : `<span>${highlight(m.label, q)}</span>`
+    }${m.detail ? ` <span class="search-matches__detail">${esc(m.detail)}</span>` : ""}</li>`;
+  }
+
+  function matchBlock(matches, q = state.explore.q.trim().toLowerCase()) {
     if (!matches.length) return "";
-    const q = state.explore.q.trim().toLowerCase();
-    return `<ul class="search-matches" aria-label="Search matches">${matches
-      .map(
-        (m) => `<li><span class="search-matches__kind">${FACT_LABELS[m.kind]}</span> ${
-          m.place
-            ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
-            : `<span>${highlight(m.label, q)}</span>`
-        }</li>`
-      )
-      .join("")}</ul>`;
+    const first = matches.slice(0, MATCHES_SHOWN).map((m) => matchItem(m, q)).join("");
+    const rest = matches.slice(MATCHES_SHOWN);
+    return `<div class="search-matches" aria-label="Search matches"><ul>${first}</ul>${
+      rest.length
+        ? `<details class="more"><summary>Show ${rest.length} more</summary><ul>${rest.map((m) => matchItem(m, q)).join("")}</ul></details>`
+        : ""
+    }</div>`;
   }
 
   function exploreRow(city) {
