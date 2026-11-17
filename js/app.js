@@ -792,7 +792,10 @@
     // Prefer the place named by the search (Cape Town among South Africa's three capitals).
     const byQuery = c.cities.find((x) => x.name.toLowerCase().includes(q));
     if (c.facts.capital.toLowerCase().includes(q)) out.push({ kind: "capital", label: c.facts.capital, place: byQuery || c.cities.find((x) => x.isCapital) });
-    for (const park of c.facts.parks) if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
+    for (const park of c.facts.parks) {
+      if (c.id === "ca" && HIDDEN_CA_PARKS.test(park)) continue;
+      if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
+    }
     // A site already listed under parks and trails is not repeated.
     const seen = new Set(out.map((m) => m.label.toLowerCase()));
     return out.concat(siteMatches(c, q).filter((m) => !seen.has(m.label.toLowerCase())));
@@ -801,9 +804,14 @@
   // US National Park System and Parks Canada sites.
   // A search matches a site's name, or (from four letters) its designation or system,
   // so "national monument" or "parks canada" list every matching site.
+  // Parks Canada national parks, park reserves and national historic sites stay in
+  // the data (they still label places with NATIONAL PARK) but are not search results.
+  const HIDDEN_CA_SITES = /^National (Park|Park Reserve|Historic Site)$/;
+  const HIDDEN_CA_PARKS = /National (Park|Park Reserve|Historic Site)\b/;
   function siteMatches(c, q) {
     const out = [];
     for (const site of c.sites) {
+      if (c.id === "ca" && HIDDEN_CA_SITES.test(site.type)) continue;
       const byName = site.name.toLowerCase().includes(q);
       const byKind = q.length >= 4 && `${site.type} ${site.system}`.toLowerCase().includes(q);
       if (byName || byKind) out.push({ kind: "site", system: site.system, label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: E.placeForSite(c, site) });
@@ -852,6 +860,13 @@
               </button>
               ${heart("city", city.id, city.name)}
             </li>`;
+  }
+
+  // "Also in" shows five places, then five more per click up to twenty, then all.
+  const ALSO_STEP = 5;
+  const ALSO_CAP = 20;
+  function alsoMoreLabel(shown, left) {
+    return shown >= ALSO_CAP ? `Show all (${left} more)` : `Show ${Math.min(ALSO_STEP, left)} more`;
   }
 
   // Countries with more than this many places in the results are grouped by their
@@ -974,9 +989,8 @@
     // Other places in the same country, nearest first; the first five show, the rest
     // sit behind a "Show more" toggle.
     const others = E.nearestPlaces(city, city.country.cities.concat(city.country.linked));
-    const ALSO_SHOWN = 5;
-    const alsoChip = ({ city: o, km }) =>
-      `<button class="chip" data-action="open-city" data-id="${o.id}">${esc(o.name)}${km !== null ? ` <span class="chip__dist">${E.fmtDistance(km)}</span>` : ""}</button>`;
+    const alsoChip = ({ city: o, km }, i) =>
+      `<button class="chip" data-action="open-city" data-id="${o.id}"${i >= ALSO_STEP ? " hidden" : ""}>${esc(o.name)}${km !== null ? ` <span class="chip__dist">${E.fmtDistance(km)}</span>` : ""}</button>`;
     const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${city.name}, ${city.country.name}`)}`;
     $("#detail-body").innerHTML = `
       <button class="icon-btn detail__close" data-action="close-detail" aria-label="Close">✕</button>
@@ -1063,15 +1077,9 @@
       </div>
       ${
         others.length
-          ? `<div class="also-in"><h3>Also in ${esc(city.country.name)}</h3>${city.ll ? `<p class="also-in__note">Nearest first</p>` : ""}<div class="chips">${others
-              .slice(0, ALSO_SHOWN)
-              .map(alsoChip)
-              .join("")}</div>${
-              others.length > ALSO_SHOWN
-                ? `<details class="more also-in__more"><summary>Show ${others.length - ALSO_SHOWN} more</summary><div class="chips">${others
-                    .slice(ALSO_SHOWN)
-                    .map(alsoChip)
-                    .join("")}</div></details>`
+          ? `<div class="also-in"><h3>Also in ${esc(city.country.name)}</h3>${city.ll ? `<p class="also-in__note">Nearest first</p>` : ""}<div class="chips">${others.map(alsoChip).join("")}</div>${
+              others.length > ALSO_STEP
+                ? `<button class="linkish also-in__more" data-action="also-more">${alsoMoreLabel(ALSO_STEP, others.length - ALSO_STEP)}</button>`
                 : ""
             }</div>`
           : ""
@@ -1149,6 +1157,17 @@
   }
 
   const ACTIONS = {
+    // Reveal five more nearby places at a time; past twenty, reveal the rest at once.
+    "also-more": (el) => {
+      const box = el.closest(".also-in");
+      const hidden = [...box.querySelectorAll(".chips .chip[hidden]")];
+      const shown = box.querySelectorAll(".chips .chip:not([hidden])").length;
+      const n = shown >= ALSO_CAP ? hidden.length : Math.min(ALSO_STEP, hidden.length);
+      hidden.slice(0, n).forEach((c) => (c.hidden = false));
+      const left = hidden.length - n;
+      if (left) el.textContent = alsoMoreLabel(shown + n, left);
+      else el.remove();
+    },
     start: () => {
       state.focusRegion = null;
       goStep(0);
