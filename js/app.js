@@ -731,8 +731,8 @@
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
             });
-            // A national park, seashore or trail match stays only when it opens a place listed in these results.
-            const kept = matches.filter((m) => !LINK_ONLY.test(m.label) || (m.place && cities.includes(m.place)));
+            // A "National" or trail match stays only when it opens a place listed in these results.
+            const kept = matches.filter((m) => !LINK_ONLY.test(`${m.label} ${m.detail || ""} ${m.system || ""}`) || (m.place && cities.includes(m.place)));
             return { c, cities, matches: kept };
           })
           .filter((x) => x.cities.length || x.matches.length);
@@ -773,9 +773,10 @@
   // Parks and trails and capitals whose names contain the search text.
   // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
   const FACT_LABELS = { capital: "🏛️ Capital" };
-  // National parks, national seashores and trails (treks, tracks, ways, paths, walks)
-  // show in search only with a linked place.
-  const LINK_ONLY = /National Park|National Seashore|\b(trails?|tracks?|treks?|way|camino|path|route|walk|circuit)\b/i;
+  // Anything named or designated "National" (parks, seashores, memorials, every US National
+  // Park System unit) and trails
+  // (treks, tracks, ways, paths, walks) show in search only with a linked place.
+  const LINK_ONLY = /\bnational\b|\b(trails?|tracks?|treks?|way|camino|path|route|walk|circuit)\b/i;
   function factMatches(c, q) {
     if (q.length < 3) return [];
     if (!c.facts) return siteMatches(c, q);
