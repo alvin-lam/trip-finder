@@ -93,7 +93,7 @@
   }
 
   // Places in the US and Canada carry a state or province.
-  const AREA_SUMMARY = { us: "all 50 states and D.C.", ca: "all 10 provinces and 3 territories" };
+  const AREA_SUMMARY = { us: "all 50 states and D.C., covering the 100 largest metro areas", ca: "all 10 provinces and 3 territories" };
   const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories" };
   function placeWhere(city) {
     return city.area ? `${esc(city.area)}, ${esc(city.country.name)}` : esc(city.country.name);
@@ -706,6 +706,7 @@
                 city.name.toLowerCase().includes(q) ||
                 city.blurb.toLowerCase().includes(q) ||
                 (city.area && city.area.toLowerCase().includes(q)) ||
+                city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
                 (q.includes("capital") && city.isCapital) ||
                 (city.isCapital && matched("capital")) ||
                 matches.some((m) => m.place === city) ||
@@ -975,6 +976,12 @@
           : ""
       }
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
+      ${city.metros
+        .map(
+          (m) =>
+            `<p class="unesco-line">🏙️ Metro area #${m.rank} of the 100 largest in the US: <b>${esc(m.name)}</b> (${(m.population / 1e6).toFixed(1)} million people)</p>`
+        )
+        .join("")}
       ${
         city.country.advisory
           ? `<div class="lgbtq-note lgbtq-note--caution advisory-note--${city.country.advisory.level}">

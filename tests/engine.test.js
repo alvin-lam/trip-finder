@@ -227,3 +227,15 @@ test("no UNESCO Biosphere Reserve data remains", () => {
   const text = JSON.stringify(data.COUNTRIES) + JSON.stringify(data.FACTS);
   assert.doesNotMatch(text, /biosphere/i);
 });
+
+test("the 100 largest US metro areas are each linked to a place", () => {
+  assert.equal(data.US_METROS.length, 100);
+  assert.deepEqual(data.US_METROS.map((m) => m[0]), Array.from({ length: 100 }, (_, i) => i + 1));
+  const linked = index.countryById.us.cities.flatMap((c) => c.metros);
+  assert.equal(linked.length, 100);
+  const place = (rank) => index.countryById.us.cities.find((c) => c.metros.some((m) => m.rank === rank));
+  assert.equal(place(1).name, "New York City");
+  assert.equal(place(4).name, "Dallas & Fort Worth");
+  assert.equal(place(100).name, "New Haven");
+  assert.ok(index.countryById.us.cities.every((c) => c.area && c.temps));
+});

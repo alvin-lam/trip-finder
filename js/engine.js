@@ -104,6 +104,7 @@
           area: (extra && extra.area) || null,
           temps: (extra && extra.temps) || null,
           isCapital: false,
+          metros: [],
           unesco: null,
           family: null,
           country,
@@ -117,6 +118,13 @@
     for (const [id, site] of Object.entries(data.UNESCO || {})) {
       if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
       cityById[id].unesco = site;
+    }
+    // Link each top-100 US metro to the place that covers it.
+    const us = countries.find((c) => c.id === "us");
+    for (const [rank, name, population, placeName] of data.US_METROS || []) {
+      const place = us && us.cities.find((x) => x.name === placeName);
+      if (!place) throw new Error(`US metro #${rank} points at unknown place "${placeName}"`);
+      place.metros.push({ rank, name, population });
     }
     for (const [id, why] of Object.entries(data.FAMILY || {})) {
       if (!cityById[id]) throw new Error(`FAMILY entry ${id} matches no place`);
