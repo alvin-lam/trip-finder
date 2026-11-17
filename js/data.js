@@ -3465,7 +3465,7 @@
     "cu": ["Havana", ["Viñales National Park", "Topes de Collantes", "Alejandro de Humboldt National Park"]],
     "jm": ["Kingston", ["Blue and John Crow Mountains National Park", "Blue Mountain Peak trail"]],
     "bz": ["Belmopan", ["Cockscomb Basin Wildlife Sanctuary", "Great Blue Hole", "Mountain Pine Ridge"]],
-    "hn": ["Tegucigalpa", ["Pico Bonito National Park", "Celaque National Park", "Río Plátano rainforest"]],
+    "hn": ["Tegucigalpa", ["Pico Bonito National Park", "Celaque National Park"]],
     "sv": ["San Salvador", ["El Imposible National Park", "Cerro Verde National Park", "Ruta de las Flores"]],
     "ni": ["Managua", ["Masaya Volcano National Park", "Indio Maíz Biological Reserve", "Cerro Negro volcano boarding"]],
     "pa": ["Panama City", ["Soberanía National Park (Pipeline Road)", "Volcán Barú National Park", "Coiba National Park"]],
