@@ -731,7 +731,9 @@
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
             });
-            return { c, cities, matches };
+            // A national park match stays only when it opens a place listed in these results.
+            const kept = matches.filter((m) => !/National Park/.test(m.label) || (m.place && cities.includes(m.place)));
+            return { c, cities, matches: kept };
           })
           .filter((x) => x.cities.length || x.matches.length);
         total += countries.reduce((a, x) => a + x.cities.length, 0);
