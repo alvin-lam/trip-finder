@@ -72,6 +72,34 @@
     return `<span class="family" title="Family friendly: ${esc(city.family)}" aria-label="Family friendly">FAMILY</span>`;
   }
 
+  function capitalTags(city) {
+    let out = "";
+    if (city.isCapital) out += `<span class="ptag ptag--capital" title="Capital: ${esc(city.country.facts.capital)}">CAPITAL</span>`;
+    if (city.isHub) out += `<span class="ptag ptag--hub" title="Financial hub: ${esc(city.country.facts.hub)}">FINANCIAL HUB</span>`;
+    return out;
+  }
+
+  function placeTags(city) {
+    return capitalTags(city) + unescoTag(city) + familyTag(city);
+  }
+
+  // Capital, financial hub and famous parks and trails for a destination.
+  function keyFacts(c) {
+    if (!c.facts) return "";
+    const { capital, hub, parks } = c.facts;
+    return `<dl class="keyfacts">
+      <div><dt>🏛️ Capital</dt><dd>${esc(capital)}</dd></div>
+      <div><dt>💼 Financial hub</dt><dd>${esc(hub)}</dd></div>
+      <div><dt>🥾 Parks &amp; trails</dt><dd>${parks.map(esc).join(" · ")}</dd></div>
+    </dl>`;
+  }
+
+  // Places in the US and Canada carry a state or province.
+  const AREA_SUMMARY = { us: "all 50 states and D.C.", ca: "all 10 provinces and 3 territories" };
+  function placeWhere(city) {
+    return city.area ? `${esc(city.area)}, ${esc(city.country.name)}` : esc(city.country.name);
+  }
+
   function familyFact(country) {
     const n = country.cities.filter((c) => c.family).length;
     if (!n) return "";
@@ -523,8 +551,8 @@
             <div class="city-card">
               ${ring(c.score)}
               <button class="city-card__main" data-action="open-city" data-id="${c.city.id}">
-                <div class="city-card__name">${esc(c.city.name)} ${unescoTag(c.city)}${familyTag(c.city)}</div>
-                <div class="city-card__sub">${c.city.country.flag} ${esc(c.city.country.name)} · ${esc(topStrengths(c.city, 2).join(", ") || c.city.region.name)}</div>
+                <div class="city-card__name">${esc(c.city.name)} ${placeTags(c.city)}</div>
+                <div class="city-card__sub">${c.city.country.flag} ${placeWhere(c.city)} · ${esc(topStrengths(c.city, 2).join(", ") || c.city.region.name)}</div>
               </button>
               ${heart("city", c.city.id, c.city.name)}
             </div>`
@@ -554,6 +582,7 @@
         </ul>
         ${monthStrip(c.best, state.prefs.month)}
         <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span>${unescoFact(c)}${familyFact(c)}${lgbtqFact(c)}${advisoryFact(c)}</div>
+        ${keyFacts(c)}
         <div class="itinerary">
           <div class="itinerary__title">${cr.spareDays > 0 ? `Suggested ${days}-day stop` : `Suggested ${days}-day route`}</div>
           <div class="itinerary__bar">
@@ -568,7 +597,7 @@
             ${cr.itinerary
               .map(
                 (s, i) =>
-                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button>${unescoTag(s.city)}${familyTag(s.city)}<span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
+                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button><span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
               )
               .join("")}
           </ol>
@@ -591,8 +620,8 @@
               <li class="city-row">
                 <span class="score-chip">${s.score}</span>
                 <button class="city-row__main" data-action="open-city" data-id="${s.city.id}">
-                  <span class="city-row__name">${esc(s.city.name)} ${unescoTag(s.city)}${familyTag(s.city)}</span>
-                  <span class="city-row__blurb">${esc(s.city.blurb)}</span>
+                  <span class="city-row__name">${esc(s.city.name)} ${placeTags(s.city)}</span>
+                  <span class="city-row__blurb">${s.city.area ? `${esc(s.city.area)} · ` : ""}${esc(s.city.blurb)}</span>
                 </button>
                 ${heart("city", s.city.id, s.city.name)}
               </li>`
@@ -662,7 +691,8 @@
               c.name.toLowerCase().includes(q) ||
               r.name.toLowerCase().includes(q) ||
               c.blurb.toLowerCase().includes(q) ||
-              (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
+              (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q))) ||
+              (c.facts && [c.facts.capital, c.facts.hub, ...c.facts.parks].some((x) => x.toLowerCase().includes(q)));
             const cities = c.cities.filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
@@ -674,6 +704,9 @@
               return (
                 city.name.toLowerCase().includes(q) ||
                 city.blurb.toLowerCase().includes(q) ||
+                (city.area && city.area.toLowerCase().includes(q)) ||
+                (q.includes("capital") && city.isCapital) ||
+                ((q.includes("financial") || q.includes("hub")) && city.isHub) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
@@ -704,9 +737,39 @@
     );
   }
 
-  function exploreCountryCard(c, cities) {
+  function exploreRow(city) {
     return `
-      <article class="card">
+            <li class="city-row">
+              <button class="city-row__main" data-action="open-city" data-id="${city.id}">
+                <span class="city-row__name">${esc(city.name)} ${placeTags(city)}</span>
+                <span class="city-row__blurb">${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
+              </button>
+              ${heart("city", city.id, city.name)}
+            </li>`;
+  }
+
+  function exploreCountryCard(c, cities) {
+    const byArea = cities.some((x) => x.area);
+    let list;
+    if (byArea) {
+      const groups = new Map();
+      for (const city of [...cities].sort((a, b) => a.area.localeCompare(b.area))) {
+        if (!groups.has(city.area)) groups.set(city.area, []);
+        groups.get(city.area).push(city);
+      }
+      list = `<p class="area-summary">${
+        cities.length === c.cities.length && AREA_SUMMARY[c.id] ? `Places in ${AREA_SUMMARY[c.id]}` : `Places in ${groups.size} of ${new Set(c.cities.map((x) => x.area)).size} areas`
+      }</p>
+        <div class="area-groups">${[...groups]
+          .map(
+            ([area, list]) => `<section class="area-group"><h4>${esc(area)}</h4><ul class="city-list">${list.map(exploreRow).join("")}</ul></section>`
+          )
+          .join("")}</div>`;
+    } else {
+      list = `<ul class="city-list">${cities.map(exploreRow).join("")}</ul>`;
+    }
+    return `
+      <article class="card${byArea ? " card--wide" : ""}">
         <div class="card__head">
           <span class="card__flag" aria-hidden="true">${c.flag}</span>
           <div class="card__title"><h3>${esc(c.name)}</h3><div class="card__meta">${kindTag(c)}${c.kind === "territory" || c.kind === "micronation" ? `${esc(c.status)} · ` : ""}Best: ${esc(E.formatMonths(c.best))}</div></div>
@@ -715,20 +778,8 @@
         <p class="card__blurb">${esc(c.blurb)}</p>
         ${monthStrip(c.best, state.explore.month)}
         <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span>${lgbtqFact(c)}${advisoryFact(c)}</div>
-        <ul class="city-list">
-          ${cities
-            .map(
-              (city) => `
-            <li class="city-row">
-              <button class="city-row__main" data-action="open-city" data-id="${city.id}">
-                <span class="city-row__name">${esc(city.name)} ${unescoTag(city)}${familyTag(city)}</span>
-                <span class="city-row__blurb">${esc(topStrengths(city).join(" · ") || city.blurb)}</span>
-              </button>
-              ${heart("city", city.id, city.name)}
-            </li>`
-            )
-            .join("")}
-        </ul>
+        ${keyFacts(c)}
+        ${list}
       </article>`;
   }
 
@@ -775,7 +826,7 @@
             const t = E.tempFor(city, month);
             const s = scoreOf(city);
             return `<tr>
-              <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)} ${unescoTag(city)}${familyTag(city)}</span><span class="city-row__blurb">${city.country.flag} ${esc(city.country.name)}</span></button></td>
+              <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)} ${placeTags(city)}</span><span class="city-row__blurb">${city.country.flag} ${placeWhere(city)}</span></button></td>
               ${state.results ? `<td data-label="Match">${s === null ? "–" : `${s}%`}</td>` : ""}
               <td data-label="Best time">${esc(E.formatMonths(city.best))}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
               <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}>${E.fmtTemp(t)}</td>
@@ -812,7 +863,7 @@
         <span class="card__flag" aria-hidden="true">${city.country.flag}</span>
         <div style="flex:1;min-width:0">
           <h2 id="detail-title" style="margin:0">${esc(city.name)}</h2>
-          <div class="card__meta">${city.name === city.country.name ? "" : `${esc(city.country.name)} · `}${esc(city.region.name)}${city.country.kind === "country" ? "" : `<br />${kindTag(city.country)}${esc(city.country.status)}`}</div>
+          <div class="card__meta">${city.area ? `${esc(city.area)} · ` : ""}${city.name === city.country.name ? "" : `${esc(city.country.name)} · `}${esc(city.region.name)}${city.country.kind === "country" ? "" : `<br />${kindTag(city.country)}${esc(city.country.status)}`}</div>
         </div>
         ${res ? ring(res.score, "ring--lg") : ""}
       </div>
@@ -850,6 +901,7 @@
         <span class="fact">💱 ${esc(city.country.currency)}</span>
         <span class="fact">🗣️ ${esc(city.country.language)}</span>
       </div>
+      ${city.country.facts ? `<div><h3>About ${esc(city.country.name)}</h3>${keyFacts(city.country)}</div>` : ""}
       <div>
         <h3>What it's great for</h3>
         <div class="tagbars">

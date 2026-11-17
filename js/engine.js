@@ -88,7 +88,9 @@
       country.regionObj = region;
       region.countries.push(country);
       countries.push(country);
-      for (const [name, tagStr, pop, blurb, bestOverride] of raw.cities) {
+      // A place is [name, tags, popularity, blurb, best months?, { area, temps }?].
+      // `area` is a state or province; `temps` overrides the country's monthly highs.
+      for (const [name, tagStr, pop, blurb, bestOverride, extra] of raw.cities) {
         if (!/^[0-5]{8}$/.test(tagStr)) throw new Error(`Bad tag string for ${name}`);
         const tags = {};
         TAG_ORDER.forEach((t, i) => (tags[t] = Number(tagStr[i])));
@@ -99,6 +101,10 @@
           pop,
           blurb,
           best: bestOverride || raw.best,
+          area: (extra && extra.area) || null,
+          temps: (extra && extra.temps) || null,
+          isCapital: false,
+          isHub: false,
           unesco: null,
           family: null,
           country,
@@ -121,6 +127,19 @@
       const entry = (data.LGBTQ || {})[c.id];
       if (data.LGBTQ && !entry) throw new Error(`No LGBTQ+ entry for ${c.name}`);
       c.lgbtq = entry ? { level: entry[0], note: entry[1] } : null;
+      const f = (data.FACTS || {})[c.id];
+      if (data.FACTS && !f && c.kind !== "micronation") throw new Error(`No facts entry for ${c.name}`);
+      c.facts = f ? { capital: f[0], hub: f[1], parks: f[2] } : null;
+      if (c.facts) {
+        const alias = f[3] || {};
+        for (const city of c.cities) {
+          city.isCapital = alias.capitalPlace ? city.name === alias.capitalPlace : namesPlace(c.facts.capital, city.name);
+          city.isHub = alias.hubPlace ? city.name === alias.hubPlace : namesPlace(c.facts.hub, city.name);
+        }
+        for (const [key, name] of Object.entries(alias)) {
+          if (!c.cities.some((x) => x.name === name)) throw new Error(`${key} "${name}" matches no place in ${c.name}`);
+        }
+      }
       const adv = (data.ADVISORY || {})[c.id];
       c.advisory = adv ? { level: adv[0], note: adv[1] } : null;
     }
@@ -134,6 +153,16 @@
       homes: data.HOMES,
       interests: data.INTERESTS,
     };
+  }
+
+  // True when a capital or hub description ("Paris (La Défense)") names this place
+  // ("Paris", or "Tunis & Sidi Bou Said" for "Tunis").
+  function namesPlace(desc, placeName) {
+    const norm = (x) => slug(x).replace(/-/g, " ");
+    const main = norm(desc.split(/[(;]/)[0]);
+    const place = norm(placeName);
+    const placeHead = norm(placeName.split(/ & |, | \(/)[0]);
+    return main === place || main === placeHead || main.split(/ and /).includes(placeHead);
   }
 
   function normalizePrefs(prefs) {
@@ -172,7 +201,7 @@
   }
 
   function tempFor(city, month) {
-    const temps = city.country.temps;
+    const temps = city.temps || city.country.temps;
     if (month) return temps[month - 1];
     const vals = city.best.map((m) => temps[m - 1]);
     return Math.round(vals.reduce((a, b) => a + b, 0) / vals.length);

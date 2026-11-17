@@ -385,3 +385,19 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .install__share { width: 16px; height: 16px; vertical-align: -3px; color: var(--teal); }
 .install__actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .install__close { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border: 0; border-radius: 50%; background: var(--surface-2); color: var(--muted); cursor: pointer; font-size: 0.8rem; }
+
+/* Capital and financial-hub tags, and the key-facts block. */
+.ptag { display: inline-block; font-family: var(--font); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 1px 6px; border-radius: 4px; margin-left: 4px; vertical-align: 1px; white-space: nowrap; background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
+.ptag--hub { color: var(--muted); }
+.keyfacts { margin: 0; display: grid; gap: 6px; font-size: 0.85rem; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--surface-2); }
+.keyfacts div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 8px; }
+.keyfacts dt { color: var(--muted); font-weight: 600; }
+.keyfacts dd { margin: 0; min-width: 0; }
+@media (max-width: 420px) { .keyfacts div { grid-template-columns: 1fr; gap: 0; } }
+
+/* The US and Canada span the full row in Explore, grouped by state or province. */
+.card--wide { grid-column: 1 / -1; }
+.area-summary { margin: 0; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+.area-groups { columns: 3 240px; column-gap: 16px; }
+.area-group { break-inside: avoid; margin-bottom: 12px; }
+.area-group h4 { margin: 0 0 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }

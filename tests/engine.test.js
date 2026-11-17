@@ -173,3 +173,31 @@ test("daily spending is labelled in US dollars", () => {
   for (const v of Object.values(E.COST_DAILY)) assert.match(v, /US\$/);
   for (const b of Object.values(E.BUDGETS)) assert.match(b.range, /US\$/);
 });
+
+test("the US covers all 50 states plus D.C., and Canada all 13 provinces and territories", () => {
+  const states = new Set(index.countryById.us.cities.map((c) => c.area));
+  assert.equal(states.size, 51);
+  assert.ok(states.has("District of Columbia") && states.has("Alaska") && states.has("Wyoming"));
+  const provinces = new Set(index.countryById.ca.cities.map((c) => c.area));
+  assert.equal(provinces.size, 13);
+  assert.ok(index.countryById.us.cities.every((c) => c.area && c.temps && c.temps.length === 12));
+});
+
+test("places use their own climate when they have one", () => {
+  const alaska = index.countryById.us.cities.find((c) => c.area === "Alaska");
+  const miami = index.cityById["us-miami"];
+  assert.ok(E.tempFor(alaska, 1) < 0 && E.tempFor(miami, 1) > 20);
+});
+
+test("every destination except micronations has capital, hub and parks facts", () => {
+  for (const c of index.countries) {
+    if (c.kind === "micronation") continue;
+    assert.ok(c.facts && c.facts.capital && c.facts.hub && c.facts.parks.length >= 1, c.name);
+  }
+  const tag = (id) => index.countryById[id].cities.filter((x) => x.isCapital).map((x) => x.name);
+  assert.deepEqual(tag("fr"), ["Paris"]);
+  assert.deepEqual(tag("us"), ["Washington, D.C."]);
+  assert.deepEqual(tag("ca"), ["Ottawa"]);
+  assert.deepEqual(tag("pf"), ["Tahiti"]);
+  assert.deepEqual(index.countryById.ch.cities.filter((x) => x.isHub).map((x) => x.name), ["Zurich"]);
+});
