@@ -600,6 +600,39 @@
         ["Québec City", "05422133", 3, "A walled old city with a winter carnival.", [2, 6, 7, 8, 9, 12], { area: "Quebec", temps: [-8, -6, 0, 8, 17, 22, 25, 23, 18, 11, 3, -4] }],
         ["Saskatoon & Grasslands", "02331213", 1, "River-valley trails and dark-sky prairie parks.", [6, 7, 8, 9], { area: "Saskatchewan", temps: [-12, -9, -2, 10, 18, 22, 25, 24, 17, 9, -2, -10] }],
         ["Whitehorse & Kluane", "00250502", 1, "Gold Rush history, northern lights and huge mountains.", [2, 3, 6, 7, 8], { area: "Yukon", temps: [-14, -10, -3, 5, 13, 18, 20, 18, 12, 3, -7, -12] }],
+        ["Calgary", "03433432", 3, "The Calgary Stampede and the gateway to the Rockies.", [1, 2, 6, 7, 8, 9], { area: "Alberta", temps: [-1, 1, 5, 11, 17, 21, 24, 23, 18, 12, 4, 0] }],
+        ["Edmonton", "03423352", 2, "North America's biggest mall and a lush river valley.", [6, 7, 8, 9], { area: "Alberta", temps: [-7, -4, 1, 11, 18, 21, 23, 22, 17, 10, 0, -5] }],
+        ["Winnipeg", "04423132", 2, "The Canadian Museum for Human Rights and The Forks.", [6, 7, 8, 9], { area: "Manitoba", temps: [-11, -8, -1, 10, 19, 23, 26, 25, 19, 11, 0, -8] }],
+        ["Hamilton", "02341223", 1, "Dozens of waterfalls along the Niagara Escarpment.", [5, 6, 7, 8, 9, 10], { area: "Ontario", temps: [-1, 0, 5, 12, 19, 25, 27, 26, 22, 15, 8, 2] }],
+        ["Kitchener–Waterloo", "03322122", 1, "Mennonite markets and Canada's biggest Oktoberfest.", [6, 7, 8, 9, 10], { area: "Ontario", temps: [-3, -2, 3, 11, 19, 24, 26, 25, 21, 14, 6, 0] }],
+        ["London", "03322133", 1, "The Forest City, with riverside trails and festivals.", null, { area: "Ontario", temps: [-2, -1, 4, 12, 19, 24, 27, 26, 22, 15, 7, 1] }],
+        ["Niagara Falls & Wine Country", "11442225", 4, "Niagara Falls and Niagara-on-the-Lake wineries.", [5, 6, 7, 8, 9, 10], { area: "Ontario", temps: [-1, 0, 5, 12, 19, 24, 27, 26, 22, 15, 8, 2] }],
+        ["Windsor", "03322122", 1, "Riverfront views of Detroit, with Point Pelee nearby.", null, { area: "Ontario", temps: [0, 1, 7, 14, 21, 26, 28, 27, 23, 16, 9, 2] }],
+        ["Oshawa", "02321122", 1, "Auto heritage and Lake Ontario shoreline trails.", null, { area: "Ontario", temps: [-3, -2, 3, 10, 17, 22, 25, 24, 20, 13, 6, 0] }],
+        ["Victoria", "34442324", 4, "Harbour-front gardens, whale watching and afternoon tea.", [5, 6, 7, 8, 9], { area: "British Columbia", temps: [7, 9, 11, 13, 16, 19, 22, 22, 19, 14, 9, 7] }],
+        ["Regina", "02322122", 1, "The RCMP Heritage Centre and Wascana Lake.", [6, 7, 8, 9], { area: "Saskatchewan", temps: [-10, -7, 0, 11, 18, 23, 26, 26, 19, 11, 0, -8] }],
+        ["Sherbrooke", "03332123", 1, "Murals, lakes and the Eastern Townships.", null, { area: "Quebec", temps: [-6, -5, 1, 10, 18, 23, 25, 24, 19, 12, 4, -3] }],
+        ["Kelowna", "31443324", 3, "Lake beaches and Okanagan wineries.", [5, 6, 7, 8, 9], { area: "British Columbia", temps: [1, 4, 10, 16, 21, 25, 29, 29, 23, 14, 6, 1] }],
+        ["Barrie", "21332223", 1, "Lake Simcoe beaches and the edge of cottage country.", null, { area: "Ontario", temps: [-5, -4, 2, 11, 18, 23, 26, 25, 20, 13, 5, -2] }],
+        ["Abbotsford & the Fraser Valley", "01332213", 1, "Farm tours and Fraser Valley hikes.", null, { area: "British Columbia", temps: [6, 8, 11, 14, 18, 21, 25, 25, 21, 14, 9, 6] }],
+        ["Kingston", "04332134", 2, "Fort Henry, a limestone old town and the Thousand Islands.", null, { area: "Ontario", temps: [-5, -4, 2, 10, 17, 22, 25, 24, 20, 13, 6, -2] }],
+        ["Sudbury", "01231312", 1, "Science North and the giant Big Nickel.", null, { area: "Ontario", temps: [-10, -8, -1, 8, 17, 22, 25, 23, 17, 10, 1, -7] }],
+        ["Guelph", "02322123", 1, "A university town with craft breweries and river trails.", null, { area: "Ontario", temps: [-3, -2, 3, 11, 18, 23, 26, 25, 21, 14, 6, 0] }],
+        ["Saguenay", "02251413", 1, "A dramatic fjord for kayaking and whale watching.", null, { area: "Quebec", temps: [-11, -9, -2, 7, 16, 21, 24, 22, 16, 9, 1, -7] }],
+        ["Trois-Rivières", "03322122", 1, "An old riverside town between Montréal and Québec City.", null, { area: "Quebec", temps: [-7, -5, 1, 10, 18, 23, 26, 24, 19, 11, 3, -4] }],
+        ["Moncton", "21331213", 1, "Magnetic Hill and a tidal bore on the river.", null, { area: "New Brunswick", temps: [-5, -4, 1, 8, 16, 21, 25, 24, 19, 12, 5, -2] }],
+        ["Brantford", "02311122", 1, "Alexander Graham Bell's homestead and Six Nations culture.", null, { area: "Ontario", temps: [-2, -1, 4, 12, 19, 24, 27, 26, 22, 15, 7, 1] }],
+        ["Saint John", "03331223", 1, "Reversing Falls and a historic city market.", null, { area: "New Brunswick", temps: [-4, -3, 1, 8, 14, 19, 22, 22, 18, 12, 5, -1] }],
+        ["Peterborough", "02341224", 1, "A giant hydraulic lift lock and the Kawartha Lakes.", null, { area: "Ontario", temps: [-5, -4, 2, 11, 18, 23, 26, 25, 20, 13, 5, -2] }],
+        ["Lethbridge", "02241213", 1, "Coulees, a Japanese garden and the High Level Bridge.", null, { area: "Alberta", temps: [0, 2, 7, 13, 18, 22, 26, 26, 20, 13, 5, 1] }],
+        ["Thunder Bay", "02251413", 1, "The Sleeping Giant on Lake Superior and Fort William.", null, { area: "Ontario", temps: [-11, -8, -1, 8, 16, 21, 24, 23, 17, 9, 0, -8] }],
+        ["Nanaimo", "31342314", 1, "Harbour walks, island ferries and Nanaimo bars.", null, { area: "British Columbia", temps: [6, 8, 10, 13, 17, 20, 23, 23, 20, 14, 9, 6] }],
+        ["Kamloops", "02242413", 1, "Desert-like canyons, lakes and Sun Peaks skiing.", null, { area: "British Columbia", temps: [0, 4, 11, 17, 22, 26, 29, 29, 23, 14, 5, 0] }],
+        ["Chilliwack", "01351414", 1, "Mountain lakes and the beaches of Cultus Lake.", null, { area: "British Columbia", temps: [6, 8, 11, 15, 18, 21, 25, 25, 21, 14, 8, 5] }],
+        ["Belleville & Prince Edward County", "21342224", 1, "The gateway to Prince Edward County's wineries and beaches.", null, { area: "Ontario", temps: [-4, -3, 2, 11, 18, 23, 26, 25, 21, 14, 6, -1] }],
+        ["Fredericton", "03332123", 1, "A riverside capital with a historic garrison district.", null, { area: "New Brunswick", temps: [-5, -3, 2, 10, 18, 23, 26, 25, 19, 12, 4, -2] }],
+        ["Drummondville", "03232312", 1, "A historic village museum and a world folklore festival.", null, { area: "Quebec", temps: [-6, -5, 1, 10, 18, 23, 26, 24, 19, 12, 3, -3] }],
+        ["Red Deer", "02231312", 1, "Parkland trails and a base for central Alberta.", null, { area: "Alberta", temps: [-5, -2, 2, 11, 17, 21, 23, 22, 17, 11, 1, -4] }],
       ] },
     { id: "mx", name: "Mexico", flag: "🇲🇽", region: "nam", lat: 23.6, lon: -102.5, cost: 2, best: [11, 12, 1, 2, 3, 4],
       temps: [24, 26, 28, 29, 30, 29, 28, 28, 27, 26, 25, 24], currency: "Peso (MXN)", language: "Spanish",
@@ -2867,6 +2900,11 @@
     "us-chattanooga": "A big aquarium and the Incline Railway up Lookout Mountain",
     "us-harrisburg-hershey": "Hersheypark rides and Chocolate World",
     "us-melbourne-the-space-coast": "Kennedy Space Center launches and exhibits",
+    "ca-niagara-falls-wine-country": "Boat rides to the foot of the falls and Clifton Hill",
+    "ca-edmonton": "West Edmonton Mall's water park and rides",
+    "ca-calgary": "The Calgary Zoo and Heritage Park",
+    "ca-victoria": "Butchart Gardens and whale-watching boats",
+    "ca-winnipeg": "The Forks and Assiniboine Park Zoo",
   };
 
   // Government travel advisories, summarised: [level, note].
@@ -3965,6 +4003,53 @@
     [100, "New Haven, CT", 578741, "New Haven"],
   ];
 
+  // Canada's 41 census metropolitan areas by 2021 census population (Statistics Canada,
+  // imported from Wikipedia, November 2026), each linked to the Canadian place that covers
+  // it: [rank, metro name, population, place name].
+  const CA_METROS = [
+    [1, "Toronto", 6202225, "Toronto"],
+    [2, "Montreal", 4291732, "Montréal"],
+    [3, "Vancouver", 2642825, "Vancouver"],
+    [4, "Ottawa–Gatineau", 1488307, "Ottawa"],
+    [5, "Calgary", 1481806, "Calgary"],
+    [6, "Edmonton", 1418118, "Edmonton"],
+    [7, "Quebec City", 839311, "Québec City"],
+    [8, "Winnipeg", 834678, "Winnipeg"],
+    [9, "Hamilton", 785184, "Hamilton"],
+    [10, "Kitchener–Cambridge–Waterloo", 575847, "Kitchener–Waterloo"],
+    [11, "London", 543551, "London"],
+    [12, "Halifax", 465703, "Halifax & Nova Scotia"],
+    [13, "St. Catharines–Niagara", 433604, "Niagara Falls & Wine Country"],
+    [14, "Windsor", 422630, "Windsor"],
+    [15, "Oshawa", 415311, "Oshawa"],
+    [16, "Victoria", 397237, "Victoria"],
+    [17, "Saskatoon", 317480, "Saskatoon & Grasslands"],
+    [18, "Regina", 249217, "Regina"],
+    [19, "Sherbrooke", 227398, "Sherbrooke"],
+    [20, "Kelowna", 222162, "Kelowna"],
+    [21, "Barrie", 212856, "Barrie"],
+    [22, "St. John's", 212579, "Gros Morne & St. John's"],
+    [23, "Abbotsford–Mission", 195726, "Abbotsford & the Fraser Valley"],
+    [24, "Kingston", 172546, "Kingston"],
+    [25, "Greater Sudbury", 170605, "Sudbury"],
+    [26, "Guelph", 165588, "Guelph"],
+    [27, "Saguenay", 161567, "Saguenay"],
+    [28, "Trois-Rivières", 161489, "Trois-Rivières"],
+    [29, "Moncton", 157717, "Moncton"],
+    [30, "Brantford", 144162, "Brantford"],
+    [31, "Saint John", 130613, "Saint John"],
+    [32, "Peterborough", 128624, "Peterborough"],
+    [33, "Lethbridge", 123847, "Lethbridge"],
+    [34, "Thunder Bay", 123258, "Thunder Bay"],
+    [35, "Nanaimo", 115459, "Nanaimo"],
+    [36, "Kamloops", 114142, "Kamloops"],
+    [37, "Chilliwack", 113767, "Chilliwack"],
+    [38, "Belleville–Quinte West", 111184, "Belleville & Prince Edward County"],
+    [39, "Fredericton", 108610, "Fredericton"],
+    [40, "Drummondville", 101610, "Drummondville"],
+    [41, "Red Deer", 100844, "Red Deer"],
+  ];
+
   // Starting points for distance estimates.
   const HOMES = [
     { id: "na-east", label: "US & Canada (East)", lat: 40, lon: -78 },
@@ -3985,7 +4070,7 @@
     { id: "caribbean", label: "Caribbean", lat: 18, lon: -70 },
   ];
 
-  const data = { INTERESTS, REGIONS, COUNTRIES, HOMES, UNESCO, LGBTQ, FAMILY, ADVISORY, FACTS, PARK_SYSTEMS, US_METROS };
+  const data = { INTERESTS, REGIONS, COUNTRIES, HOMES, UNESCO, LGBTQ, FAMILY, ADVISORY, FACTS, PARK_SYSTEMS, US_METROS, CA_METROS };
   root.WTT_DATA = data;
   if (typeof module !== "undefined" && module.exports) module.exports = data;
 })(typeof window !== "undefined" ? window : globalThis);

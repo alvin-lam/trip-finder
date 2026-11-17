@@ -93,7 +93,7 @@
   }
 
   // Places in the US and Canada carry a state or province.
-  const AREA_SUMMARY = { us: "all 50 states and D.C., covering the 100 largest metro areas", ca: "all 10 provinces and 3 territories" };
+  const AREA_SUMMARY = { us: "all 50 states and D.C., covering the 100 largest metro areas", ca: "all 10 provinces and 3 territories, covering all 41 census metropolitan areas" };
   const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories" };
   function placeWhere(city) {
     return city.area ? `${esc(city.area)}, ${esc(city.country.name)}` : esc(city.country.name);
@@ -979,7 +979,11 @@
       ${city.metros
         .map(
           (m) =>
-            `<p class="unesco-line">🏙️ Metro area #${m.rank} of the 100 largest in the US: <b>${esc(m.name)}</b> (${(m.population / 1e6).toFixed(1)} million people)</p>`
+            `<p class="unesco-line">🏙️ ${
+              m.country === "ca" ? `Census metropolitan area #${m.rank} of 41 in Canada` : `Metro area #${m.rank} of the 100 largest in the US`
+            }: <b>${esc(m.name)}</b> (${
+              m.population >= 1e6 ? `${(m.population / 1e6).toFixed(1)} million` : `${Math.round(m.population / 1000).toLocaleString("en-US")},000`
+            } people)</p>`
         )
         .join("")}
       ${

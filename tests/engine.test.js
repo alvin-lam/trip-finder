@@ -239,3 +239,15 @@ test("the 100 largest US metro areas are each linked to a place", () => {
   assert.equal(place(100).name, "New Haven");
   assert.ok(index.countryById.us.cities.every((c) => c.area && c.temps));
 });
+
+test("all 41 Canadian census metropolitan areas are each linked to a place", () => {
+  assert.equal(data.CA_METROS.length, 41);
+  assert.deepEqual(data.CA_METROS.map((m) => m[0]), Array.from({ length: 41 }, (_, i) => i + 1));
+  const ca = index.countryById.ca.cities;
+  assert.equal(ca.flatMap((c) => c.metros).length, 41);
+  const place = (rank) => ca.find((c) => c.metros.some((m) => m.rank === rank));
+  assert.equal(place(1).name, "Toronto");
+  assert.equal(place(4).name, "Ottawa");
+  assert.equal(place(41).name, "Red Deer");
+  assert.ok(ca.every((c) => c.area && c.temps));
+});
