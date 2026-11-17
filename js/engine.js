@@ -105,6 +105,7 @@
           temps: (extra && extra.temps) || null,
           isCapital: false,
           metros: [],
+          nationalParks: [],
           unesco: null,
           family: null,
           country,
@@ -154,6 +155,14 @@
       const adv = (data.ADVISORY || {})[c.id];
       c.advisory = adv ? { level: adv[0], note: adv[1] } : null;
     }
+    SITE_PLACES = data.SITE_PLACES || {};
+    for (const [park, names] of Object.entries(SITE_PLACES)) {
+      for (const n of names) {
+        if (!cities.some((x) => x.name === n)) throw new Error(`SITE_PLACES: "${park}" points at unknown place "${n}"`);
+      }
+    }
+    markNationalParks(countries, data.NP_EXTRA || {});
+
     return {
       regions,
       countries,
@@ -164,6 +173,68 @@
       homes: data.HOMES,
       interests: data.INTERESTS,
     };
+  }
+
+  const NP = /National Park\b/;
+
+  // The park's own name without its designation: "Mount Rainier National Park" -> "Mount Rainier".
+  function siteKey(name) {
+    return name.replace(/\s+National (Park|Urban Park|Marine Park)\b.*$/, "").trim();
+  }
+
+  // Links a US or Canadian park system site to the place(s) that hold it: a place named
+  // for it (Yellowstone, Banff), a place whose name contains the park's own name (Bay of
+  // Fundy), or the checked SITE_PLACES list (Zion -> Utah National Parks).
+  let SITE_PLACES = {};
+  function placesForSite(c, site) {
+    const l = site.name.toLowerCase();
+    const sameArea = c.cities.filter((x) => !x.area || site.area.includes(x.area));
+    const byName = sameArea.find((x) => {
+      const head = x.name.toLowerCase().split(/ & |, | \(/)[0];
+      return head.length >= 4 && (l === head || l.startsWith(head + " "));
+    });
+    if (byName) return [byName];
+    const listed = (SITE_PLACES[site.name] || []).map((n) => c.cities.find((x) => x.name === n)).filter(Boolean);
+    if (listed.length) return listed;
+    const key = siteKey(site.name).toLowerCase();
+    const named = key.length >= 4 && sameArea.find((x) => x.area && x.name.toLowerCase().includes(key));
+    return named ? [named] : [];
+  }
+
+  function placeForSite(c, site) {
+    return placesForSite(c, site)[0] || null;
+  }
+
+  // Marks every place that is, or contains, a national park, from four sources: US and
+  // Canadian park system sites, UNESCO site names, place names, and the country's
+  // famous parks list.
+  function markNationalParks(countries, extra) {
+    for (const c of countries) {
+      const add = (city, name) => {
+        if (city && !city.nationalParks.includes(name)) city.nationalParks.push(name);
+      };
+      for (const site of c.sites || []) {
+        if (site.type === "National Park" || site.type === "National Park Reserve") {
+          for (const place of placesForSite(c, site)) add(place, site.name);
+        }
+      }
+      for (const city of c.cities) {
+        if (city.unesco && NP.test(city.unesco)) add(city, city.unesco);
+        if (NP.test(city.name)) add(city, city.name);
+        if (extra[city.id]) add(city, extra[city.id]);
+      }
+      for (const park of (c.facts && c.facts.parks) || []) {
+        if (!NP.test(park)) continue;
+        const l = park.toLowerCase();
+        add(
+          c.cities.find((x) => {
+            const head = x.name.toLowerCase().split(/ & |, | \(/)[0];
+            return head.length >= 4 && l.startsWith(head);
+          }),
+          park
+        );
+      }
+    }
   }
 
   // True when a capital description ("Kuala Lumpur (administrative centre: Putrajaya)") names this place
@@ -549,6 +620,7 @@
     COST_DAILY,
     DEFAULT_PREFS,
     buildIndex,
+    placeForSite,
     recommend,
     scoreCity,
     planItinerary,

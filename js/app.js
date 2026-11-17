@@ -72,6 +72,11 @@
     return `<span class="family" title="Family friendly: ${esc(city.family)}" aria-label="Family friendly">FAMILY</span>`;
   }
 
+  function parkTag(city) {
+    if (!city.nationalParks.length) return "";
+    return `<span class="npark" title="National park: ${esc(city.nationalParks.join(", "))}" aria-label="National park">NATIONAL PARK</span>`;
+  }
+
   function capitalTags(city) {
     let out = "";
     if (city.isCapital) out += `<span class="ptag ptag--capital" title="Capital: ${esc(city.country.facts.capital)}">CAPITAL</span>`;
@@ -79,7 +84,7 @@
   }
 
   function placeTags(city) {
-    return capitalTags(city) + unescoTag(city) + familyTag(city);
+    return capitalTags(city) + unescoTag(city) + parkTag(city) + familyTag(city);
   }
 
   // Capital and famous parks and trails for a destination.
@@ -97,8 +102,9 @@
     us: "all 50 states and D.C., covering all 387 metro areas",
     ca: "all 10 provinces and 3 territories, covering all 41 census metropolitan areas",
     mx: "all 32 states, covering all 74 metropolitan areas",
+    pr: "all 6 informal regions, covering all 6 metro areas",
   };
-  const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories", mx: "states" };
+  const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories", mx: "states", pr: "regions" };
   const METRO_SCOPE = {
     us: (r) => `Metro area #${r} of 387 in the US`,
     pr: (r) => `Metro area #${r} of 6 in Puerto Rico`,
@@ -668,7 +674,7 @@
           <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}</select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO sites</option><option value="family">Family friendly</option><option value="lgbtq">LGBTQ+ welcoming</option><option value="safe">No travel advisory</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO sites</option><option value="np">National parks</option><option value="family">Family friendly</option><option value="lgbtq">LGBTQ+ welcoming</option><option value="safe">No travel advisory</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
@@ -709,6 +715,7 @@
               if (f.interest && city.tags[f.interest] < 4) return false;
               if (f.only === "unesco" && !city.unesco) return false;
               if (f.only === "family" && !city.family) return false;
+              if (f.only === "np" && !city.nationalParks.length) return false;
               if (f.only === "lgbtq" && (!c.lgbtq || c.lgbtq.level !== "welcoming")) return false;
               if (f.only === "safe" && c.advisory) return false;
               if (!q || countryHit) return true;
@@ -792,28 +799,11 @@
     for (const site of c.sites) {
       const byName = site.name.toLowerCase().includes(q);
       const byKind = q.length >= 4 && `${site.type} ${site.system}`.toLowerCase().includes(q);
-      if (byName || byKind) out.push({ kind: "site", system: site.system, label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: placeForSite(c, site) });
+      if (byName || byKind) out.push({ kind: "site", system: site.system, label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: E.placeForSite(c, site) });
     }
     return out;
   }
 
-  // Links a site to a place of ours in the same state or province with a matching name
-  // (Yellowstone National Park -> Yellowstone; Banff National Park -> Banff).
-  function placeForSite(c, site) {
-    const l = site.name.toLowerCase();
-    const sameArea = c.cities.filter((x) => !x.area || site.area.includes(x.area));
-    const byName = sameArea.find((x) => {
-      const head = x.name.toLowerCase().split(/ & |, | \(/)[0];
-      return head.length >= 4 && (l === head || l.startsWith(head + " "));
-    });
-    if (byName) return byName;
-    // Otherwise a place in the same state whose description names the site
-    // ("Utah National Parks" mentions Zion, Arches and Bryce).
-    const key = site.name.split(" ")[0];
-    if (key.length < 4) return null;
-    const word = new RegExp(`\\b${key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`);
-    return sameArea.find((x) => x.area && word.test(x.blurb)) || null;
-  }
 
   function highlight(text, q) {
     const i = text.toLowerCase().indexOf(q);
@@ -985,6 +975,7 @@
           ? `<p class="unesco-line"><span class="unesco">UNESCO</span> World Heritage Site: <b>${esc(city.unesco)}</b></p>`
           : ""
       }
+      ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
       ${city.metros
         .map(

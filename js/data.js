@@ -623,8 +623,8 @@
         ["Shreveport & Bossier City", "02321122", 1, "Riverboat casinos and Louisiana's northwest.", null, { area: "Louisiana", temps: [14, 17, 21, 25, 29, 32, 33, 33, 31, 26, 20, 15] }],
         ["Eugene", "03323133", 2, "A green university town at the edge of the Cascades.", [6, 7, 8, 9], { area: "Oregon", temps: [8, 11, 14, 17, 21, 24, 28, 28, 25, 18, 12, 8] }],
         ["Quad Cities (Davenport)", "02321122", 1, "Mississippi River towns spanning Iowa and Illinois.", null, { area: "Iowa", temps: [-1, 2, 9, 17, 23, 28, 30, 29, 25, 18, 9, 1] }],
-        ["Greeley", "02321122", 1, "Prairie city near Rocky Mountain foothills.", [1, 2, 6, 7, 8, 9], { area: "Colorado", temps: [7, 8, 12, 16, 21, 28, 31, 30, 25, 18, 11, 7] }],
-        ["Fort Collins", "03323133", 2, "Craft breweries and Poudre River trails.", [1, 2, 6, 7, 8, 9], { area: "Colorado", temps: [7, 8, 12, 16, 21, 28, 31, 30, 25, 18, 11, 7] }],
+        ["Greeley", "02321122", 1, "A prairie city on the Colorado plains.", [1, 2, 6, 7, 8, 9], { area: "Colorado", temps: [7, 8, 12, 16, 21, 28, 31, 30, 25, 18, 11, 7] }],
+        ["Fort Collins", "03323133", 2, "Craft breweries, Poudre River trails and Rocky Mountain National Park nearby.", [1, 2, 6, 7, 8, 9], { area: "Colorado", temps: [7, 8, 12, 16, 21, 28, 31, 30, 25, 18, 11, 7] }],
         ["Hickory", "02321122", 1, "Furniture-making heritage in the Blue Ridge foothills.", null, { area: "North Carolina", temps: [10, 13, 17, 22, 26, 30, 32, 31, 27, 22, 17, 12] }],
         ["Atlantic City", "51332325", 3, "Boardwalk casinos and wide Jersey Shore beaches.", [6, 7, 8, 9], { area: "New Jersey", temps: [4, 6, 10, 16, 22, 27, 30, 29, 25, 19, 13, 7] }],
         ["Ann Arbor", "03323133", 2, "The University of Michigan and a lively downtown.", null, { area: "Michigan", temps: [0, 2, 8, 15, 21, 27, 29, 28, 24, 17, 9, 2] }],
@@ -2362,15 +2362,15 @@
       temps: [28, 28, 29, 29, 30, 31, 31, 31, 31, 31, 30, 29], currency: "US dollar (USD)", language: "Spanish, English",
       blurb: "Colonial forts, rainforest hikes and glowing bays, with no passport needed for US citizens.",
       cities: [
-        ["San Juan", "44525233", 4, "Colourful Old San Juan, Spanish forts and salsa nights."],
-        ["El Yunque", "30250403", 3, "Rainforest trails and waterfalls in a US national forest."],
-        ["Vieques", "50240405", 2, "Bioluminescent bay kayaking and wild horses on quiet beaches."],
-        ["Culebra", "50240405", 2, "Flamenco Beach and snorkelling with turtles."],
-        ["Ponce", "24432224", 2, "The 'Pearl of the South', with a striped firehouse and an art museum."],
-        ["Aguadilla & Rincón", "51243424", 2, "World-class surf and sunsets on the northwest coast."],
-        ["Mayagüez", "33332223", 1, "A west-coast university city, with boats to Mona Island."],
-        ["Arecibo", "21240213", 1, "Río Camuy's karst caves and a historic radio observatory site."],
-        ["Guayama", "32231214", 1, "A quiet southern coast town with colonial architecture."],
+        ["San Juan", "44525233", 4, "Colourful Old San Juan, Spanish forts and salsa nights.", null, { area: "San Juan Metro Area" }],
+        ["El Yunque", "30250403", 3, "Rainforest trails and waterfalls in a US national forest.", null, { area: "East" }],
+        ["Vieques", "50240405", 2, "Bioluminescent bay kayaking and wild horses on quiet beaches.", null, { area: "Vieques & Culebra" }],
+        ["Culebra", "50240405", 2, "Flamenco Beach and snorkelling with turtles.", null, { area: "Vieques & Culebra" }],
+        ["Ponce", "24432224", 2, "The 'Pearl of the South', with a striped firehouse and an art museum.", null, { area: "South" }],
+        ["Aguadilla & Rincón", "51243424", 2, "World-class surf and sunsets on the northwest coast.", null, { area: "West (Porta del Sol)" }],
+        ["Mayagüez", "33332223", 1, "A west-coast university city, with boats to Mona Island.", null, { area: "West (Porta del Sol)" }],
+        ["Arecibo", "21240213", 1, "Río Camuy's karst caves and a historic radio observatory site.", null, { area: "North" }],
+        ["Guayama", "32231214", 1, "A quiet southern coast town with colonial architecture.", null, { area: "South" }],
       ] },
     { id: "aw", kind: "territory", status: "Constituent country of the Kingdom of the Netherlands", maxDays: 10,
       name: "Aruba", flag: "🇦🇼", region: "cac", lat: 12.52, lon: -69.97, cost: 4, best: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -4780,6 +4780,45 @@
     [41, "Red Deer", 100844, "Red Deer"],
   ];
 
+  // National parks that our automatic name matching cannot link, mapped to the place(s)
+  // whose area holds part of the park: { "Park name": ["Place name", ...] }.
+  const SITE_PLACES = {
+    "Arches National Park": ["Utah National Parks"],
+    "Bryce Canyon National Park": ["Utah National Parks"],
+    "Zion National Park": ["Utah National Parks", "St. George"],
+    "Gateway Arch National Park": ["St. Louis & Kansas City"],
+    "Great Smoky Mountains National Park": ["Knoxville", "Nashville & the Smokies"],
+    "Badlands National Park": ["Black Hills & Badlands"],
+    "Wind Cave National Park": ["Black Hills & Badlands"],
+    "Joshua Tree National Park": ["Palm Springs & the Inland Empire"],
+    "Kings Canyon National Park": ["Fresno"],
+    "Sequoia National Park": ["Visalia"],
+    "Saguaro National Park": ["Tucson"],
+    "Everglades National Park": ["Miami", "Naples & Marco Island"],
+    "Biscayne National Park": ["Miami"],
+    "Mammoth Cave National Park": ["Bowling Green"],
+    "Lassen Volcanic National Park": ["Redding"],
+    "Indiana Dunes National Park": ["Michigan City"],
+    "Cuyahoga Valley National Park": ["Akron", "Cleveland"],
+    "Channel Islands National Park": ["Ventura & Oxnard"],
+    "Rocky Mountain National Park": ["Fort Collins"],
+    "Mount Rainier National Park": ["Seattle"],
+    "North Cascades National Park": ["Bellingham", "Mount Vernon & Anacortes"],
+    "Haleakalā National Park": ["Maui"],
+    "Pinnacles National Park": ["Monterey & Carmel"],
+    "White Sands National Park": ["Las Cruces"],
+    "Congaree National Park": ["Columbia"],
+    "Elk Island National Park": ["Edmonton"],
+    "Wapusk National Park": ["Churchill"],
+  };
+
+  // Places outside the US and Canada that are national parks under another name.
+  const NP_EXTRA = {
+    "cl-torres-del-paine": "Torres del Paine National Park",
+    "nz-milford-sound": "Fiordland National Park",
+    "ec-galapagos-islands": "Galápagos National Park",
+  };
+
   // Starting points for distance estimates.
   const HOMES = [
     { id: "na-east", label: "US & Canada (East)", lat: 40, lon: -78 },
@@ -4800,7 +4839,7 @@
     { id: "caribbean", label: "Caribbean", lat: 18, lon: -70 },
   ];
 
-  const data = { INTERESTS, REGIONS, COUNTRIES, HOMES, UNESCO, LGBTQ, FAMILY, ADVISORY, FACTS, PARK_SYSTEMS, US_METROS, PR_METROS, CA_METROS, MX_METROS };
+  const data = { INTERESTS, REGIONS, COUNTRIES, HOMES, UNESCO, LGBTQ, FAMILY, ADVISORY, FACTS, PARK_SYSTEMS, US_METROS, PR_METROS, CA_METROS, MX_METROS, SITE_PLACES, NP_EXTRA };
   root.WTT_DATA = data;
   if (typeof module !== "undefined" && module.exports) module.exports = data;
 })(typeof window !== "undefined" ? window : globalThis);

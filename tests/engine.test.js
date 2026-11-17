@@ -263,3 +263,22 @@ test("all 41 Canadian census metropolitan areas are each linked to a place", () 
   assert.equal(place(41).name, "Red Deer");
   assert.ok(ca.every((c) => c.area && c.temps));
 });
+
+test("national parks are labelled on the places that hold them", () => {
+  const parks = (id) => index.cityById[id].nationalParks;
+  assert.deepEqual(parks("us-yellowstone"), ["Yellowstone National Park"]);
+  assert.deepEqual(parks("us-utah-national-parks").sort(), ["Arches National Park", "Bryce Canyon National Park", "Zion National Park"]);
+  assert.ok(parks("ca-banff").includes("Banff National Park"));
+  assert.ok(parks("us-fort-collins").includes("Rocky Mountain National Park"));
+  assert.ok(parks("cl-torres-del-paine").length);
+  assert.equal(parks("us-greeley").length, 0);
+  assert.equal(parks("us-new-york-city").length, 0);
+  assert.ok(index.cities.filter((c) => c.nationalParks.length).length > 100);
+});
+
+test("Puerto Rico places are grouped by informal region", () => {
+  const pr = index.countryById.pr.cities;
+  assert.ok(pr.every((c) => c.area));
+  assert.equal(new Set(pr.map((c) => c.area)).size, 6);
+  assert.equal(index.cityById["pr-culebra"].area, "Vieques & Culebra");
+});

@@ -354,6 +354,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .family { display: inline-block; font-family: var(--font); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 1px 6px; border-radius: 4px; margin-left: 4px; vertical-align: 1px; background: var(--family-soft); color: var(--family); white-space: nowrap; }
 .unesco-line .family { margin: 0 4px 0 0; }
 .fact--family { background: var(--family-soft); color: var(--family); }
+:root { --npark: #2f6b2a; --npark-soft: #e3f1df; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --npark: #9fd893; --npark-soft: #1f3320; } }
+:root[data-theme="dark"] { --npark: #9fd893; --npark-soft: #1f3320; }
+.npark { display: inline-block; font-family: var(--font); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 1px 6px; border-radius: 4px; margin-left: 4px; vertical-align: 1px; background: var(--npark-soft); color: var(--npark); white-space: nowrap; }
+.unesco-line .npark { margin: 0 4px 0 0; }
 .fact--lgbtq-welcoming { background: var(--teal-soft); color: var(--teal); }
 .fact--lgbtq-mixed { background: var(--surface-2); color: var(--muted); }
 .fact--lgbtq-caution { background: var(--warn-soft); color: var(--warn); }
