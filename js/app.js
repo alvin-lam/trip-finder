@@ -8,6 +8,8 @@
   const state = {
     view: "plan",
     exploreOpen: new Set(), // Explore cards whose places are expanded
+    exploreShown: new Map(), // Explore regions showing more cards: key -> count
+    exploreShownFor: "", // the filters the counts above apply to
     stage: "intro", // intro | wizard | results
     step: 0,
     prefs: E.normalizePrefs({}),
@@ -819,6 +821,12 @@
       el.querySelector('[data-filter="lgbtq"]').value = state.explore.lgbtq;
       el.querySelector('[data-filter="advisory"]').value = state.explore.advisory;
     }
+    // New filters or a new search start every region from its first few cards again.
+    const filterKey = JSON.stringify(state.explore);
+    if (filterKey !== state.exploreShownFor) {
+      state.exploreShown.clear();
+      state.exploreShownFor = filterKey;
+    }
     // The button only does something when a filter differs from its default.
     const f = state.explore;
     $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.unesco || f.lgbtq || f.advisory);
@@ -914,7 +922,7 @@
         <section class="region-block">
           <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${sov.flag}</span><h3 style="margin:0">${esc(sov.name)}</h3></div>
           <p class="muted">${list.length} ${list.length === 1 ? "territory" : "territories"}</p>
-          <div class="cards">${list.map(({ c, cities, matches }) => exploreCountryCard(c, cities, matches)).join("")}</div>
+          ${regionCards(`sov-${sov.id}`, list)}
         </section>`
           )
           .join("")
@@ -928,7 +936,7 @@
         <section class="region-block">
           <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${r.icon}</span><h3 style="margin:0">${esc(r.name)}</h3></div>
           <p class="muted">${esc(r.blurb)}</p>
-          <div class="cards">${countries.map(({ c, cities, matches }) => exploreCountryCard(c, cities, matches)).join("")}</div>
+          ${regionCards(r.id, countries)}
         </section>`
         )
         .join("")
@@ -1068,6 +1076,24 @@
 
   // Search text without accents, dots or case: "U.S." -> "us", "España" -> "espana".
   const searchKey = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim().toLowerCase();
+
+  // Each Explore region shows its first few country cards, then more per click:
+  // 6 then 3 more on desktop, 2 then 2 more on phones.
+  const narrow = () => window.matchMedia && window.matchMedia("(max-width: 860px)").matches;
+  const cardsFirst = () => (narrow() ? 2 : 6);
+  const cardsStep = () => (narrow() ? 2 : 3);
+  function regionCards(key, list) {
+    const shown = Math.min(list.length, state.exploreShown.get(key) || cardsFirst());
+    const left = list.length - shown;
+    return `<div class="cards">${list
+      .slice(0, shown)
+      .map(({ c, cities, matches }) => exploreCountryCard(c, cities, matches))
+      .join("")}</div>${
+      left > 0
+        ? `<button class="btn btn--ghost region-more" data-action="region-more" data-key="${key}" data-shown="${shown}">Show ${Math.min(cardsStep(), left)} more <span class="muted">(${left} left)</span></button>`
+        : ""
+    }`;
+  }
 
   // Explore shows each country card with its places collapsed behind this toggle.
   function placesToggle(c, n, open) {
@@ -1434,6 +1460,10 @@
       const still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       window.scrollTo({ top: 0, behavior: still ? "auto" : "smooth" });
     },
+    "region-more": (el) => {
+      state.exploreShown.set(el.dataset.key, Number(el.dataset.shown) + cardsStep());
+      renderExplore();
+    },
     "toggle-places": (el) => {
       const card = el.closest(".card");
       const id = el.dataset.id;
@@ -1644,5 +1674,11 @@
   const toTop = $(".to-top");
   const showToTop = () => toTop.classList.toggle("is-on", window.scrollY > Math.max(400, window.innerHeight * 0.8));
   window.addEventListener("scroll", showToTop, { passive: true });
+  // Crossing between phone and desktop widths changes how many cards each region shows.
+  if (window.matchMedia) {
+    const mq = window.matchMedia("(max-width: 860px)");
+    const rerender = () => state.view === "explore" && renderExplore();
+    if (mq.addEventListener) mq.addEventListener("change", rerender);
+  }
   showToTop();
 })();
