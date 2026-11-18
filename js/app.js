@@ -217,6 +217,106 @@
       .map((t) => interestLabel[t].label);
   }
 
+  // ---------- Shortlist export ----------
+  // One record per saved place, matching the Shortlist table, then one per saved country.
+  function shortlistRecords() {
+    const month = state.prefs.month;
+    const score = (city) => {
+      const r = state.results && state.results.cities.find((x) => x.city === city);
+      return r ? r.score : null;
+    };
+    const saved = [...state.saved].map((k) => [k.split(":")[0], lookupSaved(k)]).filter(([, o]) => o);
+    const places = saved
+      .filter(([k]) => k === "city")
+      .map(([, city]) => {
+        const hi = E.tempFor(city, month);
+        const lo = E.lowFor(city, month);
+        return {
+          type: "Place",
+          name: city.name,
+          country: city.country.name,
+          area: city.area || "",
+          match: score(city),
+          bestTime: E.formatMonths(city.best),
+          month: month ? E.MONTHS[month - 1] : "Best months",
+          highC: Math.round(hi),
+          highF: E.cToF(hi),
+          lowC: lo === null ? null : lo,
+          lowF: lo === null ? null : E.cToF(lo),
+          dailyCostUSD: E.COST_DAILY[city.country.cost],
+          greatFor: topStrengths(city).join(", ") || "All-rounder",
+          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "UNESCO", city.nationalParks.length && "National park", city.family && "Family friendly"].filter(Boolean).join(", "),
+        };
+      })
+      .sort((a, b) => (b.match ?? 0) - (a.match ?? 0));
+    const countries = saved
+      .filter(([k]) => k === "country")
+      .map(([, c]) => ({ type: "Country", name: c.name, country: c.name, region: c.regionObj.name, dailyCostUSD: E.COST_DAILY[c.cost], places: c.cities.length }));
+    return { places, countries };
+  }
+
+  const EXPORT_COLUMNS = [
+    ["type", "Type"], ["name", "Name"], ["country", "Country"], ["area", "Area"], ["match", "Match %"],
+    ["bestTime", "Best time"], ["month", "Month"], ["highC", "High °C"], ["highF", "High °F"], ["lowC", "Low °C"],
+    ["lowF", "Low °F"], ["dailyCostUSD", "Daily cost (USD)"], ["greatFor", "Great for"], ["tags", "Tags"],
+  ];
+
+  function shortlistFile(format) {
+    const { places, countries } = shortlistRecords();
+    const stamp = new Date().toISOString().slice(0, 10);
+    if (format === "json") {
+      return JSON.stringify({ exported: stamp, places, countries }, null, 2);
+    }
+    if (format === "csv") {
+      const cell = (v) => {
+        const s = v === null || v === undefined ? "" : String(v);
+        return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+      };
+      const rows = [...places, ...countries.map((c) => ({ ...c, area: c.region }))];
+      // A byte-order mark lets Excel read the degree signs and accents correctly.
+      return "\ufeff" + [EXPORT_COLUMNS.map(([, h]) => h), ...rows.map((r) => EXPORT_COLUMNS.map(([k]) => r[k]))].map((r) => r.map(cell).join(",")).join("\r\n");
+    }
+    const lines = [`All Trips Considered: my shortlist (${stamp})`, ""];
+    if (places.length) lines.push(`PLACES (${places.length})`, "");
+    for (const p of places) {
+      lines.push(`${p.name}, ${p.area ? `${p.area}, ` : ""}${p.country}`);
+      if (p.match !== null) lines.push(`  Match: ${p.match}%`);
+      lines.push(`  Best time: ${p.bestTime}`);
+      lines.push(`  ${p.month === "Best months" ? "Typical" : p.month} high / low: ${p.highC}°C (${p.highF}°F) / ${p.lowC === null ? "–" : `${p.lowC}°C (${p.lowF}°F)`}`);
+      lines.push(`  Daily cost (USD): ${p.dailyCostUSD}`);
+      lines.push(`  Great for: ${p.greatFor}`);
+      if (p.tags) lines.push(`  Tags: ${p.tags}`);
+      lines.push("");
+    }
+    if (countries.length) lines.push(`COUNTRIES (${countries.length})`, "");
+    for (const c of countries) lines.push(`${c.name} (${c.region}), ${c.dailyCostUSD} a day, ${c.places} places`);
+    return lines.join("\n").trimEnd() + "\n";
+  }
+
+  async function exportShortlist(format) {
+    const filename = `shortlist-${new Date().toISOString().slice(0, 10)}.${format}`;
+    const data = shortlistFile(format);
+    // Inside claude.ai the page must ask the viewer through the downloads capability.
+    const downloads = window.claude && window.claude.use ? await window.claude.use("downloads").catch(() => null) : null;
+    if (downloads) {
+      try {
+        await downloads.save({ filename, data });
+        toast(`Saved ${filename}`);
+      } catch (e) {
+        if (e && e.code !== "declined") toast("This view can't save files. Try the app or website instead.");
+      }
+      return;
+    }
+    const type = { csv: "text/csv", json: "application/json", txt: "text/plain" }[format];
+    const url = URL.createObjectURL(new Blob([data], { type: `${type};charset=utf-8` }));
+    const a = Object.assign(document.createElement("a"), { href: url, download: filename });
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    toast(`Downloaded ${filename}`);
+  }
+
   // ---------- Navigation ----------
   function setView(view) {
     state.view = view;
@@ -985,7 +1085,15 @@
           <h2>Compare your favourites</h2>
           <p class="muted">${state.results ? "Match scores reflect your latest answers." : "Answer the quiz to add match scores."}</p>
         </div>
-        <button class="btn btn--ghost btn--sm" data-action="clear-saved">Clear shortlist</button>
+        <div class="shortlist-actions">
+          <div class="export-group" role="group" aria-label="Export shortlist">
+            <span class="export-group__label">Export</span>
+            <button class="btn btn--ghost btn--sm" data-action="export-shortlist" data-format="csv">CSV</button>
+            <button class="btn btn--ghost btn--sm" data-action="export-shortlist" data-format="json">JSON</button>
+            <button class="btn btn--ghost btn--sm" data-action="export-shortlist" data-format="txt">TXT</button>
+          </div>
+          <button class="btn btn--ghost btn--sm" data-action="clear-saved">Clear shortlist</button>
+        </div>
       </div>
       ${
         sortedCities.length
@@ -1282,6 +1390,7 @@
     },
     "close-detail": closeDetail,
     save: (el) => toggleSaved(el.dataset.kind, el.dataset.id),
+    "export-shortlist": (el) => exportShortlist(el.dataset.format),
     "clear-saved": (el) => {
       // Two-step confirmation inside the page (native confirm dialogs may be blocked).
       if (el.dataset.armed !== "1") {

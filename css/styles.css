@@ -425,3 +425,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .search-matches__kind { font-size: 0.78rem; font-weight: 700; color: var(--muted); }
 .search-matches .linkish { text-align: left; }
 mark { background: var(--accent); color: var(--accent-ink); border-radius: 3px; padding: 0 2px; }
+
+.shortlist-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: flex-end; }
+.export-group { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.export-group__label { font-size: 0.8rem; color: var(--muted); font-weight: 600; margin-right: 2px; }
