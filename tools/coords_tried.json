@@ -265,6 +265,7 @@
 -101.84527778
 ],
 "Amarillo, United States": null,
+"Amazonia Theaters": null,
 "Ambergris Caye": [
 18.01394722,
 -87.93103889
@@ -289,6 +290,10 @@
 31.94972222,
 35.93277778
 ],
+"Amphitheatre of El Jem": [
+35.29638889,
+10.70694444
+],
 "Amsterdam": [
 52.37277778,
 4.89361111
@@ -301,6 +306,7 @@
 61.21666667,
 -149.89361111
 ],
+"Ancient Ksour of Ouadane, Chinguetti, Tichitt and Oualata": null,
 "Andasibe": [
 -16.25,
 49.78
@@ -382,6 +388,10 @@
 17.085,
 -61.8
 ],
+"Antigua Naval Dockyard and Related Archaeological Sites": [
+17.00694444,
+-61.76444444
+],
 "Antigua, Guatemala": [
 14.5575,
 -90.73333333
@@ -409,6 +419,19 @@
 29.53194444,
 35.00555556
 ],
+"Aqueduct of Padre Tembleque Hydraulic System": [
+19.83444444,
+-98.6625
+],
+"Archaeological Monuments Zone of Xochicalco": [
+18.80388889,
+-99.29591667
+],
+"Archaeological Sites of the Island of Meroe": null,
+"Archaeological Zone of Paquimé, Casas Grandes": [
+30.36638889,
+-107.9475
+],
 "Ardabil Shrine": [
 38.25166667,
 48.2975
@@ -429,11 +452,22 @@
 "Asa Wright, Trinidad and Tobago": null,
 "Assisi": null,
 "Assisi, Italy": null,
+"Assisi, Umbria": null,
+"Assisi, the Basilica of San Francesco and Other Franciscan Sites": null,
 "Atiu, Cook Islands": null,
+"Auckland, New Zealand": [
+-36.8492,
+174.7653
+],
 "Avenue of the Baobabs, Madagascar": null,
 "Avroman": null,
 "Ayia Napa, Cyprus": null,
+"Ayutthaya, Phra Nakhon Si Ayutthaya": null,
 "Ayutthaya, Thailand": null,
+"Baa Atoll": [
+5.13333333,
+72.95
+],
 "Baa Atoll, Maldives": null,
 "Babylon, Iraq": [
 32.5425,
@@ -444,7 +478,13 @@
 -76.61527778
 ],
 "Bam Citadel, Iran": null,
+"Bam and its Cultural Landscape": null,
+"Banaue, Luzon": null,
 "Banaue, Philippines": null,
+"Banc d'Arguin National Park": [
+20.23333333,
+-16.1
+],
 "Banc d'Arguin, Mauritania": null,
 "Bandar Seri Begawan": [
 4.89027778,
@@ -1015,6 +1055,7 @@
 48.14388889,
 17.10972222
 ],
+"Brazilian Atlantic Islands: Fernando de Noronha and Atol das Rocas Reserves": null,
 "Brazzaville": [
 -4.26666667,
 15.26666667
@@ -1047,10 +1088,15 @@
 42.28805556,
 18.8425
 ],
+"Buenos Aires, Buenos Aires City": null,
 "Bumthang, Bhutan": null,
 "Burlington, North Carolina": [
 36.07611111,
 -79.46805556
+],
+"Bwindi Impenetrable National Park": [
+-1.01666667,
+29.68333333
 ],
 "Bwindi, Uganda": null,
 "Byblos, Lebanon": [
@@ -1289,6 +1335,7 @@
 ],
 "Cathar Castles": null,
 "Cathar Castles, France": null,
+"Cathar Castles, Occitania": null,
 "Cathar castles": null,
 "Cayman Brac": [
 19.72,
@@ -1332,6 +1379,7 @@
 -56.5
 ],
 "Central Suriname Nature Reserve, Suriname": null,
+"Central University City Campus of the Universidad Nacional Autónoma de México (UNAM)": null,
 "Chaco Culture National Historical Park": [
 36.06,
 -107.96
@@ -1512,13 +1560,24 @@
 103.84416667
 ],
 "Chinguetti, Mauritania": null,
+"Chitwan National Park": [
+27.5,
+84.33333333
+],
 "Chitwan, Nepal": null,
 "Chobe, Botswana": null,
 "Christiania, Freetown Christiania": null,
 "Christoffel National Park, Curaçao": null,
+"Church of the Ascension, Kolomenskoye": null,
 "Churches of Peace": null,
+"Churches of Peace in Jawor and Świdnica": null,
+"Churches of Peace, Lower Silesia": null,
 "Churches of Peace, Poland": null,
 "Churches of the Pskov School of Architecture": null,
+"Cienfuegos, Cuba": [
+22.14555556,
+-80.43638889
+],
 "Cilaos, Réunion": null,
 "Cincinnati": [
 39.1,
@@ -1528,6 +1587,10 @@
 "Coatzacoalcos": [
 18.14138889,
 -94.43444444
+],
+"Coffee Cultural Landscape of Colombia": [
+5.47166667,
+-75.68166667
 ],
 "Colima (city)": [
 19.24333333,
@@ -1545,11 +1608,16 @@
 -69.08333333
 ],
 "Copán Ruinas, Honduras": null,
+"Coral Coast, Fiji": [
+-18.26945,
+177.88955278
+],
 "Cox's Bazar, Bangladesh": [
 21.42722222,
 92.005
 ],
 "Cradle of Humankind": null,
+"Cradle of Humankind, Gauteng": null,
 "Cuautla, Morelos": [
 18.81666667,
 -98.95
@@ -1562,8 +1630,15 @@
 18.91861111,
 -99.23416667
 ],
+"Cultural Landscape of Bali: the Subak System": null,
+"Cultural Landscape of Hawraman/Uramanat": null,
+"Curonian Spit": [
+55.27444444,
+20.97083333
+],
 "Curonian Spit, Lithuania": null,
 "D-Day Landing Beaches, France": null,
+"D-Day Landing Beaches, Normandy": null,
 "Dacian Fortresses of the Orăștie Mountains": null,
 "Dacian Fortresses, Romania": null,
 "Dahab, Egypt": [
@@ -1574,11 +1649,13 @@
 34.77111111,
 -84.97166667
 ],
+"Danakil Depression, Afar": null,
 "Danakil Depression, Ethiopia": null,
 "Dawson City, Yukon": [
 64.06,
 -139.43194444
 ],
+"Dead Sea": null,
 "Dead Sea, Jordan": null,
 "Decatur, Illinois": [
 39.84142222,
@@ -1588,9 +1665,16 @@
 28.19305556,
 -105.47166667
 ],
+"Denarau, Fiji": null,
 "Des Moines, Iowa": null,
+"Des Moines, United States": null,
 "Diani Beach, Kenya": null,
+"Diani Beach, Kwale": null,
 "Dilijan, Armenia": null,
+"Dinosaur Provincial Park": [
+50.76166667,
+-111.485
+],
 "Dinosaur Provincial Park, Alberta": null,
 "Diquís Stone Spheres, Costa Rica": null,
 "Dja Faunal Reserve": [
@@ -1610,6 +1694,7 @@
 33.45722222,
 9.025
 ],
+"Drakensberg, KwaZulu-Natal": null,
 "Drakensberg, South Africa": null,
 "Drummondville": [
 45.88333333,
@@ -1627,6 +1712,10 @@
 -29.88333333,
 31.05
 ],
+"Durmitor National Park": [
+43.12805556,
+19.03472222
+],
 "Durmitor, Montenegro": null,
 "Dzanga-Sangha, Central African Republic": null,
 "Eagle Pass, Texas": [
@@ -1634,9 +1723,12 @@
 -100.48944444
 ],
 "Eagle, Aruba": null,
+"Earliest 16th-Century Monasteries on the Slopes of Popocatepetl": null,
 "Echmiatsin, Armenia": null,
 "El Jem, Tunisia": null,
+"El Nido, Luzon": null,
 "El Nido, Philippines": null,
+"El Pinacate and Gran Desierto de Altar Biosphere Reserve": null,
 "El Pinacate, Sonora": null,
 "El Tunco, El Salvador": null,
 "El Vizcaíno Whale Sanctuary, Baja California Sur": null,
@@ -1650,6 +1742,7 @@
 -55.88
 ],
 "English Harbour, Antigua and Barbuda": null,
+"Ennedi Massif: Natural and Cultural Landscape": null,
 "Ennedi Plateau, Chad": null,
 "Ensenada": [
 31.85777778,
@@ -1662,6 +1755,10 @@
 "Essaouira, Morocco": [
 31.51305556,
 -9.76972222
+],
+"Etosha": [
+-18.94527778,
+15.89777778
 ],
 "Etosha, Namibia": null,
 "Everest region, Nepal": null,
@@ -1676,11 +1773,20 @@
 34.04333333,
 -5.00333333
 ],
+"Fethiye, Aegean": null,
 "Fethiye, Turkey": null,
+"Fish River Canyon": [
+-27.589293,
+17.597587
+],
 "Fish River Canyon, Namibia": null,
 "Florence, South Carolina": [
 34.14944444,
 -79.78888889
+],
+"Florianópolis, Santa Catarina": [
+-27.59255,
+-48.5581625
 ],
 "Fond du Lac, Wisconsin": [
 43.76666667,
@@ -1690,12 +1796,18 @@
 43.72944444,
 7.415
 ],
+"Forest Massif of Odzala-Kokoua": null,
 "Fort-de-France, Martinique": [
 14.6,
 -61.06666667
 ],
 "Fortified Churches of Transylvania, Romania": null,
+"Fossil Hominid Sites of South Africa": null,
 "Fouta Djallon, Guinea": null,
+"Franciscan Missions in the Sierra Gorda of Querétaro": [
+21.204,
+-99.464
+],
 "Freetown Peninsula, Sierra Leone": null,
 "Funafuti Conservation Area, Tuvalu": null,
 "Funafuti, Tuvalu": null,
@@ -1704,6 +1816,7 @@
 80.21555556
 ],
 "Garden Route, South Africa": null,
+"Garden Route, Western Cape": null,
 "Gedeo Cultural Landscape": null,
 "Gedeo Cultural Landscape, Ethiopia": null,
 "Gedi Ruins, Kenya": null,
@@ -1716,6 +1829,7 @@
 "Ghadames, Libya": null,
 "Ghardaïa, Algeria": null,
 "Gili Islands, Indonesia": null,
+"Gili Islands, West Nusa Tenggara": null,
 "Gitega, Burundi": null,
 "Gizo, Solomon Islands": [
 -8.10555556,
@@ -1731,8 +1845,10 @@
 73.83
 ],
 "Gobi Desert, Mongolia": null,
+"Gobustan Rock Art Cultural Landscape": null,
 "Gobustan, Azerbaijan": null,
 "Golden Circle, Iceland": null,
+"Gorham's Cave Complex": null,
 "Gozo, Malta": null,
 "Grace Bay, Turks and Caicos": null,
 "Grand Anse, Grenada": null,
@@ -1748,7 +1864,12 @@
 "Grand-Bassam, Côte d'Ivoire": null,
 "Grande Comore, Comoros": null,
 "Grandvalira, Andorra": null,
+"Great Smoky Mountains National Park": [
+35.61111111,
+-83.425
+],
 "Great Smoky Mountains National Park, Tennessee": null,
+"Greater Kruger, Mpumalanga": null,
 "Greater Kruger, South Africa": null,
 "Greenville, North Carolina": [
 35.59444444,
@@ -1757,6 +1878,10 @@
 "Greenville, South Carolina": [
 34.86111111,
 -82.41333333
+],
+"Group of Monuments at Hampi": [
+15.33444444,
+76.46222222
 ],
 "Guadalajara": [
 20.67666667,
@@ -1803,9 +1928,30 @@
 34.99916667
 ],
 "Hakone, Japan": null,
+"Hakone, Kanagawa": [
+35.18944444,
+139.02472222
+],
 "Halifax": null,
+"Halifax, Canada": [
+44.6475,
+-63.59055556
+],
+"Halifax, Nova Scotia": [
+44.6475,
+-63.59055556
+],
+"Hallstatt-Dachstein / Salzkammergut Cultural Landscape": [
+47.7,
+13.58333333
+],
+"Hamburg, Hamburg": null,
 "Hamilton, Bermuda": null,
 "Hampi, India": null,
+"Hampi, Karnataka": [
+15.33444444,
+76.46222222
+],
 "Hangzhou, China": [
 30.267,
 120.153
@@ -1814,12 +1960,53 @@
 31.31583333,
 -89.30861111
 ],
+"Hawaii Volcanoes National Park": [
+19.38333333,
+-155.2
+],
 "Hawaiʻi Volcanoes National Park, Hawaii": null,
 "Hawraman, Iran": null,
+"Head-Smashed-In Buffalo Jump": [
+49.74944444,
+-113.625
+],
 "Head-Smashed-In Buffalo Jump, Alberta": null,
 "Hebron Old Town, Palestine": null,
+"Hidalgo del Parral, Chihuahua": null,
+"Hidalgo del Parral, Mexico": null,
+"Hierapolis-Pamukkale": null,
 "High Tatras, Slovakia": null,
+"Historic Centre of Brugge": [
+51.20888889,
+3.22416667
+],
+"Historic Centre of Salvador de Bahia": [
+-12.96666667,
+-38.5
+],
+"Historic Centre of Český Krumlov": [
+48.81111111,
+14.31527778
+],
+"Historic City of Ayutthaya": [
+14.35,
+100.58333333
+],
+"Historic Quarter of the City of Colonia del Sacramento": [
+-34.47138889,
+-57.84416667
+],
+"Historic Town of Grand-Bassam": [
+5.19583333,
+-3.73638889
+],
+"Historic Town of Sukhothai and Associated Historic Towns": [
+17.00722222,
+99.78972222
+],
+"Historical Centre of the City of Arequipa": null,
 "Hlane, Eswatini": null,
+"Hoi An Ancient Town": null,
 "Hong Kong Island, Hong Kong": [
 22.26444444,
 114.18722222
@@ -1828,11 +2015,21 @@
 -9.43194444,
 159.95555556
 ],
+"Honolulu, Hawaii": [
+21.3,
+-157.85
+],
+"Honolulu, United States": [
+21.3,
+-157.85
+],
 "Honolulu_": [
 21.3,
 -157.85
 ],
+"Hopewell Ceremonial Earthworks": null,
 "Hopewell Ceremonial Earthworks, Ohio": null,
+"Huacachina, Ica": null,
 "Hualien, Taiwan": [
 23.97611111,
 121.60472222
@@ -1843,22 +2040,37 @@
 27.25777778,
 33.81166667
 ],
+"Hvar": [
+43.15,
+16.75
+],
 "Hvar, Croatia": null,
 "Hwange, Zimbabwe": [
 -18.36472222,
 26.5
 ],
+"Hội An, Central": null,
 "Hội An, Vietnam": null,
+"Iguaçu National Park": [
+-25.68333333,
+-54.43333333
+],
 "Ilulissat, Greenland": [
 69.21972222,
 -51.09861111
 ],
 "Inle Lake, Myanmar": null,
+"Interlaken, Bern": null,
+"Iquitos, Loreto": null,
 "Isfahan, Iran": [
 32.66527778,
 51.67027778
 ],
 "Iskanderkul, Tajikistan": null,
+"Island of Mozambique": [
+-15.03666667,
+40.73277778
+],
 "Island of Mozambique, Mozambique": null,
 "Isle of Pines, New Caledonia": [
 -22.61666667,
@@ -1869,7 +2081,12 @@
 41.01361111,
 28.955
 ],
+"Italian Condominium Theatres, Emilia-Romagna": null,
 "Italian Condominium Theatres, Italy": null,
+"Itchan Kala": [
+41.37833333,
+60.36388889
+],
 "Ivindo National Park": [
 0.088,
 12.63
@@ -1897,10 +2114,19 @@
 21.54333333,
 39.17277778
 ],
+"Jeju Island, Jeju": null,
 "Jeju Island, South Korea": null,
+"Jeju Volcanic Island and Lava Tubes": [
+33.46888889,
+126.72027778
+],
 "Jinja, Uganda": [
 0.42333333,
 33.20388889
+],
+"Joggins Fossil Cliffs": [
+45.69188333,
+-64.44356944
 ],
 "Joggins Fossil Cliffs, Nova Scotia": null,
 "Jost Van Dyke, British Virgin Islands": null,
@@ -1949,9 +2175,15 @@
 -119.49555556
 ],
 "Kerala Backwaters, India": null,
+"Kerala Backwaters, Kerala": null,
 "Khiva, Uzbekistan": null,
 "Khor Al Adaid, Qatar": null,
 "Khövsgöl Lake, Mongolia": null,
+"Kluane / Wrangell-St. Elias / Glacier Bay / Tatshenshini-Alsek": [
+61.1975,
+-140.992
+],
+"Koh Lipe, Satun": null,
 "Koh Lipe, Thailand": null,
 "Koh Rong, Cambodia": null,
 "Koh Samui, Thailand": [
@@ -1963,11 +2195,19 @@
 "Kolomenskoye": null,
 "Kolomenskoye, Russia": null,
 "Kolsai Lakes, Kazakhstan": null,
+"Komodo National Park": [
+-8.54333333,
+119.48944444
+],
 "Kota Kinabalu, Malaysia": [
 5.975,
 116.0725
 ],
 "Koutammakou, Togo": null,
+"Koutammakou, the Land of the Batammariba": [
+10.06666667,
+1.13333333
+],
 "Krabi, Thailand": [
 8.05916667,
 98.91888889
@@ -1994,6 +2234,7 @@
 -110.31083333
 ],
 "Laas Geel, Somalia": null,
+"Labuan Bajo, East Nusa Tenggara": null,
 "Labuan Bajo, Indonesia": null,
 "Lac Abbé, Djibouti": null,
 "Lac Assal, Djibouti": null,
@@ -2003,12 +2244,22 @@
 77.58472222
 ],
 "Lahemaa National Park, Estonia": null,
+"Lake Atitlán": [
+14.7,
+-91.2
+],
 "Lake Atitlán, Guatemala": null,
+"Lake Bled": [
+46.36444444,
+14.09472222
+],
 "Lake Bled, Slovenia": null,
 "Lake Como, Italy": null,
+"Lake Como, Lombardy": null,
 "Lake Kivu, Rwanda": null,
 "Lake Onega Petroglyphs, Russia": null,
 "Lake Sevan, Armenia": null,
+"Lakeland, South Savo": null,
 "Lalibela, Ethiopia": [
 12.03166667,
 39.04111111
@@ -2026,7 +2277,15 @@
 22.27055556,
 113.95277778
 ],
+"Le Morne Cultural Landscape": [
+-20.45194444,
+57.32833333
+],
 "Le Morne, Mauritius": null,
+"Lençóis Maranhenses National Park": [
+-2.53333333,
+-43.11666667
+],
 "Les Anses-d'Arlet, Martinique": null,
 "Lethbridge": [
 49.69361111,
@@ -2052,6 +2311,7 @@
 "Limfjord Fossil Cliffs, Denmark": null,
 "Litomyšl Castle": null,
 "Litomyšl Castle, Czechia": null,
+"Litomyšl Castle, Pardubice": null,
 "Little Rock, Arkansas": [
 34.7444,
 -92.2881
@@ -2062,6 +2322,10 @@
 ],
 "Liwonde National Park, Malawi": null,
 "Loango National Park, Gabon": null,
+"Lofoten Islands": [
+68.33333333,
+14.66666667
+],
 "Lofoten Islands, Norway": null,
 "Longview, Texas": [
 32.5202,
@@ -2070,6 +2334,10 @@
 "Longyearbyen, Svalbard": [
 78.22,
 15.65
+],
+"Los Glaciares National Park": [
+-50,
+-73.24944444
 ],
 "Los Roques, Venezuela": null,
 "Lower Zambezi, Zambia": null,
@@ -2081,6 +2349,12 @@
 33.585,
 -101.845
 ],
+"Lucerne, Lucerne": null,
+"Lugano, Ticino": null,
+"Luis Barragán House and Studio": [
+19.41083333,
+-99.19222222
+],
 "Luis Barragán House and Studio, Mexico City": null,
 "Lusaka, Zambia": [
 -15.41666667,
@@ -2090,11 +2364,17 @@
 25.69666667,
 32.64444444
 ],
+"Lynchburg, United States": null,
 "Lynchburg, Virginia": null,
 "Lyon, France": [
 45.7675,
 4.835
 ],
+"M'Zab Valley": [
+32.48333333,
+3.68333333
+],
+"Maafushi": null,
 "Maafushi, Maldives": null,
 "Madrid, Spain": [
 40.4169,
@@ -2114,6 +2394,7 @@
 102.25
 ],
 "Malbun, Liechtenstein": null,
+"Maloti-Drakensberg Park": null,
 "Mana Pools, Zimbabwe": [
 -15.75,
 29.33333333
@@ -2131,6 +2412,7 @@
 40.75333333,
 -82.50444444
 ],
+"Manuel Antonio": null,
 "Manuel Antonio, Costa Rica": null,
 "Maramureș, Romania": null,
 "Marina Bay, Singapore": [
@@ -2139,18 +2421,35 @@
 ],
 "Massawa, Eritrea": null,
 "Masurian Lakes, Poland": null,
+"Masurian Lakes, Warmia-Masuria": null,
+"Maui, Hawaii": [
+20.8,
+-156.3
+],
+"Maui, United States": null,
 "Mavrovo, North Macedonia": null,
+"Maya Site of Copan": null,
 "Mdina, Malta": [
 35.88583333,
 14.40305556
 ],
+"Medieval Monuments in Kosovo": null,
 "Medinas of the Comoros, Comoros": null,
+"Megalithic Temples of Malta (Ġgantija)": null,
 "Mehmed Paša Sokolović Bridge": null,
 "Melka Kunture": null,
+"Melka Kunture and Balchit: Archaeological and Palaeontological Sites in the Highland Area of Ethiopia": null,
 "Melka Kunture, Ethiopia": null,
+"Memorial sites of the Genocide: Nyamata, Murambi, Gisozi and Bisesero": null,
+"Mendoza, Mendoza": null,
 "Meroë Pyramids, Sudan": null,
 "Merv, Turkmenistan": null,
+"Merzouga, Drâa-Tafilalet": null,
 "Merzouga, Morocco": null,
+"Mesa Verde National Park": [
+37.1838,
+-108.4887
+],
 "Mesa Verde National Park, Colorado": null,
 "Mesopotamian Marshes, Iraq": null,
 "Mexicali": [
@@ -2158,6 +2457,10 @@
 -115.46777778
 ],
 "Middle Caicos, Turks and Caicos": null,
+"Miguasha National Park": [
+48.11055556,
+-66.36944444
+],
 "Miguasha National Park, Quebec": null,
 "Milne Bay, Papua New Guinea": null,
 "Minatitlán, Veracruz": [
@@ -2169,10 +2472,12 @@
 -93.26916667
 ],
 "Minot, North Dakota": null,
+"Minot, United States": null,
 "Mir, Belarus": [
 53.45,
 26.46666667
 ],
+"Mirissa, Southern": null,
 "Mirissa, Sri Lanka": null,
 "Mistaken Point, Newfoundland and Labrador": [
 46.63194444,
@@ -2185,6 +2490,10 @@
 "Mohéli, Comoros": null,
 "Mole National Park, Ghana": null,
 "Monaco-Ville, Monaco": null,
+"Monarch Butterfly Biosphere Reserve": [
+19.60638889,
+-100.24166667
+],
 "Monarch Butterfly Reserve, Michoacán": null,
 "Monclova": [
 26.91027778,
@@ -2195,6 +2504,10 @@
 -10.80138889
 ],
 "Monte Alén National Park, Equatorial Guinea": null,
+"Montego Bay, Jamaica": [
+18.46666667,
+-77.91666667
+],
 "Monteverde, Costa Rica": [
 10.29083333,
 -84.82527778
@@ -2204,7 +2517,16 @@
 19.76833333,
 -101.18944444
 ],
+"Morne Trois Pitons National Park": [
+15.325,
+-61.31666667
+],
 "Morne Trois Pitons, Dominica": null,
+"Moroleón, Guanajuato": [
+20.13333333,
+-101.2
+],
+"Moroleón, Mexico": null,
 "Morristown, Tennessee": [
 36.21055556,
 -83.29611111
@@ -2217,6 +2539,7 @@
 43.34361111,
 17.8075
 ],
+"Mount Amel Castles": null,
 "Mount Amel Castles, Lebanon": null,
 "Mount Pelée, Martinique": null,
 "Mullerthal, Luxembourg": [
@@ -2241,10 +2564,18 @@
 20.96722222,
 -89.62361111
 ],
+"Nahanni National Park": [
+61.6,
+-125.685
+],
 "Nahanni National Park Reserve, Northwest Territories": null,
 "Nairobi, Kenya": [
 -1.28638889,
 36.81722222
+],
+"Namib Sand Sea": [
+-24.75194444,
+15.27638889
 ],
 "Namibe Desert, Angola": null,
 "Nanaimo": [
@@ -2275,10 +2606,24 @@
 25.07805556,
 -77.33861111
 ],
+"Natural and Cultural Heritage of the Ohrid Region": null,
 "Nauru, Nauru": null,
+"Negril": [
+18.3110182,
+-78.339386
+],
+"Negril, Jamaica": [
+18.3110182,
+-78.339386
+],
+"Nelson Mandela Legacy Sites, Gauteng": null,
 "New York City": [
 40.7128,
 -74.0061
+],
+"Ngorongoro Conservation Area": [
+-3.21,
+35.46
 ],
 "Ngorongoro Crater, Tanzania": null,
 "Niles, Michigan": [
@@ -2295,6 +2640,7 @@
 44.05361111,
 -71.12833333
 ],
+"North Malé Atoll": null,
 "North Malé Atoll, Maldives": null,
 "Nosy Be, Madagascar": null,
 "Nouméa, New Caledonia": [
@@ -2306,9 +2652,22 @@
 -99.50694444
 ],
 "Nyungwe Forest, Rwanda": null,
+"Nyungwe National Park": null,
+"Ocho Rios, Jamaica": [
+18.41666667,
+-77.11666667
+],
 "Odzala-Kokoua, Republic of the Congo": null,
 "Ohrid, North Macedonia": null,
+"Okavango Delta": [
+-19.4,
+22.9
+],
 "Okavango Delta, Botswana": null,
+"Okefenokee National Wildlife Refuge": [
+30.7363429,
+-82.1220627
+],
 "Okefenokee Swamp, Georgia": null,
 "Old City of Hebron": [
 31.52527778,
@@ -2317,6 +2676,10 @@
 "Old City of Sanaa": [
 15.5,
 44.3
+],
+"Old Town of Ghadamès": [
+30.13194444,
+9.49694444
 ],
 "Ometepe, Nicaragua": null,
 "Oranjestad, Aruba": [
@@ -2327,6 +2690,10 @@
 "Orizaba": [
 18.85,
 -97.1
+],
+"Orkhon Valley Cultural Landscape": [
+47.55666667,
+102.83138889
 ],
 "Orkhon Valley, Mongolia": null,
 "Oshkosh, Wisconsin": [
@@ -2351,6 +2718,10 @@
 45.41184,
 11.87952
 ],
+"Painted Churches in the Troodos Region": [
+34.92027778,
+33.09583333
+],
 "Palm Springs, California": [
 33.83027778,
 -116.54527778
@@ -2360,7 +2731,12 @@
 38.26805556
 ],
 "Pamir Highway, Tajikistan": null,
+"Pamukkale, Aegean": null,
 "Pamukkale, Turkey": null,
+"Papahānaumokuākea": [
+25.5,
+-170.5
+],
 "Papahānaumokuākea, Hawaii": null,
 "Paphos, Cyprus": [
 34.76666667,
@@ -2383,9 +2759,15 @@
 "Persian Qanat": null,
 "Persian Qanats, Iran": null,
 "Persian gardens": null,
+"Petra": null,
 "Petra, Jordan": null,
 "Petroglyphs of Lake Onega and the White Sea": null,
+"Phong Nha, Central": null,
 "Phong Nha, Vietnam": null,
+"Phong Nha-Ke Bang National Park": [
+17.53722222,
+106.15138889
+],
 "Phuket, Thailand": [
 7.89,
 98.39833333
@@ -2398,24 +2780,39 @@
 28.7,
 -100.52305556
 ],
+"Pimachiowin Aki": [
+51.81666667,
+-95.4
+],
 "Pimachiowin Aki, Manitoba": null,
 "Piran, Slovenia": [
 45.52833333,
 13.56833333
 ],
 "Piton de la Fournaise, Réunion": null,
+"Pitons, Cirques and Remparts of Réunion": null,
 "Placencia, Belize": null,
+"Pleistocene Sites, Western Cape": null,
+"Plitvice Lakes National Park": [
+44.88055556,
+15.61611111
+],
 "Plitvice Lakes, Croatia": null,
 "Pokhara, Nepal": [
 28.20833333,
 83.98888889
 ],
 "Popocatépetl Monasteries, Morelos": null,
+"Port Antonio, Jamaica": [
+18.175701,
+-76.450253
+],
 "Port St. Lucie, Florida": [
 27.25944444,
 -80.33805556
 ],
 "Porticoes of Bologna": null,
+"Porticoes of Bologna, Emilia-Romagna": null,
 "Porticoes of Bologna, Italy": null,
 "Poughkeepsie, New York": [
 41.70583333,
@@ -2426,6 +2823,11 @@
 -91.41138889
 ],
 "Praslin, Seychelles": null,
+"Pre-Hispanic Town of Uxmal": [
+20.35944444,
+-89.77138889
+],
+"Precolumbian Chiefdom Settlements with Stone Spheres of the Diquís": null,
 "Prescott, Arizona": [
 34.58527778,
 -112.44694444
@@ -2439,6 +2841,10 @@
 -71.42222222
 ],
 "Pskov Churches, Russia": null,
+"Pucón, Chile": [
+-39.27666667,
+-71.97444444
+],
 "Puerto Plata, Dominican Republic": [
 19.8,
 -70.68333333
@@ -2457,6 +2863,7 @@
 -54.95
 ],
 "Pyramiden, Svalbard": null,
+"Qal'at al-Bahrain – Ancient Harbour and Capital of Dilmun": null,
 "Qal'at al-Bahrain, Bahrain": null,
 "Qalhat": [
 22.7,
@@ -2465,6 +2872,7 @@
 "Qalhat, Oman": null,
 "Queen Elizabeth National Park, Uganda": null,
 "Raja Ampat, Indonesia": null,
+"Raja Ampat, Southwest Papua": null,
 "Rangiroa, French Polynesia": null,
 "Rarotonga, Cook Islands": [
 -21.235,
@@ -2482,7 +2890,15 @@
 51.73194444,
 -56.42555556
 ],
+"Redwood National and State Parks": [
+41.3,
+-124
+],
 "Redwood National and State Parks, California": null,
+"Revillagigedo Archipelago": [
+18.7897,
+-110.976
+],
 "Revillagigedo Islands, Colima": null,
 "Reynosa": [
 26.09222222,
@@ -2492,12 +2908,25 @@
 36.43333333,
 28.21666667
 ],
+"Rice Terraces of the Philippine Cordilleras": [
+16.93388889,
+121.13666667
+],
+"Rila Monastery": [
+42.13333333,
+23.34027778
+],
 "Rila Monastery, Bulgaria": null,
+"Ring of Kerry, Ireland": null,
 "Rioverde, San Luis Potosí": [
 21.928,
 -99.997
 ],
 "Rishikesh, India": null,
+"Rishikesh, Uttarakhand": [
+30.10833333,
+78.29722222
+],
 "River Gambia, Gambia": null,
 "Roatán, Honduras": [
 16.38333333,
@@ -2505,15 +2934,28 @@
 ],
 "Robertsport, Liberia": null,
 "Rock Mosques and Associated Sacred Sites of Mangystau": null,
+"Rock Paintings of the Sierra de San Francisco": [
+27.6555611,
+-112.91611
+],
 "Rock-Hewn Churches of Ivanovo, Bulgaria": null,
 "Rock-hewn Churches of Ivanovo": [
 43.71666667,
 25.96666667
 ],
 "Rodney Bay, Saint Lucia": null,
+"Rotorua, New Zealand": [
+-38.13777778,
+176.25138889
+],
+"Royal Capetian Fortresses of Languedoc": null,
 "Royal Court of Tiébélé": [
 11.095278,
 -0.963611
+],
+"Royal Exhibition Building and Carlton Gardens": [
+-37.80611111,
+144.97027778
 ],
 "Royal Palaces of Abomey": [
 7.18645,
@@ -2537,13 +2979,23 @@
 "Rupununi, Guyana": null,
 "Ruta de las Flores, El Salvador": null,
 "Rwandan genocide": null,
+"SGang Gwaay": [
+52.098889,
+-131.2175
+],
 "SG̱ang Gwaay, British Columbia": null,
+"Sa Pa, North": null,
 "Sa Pa, Vietnam": null,
 "Sabratha": [
 32.79222222,
 12.48416667
 ],
 "Sabratha, Libya": null,
+"Sacred Valley, Cusco": null,
+"Sagarmatha National Park": [
+27.93333333,
+86.73333333
+],
 "Sai Kung, Hong Kong": null,
 "Saint Hilarion Monastery": [
 31.44722222,
@@ -2572,6 +3024,11 @@
 21
 ],
 "Salonga National Park, DR Congo": null,
+"Saloum Delta": [
+13.83527778,
+-16.49861111
+],
+"Salta, Salta": null,
 "Saltillo": [
 25.42305556,
 -100.99194444
@@ -2595,6 +3052,10 @@
 20.91416667,
 -100.74361111
 ],
+"San Pedro de Atacama, Chile": [
+-22.91666667,
+-68.2
+],
 "San Sebastián, Spain": [
 43.32138889,
 -1.98555556
@@ -2602,6 +3063,10 @@
 "Sandusky, Ohio": [
 41.45555556,
 -82.71388889
+],
+"Sangha Trinational": [
+2.60944444,
+16.55416667
 ],
 "Sani Pass, Lesotho": null,
 "Santa Cruz de la Sierra, Bolivia": [
@@ -2618,7 +3083,16 @@
 141.35444444
 ],
 "Sasanian Empire": null,
+"Sassanid Archaeological Landscape in Fars province (Bishabpur, Firouzabad, Sarvestan)": null,
 "Sassanid Fars, Iran": null,
+"Seattle, United States": [
+47.60388889,
+-122.33
+],
+"Seattle, Washington": [
+47.60388889,
+-122.33
+],
 "Sebastia, Nablus": [
 32.27666667,
 35.19583333
@@ -2633,8 +3107,13 @@
 -9,
 37.4
 ],
+"Seminyak, Bali": null,
 "Seminyak, Indonesia": null,
 "Semonkong, Lesotho": null,
+"Semuc Champey": [
+15.53333333,
+-89.96138889
+],
 "Semuc Champey, Guatemala": null,
 "Seoul, South Korea": [
 37.56,
@@ -2673,6 +3152,7 @@
 15.46611111,
 101.15055556
 ],
+"Siargao, Mindanao": null,
 "Siargao, Philippines": null,
 "Sidi Bou Said": [
 36.87166667,
@@ -2691,9 +3171,15 @@
 "Sigulda, Latvia": null,
 "Silhouette Island, Seychelles": null,
 "Simien Mountains, Ethiopia": null,
+"Simien National Park": [
+13.18333333,
+38.06666667
+],
 "Sine-Saloum Delta, Senegal": null,
+"Skeleton Coast": null,
 "Skeleton Coast, Namibia": null,
 "Snæfellsnes Peninsula, Iceland": null,
+"Snæfellsnes Peninsula, Western Region": null,
 "Solovetsky Islands": [
 65.08333333,
 35.88333333
@@ -2710,8 +3196,10 @@
 13.854,
 -61.0592
 ],
+"South China Karst (Guilin)": null,
 "South Luangwa, Zambia": null,
 "South Shore beaches, Bermuda": null,
+"Soča Valley": null,
 "Soča Valley, Slovenia": null,
 "Split, Croatia": [
 43.51,
@@ -2746,6 +3234,7 @@
 -51.695,
 -57.85055556
 ],
+"State Historical and Cultural Park 'Ancient Merv'": null,
 "Staunton, Virginia": [
 38.15805556,
 -79.07638889
@@ -2758,6 +3247,7 @@
 10.49031667,
 -6.41016667
 ],
+"Sukhothai, Sukhothai": null,
 "Sukhothai, Thailand": null,
 "Sukur": [
 10.74055556,
@@ -2767,6 +3257,7 @@
 "Sun Moon Lake, Taiwan": null,
 "Sundarbans, Bangladesh": null,
 "Sunny Beach, Bulgaria": null,
+"Sunny Beach, Burgas": null,
 "Svaneti, Georgia": null,
 "Sviyazhsk Assumption Monastery": [
 55.77,
@@ -2776,6 +3267,11 @@
 "Swakopmund, Namibia": [
 -22.68333333,
 14.53333333
+],
+"Swedish Lapland, Norrbotten": null,
+"São Paulo, São Paulo": [
+-23.55,
+-46.63333333
 ],
 "São Tomé, São Tomé and Príncipe": [
 0.3375,
@@ -2795,6 +3291,8 @@
 47.235949
 ],
 "Talaiotic culture": null,
+"Talayotic Menorca": null,
+"Talayotic Menorca, Balearic Islands": null,
 "Talayotic Menorca, Spain": null,
 "Tamarindo, Costa Rica": [
 10.2923417,
@@ -2814,7 +3312,17 @@
 173
 ],
 "Tatev, Armenia": null,
+"Taveuni, Fiji": [
+-16.8,
+180
+],
+"Tayrona, Magdalena": null,
+"Taï National Park": [
+5.75,
+-7.11666667
+],
 "Taï National Park, Côte d'Ivoire": null,
+"Te Wāhipounamu – South West New Zealand": null,
 "Tehuacán, Puebla": [
 18.46166667,
 -97.39277778
@@ -2831,13 +3339,20 @@
 19.81777778,
 -97.36666667
 ],
+"The Ahwar of Southern Iraq: Refuge of Biodiversity and the Relict Landscape of the Mesopotamian Cities": null,
 "The Bony Fish Fossils of the Western Limfjord – Evolution and Climate Adaptation in the Earliest Eocene": null,
 "The Cemetery Complexes of Xiongnu Nobility": null,
 "The Colonial Transisthmian Route of Panamá": null,
 "The Emergence of Modern Human Behaviour: The Pleistocene Occupation Sites of South Africa": null,
 "The Medinas of the Historic Sultanates of the Comoros": null,
 "The Persian Caravanserai": null,
+"The Persian Garden": null,
+"The Porticoes of Bologna": null,
 "The Rock, Gibraltar": null,
+"The Sundarbans": [
+21.75,
+88.75
+],
 "The system of Italian-style condominio theatres of the 18th and 19th centuries in Central Italy": null,
 "Theodore Roosevelt National Park": [
 46.96666667,
@@ -2871,6 +3386,7 @@
 "Tiya Stelae, Ethiopia": null,
 "Tiébélé Royal Court, Burkina Faso": null,
 "Tobago, Trinidad and Tobago": null,
+"Todra Gorge, Drâa-Tafilalet": null,
 "Todra Gorge, Morocco": null,
 "Tofo, Mozambique": null,
 "Tokaj wine region": [
@@ -2888,6 +3404,7 @@
 ],
 "Tomb of Askia, Mali": null,
 "Tongatapu, Tonga": null,
+"Torres del Paine, Chile": null,
 "Tortola, British Virgin Islands": [
 18.42333333,
 -64.61805556
@@ -2896,11 +3413,23 @@
 10.54166667,
 -83.50333333
 ],
+"Trinidad and the Valley de los Ingenios": [
+21.84138889,
+-79.86638889
+],
+"Trinidad, Cuba": [
+21.80416667,
+-79.98305556
+],
 "Trois-Rivières": [
 46.34305556,
 -72.54333333
 ],
 "Troodos Mountains, Cyprus": null,
+"Tsingy de Bemaraha Strict Nature Reserve": [
+-18.66666667,
+44.75
+],
 "Tsingy de Bemaraha, Madagascar": null,
 "Tsodilo": [
 -18.75,
@@ -2920,10 +3449,16 @@
 -97.4
 ],
 "Twyfelfontein": null,
+"Twyfelfontein or /Ui-//aes": null,
 "Twyfelfontein, Namibia": null,
 "UNAM University City, Mexico City": null,
+"Ubud, Bali": null,
 "Ubud, Indonesia": null,
 "Udaipur, India": null,
+"Udaipur, Rajasthan": [
+24.58,
+73.68
+],
 "Ulu Temburong, Brunei": null,
 "Umm ar-Rasas": [
 31.50078611,
@@ -2936,6 +3471,19 @@
 ],
 "Umm el-Jimal, Jordan": null,
 "Una National Park, Bosnia and Herzegovina": null,
+"Upper Middle Rhine Valley": [
+50.1736,
+7.69417
+],
+"Upper Svaneti": [
+42.91638889,
+43.01138889
+],
+"Urban Historic Centre of Cienfuegos": null,
+"Ushuaia, Tierra del Fuego": [
+-54.80722222,
+-68.30805556
+],
 "Utila, Honduras": null,
 "Uxmal, Yucatán": null,
 "Uyuni Salt Flats, Bolivia": null,
@@ -2949,12 +3497,24 @@
 -83.28305556
 ],
 "Vallnord, Andorra": null,
+"Vallée de Mai Nature Reserve": [
+-4.32916667,
+55.7375
+],
 "Valongo Wharf": [
 -22.89711111,
 -43.18738889
 ],
 "Valongo Wharf, Brazil": null,
 "Vang Vieng, Laos": null,
+"Varadero": [
+23.13944444,
+-81.28611111
+],
+"Varadero, Cuba": [
+23.13944444,
+-81.28611111
+],
 "Varanasi, India": [
 25.31888889,
 83.01277778
@@ -2969,20 +3529,40 @@
 17.98,
 102.63
 ],
+"Villages with Fortified Churches in Transylvania": null,
 "Villages with fortified churches in Transylvania": null,
 "Villahermosa": null,
+"Villahermosa, Mexico": null,
+"Villahermosa, Tabasco": null,
+"Vilnius Historic Centre": [
+54.68666667,
+25.29305556
+],
 "Virgin Gorda, British Virgin Islands": null,
 "Virgin Komi Forests": [
 63.62583333,
 58.9525
 ],
 "Virgin Komi Forests, Russia": null,
+"Virunga National Park": [
+-0.91666667,
+29.16666667
+],
 "Virunga National Park, DR Congo": null,
+"Viñales Valley": [
+22.61666667,
+-83.71666667
+],
+"Viñales, Cuba": [
+22.61527778,
+-83.71583333
+],
 "Višegrad Bridge, Bosnia and Herzegovina": null,
 "Vlkolínec": [
 49.04166667,
 19.275
 ],
+"Volcanoes and Forests of Mount Pelée and the Pitons of Northern Martinique": null,
 "Volubilis": [
 34.07111111,
 -5.55361111
@@ -2990,7 +3570,16 @@
 "Volubilis, Morocco": null,
 "Vágar, Faroe Islands": null,
 "W National Park, Niger": null,
+"W-Arly-Pendjari Complex": [
+12.34821389,
+2.35656111
+],
+"Wachau Cultural Landscape": [
+48.36444444,
+15.43416667
+],
 "Wadi Al-Hitan, Egypt": null,
+"Wadi Rum Protected Area": null,
 "Wadi Rum, Jordan": null,
 "Wadi Shab, Oman": null,
 "Wadi Wurayah": [
@@ -3010,12 +3599,21 @@
 44.95,
 -89.63333333
 ],
+"West Norwegian Fjords – Geirangerfjord and Nærøyfjord": null,
 "Western Caucasus": [
 44,
 40
 ],
 "Western Caucasus, Russia": null,
 "Westpunt, Curaçao": null,
+"Whale Sanctuary of El Vizcaino": [
+27.79222222,
+-114.22777778
+],
+"Whitsundays, Queensland": [
+-20.2791,
+148.9141
+],
 "Wieliczka Salt Mine": [
 49.97916667,
 20.06388889
@@ -3033,16 +3631,19 @@
 59.38333333,
 -112.98333333
 ],
+"Wooden Churches of Maramureş": null,
 "Wooden Churches of Southern Lesser Poland": [
 49.75,
 21.233
 ],
 "Wooden Churches of Southern Lesser Poland, Poland": null,
+"Wooden Hypostyle Mosques of Anatolia, Central Anatolia": null,
 "Wooden Hypostyle Mosques of Medieval Anatolia": null,
 "Wooden churches of the Slovak Carpathians": [
 49.33611111,
 19.55833333
 ],
+"Writing-on-Stone / Áísínai'pi": null,
 "Writing-on-Stone, Alberta": null,
 "Xalapa": [
 19.54,
@@ -3050,8 +3651,10 @@
 ],
 "Xiongnu Cemeteries, Mongolia": null,
 "Xochicalco, Morelos": null,
+"Yala, Southern": null,
 "Yala, Sri Lanka": null,
 "Yangshuo, China": null,
+"Yangshuo, Guangxi": null,
 "Yaroslavl": [
 57.6264,
 39.8933
@@ -3059,6 +3662,10 @@
 "Yaroslavl, Russia": [
 57.6264,
 39.8933
+],
+"Yasawa Islands, Fiji": [
+-16.91666667,
+177.33333333
 ],
 "Yasuní, Ecuador": null,
 "Yazd, Iran": [
@@ -3087,7 +3694,13 @@
 29.117,
 110.479
 ],
+"Zurich, Zurich": null,
+"Þingvellir National Park": [
+64.25380556,
+-21.03725
+],
 "Český Krumlov, Czechia": null,
+"Český Krumlov, South Bohemia": null,
 "ǀXam and ǂKhomani heartland": [
 -25.68761111,
 20.37458333
