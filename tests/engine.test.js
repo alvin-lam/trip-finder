@@ -471,3 +471,12 @@ test("destinations carry search codes and other names", () => {
   assert.equal(new Set(codes).size, codes.length);
   assert.throws(() => E.buildIndex({ ...data, COUNTRY_ALIASES: { zz: ["nowhere"] } }), /matches no destination/);
 });
+
+test("Ireland covers its main cities, sights and national parks", () => {
+  const ie = index.countryById.ie;
+  assert.equal(ie.cities.length, 19);
+  for (const id of ["ie-cork", "ie-cliffs-of-moher-the-burren", "ie-glendalough-the-wicklow-mountains", "ie-rock-of-cashel"]) assert.ok(index.cityById[id], id);
+  const parks = new Set(ie.cities.flatMap((x) => x.nationalParks));
+  for (const np of ["Killarney", "Connemara", "Burren", "Wicklow Mountains", "Wild Nephin", "Glenveagh"]) assert.ok(parks.has(`${np} National Park`), np);
+  assert.deepEqual([...new Set(ie.cities.map((x) => x.area))].sort(), ["Connacht", "Leinster", "Munster", "Ulster"]);
+});
