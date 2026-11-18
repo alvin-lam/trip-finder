@@ -426,6 +426,8 @@ test("Russia groups by federal district, and Crimea stays with Ukraine", () => {
   assert.equal(area("ru-saint-petersburg"), "Northwestern");
   assert.equal(area("ru-kizhi"), "Northwestern");
   assert.equal(area("ru-moscow"), "Central");
+  assert.equal(area("ru-yekaterinburg"), "Ural");
+  assert.equal(new Set(index.countryById.ru.cities.map((x) => x.area)).size, 8, "all 8 federal districts");
   // Occupied Ukrainian territory is listed under Ukraine, never Russia.
   assert.ok(index.countryById.ua.cities.some((x) => x.id === "ua-chersonesus"));
   const occupied = /crimea|sevastopol|chersones|yalta|bakhchys|simferopol|donetsk|luhansk|zaporizh|kherson|mariupol/i;
