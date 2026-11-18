@@ -12,7 +12,7 @@
     prefs: E.normalizePrefs({}),
     results: null,
     focusRegion: null,
-    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "" },
+    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", lgbtq: "", advisory: "" },
     saved: new Set(),
     includeAvoid: false, // show destinations under "avoid all travel" advisories in results
   };
@@ -777,10 +777,12 @@
           <label>Great for<select class="select" data-filter="interest"><option value="">Anything</option>${index.interests
             .map((i) => `<option value="${i.id}">${i.icon} ${esc(i.label)}</option>`)
             .join("")}</select></label>
-          <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
+          <label>Country type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option><option value="lgbtq">LGBTQ+ Welcoming</option><option value="safe">No Travel Advisory</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">Welcoming</option><option value="mixed">Mixed</option><option value="caution">Caution</option></select></label>
+          <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="yes">Yes</option><option value="no">No</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
@@ -792,6 +794,8 @@
       el.querySelector('[data-filter="interest"]').value = state.explore.interest;
       el.querySelector('[data-filter="cost"]').value = state.explore.cost;
       el.querySelector('[data-filter="only"]').value = state.explore.only;
+      el.querySelector('[data-filter="lgbtq"]').value = state.explore.lgbtq;
+      el.querySelector('[data-filter="advisory"]').value = state.explore.advisory;
     }
     $("#explore-results", el).innerHTML = exploreResultsHTML();
   }
@@ -808,6 +812,9 @@
         const countries = r.countries
           // Micronations are places, so that type keeps their host countries.
           .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind || (f.kind === "micronation" && c.cities.some((x) => x.micronation))))
+          .filter((c) => !f.lgbtq || (c.lgbtq && c.lgbtq.level === f.lgbtq))
+          // "Yes" lists destinations under a reconsider or do-not-travel advisory; "No" lists the rest.
+          .filter((c) => !f.advisory || (f.advisory === "yes") === !!c.advisory)
           .map((c) => {
             const countryHit =
               !q ||
@@ -823,8 +830,6 @@
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
               if (f.kind === "micronation" && !city.micronation) return false;
-              if (f.only === "lgbtq" && (!c.lgbtq || c.lgbtq.level !== "welcoming")) return false;
-              if (f.only === "safe" && c.advisory) return false;
               if (!q || countryHit) return true;
               return (
                 city.name.toLowerCase().includes(q) ||
@@ -1426,13 +1431,13 @@
       render();
     },
     "explore-goto": (el) => {
-      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "" };
+      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "", lgbtq: "", advisory: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
     "clear-filters": () => {
-      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "" };
+      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", lgbtq: "", advisory: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
     },
