@@ -443,6 +443,14 @@ test("misplaced coordinates are fixed and Tunis keeps its World Heritage tag", (
   near("th-kaeng-krachan", 12.8, 99.45);
   near("ma-tetouan", 35.57, -5.37);
   near("ro-frontiers-of-the-roman-empire-dacia", 47.18, 23.15);
+  // Border-side places sit in their own country, and labels match their coordinates.
+  near("us-manhattan-kansas", 39.18, -96.57);
+  near("pe-lake-titicaca-puno", -15.84, -70.02);
+  near("ar-san-ignacio-mini", -27.26, -55.53);
+  near("ls-sani-pass", -29.59, 29.27);
+  near("in-mountain-railways-of-india", 27.04, 88.27);
+  near("cn-ming-tombs", 40.26, 116.22);
+  assert.equal(index.cityById["au-australian-convict-sites"].area, "New South Wales");
   const tunis = index.cityById["tn-tunis-carthage"];
   assert.ok(tunis.isCapital && tunis.unesco.includes("Carthage"));
   assert.ok(index.cityById["tn-sidi-bou-said"].unesco);
