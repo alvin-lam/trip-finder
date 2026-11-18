@@ -395,3 +395,11 @@ test("US, Canada and Mexico parks reach their gateway places", () => {
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
   assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [44, 23, 25]);
 });
+
+test("Saint Pierre and Miquelon is a French territory near Canada", () => {
+  const pm = index.countryById.pm;
+  assert.equal(pm.kind, "territory");
+  assert.equal(pm.sovereignCountry, index.countryById.fr);
+  assert.equal(pm.of, "ca");
+  assert.deepEqual(pm.cities.filter((x) => x.isCapital).map((x) => x.name), ["Saint-Pierre"]);
+});

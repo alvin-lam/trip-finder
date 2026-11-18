@@ -919,7 +919,12 @@
     };
     for (const park of c.facts.parks) {
       if (c.id === "ca" && HIDDEN_CA_PARKS.test(park)) continue;
-      if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
+      if (!park.toLowerCase().includes(q)) continue;
+      const place = findPlace(park) || c.cities.find((x) => x.nationalParks.includes(park));
+      // A national park with no place in the app still answers a search for its name.
+      if (!place && /National Park/i.test(park)) {
+        if (ownName(park).includes(q)) out.push({ kind: "park", label: park, detail: "no place in the app links to it yet", place: null, untagged: true });
+      } else out.push({ kind: "park", label: park, place });
     }
     // A site already listed under parks and trails is not repeated.
     const seen = new Set(out.map((m) => m.label.toLowerCase()));
@@ -934,6 +939,9 @@
   const HIDDEN_CA_SITES = /^National (Park|Park Reserve|Historic Site)$/;
   const HIDDEN_CA_PARKS = /National (Park|Park Reserve|Historic Site)\b/;
   const UNTAGGED_PARK = /^National Park( Reserve| and Preserve)?$/;
+  // A park's own name without its designation, so "national park" alone does not list
+  // every unlinked park: "Big Bend National Park" -> "big bend".
+  const ownName = (name) => name.replace(/\b(Marine )?National Park\b( Reserve| and Preserve)?/i, "").trim().toLowerCase();
   function siteMatches(c, q) {
     const out = [];
     for (const site of c.sites) {
@@ -941,7 +949,7 @@
       const place = E.placeForSite(c, site);
       // A national park with no place in the app still answers a search for its name.
       if (!place && UNTAGGED_PARK.test(site.type)) {
-        if (byName) out.push({ kind: "site", system: site.system, label: site.name, detail: `${site.area} · no place in the app nearby`, place: null, untagged: true });
+        if (ownName(site.name).includes(q)) out.push({ kind: "site", system: site.system, label: site.name, detail: `${site.area} · no place in the app nearby`, place: null, untagged: true });
         continue;
       }
       if (c.id === "ca" && HIDDEN_CA_SITES.test(site.type)) continue;
