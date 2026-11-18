@@ -782,7 +782,7 @@
             .join("")}<option value="micronation">Micronations</option></select></label>
           <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
-          <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="yes">Yes</option><option value="no">No</option></select></label>
+          <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="no">✅ No Advisory</option><option value="reconsider">⚠️ Reconsider</option><option value="avoid">⛔️ Do Not Travel</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
@@ -813,8 +813,8 @@
           // Micronations are places, so that type keeps their host countries.
           .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind || (f.kind === "micronation" && c.cities.some((x) => x.micronation))))
           .filter((c) => !f.lgbtq || (c.lgbtq && c.lgbtq.level === f.lgbtq))
-          // "Yes" lists destinations under a reconsider or do-not-travel advisory; "No" lists the rest.
-          .filter((c) => !f.advisory || (f.advisory === "yes") === !!c.advisory)
+          // "no" lists destinations without an advisory; "reconsider" and "avoid" match its level.
+          .filter((c) => !f.advisory || (f.advisory === "no" ? !c.advisory : !!c.advisory && c.advisory.level === f.advisory))
           .map((c) => {
             const countryHit =
               !q ||
