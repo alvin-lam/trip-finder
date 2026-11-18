@@ -786,6 +786,7 @@
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
+          <div class="filters__clear"><button type="button" class="btn btn--ghost btn--sm" data-action="clear-filters" id="clear-filters">Clear filters</button></div>
         </div>
         <div id="explore-results"></div>`;
       el.querySelector('[data-filter="region"]').value = state.explore.region;
@@ -797,6 +798,9 @@
       el.querySelector('[data-filter="lgbtq"]').value = state.explore.lgbtq;
       el.querySelector('[data-filter="advisory"]').value = state.explore.advisory;
     }
+    // The button only does something when a filter differs from its default.
+    const f = state.explore;
+    $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.lgbtq || f.advisory);
     $("#explore-results", el).innerHTML = exploreResultsHTML();
   }
 
