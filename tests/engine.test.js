@@ -367,3 +367,11 @@ test("every place has a typical low below its high", () => {
   const kyoto = index.cityById["jp-kyoto"];
   assert.ok(E.lowFor(kyoto, 1) <= 3 && E.lowFor(kyoto, 8) >= 20, "Kyoto lows look plausible");
 });
+
+test("Hong Kong and Macau country parks count as national parks", () => {
+  const np = (id) => index.cityById[id].nationalParks;
+  assert.deepEqual(np("hk-sai-kung"), ["Sai Kung East Country Park", "Sai Kung West Country Park"]);
+  assert.deepEqual(np("hk-dragon-s-back"), ["Shek O Country Park"]);
+  assert.deepEqual(np("mo-hac-sa-beach"), ["Hac Sa Reservoir Country Park"]);
+  for (const id of Object.keys(data.NP_EXTRA)) assert.ok(index.cityById[id], `NP_EXTRA ${id} matches a place`);
+});

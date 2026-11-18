@@ -284,7 +284,7 @@
       for (const city of c.cities) {
         if (city.unesco && NP.test(city.unesco)) add(city, city.unesco);
         if (NP.test(city.name)) add(city, city.name);
-        if (extra[city.id]) add(city, extra[city.id]);
+        for (const name of [].concat(extra[city.id] || [])) add(city, name);
       }
       for (const park of (c.facts && c.facts.parks) || []) {
         if (!NP.test(park)) continue;

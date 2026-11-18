@@ -6834,8 +6834,16 @@
     "Wapusk National Park": ["Churchill"],
   };
 
-  // Places outside the US and Canada that are national parks under another name.
+  // Places outside the US and Canada that are national parks under another name. A place
+  // may list several parks. Hong Kong and Macau have no national parks; their country
+  // parks fill the same role, so they are listed here under their own names.
   const NP_EXTRA = {
+    "hk-sai-kung": ["Sai Kung East Country Park", "Sai Kung West Country Park"],
+    "hk-lantau-island": ["Lantau North Country Park", "Lantau South Country Park"],
+    "hk-dragon-s-back": "Shek O Country Park",
+    "hk-victoria-peak": "Pok Fu Lam Country Park",
+    "mo-taipa-coloane": "Seac Pai Van Country Park",
+    "mo-hac-sa-beach": "Hac Sa Reservoir Country Park",
     "cl-torres-del-paine": "Torres del Paine National Park",
     "nz-milford-sound": "Fiordland National Park",
     "ec-galapagos-islands": "Galápagos National Park",
