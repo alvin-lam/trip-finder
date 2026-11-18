@@ -265,8 +265,8 @@ test("all 41 Canadian census metropolitan areas are each linked to a place", () 
 
 test("national parks are labelled on the places that hold them", () => {
   const parks = (id) => index.cityById[id].nationalParks;
-  assert.deepEqual(parks("us-yellowstone"), ["Yellowstone National Park"]);
-  assert.deepEqual(parks("us-utah-national-parks").sort(), ["Arches National Park", "Bryce Canyon National Park", "Zion National Park"]);
+  assert.deepEqual(parks("us-yellowstone").sort(), ["Grand Teton National Park", "Yellowstone National Park"]);
+  assert.deepEqual(parks("us-utah-national-parks").sort(), ["Arches National Park", "Bryce Canyon National Park", "Canyonlands National Park", "Capitol Reef National Park", "Zion National Park"]);
   assert.ok(parks("ca-banff").includes("Banff National Park"));
   assert.ok(parks("us-fort-collins").includes("Rocky Mountain National Park"));
   assert.ok(parks("cl-torres-del-paine").length);
@@ -384,4 +384,14 @@ test("Taiwan, South Korea and Japan parks and scenic areas are tagged", () => {
   assert.deepEqual(np("jp-hakone"), ["Fuji-Hakone-Izu National Park"]);
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
   assert.deepEqual([tagged("tw"), tagged("kr"), tagged("jp")], [8, 6, 10]);
+});
+
+test("US, Canada and Mexico parks reach their gateway places", () => {
+  const np = (id) => index.cityById[id].nationalParks;
+  assert.ok(np("us-yellowstone").includes("Grand Teton National Park"));
+  assert.deepEqual(np("ca-windsor"), ["Point Pelee National Park"]);
+  assert.deepEqual(np("mx-tulum"), ["Tulum National Park"]);
+  assert.deepEqual(np("mx-sian-ka-an"), ["Sian Ka'an Biosphere Reserve"]);
+  const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
+  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [44, 23, 25]);
 });
