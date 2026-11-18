@@ -15,7 +15,7 @@
     prefs: E.normalizePrefs({}),
     results: null,
     focusRegion: null,
-    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", lgbtq: "", advisory: "" },
+    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", remote: "", lgbtq: "", advisory: "" },
     saved: new Set(),
     includeAvoid: false, // show destinations under "avoid all travel" advisories in results
   };
@@ -813,7 +813,8 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option>${Object.entries(REMOTE_LABELS).map(([k, [, label]]) => `<option value="remote-${k}">${label}</option>`).join("")}</select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>Population<select class="select" data-filter="remote"><option value="">Any</option>${Object.entries(REMOTE_LABELS).map(([k, [, label]]) => `<option value="${k}">${label}</option>`).join("")}</select></label>
           <label>UNESCO sites<select class="select" data-filter="unesco"><option value="">Any</option><option value="wh">World Heritage</option>${unescoOption("geopark", "Global Geoparks")}${unescoOption("biosphere", "Biosphere Reserves")}</select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
           <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="no">✅ No Advisory</option><option value="reconsider">⚠️ Reconsider</option><option value="avoid">⛔️ Do Not Travel</option></select></label>
@@ -830,6 +831,7 @@
       el.querySelector('[data-filter="cost"]').value = state.explore.cost;
       el.querySelector('[data-filter="only"]').value = state.explore.only;
       el.querySelector('[data-filter="unesco"]').value = state.explore.unesco;
+      el.querySelector('[data-filter="remote"]').value = state.explore.remote;
       el.querySelector('[data-filter="lgbtq"]').value = state.explore.lgbtq;
       el.querySelector('[data-filter="advisory"]').value = state.explore.advisory;
     }
@@ -841,7 +843,7 @@
     }
     // The button only does something when a filter differs from its default.
     const f = state.explore;
-    $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.unesco || f.lgbtq || f.advisory);
+    $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.unesco || f.remote || f.lgbtq || f.advisory);
     $("#explore-results", el).innerHTML = exploreResultsHTML();
     clampTerritories($("#explore-results", el));
   }
@@ -886,7 +888,7 @@
               if (f.unesco === "biosphere" && !city.biosphere) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
-              if (f.only.startsWith("remote-") && city.remote !== f.only.slice(7)) return false;
+              if (f.remote && city.remote !== f.remote) return false;
               if (f.kind === "micronation" && !city.micronation) return false;
               if (!q || countryHit) return true;
               return (
@@ -1596,13 +1598,13 @@
       render();
     },
     "explore-goto": (el) => {
-      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", lgbtq: "", advisory: "" };
+      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", remote: "", lgbtq: "", advisory: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
     "clear-filters": () => {
-      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", lgbtq: "", advisory: "" };
+      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", remote: "", lgbtq: "", advisory: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
     },
