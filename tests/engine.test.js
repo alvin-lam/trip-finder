@@ -330,8 +330,7 @@ test("Also in lists nearby places first", () => {
   for (let k = 1; k < near.length && near[k].km !== null; k++) assert.ok(near[k].km >= near[k - 1].km);
   assert.equal(E.fmtDistance(4), "4 km (2 mi)");
   const withLL = index.cities.filter((c) => c.ll).length;
-  // The coordinate lookup is still running; raise this once every place has them.
-  assert.ok(withLL / index.cities.length > 0.65, `${withLL} of ${index.cities.length} places have coordinates`);
+  assert.equal(withLL, index.cities.length, "every place has coordinates");
 });
 
 test("places in the grouped countries all have a subdivision", () => {
