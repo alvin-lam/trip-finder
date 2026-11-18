@@ -375,3 +375,13 @@ test("Hong Kong and Macau country parks count as national parks", () => {
   assert.deepEqual(np("mo-hac-sa-beach"), ["Hac Sa Reservoir Country Park"]);
   for (const id of Object.keys(data.NP_EXTRA)) assert.ok(index.cityById[id], `NP_EXTRA ${id} matches a place`);
 });
+
+test("Taiwan, South Korea and Japan parks and scenic areas are tagged", () => {
+  const np = (id) => index.cityById[id].nationalParks;
+  assert.deepEqual(np("tw-alishan"), ["Alishan National Scenic Area"]);
+  assert.ok(np("tw-hualien-taroko-gorge").includes("Taroko National Park"));
+  assert.deepEqual(np("kr-seoraksan"), ["Seoraksan National Park"]);
+  assert.deepEqual(np("jp-hakone"), ["Fuji-Hakone-Izu National Park"]);
+  const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
+  assert.deepEqual([tagged("tw"), tagged("kr"), tagged("jp")], [8, 6, 10]);
+});
