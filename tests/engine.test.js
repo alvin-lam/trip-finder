@@ -517,13 +517,17 @@ test("no two places share coordinates except a site and its host city", () => {
   assert.equal(index.cityById["gw-bijagos-islands"], undefined);
 });
 
-test("remote places are tagged uninhabited or expedition only", () => {
-  const p = (id) => index.cityById[id];
-  assert.ok(p("bv-bouvet-island").uninhabited && p("bv-bouvet-island").expedition);
-  assert.ok(p("is-surtsey").uninhabited && !p("is-surtsey").expedition);
-  assert.ok(!p("sh-tristan-da-cunha").uninhabited && p("sh-tristan-da-cunha").expedition);
-  assert.ok(!p("fr-paris").uninhabited && !p("fr-paris").expedition);
-  // Every place in a destination with no permanent population is tagged uninhabited.
-  for (const id of ["um", "cp", "bv", "hm", "tf", "gs", "io"]) assert.ok(index.countryById[id].cities.every((x) => x.uninhabited), id);
-  assert.throws(() => E.buildIndex({ ...data, UNINHABITED: ["zz-nowhere"] }), /matches no place/);
+test("places without residents are labelled by how visitors reach them", () => {
+  const r = (id) => index.cityById[id].remote;
+  assert.equal(r("is-surtsey"), "uninhabited");
+  assert.equal(r("um-wake-island"), "uninhabited");
+  assert.equal(r("ie-skellig-michael"), "no-residents");
+  assert.equal(r("bv-bouvet-island"), "expedition");
+  assert.equal(r("gs-grytviken"), "expedition");
+  // Inhabited places are not labelled, however remote.
+  assert.equal(r("sh-tristan-da-cunha"), null);
+  assert.equal(r("fr-paris"), null);
+  for (const id of ["um", "cp", "bv", "hm", "tf", "gs", "io"]) assert.ok(index.countryById[id].cities.every((x) => x.remote), id);
+  assert.throws(() => E.buildIndex({ ...data, REMOTE: { "zz-nowhere": "uninhabited" } }), /matches no place/);
+  assert.throws(() => E.buildIndex({ ...data, REMOTE: { "fr-paris": "closed" } }), /unknown kind/);
 });

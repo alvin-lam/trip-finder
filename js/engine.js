@@ -111,8 +111,7 @@
           ranges: null,
           micronation: null,
           geopark: null,
-          uninhabited: false,
-          expedition: false,
+          remote: null, // "uninhabited", "no-residents" or "expedition"
           biosphere: null,
           unesco: null,
           family: null,
@@ -191,12 +190,11 @@
       c.aliases = names;
     }
 
-    // Places with no permanent residents, and places reached only by expedition.
-    for (const [key, field] of [["UNINHABITED", "uninhabited"], ["EXPEDITION_ONLY", "expedition"]]) {
-      for (const id of data[key] || []) {
-        if (!cityById[id]) throw new Error(`${key} entry ${id} matches no place`);
-        cityById[id][field] = true;
-      }
+    // Places where nobody lives permanently, by how visitors can reach them.
+    for (const [id, kind] of Object.entries(data.REMOTE || {})) {
+      if (!cityById[id]) throw new Error(`REMOTE entry ${id} matches no place`);
+      if (!["uninhabited", "no-residents", "expedition"].includes(kind)) throw new Error(`REMOTE entry ${id} has unknown kind ${kind}`);
+      cityById[id].remote = kind;
     }
 
     // UNESCO Global Geoparks and Biosphere Reserves (empty until their data is added).
