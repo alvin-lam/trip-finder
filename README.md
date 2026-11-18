@@ -75,3 +75,9 @@ tests/            Node test suite for the engine
 To add a destination, append a city to a country's `cities` array in `js/data.js`. The comment at the top of that file explains the format. A place can also take a sixth element, `{ area, temps }`, giving its state or province and its own monthly highs. Capitals and parks live in the `FACTS` map. Typical lows come from the `RANGES` map, which holds each place's average daily temperature range by month from NASA POWER climate averages (MERRA-2 reanalysis). A low is that month's high minus the range. Microstates and territories also take `kind`, `status` (shown to visitors), an optional `of` (a related country id used for pairing and the "Nearby microstates" line) and an optional `maxDays`. Territories name their country in `sovereign`, and day-trip microstates name their base in `visitFrom`. Micronations are ordinary places listed in the `MICRONATIONS` map. To label a place as UNESCO World Heritage, add its id and site name to the `UNESCO` map in the same file; the app refuses to load if an id does not match a place.
 
 Temperatures, costs and seasons are rough planning guides, not authoritative travel advice.
+
+## Roadmap
+
+Planned work that is not in the app yet.
+
+- **UNESCO Global Geoparks.** Add the 241 UNESCO Global Geoparks (51 countries, as of April 2026) as their own GEOPARK tag. The tag stays separate from UNESCO World Heritage because geoparks are a UNESCO programme rather than a treaty listing. Hong Kong's Sai Kung would be one example. The work would add a `GEOPARKS` map in `js/data.js`, a pill and details line in the app, a "Geoparks" option in Show only, and search support. Until then, a geopark may appear only as text in a country's parks and trails facts, as Hong Kong's does.
