@@ -282,7 +282,7 @@ test("national parks are labelled on the places that hold them", () => {
 test("Puerto Rico places are grouped by informal region", () => {
   const pr = index.countryById.pr.cities;
   assert.ok(pr.every((c) => c.area));
-  assert.equal(new Set(pr.map((c) => c.area)).size, 6);
+  assert.equal(new Set(pr.map((c) => c.area)).size, 7);
   assert.equal(index.cityById["pr-culebra"].area, "Vieques & Culebra");
 });
 
