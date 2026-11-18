@@ -12,7 +12,7 @@
     prefs: E.normalizePrefs({}),
     results: null,
     focusRegion: null,
-    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", lgbtq: "", advisory: "" },
+    explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", lgbtq: "", advisory: "" },
     saved: new Set(),
     includeAvoid: false, // show destinations under "avoid all travel" advisories in results
   };
@@ -50,6 +50,12 @@
   function unescoTag(city) {
     if (!city.unesco) return "";
     return `<span class="unesco" title="UNESCO World Heritage: ${esc(city.unesco)}" aria-label="World Heritage Site">WORLD HERITAGE</span>`;
+  }
+
+  // A UNESCO sites option, disabled as "coming soon" until its data exists.
+  function unescoOption(field, label) {
+    const ready = index.cities.some((x) => x[field]);
+    return `<option value="${field}"${ready ? "" : " disabled"}>${label}${ready ? "" : " (coming soon)"}</option>`;
   }
 
   // UNESCO Global Geopark and Biosphere Reserve labels (shown once their data exists).
@@ -792,7 +798,8 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">World Heritage Sites</option>${index.cities.some((x) => x.geopark) ? `<option value="geopark">Global Geoparks</option>` : ""}${index.cities.some((x) => x.biosphere) ? `<option value="biosphere">Biosphere Reserves</option>` : ""}<option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>UNESCO sites<select class="select" data-filter="unesco"><option value="">Any</option><option value="wh">World Heritage</option>${unescoOption("geopark", "Global Geoparks")}${unescoOption("biosphere", "Biosphere Reserves")}</select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
           <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="no">✅ No Advisory</option><option value="reconsider">⚠️ Reconsider</option><option value="avoid">⛔️ Do Not Travel</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
@@ -807,12 +814,13 @@
       el.querySelector('[data-filter="interest"]').value = state.explore.interest;
       el.querySelector('[data-filter="cost"]').value = state.explore.cost;
       el.querySelector('[data-filter="only"]').value = state.explore.only;
+      el.querySelector('[data-filter="unesco"]').value = state.explore.unesco;
       el.querySelector('[data-filter="lgbtq"]').value = state.explore.lgbtq;
       el.querySelector('[data-filter="advisory"]').value = state.explore.advisory;
     }
     // The button only does something when a filter differs from its default.
     const f = state.explore;
-    $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.lgbtq || f.advisory);
+    $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.unesco || f.lgbtq || f.advisory);
     $("#explore-results", el).innerHTML = exploreResultsHTML();
   }
 
@@ -838,13 +846,13 @@
               r.name.toLowerCase().includes(q) ||
               c.blurb.toLowerCase().includes(q) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
-            const matches = q && f.only !== "unesco" ? factMatches(c, q) : [];
+            const matches = q && f.unesco !== "wh" ? factMatches(c, q) : [];
             const cities = c.cities.concat(c.linked).filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
-              if (f.only === "unesco" && !city.unesco) return false;
-              if (f.only === "geopark" && !city.geopark) return false;
-              if (f.only === "biosphere" && !city.biosphere) return false;
+              if (f.unesco === "wh" && !city.unesco) return false;
+              if (f.unesco === "geopark" && !city.geopark) return false;
+              if (f.unesco === "biosphere" && !city.biosphere) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
               if (f.kind === "micronation" && !city.micronation) return false;
@@ -1456,13 +1464,13 @@
       render();
     },
     "explore-goto": (el) => {
-      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "", lgbtq: "", advisory: "" };
+      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", lgbtq: "", advisory: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
     "clear-filters": () => {
-      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", lgbtq: "", advisory: "" };
+      state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", lgbtq: "", advisory: "" };
       $("#view-explore").innerHTML = "";
       renderExplore();
     },
