@@ -267,6 +267,12 @@ details.more summary::before { content: "▸ "; }
 .unesco-line .ptag { margin: 0 4px 0 0; }
 .relations { margin: 10px 0 0; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 .relations .linkish { font-size: inherit; }
+.terr-item:not(:last-of-type)::after { content: ", "; }
+.terr-item[hidden] { display: none; }
+.terr-more { margin-left: 6px; font-size: inherit; }
+.places-toggle { margin-top: 12px; width: 100%; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+.places-toggle:hover { background: var(--surface); }
+.places-toggle[aria-expanded="true"] { margin-bottom: 4px; }
 details.more[open] summary::before { content: "▾ "; }
 details.more > *:not(summary) { margin-top: 10px; }
 

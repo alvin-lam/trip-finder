@@ -7,6 +7,7 @@
   // ---------- State ----------
   const state = {
     view: "plan",
+    exploreOpen: new Set(), // Explore cards whose places are expanded
     stage: "intro", // intro | wizard | results
     step: 0,
     prefs: E.normalizePrefs({}),
@@ -822,6 +823,7 @@
     const f = state.explore;
     $("#clear-filters", el).disabled = !(f.q || f.region || f.month || f.interest || f.cost !== 5 || f.kind || f.only || f.unesco || f.lgbtq || f.advisory);
     $("#explore-results", el).innerHTML = exploreResultsHTML();
+    clampTerritories($("#explore-results", el));
   }
 
   function exploreResultsHTML() {
@@ -1047,16 +1049,54 @@
     const link = (o) => `<button class="linkish" data-action="explore-goto" data-name="${esc(o.name)}">${o.flag} ${esc(o.name)}</button>`;
     const lines = [];
     if (c.sovereignCountry) lines.push(`Part of ${link(c.sovereignCountry)}`);
-    if (c.territories.length) lines.push(`Overseas territories: ${c.territories.map(link).join(", ")}`);
+    if (c.territories.length)
+      lines.push(`Overseas territories: <span class="terr-list">${c.territories.map((t) => `<span class="terr-item">${link(t)}</span>`).join("")}</span>`);
     if (c.visitFrom) lines.push(`Best visited as a day trip from ${esc(c.visitFrom)}`);
     if (c.nearbyMicrostates.length) lines.push(`Nearby microstates: ${c.nearbyMicrostates.map(link).join(", ")}`);
-    return lines.length ? `<p class="relations">${lines.join("<br />")}</p>` : "";
+    return lines.length ? `<div class="relations">${lines.map((l) => `<div>${l}</div>`).join("")}</div>` : "";
+  }
+
+  // Explore shows each country card with its places collapsed behind this toggle.
+  function placesToggle(c, n, open) {
+    return `<button class="places-toggle" data-action="toggle-places" data-id="${c.id}" aria-expanded="${open}">${placesLabel(n, open)}</button>`;
+  }
+  const placesLabel = (n, open) => `${open ? "Hide" : "Show"} ${n} ${n === 1 ? "place" : "places"} <span aria-hidden="true">${open ? "▴" : "▾"}</span>`;
+
+  // Overseas territory lists show two lines, then reveal 5 more per click.
+  const TERR_STEP = 5;
+  function clampTerritories(root) {
+    for (const list of root.querySelectorAll(".terr-list")) {
+      const items = [...list.querySelectorAll(".terr-item")];
+      if (items.length < 2) continue;
+      // Rows are the distinct top edges of the label line and each item.
+      const rowOf = (el) => Math.round(el.getBoundingClientRect().top);
+      // Item and button edges can differ by a few pixels on the same row.
+      const rows = [];
+      for (const top of items.map(rowOf)) if (!rows.some((y) => Math.abs(y - top) < 8)) rows.push(top);
+      if (rows.length <= 2) continue;
+      const limit = rows[1] + 8;
+      for (const el of items) if (rowOf(el) > limit) el.hidden = true;
+      list.insertAdjacentHTML("beforeend", `<button class="linkish terr-more" data-action="terr-more"></button>`);
+      const btn = list.lastElementChild;
+      btn.textContent = terrMoreLabel(list);
+      // Hide one more item at a time until the button also fits on the second row.
+      let visible = items.filter((x) => !x.hidden);
+      while (visible.length > 1 && rowOf(btn) > limit) {
+        visible.pop().hidden = true;
+        btn.textContent = terrMoreLabel(list);
+        visible = items.filter((x) => !x.hidden);
+      }
+    }
+  }
+  function terrMoreLabel(list) {
+    const left = list.querySelectorAll(".terr-item[hidden]").length;
+    return `Show ${Math.min(TERR_STEP, left)} more`;
   }
 
   // Countries with more than this many places in the results are grouped by their
   // states, provinces, cantons, departments or prefectures.
   const GROUP_OVER = 5;
-  function exploreCountryCard(c, cities, matches = []) {
+  function exploreCountryCard(c, cities, matches = [], collapsible = true) {
     const byArea = cities.length > GROUP_OVER && cities.some((x) => x.area && x.country === c);
     const SHARED = "Shared with other countries";
     const groupOf = (x) => (x.country === c ? x.area || "Other places" : SHARED);
@@ -1068,6 +1108,7 @@
       const w = (g) => (g === SHARED ? 2 : g === "Other places" ? 1 : 0);
       return w(a) - w(b) || rank(a) - rank(b) || a.localeCompare(b);
     };
+    const open = !collapsible || state.exploreOpen.has(c.id);
     let list;
     if (byArea) {
       const groups = new Map();
@@ -1090,7 +1131,7 @@
       list = `<ul class="city-list">${cities.map((x) => exploreRow(x, c, true)).join("")}</ul>`;
     }
     return `
-      <article class="card${byArea ? " card--wide" : ""}">
+      <article class="card${byArea && open ? " card--wide" : ""}" data-country="${c.id}"${byArea ? " data-wide" : ""}>
         <div class="card__head">
           <span class="card__flag" aria-hidden="true">${c.flag}</span>
           <div class="card__title"><h3>${esc(c.name)}</h3><div class="card__meta">${kindTag(c)}${c.kind === "territory" || c.kind === "micronation" ? `${esc(c.status)} · ` : ""}Best: ${esc(E.formatMonths(c.best))}</div></div>
@@ -1102,7 +1143,7 @@
         ${relationsLine(c)}
         ${matchBlock(matches)}
         ${keyFacts(c)}
-        ${cities.length ? list : ""}
+        ${cities.length ? (collapsible ? `${placesToggle(c, cities.length, open)}<div class="places"${open ? "" : " hidden"}>${list}</div>` : list) : ""}
       </article>`;
   }
 
@@ -1173,7 +1214,7 @@
       }
       ${
         countries.length
-          ? `<div class="section"><h3>Saved countries</h3><div class="cards">${countries.map((c) => exploreCountryCard(c, c.cities)).join("")}</div></div>`
+          ? `<div class="section"><h3>Saved countries</h3><div class="cards">${countries.map((c) => exploreCountryCard(c, c.cities, [], false)).join("")}</div></div>`
           : ""
       }`;
   }
@@ -1363,6 +1404,23 @@
 
   const ACTIONS = {
     // Reveal five more nearby places at a time; past twenty, reveal the rest at once.
+    "toggle-places": (el) => {
+      const card = el.closest(".card");
+      const id = el.dataset.id;
+      const open = !state.exploreOpen.has(id);
+      if (open) state.exploreOpen.add(id);
+      else state.exploreOpen.delete(id);
+      card.querySelector(":scope > .places").hidden = !open;
+      if (card.hasAttribute("data-wide")) card.classList.toggle("card--wide", open);
+      el.setAttribute("aria-expanded", open);
+      el.innerHTML = placesLabel(Number(el.textContent.match(/\d+/)[0]), open);
+    },
+    "terr-more": (el) => {
+      const list = el.closest(".terr-list");
+      [...list.querySelectorAll(".terr-item[hidden]")].slice(0, TERR_STEP).forEach((x) => (x.hidden = false));
+      if (list.querySelector(".terr-item[hidden]")) el.textContent = terrMoreLabel(list);
+      else el.remove();
+    },
     "also-more": (el) => {
       const box = el.closest(".also-in");
       const hidden = [...box.querySelectorAll(".chips .chip[hidden]")];
