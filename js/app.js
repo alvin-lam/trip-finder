@@ -838,7 +838,7 @@
               );
             });
             // A "National", "UNESCO" or trail match stays only when it opens a place listed in these results.
-            const kept = matches.filter((m) => !LINK_ONLY.test(`${m.label} ${m.detail || ""} ${m.system || ""}`) || (m.place && cities.includes(m.place)));
+            const kept = matches.filter((m) => m.untagged || !LINK_ONLY.test(`${m.label} ${m.detail || ""} ${m.system || ""}`) || (m.place && cities.includes(m.place)));
             return { c, cities, matches: kept };
           })
           .filter((x) => x.cities.length || x.matches.length);
@@ -933,13 +933,20 @@
   // the data (they still label places with NATIONAL PARK) but are not search results.
   const HIDDEN_CA_SITES = /^National (Park|Park Reserve|Historic Site)$/;
   const HIDDEN_CA_PARKS = /National (Park|Park Reserve|Historic Site)\b/;
+  const UNTAGGED_PARK = /^National Park( Reserve| and Preserve)?$/;
   function siteMatches(c, q) {
     const out = [];
     for (const site of c.sites) {
-      if (c.id === "ca" && HIDDEN_CA_SITES.test(site.type)) continue;
       const byName = site.name.toLowerCase().includes(q);
+      const place = E.placeForSite(c, site);
+      // A national park with no place in the app still answers a search for its name.
+      if (!place && UNTAGGED_PARK.test(site.type)) {
+        if (byName) out.push({ kind: "site", system: site.system, label: site.name, detail: `${site.area} · no place in the app nearby`, place: null, untagged: true });
+        continue;
+      }
+      if (c.id === "ca" && HIDDEN_CA_SITES.test(site.type)) continue;
       const byKind = q.length >= 4 && `${site.type} ${site.system}`.toLowerCase().includes(q);
-      if (byName || byKind) out.push({ kind: "site", system: site.system, label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place: E.placeForSite(c, site) });
+      if (byName || byKind) out.push({ kind: "site", system: site.system, label: site.name, detail: site.name.includes(site.type) ? site.area : `${site.type} · ${site.area}`, place });
     }
     return out;
   }
