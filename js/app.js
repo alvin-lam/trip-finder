@@ -1417,6 +1417,10 @@
 
   const ACTIONS = {
     // Reveal five more nearby places at a time; past twenty, reveal the rest at once.
+    "to-top": () => {
+      const still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: still ? "auto" : "smooth" });
+    },
     "toggle-places": (el) => {
       const card = el.closest(".card");
       const id = el.dataset.id;
@@ -1618,4 +1622,14 @@
   load();
   readHash();
   setView(state.view);
+
+  // Back-to-top button, shown once the page has scrolled past about one screen.
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `<button class="to-top" type="button" data-action="to-top" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`
+  );
+  const toTop = $(".to-top");
+  const showToTop = () => toTop.classList.toggle("is-on", window.scrollY > Math.max(400, window.innerHeight * 0.8));
+  window.addEventListener("scroll", showToTop, { passive: true });
+  showToTop();
 })();
