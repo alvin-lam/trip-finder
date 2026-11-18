@@ -122,7 +122,7 @@
     us: "all 50 states and D.C., covering all 387 metro areas",
     ca: "all 10 provinces and 3 territories, covering all 41 census metropolitan areas",
     mx: "all 32 states, covering all 74 metropolitan areas",
-    pr: "all 6 informal regions, covering all 6 metro areas",
+    pr: "all 7 informal regions, covering all 6 metro areas",
     gb: "England, Scotland, Wales and Northern Ireland",
   };
   // Countries whose subdivisions have an official order, used instead of A to Z.
