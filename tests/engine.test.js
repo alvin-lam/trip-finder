@@ -333,7 +333,7 @@ test("Also in lists nearby places first", () => {
 });
 
 test("places in the grouped countries all have a subdivision", () => {
-  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br", "ru", "ir", "tr", "au", "gr", "pl", "pt", "se", "ar", "pe", "be", "cz", "id", "ma", "et", "dk", "bg", "vn", "ph", "lk", "ke", "co", "at", "fi", "nz", "mn", "pa", "tz", "sk", "ua", "ge", "uz", "tj", "kh", "lb", "sa", "om", "mg", "ec", "ae", "jm", "pf", "bo", "il", "pk", "cr", "cl", "hr", "eg", "kz", "no", "ro", "cu", "hu", "jo", "tn", "my"]) {
+  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br", "ru", "ir", "tr", "au", "gr", "pl", "pt", "se", "ar", "pe", "be", "cz", "id", "ma", "et", "dk", "bg", "vn", "ph", "lk", "ke", "co", "at", "fi", "nz", "mn", "pa", "tz", "sk", "ua", "ge", "uz", "tj", "kh", "lb", "sa", "om", "mg", "ec", "ae", "jm", "pf", "bo", "il", "pk", "cr", "cl", "hr", "eg", "kz", "no", "ro", "cu", "hu", "jo", "tn", "my", "af", "ag", "al", "am", "aw", "az", "ba", "bb", "bd", "bh", "bm", "bn", "bq", "bs", "bt", "by", "bz", "cw", "cy", "dm", "do", "ee", "fk", "fo", "gd", "gf", "gg", "gl", "gp", "gt", "gy", "hn", "ht", "ie", "im", "iq", "je", "kg", "kn", "kp", "kw", "ky", "la", "lc", "lt", "lv", "md", "me", "mk", "mm", "mq", "ms", "mv", "ni", "np", "ps", "py", "qa", "rs", "si", "sj", "sr", "sv", "sy", "tc", "tl", "tm", "tt", "uy", "vc", "ve", "vg", "vi", "xb", "xk", "ye"]) {
     const c = index.countryById[id];
     assert.ok(c.areaTerm, `${c.name} has a term`);
     assert.ok(c.cities.every((x) => x.area), `${c.name} places all have a subdivision`);
