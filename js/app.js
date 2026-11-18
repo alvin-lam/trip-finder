@@ -108,9 +108,9 @@
     ca: "all 10 provinces and 3 territories, covering all 41 census metropolitan areas",
     mx: "all 32 states, covering all 74 metropolitan areas",
     pr: "all 6 informal regions, covering all 6 metro areas",
-    gb: "England, Scotland, Wales, Northern Ireland and the Overseas Territories",
+    gb: "England, Scotland, Wales and Northern Ireland",
   };
-  const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories", mx: "states", pr: "regions", gb: "countries and territories" };
+  const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories", mx: "states", pr: "regions", gb: "countries" };
   const METRO_SCOPE = {
     us: (r) => `Metro area #${r} of 387 in the US`,
     pr: (r) => `Metro area #${r} of 6 in Puerto Rico`,

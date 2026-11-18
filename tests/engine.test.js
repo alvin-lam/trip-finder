@@ -419,3 +419,15 @@ test("overseas territories and crown dependencies are complete", () => {
   assert.equal(index.cityById["gb-henderson-island"], undefined);
   assert.deepEqual(index.cityById["vi-st-john"].nationalParks, ["Virgin Islands National Park"]);
 });
+
+test("Russia groups by region, and Crimea stays with Ukraine", () => {
+  const area = (id) => index.cityById[id].area;
+  assert.equal(area("ru-saint-petersburg"), "Saint Petersburg & the Northwest");
+  assert.equal(area("ru-kizhi"), "Russian North");
+  assert.equal(area("ru-moscow"), "Central");
+  assert.ok(!index.countryById.ru.cities.some((x) => x.area === "Northwestern"));
+  // Occupied Ukrainian territory is listed under Ukraine, never Russia.
+  assert.ok(index.countryById.ua.cities.some((x) => x.id === "ua-chersonesus"));
+  const occupied = /crimea|sevastopol|chersones|yalta|bakhchys|simferopol|donetsk|luhansk|zaporizh|kherson|mariupol/i;
+  assert.ok(!index.countryById.ru.cities.some((x) => occupied.test(`${x.name} ${x.blurb} ${x.area || ""}`)));
+});
