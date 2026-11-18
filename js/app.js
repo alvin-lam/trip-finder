@@ -1247,7 +1247,15 @@
     const others = E.nearestPlaces(city, city.country.cities.concat(city.country.linked));
     const alsoChip = ({ city: o, km }, i) =>
       `<button class="chip" data-action="open-city" data-id="${o.id}"${i >= ALSO_STEP ? " hidden" : ""}>${esc(o.name)}${km !== null ? ` <span class="chip__dist">${E.fmtDistance(km)}</span>` : ""}</button>`;
-    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${city.name}, ${city.country.name}`)}`;
+    // "View on map" offers Apple Maps, Google Maps and OpenStreetMap. Apple Maps and
+    // OpenStreetMap pin the place's coordinates; Google Maps searches its name.
+    const label = `${city.name}, ${city.country.name}`;
+    const [lat, lon] = city.ll || [city.country.lat, city.country.lon];
+    const maps = [
+      ["Apple Maps", `https://maps.apple.com/?q=${encodeURIComponent(label)}&ll=${lat},${lon}`],
+      ["Google Maps", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(label)}`],
+      ["OpenStreetMap", `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=11/${lat}/${lon}`],
+    ];
     $("#detail-body").innerHTML = `
       <button class="icon-btn detail__close" data-action="close-detail" aria-label="Close">✕</button>
       <div class="detail__hero">
@@ -1345,7 +1353,12 @@
       }
       <div class="row">
         <button class="btn btn--primary" data-action="save" data-kind="city" data-id="${city.id}">${state.saved.has(`city:${city.id}`) ? "♥ Saved" : "♡ Save to shortlist"}</button>
-        <a class="btn btn--ghost" href="${mapUrl}" target="_blank" rel="noopener">View on map ↗</a>
+        <details class="map-menu">
+          <summary class="btn btn--ghost">View on map <span aria-hidden="true">▾</span></summary>
+          <div class="map-menu__list" role="list">${maps
+            .map(([name, url]) => `<a role="listitem" href="${url}" target="_blank" rel="noopener">${name} <span aria-hidden="true">↗</span></a>`)
+            .join("")}</div>
+        </details>
       </div>`;
     const dlg = $("#detail");
     if (!dlg.open) {
