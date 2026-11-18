@@ -990,16 +990,18 @@
       ${
         sortedCities.length
           ? `<div class="compare-wrap"><table class="compare">
-        <thead><tr><th>Place</th>${state.results ? "<th>Match</th>" : ""}<th>Best time</th><th>${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}</th><th>Daily cost (USD)</th><th>Great for</th><th><span class="sr-only">Remove</span></th></tr></thead>
+        <thead><tr><th>Place</th>${state.results ? "<th>Match</th>" : ""}<th>Best time</th><th>${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}</th><th>${month ? `${E.MONTHS[month - 1]} low` : "Typical low"}</th><th>Daily cost (USD)</th><th>Great for</th><th><span class="sr-only">Remove</span></th></tr></thead>
         <tbody>${sortedCities
           .map((city) => {
             const t = E.tempFor(city, month);
+            const lo = E.lowFor(city, month);
             const s = scoreOf(city);
             return `<tr>
               <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)} ${placeTags(city)}</span><span class="city-row__blurb">${city.country.flag} ${placeWhere(city)}</span></button></td>
               ${state.results ? `<td data-label="Match">${s === null ? "–" : `${s}%`}</td>` : ""}
               <td data-label="Best time">${esc(E.formatMonths(city.best))}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
               <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}">${E.fmtTemp(t)}</td>
+              <td data-label="${month ? `${E.MONTHS[month - 1]} low` : "Typical low"}">${lo === null ? "–" : E.fmtTemp(lo)}</td>
               <td data-label="Daily cost (USD)">${E.COST_DAILY[city.country.cost]}</td>
               <td data-label="Great for">${esc(topStrengths(city).join(", ") || "All-rounder")}</td>
               <td>${heart("city", city.id, city.name)}</td>

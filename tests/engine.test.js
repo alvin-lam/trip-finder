@@ -357,3 +357,13 @@ test("territories, microstates and micronations link to their countries", () => 
   assert.deepEqual(micro, ["dk-freetown-christiania", "it-seborga", "lt-uzupis", "se-ladonia-nimis-arx"]);
   assert.equal(index.cityById["mt-al-saflieni-hypogeum"].area, "Malta");
 });
+
+test("every place has a typical low below its high", () => {
+  for (const c of index.countries)
+    for (const x of c.cities) {
+      assert.ok(x.ranges && x.ranges.length === 12, `${x.id} ranges`);
+      for (let m = 1; m <= 12; m++) assert.ok(E.lowFor(x, m) < E.tempFor(x, m), `${x.id} month ${m}`);
+    }
+  const kyoto = index.cityById["jp-kyoto"];
+  assert.ok(E.lowFor(kyoto, 1) <= 3 && E.lowFor(kyoto, 8) >= 20, "Kyoto lows look plausible");
+});

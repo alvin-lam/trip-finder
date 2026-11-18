@@ -108,6 +108,7 @@
           nationalParks: [],
           alsoIn: [],
           ll: null,
+          ranges: null,
           micronation: null,
           unesco: null,
           family: null,
@@ -199,6 +200,12 @@
     for (const [id, ll] of Object.entries(data.COORDS || {})) {
       if (!cityById[id]) throw new Error(`COORDS entry ${id} matches no place`);
       cityById[id].ll = ll;
+    }
+
+    // Average daily temperature range (high minus low) for each month, used for typical lows.
+    for (const [id, r] of Object.entries(data.RANGES || {})) {
+      if (!cityById[id]) throw new Error(`RANGES entry ${id} matches no place`);
+      cityById[id].ranges = r;
     }
 
     // A site shared by several countries keeps one place, which is also listed under
@@ -343,6 +350,16 @@
     if (month) return temps[month - 1];
     const vals = city.best.map((m) => temps[m - 1]);
     return Math.round(vals.reduce((a, b) => a + b, 0) / vals.length);
+  }
+
+  // Typical low: the month's high minus the average daily range there. With no month,
+  // it averages the best months, like tempFor. Null when the range is unknown.
+  function lowFor(city, month) {
+    if (!city.ranges) return null;
+    const temps = city.temps || city.country.temps;
+    const low = (m) => temps[m - 1] - city.ranges[m - 1];
+    if (month) return Math.round(low(month));
+    return Math.round(city.best.reduce((a, m) => a + low(m), 0) / city.best.length);
   }
 
   function climateScore(temp, climate) {
@@ -708,6 +725,7 @@
     climateScore,
     budgetScore,
     tempFor,
+    lowFor,
     encodePrefs,
     decodePrefs,
     normalizePrefs,
