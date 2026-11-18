@@ -23,7 +23,7 @@
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const SEG_COLORS = ["#d9572b", "#1f7a74", "#7a5ab8", "#b8862b"];
   const KIND_LABELS = { country: "Country", microstate: "Microstate", territory: "Territory", micronation: "Micronation" };
-  const KIND_PLURAL = { country: "countries", microstate: "microstates", territory: "territories", micronation: "micronations" };
+  const KIND_PLURAL = { country: "countries", microstate: "microstates", territory: "territories" };
 
   // Small pill naming the kind of place, with the full political status as a tooltip.
   function kindTag(c) {
@@ -83,8 +83,13 @@
     return out;
   }
 
+  function micronationTag(city) {
+    if (!city.micronation) return "";
+    return `<span class="ptag ptag--micronation" title="Micronation: ${esc(city.micronation)}">MICRONATION</span>`;
+  }
+
   function placeTags(city) {
-    return capitalTags(city) + unescoTag(city) + parkTag(city) + familyTag(city);
+    return capitalTags(city) + micronationTag(city) + unescoTag(city) + parkTag(city) + familyTag(city);
   }
 
   // Capital and famous parks and trails for a destination.
@@ -675,7 +680,7 @@
           <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}</select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO sites</option><option value="np">National parks</option><option value="family">Family friendly</option><option value="lgbtq">LGBTQ+ welcoming</option><option value="safe">No travel advisory</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option><option value="lgbtq">LGBTQ+ Welcoming</option><option value="safe">No Travel Advisory</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
@@ -725,6 +730,7 @@
                 (city.area && city.area.toLowerCase().includes(q)) ||
                 city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
                 matches.some((m) => m.place === city) ||
+                (city.micronation && (q.includes("micronation") || city.micronation.toLowerCase().includes(q))) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
@@ -743,8 +749,32 @@
     if (!blocks.length)
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
+    const head = `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>`;
+    if (f.kind === "territory") {
+      // Territories are listed under the country they belong to.
+      const bySov = new Map();
+      for (const b of blocks) for (const x of b.countries) {
+        const sov = x.c.sovereignCountry;
+        if (!bySov.has(sov)) bySov.set(sov, []);
+        bySov.get(sov).push(x);
+      }
+      return (
+        head +
+        [...bySov]
+          .sort((a, b) => b[1].length - a[1].length || a[0].name.localeCompare(b[0].name))
+          .map(
+            ([sov, list]) => `
+        <section class="region-block">
+          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${sov.flag}</span><h3 style="margin:0">${esc(sov.name)}</h3></div>
+          <p class="muted">${list.length} ${list.length === 1 ? "territory" : "territories"}</p>
+          <div class="cards">${list.map(({ c, cities, matches }) => exploreCountryCard(c, cities, matches)).join("")}</div>
+        </section>`
+          )
+          .join("")
+      );
+    }
     return (
-      `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>` +
+      head +
       blocks
         .map(
           ({ r, countries }) => `
@@ -860,6 +890,18 @@
     return shown >= ALSO_CAP ? `Show all (${left} more)` : `Show ${Math.min(ALSO_STEP, left)} more`;
   }
 
+  // Links between destinations: a territory's sovereign country, a country's overseas
+  // territories, where to visit a day-trip microstate from, and nearby microstates.
+  function relationsLine(c) {
+    const link = (o) => `<button class="linkish" data-action="explore-goto" data-name="${esc(o.name)}">${o.flag} ${esc(o.name)}</button>`;
+    const lines = [];
+    if (c.sovereignCountry) lines.push(`Part of ${link(c.sovereignCountry)}`);
+    if (c.territories.length) lines.push(`Overseas territories: ${c.territories.map(link).join(", ")}`);
+    if (c.visitFrom) lines.push(`Best visited as a day trip from ${esc(c.visitFrom)}`);
+    if (c.nearbyMicrostates.length) lines.push(`Nearby microstates: ${c.nearbyMicrostates.map(link).join(", ")}`);
+    return lines.length ? `<p class="relations">${lines.join("<br />")}</p>` : "";
+  }
+
   // Countries with more than this many places in the results are grouped by their
   // states, provinces, cantons, departments or prefectures.
   const GROUP_OVER = 5;
@@ -903,6 +945,7 @@
         <p class="card__blurb">${esc(c.blurb)}</p>
         ${monthStrip(c.best, state.explore.month)}
         <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span>${lgbtqFact(c)}${advisoryFact(c)}</div>
+        ${relationsLine(c)}
         ${matchBlock(matches)}
         ${keyFacts(c)}
         ${cities.length ? list : ""}
@@ -1008,6 +1051,7 @@
           ? `<p class="unesco-line"><span class="unesco">UNESCO</span> World Heritage Site: <b>${esc(city.unesco)}</b></p>`
           : ""
       }
+      ${city.micronation ? `<p class="unesco-line"><span class="ptag ptag--micronation">MICRONATION</span> ${esc(city.micronation)}</p>` : ""}
       ${city.alsoIn.length ? `<p class="unesco-line">🌍 Shared site, also listed under ${city.alsoIn.map((o) => `${o.flag} ${esc(o.name)}`).join(", ")}</p>` : ""}
       ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
@@ -1251,6 +1295,12 @@
       state.saved.clear();
       persist();
       render();
+    },
+    "explore-goto": (el) => {
+      state.explore = { q: el.dataset.name, region: "", month: 0, interest: "", cost: 5, kind: "", only: "" };
+      $("#view-explore").innerHTML = "";
+      renderExplore();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     },
     "clear-filters": () => {
       state.explore = { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "" };

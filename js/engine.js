@@ -108,6 +108,7 @@
           nationalParks: [],
           alsoIn: [],
           ll: null,
+          micronation: null,
           unesco: null,
           family: null,
           country,
@@ -172,6 +173,27 @@
       if (!cityById[id].area) cityById[id].area = area;
     }
     for (const c of countries) c.areaTerm = (data.AREA_TERMS || {})[c.id] || null;
+
+    // Self-declared micronations inside their host countries.
+    for (const [id, status] of Object.entries(data.MICRONATIONS || {})) {
+      if (!cityById[id]) throw new Error(`MICRONATIONS entry ${id} matches no place`);
+      cityById[id].micronation = status;
+    }
+
+    // Territories point at their sovereign country, which lists them back; microstates
+    // that are usually a day trip name where to visit from.
+    const countryIndex = Object.fromEntries(countries.map((c) => [c.id, c]));
+    for (const c of countries) c.territories = [];
+    for (const c of countries) {
+      c.sovereignCountry = null;
+      if (c.sovereign) {
+        const sov = countryIndex[c.sovereign];
+        if (!sov) throw new Error(`${c.name} names unknown sovereign ${c.sovereign}`);
+        c.sovereignCountry = sov;
+        sov.territories.push(c);
+      }
+    }
+    for (const c of countries) c.nearbyMicrostates = countries.filter((m) => m.kind === "microstate" && m.of === c.id);
 
     // Coordinates of each place, [lat, lon], used to list nearby places first.
     for (const [id, ll] of Object.entries(data.COORDS || {})) {

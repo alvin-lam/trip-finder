@@ -13,7 +13,7 @@ test("dataset is well formed", () => {
     assert.ok(c.cost >= 1 && c.cost <= 5, `${c.name} cost`);
     assert.ok(c.best.every((m) => m >= 1 && m <= 12), `${c.name} months`);
     assert.ok(c.cities.length >= 1, `${c.name} cities`);
-    assert.ok(["country", "microstate", "territory", "micronation"].includes(c.kind), `${c.name} kind`);
+    assert.ok(["country", "microstate", "territory"].includes(c.kind), `${c.name} kind`);
     if (c.kind !== "country") assert.ok(c.status, `${c.name} status`);
   }
   assert.equal(new Set(index.cities.map((c) => c.id)).size, index.cities.length, "city ids unique");
@@ -89,10 +89,10 @@ test("temperatures and distances show metric and imperial", () => {
   assert.doesNotMatch(text.replace(/°C \(-?\d+°F\)/g, "").replace(/km \([\d,]+ mi\)/g, ""), /°C|km/);
 });
 
-test("microstates, territories and micronations appear in results", () => {
+test("microstates and territories appear in results", () => {
   const r = E.recommend(index, { interests: { beach: 2, relax: 2 }, month: 2, climate: "hot", budget: 4 });
   const kinds = new Set(r.countries.map((c) => c.country.kind));
-  for (const k of ["country", "microstate", "territory", "micronation"]) assert.ok(kinds.has(k), k);
+  for (const k of ["country", "microstate", "territory"]) assert.ok(kinds.has(k), k);
   const top10 = r.countries.slice(0, 10).map((c) => c.country.kind);
   assert.ok(top10.includes("territory"), "Caribbean or Pacific territories should rank for luxury beach trips");
 });
@@ -189,9 +189,8 @@ test("places use their own climate when they have one", () => {
   assert.ok(E.tempFor(alaska, 1) < 0 && E.tempFor(miami, 1) > 20);
 });
 
-test("every destination except micronations has capital and parks facts", () => {
+test("every destination has capital and parks facts", () => {
   for (const c of index.countries) {
-    if (c.kind === "micronation") continue;
     assert.ok(c.facts && c.facts.capital && c.facts.parks.length >= 1, c.name);
     assert.equal(c.facts.hub, undefined, c.name);
   }
@@ -343,4 +342,18 @@ test("places in the grouped countries all have a subdivision", () => {
   assert.equal(index.cityById["es-barcelona"].area, "Catalonia");
   assert.equal(index.cityById["de-berlin"].area, "Berlin");
   assert.equal(index.cityById["hk-sai-kung"].area, "New Territories");
+});
+
+test("territories, microstates and micronations link to their countries", () => {
+  const C = index.countryById;
+  assert.deepEqual(C.gb.territories.map((t) => t.id).sort(), ["bm", "fk", "gi", "ky", "tc", "vg"]);
+  for (const c of index.countries) assert.equal(c.kind === "territory", !!c.sovereignCountry, c.name);
+  assert.equal(C.mo.sovereignCountry, C.cn);
+  assert.deepEqual(C.it.nearbyMicrostates.map((m) => m.id).sort(), ["sm", "va"]);
+  assert.deepEqual(C.ch.nearbyMicrostates.map((m) => m.id), ["li"]);
+  assert.deepEqual(C.es.nearbyMicrostates.map((m) => m.id), ["ad"]);
+  for (const id of ["va", "sm", "mc", "li"]) assert.ok(C[id].visitFrom, id);
+  const micro = index.countries.flatMap((c) => c.cities).filter((x) => x.micronation).map((x) => x.id).sort();
+  assert.deepEqual(micro, ["dk-freetown-christiania", "it-seborga", "lt-uzupis", "se-ladonia-nimis-arx"]);
+  assert.equal(index.cityById["mt-al-saflieni-hypogeum"].area, "Malta");
 });

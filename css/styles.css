@@ -255,6 +255,12 @@ details.more summary::before { content: "▸ "; }
 .also-in__more { margin-top: 12px; display: inline-block; }
 .also-in .chip[hidden] { display: none; }
 .also-in .chip { text-align: left; }
+:root { --micronation: #8a5a00; --micronation-soft: #f6ead2; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --micronation: #f0c674; --micronation-soft: #3a2e14; } }
+:root[data-theme="dark"] { --micronation: #f0c674; --micronation-soft: #3a2e14; }
+.ptag--micronation { background: var(--micronation-soft); color: var(--micronation); }
+.relations { margin: 10px 0 0; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+.relations .linkish { font-size: inherit; }
 details.more[open] summary::before { content: "▾ "; }
 details.more > *:not(summary) { margin-top: 10px; }
 
