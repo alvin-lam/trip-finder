@@ -7240,6 +7240,8 @@
     "is-sn-fellsnes-peninsula": "Snæfellsjökull National Park",
     "is-jokulsarlon-diamond-beach": "Vatnajökull National Park",
     "is-husavik": "Vatnajökull National Park",
+    "cy-troodos-mountains": "Troodos National Forest Park",
+    "us-alexandria-louisiana": "Kisatchie National Forest",
     "vi-st-john": "Virgin Islands National Park",
     "as-pago-pago": "National Park of American Samoa",
     "as-ofu-olosega": "National Park of American Samoa",

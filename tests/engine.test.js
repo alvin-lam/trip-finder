@@ -397,7 +397,7 @@ test("US, Canada and Mexico parks reach their gateway places", () => {
   assert.deepEqual(np("mx-tulum"), ["Tulum National Park"]);
   assert.deepEqual(np("mx-sian-ka-an"), ["Sian Ka'an Biosphere Reserve"]);
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
-  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [44, 23, 25]);
+  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [45, 23, 25]);
 });
 
 test("Saint Pierre and Miquelon is a French territory near Canada", () => {
@@ -489,4 +489,10 @@ test("Iceland covers its main sights and all three national parks", () => {
   for (const np of ["Þingvellir", "Vatnajökull", "Snæfellsjökull"]) assert.ok(parks.has(`${np} National Park`), np);
   // A World Heritage name that extends a park's name is not listed twice.
   assert.deepEqual(index.cityById["is-vatnajokull-national-park"].nationalParks, ["Vatnajökull National Park"]);
+});
+
+test("national forests are tagged as national parks", () => {
+  for (const [id, name] of [["pr-el-yunque", "El Yunque National Forest"], ["cy-troodos-mountains", "Troodos National Forest Park"], ["cn-zhangjiajie", "Zhangjiajie National Forest Park"], ["us-alexandria-louisiana", "Kisatchie National Forest"]]) {
+    assert.ok(index.cityById[id].nationalParks.includes(name), id);
+  }
 });

@@ -257,7 +257,8 @@
     };
   }
 
-  const NP = /National Park\b/;
+  // National forests count as national parks too.
+  const NP = /National (Park|Forest)\b/;
 
   // The park's own name without its designation: "Mount Rainier National Park" -> "Mount Rainier".
   function siteKey(name) {
