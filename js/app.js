@@ -1078,10 +1078,10 @@
   const searchKey = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim().toLowerCase();
 
   // Each Explore region shows its first few country cards, then more per click:
-  // 6 then 3 more on desktop, 2 then 2 more on phones.
+  // 6 then 3 more on desktop, 3 then 3 more on phones.
   const narrow = () => window.matchMedia && window.matchMedia("(max-width: 860px)").matches;
-  const cardsFirst = () => (narrow() ? 2 : 6);
-  const cardsStep = () => (narrow() ? 2 : 3);
+  const cardsFirst = () => (narrow() ? 3 : 6);
+  const cardsStep = () => 3;
   function regionCards(key, list) {
     const shown = Math.min(list.length, state.exploreShown.get(key) || cardsFirst());
     const left = list.length - shown;
