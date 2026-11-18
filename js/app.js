@@ -786,7 +786,7 @@
         <h2>Explore regions, countries and cities</h2>
         <p class="muted">Filter by month, interest or cost, or search for a place you have in mind.</p>
         <div class="filters" id="explore-filters">
-          <label>Search<input class="input" type="search" data-filter="q" placeholder="Places, parks or trails" value="${esc(state.explore.q)}" /></label>
+          <label>Search<input class="input" type="search" data-filter="q" placeholder="Places, countries or codes (US, FR)" value="${esc(state.explore.q)}" /></label>
           <label>Region<select class="select" data-filter="region"><option value="">All regions</option>${index.regions
             .map((r) => `<option value="${r.id}">${esc(r.name)}</option>`)
             .join("")}</select></label>
@@ -832,6 +832,10 @@
     const interestQ = index.interests.find((i) => q && i.label.toLowerCase().includes(q));
     let total = 0;
     const kindTotals = {};
+    // A search that exactly matches a destination's code or another name for it (US,
+    // UK, UAE, FR) lists just those destinations.
+    const qn = searchKey(q);
+    const exact = new Set(qn ? index.countries.filter((c) => (c.code && c.code.toLowerCase() === qn) || c.aliases.some((a) => searchKey(a) === qn)) : []);
     const blocks = index.regions
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
@@ -840,13 +844,16 @@
           .sort((a, b) => a.name.localeCompare(b.name))
           // Micronations are places, so that type keeps their host countries.
           .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind || (f.kind === "micronation" && c.cities.some((x) => x.micronation))))
+          .filter((c) => !exact.size || exact.has(c))
           .filter((c) => !f.lgbtq || (c.lgbtq && c.lgbtq.level === f.lgbtq))
           // "no" lists destinations without an advisory; "reconsider" and "avoid" match its level.
           .filter((c) => !f.advisory || (f.advisory === "no" ? !c.advisory : !!c.advisory && c.advisory.level === f.advisory))
           .map((c) => {
             const countryHit =
               !q ||
+              exact.has(c) ||
               c.name.toLowerCase().includes(q) ||
+              (qn.length >= 4 && c.aliases.some((a) => searchKey(a).includes(qn))) ||
               r.name.toLowerCase().includes(q) ||
               c.blurb.toLowerCase().includes(q) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
@@ -1058,6 +1065,9 @@
     if (c.nearbyMicrostates.length) lines.push(`Nearby microstates: ${c.nearbyMicrostates.map(link).join(", ")}`);
     return lines.length ? `<div class="relations">${lines.map((l) => `<div>${l}</div>`).join("")}</div>` : "";
   }
+
+  // Search text without accents, dots or case: "U.S." -> "us", "España" -> "espana".
+  const searchKey = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim().toLowerCase();
 
   // Explore shows each country card with its places collapsed behind this toggle.
   function placesToggle(c, n, open) {

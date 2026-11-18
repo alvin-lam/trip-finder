@@ -459,3 +459,15 @@ test("misplaced coordinates are fixed and Tunis keeps its World Heritage tag", (
   assert.ok(tunis.isCapital && tunis.unesco.includes("Carthage"));
   assert.ok(index.cityById["tn-sidi-bou-said"].unesco);
 });
+
+test("destinations carry search codes and other names", () => {
+  const C = index.countryById;
+  assert.equal(C.fr.code, "FR");
+  assert.equal(C.de.code, "DE");
+  assert.equal(C.xb.code, null);
+  assert.ok(C.us.aliases.includes("usa") && C.gb.aliases.includes("uk") && C.ae.aliases.includes("uae"));
+  // Codes are unique, so a code search never lists two destinations.
+  const codes = index.countries.map((c) => c.code).filter(Boolean);
+  assert.equal(new Set(codes).size, codes.length);
+  assert.throws(() => E.buildIndex({ ...data, COUNTRY_ALIASES: { zz: ["nowhere"] } }), /matches no destination/);
+});

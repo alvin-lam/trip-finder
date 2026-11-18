@@ -177,6 +177,18 @@
     }
     for (const c of countries) c.areaTerm = (data.AREA_TERMS || {})[c.id] || null;
 
+    // Search codes and other names. A destination's id is its two-letter code, except
+    // for the Akrotiri and Dhekelia base areas, which have none.
+    for (const c of countries) {
+      c.code = c.id === "xb" ? null : c.id.toUpperCase();
+      c.aliases = [];
+    }
+    for (const [id, names] of Object.entries(data.COUNTRY_ALIASES || {})) {
+      const c = countries.find((x) => x.id === id);
+      if (!c) throw new Error(`COUNTRY_ALIASES entry ${id} matches no destination`);
+      c.aliases = names;
+    }
+
     // UNESCO Global Geoparks and Biosphere Reserves (empty until their data is added).
     for (const [key, field] of [["GEOPARKS", "geopark"], ["BIOSPHERES", "biosphere"]]) {
       for (const [id, site] of Object.entries(data[key] || {})) {
