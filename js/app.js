@@ -777,11 +777,11 @@
           <label>Great for<select class="select" data-filter="interest"><option value="">Anything</option>${index.interests
             .map((i) => `<option value="${i.id}">${i.icon} ${esc(i.label)}</option>`)
             .join("")}</select></label>
-          <label>Country type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
+          <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
           <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
-          <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">Welcoming</option><option value="mixed">Mixed</option><option value="caution">Caution</option></select></label>
+          <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
           <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="yes">Yes</option><option value="no">No</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
