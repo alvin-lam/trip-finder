@@ -295,8 +295,15 @@
       // "Hawaii Volcanoes National Park" and "Hawaiʻi Volcanoes National Park", or a park and
       // its "Reserve", count as one park.
       const parkKey = (name) => name.normalize("NFD").replace(/[^A-Za-z ]/g, "").replace(/ Reserve$/, "").toLowerCase();
+      // A World Heritage name that extends a park's own name, such as "Vatnajökull
+      // National Park – Dynamic Nature of Fire and Ice", counts as the same park; the
+      // shorter name is kept.
+      const same = (a, b) => a === b || a.startsWith(b + " ") || b.startsWith(a + " ");
       const add = (city, name) => {
-        if (city && !city.nationalParks.some((p) => parkKey(p) === parkKey(name))) city.nationalParks.push(name);
+        if (!city) return;
+        const i = city.nationalParks.findIndex((p) => same(parkKey(p), parkKey(name)));
+        if (i < 0) city.nationalParks.push(name);
+        else if (name.length < city.nationalParks[i].length) city.nationalParks[i] = name;
       };
       for (const site of c.sites || []) {
         if (site.type === "National Park" || site.type === "National Park Reserve") {

@@ -480,3 +480,13 @@ test("Ireland covers its main cities, sights and national parks", () => {
   for (const np of ["Killarney", "Connemara", "Burren", "Wicklow Mountains", "Wild Nephin", "Glenveagh"]) assert.ok(parks.has(`${np} National Park`), np);
   assert.deepEqual([...new Set(ie.cities.map((x) => x.area))].sort(), ["Connacht", "Leinster", "Munster", "Ulster"]);
 });
+
+test("Iceland covers its main sights and all three national parks", () => {
+  const is = index.countryById.is;
+  assert.equal(is.cities.length, 14);
+  assert.ok(index.cityById["is-blue-lagoon-reykjanes-peninsula"]);
+  const parks = new Set(is.cities.flatMap((x) => x.nationalParks));
+  for (const np of ["Þingvellir", "Vatnajökull", "Snæfellsjökull"]) assert.ok(parks.has(`${np} National Park`), np);
+  // A World Heritage name that extends a park's name is not listed twice.
+  assert.deepEqual(index.cityById["is-vatnajokull-national-park"].nationalParks, ["Vatnajökull National Park"]);
+});
