@@ -305,6 +305,9 @@ details.more > *:not(summary) { margin-top: 10px; }
 .filters__clear { display: flex; align-items: end; }
 .filters__clear .btn { width: 100%; padding: 9px 12px; }
 .filters__clear .btn:disabled { opacity: 0.45; cursor: default; }
+/* Desktop: Search keeps its column to itself, so the second row of filters starts
+   under the first filter instead of under Search. */
+@media (min-width: 861px) { .filters > label:first-child { grid-row: span 2; align-self: start; } }
 @media (max-width: 860px) { .filters { grid-template-columns: 1fr 1fr; position: static; } .filters label:first-child, .filters__clear { grid-column: 1 / -1; } }
 .region-block { margin-top: 30px; }
 .region-block__head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
