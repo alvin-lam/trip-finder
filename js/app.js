@@ -662,7 +662,7 @@
         <h2>Explore regions, countries and cities</h2>
         <p class="muted">Filter by month, interest or cost, or search for a place you have in mind.</p>
         <div class="filters" id="explore-filters">
-          <label>Search<input class="input" type="search" data-filter="q" placeholder="Places, capitals, parks or trails" value="${esc(state.explore.q)}" /></label>
+          <label>Search<input class="input" type="search" data-filter="q" placeholder="Places, parks or trails" value="${esc(state.explore.q)}" /></label>
           <label>Region<select class="select" data-filter="region"><option value="">All regions</option>${index.regions
             .map((r) => `<option value="${r.id}">${esc(r.name)}</option>`)
             .join("")}</select></label>
@@ -710,7 +710,6 @@
               c.blurb.toLowerCase().includes(q) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             const matches = q && f.only !== "unesco" ? factMatches(c, q) : [];
-            const matched = (kind) => matches.some((m) => m.kind === kind);
             const cities = c.cities.concat(c.linked).filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
@@ -725,8 +724,6 @@
                 city.blurb.toLowerCase().includes(q) ||
                 (city.area && city.area.toLowerCase().includes(q)) ||
                 city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
-                (q.includes("capital") && city.isCapital) ||
-                (city.isCapital && matched("capital")) ||
                 matches.some((m) => m.place === city) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
@@ -761,19 +758,18 @@
     );
   }
 
-  // "· 3 parks, trails or capitals · 88 national park system sites"
+  // "· 3 parks or trails · 88 national park system sites"
   function matchSummary(t) {
     const n = (k) => t[k] || 0;
     const parts = [];
-    const facts = n("capital") + n("park");
-    if (facts) parts.push(`${facts} matching ${facts === 1 ? "park, trail or capital" : "parks, trails or capitals"}`);
+    const facts = n("park");
+    if (facts) parts.push(`${facts} matching ${facts === 1 ? "park or trail" : "parks or trails"}`);
     if (n("site")) parts.push(`${n("site")} national park system ${n("site") === 1 ? "site" : "sites"}`);
     return parts.map((x) => ` · ${x}`).join("");
   }
 
-  // Parks and trails and capitals whose names contain the search text.
-  // Each match links to the place that holds it when there is one (Yellowstone, Canberra).
-  const FACT_LABELS = { capital: "🏛️ Capital" };
+  // Parks and trails whose names contain the search text.
+  // Each match links to the place that holds it when there is one (Yellowstone, Banff).
   // Anything named or designated "National" (parks, seashores, memorials, every US National
   // Park System unit), anything named "UNESCO", and trails
   // (treks, tracks, ways, paths, walks) show in search only with a linked place.
@@ -789,9 +785,6 @@
         c.cities.find((x) => x.name.length >= 4 && l.includes(x.name.toLowerCase().split(/ & |, | \(/)[0]))
       );
     };
-    // Prefer the place named by the search (Cape Town among South Africa's three capitals).
-    const byQuery = c.cities.find((x) => x.name.toLowerCase().includes(q));
-    if (c.facts.capital.toLowerCase().includes(q)) out.push({ kind: "capital", label: c.facts.capital, place: byQuery || c.cities.find((x) => x.isCapital) });
     for (const park of c.facts.parks) {
       if (c.id === "ca" && HIDDEN_CA_PARKS.test(park)) continue;
       if (park.toLowerCase().includes(q)) out.push({ kind: "park", label: park, place: findPlace(park) });
@@ -828,9 +821,7 @@
 
   const MATCHES_SHOWN = 8;
   function matchItem(m, q) {
-    // Only capitals carry a kind label; parks, trails and park system sites show just their names.
-    const kind = m.kind === "capital" ? `<span class="search-matches__kind">${FACT_LABELS.capital}</span> ` : "";
-    return `<li>${kind}${
+    return `<li>${
       m.place
         ? `<button class="linkish" data-action="open-city" data-id="${m.place.id}">${highlight(m.label, q)}</button>`
         : `<span>${highlight(m.label, q)}</span>`
