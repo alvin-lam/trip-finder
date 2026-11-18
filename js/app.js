@@ -835,7 +835,9 @@
     const blocks = index.regions
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
-        const countries = r.countries
+        // Cards list A to Z within each region.
+        const countries = [...r.countries]
+          .sort((a, b) => a.name.localeCompare(b.name))
           // Micronations are places, so that type keeps their host countries.
           .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind || (f.kind === "micronation" && c.cities.some((x) => x.micronation))))
           .filter((c) => !f.lgbtq || (c.lgbtq && c.lgbtq.level === f.lgbtq))
@@ -895,6 +897,7 @@
         if (!bySov.has(sov)) bySov.set(sov, []);
         bySov.get(sov).push(x);
       }
+      for (const list of bySov.values()) list.sort((a, b) => a.c.name.localeCompare(b.c.name));
       return (
         head +
         [...bySov]
