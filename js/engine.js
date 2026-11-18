@@ -111,6 +111,8 @@
           ranges: null,
           micronation: null,
           geopark: null,
+          uninhabited: false,
+          expedition: false,
           biosphere: null,
           unesco: null,
           family: null,
@@ -187,6 +189,14 @@
       const c = countries.find((x) => x.id === id);
       if (!c) throw new Error(`COUNTRY_ALIASES entry ${id} matches no destination`);
       c.aliases = names;
+    }
+
+    // Places with no permanent residents, and places reached only by expedition.
+    for (const [key, field] of [["UNINHABITED", "uninhabited"], ["EXPEDITION_ONLY", "expedition"]]) {
+      for (const id of data[key] || []) {
+        if (!cityById[id]) throw new Error(`${key} entry ${id} matches no place`);
+        cityById[id][field] = true;
+      }
     }
 
     // UNESCO Global Geoparks and Biosphere Reserves (empty until their data is added).

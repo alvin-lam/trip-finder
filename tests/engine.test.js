@@ -516,3 +516,14 @@ test("no two places share coordinates except a site and its host city", () => {
   assert.deepEqual(shared, ["be-belfries-of-belgium+be-ghent"]);
   assert.equal(index.cityById["gw-bijagos-islands"], undefined);
 });
+
+test("remote places are tagged uninhabited or expedition only", () => {
+  const p = (id) => index.cityById[id];
+  assert.ok(p("bv-bouvet-island").uninhabited && p("bv-bouvet-island").expedition);
+  assert.ok(p("is-surtsey").uninhabited && !p("is-surtsey").expedition);
+  assert.ok(!p("sh-tristan-da-cunha").uninhabited && p("sh-tristan-da-cunha").expedition);
+  assert.ok(!p("fr-paris").uninhabited && !p("fr-paris").expedition);
+  // Every place in a destination with no permanent population is tagged uninhabited.
+  for (const id of ["um", "cp", "bv", "hm", "tf", "gs", "io"]) assert.ok(index.countryById[id].cities.every((x) => x.uninhabited), id);
+  assert.throws(() => E.buildIndex({ ...data, UNINHABITED: ["zz-nowhere"] }), /matches no place/);
+});

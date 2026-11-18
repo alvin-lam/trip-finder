@@ -61,6 +61,16 @@
     return `<option value="${field}"${ready ? "" : " disabled"}>${label}${ready ? "" : " (coming soon)"}</option>`;
   }
 
+  // Remote places: no permanent residents, or reached only by expedition.
+  const UNINHABITED_NOTE = "No permanent residents";
+  const EXPEDITION_NOTE = "Reached only by expedition cruise, liveaboard boat, supply ship or permit";
+  function remoteTags(city) {
+    return (
+      (city.uninhabited ? `<span class="ptag ptag--uninhabited" title="${UNINHABITED_NOTE}">UNINHABITED</span>` : "") +
+      (city.expedition ? `<span class="ptag ptag--expedition" title="${EXPEDITION_NOTE}">EXPEDITION ONLY</span>` : "")
+    );
+  }
+
   // UNESCO Global Geopark and Biosphere Reserve labels (shown once their data exists).
   function geoTags(city) {
     return (
@@ -106,7 +116,7 @@
   }
 
   function placeTags(city) {
-    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + familyTag(city);
+    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + familyTag(city) + remoteTags(city);
   }
 
   // Capital and famous parks and trails for a destination.
@@ -266,7 +276,7 @@
           lowF: lo === null ? null : E.cToF(lo),
           dailyCostUSD: E.COST_DAILY[city.country.cost],
           greatFor: topStrengths(city).join(", ") || "All-rounder",
-          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "World Heritage", city.geopark && "Global Geopark", city.biosphere && "Biosphere Reserve", city.nationalParks.length && "National park", city.family && "Family friendly"].filter(Boolean).join(", "),
+          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "World Heritage", city.geopark && "Global Geopark", city.biosphere && "Biosphere Reserve", city.uninhabited && "Uninhabited", city.expedition && "Expedition only", city.nationalParks.length && "National park", city.family && "Family friendly"].filter(Boolean).join(", "),
         };
       })
       .sort((a, b) => (b.match ?? 0) - (a.match ?? 0));
@@ -801,7 +811,7 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option><option value="uninhabited">Uninhabited</option><option value="expedition">Expedition Only</option></select></label>
           <label>UNESCO sites<select class="select" data-filter="unesco"><option value="">Any</option><option value="wh">World Heritage</option>${unescoOption("geopark", "Global Geoparks")}${unescoOption("biosphere", "Biosphere Reserves")}</select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
           <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="no">✅ No Advisory</option><option value="reconsider">⚠️ Reconsider</option><option value="avoid">⛔️ Do Not Travel</option></select></label>
@@ -874,6 +884,8 @@
               if (f.unesco === "biosphere" && !city.biosphere) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
+              if (f.only === "uninhabited" && !city.uninhabited) return false;
+              if (f.only === "expedition" && !city.expedition) return false;
               if (f.kind === "micronation" && !city.micronation) return false;
               if (!q || countryHit) return true;
               return (
@@ -1303,6 +1315,8 @@
           ? `<p class="unesco-line"><span class="unesco">WORLD HERITAGE</span> <b>${esc(city.unesco)}</b></p>`
           : ""
       }
+      ${city.uninhabited ? `<p class="unesco-line"><span class="ptag ptag--uninhabited">UNINHABITED</span> ${UNINHABITED_NOTE}</p>` : ""}
+      ${city.expedition ? `<p class="unesco-line"><span class="ptag ptag--expedition">EXPEDITION ONLY</span> ${EXPEDITION_NOTE}</p>` : ""}
       ${city.geopark ? `<p class="unesco-line"><span class="ptag ptag--geopark">GEOPARK</span> UNESCO Global Geopark: <b>${esc(city.geopark)}</b></p>` : ""}
       ${city.biosphere ? `<p class="unesco-line"><span class="ptag ptag--biosphere">BIOSPHERE</span> UNESCO Biosphere Reserve: <b>${esc(city.biosphere)}</b></p>` : ""}
       ${city.micronation ? `<p class="unesco-line"><span class="ptag ptag--micronation">MICRONATION</span> ${esc(city.micronation)}</p>` : ""}

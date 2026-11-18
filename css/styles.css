@@ -264,6 +264,11 @@ details.more summary::before { content: "▸ "; }
 :root[data-theme="dark"] { --geopark: #e8b878; --geopark-soft: #3b2a14; --biosphere: #9fd49a; --biosphere-soft: #1d3a1f; }
 .ptag--geopark { background: var(--geopark-soft); color: var(--geopark); }
 .ptag--biosphere { background: var(--biosphere-soft); color: var(--biosphere); }
+:root { --uninhabited: #5a5f6b; --uninhabited-soft: #e8e9ec; --expedition: #2f3f8f; --expedition-soft: #e3e7f7; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --uninhabited: #c3c7d0; --uninhabited-soft: #2e323a; --expedition: #aab8f5; --expedition-soft: #222b55; } }
+:root[data-theme="dark"] { --uninhabited: #c3c7d0; --uninhabited-soft: #2e323a; --expedition: #aab8f5; --expedition-soft: #222b55; }
+.ptag--uninhabited { background: var(--uninhabited-soft); color: var(--uninhabited); }
+.ptag--expedition { background: var(--expedition-soft); color: var(--expedition); }
 .unesco-line .ptag { margin: 0 4px 0 0; }
 .relations { margin: 10px 0 0; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 .relations .linkish { font-size: inherit; }
