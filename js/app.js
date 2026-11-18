@@ -946,7 +946,8 @@
     const out = [];
     for (const site of c.sites) {
       const byName = site.name.toLowerCase().includes(q);
-      const place = E.placeForSite(c, site);
+      // A park can open a place in another destination, such as a US park in the US Virgin Islands.
+      const place = E.placeForSite(c, site) || index.cities.find((x) => x.nationalParks.includes(site.name)) || null;
       // A national park with no place in the app still answers a search for its name.
       if (!place && UNTAGGED_PARK.test(site.type)) {
         if (ownName(site.name).includes(q)) out.push({ kind: "site", system: site.system, label: site.name, detail: `${site.area} · no place in the app nearby`, place: null, untagged: true });

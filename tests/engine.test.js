@@ -284,7 +284,7 @@ test("Puerto Rico places are grouped by informal region", () => {
 
 test("UK places are grouped by England, Scotland, Wales and Northern Ireland", () => {
   const gb = index.countryById.gb.cities;
-  assert.deepEqual([...new Set(gb.map((c) => c.area))].sort(), ["England", "Northern Ireland", "Overseas Territories", "Scotland", "Wales"]);
+  assert.deepEqual([...new Set(gb.map((c) => c.area))].sort(), ["England", "Northern Ireland", "Scotland", "Wales"]);
   assert.equal(index.cityById["gb-stonehenge"].area, "England");
   assert.ok(index.cityById["gb-stonehenge"].unesco.startsWith("Stonehenge"));
 });
@@ -346,7 +346,7 @@ test("places in the grouped countries all have a subdivision", () => {
 
 test("territories, microstates and micronations link to their countries", () => {
   const C = index.countryById;
-  assert.deepEqual(C.gb.territories.map((t) => t.id).sort(), ["bm", "fk", "gi", "ky", "tc", "vg"]);
+  assert.deepEqual(C.gb.territories.map((t) => t.id).sort(), ["ai", "bm", "fk", "gg", "gi", "gs", "im", "io", "je", "ky", "ms", "pn", "sh", "tc", "vg", "xb"]);
   for (const c of index.countries) assert.equal(c.kind === "territory", !!c.sovereignCountry, c.name);
   assert.equal(C.mo.sovereignCountry, C.cn);
   assert.deepEqual(C.it.nearbyMicrostates.map((m) => m.id).sort(), ["sm", "va"]);
@@ -402,4 +402,20 @@ test("Saint Pierre and Miquelon is a French territory near Canada", () => {
   assert.equal(pm.sovereignCountry, index.countryById.fr);
   assert.equal(pm.of, "ca");
   assert.deepEqual(pm.cities.filter((x) => x.isCapital).map((x) => x.name), ["Saint-Pierre"]);
+});
+
+test("overseas territories and crown dependencies are complete", () => {
+  const C = index.countryById;
+  const ids = (c) => C[c].territories.map((t) => t.id).sort();
+  assert.deepEqual(ids("us"), ["as", "gu", "mp", "pr", "um", "vi"]);
+  assert.deepEqual(ids("fr"), ["bl", "cp", "gf", "gp", "mf", "mq", "nc", "pf", "pm", "re", "tf", "wf", "yt"]);
+  assert.deepEqual(ids("nl"), ["aw", "bq", "cw", "sx"]);
+  assert.deepEqual(ids("au"), ["cc", "cx", "hm", "nf"]);
+  assert.deepEqual(ids("nz"), ["ck", "nu", "tk"]);
+  assert.deepEqual(ids("no"), ["bv", "sj"]);
+  // Remote World Heritage places now sit in their own territories.
+  assert.ok(index.cityById["pn-henderson-island"].unesco);
+  assert.ok(index.cityById["sh-gough-and-inaccessible-islands"].unesco);
+  assert.equal(index.cityById["gb-henderson-island"], undefined);
+  assert.deepEqual(index.cityById["vi-st-john"].nationalParks, ["Virgin Islands National Park"]);
 });
