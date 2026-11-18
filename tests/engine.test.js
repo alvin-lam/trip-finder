@@ -504,3 +504,15 @@ test("the UAE covers all seven emirates and its national parks", () => {
   assert.deepEqual(index.cityById["ae-abu-dhabi"].nationalParks, ["Mangrove National Park"]);
   assert.equal(ae.cities.filter((x) => x.unesco).length, 3);
 });
+
+test("no two places share coordinates except a site and its host city", () => {
+  const seen = new Map();
+  const shared = [];
+  for (const [id, ll] of Object.entries(data.COORDS)) {
+    const k = ll.join(",");
+    if (seen.has(k)) shared.push(`${seen.get(k)}+${id}`);
+    else seen.set(k, id);
+  }
+  assert.deepEqual(shared, ["be-belfries-of-belgium+be-ghent"]);
+  assert.equal(index.cityById["gw-bijagos-islands"], undefined);
+});
