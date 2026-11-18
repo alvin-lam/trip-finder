@@ -496,3 +496,11 @@ test("national forests are tagged as national parks", () => {
     assert.ok(index.cityById[id].nationalParks.includes(name), id);
   }
 });
+
+test("the UAE covers all seven emirates and its national parks", () => {
+  const ae = index.countryById.ae;
+  assert.deepEqual([...new Set(ae.cities.map((x) => x.area))].sort(), ["Abu Dhabi", "Ajman", "Dubai", "Fujairah", "Ras Al Khaimah", "Sharjah", "Umm Al Quwain"]);
+  assert.deepEqual(index.cityById["ae-wadi-wurayah"].nationalParks, ["Wadi Wurayah National Park"]);
+  assert.deepEqual(index.cityById["ae-abu-dhabi"].nationalParks, ["Mangrove National Park"]);
+  assert.equal(ae.cities.filter((x) => x.unesco).length, 3);
+});
