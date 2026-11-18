@@ -779,8 +779,8 @@
             .join("")}</select></label>
           <label>Type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
-            .join("")}</select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option><option value="micronation">Micronations</option><option value="lgbtq">LGBTQ+ Welcoming</option><option value="safe">No Travel Advisory</option></select></label>
+            .join("")}<option value="micronation">Micronations</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option><option value="lgbtq">LGBTQ+ Welcoming</option><option value="safe">No Travel Advisory</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
             .map((c) => `<option value="${c}">${c === 5 ? "Any" : `Up to US$${{ 1: 70, 2: 120, 3: 180, 4: 280 }[c]} a day`}</option>`)
             .join("")}</select></label>
@@ -806,7 +806,8 @@
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
         const countries = r.countries
-          .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind))
+          // Micronations are places, so that type keeps their host countries.
+          .filter((c) => c.cost <= f.cost && (!f.kind || c.kind === f.kind || (f.kind === "micronation" && c.cities.some((x) => x.micronation))))
           .map((c) => {
             const countryHit =
               !q ||
@@ -821,7 +822,7 @@
               if (f.only === "unesco" && !city.unesco) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
-              if (f.only === "micronation" && !city.micronation) return false;
+              if (f.kind === "micronation" && !city.micronation) return false;
               if (f.only === "lgbtq" && (!c.lgbtq || c.lgbtq.level !== "welcoming")) return false;
               if (f.only === "safe" && c.advisory) return false;
               if (!q || countryHit) return true;
