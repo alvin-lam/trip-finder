@@ -110,6 +110,10 @@
     pr: "all 6 informal regions, covering all 6 metro areas",
     gb: "England, Scotland, Wales and Northern Ireland",
   };
+  // Countries whose subdivisions have an official order, used instead of A to Z.
+  const AREA_ORDER = {
+    ru: ["Central", "Northwestern", "Southern", "North Caucasian", "Volga", "Ural", "Siberian", "Far Eastern"],
+  };
   const AREA_NOUN = { us: "states and D.C.", ca: "provinces and territories", mx: "states", pr: "regions", gb: "countries" };
   const METRO_SCOPE = {
     us: (r) => `Metro area #${r} of 387 in the US`,
@@ -1036,10 +1040,13 @@
     const byArea = cities.length > GROUP_OVER && cities.some((x) => x.area && x.country === c);
     const SHARED = "Shared with other countries";
     const groupOf = (x) => (x.country === c ? x.area || "Other places" : SHARED);
-    // Own subdivisions alphabetically, then "Other places", then shared sites.
+    // Own subdivisions alphabetically (or in a country's official order), then "Other
+    // places", then shared sites.
+    const fixed = AREA_ORDER[c.id] || [];
+    const rank = (g) => (fixed.includes(g) ? fixed.indexOf(g) : fixed.length);
     const order = (a, b) => {
       const w = (g) => (g === SHARED ? 2 : g === "Other places" ? 1 : 0);
-      return w(a) - w(b) || a.localeCompare(b);
+      return w(a) - w(b) || rank(a) - rank(b) || a.localeCompare(b);
     };
     let list;
     if (byArea) {
