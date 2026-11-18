@@ -333,7 +333,7 @@ test("Also in lists nearby places first", () => {
 });
 
 test("places in the grouped countries all have a subdivision", () => {
-  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br", "ru", "ir", "tr", "au", "gr", "pl", "pt", "se", "ar", "pe", "be", "cz", "id", "ma", "et", "dk", "bg", "vn", "ph", "lk", "ke", "co", "at", "fi", "nz", "mn", "pa", "tz", "sk", "ua", "ge", "uz", "tj", "kh", "lb", "sa", "om", "mg", "ec", "ae", "jm", "pf"]) {
+  for (const id of ["de", "fr", "it", "es", "nl", "ch", "hk", "cn", "jp", "kr", "is", "za", "tw", "th", "sg", "in", "br", "ru", "ir", "tr", "au", "gr", "pl", "pt", "se", "ar", "pe", "be", "cz", "id", "ma", "et", "dk", "bg", "vn", "ph", "lk", "ke", "co", "at", "fi", "nz", "mn", "pa", "tz", "sk", "ua", "ge", "uz", "tj", "kh", "lb", "sa", "om", "mg", "ec", "ae", "jm", "pf", "bo", "il", "pk", "cr", "cl", "hr", "eg", "kz", "no", "ro", "cu", "hu", "jo", "tn", "my"]) {
     const c = index.countryById[id];
     assert.ok(c.areaTerm, `${c.name} has a term`);
     assert.ok(c.cities.every((x) => x.area), `${c.name} places all have a subdivision`);
@@ -432,4 +432,18 @@ test("Russia groups by federal district, and Crimea stays with Ukraine", () => {
   assert.ok(index.countryById.ua.cities.some((x) => x.id === "ua-chersonesus"));
   const occupied = /crimea|sevastopol|chersones|yalta|bakhchys|simferopol|donetsk|luhansk|zaporizh|kherson|mariupol/i;
   assert.ok(!index.countryById.ru.cities.some((x) => occupied.test(`${x.name} ${x.blurb} ${x.area || ""}`)));
+});
+
+test("misplaced coordinates are fixed and Tunis keeps its World Heritage tag", () => {
+  const near = (id, lat, lon) => {
+    const [a, b] = index.cityById[id].ll;
+    assert.ok(E.haversineKm(a, b, lat, lon) < 100, id);
+  };
+  near("vn-trang-an", 20.25, 105.9);
+  near("th-kaeng-krachan", 12.8, 99.45);
+  near("ma-tetouan", 35.57, -5.37);
+  near("ro-frontiers-of-the-roman-empire-dacia", 47.18, 23.15);
+  const tunis = index.cityById["tn-tunis-carthage"];
+  assert.ok(tunis.isCapital && tunis.unesco.includes("Carthage"));
+  assert.ok(index.cityById["tn-sidi-bou-said"].unesco);
 });
