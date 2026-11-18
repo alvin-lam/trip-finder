@@ -259,6 +259,12 @@ details.more summary::before { content: "▸ "; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --micronation: #f0c674; --micronation-soft: #3a2e14; } }
 :root[data-theme="dark"] { --micronation: #f0c674; --micronation-soft: #3a2e14; }
 .ptag--micronation { background: var(--micronation-soft); color: var(--micronation); }
+:root { --geopark: #7a4b12; --geopark-soft: #f3e6d4; --biosphere: #2e6b2f; --biosphere-soft: #e1f0dc; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --geopark: #e8b878; --geopark-soft: #3b2a14; --biosphere: #9fd49a; --biosphere-soft: #1d3a1f; } }
+:root[data-theme="dark"] { --geopark: #e8b878; --geopark-soft: #3b2a14; --biosphere: #9fd49a; --biosphere-soft: #1d3a1f; }
+.ptag--geopark { background: var(--geopark-soft); color: var(--geopark); }
+.ptag--biosphere { background: var(--biosphere-soft); color: var(--biosphere); }
+.unesco-line .ptag { margin: 0 4px 0 0; }
 .relations { margin: 10px 0 0; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
 .relations .linkish { font-size: inherit; }
 details.more[open] summary::before { content: "▾ "; }

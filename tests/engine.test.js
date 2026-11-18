@@ -113,7 +113,7 @@ test("UNESCO World Heritage tags attach to real places", () => {
   }
   assert.equal(index.cityById["th-phuket"].unesco, null);
   const r = E.recommend(index, { interests: { culture: 2 } });
-  assert.ok(r.cities.find((c) => c.city.id === "it-rome").reasons.includes("UNESCO World Heritage Site"));
+  assert.ok(r.cities.find((c) => c.city.id === "it-rome").reasons.includes("World Heritage Site"));
   assert.throws(() => E.buildIndex({ ...data, UNESCO: { "zz-nowhere": "Fake" } }), /matches no place/);
 });
 
@@ -220,11 +220,15 @@ test("US National Park System and Parks Canada sites are loaded", () => {
   assert.equal(new Set(ca.map((x) => x.name)).size, ca.length, "no duplicate Canadian sites");
 });
 
-test("no UNESCO Biosphere Reserve data remains", () => {
-  assert.equal(data.BIOSPHERE, undefined);
-  assert.ok(index.countries.every((c) => c.biosphere === undefined));
-  const text = JSON.stringify(data.COUNTRIES) + JSON.stringify(data.FACTS);
-  assert.doesNotMatch(text, /biosphere/i);
+test("Global Geopark and Biosphere Reserve lists are ready but empty", () => {
+  assert.deepEqual(data.GEOPARKS, {});
+  assert.deepEqual(data.BIOSPHERES, {});
+  assert.ok(index.cities.every((c) => c.geopark === null && c.biosphere === null));
+  // An entry attaches to its place, and an unknown id is refused.
+  const withSites = E.buildIndex({ ...data, GEOPARKS: { "ie-galway-connemara": "Test Geopark" }, BIOSPHERES: { "ie-dublin": "Test Reserve" } });
+  assert.equal(withSites.cityById["ie-galway-connemara"].geopark, "Test Geopark");
+  assert.equal(withSites.cityById["ie-dublin"].biosphere, "Test Reserve");
+  assert.throws(() => E.buildIndex({ ...data, BIOSPHERES: { "zz-nowhere": "x" } }), /matches no place/);
 });
 
 test("all 387 US metro areas are each linked to a place", () => {

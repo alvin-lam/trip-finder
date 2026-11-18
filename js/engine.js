@@ -110,6 +110,8 @@
           ll: null,
           ranges: null,
           micronation: null,
+          geopark: null,
+          biosphere: null,
           unesco: null,
           family: null,
           country,
@@ -174,6 +176,14 @@
       if (!cityById[id].area) cityById[id].area = area;
     }
     for (const c of countries) c.areaTerm = (data.AREA_TERMS || {})[c.id] || null;
+
+    // UNESCO Global Geoparks and Biosphere Reserves (empty until their data is added).
+    for (const [key, field] of [["GEOPARKS", "geopark"], ["BIOSPHERES", "biosphere"]]) {
+      for (const [id, site] of Object.entries(data[key] || {})) {
+        if (!cityById[id]) throw new Error(`${key} entry ${id} matches no place`);
+        cityById[id][field] = site;
+      }
+    }
 
     // Self-declared micronations inside their host countries.
     for (const [id, status] of Object.entries(data.MICRONATIONS || {})) {
@@ -493,7 +503,7 @@
       else if (distance < 0.35) warnings.push(`About ${fmtDistance(km)} from home`);
     }
     if (city.family && prefs.company === "family") reasons.push("Family friendly");
-    if (city.unesco && (prefs.interests.culture || 0) > 0) reasons.push("UNESCO World Heritage Site");
+    if (city.unesco && (prefs.interests.culture || 0) > 0) reasons.push("World Heritage Site");
     if (adv) warnings.unshift(adv.level === "avoid" ? "Travel advisory: avoid all travel" : "Travel advisory: reconsider travel");
     if (prefs.vibe === "hidden" && city.pop <= 2) reasons.push("Off the beaten path");
     if (prefs.vibe === "iconic" && city.pop >= 5) reasons.push("A world-famous highlight");

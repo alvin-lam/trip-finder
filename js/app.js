@@ -46,17 +46,25 @@
     return parts.length > 1 ? `${parts.slice(0, -1).join(", ")} and ${parts[parts.length - 1]}` : parts[0];
   }
 
-  // Compact UNESCO World Heritage label; the full site name is in the tooltip.
+  // Compact World Heritage label; the full site name is in the tooltip.
   function unescoTag(city) {
     if (!city.unesco) return "";
-    return `<span class="unesco" title="UNESCO World Heritage: ${esc(city.unesco)}" aria-label="UNESCO World Heritage Site">UNESCO</span>`;
+    return `<span class="unesco" title="UNESCO World Heritage: ${esc(city.unesco)}" aria-label="World Heritage Site">WORLD HERITAGE</span>`;
+  }
+
+  // UNESCO Global Geopark and Biosphere Reserve labels (shown once their data exists).
+  function geoTags(city) {
+    return (
+      (city.geopark ? `<span class="ptag ptag--geopark" title="UNESCO Global Geopark: ${esc(city.geopark)}">GEOPARK</span>` : "") +
+      (city.biosphere ? `<span class="ptag ptag--biosphere" title="UNESCO Biosphere Reserve: ${esc(city.biosphere)}">BIOSPHERE</span>` : "")
+    );
   }
 
   function unescoFact(country) {
     const n = country.cities.filter((c) => c.unesco).length;
     if (!n) return "";
     const all = n === country.cities.length;
-    return `<span class="fact fact--unesco">🏛️ UNESCO World Heritage in ${all && n > 1 ? "all" : n} of ${country.cities.length} ${country.cities.length === 1 ? "place" : "places"}</span>`;
+    return `<span class="fact fact--unesco">🏛️ World Heritage in ${all && n > 1 ? "all" : n} of ${country.cities.length} ${country.cities.length === 1 ? "place" : "places"}</span>`;
   }
 
   const LGBTQ_LABELS = { welcoming: "LGBTQ+ welcoming", mixed: "LGBTQ+ mixed", caution: "LGBTQ+ caution" };
@@ -89,7 +97,7 @@
   }
 
   function placeTags(city) {
-    return capitalTags(city) + micronationTag(city) + unescoTag(city) + parkTag(city) + familyTag(city);
+    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + familyTag(city);
   }
 
   // Capital and famous parks and trails for a destination.
@@ -249,7 +257,7 @@
           lowF: lo === null ? null : E.cToF(lo),
           dailyCostUSD: E.COST_DAILY[city.country.cost],
           greatFor: topStrengths(city).join(", ") || "All-rounder",
-          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "UNESCO", city.nationalParks.length && "National park", city.family && "Family friendly"].filter(Boolean).join(", "),
+          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "World Heritage", city.geopark && "Global Geopark", city.biosphere && "Biosphere Reserve", city.nationalParks.length && "National park", city.family && "Family friendly"].filter(Boolean).join(", "),
         };
       })
       .sort((a, b) => (b.match ?? 0) - (a.match ?? 0));
@@ -784,7 +792,7 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">UNESCO Sites</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="unesco">World Heritage Sites</option>${index.cities.some((x) => x.geopark) ? `<option value="geopark">Global Geoparks</option>` : ""}${index.cities.some((x) => x.biosphere) ? `<option value="biosphere">Biosphere Reserves</option>` : ""}<option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
           <label>Travel advisory<select class="select" data-filter="advisory"><option value="">Any</option><option value="no">✅ No Advisory</option><option value="reconsider">⚠️ Reconsider</option><option value="avoid">⛔️ Do Not Travel</option></select></label>
           <label>Max daily cost (USD)<select class="select" data-filter="cost">${[5, 4, 3, 2, 1]
@@ -835,6 +843,8 @@
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
               if (f.only === "unesco" && !city.unesco) return false;
+              if (f.only === "geopark" && !city.geopark) return false;
+              if (f.only === "biosphere" && !city.biosphere) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
               if (f.kind === "micronation" && !city.micronation) return false;
@@ -847,6 +857,8 @@
                 matches.some((m) => m.place === city) ||
                 (city.micronation && (q.includes("micronation") || city.micronation.toLowerCase().includes(q))) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
+                (city.geopark && (q.includes("geopark") || city.geopark.toLowerCase().includes(q))) ||
+                (city.biosphere && (q.includes("biosphere") || city.biosphere.toLowerCase().includes(q))) ||
                 (interestQ && city.tags[interestQ.id] >= 4)
               );
             });
@@ -1192,9 +1204,11 @@
       }
       ${
         city.unesco
-          ? `<p class="unesco-line"><span class="unesco">UNESCO</span> World Heritage Site: <b>${esc(city.unesco)}</b></p>`
+          ? `<p class="unesco-line"><span class="unesco">WORLD HERITAGE</span> <b>${esc(city.unesco)}</b></p>`
           : ""
       }
+      ${city.geopark ? `<p class="unesco-line"><span class="ptag ptag--geopark">GEOPARK</span> UNESCO Global Geopark: <b>${esc(city.geopark)}</b></p>` : ""}
+      ${city.biosphere ? `<p class="unesco-line"><span class="ptag ptag--biosphere">BIOSPHERE</span> UNESCO Biosphere Reserve: <b>${esc(city.biosphere)}</b></p>` : ""}
       ${city.micronation ? `<p class="unesco-line"><span class="ptag ptag--micronation">MICRONATION</span> ${esc(city.micronation)}</p>` : ""}
       ${city.alsoIn.length ? `<p class="unesco-line">🌍 Shared site, also listed under ${city.alsoIn.map((o) => `${o.flag} ${esc(o.name)}`).join(", ")}</p>` : ""}
       ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
