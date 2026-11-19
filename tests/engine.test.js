@@ -531,3 +531,12 @@ test("places without residents are labelled by how visitors reach them", () => {
   assert.throws(() => E.buildIndex({ ...data, REMOTE: { "zz-nowhere": "uninhabited" } }), /matches no place/);
   assert.throws(() => E.buildIndex({ ...data, REMOTE: { "fr-paris": "closed" } }), /unknown kind/);
 });
+
+test("Hong Kong covers its famous sights and major country parks", () => {
+  const hk = index.countryById.hk;
+  assert.equal(hk.cities.length, 28);
+  for (const id of ["hk-ngong-ping-the-big-buddha", "hk-hong-kong-disneyland", "hk-ocean-park", "hk-wong-tai-sin-temple", "hk-west-kowloon-cultural-district"]) assert.ok(index.cityById[id], id);
+  const parks = new Set(hk.cities.flatMap((x) => x.nationalParks));
+  for (const cp of ["Tai Mo Shan", "Lion Rock", "Plover Cove", "Tai Tam", "Shing Mun", "Sai Kung East", "Lantau North", "Shek O", "Pok Fu Lam"]) assert.ok(parks.has(`${cp} Country Park`), cp);
+  assert.ok(hk.cities.every((x) => ["Hong Kong Island", "Kowloon", "New Territories"].includes(x.area)));
+});
