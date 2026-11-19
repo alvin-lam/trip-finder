@@ -540,3 +540,12 @@ test("Hong Kong covers its famous sights and major country parks", () => {
   for (const cp of ["Tai Mo Shan", "Lion Rock", "Plover Cove", "Tai Tam", "Shing Mun", "Sai Kung East", "Lantau North", "Shek O", "Pok Fu Lam"]) assert.ok(parks.has(`${cp} Country Park`), cp);
   assert.ok(hk.cities.every((x) => ["Hong Kong Island", "Kowloon", "New Territories"].includes(x.area)));
 });
+
+test("Singapore covers its famous sights and all four nature reserves", () => {
+  const sg = index.countryById.sg;
+  assert.equal(sg.cities.length, 23);
+  assert.ok(index.cityById["sg-gardens-by-the-bay"].family);
+  const parks = new Set(sg.cities.flatMap((x) => x.nationalParks));
+  for (const nr of ["Bukit Timah", "Central Catchment", "Sungei Buloh Wetland", "Labrador"]) assert.ok(parks.has(`${nr} ${nr.endsWith("Wetland") ? "Reserve" : "Nature Reserve"}`), nr);
+  assert.ok(index.cityById["sg-singapore-botanic-gardens"].unesco);
+});
