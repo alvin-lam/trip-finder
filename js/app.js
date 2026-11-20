@@ -1292,30 +1292,9 @@
       }
       ${
         countries.length
-          ? `<div class="section"><h3>Saved countries</h3><div class="cards">${countries.map((c) => exploreCountryCard(c, c.cities)).join("")}</div></div>`
+          ? `<div class="section"><h3>Saved countries</h3><div class="cards">${countries.map((c) => exploreCountryCard(c, c.cities, [], false)).join("")}</div></div>`
           : ""
       }`;
-    clampPlaces(el);
-  }
-
-  // Saved country cards on the Shortlist show their places 3 at a time.
-  const PLACES_STEP = 3;
-  function clampPlaces(root) {
-    for (const box of root.querySelectorAll(".card > .places")) {
-      const rows = [...box.querySelectorAll(".city-row")];
-      rows.forEach((r, i) => (r.hidden = i >= PLACES_STEP));
-      syncPlaceGroups(box);
-      if (rows.length > PLACES_STEP)
-        box.insertAdjacentHTML("beforeend", `<button class="btn btn--ghost btn--sm places-more" data-action="places-more">${placesMoreLabel(box)}</button>`);
-    }
-  }
-  // Region headings hide while none of their places show.
-  function syncPlaceGroups(box) {
-    for (const g of box.querySelectorAll(".area-group")) g.hidden = !g.querySelector(".city-row:not([hidden])");
-  }
-  function placesMoreLabel(box) {
-    const left = box.querySelectorAll(".city-row[hidden]").length;
-    return `Show ${Math.min(PLACES_STEP, left)} more <span class="muted">(${left} left)</span>`;
   }
 
   // ---------- Detail dialog ----------
@@ -1524,13 +1503,6 @@
     "region-more": (el) => {
       state.exploreShown.set(el.dataset.key, Number(el.dataset.shown) + cardsStep());
       renderExplore();
-    },
-    "places-more": (el) => {
-      const box = el.closest(".places");
-      [...box.querySelectorAll(".city-row[hidden]")].slice(0, PLACES_STEP).forEach((r) => (r.hidden = false));
-      syncPlaceGroups(box);
-      if (box.querySelector(".city-row[hidden]")) el.innerHTML = placesMoreLabel(box);
-      else el.remove();
     },
     "toggle-places": (el) => {
       const card = el.closest(".card");
