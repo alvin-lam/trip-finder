@@ -1292,7 +1292,7 @@
       }
       ${
         countries.length
-          ? `<div class="section"><h3>Saved countries</h3><div class="cards">${countries.map((c) => exploreCountryCard(c, c.cities, [], false)).join("")}</div></div>`
+          ? `<div class="section"><h3>Saved countries</h3><div class="cards">${countries.map((c) => exploreCountryCard(c, c.cities)).join("")}</div></div>`
           : ""
       }`;
   }
