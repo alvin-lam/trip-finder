@@ -1289,11 +1289,11 @@
     const alsoChip = ({ city: o, km }, i) =>
       `<button class="chip" data-action="open-city" data-id="${o.id}"${i >= ALSO_STEP ? " hidden" : ""}>${esc(o.name)}${km !== null ? ` <span class="chip__dist">${E.fmtDistance(km)}</span>` : ""}</button>`;
     // "View on map" offers Apple Maps, Google Maps and OpenStreetMap. Apple Maps and
-    // OpenStreetMap pin the place's coordinates; Google Maps searches its name.
+    // Google Maps search the place's name; OpenStreetMap pins its coordinates.
     const label = `${city.name}, ${city.country.name}`;
     const [lat, lon] = city.ll || [city.country.lat, city.country.lon];
     const maps = [
-      ["Apple Maps", `https://maps.apple.com/?q=${encodeURIComponent(label)}&ll=${lat},${lon}`],
+      ["Apple Maps", `https://maps.apple.com/?q=${encodeURIComponent(label)}`],
       ["Google Maps", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(label)}`],
       ["OpenStreetMap", `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=11/${lat}/${lon}`],
     ];
