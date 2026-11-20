@@ -1288,13 +1288,14 @@
     const others = E.nearestPlaces(city, city.country.cities.concat(city.country.linked));
     const alsoChip = ({ city: o, km }, i) =>
       `<button class="chip" data-action="open-city" data-id="${o.id}"${i >= ALSO_STEP ? " hidden" : ""}>${esc(o.name)}${km !== null ? ` <span class="chip__dist">${E.fmtDistance(km)}</span>` : ""}</button>`;
-    // "View on map" offers Apple Maps, Google Maps and OpenStreetMap, each searching
-    // the place's name and country.
+    // "View on map" offers Apple Maps, Google Maps and OpenStreetMap. Apple Maps and
+    // Google Maps search the place's name; OpenStreetMap pins its coordinates.
+    const [lat, lon] = city.ll || [city.country.lat, city.country.lon];
     const label = `${city.name}, ${city.country.name}`;
     const maps = [
       ["Apple Maps", `https://maps.apple.com/?q=${encodeURIComponent(label)}`],
       ["Google Maps", `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(label)}`],
-      ["OpenStreetMap", `https://www.openstreetmap.org/search?query=${encodeURIComponent(label)}`],
+      ["OpenStreetMap", `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=11/${lat}/${lon}`],
     ];
     $("#detail-body").innerHTML = `
       <button class="icon-btn detail__close" data-action="close-detail" aria-label="Close">✕</button>
