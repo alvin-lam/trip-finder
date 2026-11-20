@@ -133,6 +133,10 @@ button { font: inherit; color: inherit; }
 .hero__tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 10px; text-align: center; box-shadow: var(--shadow); }
 .hero__tile span { display: block; font-size: 1.8rem; }
 .hero__tile small { color: var(--muted); font-size: 0.78rem; font-weight: 600; }
+button.hero__tile { font: inherit; color: inherit; cursor: pointer; transition: transform 0.12s ease, border-color 0.12s ease; }
+button.hero__tile:hover { transform: translateY(-2px); border-color: var(--teal); }
+button.hero__tile:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.tile-pick { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 44px 12px 0; padding: 8px 12px; border-radius: 12px; background: var(--surface-2); font-weight: 600; font-size: 0.9rem; }
 .steps-preview { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; color: var(--muted); font-size: 0.9rem; }
 .steps-preview b { color: var(--text); }
 @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }

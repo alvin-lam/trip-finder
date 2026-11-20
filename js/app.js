@@ -427,10 +427,34 @@
             <span><b>1.</b> Interests</span><span><b>2.</b> Timing</span><span><b>3.</b> Budget & weather</span><span><b>4.</b> Travel style</span><span><b>5.</b> Starting point</span>
           </div>
         </div>
-        <div class="hero__art" aria-hidden="true">
-          ${tiles.map(([i, t]) => `<div class="hero__tile"><span>${i}</span><small>${t}</small></div>`).join("")}
+        <div class="hero__art">
+          ${tiles.map(([i, t]) => `<button type="button" class="hero__tile" data-action="tile-pick" data-tile="${t}" aria-label="Random ${t.toLowerCase()} destination"><span aria-hidden="true">${i}</span><small>${t}</small></button>`).join("")}
         </div>
       </div>`;
+  }
+
+  // Front-page tiles: each opens a random place that fits its theme. Places under a
+  // do-not-travel advisory and places nobody lives in are left out.
+  const TILE_PICKS = {
+    Beaches: ["beach", (c) => c.tags.beach >= 4],
+    History: ["history", (c) => c.tags.culture >= 4 && !!c.unesco],
+    Food: ["food", (c) => c.tags.food >= 4],
+    Mountains: ["mountain", (c) => c.tags.nature >= 4 && c.tags.adventure >= 3 && /mountain|peak|alp|hik|trek|volcan|glacier|summit|ridge|range/i.test(`${c.name} ${c.blurb}`)],
+    Safari: ["safari", (c) => (/safari/i.test(`${c.name} ${c.blurb}`) && !/(desert|seal|oyster|night) safari/i.test(c.blurb)) || (c.country.region === "ssa" && /wildlife|game|lions?|elephants?|gorillas?|rhinos?|big five/i.test(`${c.name} ${c.blurb}`))],
+    Nightlife: ["nightlife", (c) => c.tags.nightlife >= 4],
+  };
+  let lastTilePick = null;
+  function tilePick(tile) {
+    const [noun, fits] = TILE_PICKS[tile];
+    const pool = index.cities.filter((c) => fits(c) && !c.remote && !(c.country.advisory && c.country.advisory.level === "avoid"));
+    const choices = pool.length > 1 ? pool.filter((c) => c.id !== lastTilePick) : pool;
+    const city = choices[Math.floor(Math.random() * choices.length)];
+    lastTilePick = city.id;
+    openCity(city.id);
+    $("#detail-body").insertAdjacentHTML(
+      "afterbegin",
+      `<div class="tile-pick"><span>🎲 Random ${noun} pick</span><button class="btn btn--ghost btn--sm" data-action="tile-pick" data-tile="${tile}">Try another</button></div>`
+    );
   }
 
   // ---------- Plan: wizard ----------
@@ -1573,6 +1597,7 @@
       if (h && id) h.scrollIntoView({ behavior: "smooth", block: "start" });
     },
     "open-city": (el) => openCity(el.dataset.id),
+    "tile-pick": (el) => tilePick(el.dataset.tile),
     "open-country": (el) => {
       const c = index.countryById[el.dataset.id];
       if (c) openCity(c.cities[0].id);
