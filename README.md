@@ -1,4 +1,4 @@
-# Where to Travel
+# Trip Finder
 
 An interactive trip finder that helps visitors decide which region, country and cities to visit.
 

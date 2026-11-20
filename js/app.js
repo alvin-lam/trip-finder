@@ -1,4 +1,4 @@
-/* UI layer for Where to Travel. Plain JavaScript, no build step. */
+/* UI layer for Trip Finder. Plain JavaScript, no build step. */
 (function () {
   const E = window.WTT_ENGINE;
   const index = E.buildIndex(window.WTT_DATA);

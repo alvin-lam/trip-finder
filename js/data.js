@@ -1,5 +1,5 @@
 /*
- * Destination dataset for Where to Travel.
+ * Destination dataset for Trip Finder.
  *
  * City tag string: eight digits (0-5) in this order:
  *   beach, culture, food, nature, nightlife, adventure, shopping, relax

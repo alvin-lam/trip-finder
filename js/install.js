@@ -90,7 +90,7 @@
     el.innerHTML = `
       <img class="install__icon" src="img/icon-192.png" alt="" width="48" height="48" />
       <div class="install__text">
-        <h2 id="install-title">Add Where to Travel to your home screen</h2>
+        <h2 id="install-title">Add Trip Finder to your home screen</h2>
         ${body}
       </div>
       <button class="install__close" data-install="later" aria-label="Dismiss">✕</button>`;

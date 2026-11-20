@@ -1,5 +1,5 @@
 /*
- * Recommendation engine for Where to Travel.
+ * Recommendation engine for Trip Finder.
  * Pure functions with no DOM access, so it can be unit tested in Node.
  */
 (function (root) {
