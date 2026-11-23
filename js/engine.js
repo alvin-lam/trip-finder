@@ -206,12 +206,13 @@
       }
     }
 
-    // Major festivals and holidays: [name, months, note].
+    // Major festivals, holidays and Pride events: [name, months, note, "pride"?].
     for (const [id, list] of Object.entries(data.FESTIVALS || {})) {
       if (!cityById[id]) throw new Error(`FESTIVALS entry ${id} matches no place`);
-      cityById[id].festivals = list.map(([name, months, note]) => {
+      cityById[id].festivals = list.map(([name, months, note, kind]) => {
         if (!months.length || months.some((m) => !(m >= 1 && m <= 12))) throw new Error(`FESTIVALS ${id}: bad months for ${name}`);
-        return { name, months, note };
+        if (kind !== undefined && kind !== "pride") throw new Error(`FESTIVALS ${id}: unknown kind ${kind} for ${name}`);
+        return { name, months, note, pride: kind === "pride" };
       });
     }
 

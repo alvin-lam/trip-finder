@@ -567,3 +567,20 @@ test("festivals attach to places with valid months and notes", () => {
   assert.throws(() => E.buildIndex({ ...data, FESTIVALS: { "zz-nowhere": [["X", [1], "y"]] } }), /matches no place/);
   assert.throws(() => E.buildIndex({ ...data, FESTIVALS: { "fr-paris": [["X", [13], "y"]] } }), /bad months/);
 });
+
+test("Pride events are festivals marked pride", () => {
+  const pride = index.cities.flatMap((x) => x.festivals.filter((f) => f.pride).map((f) => ({ id: x.id, ...f })));
+  assert.ok(pride.length >= 110, `${pride.length} Pride events`);
+  const find = (id, name) => index.cityById[id].festivals.find((f) => f.name === name);
+  assert.deepEqual(find("br-rio-de-janeiro", "Rio Pride Parade").months, [11]);
+  assert.deepEqual(find("tw-taipei", "Taiwan Pride").months, [10]);
+  assert.deepEqual(find("jp-tokyo", "Tokyo Pride").months, [6]);
+  assert.ok(find("mx-mexico-city", "Marcha del Orgullo").pride);
+  assert.ok(find("au-sydney", "Sydney Gay & Lesbian Mardi Gras").pride);
+  // Other festivals stay unmarked, including New Orleans Mardi Gras.
+  assert.equal(find("us-new-orleans", "Mardi Gras").pride, false);
+  assert.equal(find("de-munich", "Oktoberfest").pride, false);
+  // Hong Kong has held no street parade since 2018, so it has no Pride event.
+  assert.ok(!index.cities.some((x) => x.country.id === "hk" && x.festivals.some((f) => f.pride)));
+  assert.throws(() => E.buildIndex({ ...data, FESTIVALS: { "fr-paris": [["X", [6], "y", "parade"]] } }), /unknown kind/);
+});
