@@ -845,7 +845,7 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">National Parks</option><option value="family">Family Friendly</option><option value="festival">Festivals</option></select></label>
           <label>Population<select class="select" data-filter="remote"><option value="">Any</option>${Object.entries(REMOTE_LABELS).map(([k, [, label]]) => `<option value="${k}">${label}</option>`).join("")}</select></label>
           <label>UNESCO sites<select class="select" data-filter="unesco"><option value="">Any</option><option value="wh">World Heritage</option>${unescoOption("geopark", "Global Geoparks")}${unescoOption("biosphere", "Biosphere Reserves")}</select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
@@ -914,13 +914,16 @@
             const matches = q && f.unesco !== "wh" ? factMatches(c, q) : [];
             const fests = festivalMatches(c, q, f.month);
             const cities = c.cities.concat(c.linked).filter((city) => {
-              if (f.month && !city.best.includes(f.month)) return false;
+              // With Show only "Festivals", the month picks festivals held then, not the best season.
+              if (f.month && f.only !== "festival" && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
               if (f.unesco === "wh" && !city.unesco) return false;
               if (f.unesco === "geopark" && !city.geopark) return false;
               if (f.unesco === "biosphere" && !city.biosphere) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
+              // With a "Good in" month, a festival must fall in that month.
+              if (f.only === "festival" && !city.festivals.some((x) => !f.month || x.months.includes(f.month))) return false;
               if (f.remote && city.remote !== f.remote) return false;
               if (f.kind === "micronation" && !city.micronation) return false;
               if (!q || countryHit) return true;
