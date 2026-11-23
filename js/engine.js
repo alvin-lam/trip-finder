@@ -113,6 +113,7 @@
           geopark: null,
           remote: null, // "uninhabited", "no-residents" or "expedition"
           biosphere: null,
+          festivals: [],
           unesco: null,
           family: null,
           country,
@@ -203,6 +204,15 @@
         if (!cityById[id]) throw new Error(`${key} entry ${id} matches no place`);
         cityById[id][field] = site;
       }
+    }
+
+    // Major festivals and holidays: [name, months, note].
+    for (const [id, list] of Object.entries(data.FESTIVALS || {})) {
+      if (!cityById[id]) throw new Error(`FESTIVALS entry ${id} matches no place`);
+      cityById[id].festivals = list.map(([name, months, note]) => {
+        if (!months.length || months.some((m) => !(m >= 1 && m <= 12))) throw new Error(`FESTIVALS ${id}: bad months for ${name}`);
+        return { name, months, note };
+      });
     }
 
     // Self-declared micronations inside their host countries.

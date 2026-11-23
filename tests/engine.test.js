@@ -549,3 +549,21 @@ test("Singapore covers its famous sights and all four nature reserves", () => {
   for (const nr of ["Bukit Timah", "Central Catchment", "Sungei Buloh Wetland", "Labrador"]) assert.ok(parks.has(`${nr} ${nr.endsWith("Wetland") ? "Reserve" : "Nature Reserve"}`), nr);
   assert.ok(index.cityById["sg-singapore-botanic-gardens"].unesco);
 });
+
+test("festivals attach to places with valid months and notes", () => {
+  const withFest = index.cities.filter((x) => x.festivals.length);
+  assert.ok(withFest.length >= 90, `${withFest.length} places with festivals`);
+  for (const x of withFest)
+    for (const f of x.festivals) {
+      assert.ok(f.name && f.note, `${x.id} festival text`);
+      assert.ok(f.months.length && f.months.every((m) => m >= 1 && m <= 12), `${x.id} ${f.name} months`);
+      assert.ok(!/—/.test(f.name + f.note), `${x.id} ${f.name} has no em dash`);
+    }
+  const names = (id) => index.cityById[id].festivals.map((f) => f.name);
+  assert.ok(names("br-rio-de-janeiro").includes("Rio Carnival"));
+  assert.ok(names("de-munich").includes("Oktoberfest"));
+  assert.ok(names("mx-oaxaca").includes("Día de Muertos"));
+  assert.deepEqual(index.cityById["fr-paris"].festivals.find((f) => f.name === "Bastille Day").months, [7]);
+  assert.throws(() => E.buildIndex({ ...data, FESTIVALS: { "zz-nowhere": [["X", [1], "y"]] } }), /matches no place/);
+  assert.throws(() => E.buildIndex({ ...data, FESTIVALS: { "fr-paris": [["X", [13], "y"]] } }), /bad months/);
+});

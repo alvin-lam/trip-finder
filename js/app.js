@@ -117,8 +117,16 @@
     return `<span class="ptag ptag--micronation" title="Micronation: ${esc(city.micronation)}">MICRONATION</span>`;
   }
 
+  // Major festivals and holidays held at a place.
+  const festivalWhen = (f) => f.months.map((m) => E.MONTHS[m - 1]).join(", ");
+  function festivalTag(city) {
+    if (!city.festivals.length) return "";
+    const list = city.festivals.map((f) => `${f.name} (${festivalWhen(f)})`).join("; ");
+    return `<span class="ptag ptag--festival" title="Festivals: ${esc(list)}">FESTIVAL</span>`;
+  }
+
   function placeTags(city) {
-    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + familyTag(city) + remoteTags(city);
+    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + festivalTag(city) + familyTag(city) + remoteTags(city);
   }
 
   // Capital and famous parks and trails for a destination.
@@ -904,6 +912,7 @@
               c.blurb.toLowerCase().includes(q) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             const matches = q && f.unesco !== "wh" ? factMatches(c, q) : [];
+            const fests = festivalMatches(c, q, f.month);
             const cities = c.cities.concat(c.linked).filter((city) => {
               if (f.month && !city.best.includes(f.month)) return false;
               if (f.interest && city.tags[f.interest] < 4) return false;
@@ -921,6 +930,7 @@
                 (city.area && city.area.toLowerCase().includes(q)) ||
                 city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
                 matches.some((m) => m.place === city) ||
+                fests.some((m) => m.place === city) ||
                 (city.micronation && (q.includes("micronation") || city.micronation.toLowerCase().includes(q))) ||
                 (city.unesco && (q.includes("unesco") || q.includes("heritage") || city.unesco.toLowerCase().includes(q))) ||
                 (city.geopark && (q.includes("geopark") || city.geopark.toLowerCase().includes(q))) ||
@@ -929,7 +939,10 @@
               );
             });
             // A "National", "UNESCO" or trail match stays only when it opens a place listed in these results.
-            const kept = matches.filter((m) => m.untagged || !LINK_ONLY.test(`${m.label} ${m.detail || ""} ${m.system || ""}`) || (m.place && cities.includes(m.place)));
+            const kept = matches
+              .filter((m) => m.untagged || !LINK_ONLY.test(`${m.label} ${m.detail || ""} ${m.system || ""}`) || (m.place && cities.includes(m.place)))
+              // Festivals show only for places that pass the other filters.
+              .concat(fests.filter((m) => cities.includes(m.place)));
             return { c, cities, matches: kept };
           })
           .filter((x) => x.cities.length || x.matches.length);
@@ -989,6 +1002,7 @@
     const facts = n("park");
     if (facts) parts.push(`${facts} matching ${facts === 1 ? "park or trail" : "parks or trails"}`);
     if (n("site")) parts.push(`${n("site")} national park system ${n("site") === 1 ? "site" : "sites"}`);
+    if (n("festival")) parts.push(`${n("festival")} ${n("festival") === 1 ? "festival" : "festivals"}`);
     return parts.map((x) => ` · ${x}`).join("");
   }
 
@@ -997,6 +1011,27 @@
   // Anything named or designated "National" (parks, seashores, memorials, every US National
   // Park System unit), anything named "UNESCO", and trails
   // (treks, tracks, ways, paths, walks) show in search only with a linked place.
+  // Festival search. A festival's name matches from three letters ("carnival", "holi",
+  // "oktoberfest"). Words such as "festival" or "holiday" list every festival, and a
+  // month in the search ("festivals in july") or the "Good in" filter narrows them.
+  const FESTIVAL_WORDS = /\b(festivals?|festivities|holidays?|celebrations?|fiestas?)\b/;
+  function festivalMatches(c, q, month) {
+    const qn = searchKey(q);
+    if (qn.length < 3) return [];
+    const general = FESTIVAL_WORDS.test(qn);
+    const named = E.MONTHS_LONG.findIndex((m) => new RegExp(`\\b${m.toLowerCase()}\\b`).test(qn)) + 1;
+    const want = named || month || 0;
+    const out = [];
+    for (const place of c.cities.concat(c.linked)) {
+      for (const fest of place.festivals) {
+        if (want && !fest.months.includes(want)) continue;
+        if (!general && !searchKey(fest.name).includes(qn)) continue;
+        out.push({ kind: "festival", label: `🎉 ${fest.name}`, detail: `${place.name} · ${festivalWhen(fest)}`, place });
+      }
+    }
+    return out;
+  }
+
   const LINK_ONLY = /\bnational\b|\bunesco\b|\b(trails?|tracks?|treks?|way|camino|path|route|walk|circuit)\b/i;
   function factMatches(c, q) {
     if (q.length < 3) return [];
@@ -1346,6 +1381,9 @@
       ${city.geopark ? `<p class="unesco-line"><span class="ptag ptag--geopark">GEOPARK</span> UNESCO Global Geopark: <b>${esc(city.geopark)}</b></p>` : ""}
       ${city.biosphere ? `<p class="unesco-line"><span class="ptag ptag--biosphere">BIOSPHERE</span> UNESCO Biosphere Reserve: <b>${esc(city.biosphere)}</b></p>` : ""}
       ${city.micronation ? `<p class="unesco-line"><span class="ptag ptag--micronation">MICRONATION</span> ${esc(city.micronation)}</p>` : ""}
+      ${city.festivals
+        .map((f) => `<p class="unesco-line"><span class="ptag ptag--festival">FESTIVAL</span> <b>${esc(f.name)}</b> <span class="muted">${esc(festivalWhen(f))} · ${esc(f.note)}</span></p>`)
+        .join("")}
       ${city.alsoIn.length ? `<p class="unesco-line">🌍 Shared site, also listed under ${city.alsoIn.map((o) => `${o.flag} ${esc(o.name)}`).join(", ")}</p>` : ""}
       ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
