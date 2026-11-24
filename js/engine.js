@@ -106,6 +106,7 @@
           isCapital: false,
           metros: [],
           nationalParks: [],
+          historicSites: [],
           alsoIn: [],
           ll: null,
           ranges: null,
@@ -217,6 +218,13 @@
       });
     }
 
+    // Historic sites whose gateway place is in another destination, such as a US site
+    // in Puerto Rico: { placeId: name | [names] }.
+    for (const [id, names] of Object.entries(data.HISTORIC_EXTRA || {})) {
+      if (!cityById[id]) throw new Error(`HISTORIC_EXTRA entry ${id} matches no place`);
+      for (const n of [].concat(names)) if (!cityById[id].historicSites.includes(n)) cityById[id].historicSites.push(n);
+    }
+
     // Self-declared micronations inside their host countries.
     for (const [id, status] of Object.entries(data.MICRONATIONS || {})) {
       if (!cityById[id]) throw new Error(`MICRONATIONS entry ${id} matches no place`);
@@ -311,7 +319,9 @@
   // Marks every place that is, or contains, a national park, from four sources: US and
   // Canadian park system sites, UNESCO site names, place names, and the country's
   // famous parks list.
-  const NP_SITE_TYPES = /^National (Park|Park Reserve|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)$/;
+  const HISTORIC_SITE_TYPES = /^(National (Historic Site|Historical Park|Memorial|Battlefield( Park| Site)?|Military Park)|International Historic Site)$/;
+  // Mexico's biosphere reserves and natural monuments (CONANP) count as national parks too.
+  const NP_SITE_TYPES = /^(National (Park|Park Reserve|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)|Biosphere Reserve|Natural Monument)$/;
 
   function markNationalParks(countries, extra) {
     for (const c of countries) {
@@ -331,6 +341,11 @@
       for (const site of c.sites || []) {
         // National monuments, preserves, reserves, recreation areas, seashores and lakeshores
         // carry the NATIONAL PARK label too.
+        // Historic sites, historical parks, memorials and battlefields carry the HISTORIC SITE label.
+        if (HISTORIC_SITE_TYPES.test(site.type)) {
+          for (const place of placesForSite(c, site)) if (!place.historicSites.includes(site.name)) place.historicSites.push(site.name);
+          continue;
+        }
         if (NP_SITE_TYPES.test(site.type)) {
           for (const place of placesForSite(c, site)) add(place, site.name);
         }

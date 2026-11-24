@@ -104,6 +104,7 @@ function placePage(city) {
     `<li>Daily cost: ${COST[c.cost]}</li>`,
     city.unesco ? `<li>World Heritage: ${esc(city.unesco)}</li>` : "",
     city.nationalParks.length ? `<li>National parks: ${esc(city.nationalParks.join(", "))}</li>` : "",
+    city.historicSites.length ? `<li>Historic sites: ${esc(city.historicSites.join(", "))}</li>` : "",
     city.geopark ? `<li>UNESCO Global Geopark: ${esc(city.geopark)}</li>` : "",
     city.biosphere ? `<li>UNESCO Biosphere Reserve: ${esc(city.biosphere)}</li>` : "",
     ...city.festivals.map((f) => `<li>${f.pride ? "Pride" : f.market ? "Christmas market" : "Festival"}: ${esc(f.name)} (${f.months.map((m) => E.MONTHS[m - 1]).join(", ")}). ${esc(f.note)}</li>`),

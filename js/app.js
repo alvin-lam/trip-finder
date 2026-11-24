@@ -126,8 +126,13 @@
     return `<span class="ptag ptag--festival" title="Festivals: ${esc(list)}">FESTIVAL</span>`;
   }
 
+  function historicTag(city) {
+    if (!city.historicSites.length) return "";
+    return `<span class="ptag ptag--historic" title="Historic site: ${esc(city.historicSites.join(", "))}">HISTORIC SITE</span>`;
+  }
+
   function placeTags(city) {
-    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + festivalTag(city) + familyTag(city) + remoteTags(city);
+    return capitalTags(city) + micronationTag(city) + unescoTag(city) + geoTags(city) + parkTag(city) + historicTag(city) + festivalTag(city) + familyTag(city) + remoteTags(city);
   }
 
   // Capital and famous parks and trails for a destination.
@@ -927,6 +932,7 @@
     // UK, UAE, FR) lists just those destinations.
     const qn = searchKey(q);
     const exact = new Set(qn ? index.countries.filter((c) => (c.code && c.code.toLowerCase() === qn) || c.aliases.some((a) => searchKey(a) === qn)) : []);
+    const unlinked = [];
     const blocks = index.regions
       .filter((r) => !f.region || r.id === f.region)
       .map((r) => {
@@ -986,7 +992,9 @@
               .filter((m) => m.untagged || !LINK_ONLY.test(`${m.label} ${m.detail || ""} ${m.system || ""}`) || (m.place && cities.includes(m.place)))
               // Festivals show only for places that pass the other filters.
               .concat(fests.filter((m) => cities.includes(m.place)));
-            return { c, cities, matches: kept };
+            // Sites with no place nearby go to their own card, apart from the country cards.
+            for (const m of kept) if (m.untagged) unlinked.push({ ...m, c });
+            return { c, cities, matches: kept.filter((m) => !m.untagged) };
           })
           .filter((x) => x.cities.length || x.matches.length);
         total += countries.reduce((a, x) => a + x.cities.length, 0);
@@ -995,10 +1003,11 @@
       })
       .filter((b) => b.countries.length);
 
-    if (!blocks.length)
+    for (const m of unlinked) kindTotals[m.kind] = (kindTotals[m.kind] || 0) + 1;
+    if (!blocks.length && !unlinked.length)
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
-    const head = `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>`;
+    const head = `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>${unlinkedCard(unlinked)}`;
     if (f.kind === "territory") {
       // Territories are listed under the country they belong to.
       const bySov = new Map();
@@ -1049,6 +1058,23 @@
     if (n("pride")) parts.push(`${n("pride")} Pride ${n("pride") === 1 ? "event" : "events"}`);
     if (n("market")) parts.push(`${n("market")} Christmas ${n("market") === 1 ? "market" : "markets"}`);
     return parts.map((x) => ` · ${x}`).join("");
+  }
+
+  // Parks and sites that match the search but have no place in the app nearby, in one
+  // card of their own: name, country, and the state or province.
+  function unlinkedCard(list) {
+    if (!list.length) return "";
+    const q = state.explore.q.trim().toLowerCase();
+    const item = (m) =>
+      `<li><span class="unlinked__name">${highlight(m.label, q)}</span> <span class="search-matches__detail">${m.c.flag} ${esc(m.c.name)} · ${esc(m.detail.replace(/ · no place in the app( nearby| links to it yet)$/, ""))}</span></li>`;
+    const first = list.slice(0, MATCHES_SHOWN).map(item).join("");
+    const rest = list.slice(MATCHES_SHOWN);
+    return `<article class="card unlinked" aria-label="Sites with no place nearby">
+        <div class="card__head"><span class="card__flag" aria-hidden="true">📍</span><div class="card__title"><h3>No place nearby</h3><div class="card__meta">${list.length} matching ${list.length === 1 ? "site has" : "sites have"} no Trip Finder place within about 1.5 hours</div></div></div>
+        <ul class="unlinked__list">${first}</ul>${
+          rest.length ? `<details class="more"><summary>Show ${rest.length} more</summary><ul class="unlinked__list">${rest.map(item).join("")}</ul></details>` : ""
+        }
+      </article>`;
   }
 
   // Parks and trails whose names contain the search text.
@@ -1121,12 +1147,16 @@
   // the data (they still label places with NATIONAL PARK) but are not search results.
   const HIDDEN_CA_SITES = /^National (Park|Park Reserve|Historic Site)$/;
   const HIDDEN_CA_PARKS = /National (Park|Park Reserve|Historic Site)\b/;
-  const UNTAGGED_PARK = /^National (Park( Reserve| and Preserve)?|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)$/;
+  const UNTAGGED_PARK = /^(National (Park( Reserve| and Preserve)?|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)|Biosphere Reserve|Natural Monument)$/;
+  // Historic sites with no place nearby also answer a search for their name.
+  const UNTAGGED_HISTORIC = /^(National (Historic Site|Historical Park|Memorial|Battlefield( Park| Site)?|Military Park)|International Historic Site)$/;
   // A park's own name without its designation, so "national park" alone does not list
   // every unlinked park: "Big Bend National Park" -> "big bend".
   const ownName = (name) =>
     name
       .replace(/\b(Marine )?National (Park|Monument|Preserve|Reserve|Historical Reserve|Recreation Area|Seashore|Lakeshore)\b( Reserve| and Preserve| and Historic Shrine)?/i, "")
+      .replace(/\b(International|National) (Historic Site|Historical Park|Memorial|Battlefield( Park| Site)?|Military Park)\b/i, "")
+      .replace(/\b(Biosphere Reserve|Natural Monument)$/i, "")
       .trim()
       .toLowerCase();
   function siteMatches(c, q) {
@@ -1134,9 +1164,9 @@
     for (const site of c.sites) {
       const byName = site.name.toLowerCase().includes(q);
       // A park can open a place in another destination, such as a US park in the US Virgin Islands.
-      const place = E.placeForSite(c, site) || index.cities.find((x) => x.nationalParks.includes(site.name)) || null;
+      const place = E.placeForSite(c, site) || index.cities.find((x) => x.nationalParks.includes(site.name) || x.historicSites.includes(site.name)) || null;
       // A national park with no place in the app still answers a search for its name.
-      if (!place && UNTAGGED_PARK.test(site.type)) {
+      if (!place && (UNTAGGED_PARK.test(site.type) || UNTAGGED_HISTORIC.test(site.type))) {
         if (ownName(site.name).includes(q)) out.push({ kind: "site", system: site.system, label: site.name, detail: `${site.area} · no place in the app nearby`, place: null, untagged: true });
         continue;
       }
@@ -1446,6 +1476,7 @@
         .join("")}
       ${city.alsoIn.length ? `<p class="unesco-line">🌍 Shared site, also listed under ${city.alsoIn.map((o) => `${o.flag} ${esc(o.name)}`).join(", ")}</p>` : ""}
       ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
+      ${city.historicSites.length ? `<p class="unesco-line"><span class="ptag ptag--historic">HISTORIC SITE</span> ${esc(city.historicSites.join(", "))}</p>` : ""}
       ${city.family ? `<p class="unesco-line"><span class="family">FAMILY</span> Family friendly: <b>${esc(city.family)}</b></p>` : ""}
       ${city.metros
         .map(

@@ -411,9 +411,10 @@ test("US, Canada and Mexico parks reach their gateway places", () => {
   assert.ok(np("us-yellowstone").includes("Grand Teton National Park"));
   assert.deepEqual(np("ca-windsor"), ["Point Pelee National Park"]);
   assert.deepEqual(np("mx-tulum"), ["Tulum National Park"]);
-  assert.deepEqual(np("mx-sian-ka-an"), ["Sian Ka'an Biosphere Reserve"]);
+  assert.ok(np("mx-sian-ka-an").includes("Sian Ka'an Biosphere Reserve"));
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
-  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [112, 23, 25]);
+  // Mexico's count includes CONANP's national parks, biosphere reserves and natural monuments.
+  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [112, 23, 62]);
 });
 
 test("Saint Pierre and Miquelon is a French territory near Canada", () => {
@@ -697,4 +698,26 @@ test("major cities and landmarks added in the 32-place sweep are complete", () =
   assert.ok(np("fr-marseille").includes("Calanques National Park"));
   assert.ok(index.cityById["de-nuremberg"].festivals.some((f) => f.market));
   assert.ok(index.cityById["in-kolkata"].festivals.some((f) => f.name === "Durga Puja"));
+});
+
+test("historic sites link to a gateway place and carry their own label", () => {
+  const hs = (id) => index.cityById[id].historicSites;
+  const withHistoric = index.cities.filter((c) => c.historicSites.length);
+  assert.ok(withHistoric.length >= 120, `${withHistoric.length} places with historic sites`);
+  // Historic sites never mix into the national park label.
+  for (const c of withHistoric) for (const n of c.historicSites) assert.ok(!c.nationalParks.includes(n), `${c.id} ${n}`);
+  assert.ok(hs("us-philadelphia").some((n) => /Independence/.test(n)));
+  assert.ok(hs("us-boston").some((n) => /Boston/.test(n)));
+  assert.throws(() => E.buildIndex({ ...data, HISTORIC_EXTRA: { "zz-nowhere": "x" } }), /matches no place/);
+});
+
+test("Mexico's protected areas come from CONANP's register", () => {
+  const fs = require("node:fs");
+  const conanp = JSON.parse(fs.readFileSync(`${__dirname}/../tools/parks/mexico_anp.json`, "utf8"));
+  const mx = index.countryById.mx.sites;
+  assert.equal(mx.length, conanp.count);
+  assert.ok(conanp.areas.every((a) => a.state && /simec\.conanp\.gob\.mx/.test(a.url)));
+  const kinds = new Set(mx.map((s) => s.type));
+  assert.deepEqual([...kinds].sort(), ["Biosphere Reserve", "National Park", "Natural Monument"]);
+  assert.ok(index.cities.some((c) => c.nationalParks.includes("Cumbres de Monterrey National Park")));
 });
