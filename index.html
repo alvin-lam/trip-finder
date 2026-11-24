@@ -5,7 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="claude:viewport-fit-sides" content="cover" />
   <title>Trip Finder | All Trips Considered</title>
-  <meta name="description" content="Answer a few quick questions and get ranked regions, countries and cities to visit, with a suggested itinerary." />
+  <meta name="description" content="Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tripfinder.alltripsconsidered.com/" />
+
+  <!-- Link previews (Facebook, iMessage, Slack, LinkedIn, X) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="All Trips Considered" />
+  <meta property="og:title" content="Trip Finder | All Trips Considered" />
+  <meta property="og:description" content="Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites." />
+  <meta property="og:url" content="https://tripfinder.alltripsconsidered.com/" />
+  <meta property="og:image" content="https://tripfinder.alltripsconsidered.com/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="All Trips Considered Trip Finder: find where to travel next." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trip Finder | All Trips Considered" />
+  <meta name="twitter:description" content="Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites." />
+  <meta name="twitter:image" content="https://tripfinder.alltripsconsidered.com/img/og-image.png" />
+  <meta name="twitter:image:alt" content="All Trips Considered Trip Finder: find where to travel next." />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://tripfinder.alltripsconsidered.com/#website",
+        "url": "https://tripfinder.alltripsconsidered.com/",
+        "name": "Trip Finder",
+        "alternateName": "All Trips Considered Trip Finder",
+        "description": "Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://www.alltripsconsidered.com/#organization" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://tripfinder.alltripsconsidered.com/#app",
+        "name": "Trip Finder",
+        "url": "https://tripfinder.alltripsconsidered.com/",
+        "description": "Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites.",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Any (web browser)",
+        "browserRequirements": "Requires JavaScript",
+        "image": "https://tripfinder.alltripsconsidered.com/img/og-image.png",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@id": "https://www.alltripsconsidered.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.alltripsconsidered.com/#organization",
+        "name": "All Trips Considered",
+        "url": "https://www.alltripsconsidered.com",
+        "logo": "https://tripfinder.alltripsconsidered.com/img/icon-512.png"
+      }
+    ]
+  }
+  </script>
   <link rel="icon" href="img/favicon.ico" sizes="48x48" />
   <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="img/icon-192.png" type="image/png" sizes="192x192" />
@@ -43,6 +101,11 @@
 
   <main id="main" class="container" tabindex="-1">
     <!-- Views are rendered by js/app.js -->
+    <noscript>
+      <h1>Trip Finder: find where to travel next</h1>
+      <p>Trip Finder ranks more than 2,500 places in 249 countries and territories by the month you travel, your budget and what you enjoy. It also covers festivals, Pride events, national parks and World Heritage sites.</p>
+      <p>Trip Finder needs JavaScript. Please turn it on to plan a trip.</p>
+    </noscript>
     <section id="view-plan" class="view"></section>
     <section id="view-explore" class="view" hidden></section>
     <section id="view-shortlist" class="view" hidden></section>

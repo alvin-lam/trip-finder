@@ -1,7 +1,7 @@
 {
   "name": "Trip Finder | All Trips Considered",
   "short_name": "Trip Finder",
-  "description": "Answer a few quick questions and get ranked regions, countries and cities to visit, with a suggested itinerary.",
+  "description": "Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
