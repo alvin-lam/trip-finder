@@ -1825,22 +1825,34 @@ ${sel}[data-theme="dark"] { ${dark} }`;
         .join("")}</div>`;
   }
 
-  function applyAppearance() {
+  // The scheme in use: today's for Seasonal, the picked one, or none for Classic.
+  function activeScheme() {
+    if (state.colors === "seasonal") return E.seasonalScheme(new Date()).id;
+    return E.SEASON_SCHEMES[state.colors] ? state.colors : null;
+  }
+
+  // Colors the page (and the button's emoji) with a scheme, or the classic colors for null.
+  function paintScheme(id) {
     const root = document.documentElement;
-    const scheme = E.seasonalScheme(new Date());
-    const mode = root.dataset.theme || "system";
-    // Seasonal follows the date; a chosen theme stays until the visitor changes it.
-    const id = state.colors === "seasonal" ? scheme.id : E.SEASON_SCHEMES[state.colors] ? state.colors : null;
-    const chosen = id && E.SEASON_SCHEMES[id];
     if (id) {
       root.dataset.season = id;
       seasonStyle.textContent = seasonCSS(id);
-      themeBtn.textContent = chosen.icon;
+      themeBtn.textContent = E.SEASON_SCHEMES[id].icon;
     } else {
       delete root.dataset.season;
       seasonStyle.textContent = "";
       themeBtn.textContent = "◐";
     }
+  }
+
+  function applyAppearance() {
+    const root = document.documentElement;
+    const scheme = E.seasonalScheme(new Date());
+    const mode = root.dataset.theme || "system";
+    // Seasonal follows the date; a chosen theme stays until the visitor changes it.
+    const id = activeScheme();
+    const chosen = id && E.SEASON_SCHEMES[id];
+    paintScheme(id);
     const label = `Appearance: ${mode} mode, ${id ? `${chosen.label} colors${state.colors === "seasonal" ? " (seasonal)" : ""}` : "classic colors"}`;
     themeBtn.setAttribute("aria-label", label);
     themeBtn.title = label;
@@ -1866,6 +1878,7 @@ ${sel}[data-theme="dark"] { ${dark} }`;
   }
 
   function setMenu(open) {
+    if (!open) endPreview();
     menu.hidden = !open;
     themeBtn.setAttribute("aria-expanded", String(open));
     if (open) (menu.querySelector('[aria-checked="true"]') || menu.querySelector("button")).focus();
@@ -1890,6 +1903,25 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     setMenu(false);
     themeBtn.focus();
   });
+  // With a mouse or trackpad, hovering a color choice previews it across the page;
+  // leaving it (or closing the menu) restores the colors in use. Touch screens pick on tap.
+  const canHover = window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches;
+  let previewing = false;
+  function endPreview() {
+    if (!previewing) return;
+    previewing = false;
+    paintScheme(activeScheme());
+  }
+  menu.addEventListener("pointerover", (e) => {
+    if (!canHover || e.pointerType === "touch") return;
+    const b = e.target.closest("[data-colors]");
+    if (!b) return endPreview();
+    previewing = true;
+    const v = b.dataset.colors;
+    paintScheme(v === "seasonal" ? E.seasonalScheme(new Date()).id : v === "classic" ? null : v);
+  });
+  menu.addEventListener("pointerleave", endPreview);
+
   menu.addEventListener("keydown", (e) => {
     const items = [...menu.querySelectorAll("button")];
     const i = items.indexOf(document.activeElement);

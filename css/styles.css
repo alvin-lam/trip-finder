@@ -125,6 +125,8 @@ button { font: inherit; color: inherit; }
 .appearance-menu .theme-swatch { justify-content: center; width: auto; aspect-ratio: 1; padding: 0; border-radius: 50%; font-size: 1.05rem; border: 2px solid var(--sw); background: color-mix(in srgb, var(--sw) 14%, var(--surface)); }
 .appearance-menu .theme-swatch[aria-checked="true"] { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--sw); }
 .appearance-menu .theme-swatch[aria-checked="true"]::after { content: none; }
+@media (hover: hover) and (pointer: fine) { .appearance-menu .theme-swatch { transition: transform 0.12s ease; } .appearance-menu .theme-swatch:hover { transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .appearance-menu .theme-swatch { transition: none; } }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .appearance-menu .theme-swatch { --sw: var(--sw-dark); } }
 :root[data-theme="dark"] .appearance-menu .theme-swatch { --sw: var(--sw-dark); }
 /* Holidays add a thin colored stripe under the top bar. */
