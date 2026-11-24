@@ -527,3 +527,20 @@ mark { background: var(--accent); color: var(--accent-ink); border-radius: 3px; 
 
 .region-more { display: flex; margin: 16px auto 0; padding: 10px 22px; }
 .region-more .muted { font-weight: 500; }
+
+/* ---------- Travel Tools (footer) ---------- */
+/* Desktop: a row of square-cornered buttons. Phones: a plain list. */
+.tools { margin: 20px auto 0; max-width: 1120px; }
+.tools__title { font-family: var(--font); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.tools__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.tools__link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--border); border-radius: 0; background: var(--surface); color: var(--text); font-weight: 600; font-size: 0.92rem; text-decoration: none; }
+.tools__link:hover, .tools__link:focus-visible { border-color: var(--accent); color: var(--accent); }
+.tools__link[aria-current="page"] { border-color: var(--accent); background: var(--accent-soft); }
+@media (max-width: 640px) {
+  .tools__list { display: grid; gap: 0; justify-content: stretch; border-top: 1px solid var(--border); text-align: left; }
+  .tools__link { display: flex; width: 100%; padding: 12px 4px; border: 0; border-bottom: 1px solid var(--border); background: none; }
+  .tools__link[aria-current="page"] { background: none; color: var(--accent); border-bottom-color: var(--border); }
+  /* Room below the list so the back-to-top button never covers the last tool. */
+  .footer { padding-bottom: 88px; }
+  .tools__link::after { content: "›"; margin-left: auto; color: var(--muted); font-size: 1.2rem; }
+}
