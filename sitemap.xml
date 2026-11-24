@@ -51,6 +51,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/fr-loire-valley/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/fr-maison-carree-nimes/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/fr-vezelay/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/fr-marseille/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-london/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-edinburgh/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-inverness-the-highlands/</loc></url>
@@ -86,6 +87,12 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-the-flow-country/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-forth-bridge/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-northwest-wales-slate-landscape/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-liverpool/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-glasgow/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-oxford/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-cambridge/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-cotswolds/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/gb-windsor-castle/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/nl-amsterdam/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/nl-utrecht/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/nl-rotterdam/</loc></url>
@@ -174,6 +181,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/it-villa-d-este/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/it-langhe-monferrato/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/it-seborga/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/it-capri/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/es-barcelona/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/es-seville/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/es-madrid/</loc></url>
@@ -225,6 +233,9 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/es-tower-of-hercules/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/es-alcala-de-henares/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/es-vizcaya-bridge/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/es-malaga-the-costa-del-sol/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/es-ronda/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/es-lanzarote/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gr-athens/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gr-santorini/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/gr-crete/</loc></url>
@@ -464,6 +475,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/th-si-thep/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/th-thungyai-huai-kha-khaeng/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/th-wat-phra-mahathat-nakhon-si-thammarat/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/th-pattaya/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-hanoi/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-hoi-an/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-ha-long-bay/</loc></url>
@@ -476,6 +488,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-my-son/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-trang-an/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-yen-tu/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/vn-da-nang/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/id-ubud-bali/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/id-seminyak-bali/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/id-yogyakarta/</loc></url>
@@ -549,6 +562,9 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/in-sundarbans-india/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/in-chandigarh-capitol-complex/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/in-western-ghats/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/in-kolkata/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/in-bengaluru/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/in-amritsar/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/lk-kandy/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/lk-ella/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/lk-galle/</loc></url>
@@ -646,6 +662,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/eg-pyramids-of-giza/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/eg-mount-sinai-st-catherine-s/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/eg-wadi-al-hitan/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/eg-sharm-el-sheikh/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/za-cape-town/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/za-greater-kruger/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/za-garden-route/</loc></url>
@@ -1104,6 +1121,11 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/us-poverty-point/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/us-hopewell-ceremonial-earthworks/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/us-okefenokee-swamp/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/us-key-west-the-florida-keys/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/us-sedona/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/us-monument-valley/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/us-page-antelope-canyon/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/us-aspen/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-banff/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-jasper/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-vancouver/</loc></url>
@@ -1170,6 +1192,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-writing-on-stone-aisinai-pi/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-dawson-city-tr-ondek-klondike/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-anticosti-island/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/ca-whistler/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-mexico-city/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-oaxaca/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-tulum/</loc></url>
@@ -1271,6 +1294,7 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-revillagigedo-islands/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-real-de-catorce-wirikuta/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-gulf-of-california-islands/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/mx-playa-del-carmen/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/cr-arenal-la-fortuna/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/cr-manuel-antonio/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/cr-monteverde/</loc></url>
@@ -1413,6 +1437,8 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/au-purnululu-bungle-bungles/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/au-shark-bay/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/au-willandra-lakes-mungo/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/au-brisbane/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/au-adelaide/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/nz-queenstown/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/nz-auckland/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/nz-rotorua/</loc></url>
@@ -1523,6 +1549,12 @@
   <url><loc>https://tripfinder.alltripsconsidered.com/place/de-wurzburg-residence/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/de-zollverein-coal-mine/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/de-moravian-church-settlements/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/de-nuremberg/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/de-dresden/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/de-leipzig/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/de-dusseldorf/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/de-heidelberg/</loc></url>
+  <url><loc>https://tripfinder.alltripsconsidered.com/place/de-rothenburg-ob-der-tauber/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ch-zermatt/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ch-lucerne/</loc></url>
   <url><loc>https://tripfinder.alltripsconsidered.com/place/ch-interlaken/</loc></url>

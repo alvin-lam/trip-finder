@@ -398,7 +398,7 @@ test("US, Canada and Mexico parks reach their gateway places", () => {
   assert.deepEqual(np("mx-tulum"), ["Tulum National Park"]);
   assert.deepEqual(np("mx-sian-ka-an"), ["Sian Ka'an Biosphere Reserve"]);
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
-  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [109, 23, 25]);
+  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [112, 23, 25]);
 });
 
 test("Saint Pierre and Miquelon is a French territory near Canada", () => {
@@ -667,4 +667,19 @@ test("national monuments, preserves, reserves, recreation areas, seashores and l
   // A site more than about 1.5 hours from any place stays unlinked.
   assert.ok(!index.cities.some((x) => x.nationalParks.includes("Mill Springs Battlefield National Monument")));
   assert.ok(!index.cities.some((x) => x.nationalParks.includes("Noatak National Preserve")));
+});
+
+test("major cities and landmarks added in the 32-place sweep are complete", () => {
+  const ids = ["de-nuremberg", "de-dresden", "de-leipzig", "de-dusseldorf", "de-heidelberg", "de-rothenburg-ob-der-tauber", "gb-liverpool", "gb-glasgow", "gb-oxford", "gb-cambridge", "gb-cotswolds", "gb-windsor-castle", "fr-marseille", "it-capri", "es-malaga-the-costa-del-sol", "es-ronda", "es-lanzarote", "us-key-west-the-florida-keys", "us-sedona", "us-monument-valley", "us-page-antelope-canyon", "us-aspen", "ca-whistler", "mx-playa-del-carmen", "au-brisbane", "au-adelaide", "in-kolkata", "in-bengaluru", "in-amritsar", "th-pattaya", "vn-da-nang", "eg-sharm-el-sheikh"];
+  for (const id of ids) {
+    const c = index.cityById[id];
+    assert.ok(c, id);
+    assert.ok(c.area && c.ll && c.ranges && c.temps, `${id} area, coordinates, range and highs`);
+  }
+  const np = (id) => index.cityById[id].nationalParks;
+  assert.ok(np("us-sedona").includes("Montezuma Castle National Monument"));
+  assert.ok(np("us-key-west-the-florida-keys").includes("Dry Tortugas National Park"));
+  assert.ok(np("fr-marseille").includes("Calanques National Park"));
+  assert.ok(index.cityById["de-nuremberg"].festivals.some((f) => f.market));
+  assert.ok(index.cityById["in-kolkata"].festivals.some((f) => f.name === "Durga Puja"));
 });
