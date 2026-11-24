@@ -2019,6 +2019,18 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     setView(state.view);
   });
 
+  // ---------- Travel Tools ----------
+  // The tool whose address matches this page says YOU ARE HERE. Copies away from the
+  // alltripsconsidered.com sites (a preview or a local file) are Trip Finder.
+  (function markCurrentTool() {
+    const here = /(^|\.)alltripsconsidered\.com$/.test(location.hostname) ? location.hostname : "tripfinder.alltripsconsidered.com";
+    for (const a of document.querySelectorAll(".tools__link")) {
+      if (new URL(a.href).hostname !== here) continue;
+      a.setAttribute("aria-current", "page");
+      a.insertAdjacentHTML("beforeend", '<span class="tools__here">You are here</span>');
+    }
+  })();
+
   // ---------- Boot ----------
   // Keep the copyright year current.
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
