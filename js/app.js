@@ -1438,8 +1438,8 @@
           : ""
       }
       ${city.remote ? `<p class="unesco-line"><span class="ptag ptag--${city.remote}">${REMOTE_LABELS[city.remote][0]}</span> ${REMOTE_LABELS[city.remote][2]}</p>` : ""}
-      ${city.geopark ? `<p class="unesco-line"><span class="ptag ptag--geopark">GEOPARK</span> UNESCO Global Geopark: <b>${esc(city.geopark)}</b></p>` : ""}
-      ${city.biosphere ? `<p class="unesco-line"><span class="ptag ptag--biosphere">BIOSPHERE</span> UNESCO Biosphere Reserve: <b>${esc(city.biosphere)}</b></p>` : ""}
+      ${city.geopark ? `<p class="unesco-line"><span class="ptag ptag--geopark">GEOPARK</span> <b>${esc(city.geopark)}</b></p>` : ""}
+      ${city.biosphere ? `<p class="unesco-line"><span class="ptag ptag--biosphere">BIOSPHERE</span> <b>${esc(city.biosphere)}</b></p>` : ""}
       ${city.micronation ? `<p class="unesco-line"><span class="ptag ptag--micronation">MICRONATION</span> ${esc(city.micronation)}</p>` : ""}
       ${city.festivals
         .map((f) => `<p class="unesco-line"><span class="ptag ptag--festival">${f.pride ? "PRIDE" : f.market ? "CHRISTMAS MARKET" : "FESTIVAL"}</span> <b>${esc(f.name)}</b> <span class="muted">${esc(festivalWhen(f))} · ${esc(f.note)}</span></p>`)
