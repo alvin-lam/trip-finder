@@ -584,3 +584,17 @@ test("Pride events are festivals marked pride", () => {
   assert.ok(!index.cities.some((x) => x.country.id === "hk" && x.festivals.some((f) => f.pride)));
   assert.throws(() => E.buildIndex({ ...data, FESTIVALS: { "fr-paris": [["X", [6], "y", "parade"]] } }), /unknown kind/);
 });
+
+test("Brighton, Manchester, Gran Canaria and Sitges are listed with Pride events", () => {
+  const c = (id) => index.cityById[id];
+  assert.equal(c("gb-brighton").area, "England");
+  assert.equal(c("gb-manchester").area, "England");
+  assert.equal(c("es-gran-canaria").area, "Canary Islands");
+  assert.equal(c("es-sitges").area, "Catalonia");
+  for (const id of ["gb-brighton", "gb-manchester", "es-gran-canaria", "es-sitges"]) {
+    assert.ok(c(id).ll && c(id).ranges, `${id} coordinates and ranges`);
+    assert.ok(c(id).festivals.some((f) => f.pride), `${id} Pride event`);
+  }
+  // Gran Canaria stays warm at night in winter.
+  assert.ok(E.lowFor(c("es-gran-canaria"), 1) >= 15);
+});
