@@ -488,15 +488,49 @@
 
   const cToF = (c) => Math.round((c * 9) / 5 + 32);
 
-  /** Temperature in both systems, e.g. "24°C (75°F)". */
+  // ---------- Units ----------
+  // The app shows temperatures, distances and numbers the way the visitor's device does:
+  // its region decides °C or °F and kilometres or miles, and its locale formats numbers.
+  // Without a device (the tests), both systems show: "24°C (75°F)".
+  const UNITS = { temp: "both", dist: "both", locale: "en-US" };
+  // Regions that use °F, and regions whose road distances are in miles.
+  const FAHRENHEIT = new Set(["US", "PR", "GU", "VI", "AS", "MP", "UM", "BS", "BZ", "KY", "PW", "FM", "MH", "LR"]);
+  const MILES = new Set(["US", "PR", "GU", "VI", "AS", "MP", "UM", "GB", "LR", "MM"]);
+
+  /** The units a device locale implies, e.g. "en-US" -> °F and miles, "en-GB" -> °C and miles. */
+  function unitsForLocale(locale) {
+    let region = "";
+    try {
+      region = new Intl.Locale(locale).maximize().region || "";
+    } catch (_) {
+      region = (String(locale).match(/[-_]([A-Z]{2})\b/) || [])[1] || "";
+    }
+    return { temp: FAHRENHEIT.has(region) ? "F" : "C", dist: MILES.has(region) ? "mi" : "km", locale, region };
+  }
+
+  function setUnits(u) {
+    Object.assign(UNITS, u);
+    return UNITS;
+  }
+
+  const num = (v) => v.toLocaleString(UNITS.locale);
+
+  /** A temperature in the device's units: "24°C", "75°F", or both without a device. */
   function fmtTemp(c) {
+    if (UNITS.temp === "F") return `${cToF(c)}°F`;
+    if (UNITS.temp === "C") return `${Math.round(c)}°C`;
     return `${Math.round(c)}°C (${cToF(c)}°F)`;
   }
 
-  /** Distance in both systems, rounded for readability, e.g. "1,400 km (870 mi)". */
+  /** A temperature value alone in the device's units (for charts): 24 or 75. */
+  const tempValue = (c) => (UNITS.temp === "F" ? cToF(c) : Math.round(c));
+
+  /** A distance rounded for readability in the device's units: "1,400 km", "870 mi", or both. */
   function fmtDistance(km) {
     const round = (v) => (v >= 1000 ? Math.round(v / 100) * 100 : v >= 100 ? Math.round(v / 10) * 10 : Math.max(1, Math.round(v)));
-    const n = (v) => round(v).toLocaleString("en-US");
+    const n = (v) => num(round(v));
+    if (UNITS.dist === "mi") return `${n(km * 0.621371)} mi`;
+    if (UNITS.dist === "km") return `${n(km)} km`;
     return `${n(km)} km (${n(km * 0.621371)} mi)`;
   }
 
@@ -891,6 +925,11 @@
     cToF,
     fmtTemp,
     fmtDistance,
+    unitsForLocale,
+    setUnits,
+    UNITS,
+    tempValue,
+    num,
     nearestPlaces,
     seasonScore,
     climateScore,

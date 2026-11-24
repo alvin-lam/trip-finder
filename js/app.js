@@ -2,6 +2,12 @@
 (function () {
   const E = window.WTT_ENGINE;
   const index = E.buildIndex(window.WTT_DATA);
+  // Temperatures, distances, numbers and dates follow the device's own settings.
+  const DEVICE_LOCALE = (navigator.languages && navigator.languages[0]) || navigator.language || "en-US";
+  E.setUnits(E.unitsForLocale(DEVICE_LOCALE));
+  const deviceDate = (d = new Date()) => d.toLocaleDateString(DEVICE_LOCALE, { year: "numeric", month: "long", day: "numeric" });
+  // Today's date on the device's own calendar, for file names: 2026-11-24.
+  const localISODate = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   const STORE_KEY = "wtt:v1";
 
   // ---------- State ----------
@@ -312,7 +318,8 @@
 
   function shortlistFile(format) {
     const { places, countries } = shortlistRecords();
-    const stamp = new Date().toISOString().slice(0, 10);
+    // The export's date is the device's own date, in its own format.
+    const stamp = localISODate();
     if (format === "json") {
       return JSON.stringify({ exported: stamp, places, countries }, null, 2);
     }
@@ -325,13 +332,13 @@
       // A byte-order mark lets Excel read the degree signs and accents correctly.
       return "\ufeff" + [EXPORT_COLUMNS.map(([, h]) => h), ...rows.map((r) => EXPORT_COLUMNS.map(([k]) => r[k]))].map((r) => r.map(cell).join(",")).join("\r\n");
     }
-    const lines = [`All Trips Considered: my shortlist (${stamp})`, ""];
+    const lines = [`All Trips Considered: my shortlist (${deviceDate()})`, ""];
     if (places.length) lines.push(`PLACES (${places.length})`, "");
     for (const p of places) {
       lines.push(`${p.name}, ${p.area ? `${p.area}, ` : ""}${p.country}`);
       if (p.match !== null) lines.push(`  Match: ${p.match}%`);
       lines.push(`  Best time: ${p.bestTime}`);
-      lines.push(`  ${p.month === "Best months" ? "Typical" : p.month} high / low: ${p.highC}°C (${p.highF}°F) / ${p.lowC === null ? "–" : `${p.lowC}°C (${p.lowF}°F)`}`);
+      lines.push(`  ${p.month === "Best months" ? "Typical" : p.month} high / low: ${E.fmtTemp(p.highC)} / ${p.lowC === null ? "–" : E.fmtTemp(p.lowC)}`);
       lines.push(`  Daily cost (USD): ${p.dailyCostUSD}`);
       lines.push(`  Great for: ${p.greatFor}`);
       if (p.tags) lines.push(`  Tags: ${p.tags}`);
@@ -343,7 +350,7 @@
   }
 
   async function exportShortlist(format) {
-    const filename = `shortlist-${new Date().toISOString().slice(0, 10)}.${format}`;
+    const filename = `shortlist-${localISODate()}.${format}`;
     const data = shortlistFile(format);
     // Inside claude.ai the page must ask the viewer through the downloads capability.
     const downloads = window.claude && window.claude.use ? await window.claude.use("downloads").catch(() => null) : null;
@@ -561,10 +568,10 @@
         <div class="field">
           <span class="field__label">Ideal weather</span>
           <div class="choice-grid" role="radiogroup" aria-label="Ideal weather">
-            ${choice("climate", "hot", "Hot", "28°C (82°F) and up", "🔥")}
-            ${choice("climate", "warm", "Warm", "22 to 30°C (72 to 86°F)", "☀️")}
-            ${choice("climate", "mild", "Mild", "14 to 24°C (57 to 75°F)", "⛅")}
-            ${choice("climate", "cool", "Cool or snowy", "Below 14°C (57°F)", "❄️")}
+            ${choice("climate", "hot", "Hot", `${E.fmtTemp(28)} and up`, "🔥")}
+            ${choice("climate", "warm", "Warm", `${E.tempValue(22)} to ${E.fmtTemp(30)}`, "☀️")}
+            ${choice("climate", "mild", "Mild", `${E.tempValue(14)} to ${E.fmtTemp(24)}`, "⛅")}
+            ${choice("climate", "cool", "Cool or snowy", `Below ${E.fmtTemp(14)}`, "❄️")}
             ${choice("climate", "any", "No preference", "Weather is not a factor", "🤷")}
           </div>
         </div>`,
@@ -1492,7 +1499,7 @@
             `<p class="unesco-line">🏙️ ${
               METRO_SCOPE[m.country](m.rank)
             }: <b>${esc(m.name)}</b> (${
-              m.population >= 1e6 ? `${(m.population / 1e6).toFixed(1)} million` : `${Math.round(m.population / 1000).toLocaleString("en-US")},000`
+              m.population >= 1e6 ? `${(m.population / 1e6).toLocaleString(E.UNITS.locale, { maximumFractionDigits: 1 })} million` : E.num(Math.round(m.population / 1000) * 1000)
             } people)</p>`
         )
         .join("")}
@@ -1535,14 +1542,14 @@
             .map((t, i) => {
               const h = 12 + ((t - tMin) / (tMax - tMin || 1)) * 70;
               return `<div class="temps__col ${city.best.includes(i + 1) ? "is-best" : ""} ${month === i + 1 ? "is-sel" : ""}" title="${E.MONTHS_LONG[i]}: ${E.fmtTemp(t)}">
-                <span class="temps__val">${t}°<span class="u">C</span><br />${E.cToF(t)}°<span class="u">F</span></span><div class="temps__bar" style="height:${h}%"></div><span class="temps__m">${E.MONTHS[i][0]}</span></div>`;
+                <span class="temps__val">${E.tempValue(t)}°<span class="u">${E.UNITS.temp === "F" ? "F" : "C"}</span></span><div class="temps__bar" style="height:${h}%"></div><span class="temps__m">${E.MONTHS[i][0]}</span></div>`;
             })
             .join("")}
         </div>
         <div class="legend" style="margin-top:8px">
           <span><i style="background:var(--teal)"></i>Best months (${esc(E.formatMonths(city.best))})</span>
           ${month ? `<span><i style="background:var(--accent)"></i>Your month</span>` : ""}
-          <span>Average daily high: °C on top, °F below</span>
+          <span>Average daily high in °${E.UNITS.temp === "F" ? "F" : "C"}</span>
         </div>
       </div>
       ${

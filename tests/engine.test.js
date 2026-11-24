@@ -721,3 +721,28 @@ test("Mexico's protected areas come from CONANP's register", () => {
   assert.deepEqual([...kinds].sort(), ["Biosphere Reserve", "National Park", "Natural Monument"]);
   assert.ok(index.cities.some((c) => c.nationalParks.includes("Cumbres de Monterrey National Park")));
 });
+
+test("units follow the device's region and number format", () => {
+  const u = (l) => E.unitsForLocale(l);
+  assert.deepEqual([u("en-US").temp, u("en-US").dist], ["F", "mi"]);
+  assert.deepEqual([u("en-GB").temp, u("en-GB").dist], ["C", "mi"]);
+  assert.deepEqual([u("fr-FR").temp, u("fr-FR").dist], ["C", "km"]);
+  assert.deepEqual([u("en-AU").temp, u("en-AU").dist], ["C", "km"]);
+  assert.deepEqual([u("es-PR").temp, u("es-PR").dist], ["F", "mi"]);
+  // A language with no region takes its likely region: "en" is the US.
+  assert.equal(u("en").temp, "F");
+  const saved = { ...E.UNITS };
+  try {
+    E.setUnits(u("en-US"));
+    assert.equal(E.fmtTemp(24), "75°F");
+    assert.equal(E.fmtDistance(1394), "870 mi");
+    E.setUnits(u("de-DE"));
+    assert.equal(E.fmtTemp(24), "24°C");
+    assert.equal(E.fmtDistance(11234), "11.200 km");
+    assert.equal(E.tempValue(24), 24);
+  } finally {
+    E.setUnits(saved);
+  }
+  // Without a device both systems show, as the other tests expect.
+  assert.equal(E.fmtTemp(24), "24°C (75°F)");
+});
