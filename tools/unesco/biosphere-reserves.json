@@ -1,0 +1,7180 @@
+{
+ "source": "https://www.unesco.org/en/mab/list",
+ "stated_total": 797,
+ "count": 797,
+ "reserves": [
+  {
+   "name": "Ohrid-Prespa",
+   "countries": [
+    "Albania"
+   ],
+   "year": 2014,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ohrid-prespa"
+  },
+  {
+   "name": "Shkodër Lake",
+   "countries": [
+    "Albania"
+   ],
+   "year": 2026,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/shkoder-lake"
+  },
+  {
+   "name": "Vjosa Valley",
+   "countries": [
+    "Albania"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/vjosa-valley"
+  },
+  {
+   "name": "Belezma",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 2015,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/belezma"
+  },
+  {
+   "name": "Chrea",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 2002,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/chrea"
+  },
+  {
+   "name": "Djurdjura",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 1997,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/djurdjura"
+  },
+  {
+   "name": "El Kala",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 1990,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/el-kala"
+  },
+  {
+   "name": "Gouraya",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 2004,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/gouraya"
+  },
+  {
+   "name": "Tassili N'Ajjer",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 1986,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/tassili-najjer"
+  },
+  {
+   "name": "Taza",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 2004,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/taza"
+  },
+  {
+   "name": "Theniet el Had",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 2026,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/theniet-el-had"
+  },
+  {
+   "name": "Tlemcen Mountains",
+   "countries": [
+    "Algeria"
+   ],
+   "year": 2016,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/tlemcen-mountains"
+  },
+  {
+   "name": "Ordino",
+   "countries": [
+    "Andorra"
+   ],
+   "year": 2020,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ordino"
+  },
+  {
+   "name": "Quiçama",
+   "countries": [
+    "Angola"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/quicama"
+  },
+  {
+   "name": "Andino Norpatagonica",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/andino-norpatagonica"
+  },
+  {
+   "name": "Costero del Sur",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1984,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/costero-del-sur"
+  },
+  {
+   "name": "Delta del Paraná",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/delta-del-parana"
+  },
+  {
+   "name": "Laguna Blanca",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1982,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/laguna-blanca"
+  },
+  {
+   "name": "Laguna Oca y Herraduras del Río Paraguay",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2001,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/laguna-oca-y-herraduras-del-rio-paraguay"
+  },
+  {
+   "name": "Laguna de Pozuelos",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1990,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/laguna-de-pozuelos"
+  },
+  {
+   "name": "Las Yungas",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2002,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/las-yungas"
+  },
+  {
+   "name": "Mar Chiquito",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1996,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/mar-chiquito"
+  },
+  {
+   "name": "Nacuñán",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1986,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/nacunan"
+  },
+  {
+   "name": "Patagonia Azul",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2015,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/patagonia-azul"
+  },
+  {
+   "name": "Pereyra Iraola",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/pereyra-iraola"
+  },
+  {
+   "name": "Riacho Teuquito",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/riacho-teuquito"
+  },
+  {
+   "name": "San Guillermo",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1980,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/san-guillermo"
+  },
+  {
+   "name": "Valdés",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 2014,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/valdes"
+  },
+  {
+   "name": "Yabotí",
+   "countries": [
+    "Argentina"
+   ],
+   "year": 1995,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/yaboti"
+  },
+  {
+   "name": "Aruba Island",
+   "countries": [
+    "Aruba"
+   ],
+   "year": 2026,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/aruba-island"
+  },
+  {
+   "name": "Fitzgerald",
+   "countries": [
+    "Australia"
+   ],
+   "year": 1978,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/fitzgerald"
+  },
+  {
+   "name": "Great Sandy",
+   "countries": [
+    "Australia"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/great-sandy"
+  },
+  {
+   "name": "Mornington Peninsula and Western Port",
+   "countries": [
+    "Australia"
+   ],
+   "year": 2002,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mornington-peninsula-and-western-port"
+  },
+  {
+   "name": "Noosa",
+   "countries": [
+    "Australia"
+   ],
+   "year": 2007,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/noosa"
+  },
+  {
+   "name": "Sunshine Coast",
+   "countries": [
+    "Australia"
+   ],
+   "year": 2022,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/sunshine-coast"
+  },
+  {
+   "name": "Grosses Walsertal",
+   "countries": [
+    "Austria"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/grosses-walsertal"
+  },
+  {
+   "name": "Salzburger Lungau & Kärntner Nockberge",
+   "countries": [
+    "Austria"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/salzburger-lungau-karntner-nockberge"
+  },
+  {
+   "name": "Unteres Murtal / Lower Mura Valley",
+   "countries": [
+    "Austria"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/unteres-murtal/lower-mura-valley"
+  },
+  {
+   "name": "Wienerwald",
+   "countries": [
+    "Austria"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/wienerwald"
+  },
+  {
+   "name": "Great Caucasus",
+   "countries": [
+    "Azerbaijan"
+   ],
+   "year": 2026,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/great-caucasus"
+  },
+  {
+   "name": "Belovezhskaya Pushcha",
+   "countries": [
+    "Belarus"
+   ],
+   "year": 1993,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/belovezhskaya-pushcha"
+  },
+  {
+   "name": "Berezinsky",
+   "countries": [
+    "Belarus"
+   ],
+   "year": 1978,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/berezinsky"
+  },
+  {
+   "name": "Pribuzhskoye-Polesie",
+   "countries": [
+    "Belarus"
+   ],
+   "year": 2004,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/pribuzhskoye-polesie"
+  },
+  {
+   "name": "Kempen-Broek",
+   "countries": [
+    "Belgium"
+   ],
+   "year": 2024,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/kempen-broek"
+  },
+  {
+   "name": "Mono",
+   "countries": [
+    "Benin"
+   ],
+   "year": 2017,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mono"
+  },
+  {
+   "name": "Oueme Lower Valley",
+   "countries": [
+    "Benin"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/oueme-lower-valley"
+  },
+  {
+   "name": "Pendjari",
+   "countries": [
+    "Benin"
+   ],
+   "year": 1986,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/pendjari"
+  },
+  {
+   "name": "W Region",
+   "countries": [
+    "Benin"
+   ],
+   "year": 2002,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/w-region-1"
+  },
+  {
+   "name": "Apolobamba National Natural Area of Integrated Management",
+   "countries": [
+    "Bolivia (Plurinational State of)"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/apolobamba-national-natural-area-integrated-management"
+  },
+  {
+   "name": "Beni",
+   "countries": [
+    "Bolivia (Plurinational State of)"
+   ],
+   "year": 1986,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/beni"
+  },
+  {
+   "name": "Pilón-Lajas",
+   "countries": [
+    "Bolivia (Plurinational State of)"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/pilon-lajas"
+  },
+  {
+   "name": "Caatinga",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 2001,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/caatinga"
+  },
+  {
+   "name": "Central Amazon",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 2001,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/central-amazon"
+  },
+  {
+   "name": "Cerrado",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 1994,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cerrado"
+  },
+  {
+   "name": "Espinhaço Range",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 2005,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/espinhaco-range"
+  },
+  {
+   "name": "Mata Atlântica",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/mata-atlantica"
+  },
+  {
+   "name": "Pantanal",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/pantanal"
+  },
+  {
+   "name": "Sao Paulo City Green Belt",
+   "countries": [
+    "Brazil"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sao-paulo-city-green-belt"
+  },
+  {
+   "name": "Central Balkan",
+   "countries": [
+    "Bulgaria"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/central-balkan"
+  },
+  {
+   "name": "Ouzounboudjak",
+   "countries": [
+    "Bulgaria"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ouzounboudjak"
+  },
+  {
+   "name": "Srébarna",
+   "countries": [
+    "Bulgaria"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/srebarna"
+  },
+  {
+   "name": "Tchervenata sténa",
+   "countries": [
+    "Bulgaria"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tchervenata-stena"
+  },
+  {
+   "name": "Arly",
+   "countries": [
+    "Burkina Faso"
+   ],
+   "year": 2018,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/arly"
+  },
+  {
+   "name": "Mare aux Hippopotames",
+   "countries": [
+    "Burkina Faso"
+   ],
+   "year": 1986,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mare-aux-hippopotames"
+  },
+  {
+   "name": "W Region",
+   "countries": [
+    "Burkina Faso"
+   ],
+   "year": 2002,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/w-region"
+  },
+  {
+   "name": "Fogo",
+   "countries": [
+    "Cabo Verde"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/fogo"
+  },
+  {
+   "name": "Maio",
+   "countries": [
+    "Cabo Verde"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/maio"
+  },
+  {
+   "name": "Tonle Sap",
+   "countries": [
+    "Cambodia"
+   ],
+   "year": 1997,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tonle-sap"
+  },
+  {
+   "name": "Benoué",
+   "countries": [
+    "Cameroon"
+   ],
+   "year": 1981,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/benoue"
+  },
+  {
+   "name": "Dja",
+   "countries": [
+    "Cameroon"
+   ],
+   "year": 1981,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/dja"
+  },
+  {
+   "name": "Doumba-Rey",
+   "countries": [
+    "Cameroon"
+   ],
+   "year": 2022,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/doumba-rey"
+  },
+  {
+   "name": "Korup Rainforest",
+   "countries": [
+    "Cameroon"
+   ],
+   "year": 2023,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/korup-rainforest"
+  },
+  {
+   "name": "Takamanda-Cross River Gorilla",
+   "countries": [
+    "Cameroon"
+   ],
+   "year": 2026,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/takamanda-cross-river-gorilla"
+  },
+  {
+   "name": "Waza",
+   "countries": [
+    "Cameroon"
+   ],
+   "year": 1979,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/waza"
+  },
+  {
+   "name": "Beaver Hills",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/beaver-hills"
+  },
+  {
+   "name": "Bras d'Or Lake",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/bras-dor-lake"
+  },
+  {
+   "name": "Charlevoix",
+   "countries": [
+    "Canada"
+   ],
+   "year": 1988,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/charlevoix"
+  },
+  {
+   "name": "Clayoquot Sound",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/clayoquot-sound"
+  },
+  {
+   "name": "Frontenac Arch",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2002,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/frontenac-arch"
+  },
+  {
+   "name": "Fundy",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2007,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/fundy"
+  },
+  {
+   "name": "Georgian Bay",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2004,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/georgian-bay"
+  },
+  {
+   "name": "Lac Saint-Pierre",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lac-saint-pierre"
+  },
+  {
+   "name": "Long Point",
+   "countries": [
+    "Canada"
+   ],
+   "year": 1986,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/long-point"
+  },
+  {
+   "name": "Manicouagan Uapishka",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2007,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/manicouagan-uapishka"
+  },
+  {
+   "name": "Mont Saint Hilaire",
+   "countries": [
+    "Canada"
+   ],
+   "year": 1978,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mont-saint-hilaire"
+  },
+  {
+   "name": "Mount Arrowsmith",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mount-arrowsmith"
+  },
+  {
+   "name": "Niagara Escarpment",
+   "countries": [
+    "Canada"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/niagara-escarpment"
+  },
+  {
+   "name": "Québec City",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2026,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/quebec-city"
+  },
+  {
+   "name": "Redberry Lake",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/redberry-lake"
+  },
+  {
+   "name": "Riding Mountain",
+   "countries": [
+    "Canada"
+   ],
+   "year": 1986,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/riding-mountain"
+  },
+  {
+   "name": "Southwest Nova",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2001,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/southwest-nova"
+  },
+  {
+   "name": "Tsá Tué",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tsa-tue"
+  },
+  {
+   "name": "Waterton",
+   "countries": [
+    "Canada"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/waterton"
+  },
+  {
+   "name": "Átl'ka7tsem/Howe Sound",
+   "countries": [
+    "Canada"
+   ],
+   "year": 2021,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/atlka7tsem/howe-sound"
+  },
+  {
+   "name": "Basse-Lobaye",
+   "countries": [
+    "Central African Republic"
+   ],
+   "year": 1977,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/basse-lobaye"
+  },
+  {
+   "name": "Complexe des Aires Protégées du Nord-Est de la République Centrafricaine",
+   "countries": [
+    "Central African Republic"
+   ],
+   "year": 2023,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/complexe-des-aires-protegees-du-nord-est-de-la-republique-centrafricaine"
+  },
+  {
+   "name": "Sena Oura",
+   "countries": [
+    "Chad"
+   ],
+   "year": 2022,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/sena-oura"
+  },
+  {
+   "name": "Araucarias",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1983,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/araucarias"
+  },
+  {
+   "name": "Archipiélago de Juan Fernández",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/archipielago-de-juan-fernandez"
+  },
+  {
+   "name": "Bosques Templados Lluviosos de los Andes Australes",
+   "countries": [
+    "Chile"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bosques-templados-lluviosos-de-los-andes-australes"
+  },
+  {
+   "name": "Cabo de Hornos",
+   "countries": [
+    "Chile"
+   ],
+   "year": 2005,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cabo-de-hornos"
+  },
+  {
+   "name": "Corredor Biológico Nevados de Chillán-Laguna del Laja",
+   "countries": [
+    "Chile"
+   ],
+   "year": 2011,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/corredor-biologico-nevados-de-chillan-laguna-del-laja"
+  },
+  {
+   "name": "Fray Jorge",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/fray-jorge"
+  },
+  {
+   "name": "La Campana-Peñuelas",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1984,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-campana-penuelas"
+  },
+  {
+   "name": "Laguna San Rafael y el Guayaneco",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1979,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/laguna-san-rafael-y-el-guayaneco"
+  },
+  {
+   "name": "Lauca",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1981,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/lauca"
+  },
+  {
+   "name": "Torres del Paine",
+   "countries": [
+    "Chile"
+   ],
+   "year": 1978,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/torres-del-paine"
+  },
+  {
+   "name": "Baishuijiang",
+   "countries": [
+    "China"
+   ],
+   "year": 2000,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/baishuijiang"
+  },
+  {
+   "name": "Baotianman",
+   "countries": [
+    "China"
+   ],
+   "year": 2001,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/baotianman"
+  },
+  {
+   "name": "Bogeda",
+   "countries": [
+    "China"
+   ],
+   "year": 1990,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/bogeda"
+  },
+  {
+   "name": "Changbaishan",
+   "countries": [
+    "China"
+   ],
+   "year": 1979,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/changbaishan"
+  },
+  {
+   "name": "Chebaling",
+   "countries": [
+    "China"
+   ],
+   "year": 2007,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/chebaling"
+  },
+  {
+   "name": "Dalai Lake",
+   "countries": [
+    "China"
+   ],
+   "year": 2002,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/dalai-lake"
+  },
+  {
+   "name": "Daqingshan",
+   "countries": [
+    "China"
+   ],
+   "year": 2025,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/daqingshan"
+  },
+  {
+   "name": "Dinghushan",
+   "countries": [
+    "China"
+   ],
+   "year": 1979,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/dinghushan"
+  },
+  {
+   "name": "Fanjingshan",
+   "countries": [
+    "China"
+   ],
+   "year": 1986,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/fanjingshan"
+  },
+  {
+   "name": "Fenglin",
+   "countries": [
+    "China"
+   ],
+   "year": 1997,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/fenglin"
+  },
+  {
+   "name": "Foping",
+   "countries": [
+    "China"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/foping"
+  },
+  {
+   "name": "Gaoligong mountains",
+   "countries": [
+    "China"
+   ],
+   "year": 2000,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gaoligong-mountains"
+  },
+  {
+   "name": "Hanma-Huzhong",
+   "countries": [
+    "China"
+   ],
+   "year": 2015,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/hanma-huzhong"
+  },
+  {
+   "name": "Huanglong",
+   "countries": [
+    "China"
+   ],
+   "year": 2000,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/huanglong"
+  },
+  {
+   "name": "Jinggangshan",
+   "countries": [
+    "China"
+   ],
+   "year": 2012,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/jinggangshan"
+  },
+  {
+   "name": "Jiuzhaigou Valley",
+   "countries": [
+    "China"
+   ],
+   "year": 1997,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/jiuzhaigou-valley"
+  },
+  {
+   "name": "Mao'er mountains",
+   "countries": [
+    "China"
+   ],
+   "year": 2011,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/maoer-mountains"
+  },
+  {
+   "name": "Maolan",
+   "countries": [
+    "China"
+   ],
+   "year": 1996,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/maolan"
+  },
+  {
+   "name": "Mount Huangshan",
+   "countries": [
+    "China"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-huangshan"
+  },
+  {
+   "name": "Nanji Islands",
+   "countries": [
+    "China"
+   ],
+   "year": 1998,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/nanji-islands"
+  },
+  {
+   "name": "Niubeiliang",
+   "countries": [
+    "China"
+   ],
+   "year": 2012,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/niubeiliang"
+  },
+  {
+   "name": "Qomolangma",
+   "countries": [
+    "China"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/qomolangma"
+  },
+  {
+   "name": "Saihan Wula",
+   "countries": [
+    "China"
+   ],
+   "year": 2001,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/saihan-wula"
+  },
+  {
+   "name": "Shankou mangrove",
+   "countries": [
+    "China"
+   ],
+   "year": 2000,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/shankou-mangrove"
+  },
+  {
+   "name": "Shennongjia",
+   "countries": [
+    "China"
+   ],
+   "year": 1990,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/shennongjia"
+  },
+  {
+   "name": "Snake Island-Laotie mountains",
+   "countries": [
+    "China"
+   ],
+   "year": 2013,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/snake-island-laotie-mountains"
+  },
+  {
+   "name": "Tianmushan",
+   "countries": [
+    "China"
+   ],
+   "year": 1996,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tianmushan"
+  },
+  {
+   "name": "Wolong",
+   "countries": [
+    "China"
+   ],
+   "year": 1979,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/wolong"
+  },
+  {
+   "name": "Wudalianchi",
+   "countries": [
+    "China"
+   ],
+   "year": 2003,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/wudalianchi"
+  },
+  {
+   "name": "Wuyishan",
+   "countries": [
+    "China"
+   ],
+   "year": 1987,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/wuyishan"
+  },
+  {
+   "name": "Xilin Gol",
+   "countries": [
+    "China"
+   ],
+   "year": 1987,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/xilin-gol"
+  },
+  {
+   "name": "Xingkai Lake",
+   "countries": [
+    "China"
+   ],
+   "year": 2007,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/xingkai-lake"
+  },
+  {
+   "name": "Xishuangbanna",
+   "countries": [
+    "China"
+   ],
+   "year": 1993,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/xishuangbanna"
+  },
+  {
+   "name": "Yading",
+   "countries": [
+    "China"
+   ],
+   "year": 2003,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/yading"
+  },
+  {
+   "name": "Yancheng",
+   "countries": [
+    "China"
+   ],
+   "year": 1992,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/yancheng"
+  },
+  {
+   "name": "Zhouzhi",
+   "countries": [
+    "China"
+   ],
+   "year": 2025,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/zhouzhi"
+  },
+  {
+   "name": "Cinturón Andino",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 1979,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cinturon-andino"
+  },
+  {
+   "name": "Ciénaga Grande de Santa Marta",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cienaga-grande-de-santa-marta"
+  },
+  {
+   "name": "Darién Norte Chocoano",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 2024,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/darien-norte-chocoano"
+  },
+  {
+   "name": "El Tuparro",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 1979,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/el-tuparro"
+  },
+  {
+   "name": "Seaflower",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/seaflower"
+  },
+  {
+   "name": "Sierra Nevada de Santa Marta",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 1979,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-nevada-de-santa-marta"
+  },
+  {
+   "name": "Tribugá-Cupica-Baudó",
+   "countries": [
+    "Colombia"
+   ],
+   "year": 2023,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/tribuga-cupica-baudo"
+  },
+  {
+   "name": "Mwali",
+   "countries": [
+    "Comoros"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mwali"
+  },
+  {
+   "name": "Dimonika",
+   "countries": [
+    "Congo"
+   ],
+   "year": 1988,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/dimonika"
+  },
+  {
+   "name": "Kokoua-Odzala",
+   "countries": [
+    "Congo"
+   ],
+   "year": 1977,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/kokoua-odzala"
+  },
+  {
+   "name": "Agua y Paz",
+   "countries": [
+    "Costa Rica"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/agua-y-paz"
+  },
+  {
+   "name": "Cordillera Volcánica Central",
+   "countries": [
+    "Costa Rica"
+   ],
+   "year": 1988,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cordillera-volcanica-central"
+  },
+  {
+   "name": "La Amistad",
+   "countries": [
+    "Costa Rica"
+   ],
+   "year": 1982,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-amistad-0"
+  },
+  {
+   "name": "Savegre",
+   "countries": [
+    "Costa Rica"
+   ],
+   "year": 2017,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/savegre"
+  },
+  {
+   "name": "Mura-Drava-Danube",
+   "countries": [
+    "Croatia"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mura-drava-danube-0"
+  },
+  {
+   "name": "Velebit Mountains",
+   "countries": [
+    "Croatia"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/velebit-mountains"
+  },
+  {
+   "name": "Baconao",
+   "countries": [
+    "Cuba"
+   ],
+   "year": 1987,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/baconao"
+  },
+  {
+   "name": "Buenavista",
+   "countries": [
+    "Cuba"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/buenavista"
+  },
+  {
+   "name": "Ciénaga de Zapata",
+   "countries": [
+    "Cuba"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cienaga-de-zapata"
+  },
+  {
+   "name": "Cuchilla del Toa",
+   "countries": [
+    "Cuba"
+   ],
+   "year": 1987,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cuchilla-del-toa"
+  },
+  {
+   "name": "Península de Guanahacabibes",
+   "countries": [
+    "Cuba"
+   ],
+   "year": 1987,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/peninsula-de-guanahacabibes"
+  },
+  {
+   "name": "Sierra del Rosario",
+   "countries": [
+    "Cuba"
+   ],
+   "year": 1984,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-del-rosario"
+  },
+  {
+   "name": "Bílé Karpathy",
+   "countries": [
+    "Czechia"
+   ],
+   "year": 1996,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/bile-karpathy"
+  },
+  {
+   "name": "Krivoklátsko",
+   "countries": [
+    "Czechia"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/krivoklatsko"
+  },
+  {
+   "name": "Krkonose",
+   "countries": [
+    "Czechia"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/krkonose"
+  },
+  {
+   "name": "Lower Morava",
+   "countries": [
+    "Czechia"
+   ],
+   "year": 1986,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lower-morava"
+  },
+  {
+   "name": "Sumava",
+   "countries": [
+    "Czechia"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sumava"
+  },
+  {
+   "name": "Trebon Basin",
+   "countries": [
+    "Czechia"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/trebon-basin"
+  },
+  {
+   "name": "Comoé",
+   "countries": [
+    "Côte d'Ivoire"
+   ],
+   "year": 1983,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/comoe"
+  },
+  {
+   "name": "Taï",
+   "countries": [
+    "Côte d'Ivoire"
+   ],
+   "year": 1977,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/tai"
+  },
+  {
+   "name": "Mount Chilbo",
+   "countries": [
+    "Democratic People's Republic of Korea"
+   ],
+   "year": 2014,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-chilbo"
+  },
+  {
+   "name": "Mount Kumgang",
+   "countries": [
+    "Democratic People's Republic of Korea"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-kumgang"
+  },
+  {
+   "name": "Mount Kuwol",
+   "countries": [
+    "Democratic People's Republic of Korea"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-kuwol"
+  },
+  {
+   "name": "Mount Myohyang",
+   "countries": [
+    "Democratic People's Republic of Korea"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-myohyang"
+  },
+  {
+   "name": "Mount Paektu",
+   "countries": [
+    "Democratic People's Republic of Korea"
+   ],
+   "year": 1989,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-paektu"
+  },
+  {
+   "name": "Luki",
+   "countries": [
+    "Democratic Republic of the Congo"
+   ],
+   "year": 1976,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/luki"
+  },
+  {
+   "name": "Yangambi",
+   "countries": [
+    "Democratic Republic of the Congo"
+   ],
+   "year": 1976,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/yangambi"
+  },
+  {
+   "name": "Moen",
+   "countries": [
+    "Denmark"
+   ],
+   "year": 2017,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/moen"
+  },
+  {
+   "name": "Archipel des Sept Frères – Ras Siyyan – Khor Angar – Godoria",
+   "countries": [
+    "Djibouti"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/archipel-des-sept-freres-ras-siyyan-khor-angar-godoria"
+  },
+  {
+   "name": "Jaragua-Bahoruco-Enriquillo",
+   "countries": [
+    "Dominican Republic"
+   ],
+   "year": 2002,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/jaragua-bahoruco-enriquillo"
+  },
+  {
+   "name": "Madre de las Aguas",
+   "countries": [
+    "Dominican Republic"
+   ],
+   "year": 2024,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/madre-de-las-aguas"
+  },
+  {
+   "name": "Bosque Seco",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 2014,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bosque-seco"
+  },
+  {
+   "name": "Chocó Andino de Pichincha",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 2018,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/choco-andino-de-pichincha"
+  },
+  {
+   "name": "Galápagos",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 1984,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/galapagos"
+  },
+  {
+   "name": "Macizo del Cajas",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 2013,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/macizo-del-cajas"
+  },
+  {
+   "name": "Podocarpus-El Condor",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/podocarpus-el-condor"
+  },
+  {
+   "name": "Sumaco",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sumaco"
+  },
+  {
+   "name": "Yasuni",
+   "countries": [
+    "Ecuador"
+   ],
+   "year": 1989,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/yasuni"
+  },
+  {
+   "name": "Omayed",
+   "countries": [
+    "Egypt"
+   ],
+   "year": 1981,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/omayed"
+  },
+  {
+   "name": "Wadi Allaqi",
+   "countries": [
+    "Egypt"
+   ],
+   "year": 1993,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/wadi-allaqi"
+  },
+  {
+   "name": "Apaneca-Llamatepec",
+   "countries": [
+    "El Salvador"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/apaneca-llamatepec"
+  },
+  {
+   "name": "Trifinio Fraternidad",
+   "countries": [
+    "El Salvador"
+   ],
+   "year": 2011,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/trifinio-fraternidad-1"
+  },
+  {
+   "name": "Xiriualtique - Jiquilisco",
+   "countries": [
+    "El Salvador"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/xiriualtique-jiquilisco"
+  },
+  {
+   "name": "Isla de Bioko",
+   "countries": [
+    "Equatorial Guinea"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/isla-de-bioko"
+  },
+  {
+   "name": "West Estonian Archipelago",
+   "countries": [
+    "Estonia"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/west-estonian-archipelago"
+  },
+  {
+   "name": "Lubombo",
+   "countries": [
+    "Eswatini"
+   ],
+   "year": 2019,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/lubombo"
+  },
+  {
+   "name": "Anywaa Forest",
+   "countries": [
+    "Ethiopia"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/anywaa-forest"
+  },
+  {
+   "name": "Kafa",
+   "countries": [
+    "Ethiopia"
+   ],
+   "year": 2010,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/kafa"
+  },
+  {
+   "name": "Lake Tana",
+   "countries": [
+    "Ethiopia"
+   ],
+   "year": 2015,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/lake-tana"
+  },
+  {
+   "name": "Majang Forest",
+   "countries": [
+    "Ethiopia"
+   ],
+   "year": 2017,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/majang-forest"
+  },
+  {
+   "name": "Sheka",
+   "countries": [
+    "Ethiopia"
+   ],
+   "year": 2012,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/sheka"
+  },
+  {
+   "name": "Yayu",
+   "countries": [
+    "Ethiopia"
+   ],
+   "year": 2010,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/yayu"
+  },
+  {
+   "name": "Archipelago Sea Area",
+   "countries": [
+    "Finland"
+   ],
+   "year": 1994,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/archipelago-sea-area"
+  },
+  {
+   "name": "North Karelia",
+   "countries": [
+    "Finland"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/north-karelia"
+  },
+  {
+   "name": "Archipel de la Guadeloupe",
+   "countries": [
+    "France"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/archipel-de-la-guadeloupe"
+  },
+  {
+   "name": "Bassin de la Dordogne",
+   "countries": [
+    "France"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/bassin-de-la-dordogne"
+  },
+  {
+   "name": "Camargue (delta du Rhône)",
+   "countries": [
+    "France"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/camargue-delta-du-rhone"
+  },
+  {
+   "name": "Commune de Fakarava",
+   "countries": [
+    "France"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/commune-de-fakarava"
+  },
+  {
+   "name": "Cévennes",
+   "countries": [
+    "France"
+   ],
+   "year": 1984,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/cevennes"
+  },
+  {
+   "name": "Falasorma-Dui Sevi",
+   "countries": [
+    "France"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/falasorma-dui-sevi"
+  },
+  {
+   "name": "Fontainebleau et du Gâtinais",
+   "countries": [
+    "France"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/fontainebleau-et-du-gatinais"
+  },
+  {
+   "name": "Gorges du Gardon",
+   "countries": [
+    "France"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/gorges-du-gardon"
+  },
+  {
+   "name": "Iles et Mer d'Iroise",
+   "countries": [
+    "France"
+   ],
+   "year": 1988,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/iles-et-mer-diroise"
+  },
+  {
+   "name": "Lac du Bourget, between the Rhône and the Alps",
+   "countries": [
+    "France"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lac-du-bourget-between-rhone-and-alps"
+  },
+  {
+   "name": "Luberon-Lure",
+   "countries": [
+    "France"
+   ],
+   "year": 1997,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/luberon-lure"
+  },
+  {
+   "name": "Marais Audomarois Aa – Hem – Flandre",
+   "countries": [
+    "France"
+   ],
+   "year": 2013,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/marais-audomarois-aa-hem-flandre"
+  },
+  {
+   "name": "Marshes and Tides between the Loire and the Vilaine",
+   "countries": [
+    "France"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/marshes-and-tides-between-loire-and-vilaine"
+  },
+  {
+   "name": "Martinique",
+   "countries": [
+    "France"
+   ],
+   "year": 2021,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/martinique"
+  },
+  {
+   "name": "Mont Ventoux",
+   "countries": [
+    "France"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mont-ventoux"
+  },
+  {
+   "name": "Mont-Viso",
+   "countries": [
+    "France"
+   ],
+   "year": 2013,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mont-viso"
+  },
+  {
+   "name": "Moselle Sud",
+   "countries": [
+    "France"
+   ],
+   "year": 2021,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/moselle-sud"
+  },
+  {
+   "name": "Vosges du Nord",
+   "countries": [
+    "France"
+   ],
+   "year": 1988,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/vosges-du-nord"
+  },
+  {
+   "name": "Niumi",
+   "countries": [
+    "Gambia"
+   ],
+   "year": 2024,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/niumi"
+  },
+  {
+   "name": "Dedoplistskaro",
+   "countries": [
+    "Georgia"
+   ],
+   "year": 2022,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/dedoplistskaro"
+  },
+  {
+   "name": "Three Alazani Rivers",
+   "countries": [
+    "Georgia"
+   ],
+   "year": 2022,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/three-alazani-rivers"
+  },
+  {
+   "name": "Berchtesgadener Land",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/berchtesgadener-land"
+  },
+  {
+   "name": "Black Forest",
+   "countries": [
+    "Germany"
+   ],
+   "year": 2017,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/black-forest"
+  },
+  {
+   "name": "Bliesgau",
+   "countries": [
+    "Germany"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/bliesgau"
+  },
+  {
+   "name": "Drömling",
+   "countries": [
+    "Germany"
+   ],
+   "year": 2023,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/dromling"
+  },
+  {
+   "name": "Flusslandschaft Elbe",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/flusslandschaft-elbe"
+  },
+  {
+   "name": "Oberlausitzer Heide- und Teichlandschaft",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1996,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/oberlausitzer-heide-und-teichlandschaft"
+  },
+  {
+   "name": "Pfälzerwald / Vosges du Nord",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/pfalzerwald/vosges-du-nord"
+  },
+  {
+   "name": "Rhön",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1991,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/rhon"
+  },
+  {
+   "name": "Schaalsee",
+   "countries": [
+    "Germany"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/schaalsee"
+  },
+  {
+   "name": "Schorfheide-Chorin",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/schorfheide-chorin"
+  },
+  {
+   "name": "South-East Rügen",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1991,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/south-east-rugen"
+  },
+  {
+   "name": "Spreewald",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1991,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/spreewald"
+  },
+  {
+   "name": "Swabian Alb",
+   "countries": [
+    "Germany"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/swabian-alb"
+  },
+  {
+   "name": "Thuringian Forest",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/thuringian-forest"
+  },
+  {
+   "name": "Wadden Sea and Hallig Islands of Schleswig-Holstein",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/wadden-sea-and-hallig-islands-schleswig-holstein"
+  },
+  {
+   "name": "Waddensea of Hamburg",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/waddensea-hamburg"
+  },
+  {
+   "name": "Waddensea of Lower Saxony",
+   "countries": [
+    "Germany"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/waddensea-lower-saxony"
+  },
+  {
+   "name": "Bia",
+   "countries": [
+    "Ghana"
+   ],
+   "year": 1983,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/bia"
+  },
+  {
+   "name": "Lake Bosomtwe",
+   "countries": [
+    "Ghana"
+   ],
+   "year": 2016,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/lake-bosomtwe"
+  },
+  {
+   "name": "Songor",
+   "countries": [
+    "Ghana"
+   ],
+   "year": 2011,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/songor"
+  },
+  {
+   "name": "Asterousia Mountain Range",
+   "countries": [
+    "Greece"
+   ],
+   "year": 2020,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/asterousia-mountain-range"
+  },
+  {
+   "name": "Gorge of Samaria",
+   "countries": [
+    "Greece"
+   ],
+   "year": 1981,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/gorge-samaria"
+  },
+  {
+   "name": "Mount Olympus",
+   "countries": [
+    "Greece"
+   ],
+   "year": 1981,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mount-olympus"
+  },
+  {
+   "name": "Mount Parnon – Cape Maleas",
+   "countries": [
+    "Greece"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mount-parnon-cape-maleas"
+  },
+  {
+   "name": "Maya",
+   "countries": [
+    "Guatemala"
+   ],
+   "year": 1990,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/maya"
+  },
+  {
+   "name": "Sierra de las Minas",
+   "countries": [
+    "Guatemala"
+   ],
+   "year": 1992,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-de-las-minas"
+  },
+  {
+   "name": "Trifinio Fraternidad",
+   "countries": [
+    "Guatemala"
+   ],
+   "year": 2011,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/trifinio-fraternidad"
+  },
+  {
+   "name": "Badiar",
+   "countries": [
+    "Guinea"
+   ],
+   "year": 2002,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/badiar"
+  },
+  {
+   "name": "Haut Niger",
+   "countries": [
+    "Guinea"
+   ],
+   "year": 2002,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/haut-niger"
+  },
+  {
+   "name": "Massif du Ziama",
+   "countries": [
+    "Guinea"
+   ],
+   "year": 1980,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/massif-du-ziama"
+  },
+  {
+   "name": "Mont Nimba",
+   "countries": [
+    "Guinea"
+   ],
+   "year": 1980,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mont-nimba"
+  },
+  {
+   "name": "Bolama-Bijagos",
+   "countries": [
+    "Guinea-Bissau"
+   ],
+   "year": 1996,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/bolama-bijagos"
+  },
+  {
+   "name": "La Hotte",
+   "countries": [
+    "Haiti"
+   ],
+   "year": 2016,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-hotte"
+  },
+  {
+   "name": "La Selle",
+   "countries": [
+    "Haiti"
+   ],
+   "year": 2012,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-selle"
+  },
+  {
+   "name": "Cacique Lempira, Senor de las Montanas",
+   "countries": [
+    "Honduras"
+   ],
+   "year": 2015,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cacique-lempira-senor-de-las-montanas"
+  },
+  {
+   "name": "Rio Plátano",
+   "countries": [
+    "Honduras"
+   ],
+   "year": 1980,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/rio-platano"
+  },
+  {
+   "name": "San Marcos de Colon",
+   "countries": [
+    "Honduras"
+   ],
+   "year": 2017,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/san-marcos-de-colon"
+  },
+  {
+   "name": "Trifinio Fraternidad",
+   "countries": [
+    "Honduras"
+   ],
+   "year": 2011,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/trifinio-fraternidad-0"
+  },
+  {
+   "name": "Aggtelek",
+   "countries": [
+    "Hungary"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/aggtelek"
+  },
+  {
+   "name": "Hortobágy",
+   "countries": [
+    "Hungary"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/hortobagy"
+  },
+  {
+   "name": "Kiskunság",
+   "countries": [
+    "Hungary"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/kiskunsag"
+  },
+  {
+   "name": "Lake Fertö",
+   "countries": [
+    "Hungary"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lake-ferto"
+  },
+  {
+   "name": "Mura Drava Danube",
+   "countries": [
+    "Hungary"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mura-drava-danube"
+  },
+  {
+   "name": "Pilis",
+   "countries": [
+    "Hungary"
+   ],
+   "year": 1980,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/pilis"
+  },
+  {
+   "name": "Snæfellsnes",
+   "countries": [
+    "Iceland"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/snaefellsnes"
+  },
+  {
+   "name": "Achanakmar-Amarkantak",
+   "countries": [
+    "India"
+   ],
+   "year": 2012,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/achanakmar-amarkantak"
+  },
+  {
+   "name": "Agasthyamala",
+   "countries": [
+    "India"
+   ],
+   "year": 2016,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/agasthyamala"
+  },
+  {
+   "name": "Cold Desert",
+   "countries": [
+    "India"
+   ],
+   "year": 2025,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/cold-desert"
+  },
+  {
+   "name": "Great Nicobar",
+   "countries": [
+    "India"
+   ],
+   "year": 2013,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/great-nicobar"
+  },
+  {
+   "name": "Gulf of Mannar",
+   "countries": [
+    "India"
+   ],
+   "year": 2001,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gulf-mannar"
+  },
+  {
+   "name": "Khangchendzonga",
+   "countries": [
+    "India"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/khangchendzonga"
+  },
+  {
+   "name": "Nanda Devi",
+   "countries": [
+    "India"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/nanda-devi"
+  },
+  {
+   "name": "Nilgiri",
+   "countries": [
+    "India"
+   ],
+   "year": 2000,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/nilgiri"
+  },
+  {
+   "name": "Nokrek",
+   "countries": [
+    "India"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/nokrek"
+  },
+  {
+   "name": "Pachmarhi",
+   "countries": [
+    "India"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/pachmarhi"
+  },
+  {
+   "name": "Panna",
+   "countries": [
+    "India"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/panna"
+  },
+  {
+   "name": "Similipal",
+   "countries": [
+    "India"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/similipal"
+  },
+  {
+   "name": "Sunderban",
+   "countries": [
+    "India"
+   ],
+   "year": 2001,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/sunderban"
+  },
+  {
+   "name": "Bantimurung Bulusaraung - MA'RUPANNE",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2023,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/bantimurung-bulusaraung-marupanne"
+  },
+  {
+   "name": "Belambangan",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2016,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/belambangan"
+  },
+  {
+   "name": "Berbak-Sembilang",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/berbak-sembilang"
+  },
+  {
+   "name": "Betung Kerihun Danau Sentarum Kapuas Hulu",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/betung-kerihun-danau-sentarum-kapuas-hulu"
+  },
+  {
+   "name": "Bromo Tengger Semeru-Arjuno",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2015,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/bromo-tengger-semeru-arjuno"
+  },
+  {
+   "name": "Bunaken Tangkoko Minahasa",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/bunaken-tangkoko-minahasa"
+  },
+  {
+   "name": "Cibodas",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/cibodas"
+  },
+  {
+   "name": "Giam Siak Kecil - Bukit Batu",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/giam-siak-kecil-bukit-batu"
+  },
+  {
+   "name": "Gunung Leuser",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 1981,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gunung-leuser"
+  },
+  {
+   "name": "Karimunjawa-Jepara-Muria",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/karimunjawa-jepara-muria"
+  },
+  {
+   "name": "Komodo",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/komodo"
+  },
+  {
+   "name": "Lore Lindu",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/lore-lindu"
+  },
+  {
+   "name": "Merapi Merbaru Menoreh",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/merapi-merbaru-menoreh"
+  },
+  {
+   "name": "Raja Ampat",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2025,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/raja-ampat"
+  },
+  {
+   "name": "Rinjani Lombok",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/rinjani-lombok"
+  },
+  {
+   "name": "SAMOTA",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2019,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/samota"
+  },
+  {
+   "name": "Siberut",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 1981,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/siberut"
+  },
+  {
+   "name": "Taka Bonerate-Kepulauan Selayar",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2015,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/taka-bonerate-kepulauan-selayar"
+  },
+  {
+   "name": "Tanjung Puting",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tanjung-puting"
+  },
+  {
+   "name": "Togean Tojo Una-Una",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2019,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/togean-tojo-una-una"
+  },
+  {
+   "name": "Wakatobi",
+   "countries": [
+    "Indonesia"
+   ],
+   "year": 2012,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/wakatobi"
+  },
+  {
+   "name": "Arasbaran",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/arasbaran"
+  },
+  {
+   "name": "Arjan",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/arjan"
+  },
+  {
+   "name": "Dalankuh-Qamishlou",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 2026,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/dalankuh-qamishlou"
+  },
+  {
+   "name": "Dena",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 2010,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/dena"
+  },
+  {
+   "name": "Geno",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/geno"
+  },
+  {
+   "name": "Golestan",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/golestan"
+  },
+  {
+   "name": "Hamoun",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 2016,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/hamoun"
+  },
+  {
+   "name": "Hara",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/hara"
+  },
+  {
+   "name": "Kavir",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kavir"
+  },
+  {
+   "name": "Kopet Dag",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kopet-dag"
+  },
+  {
+   "name": "Lake Oromeeh",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/lake-oromeeh"
+  },
+  {
+   "name": "Miankaleh",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/miankaleh"
+  },
+  {
+   "name": "Tang-e-Sayad & Sabzkuh",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 2015,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tang-e-sayad-sabzkuh"
+  },
+  {
+   "name": "Touran",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/touran"
+  },
+  {
+   "name": "Dublin Bay",
+   "countries": [
+    "Ireland"
+   ],
+   "year": 1981,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/dublin-bay"
+  },
+  {
+   "name": "Kerry",
+   "countries": [
+    "Ireland"
+   ],
+   "year": 1982,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/kerry"
+  },
+  {
+   "name": "Megiddo",
+   "countries": [
+    "Israel"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/megiddo"
+  },
+  {
+   "name": "Appennino Tosco-Emiliano",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/appennino-tosco-emiliano"
+  },
+  {
+   "name": "Cilento and Vallo di Diano",
+   "countries": [
+    "Italy"
+   ],
+   "year": 1997,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/cilento-and-vallo-di-diano"
+  },
+  {
+   "name": "Circeo",
+   "countries": [
+    "Italy"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/circeo"
+  },
+  {
+   "name": "Collemeluccio-Montedimezzo Alto Molise",
+   "countries": [
+    "Italy"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/collemeluccio-montedimezzo-alto-molise"
+  },
+  {
+   "name": "Colli Euganei",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2024,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/colli-euganei"
+  },
+  {
+   "name": "Collina Po",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/collina-po"
+  },
+  {
+   "name": "Julian Alps",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/julian-alps"
+  },
+  {
+   "name": "Ledro Alps and Judicaria",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ledro-alps-and-judicaria"
+  },
+  {
+   "name": "Miramare and Trieste Coast",
+   "countries": [
+    "Italy"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/miramare-and-trieste-coast"
+  },
+  {
+   "name": "Monte Grappa",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2021,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/monte-grappa"
+  },
+  {
+   "name": "Monte Peglia",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2018,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/monte-peglia"
+  },
+  {
+   "name": "Monviso",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2013,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/monviso"
+  },
+  {
+   "name": "Po Delta",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/po-delta"
+  },
+  {
+   "name": "Po Grande",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/po-grande"
+  },
+  {
+   "name": "Selve Costiere di Toscana",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2004,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/selve-costiere-di-toscana"
+  },
+  {
+   "name": "Sila",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2014,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sila"
+  },
+  {
+   "name": "Somma-Vesuvio and Miglio d'Oro",
+   "countries": [
+    "Italy"
+   ],
+   "year": 1997,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/somma-vesuvio-and-miglio-doro"
+  },
+  {
+   "name": "Tepilora, Rio Posada and Montalbo",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2017,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tepilora-rio-posada-and-montalbo"
+  },
+  {
+   "name": "Ticino, Val Grande Verbano",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2002,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ticino-val-grande-verbano"
+  },
+  {
+   "name": "Tuscan Islands",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2003,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tuscan-islands"
+  },
+  {
+   "name": "Valle Camonica - Alto Sebino",
+   "countries": [
+    "Italy"
+   ],
+   "year": 2018,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/valle-camonica-alto-sebino"
+  },
+  {
+   "name": "Aya",
+   "countries": [
+    "Japan"
+   ],
+   "year": 2012,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/aya"
+  },
+  {
+   "name": "Kobushi",
+   "countries": [
+    "Japan"
+   ],
+   "year": 2019,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kobushi"
+  },
+  {
+   "name": "Minakami",
+   "countries": [
+    "Japan"
+   ],
+   "year": 2017,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/minakami"
+  },
+  {
+   "name": "Minami Alps",
+   "countries": [
+    "Japan"
+   ],
+   "year": 2014,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/minami-alps"
+  },
+  {
+   "name": "Mount Hakusan",
+   "countries": [
+    "Japan"
+   ],
+   "year": 1980,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-hakusan"
+  },
+  {
+   "name": "Mount Odaigahara, Mount Omine and Osugidani",
+   "countries": [
+    "Japan"
+   ],
+   "year": 1980,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-odaigahara-mount-omine-and-osugidani"
+  },
+  {
+   "name": "Shiga Highland",
+   "countries": [
+    "Japan"
+   ],
+   "year": 1980,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/shiga-highland"
+  },
+  {
+   "name": "Sobo, Katamuki and Okue",
+   "countries": [
+    "Japan"
+   ],
+   "year": 2017,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/sobo-katamuki-and-okue"
+  },
+  {
+   "name": "Tadami",
+   "countries": [
+    "Japan"
+   ],
+   "year": 2014,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tadami"
+  },
+  {
+   "name": "Yakushima and Kuchinoerabu Jima",
+   "countries": [
+    "Japan"
+   ],
+   "year": 1980,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/yakushima-and-kuchinoerabu-jima"
+  },
+  {
+   "name": "Ajloun",
+   "countries": [
+    "Jordan"
+   ],
+   "year": 2025,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/ajloun"
+  },
+  {
+   "name": "Dana",
+   "countries": [
+    "Jordan"
+   ],
+   "year": 1998,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/dana"
+  },
+  {
+   "name": "Mujib",
+   "countries": [
+    "Jordan"
+   ],
+   "year": 2011,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/mujib"
+  },
+  {
+   "name": "Yarmouk",
+   "countries": [
+    "Jordan"
+   ],
+   "year": 2025,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/yarmouk"
+  },
+  {
+   "name": "Ak-Zhayik",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2014,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/ak-zhayik"
+  },
+  {
+   "name": "Aksu-Zhabagly",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2015,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/aksu-zhabagly"
+  },
+  {
+   "name": "Alakol",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2013,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/alakol"
+  },
+  {
+   "name": "Almaty",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2020,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/almaty"
+  },
+  {
+   "name": "Altyn-Emel",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2017,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/altyn-emel"
+  },
+  {
+   "name": "Barsakelmes",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2016,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/barsakelmes"
+  },
+  {
+   "name": "Burabay",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2022,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/burabay"
+  },
+  {
+   "name": "Charyn",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2018,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/charyn"
+  },
+  {
+   "name": "Karatau",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2017,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/karatau"
+  },
+  {
+   "name": "Katon-Karagay",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2014,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/katon-karagay"
+  },
+  {
+   "name": "Kolsai Kolderi",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2021,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kolsai-kolderi"
+  },
+  {
+   "name": "Korgalzhyn",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2012,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/korgalzhyn"
+  },
+  {
+   "name": "Markakol",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2022,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/markakol"
+  },
+  {
+   "name": "West Altai",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2020,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/west-altai"
+  },
+  {
+   "name": "Zhongar",
+   "countries": [
+    "Kazakhstan"
+   ],
+   "year": 2018,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/zhongar"
+  },
+  {
+   "name": "Amboseli",
+   "countries": [
+    "Kenya"
+   ],
+   "year": 1991,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/amboseli"
+  },
+  {
+   "name": "Kiunga",
+   "countries": [
+    "Kenya"
+   ],
+   "year": 1980,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/kiunga"
+  },
+  {
+   "name": "Malindi-Watamu Arabuko Sokoke",
+   "countries": [
+    "Kenya"
+   ],
+   "year": 1979,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/malindi-watamu-arabuko-sokoke"
+  },
+  {
+   "name": "Mount Elgon",
+   "countries": [
+    "Kenya"
+   ],
+   "year": 2003,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mount-elgon"
+  },
+  {
+   "name": "Mount Kenya-Lewa",
+   "countries": [
+    "Kenya"
+   ],
+   "year": 1978,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mount-kenya-lewa"
+  },
+  {
+   "name": "Mount Kulal",
+   "countries": [
+    "Kenya"
+   ],
+   "year": 1978,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mount-kulal"
+  },
+  {
+   "name": "Issyk-Kul",
+   "countries": [
+    "Kyrgyzstan"
+   ],
+   "year": 2001,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/issyk-kul"
+  },
+  {
+   "name": "Sary-Chelek",
+   "countries": [
+    "Kyrgyzstan"
+   ],
+   "year": 1978,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/sary-chelek"
+  },
+  {
+   "name": "North Vidzeme",
+   "countries": [
+    "Latvia"
+   ],
+   "year": 1997,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/north-vidzeme"
+  },
+  {
+   "name": "Jabal Al Rihane",
+   "countries": [
+    "Lebanon"
+   ],
+   "year": 2007,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/jabal-al-rihane"
+  },
+  {
+   "name": "Jabal Moussa",
+   "countries": [
+    "Lebanon"
+   ],
+   "year": 2009,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/jabal-moussa"
+  },
+  {
+   "name": "Shouf",
+   "countries": [
+    "Lebanon"
+   ],
+   "year": 2005,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/shouf"
+  },
+  {
+   "name": "Matšeng",
+   "countries": [
+    "Lesotho"
+   ],
+   "year": 2021,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/matseng"
+  },
+  {
+   "name": "Ashaafean",
+   "countries": [
+    "Libya"
+   ],
+   "year": 2021,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/ashaafean"
+  },
+  {
+   "name": "Žuvintas",
+   "countries": [
+    "Lithuania"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/zuvintas"
+  },
+  {
+   "name": "Minett",
+   "countries": [
+    "Luxembourg"
+   ],
+   "year": 2020,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/minett"
+  },
+  {
+   "name": "Belo-sur-Mer - Kirindy-Mite",
+   "countries": [
+    "Madagascar"
+   ],
+   "year": 2016,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/belo-sur-mer-kirindy-mite"
+  },
+  {
+   "name": "Mananara Nord",
+   "countries": [
+    "Madagascar"
+   ],
+   "year": 1990,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mananara-nord"
+  },
+  {
+   "name": "Mantadia",
+   "countries": [
+    "Madagascar"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mantadia"
+  },
+  {
+   "name": "Sahamalaza-Iles Radama",
+   "countries": [
+    "Madagascar"
+   ],
+   "year": 2001,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/sahamalaza-iles-radama"
+  },
+  {
+   "name": "Tsimanampesotse - Nosy Ve Androka",
+   "countries": [
+    "Madagascar"
+   ],
+   "year": 2018,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/tsimanampesotse-nosy-ve-androka"
+  },
+  {
+   "name": "Tsimembo",
+   "countries": [
+    "Madagascar"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/tsimembo"
+  },
+  {
+   "name": "Lake Chilwa Wetland",
+   "countries": [
+    "Malawi"
+   ],
+   "year": 2006,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/lake-chilwa-wetland"
+  },
+  {
+   "name": "Mount Mulanje",
+   "countries": [
+    "Malawi"
+   ],
+   "year": 2000,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mount-mulanje"
+  },
+  {
+   "name": "Crocker Range",
+   "countries": [
+    "Malaysia"
+   ],
+   "year": 2014,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/crocker-range"
+  },
+  {
+   "name": "Kinabatangan",
+   "countries": [
+    "Malaysia"
+   ],
+   "year": 2025,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kinabatangan"
+  },
+  {
+   "name": "Penang Hill",
+   "countries": [
+    "Malaysia"
+   ],
+   "year": 2021,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/penang-hill"
+  },
+  {
+   "name": "Tasik Chini",
+   "countries": [
+    "Malaysia"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tasik-chini"
+  },
+  {
+   "name": "Addu Atoll",
+   "countries": [
+    "Maldives"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/addu-atoll"
+  },
+  {
+   "name": "Baa Atoll",
+   "countries": [
+    "Maldives"
+   ],
+   "year": 2011,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/baa-atoll"
+  },
+  {
+   "name": "Fuvahmulah",
+   "countries": [
+    "Maldives"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/fuvahmulah"
+  },
+  {
+   "name": "Boucle du Baoule",
+   "countries": [
+    "Mali"
+   ],
+   "year": 1982,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/boucle-du-baoule"
+  },
+  {
+   "name": "Delta du Fleuve Senegal",
+   "countries": [
+    "Mauritania"
+   ],
+   "year": 2005,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/delta-du-fleuve-senegal-0"
+  },
+  {
+   "name": "Black River Gorges-Bel Ombre",
+   "countries": [
+    "Mauritius"
+   ],
+   "year": 1977,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/black-river-gorges-bel-ombre"
+  },
+  {
+   "name": "Alto Golfo de California y El Pincate",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/alto-golfo-de-california-y-el-pincate"
+  },
+  {
+   "name": "Arrecife Alacranes",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/arrecife-alacranes"
+  },
+  {
+   "name": "Banco Chinchorro",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2003,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/banco-chinchorro"
+  },
+  {
+   "name": "Barranca de Metztitlán",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/barranca-de-metztitlan"
+  },
+  {
+   "name": "Chamela-Cuixmala",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/chamela-cuixmala"
+  },
+  {
+   "name": "Cuatrociénegas",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cuatrocienegas"
+  },
+  {
+   "name": "Cumbres de Monterrey",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/cumbres-de-monterrey"
+  },
+  {
+   "name": "El Cielo",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1986,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/el-cielo"
+  },
+  {
+   "name": "El Triunfo",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/el-triunfo"
+  },
+  {
+   "name": "El Vizcaino",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/el-vizcaino"
+  },
+  {
+   "name": "Huatulco",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/huatulco"
+  },
+  {
+   "name": "Isla Cozumel",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2016,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/isla-cozumel"
+  },
+  {
+   "name": "Islas Marias",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2010,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/islas-marias"
+  },
+  {
+   "name": "Islas Marietas",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2008,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/islas-marietas"
+  },
+  {
+   "name": "La Encrucijada",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-encrucijada"
+  },
+  {
+   "name": "La Michilía",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-michilia"
+  },
+  {
+   "name": "La Primavera",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-primavera"
+  },
+  {
+   "name": "La Sepultura",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-sepultura"
+  },
+  {
+   "name": "Laguna Madre y Delta del Rió Bravo",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/laguna-madre-y-delta-del-rio-bravo"
+  },
+  {
+   "name": "Lagunas de Montebello",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2009,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/lagunas-de-montebello"
+  },
+  {
+   "name": "Los Tuxtlas",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/los-tuxtlas"
+  },
+  {
+   "name": "Los Volcanes",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2010,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/los-volcanes"
+  },
+  {
+   "name": "Maderas del Carmen",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/maderas-del-carmen"
+  },
+  {
+   "name": "Mapimí",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/mapimi"
+  },
+  {
+   "name": "Mariposa Monarca",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/mariposa-monarca"
+  },
+  {
+   "name": "Montes Azules",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1979,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/montes-azules"
+  },
+  {
+   "name": "Naha-Metzabok",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2010,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/naha-metzabok"
+  },
+  {
+   "name": "Pantanos de Centla",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/pantanos-de-centla"
+  },
+  {
+   "name": "Region de Calakmul",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/region-de-calakmul"
+  },
+  {
+   "name": "Ría Celestún",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2003,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/ria-celestun"
+  },
+  {
+   "name": "Ría Lagartos",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2004,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/ria-lagartos"
+  },
+  {
+   "name": "Selva El Ocote",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/selva-el-ocote"
+  },
+  {
+   "name": "Sian Ka'an",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1986,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sian-kaan"
+  },
+  {
+   "name": "Sierra Gorda",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2001,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-gorda"
+  },
+  {
+   "name": "Sierra La Laguna",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2003,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-la-laguna"
+  },
+  {
+   "name": "Sierra de Alamos - Rio Cuchujaqui",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2007,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-de-alamos-rio-cuchujaqui"
+  },
+  {
+   "name": "Sierra de Huautla",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-de-huautla"
+  },
+  {
+   "name": "Sierra de Manantlán",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 1988,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sierra-de-manantlan"
+  },
+  {
+   "name": "Sistema Arrecifal Veracruzano",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sistema-arrecifal-veracruzano"
+  },
+  {
+   "name": "Tehuacan-Cuicatlan",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2012,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/tehuacan-cuicatlan"
+  },
+  {
+   "name": "Volcán Tacaná",
+   "countries": [
+    "Mexico"
+   ],
+   "year": 2006,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/volcan-tacana"
+  },
+  {
+   "name": "And Atoll",
+   "countries": [
+    "Micronesia (Federated States of)"
+   ],
+   "year": 2007,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/and-atoll"
+  },
+  {
+   "name": "Utwe",
+   "countries": [
+    "Micronesia (Federated States of)"
+   ],
+   "year": 2005,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/utwe"
+  },
+  {
+   "name": "Boghd Khan Uul",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 1996,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/boghd-khan-uul"
+  },
+  {
+   "name": "Dornod Mongol",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2005,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/dornod-mongol"
+  },
+  {
+   "name": "Great Gobi",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 1990,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/great-gobi"
+  },
+  {
+   "name": "Hustai Nuruu",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2002,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/hustai-nuruu"
+  },
+  {
+   "name": "Khar Us Lake",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2024,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/khar-us-lake"
+  },
+  {
+   "name": "Khomyn Tal",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2025,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/khomyn-tal"
+  },
+  {
+   "name": "Khuvsgul Lake",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2022,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/khuvsgul-lake"
+  },
+  {
+   "name": "Mongol Daguur",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2007,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mongol-daguur"
+  },
+  {
+   "name": "Onon Balj",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2023,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/onon-balj"
+  },
+  {
+   "name": "Toson-Khulstai",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2020,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/toson-khulstai"
+  },
+  {
+   "name": "Tost, Toson Bumbiin Nuruu",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 2026,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/tost-toson-bumbiin-nuruu"
+  },
+  {
+   "name": "Uvs Nuur Basin",
+   "countries": [
+    "Mongolia"
+   ],
+   "year": 1997,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/uvs-nuur-basin"
+  },
+  {
+   "name": "Skadar Lake Watershed",
+   "countries": [
+    "Montenegro"
+   ],
+   "year": 2026,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/skadar-lake-watershed"
+  },
+  {
+   "name": "Tara River Basin",
+   "countries": [
+    "Montenegro"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tara-river-basin"
+  },
+  {
+   "name": "Arganeraie",
+   "countries": [
+    "Morocco"
+   ],
+   "year": 1998,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/arganeraie"
+  },
+  {
+   "name": "Atlas Cedar",
+   "countries": [
+    "Morocco"
+   ],
+   "year": 2016,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/atlas-cedar"
+  },
+  {
+   "name": "Intercontinental BR of the Mediterranean",
+   "countries": [
+    "Morocco"
+   ],
+   "year": 2006,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/intercontinental-br-mediterranean"
+  },
+  {
+   "name": "Oasis du sud marocain",
+   "countries": [
+    "Morocco"
+   ],
+   "year": 2000,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/oasis-du-sud-marocain"
+  },
+  {
+   "name": "Quirimbas",
+   "countries": [
+    "Mozambique"
+   ],
+   "year": 2018,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/quirimbas"
+  },
+  {
+   "name": "Indawgyi",
+   "countries": [
+    "Myanmar"
+   ],
+   "year": 2017,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/indawgyi"
+  },
+  {
+   "name": "Inlay Lake",
+   "countries": [
+    "Myanmar"
+   ],
+   "year": 2015,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/inlay-lake"
+  },
+  {
+   "name": "Kempen-Broek",
+   "countries": [
+    "Netherlands (Kingdom of the)"
+   ],
+   "year": 2024,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/kempen-broek-0"
+  },
+  {
+   "name": "Maasheggen",
+   "countries": [
+    "Netherlands (Kingdom of the)"
+   ],
+   "year": 2018,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/maasheggen"
+  },
+  {
+   "name": "Bosawas",
+   "countries": [
+    "Nicaragua"
+   ],
+   "year": 1997,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bosawas"
+  },
+  {
+   "name": "Ometepe Island",
+   "countries": [
+    "Nicaragua"
+   ],
+   "year": 2010,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/ometepe-island"
+  },
+  {
+   "name": "Río San Juan",
+   "countries": [
+    "Nicaragua"
+   ],
+   "year": 2003,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/rio-san-juan"
+  },
+  {
+   "name": "Aïr et Ténéré",
+   "countries": [
+    "Niger"
+   ],
+   "year": 1997,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/air-et-tenere"
+  },
+  {
+   "name": "Gadabedji",
+   "countries": [
+    "Niger"
+   ],
+   "year": 2017,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/gadabedji"
+  },
+  {
+   "name": "W Region",
+   "countries": [
+    "Niger"
+   ],
+   "year": 2002,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/w-region-0"
+  },
+  {
+   "name": "Hadejia Nguru Bade",
+   "countries": [
+    "Nigeria"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/hadejia-nguru-bade"
+  },
+  {
+   "name": "Oban",
+   "countries": [
+    "Nigeria"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/oban"
+  },
+  {
+   "name": "Okwangwo",
+   "countries": [
+    "Nigeria"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/okwangwo"
+  },
+  {
+   "name": "Omo",
+   "countries": [
+    "Nigeria"
+   ],
+   "year": 1977,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/omo"
+  },
+  {
+   "name": "Ohrid-Prespa",
+   "countries": [
+    "North Macedonia"
+   ],
+   "year": 2014,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ohrid-prespa-0"
+  },
+  {
+   "name": "Nordhordland",
+   "countries": [
+    "Norway"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/nordhordland"
+  },
+  {
+   "name": "Al Jabal Al Akhdar",
+   "countries": [
+    "Oman"
+   ],
+   "year": 2025,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/al-jabal-al-akhdar"
+  },
+  {
+   "name": "Sirrin",
+   "countries": [
+    "Oman"
+   ],
+   "year": 2025,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/sirrin"
+  },
+  {
+   "name": "Chitral Bashkar Garmchashm",
+   "countries": [
+    "Pakistan"
+   ],
+   "year": 2023,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/chitral-bashkar-garmchashm"
+  },
+  {
+   "name": "Gallies",
+   "countries": [
+    "Pakistan"
+   ],
+   "year": 2023,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gallies"
+  },
+  {
+   "name": "Lal Suhanra",
+   "countries": [
+    "Pakistan"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/lal-suhanra"
+  },
+  {
+   "name": "Ziarat Juniper forests",
+   "countries": [
+    "Pakistan"
+   ],
+   "year": 2013,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/ziarat-juniper-forests"
+  },
+  {
+   "name": "Ngaremeduu",
+   "countries": [
+    "Palau"
+   ],
+   "year": 2005,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/ngaremeduu"
+  },
+  {
+   "name": "Darién",
+   "countries": [
+    "Panama"
+   ],
+   "year": 1983,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/darien"
+  },
+  {
+   "name": "La Amistad",
+   "countries": [
+    "Panama"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/la-amistad"
+  },
+  {
+   "name": "Bosque Mbaracayú",
+   "countries": [
+    "Paraguay"
+   ],
+   "year": 2000,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bosque-mbaracayu"
+  },
+  {
+   "name": "El Chaco",
+   "countries": [
+    "Paraguay"
+   ],
+   "year": 2005,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/el-chaco"
+  },
+  {
+   "name": "Itaipu",
+   "countries": [
+    "Paraguay"
+   ],
+   "year": 2017,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/itaipu"
+  },
+  {
+   "name": "Sur del Alto Parana",
+   "countries": [
+    "Paraguay"
+   ],
+   "year": 2026,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/sur-del-alto-parana"
+  },
+  {
+   "name": "Avireri Vraem",
+   "countries": [
+    "Peru"
+   ],
+   "year": 2021,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/avireri-vraem"
+  },
+  {
+   "name": "Bicentenario-Ayacucho",
+   "countries": [
+    "Peru"
+   ],
+   "year": 2023,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bicentenario-ayacucho"
+  },
+  {
+   "name": "Bosques de Neblina - Selva Central",
+   "countries": [
+    "Peru"
+   ],
+   "year": 2020,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bosques-de-neblina-selva-central"
+  },
+  {
+   "name": "Gran Pajatén",
+   "countries": [
+    "Peru"
+   ],
+   "year": 2016,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/gran-pajaten"
+  },
+  {
+   "name": "Huascaran",
+   "countries": [
+    "Peru"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/huascaran"
+  },
+  {
+   "name": "Manu",
+   "countries": [
+    "Peru"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/manu"
+  },
+  {
+   "name": "Noroeste Amotapes-Manglares",
+   "countries": [
+    "Peru"
+   ],
+   "year": 1977,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/noroeste-amotapes-manglares"
+  },
+  {
+   "name": "Oxapampa-Ashaninka-Yanesha",
+   "countries": [
+    "Peru"
+   ],
+   "year": 2010,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/oxapampa-ashaninka-yanesha"
+  },
+  {
+   "name": "Albay",
+   "countries": [
+    "Philippines"
+   ],
+   "year": 2016,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/albay"
+  },
+  {
+   "name": "Matibay na Bayan ng Sablayan",
+   "countries": [
+    "Philippines"
+   ],
+   "year": 2026,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/matibay-na-bayan-ng-sablayan"
+  },
+  {
+   "name": "Palawan",
+   "countries": [
+    "Philippines"
+   ],
+   "year": 1990,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/palawan"
+  },
+  {
+   "name": "Puerto Galera",
+   "countries": [
+    "Philippines"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/puerto-galera"
+  },
+  {
+   "name": "yApayaos",
+   "countries": [
+    "Philippines"
+   ],
+   "year": 2024,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/yapayaos"
+  },
+  {
+   "name": "Babia Gora",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/babia-gora"
+  },
+  {
+   "name": "Bialowieza",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/bialowieza"
+  },
+  {
+   "name": "East Carpathians",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/east-carpathians-0"
+  },
+  {
+   "name": "Krkonose / Karkonosze",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/krkonose/karkonosze"
+  },
+  {
+   "name": "Masurian Lakes",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/masurian-lakes"
+  },
+  {
+   "name": "Puszcza Kampinoska",
+   "countries": [
+    "Poland"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/puszcza-kampinoska"
+  },
+  {
+   "name": "Roztocze",
+   "countries": [
+    "Poland"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/roztocze"
+  },
+  {
+   "name": "Slowinski",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/slowinski"
+  },
+  {
+   "name": "Tatra",
+   "countries": [
+    "Poland"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tatra"
+  },
+  {
+   "name": "Tuchola Forests",
+   "countries": [
+    "Poland"
+   ],
+   "year": 2010,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tuchola-forests"
+  },
+  {
+   "name": "West Polesie",
+   "countries": [
+    "Poland"
+   ],
+   "year": 2002,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/west-polesie"
+  },
+  {
+   "name": "Arrábida",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/arrabida"
+  },
+  {
+   "name": "Berlengas",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/berlengas"
+  },
+  {
+   "name": "Castro Verde",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2017,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/castro-verde"
+  },
+  {
+   "name": "Corvo Island",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2007,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/corvo-island"
+  },
+  {
+   "name": "Fajas de Sao Jorge",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/fajas-de-sao-jorge"
+  },
+  {
+   "name": "Flores Island",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/flores-island"
+  },
+  {
+   "name": "Graciosa Island",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2007,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/graciosa-island"
+  },
+  {
+   "name": "Meseta Iberica",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/meseta-iberica-0"
+  },
+  {
+   "name": "Paúl do Boquilobo",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 1981,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/paul-do-boquilobo"
+  },
+  {
+   "name": "Porto Santo",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2020,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/porto-santo"
+  },
+  {
+   "name": "Santana Madeira",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/santana-madeira"
+  },
+  {
+   "name": "Serra Da Estrela",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2026,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/serra-da-estrela"
+  },
+  {
+   "name": "Tejo/Tajo Internacional",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tejo/tajo-internacional-0"
+  },
+  {
+   "name": "Xurés",
+   "countries": [
+    "Portugal"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/xures"
+  },
+  {
+   "name": "Al Reem",
+   "countries": [
+    "Qatar"
+   ],
+   "year": 2007,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/al-reem"
+  },
+  {
+   "name": "Changnyeong",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2024,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/changnyeong"
+  },
+  {
+   "name": "Gangwon Eco-Peace",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2019,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gangwon-eco-peace"
+  },
+  {
+   "name": "Gochang",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2013,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gochang"
+  },
+  {
+   "name": "Gwangneung forests",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2010,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/gwangneung-forests"
+  },
+  {
+   "name": "Jeju Island",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2002,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/jeju-island"
+  },
+  {
+   "name": "Mount Sorak",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 1982,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-sorak"
+  },
+  {
+   "name": "Shinan Dadohae",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/shinan-dadohae"
+  },
+  {
+   "name": "Suncheon",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2018,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/suncheon"
+  },
+  {
+   "name": "Wando Archipelago",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2021,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/wando-archipelago"
+  },
+  {
+   "name": "Yeoncheon Imjin River",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "year": 2019,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/yeoncheon-imjin-river"
+  },
+  {
+   "name": "Lower Prut",
+   "countries": [
+    "Republic of Moldova"
+   ],
+   "year": 2018,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lower-prut"
+  },
+  {
+   "name": "Danube Delta",
+   "countries": [
+    "Romania"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/danube-delta"
+  },
+  {
+   "name": "Rodnei Mountains",
+   "countries": [
+    "Romania"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/rodnei-mountains"
+  },
+  {
+   "name": "Altaisky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2009,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/altaisky"
+  },
+  {
+   "name": "Astrakhanskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1984,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/astrakhanskiy"
+  },
+  {
+   "name": "Baikalskyi",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1986,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/baikalskyi"
+  },
+  {
+   "name": "Barguzinskyi",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1986,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/barguzinskyi"
+  },
+  {
+   "name": "Bashkirskiyi Ural",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2012,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/bashkirskiyi-ural"
+  },
+  {
+   "name": "Commander Islands",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2002,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/commander-islands"
+  },
+  {
+   "name": "Darvinskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2002,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/darvinskiy"
+  },
+  {
+   "name": "Daursky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1997,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/daursky"
+  },
+  {
+   "name": "Far East Marine",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2003,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/far-east-marine"
+  },
+  {
+   "name": "Great Volzhsko-Kamsky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2007,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/great-volzhsko-kamsky"
+  },
+  {
+   "name": "Katunsky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2000,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/katunsky"
+  },
+  {
+   "name": "Kavkazskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1978,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kavkazskiy"
+  },
+  {
+   "name": "Kedrovaya Pad",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2004,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kedrovaya-pad"
+  },
+  {
+   "name": "Kenozersky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2004,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kenozersky"
+  },
+  {
+   "name": "Khakassky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2017,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/khakassky"
+  },
+  {
+   "name": "Khankaiskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2005,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/khankaiskiy"
+  },
+  {
+   "name": "Kizlyar Bay",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2017,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kizlyar-bay"
+  },
+  {
+   "name": "Kologrivsky Forest",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2020,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kologrivsky-forest"
+  },
+  {
+   "name": "Kronotskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1984,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kronotskiy"
+  },
+  {
+   "name": "Kuznetsky Alatau",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2021,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/kuznetsky-alatau"
+  },
+  {
+   "name": "Lake Elton",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2019,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/lake-elton"
+  },
+  {
+   "name": "Laplandskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1985,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/laplandskiy"
+  },
+  {
+   "name": "Metsola",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2017,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/metsola"
+  },
+  {
+   "name": "Middle-Volga Integrated",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2006,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/middle-volga-integrated"
+  },
+  {
+   "name": "Mountain Great Bogdo",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2021,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/mountain-great-bogdo"
+  },
+  {
+   "name": "Mountainous Urals",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2018,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/mountainous-urals"
+  },
+  {
+   "name": "Nerusso-Desnianskoe-Polesie",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2001,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/nerusso-desnianskoe-polesie"
+  },
+  {
+   "name": "Nijegorodskoe Zavolje",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2002,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/nijegorodskoe-zavolje"
+  },
+  {
+   "name": "Okskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1978,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/okskiy"
+  },
+  {
+   "name": "Pechoro-llychskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1985,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/pechoro-llychskiy"
+  },
+  {
+   "name": "Prioksko-Terrasnyi",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1978,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/prioksko-terrasnyi"
+  },
+  {
+   "name": "Rostovsky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2008,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/rostovsky"
+  },
+  {
+   "name": "Sayano-Shushenskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1985,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/sayano-shushenskiy"
+  },
+  {
+   "name": "Sikhote-Alin",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1978,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/sikhote-alin"
+  },
+  {
+   "name": "Smolensk Lakeland",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2002,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/smolensk-lakeland"
+  },
+  {
+   "name": "Sokhondinskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1984,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/sokhondinskiy"
+  },
+  {
+   "name": "Taimyrsky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1995,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/taimyrsky"
+  },
+  {
+   "name": "Teberda",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1997,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/teberda"
+  },
+  {
+   "name": "Tsentral'nochernozem",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1979,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/tsentralnochernozem"
+  },
+  {
+   "name": "Tsentral'nolesnoy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1985,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/tsentralnolesnoy"
+  },
+  {
+   "name": "Tzentralnosibirskii",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1985,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/tzentralnosibirskii"
+  },
+  {
+   "name": "Ubsunorskaya Kotlovina",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1997,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/ubsunorskaya-kotlovina"
+  },
+  {
+   "name": "Ugra",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2002,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/ugra"
+  },
+  {
+   "name": "Valdaisky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2004,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/valdaisky"
+  },
+  {
+   "name": "Visimskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2001,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/visimskiy"
+  },
+  {
+   "name": "Vodlozersky",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2001,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/vodlozersky"
+  },
+  {
+   "name": "Volga-Akhtuba Floodplain",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 2011,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/volga-akhtuba-floodplain"
+  },
+  {
+   "name": "Voronezhskiy",
+   "countries": [
+    "Russian Federation"
+   ],
+   "year": 1985,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/voronezhskiy"
+  },
+  {
+   "name": "Gishwati Mukura Landscape",
+   "countries": [
+    "Rwanda"
+   ],
+   "year": 2020,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/gishwati-mukura-landscape"
+  },
+  {
+   "name": "Volcans",
+   "countries": [
+    "Rwanda"
+   ],
+   "year": 1983,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/volcans"
+  },
+  {
+   "name": "St. Mary's",
+   "countries": [
+    "Saint Kitts and Nevis"
+   ],
+   "year": 2011,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/st-marys"
+  },
+  {
+   "name": "Ilha de São Tomé",
+   "countries": [
+    "Sao Tome and Principe"
+   ],
+   "year": 2025,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/ilha-de-sao-tome"
+  },
+  {
+   "name": "Island of Principe",
+   "countries": [
+    "Sao Tome and Principe"
+   ],
+   "year": 2012,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/island-principe"
+  },
+  {
+   "name": "Harrat Uwayrid",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "year": 2022,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/harrat-uwayrid"
+  },
+  {
+   "name": "Imam Turki Bin Abdullah",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "year": 2025,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/imam-turki-bin-abdullah"
+  },
+  {
+   "name": "Juzur Farasan",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "year": 2021,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/juzur-farasan"
+  },
+  {
+   "name": "Delta du Fleuve Senegal",
+   "countries": [
+    "Senegal"
+   ],
+   "year": 2005,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/delta-du-fleuve-senegal"
+  },
+  {
+   "name": "Delta du Saloum",
+   "countries": [
+    "Senegal"
+   ],
+   "year": 1980,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/delta-du-saloum"
+  },
+  {
+   "name": "Ferlo",
+   "countries": [
+    "Senegal"
+   ],
+   "year": 2012,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/ferlo"
+  },
+  {
+   "name": "Niokolo-Koba",
+   "countries": [
+    "Senegal"
+   ],
+   "year": 1981,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/niokolo-koba"
+  },
+  {
+   "name": "Samba Dia",
+   "countries": [
+    "Senegal"
+   ],
+   "year": 1979,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/samba-dia"
+  },
+  {
+   "name": "Backo Podunavlje",
+   "countries": [
+    "Serbia"
+   ],
+   "year": 2017,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/backo-podunavlje"
+  },
+  {
+   "name": "Golija-Studenica",
+   "countries": [
+    "Serbia"
+   ],
+   "year": 2001,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/golija-studenica"
+  },
+  {
+   "name": "East Carpathians",
+   "countries": [
+    "Slovakia"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/east-carpathians-1"
+  },
+  {
+   "name": "Polana",
+   "countries": [
+    "Slovakia"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/polana"
+  },
+  {
+   "name": "Slovak Karst (Slovenský Kras)",
+   "countries": [
+    "Slovakia"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/slovak-karst-slovensky-kras"
+  },
+  {
+   "name": "Tatra",
+   "countries": [
+    "Slovakia"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tatra-0"
+  },
+  {
+   "name": "Julian Alps",
+   "countries": [
+    "Slovenia"
+   ],
+   "year": 2003,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/julian-alps-0"
+  },
+  {
+   "name": "Kozjansko & Obsotelje",
+   "countries": [
+    "Slovenia"
+   ],
+   "year": 2010,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/kozjansko-obsotelje"
+  },
+  {
+   "name": "Mura River",
+   "countries": [
+    "Slovenia"
+   ],
+   "year": 2018,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mura-river"
+  },
+  {
+   "name": "Škocjan Caves",
+   "countries": [
+    "Slovenia"
+   ],
+   "year": 2004,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/skocjan-caves"
+  },
+  {
+   "name": "Cape West Coast",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2000,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/cape-west-coast"
+  },
+  {
+   "name": "Cape Winelands",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2007,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/cape-winelands"
+  },
+  {
+   "name": "Garden Route",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2017,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/garden-route"
+  },
+  {
+   "name": "Gouritz Cluster",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2015,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/gouritz-cluster"
+  },
+  {
+   "name": "Kogelberg",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 1998,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/kogelberg"
+  },
+  {
+   "name": "Kruger to Canyons",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2001,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/kruger-canyons"
+  },
+  {
+   "name": "Magaliesberg",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2015,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/magaliesberg"
+  },
+  {
+   "name": "Marico",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2018,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/marico"
+  },
+  {
+   "name": "Vhembe",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2009,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/vhembe"
+  },
+  {
+   "name": "Waterberg",
+   "countries": [
+    "South Africa"
+   ],
+   "year": 2001,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/waterberg"
+  },
+  {
+   "name": "Alto Turia",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/alto-turia"
+  },
+  {
+   "name": "Alto de Bernesga",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/alto-de-bernesga"
+  },
+  {
+   "name": "Babia",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2004,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/babia"
+  },
+  {
+   "name": "Bardenas Reales",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/bardenas-reales"
+  },
+  {
+   "name": "Cabo de Gata-Nijar",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1997,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/cabo-de-gata-nijar"
+  },
+  {
+   "name": "Cuencas Altas de los Rios Manzanares, Lozoya y Guadarrama",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/cuencas-altas-de-los-rios-manzanares-lozoya-y-guadarrama"
+  },
+  {
+   "name": "Doñana",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1980,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/donana"
+  },
+  {
+   "name": "Fuerteventura",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/fuerteventura"
+  },
+  {
+   "name": "Gerês",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/geres"
+  },
+  {
+   "name": "Gran Canaria",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/gran-canaria"
+  },
+  {
+   "name": "Intercontinental BR of the Mediterranean",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2006,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/intercontinental-br-mediterranean-0"
+  },
+  {
+   "name": "Irati",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2024,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/irati"
+  },
+  {
+   "name": "Isla de El Hierro",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/isla-de-el-hierro"
+  },
+  {
+   "name": "La Gomera",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/la-gomera"
+  },
+  {
+   "name": "La Palma",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1983,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/la-palma"
+  },
+  {
+   "name": "La Siberia",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/la-siberia"
+  },
+  {
+   "name": "Lanzarote",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1993,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lanzarote"
+  },
+  {
+   "name": "Las Dehesas de Sierra Morena",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2002,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/las-dehesas-de-sierra-morena"
+  },
+  {
+   "name": "Las Sierras de Béjar y Francia",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2006,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/las-sierras-de-bejar-y-francia"
+  },
+  {
+   "name": "Las Sierras de Cazorla y Segura",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1983,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/las-sierras-de-cazorla-y-segura"
+  },
+  {
+   "name": "Las Ubiñas-La Mesa",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/las-ubinas-la-mesa"
+  },
+  {
+   "name": "Los Ancares Leoneses",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2006,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/los-ancares-leoneses"
+  },
+  {
+   "name": "Los Argüellos",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/los-arguellos"
+  },
+  {
+   "name": "Los Valles de Omaña y Luna",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/los-valles-de-omana-y-luna"
+  },
+  {
+   "name": "Macizo de Anaga",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/macizo-de-anaga"
+  },
+  {
+   "name": "Mancha Húmeda",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1980,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mancha-humeda"
+  },
+  {
+   "name": "Marismas del Odiel",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1983,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/marismas-del-odiel"
+  },
+  {
+   "name": "Mariñas Coruñesas e Terras do Mandeo",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2013,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/marinas-corunesas-e-terras-do-mandeo"
+  },
+  {
+   "name": "Menorca",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1993,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/menorca"
+  },
+  {
+   "name": "Meseta Iberica",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2015,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/meseta-iberica"
+  },
+  {
+   "name": "Monfragüe",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2003,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/monfrague"
+  },
+  {
+   "name": "Montseny",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1978,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/montseny"
+  },
+  {
+   "name": "Muniellos",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/muniellos"
+  },
+  {
+   "name": "Ordesa-Viñamala",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ordesa-vinamala"
+  },
+  {
+   "name": "Os Ancares Lucenses y Montes de Cervantes, Navia y Becerrea",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2006,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/os-ancares-lucenses-y-montes-de-cervantes-navia-y-becerrea"
+  },
+  {
+   "name": "Picos de Europa",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2003,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/picos-de-europa"
+  },
+  {
+   "name": "Ponga",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2018,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ponga"
+  },
+  {
+   "name": "Real Sitio de San Ildefonso-El Espinar",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2013,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/real-sitio-de-san-ildefonso-el-espinar"
+  },
+  {
+   "name": "Redes",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2001,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/redes"
+  },
+  {
+   "name": "Ribeira Sacra E Serras Do Oribio E Courel",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2021,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/ribeira-sacra-e-serras-do-oribio-e-courel"
+  },
+  {
+   "name": "Río Eo, Oscos y Terras de Buron",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2007,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/rio-eo-oscos-y-terras-de-buron"
+  },
+  {
+   "name": "Sierra Nevada",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1986,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sierra-nevada"
+  },
+  {
+   "name": "Sierra de Grazalema",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sierra-de-grazalema"
+  },
+  {
+   "name": "Sierra de las Nieves",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1995,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sierra-de-las-nieves"
+  },
+  {
+   "name": "Sierra del Rincón",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sierra-del-rincon"
+  },
+  {
+   "name": "Somiedo",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2000,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/somiedo"
+  },
+  {
+   "name": "Tejo/Tajo Internacional",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/tejo/tajo-internacional"
+  },
+  {
+   "name": "Terras do Miño",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2002,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/terras-do-mino"
+  },
+  {
+   "name": "Terres de l’Ebre, Catalonia",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2013,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/terres-de-lebre-catalonia"
+  },
+  {
+   "name": "Urdaibai",
+   "countries": [
+    "Spain"
+   ],
+   "year": 1984,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/urdaibai"
+  },
+  {
+   "name": "Val d'Aran",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2024,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/val-daran"
+  },
+  {
+   "name": "Valle de Laciana",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2003,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/valle-de-laciana"
+  },
+  {
+   "name": "Valle del Cabriel",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/valle-del-cabriel"
+  },
+  {
+   "name": "Valles del Jubera, Leza, Cidacos y Alhama",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2003,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/valles-del-jubera-leza-cidacos-y-alhama"
+  },
+  {
+   "name": "Área de Allariz",
+   "countries": [
+    "Spain"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/area-de-allariz"
+  },
+  {
+   "name": "Bundala",
+   "countries": [
+    "Sri Lanka"
+   ],
+   "year": 2005,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/bundala"
+  },
+  {
+   "name": "Hurulu",
+   "countries": [
+    "Sri Lanka"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/hurulu"
+  },
+  {
+   "name": "Kanneliya-Dediyagala-Nakiyadeniya",
+   "countries": [
+    "Sri Lanka"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kanneliya-dediyagala-nakiyadeniya"
+  },
+  {
+   "name": "Sinharaja",
+   "countries": [
+    "Sri Lanka"
+   ],
+   "year": 1978,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/sinharaja"
+  },
+  {
+   "name": "Dinder",
+   "countries": [
+    "Sudan"
+   ],
+   "year": 1979,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/dinder"
+  },
+  {
+   "name": "Jebel El Dair",
+   "countries": [
+    "Sudan"
+   ],
+   "year": 2017,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/jebel-el-dair"
+  },
+  {
+   "name": "Radom",
+   "countries": [
+    "Sudan"
+   ],
+   "year": 1979,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/radom"
+  },
+  {
+   "name": "Blekinge Archipelago",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/blekinge-archipelago"
+  },
+  {
+   "name": "East Vättern Scarp Landscape",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/east-vattern-scarp-landscape"
+  },
+  {
+   "name": "Kristianstads Vattenrike",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2005,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/kristianstads-vattenrike"
+  },
+  {
+   "name": "Lake Vänern Archipelago and Mount Kinnekulle",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2010,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/lake-vanern-archipelago-and-mount-kinnekulle"
+  },
+  {
+   "name": "Nedre Dalälven River Landscape",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/nedre-dalalven-river-landscape"
+  },
+  {
+   "name": "Storkriket",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2025,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/storkriket"
+  },
+  {
+   "name": "Vindelälven-Juhttátahkka",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/vindelalven-juhttatahkka"
+  },
+  {
+   "name": "Voxnadalen",
+   "countries": [
+    "Sweden"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/voxnadalen"
+  },
+  {
+   "name": "Biosfera Engiadina Val Müstair",
+   "countries": [
+    "Switzerland"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/biosfera-engiadina-val-mustair"
+  },
+  {
+   "name": "Entlebuch",
+   "countries": [
+    "Switzerland"
+   ],
+   "year": 2001,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/entlebuch"
+  },
+  {
+   "name": "Lajat",
+   "countries": [
+    "Syrian Arab Republic"
+   ],
+   "year": 2009,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/lajat"
+  },
+  {
+   "name": "Romit",
+   "countries": [
+    "Tajikistan"
+   ],
+   "year": 2025,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/romit"
+  },
+  {
+   "name": "Doi Chiang Dao",
+   "countries": [
+    "Thailand"
+   ],
+   "year": 2021,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/doi-chiang-dao"
+  },
+  {
+   "name": "Huay Tak Teak",
+   "countries": [
+    "Thailand"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/huay-tak-teak"
+  },
+  {
+   "name": "Mae Sa-Kog Ma",
+   "countries": [
+    "Thailand"
+   ],
+   "year": 1977,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mae-sa-kog-ma"
+  },
+  {
+   "name": "Ranong",
+   "countries": [
+    "Thailand"
+   ],
+   "year": 1997,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/ranong"
+  },
+  {
+   "name": "Sakaerat",
+   "countries": [
+    "Thailand"
+   ],
+   "year": 1976,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/sakaerat"
+  },
+  {
+   "name": "Nino Konis Santana",
+   "countries": [
+    "Timor-Leste"
+   ],
+   "year": 2026,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/nino-konis-santana"
+  },
+  {
+   "name": "Mono",
+   "countries": [
+    "Togo"
+   ],
+   "year": 2017,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mono-0"
+  },
+  {
+   "name": "Oti-Keran/Oti-Mandouri",
+   "countries": [
+    "Togo"
+   ],
+   "year": 2011,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/oti-keran/oti-mandouri"
+  },
+  {
+   "name": "North-East Tobago",
+   "countries": [
+    "Trinidad and Tobago"
+   ],
+   "year": 2020,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/north-east-tobago"
+  },
+  {
+   "name": "Djebel Bou-Hedma",
+   "countries": [
+    "Tunisia"
+   ],
+   "year": 1977,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/djebel-bou-hedma"
+  },
+  {
+   "name": "Djebel Chambi",
+   "countries": [
+    "Tunisia"
+   ],
+   "year": 1977,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/djebel-chambi"
+  },
+  {
+   "name": "Ichkeul",
+   "countries": [
+    "Tunisia"
+   ],
+   "year": 1977,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/ichkeul"
+  },
+  {
+   "name": "Iles Zembra et Zembreta",
+   "countries": [
+    "Tunisia"
+   ],
+   "year": 1977,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/iles-zembra-et-zembreta"
+  },
+  {
+   "name": "Repetek",
+   "countries": [
+    "Turkmenistan"
+   ],
+   "year": 1978,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/repetek"
+  },
+  {
+   "name": "Camili",
+   "countries": [
+    "Türkiye"
+   ],
+   "year": 2005,
+   "region": null,
+   "url": "https://www.unesco.org/en/mab/camili"
+  },
+  {
+   "name": "Mount Elgon",
+   "countries": [
+    "Uganda"
+   ],
+   "year": 2005,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/mount-elgon-0"
+  },
+  {
+   "name": "Queen Elizabeth",
+   "countries": [
+    "Uganda"
+   ],
+   "year": 1979,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/queen-elizabeth"
+  },
+  {
+   "name": "Askaniya-Nova",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 1984,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/askaniya-nova"
+  },
+  {
+   "name": "Carpathian",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 1992,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/carpathian"
+  },
+  {
+   "name": "Chernomorskiy",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 1984,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/chernomorskiy"
+  },
+  {
+   "name": "Desnianskyi",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 2009,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/desnianskyi"
+  },
+  {
+   "name": "Dunaisky",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/dunaisky"
+  },
+  {
+   "name": "East Carpathians",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 1998,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/east-carpathians"
+  },
+  {
+   "name": "Roztochya",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 2011,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/roztochya"
+  },
+  {
+   "name": "Shatskyi",
+   "countries": [
+    "Ukraine"
+   ],
+   "year": 2002,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/shatskyi"
+  },
+  {
+   "name": "Marawah",
+   "countries": [
+    "United Arab Emirates"
+   ],
+   "year": 2007,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/marawah"
+  },
+  {
+   "name": "Wadi Wurayah",
+   "countries": [
+    "United Arab Emirates"
+   ],
+   "year": 2018,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/wadi-wurayah"
+  },
+  {
+   "name": "Biosffer Dyfi",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 1977,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/biosffer-dyfi"
+  },
+  {
+   "name": "Galloway and Southern Ayrshire",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 2012,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/galloway-and-southern-ayrshire"
+  },
+  {
+   "name": "Isle of Man",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 2016,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/isle-man"
+  },
+  {
+   "name": "Isle of Wight",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 2019,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/isle-wight"
+  },
+  {
+   "name": "Living Coast",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 2014,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/living-coast"
+  },
+  {
+   "name": "North Devon",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/north-devon"
+  },
+  {
+   "name": "Wester Ross",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/wester-ross"
+  },
+  {
+   "name": "East Usambara",
+   "countries": [
+    "United Republic of Tanzania"
+   ],
+   "year": 2000,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/east-usambara"
+  },
+  {
+   "name": "Gombe Masito Ugalla",
+   "countries": [
+    "United Republic of Tanzania"
+   ],
+   "year": 2018,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/gombe-masito-ugalla"
+  },
+  {
+   "name": "Jozani-Chwaka Bay",
+   "countries": [
+    "United Republic of Tanzania"
+   ],
+   "year": 2016,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/jozani-chwaka-bay"
+  },
+  {
+   "name": "Lake Manyara",
+   "countries": [
+    "United Republic of Tanzania"
+   ],
+   "year": 1981,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/lake-manyara"
+  },
+  {
+   "name": "Rumaki (Rufiji-Mafia-Kibiti-Kilwa)",
+   "countries": [
+    "United Republic of Tanzania"
+   ],
+   "year": 2023,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/rumaki-rufiji-mafia-kibiti-kilwa"
+  },
+  {
+   "name": "Serengeti-Ngorongoro",
+   "countries": [
+    "United Republic of Tanzania"
+   ],
+   "year": 1981,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/serengeti-ngorongoro"
+  },
+  {
+   "name": "Apalachicola",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1983,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/apalachicola"
+  },
+  {
+   "name": "Big Bend",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/big-bend"
+  },
+  {
+   "name": "Big Thicket",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1981,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/big-thicket"
+  },
+  {
+   "name": "Cascade Head",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/cascade-head"
+  },
+  {
+   "name": "Champlain-Adirondak",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1989,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/champlain-adirondak"
+  },
+  {
+   "name": "Channel Islands",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/channel-islands"
+  },
+  {
+   "name": "Congaree",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1983,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/congaree"
+  },
+  {
+   "name": "Crown of the Continent",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/crown-continent"
+  },
+  {
+   "name": "Denali",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/denali"
+  },
+  {
+   "name": "Everglades & Dry Tortugas",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/everglades-dry-tortugas"
+  },
+  {
+   "name": "Glacier Bay-Admiralty Island",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1986,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/glacier-bay-admiralty-island"
+  },
+  {
+   "name": "Golden Gate",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1988,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/golden-gate"
+  },
+  {
+   "name": "Guanica",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1981,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/guanica"
+  },
+  {
+   "name": "Hawaiian Islands",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1980,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/hawaiian-islands"
+  },
+  {
+   "name": "Isle Royale",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1980,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/isle-royale"
+  },
+  {
+   "name": "Jornada",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/jornada"
+  },
+  {
+   "name": "Luquillo",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/luquillo"
+  },
+  {
+   "name": "Mammoth Cave Area",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1990,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mammoth-cave-area"
+  },
+  {
+   "name": "Mojave and Colorado Deserts",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1984,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/mojave-and-colorado-deserts"
+  },
+  {
+   "name": "New Jersey Pinelands",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1988,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/new-jersey-pinelands"
+  },
+  {
+   "name": "Obtawaing",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/obtawaing"
+  },
+  {
+   "name": "Olympic",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/olympic"
+  },
+  {
+   "name": "Rocky Mountains",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/rocky-mountains"
+  },
+  {
+   "name": "Sequoia-Kings Canyon",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sequoia-kings-canyon"
+  },
+  {
+   "name": "Sonoran Desert",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/sonoran-desert"
+  },
+  {
+   "name": "Southern Appalachian",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1988,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/southern-appalachian"
+  },
+  {
+   "name": "Virginia Coast",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1979,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/virginia-coast"
+  },
+  {
+   "name": "Yellowstone - Grand Teton",
+   "countries": [
+    "United States of America"
+   ],
+   "year": 1976,
+   "region": "Europe and North America",
+   "url": "https://www.unesco.org/en/mab/yellowstone-grand-teton"
+  },
+  {
+   "name": "Bañados del Este",
+   "countries": [
+    "Uruguay"
+   ],
+   "year": 1976,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/banados-del-este"
+  },
+  {
+   "name": "Bioma Pampa-Quebradas del Norte",
+   "countries": [
+    "Uruguay"
+   ],
+   "year": 2014,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/bioma-pampa-quebradas-del-norte"
+  },
+  {
+   "name": "Lower Amudarya State",
+   "countries": [
+    "Uzbekistan"
+   ],
+   "year": 2021,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/lower-amudarya-state"
+  },
+  {
+   "name": "Mount Chatkal",
+   "countries": [
+    "Uzbekistan"
+   ],
+   "year": 1978,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mount-chatkal"
+  },
+  {
+   "name": "Alto Orinoco-Casiquiare",
+   "countries": [
+    "Venezuela (Bolivarian Republic of)"
+   ],
+   "year": 1993,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/alto-orinoco-casiquiare"
+  },
+  {
+   "name": "Delta del Orinoco",
+   "countries": [
+    "Venezuela (Bolivarian Republic of)"
+   ],
+   "year": 2009,
+   "region": "Latin America and the Caribbean",
+   "url": "https://www.unesco.org/en/mab/delta-del-orinoco"
+  },
+  {
+   "name": "Can Gio mangrove",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2000,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/can-gio-mangrove"
+  },
+  {
+   "name": "Cat Ba",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/cat-ba"
+  },
+  {
+   "name": "Cu Lao Cham - Hoi An",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/cu-lao-cham-hoi"
+  },
+  {
+   "name": "Dong Nai",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2001,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/dong-nai"
+  },
+  {
+   "name": "Kien Giang",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2006,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kien-giang"
+  },
+  {
+   "name": "Kon Ha Nung Highland",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2021,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/kon-ha-nung-highland"
+  },
+  {
+   "name": "Langbiang",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2015,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/langbiang"
+  },
+  {
+   "name": "Mui Ca Mao",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2009,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/mui-ca-mao"
+  },
+  {
+   "name": "Nui Chua",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2021,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/nui-chua"
+  },
+  {
+   "name": "Phong Nha - Ke Bang",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2026,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/phong-nha-ke-bang"
+  },
+  {
+   "name": "Red River Delta",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2004,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/red-river-delta"
+  },
+  {
+   "name": "Western Nghe An",
+   "countries": [
+    "Viet Nam"
+   ],
+   "year": 2007,
+   "region": "Asia and the Pacific",
+   "url": "https://www.unesco.org/en/mab/western-nghe"
+  },
+  {
+   "name": "Bura’a",
+   "countries": [
+    "Yemen"
+   ],
+   "year": 2011,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/buraa"
+  },
+  {
+   "name": "Socotra Archipelago",
+   "countries": [
+    "Yemen"
+   ],
+   "year": 2003,
+   "region": "Arab States",
+   "url": "https://www.unesco.org/en/mab/socotra-archipelago"
+  },
+  {
+   "name": "Kafue flats",
+   "countries": [
+    "Zambia"
+   ],
+   "year": 2022,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/kafue-flats"
+  },
+  {
+   "name": "Chimanimani",
+   "countries": [
+    "Zimbabwe"
+   ],
+   "year": 2022,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/chimanimani"
+  },
+  {
+   "name": "Middle Zambezi",
+   "countries": [
+    "Zimbabwe"
+   ],
+   "year": 2010,
+   "region": "Africa",
+   "url": "https://www.unesco.org/en/mab/middle-zambezi"
+  }
+ ]
+}

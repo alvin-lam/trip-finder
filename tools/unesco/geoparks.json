@@ -1,0 +1,1710 @@
+{
+ "source": "https://www.unesco.org/en/iggp/geoparks",
+ "stated_total": 241,
+ "stated_countries": 51,
+ "count": 242,
+ "geoparks": [
+  {
+   "name": "Karawanken / Karavanke",
+   "countries": [
+    "Austria",
+    "Slovenia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/karawanken/karavanke-unesco-global-geopark"
+  },
+  {
+   "name": "Ore of the Alps",
+   "countries": [
+    "Austria"
+   ],
+   "url": "https://www.unesco.org/en/iggp/ore-alps-unesco-global-geopark"
+  },
+  {
+   "name": "Styrian Eisenwurzen",
+   "countries": [
+    "Austria"
+   ],
+   "url": "https://www.unesco.org/en/iggp/styrian-eisenwurzen-unesco-global-geopark"
+  },
+  {
+   "name": "Famenne-Ardenne",
+   "countries": [
+    "Belgium"
+   ],
+   "url": "https://www.unesco.org/en/iggp/famenne-ardenne-unesco-global-geopark"
+  },
+  {
+   "name": "Schelde Delta",
+   "countries": [
+    "Belgium",
+    "Kingdom of the Netherlands"
+   ],
+   "url": "https://www.unesco.org/en/iggp/schelde-delta-unesco-global-geopark"
+  },
+  {
+   "name": "Araripe",
+   "countries": [
+    "Brazil"
+   ],
+   "url": "https://www.unesco.org/en/iggp/araripe-unesco-global-geopark"
+  },
+  {
+   "name": "Caçapava",
+   "countries": [
+    "Brazil"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cacapava-unesco-global-geopark"
+  },
+  {
+   "name": "Quarta Colônia",
+   "countries": [
+    "Brazil"
+   ],
+   "url": "https://www.unesco.org/en/iggp/quarta-colonia-unesco-global-geopark"
+  },
+  {
+   "name": "Seridó",
+   "countries": [
+    "Brazil"
+   ],
+   "url": "https://www.unesco.org/en/iggp/serido-unesco-global-geopark"
+  },
+  {
+   "name": "Southern Canyons Pathways",
+   "countries": [
+    "Brazil"
+   ],
+   "url": "https://www.unesco.org/en/iggp/southern-canyons-pathways-unesco-global-geopark"
+  },
+  {
+   "name": "Uberaba",
+   "countries": [
+    "Brazil"
+   ],
+   "url": "https://www.unesco.org/en/iggp/uberaba-unesco-global-geopark"
+  },
+  {
+   "name": "Cliffs of Fundy",
+   "countries": [
+    "Canada"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cliffs-fundy-unesco-global-geopark"
+  },
+  {
+   "name": "Discovery",
+   "countries": [
+    "Canada"
+   ],
+   "url": "https://www.unesco.org/en/iggp/discovery-unesco-global-geopark"
+  },
+  {
+   "name": "Percé",
+   "countries": [
+    "Canada"
+   ],
+   "url": "https://www.unesco.org/en/iggp/perce-unesco-global-geopark"
+  },
+  {
+   "name": "Stonehammer",
+   "countries": [
+    "Canada"
+   ],
+   "url": "https://www.unesco.org/en/iggp/stonehammer-unesco-global-geopark"
+  },
+  {
+   "name": "Tumbler Ridge",
+   "countries": [
+    "Canada"
+   ],
+   "url": "https://www.unesco.org/en/iggp/tumbler-ridge-unesco-global-geopark"
+  },
+  {
+   "name": "Kütralkura",
+   "countries": [
+    "Chile"
+   ],
+   "url": "https://www.unesco.org/en/iggp/kutralkura-unesco-global-geopark"
+  },
+  {
+   "name": "Alxa Desert",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/alxa-desert-unesco-global-geopark"
+  },
+  {
+   "name": "Arxan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/arxan-unesco-global-geopark"
+  },
+  {
+   "name": "Changshan",
+   "countries": [
+    "China"
+   ],
+   "url": null
+  },
+  {
+   "name": "Dali-Cangshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/dali-cangshan-unesco-global-geopark"
+  },
+  {
+   "name": "Danxiashan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/danxiashan-unesco-global-geopark"
+  },
+  {
+   "name": "Dunhuang",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/dunhuang-unesco-global-geopark"
+  },
+  {
+   "name": "Enshi Grand Canyon-Tenglongdong Cave",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/enshi-grand-canyon-tenglongdong-cave-unesco-global-geopark"
+  },
+  {
+   "name": "Fangshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/fangshan-unesco-global-geopark"
+  },
+  {
+   "name": "Funiushan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/funiushan-unesco-global-geopark"
+  },
+  {
+   "name": "Guangwushan-Nuoshuihe",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/guangwushan-nuoshuihe-unesco-global-geopark"
+  },
+  {
+   "name": "Hexigten",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/hexigten-unesco-global-geopark"
+  },
+  {
+   "name": "Hong Kong",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/hong-kong-unesco-global-geopark"
+  },
+  {
+   "name": "Huanggang Dabieshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/huanggang-dabieshan-unesco-global-geopark"
+  },
+  {
+   "name": "Huangshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/huangshan-unesco-global-geopark"
+  },
+  {
+   "name": "Jingpohu",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/jingpohu-unesco-global-geopark"
+  },
+  {
+   "name": "Jiuhuashan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/jiuhuashan-unesco-global-geopark"
+  },
+  {
+   "name": "Kanbula",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/kanbula-unesco-global-geopark"
+  },
+  {
+   "name": "Keketuohai",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/keketuohai-unesco-global-geopark"
+  },
+  {
+   "name": "Leiqiong",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/leiqiong-unesco-global-geopark"
+  },
+  {
+   "name": "Leye Fengshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/leye-fengshan-unesco-global-geopark"
+  },
+  {
+   "name": "Linxia",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/linxia-unesco-global-geopark"
+  },
+  {
+   "name": "Longhushan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/longhushan-unesco-global-geopark"
+  },
+  {
+   "name": "Longyan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/longyan-unesco-global-geopark"
+  },
+  {
+   "name": "Lushan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/lushan-unesco-global-geopark"
+  },
+  {
+   "name": "Mount Changbaishan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mount-changbaishan-unesco-global-geopark"
+  },
+  {
+   "name": "Mount Kunlun",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mount-kunlun-unesco-global-geopark"
+  },
+  {
+   "name": "Mt. Siguniang",
+   "countries": [
+    "China"
+   ],
+   "url": null
+  },
+  {
+   "name": "Ningde",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/ningde-unesco-global-geopark"
+  },
+  {
+   "name": "Qinling Zhongnanshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/qinling-zhongnanshan-unesco-global-geopark"
+  },
+  {
+   "name": "Sanqingshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sanqingshan-unesco-global-geopark"
+  },
+  {
+   "name": "Shennongjia",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/shennongjia-unesco-global-geopark"
+  },
+  {
+   "name": "Shilin",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/shilin-unesco-global-geopark"
+  },
+  {
+   "name": "Songshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/songshan-unesco-global-geopark"
+  },
+  {
+   "name": "Taining",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/taining-unesco-global-geopark"
+  },
+  {
+   "name": "Taishan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/taishan-unesco-global-geopark"
+  },
+  {
+   "name": "Tianzhushan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/tianzhushan-unesco-global-geopark"
+  },
+  {
+   "name": "Wangwushan-Daimeishan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/wangwushan-daimeishan-unesco-global-geopark"
+  },
+  {
+   "name": "Wudalianchi",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/wudalianchi-unesco-global-geopark"
+  },
+  {
+   "name": "Wugongshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/wugongshan-unesco-global-geopark"
+  },
+  {
+   "name": "Xiangxi",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/xiangxi-unesco-global-geopark"
+  },
+  {
+   "name": "Xingwen",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/xingwen-unesco-global-geopark"
+  },
+  {
+   "name": "Xingyi",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/xingyi-unesco-global-geopark"
+  },
+  {
+   "name": "Yandangshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/yandangshan-unesco-global-geopark"
+  },
+  {
+   "name": "Yanqing",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/yanqing-unesco-global-geopark"
+  },
+  {
+   "name": "Yimengshan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/yimengshan-unesco-global-geopark"
+  },
+  {
+   "name": "Yuntaishan",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/yuntaishan-unesco-global-geopark"
+  },
+  {
+   "name": "Yunyang",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/yunyang-unesco-global-geopark"
+  },
+  {
+   "name": "Zhangjiajie",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/zhangjiajie-unesco-global-geopark"
+  },
+  {
+   "name": "Zhangye",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/zhangye-unesco-global-geopark"
+  },
+  {
+   "name": "Zhijindong Cave",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/zhijindong-cave-unesco-global-geopark"
+  },
+  {
+   "name": "Zigong",
+   "countries": [
+    "China"
+   ],
+   "url": "https://www.unesco.org/en/iggp/zigong-unesco-global-geopark"
+  },
+  {
+   "name": "Biokovo-Imotski Lakes",
+   "countries": [
+    "Croatia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/biokovo-imotski-lakes-unesco-global-geopark"
+  },
+  {
+   "name": "Papuk",
+   "countries": [
+    "Croatia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/papuk-unesco-global-geopark"
+  },
+  {
+   "name": "Vis Archipelago",
+   "countries": [
+    "Croatia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/vis-archipelago-unesco-global-geopark"
+  },
+  {
+   "name": "Troodos",
+   "countries": [
+    "Cyprus"
+   ],
+   "url": "https://www.unesco.org/en/iggp/troodos-unesco-global-geopark"
+  },
+  {
+   "name": "Bohemian Paradise",
+   "countries": [
+    "Czechia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/bohemian-paradise-unesco-global-geopark"
+  },
+  {
+   "name": "Mt Paektu",
+   "countries": [
+    "Democratic People's Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mt-paektu-unesco-global-geopark"
+  },
+  {
+   "name": "Odsherred",
+   "countries": [
+    "Denmark"
+   ],
+   "url": "https://www.unesco.org/en/iggp/odsherred-unesco-global-geopark"
+  },
+  {
+   "name": "The South Fyn Archipelago",
+   "countries": [
+    "Denmark"
+   ],
+   "url": "https://www.unesco.org/en/iggp/south-fyn-archipelago-unesco-global-geopark"
+  },
+  {
+   "name": "Vestjylland",
+   "countries": [
+    "Denmark"
+   ],
+   "url": "https://www.unesco.org/en/iggp/vestjylland-unesco-global-geopark"
+  },
+  {
+   "name": "Imbabura",
+   "countries": [
+    "Ecuador"
+   ],
+   "url": "https://www.unesco.org/en/iggp/imbabura-unesco-global-geopark"
+  },
+  {
+   "name": "Napo Sumaco",
+   "countries": [
+    "Ecuador"
+   ],
+   "url": "https://www.unesco.org/en/iggp/napo-sumaco-unesco-global-geopark"
+  },
+  {
+   "name": "Tungurahua Volcano",
+   "countries": [
+    "Ecuador"
+   ],
+   "url": "https://www.unesco.org/en/iggp/tungurahua-volcano-unesco-global-geopark"
+  },
+  {
+   "name": "Impact Crater Lake – Lappajärvi",
+   "countries": [
+    "Finland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/impact-crater-lake-lappajarvi-unesco-global-geopark"
+  },
+  {
+   "name": "Lauhanvuori-Haemeenkangas",
+   "countries": [
+    "Finland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/lauhanvuori-hameenkangas-unesco-global-geopark"
+  },
+  {
+   "name": "Rokua",
+   "countries": [
+    "Finland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/rokua-unesco-global-geopark"
+  },
+  {
+   "name": "Saimaa",
+   "countries": [
+    "Finland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/saimaa-unesco-global-geopark"
+  },
+  {
+   "name": "Salpausselkä",
+   "countries": [
+    "Finland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/salpausselka-unesco-global-geopark"
+  },
+  {
+   "name": "Armorique",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/armorique-unesco-global-geopark"
+  },
+  {
+   "name": "Beaujolais",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/beaujolais-unesco-global-geopark"
+  },
+  {
+   "name": "Causses du Quercy",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/causses-de-quercy-unesco-global-geopark"
+  },
+  {
+   "name": "Chablais",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/chablais-unesco-global-geopark"
+  },
+  {
+   "name": "Haute-Provence",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/haute-provence-unesco-global-geopark"
+  },
+  {
+   "name": "Luberon",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/luberon-unesco-global-geopark"
+  },
+  {
+   "name": "Massif des Bauges",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/massif-des-bauges-unesco-global-geopark"
+  },
+  {
+   "name": "Monts d'Ardèche",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/monts-dardeche-unesco-global-geopark"
+  },
+  {
+   "name": "Normandie-Maine",
+   "countries": [
+    "France"
+   ],
+   "url": "https://www.unesco.org/en/iggp/normandie-maine-unesco-global-geopark"
+  },
+  {
+   "name": "Terres d’Hérault",
+   "countries": [
+    "France"
+   ],
+   "url": null
+  },
+  {
+   "name": "Bergstraße-Odenwald",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/bergstrasse-odenwald-unesco-global-geopark"
+  },
+  {
+   "name": "Harz, Braunschweiger Land",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/harz-braunschweiger-land-ostfalen-unesco-global-geopark"
+  },
+  {
+   "name": "Muskauer Faltenbogen / Łuk Mużakowa",
+   "countries": [
+    "Germany",
+    "Poland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/muskauer-faltenbogen/luk-muzakowa-unesco-global-geopark"
+  },
+  {
+   "name": "Ries",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/ries-unesco-global-geopark"
+  },
+  {
+   "name": "Swabian Alb",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/swabian-alb-unesco-global-geopark"
+  },
+  {
+   "name": "TERRA.vita",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/terravita-unesco-global-geopark"
+  },
+  {
+   "name": "Thuringia Inselsberg -Drei Gleichen",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/thuringia-inselsberg-drei-gleichen-unesco-global-geopark"
+  },
+  {
+   "name": "Vulkaneifel",
+   "countries": [
+    "Germany"
+   ],
+   "url": "https://www.unesco.org/en/iggp/vulkaneifel-unesco-global-geopark"
+  },
+  {
+   "name": "Chelmos Vouraikos",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/chelmos-vouraikos-unesco-global-geopark"
+  },
+  {
+   "name": "Grevena - Kozani",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/grevena-kozani-unesco-global-geopark"
+  },
+  {
+   "name": "Kefalonia-Ithaca",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/kefalonia-ithaca-unesco-global-geopark"
+  },
+  {
+   "name": "Lavreotiki",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/lavreotiki-unesco-global-geopark"
+  },
+  {
+   "name": "Lesvos Island",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/lesvos-island-unesco-global-geopark"
+  },
+  {
+   "name": "Meteora Pyli",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/meteora-pyli-unesco-global-geopark"
+  },
+  {
+   "name": "Nisyros",
+   "countries": [
+    "Greece"
+   ],
+   "url": null
+  },
+  {
+   "name": "Psiloritis",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/psiloritis-unesco-global-geopark"
+  },
+  {
+   "name": "Sitia",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sitia-unesco-global-geopark"
+  },
+  {
+   "name": "Vikos - Aoos",
+   "countries": [
+    "Greece"
+   ],
+   "url": "https://www.unesco.org/en/iggp/vikos-aoos-unesco-global-geopark"
+  },
+  {
+   "name": "Bakony-Balaton",
+   "countries": [
+    "Hungary"
+   ],
+   "url": "https://www.unesco.org/en/iggp/bakony-balaton-unesco-global-geopark"
+  },
+  {
+   "name": "Bükk Region",
+   "countries": [
+    "Hungary"
+   ],
+   "url": "https://www.unesco.org/en/iggp/bukk-region-unesco-global-geopark"
+  },
+  {
+   "name": "Novohrad-Nógrád",
+   "countries": [
+    "Hungary",
+    "Slovakia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/novohrad-nograd-unesco-global-geopark"
+  },
+  {
+   "name": "Katla",
+   "countries": [
+    "Iceland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/katla-unesco-global-geopark"
+  },
+  {
+   "name": "Reykjanes",
+   "countries": [
+    "Iceland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/reykjanes-unesco-global-geopark"
+  },
+  {
+   "name": "Batur",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/batur-unesco-global-geopark"
+  },
+  {
+   "name": "Belitong",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/belitong-unesco-global-geopark"
+  },
+  {
+   "name": "Ciletuh - Palabuhanratu",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/ciletuh-palabuhanratu-unesco-global-geopark"
+  },
+  {
+   "name": "Gunung Sewu",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/gunung-sewu-unesco-global-geopark"
+  },
+  {
+   "name": "Ijen",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/ijen-unesco-global-geopark"
+  },
+  {
+   "name": "Kebumen",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/kebumen-unesco-global-geopark"
+  },
+  {
+   "name": "Maros Pangkep",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/maros-pangkep-unesco-global-geopark"
+  },
+  {
+   "name": "Merangin Jambi",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/merangin-jambi-unesco-global-geopark"
+  },
+  {
+   "name": "Meratus",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/meratus-unesco-global-geopark"
+  },
+  {
+   "name": "Raja Ampat",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/raja-ampat-unesco-global-geopark"
+  },
+  {
+   "name": "Rinjani-Lombok",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/rinjani-lombok-unesco-global-geopark"
+  },
+  {
+   "name": "Toba Caldera",
+   "countries": [
+    "Indonesia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/toba-caldera-unesco-global-geopark"
+  },
+  {
+   "name": "Aras",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "url": "https://www.unesco.org/en/iggp/aras-unesco-global-geopark"
+  },
+  {
+   "name": "Qeshm Island",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "url": "https://www.unesco.org/en/iggp/qeshm-island-unesco-global-geopark"
+  },
+  {
+   "name": "Tabas",
+   "countries": [
+    "Iran (Islamic Republic of)"
+   ],
+   "url": "https://www.unesco.org/en/iggp/tabas-unesco-global-geopark"
+  },
+  {
+   "name": "Burren & Cliffs of Moher",
+   "countries": [
+    "Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/burren-and-cliffs-moher-unesco-global-geopark"
+  },
+  {
+   "name": "Copper Coast",
+   "countries": [
+    "Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/copper-coast-unesco-global-geopark"
+  },
+  {
+   "name": "Cuilcagh Lakelands",
+   "countries": [
+    "Ireland",
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cuilcagh-lakelands-unesco-global-geopark",
+   "note": "formerly Marble Arch Cave"
+  },
+  {
+   "name": "Joyce Country and Western Lakes",
+   "countries": [
+    "Ireland"
+   ],
+   "url": null
+  },
+  {
+   "name": "Adamello-Brenta",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/adamello-brenta-unesco-global-geopark"
+  },
+  {
+   "name": "Alpi Apuane",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/apuan-alps-unesco-global-geopark"
+  },
+  {
+   "name": "Aspromonte",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/aspromonte-unesco-global-geopark"
+  },
+  {
+   "name": "Beigua",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/beigua-unesco-global-geopark"
+  },
+  {
+   "name": "Cilento, Vallo di Diano e Alburni",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cilento-vallo-di-diano-e-alburni-unesco-global-geopark"
+  },
+  {
+   "name": "Madonie",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/madonie-unesco-global-geopark"
+  },
+  {
+   "name": "Maiella",
+   "countries": [
+    "Italy"
+   ],
+   "url": null
+  },
+  {
+   "name": "MurGEopark",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/murgeopark-unesco-global-geopark"
+  },
+  {
+   "name": "Pollino",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/pollino-unesco-global-geopark"
+  },
+  {
+   "name": "Rocca di Cerere",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/rocca-di-cerere-unesco-global-geopark"
+  },
+  {
+   "name": "Sesia Val Grande",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sesia-val-grande-unesco-global-geopark"
+  },
+  {
+   "name": "Tuscan Mining Park",
+   "countries": [
+    "Italy"
+   ],
+   "url": "https://www.unesco.org/en/iggp/tuscan-mining-park-unesco-global-geopark"
+  },
+  {
+   "name": "Aso",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/aso-unesco-global-geopark"
+  },
+  {
+   "name": "Hakusan Tedorigawa",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/hakusan-tedorigawa-unesco-global-geopark"
+  },
+  {
+   "name": "Itoigawa",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/itoigawa-unesco-global-geopark"
+  },
+  {
+   "name": "Izu Peninsula",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/izu-peninsula-unesco-global-geopark"
+  },
+  {
+   "name": "Miné-Akiyoshidai Karst Plateau",
+   "countries": [
+    "Japan"
+   ],
+   "url": null
+  },
+  {
+   "name": "Mt. Apoi",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mt-apoi-unesco-global-geopark"
+  },
+  {
+   "name": "Muroto",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/muroto-unesco-global-geopark"
+  },
+  {
+   "name": "Oki Islands",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/oki-islands-unesco-global-geopark"
+  },
+  {
+   "name": "San'in Kaigan",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sanin-kaigan-unesco-global-geopark"
+  },
+  {
+   "name": "Toya - Usu",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/toya-usu-unesco-global-geopark"
+  },
+  {
+   "name": "Unzen Volcanic Area",
+   "countries": [
+    "Japan"
+   ],
+   "url": "https://www.unesco.org/en/iggp/unzen-volcanic-area-unesco-global-geopark"
+  },
+  {
+   "name": "Mëllerdall",
+   "countries": [
+    "Luxembourg"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mellerdall-unesco-global-geopark"
+  },
+  {
+   "name": "Kinabalu",
+   "countries": [
+    "Malaysia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/kinabalu-unesco-global-geopark"
+  },
+  {
+   "name": "Langkawi",
+   "countries": [
+    "Malaysia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/langkawi-unesco-global-geopark"
+  },
+  {
+   "name": "Lenggong",
+   "countries": [
+    "Malaysia"
+   ],
+   "url": null
+  },
+  {
+   "name": "Sarawak Delta",
+   "countries": [
+    "Malaysia"
+   ],
+   "url": null
+  },
+  {
+   "name": "Comarca Minera, Hidalgo",
+   "countries": [
+    "Mexico"
+   ],
+   "url": "https://www.unesco.org/en/iggp/comarca-minera-unesco-global-geopark"
+  },
+  {
+   "name": "Mixteca Alta, Oaxaca",
+   "countries": [
+    "Mexico"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mixteca-alta-unesco-global-geopark"
+  },
+  {
+   "name": "M'Goun",
+   "countries": [
+    "Morocco"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mgoun-unesco-global-geopark"
+  },
+  {
+   "name": "De Hondsrug",
+   "countries": [
+    "Netherlands (Kingdom of the)"
+   ],
+   "url": "https://www.unesco.org/en/iggp/de-hondsrug-unesco-global-geopark"
+  },
+  {
+   "name": "Waitaki Whitestone",
+   "countries": [
+    "New Zealand"
+   ],
+   "url": "https://www.unesco.org/en/iggp/waitaki-whitestone-unesco-global-geopark"
+  },
+  {
+   "name": "Gea Norvegica",
+   "countries": [
+    "Norway"
+   ],
+   "url": "https://www.unesco.org/en/iggp/gea-norvegica-unesco-global-geopark"
+  },
+  {
+   "name": "Magma",
+   "countries": [
+    "Norway"
+   ],
+   "url": "https://www.unesco.org/en/iggp/magma-unesco-global-geopark"
+  },
+  {
+   "name": "Sunnhordland",
+   "countries": [
+    "Norway"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sunnhordland-unesco-global-geopark"
+  },
+  {
+   "name": "The Fjord Coast",
+   "countries": [
+    "Norway"
+   ],
+   "url": "https://www.unesco.org/en/iggp/fjord-coast-unesco-global-geopark"
+  },
+  {
+   "name": "Trollfjell",
+   "countries": [
+    "Norway"
+   ],
+   "url": "https://www.unesco.org/en/iggp/trollfjell-unesco-global-geopark"
+  },
+  {
+   "name": "Rio Coco",
+   "countries": [
+    "Nicaragua"
+   ],
+   "url": "https://www.unesco.org/en/iggp/rio-coco-unesco-global-geopark"
+  },
+  {
+   "name": "Colca y Volcanes de Andagua",
+   "countries": [
+    "Peru"
+   ],
+   "url": "https://www.unesco.org/en/iggp/colca-y-volcanes-de-andagua-unesco-global-geopark"
+  },
+  {
+   "name": "Bohol Island",
+   "countries": [
+    "Philippines"
+   ],
+   "url": "https://www.unesco.org/en/iggp/bohol-island-unesco-global-geopark"
+  },
+  {
+   "name": "Holy Cross Mountains",
+   "countries": [
+    "Poland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/holy-cross-mountains-unesco-global-geopark"
+  },
+  {
+   "name": "Land of Extinct Volcanoes",
+   "countries": [
+    "Poland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/land-extinct-volcanoes-unesco-global-geopark"
+  },
+  {
+   "name": "Algarvensis",
+   "countries": [
+    "Portugal"
+   ],
+   "url": null
+  },
+  {
+   "name": "Arouca",
+   "countries": [
+    "Portugal"
+   ],
+   "url": "https://www.unesco.org/en/iggp/arouca-unesco-global-geopark"
+  },
+  {
+   "name": "Azores",
+   "countries": [
+    "Portugal"
+   ],
+   "url": "https://www.unesco.org/en/iggp/azores-unesco-global-geopark"
+  },
+  {
+   "name": "Estrela",
+   "countries": [
+    "Portugal"
+   ],
+   "url": "https://www.unesco.org/en/iggp/estrela-unesco-global-geopark"
+  },
+  {
+   "name": "Naturtejo",
+   "countries": [
+    "Portugal"
+   ],
+   "url": "https://www.unesco.org/en/iggp/naturtejo-unesco-global-geopark"
+  },
+  {
+   "name": "Oeste",
+   "countries": [
+    "Portugal"
+   ],
+   "url": "https://www.unesco.org/en/iggp/oeste-unesco-global-geopark"
+  },
+  {
+   "name": "Terras de Cavaleiros",
+   "countries": [
+    "Portugal"
+   ],
+   "url": "https://www.unesco.org/en/iggp/terras-de-cavaleiros-unesco-global-geopark"
+  },
+  {
+   "name": "Cheongsong",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cheongsong-unesco-global-geopark"
+  },
+  {
+   "name": "Danyang",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/danyang-unesco-global-geopark"
+  },
+  {
+   "name": "Gyeongbuk Donghaean",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/gyeongbuk-donghaean-unesco-global-geopark"
+  },
+  {
+   "name": "Hantangang",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/hantangang-unesco-global-geopark"
+  },
+  {
+   "name": "Jeju Island",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/jeju-island-unesco-global-geopark"
+  },
+  {
+   "name": "Jeonbuk West Coast",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/jeonbuk-west-coast-unesco-global-geopark"
+  },
+  {
+   "name": "Mudeungsan",
+   "countries": [
+    "Republic of Korea"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mudeungsan-unesco-global-geopark"
+  },
+  {
+   "name": "Buzău Land",
+   "countries": [
+    "Romania"
+   ],
+   "url": "https://www.unesco.org/en/iggp/buzau-land-unesco-global-geopark"
+  },
+  {
+   "name": "Haţeg",
+   "countries": [
+    "Romania"
+   ],
+   "url": "https://www.unesco.org/en/iggp/hateg-country-unesco-global-geopark"
+  },
+  {
+   "name": "Toratau",
+   "countries": [
+    "Russian Federation"
+   ],
+   "url": null
+  },
+  {
+   "name": "Yangan-Tau",
+   "countries": [
+    "Russian Federation"
+   ],
+   "url": "https://www.unesco.org/en/iggp/yangan-tau-unesco-global-geopark"
+  },
+  {
+   "name": "North Riyadh",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/north-riyadh-unesco-global-geopark"
+  },
+  {
+   "name": "Salma",
+   "countries": [
+    "Saudi Arabia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/salma-unesco-global-geopark"
+  },
+  {
+   "name": "Djerdap",
+   "countries": [
+    "Serbia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/djerdap-unesco-global-geopark"
+  },
+  {
+   "name": "Idrija",
+   "countries": [
+    "Slovenia"
+   ],
+   "url": "https://www.unesco.org/en/iggp/idrija-unesco-global-geopark"
+  },
+  {
+   "name": "Basque Coast",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/basque-coast-unesco-global-geopark"
+  },
+  {
+   "name": "Cabo de Gata-Níjar",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cabo-de-gata-nijar-unesco-global-geopark"
+  },
+  {
+   "name": "Cabo Ortegal",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/cabo-ortegal-unesco-global-geopark"
+  },
+  {
+   "name": "Calatrava Volcanoes. Ciudad Real",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/calatrava-volcanoes-ciudad-real-unesco-global-geopark"
+  },
+  {
+   "name": "Central Catalonia",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/central-catalonia-unesco-global-geopark"
+  },
+  {
+   "name": "Costa Quebrada",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/costa-quebrada-unesco-global-geopark"
+  },
+  {
+   "name": "Courel Mountains",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/courel-mountains-unesco-global-geopark"
+  },
+  {
+   "name": "El Hierro",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/el-hierro-unesco-global-geopark"
+  },
+  {
+   "name": "Granada",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/granada-unesco-global-geopark"
+  },
+  {
+   "name": "Lanzarote and Chinijo Islands",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/lanzarote-and-chinijo-islands-unesco-global-geopark"
+  },
+  {
+   "name": "Las Loras",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/las-loras-unesco-global-geopark"
+  },
+  {
+   "name": "Maestrazgo",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/maestrazgo-unesco-global-geopark"
+  },
+  {
+   "name": "Molina-Alto Tajo",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/molina-alto-tajo-unesco-global-geopark"
+  },
+  {
+   "name": "Origens",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/origens-unesco-global-geopark"
+  },
+  {
+   "name": "Sierra Morena de Sevilla",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sierra-morena-de-sevilla-unesco-global-geopark",
+   "note": "formerly Sierra Norte de Sevilla UNESCO Global Geopark"
+  },
+  {
+   "name": "Sierras Subbéticas",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sierras-subbeticas-unesco-global-geopark"
+  },
+  {
+   "name": "Sobrarbe-Pirineos",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/sobrarbe-pirineos-unesco-global-geopark"
+  },
+  {
+   "name": "Villuercas Ibores Jara",
+   "countries": [
+    "Spain"
+   ],
+   "url": "https://www.unesco.org/en/iggp/villuercas-ibores-jara-unesco-global-geopark"
+  },
+  {
+   "name": "Platåbergens",
+   "countries": [
+    "Sweden"
+   ],
+   "url": "https://www.unesco.org/en/iggp/platabergens-unesco-global-geopark"
+  },
+  {
+   "name": "Ngorongoro Lengai",
+   "countries": [
+    "Tanzania"
+   ],
+   "url": "https://www.unesco.org/en/iggp/ngorongoro-lengai-unesco-global-geopark"
+  },
+  {
+   "name": "Khorat",
+   "countries": [
+    "Thailand"
+   ],
+   "url": "https://www.unesco.org/en/iggp/khorat-unesco-global-geopark"
+  },
+  {
+   "name": "Satun",
+   "countries": [
+    "Thailand"
+   ],
+   "url": "https://www.unesco.org/en/iggp/satun-unesco-global-geopark"
+  },
+  {
+   "name": "Dahar",
+   "countries": [
+    "Tunisia"
+   ],
+   "url": null
+  },
+  {
+   "name": "Kula-Salihli",
+   "countries": [
+    "Türkiye"
+   ],
+   "url": "https://www.unesco.org/en/iggp/kula-salihli-unesco-global-geopark",
+   "note": "formerly known as Kula Volcanic UGGp, extended and renamed in 2020"
+  },
+  {
+   "name": "Arran",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/arran-unesco-global-geopark"
+  },
+  {
+   "name": "Black Country",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/black-country-unesco-global-geopark"
+  },
+  {
+   "name": "English Riviera",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/english-riviera-unesco-global-geopark"
+  },
+  {
+   "name": "Fforest Fawr",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/fforest-fawr-unesco-global-geopark"
+  },
+  {
+   "name": "GeoMôn",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/geomon-unesco-global-geopark"
+  },
+  {
+   "name": "Mourne Gullion Strangford",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/mourne-gullion-strangford-unesco-global-geopark"
+  },
+  {
+   "name": "North Pennines AONB",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/north-pennines-aonb-unesco-global-geopark"
+  },
+  {
+   "name": "North-West Highlands",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/north-west-highlands-unesco-global-geopark"
+  },
+  {
+   "name": "Shetland",
+   "countries": [
+    "United Kingdom of Great Britain and Northern Ireland"
+   ],
+   "url": "https://www.unesco.org/en/iggp/shetland-unesco-global-geopark"
+  },
+  {
+   "name": "Grutas del Palacio",
+   "countries": [
+    "Uruguay"
+   ],
+   "url": "https://www.unesco.org/en/iggp/grutas-del-palacio-unesco-global-geopark"
+  },
+  {
+   "name": "Manantiales Serranos",
+   "countries": [
+    "Uruguay"
+   ],
+   "url": null
+  },
+  {
+   "name": "Dak Nong",
+   "countries": [
+    "Vietnam"
+   ],
+   "url": "https://www.unesco.org/en/iggp/dak-nong-unesco-global-geopark"
+  },
+  {
+   "name": "Dong Van Karst Plateau",
+   "countries": [
+    "Vietnam"
+   ],
+   "url": "https://www.unesco.org/en/iggp/dong-van-karst-plateau-unesco-global-geopark"
+  },
+  {
+   "name": "Lang Son",
+   "countries": [
+    "Vietnam"
+   ],
+   "url": "https://www.unesco.org/en/iggp/lang-son-unesco-global-geopark"
+  },
+  {
+   "name": "Non nuoc Cao Bang",
+   "countries": [
+    "Vietnam"
+   ],
+   "url": "https://www.unesco.org/en/iggp/non-nuoc-cao-bang-unesco-global-geopark"
+  },
+  {
+   "name": "Transnational",
+   "countries": [
+    "Vietnam"
+   ],
+   "url": null
+  }
+ ]
+}
