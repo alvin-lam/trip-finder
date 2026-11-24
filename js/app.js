@@ -1800,6 +1800,18 @@
 ${sel}[data-theme="dark"] { ${dark} }`;
   }
 
+  // The picker lists the four seasons, then the holidays.
+  const SEASONS = ["winter", "spring", "summer", "autumn"];
+  function swatchGroup(title, ids) {
+    return `<p class="appearance-menu__head">${title}</p>
+      <div class="appearance-menu__themes" role="group" aria-label="${title}">${ids
+        .map((k) => {
+          const sc = E.SEASON_SCHEMES[k];
+          return `<button type="button" role="menuitemradio" class="theme-swatch" aria-checked="${state.colors === k}" data-colors="${k}" title="${esc(sc.label)}" aria-label="${esc(sc.label)} theme" style="--sw:${sc.light};--sw-dark:${sc.dark}"><span aria-hidden="true">${sc.icon}</span></button>`;
+        })
+        .join("")}</div>`;
+  }
+
   function applyAppearance() {
     const root = document.documentElement;
     const scheme = E.seasonalScheme(new Date());
@@ -1829,13 +1841,8 @@ ${sel}[data-theme="dark"] { ${dark} }`;
       <p class="appearance-menu__head">Colors</p>
       ${item("colors", "seasonal", `${scheme.icon} Seasonal: ${esc(scheme.label)}`, state.colors === "seasonal")}
       ${item("colors", "classic", "🎨 Classic", state.colors === "classic")}
-      <p class="appearance-menu__head">Pick a theme</p>
-      <div class="appearance-menu__themes" role="group" aria-label="Themes">${Object.entries(E.SEASON_SCHEMES)
-        .map(
-          ([k, sc]) =>
-            `<button type="button" role="menuitemradio" class="theme-swatch" aria-checked="${state.colors === k}" data-colors="${k}" title="${esc(sc.label)}" aria-label="${esc(sc.label)} theme" style="--sw:${sc.light};--sw-dark:${sc.dark}"><span aria-hidden="true">${sc.icon}</span></button>`
-        )
-        .join("")}</div>
+      ${swatchGroup("Seasons", SEASONS)}
+      ${swatchGroup("Holidays", Object.keys(E.SEASON_SCHEMES).filter((k) => !SEASONS.includes(k)))}
       <p class="appearance-menu__note">${
         state.colors === "seasonal"
           ? `Seasonal colors follow your local date and time zone${scheme.southern ? ", with southern hemisphere seasons" : ""}.`
