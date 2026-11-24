@@ -2,7 +2,7 @@
  * Service worker: makes the app installable and usable offline.
  * Bump CACHE when shipping changes so returning visitors get fresh files.
  */
-const CACHE = "wtt-v93";
+const CACHE = "wtt-v94";
 const SHELL = [
   "./",
   "index.html",
@@ -36,16 +36,21 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
 
-  // Pages: try the network first so updates show up, fall back to the cached app.
+  // Pages: try the network first so updates show up. Each page is cached under its own
+  // address (/, /explore/, /place/<id>/). Offline, a page never visited opens the app home.
   if (req.mode === "navigate") {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put("index.html", copy));
+          if (res.ok) {
+            const copy = res.clone();
+            caches.open(CACHE).then((c) => c.put(req, copy));
+          }
           return res;
         })
-        .catch(() => caches.match("index.html"))
+        .catch(() =>
+          caches.match(req, { ignoreSearch: true }).then((hit) => hit || Response.redirect(self.registration.scope, 302))
+        )
     );
     return;
   }

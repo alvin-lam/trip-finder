@@ -370,13 +370,37 @@
     syncHash();
   }
 
+  // Web addresses. On the live site (and localhost) Explore lives at /explore/ and each
+  // place at /place/<id>/, matching the static pages tools/build-pages.js generates.
+  // Elsewhere, such as a file:// copy or an embedded preview, the app keeps to #hashes.
+  const PLACE_PATH = /\/place\/([a-z0-9-]+)\/?$/;
+  const EXPLORE_PATH = /\/explore\/?$/;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const PATHS =
+    /^https?:$/.test(location.protocol) &&
+    (location.hostname === "localhost" || location.hostname === "127.0.0.1" || (canonical && new URL(canonical.href).origin === location.origin));
+
+  function viewURL() {
+    if (state.view === "plan" && state.stage === "results") return `${PATHS ? "/" : ""}#${E.encodePrefs(state.prefs, index)}`;
+    if (!PATHS) return `#${state.view}`;
+    if (state.view === "explore") return "/explore/";
+    if (state.view === "shortlist") return "/#shortlist";
+    return "/";
+  }
+
   function syncHash() {
-    let h = state.view;
-    if (state.view === "plan" && state.stage === "results") h = E.encodePrefs(state.prefs, index);
-    if (location.hash.slice(1) !== h) history.replaceState(null, "", `#${h}`);
+    // A place keeps its own address until it closes (the close handler restores the view's).
+    if ($("#detail").open || (PATHS && PLACE_PATH.test(location.pathname))) return;
+    const url = viewURL();
+    if (location.pathname + location.hash !== url && location.hash !== url) history.replaceState(null, "", url);
   }
 
   function readHash() {
+    if (PATHS) {
+      if (EXPLORE_PATH.test(location.pathname)) state.view = "explore";
+      // A place page opens over Explore.
+      if (PLACE_PATH.test(location.pathname)) state.view = "explore";
+    }
     const h = location.hash.slice(1);
     const shared = h.startsWith("r-") ? E.decodePrefs(h, index) : null;
     if (shared) {
@@ -1489,6 +1513,7 @@
     }
     $("#detail-body").scrollTop = 0;
     dlg.scrollTop = 0;
+    if (PATHS && location.pathname !== `/place/${city.id}/`) history.pushState({ place: city.id }, "", `/place/${city.id}/`);
     document.title = `${city.name === city.country.name ? city.name : `${city.name}, ${city.country.name}`} | Trip Finder`;
   }
 
@@ -1753,7 +1778,23 @@
   });
 
   // Closing a place (button, Escape or backdrop) restores the view's title.
-  $("#detail").addEventListener("close", () => (document.title = pageTitle()));
+  // On the live site it also returns the address to the view's own.
+  $("#detail").addEventListener("close", () => {
+    document.title = pageTitle();
+    if (PATHS && PLACE_PATH.test(location.pathname)) history.replaceState(null, "", viewURL());
+  });
+
+  // Back and Forward move between places and views.
+  window.addEventListener("popstate", () => {
+    if (!PATHS) return;
+    const m = location.pathname.match(PLACE_PATH);
+    if (m && index.cityById[m[1]]) openCity(m[1]);
+    else {
+      if ($("#detail").open) closeDetail();
+      readHash();
+      setView(state.view);
+    }
+  });
 
   window.addEventListener("hashchange", () => {
     readHash();
@@ -1766,6 +1807,11 @@
   load();
   readHash();
   setView(state.view);
+  // A place page (/place/<id>/) opens that place.
+  if (PATHS) {
+    const m = location.pathname.match(PLACE_PATH);
+    if (m && index.cityById[m[1]]) openCity(m[1]);
+  }
 
   // Back-to-top button, shown once the page has scrolled past about one screen.
   document.body.insertAdjacentHTML(

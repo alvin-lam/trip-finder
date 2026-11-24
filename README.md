@@ -5,8 +5,8 @@ An interactive trip finder that helps visitors decide which region, country and 
 ## Features
 
 - **Five-step quiz.** Interests (like or must-have), travel month, trip length, daily budget, ideal weather, travel companions, crowd preference, home region and excluded regions.
-- **Ranked results.** The app ranks 13 world regions and 249 destinations: every sovereign country (187 countries plus 10 microstates such as Monaco and Singapore, 197 in all) and 52 territories. The territories cover every inhabited overseas territory of the United States, United Kingdom, France, the Netherlands, Denmark, Norway, New Zealand, Australia and China, plus the British Crown Dependencies (Jersey, Guernsey and the Isle of Man) and remote uninhabited islands such as Bouvet Island and Heard Island. Each territory stays in its region, and choosing Territories in the Location type filter groups them under the country they belong to. Four visitable micronations, such as Užupis, appear as places in their host countries with a MICRONATION tag. Choosing Micronations in the Location type filter lists just them under their host countries. The small microstates name their best day-trip base and link from their neighbour. Together they cover 2,444 cities and places, including a place for every UNESCO World Heritage Site. A site shared by several countries keeps one place, which Explore also lists under the other countries (the `LINKED` map in `js/data.js`), with at least two per country except single-site Vatican City. Each match comes with plain-language reasons and warnings, such as "July is off season" or "Pricier than your budget".
-- **Explore filters.** Besides region, month, interest, location type and cost, Explore can filter UNESCO sites (World Heritage, Global Geoparks or Biosphere Reserves), show only national parks or family-friendly places, filter by population (uninhabited, no permanent residents, or expedition only), and can filter destinations by LGBTQ+ climate (welcoming, mixed or caution) and by travel advisory (no advisory, reconsider travel or do not travel).
+- **Ranked results.** The app ranks 13 world regions and 249 destinations: every sovereign country (187 countries plus 10 microstates such as Monaco and Singapore, 197 in all) and 52 territories. The territories cover every inhabited overseas territory of the United States, United Kingdom, France, the Netherlands, Denmark, Norway, New Zealand, Australia and China, plus the British Crown Dependencies (Jersey, Guernsey and the Isle of Man) and remote uninhabited islands such as Bouvet Island and Heard Island. Each territory stays in its region, and choosing Territories in the Location type filter groups them under the country they belong to. Four visitable micronations, such as Užupis, appear as places in their host countries with a MICRONATION tag. Choosing Micronations in the Location type filter lists just them under their host countries. The small microstates name their best day-trip base and link from their neighbour. Together they cover 2,513 cities and places, including a place for every UNESCO World Heritage Site. A site shared by several countries keeps one place, which Explore also lists under the other countries (the `LINKED` map in `js/data.js`), with at least two per country except single-site Vatican City. Each match comes with plain-language reasons and warnings, such as "July is off season" or "Pricier than your budget".
+- **Explore filters.** Besides region, month, interest, location type and cost, Explore can filter UNESCO sites (World Heritage, Global Geoparks or Biosphere Reserves), show only national parks, family-friendly places, festivals or Pride events, filter by population (uninhabited, no permanent residents, or expedition only), and can filter destinations by LGBTQ+ climate (welcoming, mixed or caution) and by travel advisory (no advisory, reconsider travel or do not travel).
 - **Search by code or other name.** Explore search finds a destination by its two-letter code (FR, DE, GB) or a common short or alternative name (US, USA, UK, UAE, Holland, Burma, Ivory Coast). An exact code or name lists just that destination. Other names live in the `COUNTRY_ALIASES` map in `js/data.js`.
 - **Shortlist export.** The Shortlist can be saved as a CSV, JSON or plain-text file. Each file lists the saved places with their best time, typical high and low, daily cost and strengths, followed by any saved countries.
 - **Country facts.** Every destination lists its capital and famous national parks and trails. Places that are the capital carry a CAPITAL tag, and Explore search covers these facts.
@@ -16,7 +16,8 @@ An interactive trip finder that helps visitors decide which region, country and 
 - **Place details.** A details view for each city shows interest ratings, a 12-month temperature chart with the best months marked, typical cost, currency and language.
 - **Explore mode.** Browse every destination with search and filters for region, month, interest and cost.
 - **Shortlist.** Save cities and countries, then compare them side by side. The shortlist is stored in the browser.
-- **Shareable links.** Your answers are encoded in the URL, so a link reproduces the same results.
+- **Festivals and Pride.** 127 major festivals and holidays and 117 Pride events are attached to their places in the `FESTIVALS` map, each with its usual months and a short note. Places with one carry a FESTIVAL tag, and their details list each event (Pride events are labelled PRIDE). Searching a festival's name finds it, "festivals" or "holidays" lists them all, and "pride", "gay", "queer" or "LGBTQ" lists every Pride event. A month in the search ("pride in june") or the "Good in" filter narrows them. With Show only set to Festivals or Pride, the month means "an event is on then" rather than the best season.
+- **Shareable links.** Your quiz answers are encoded in the URL, so a link reproduces the same results. Explore and every place also have their own web address (see below).
 - Light and dark themes, mobile layout and keyboard support.
 
 ## Install and offline use
@@ -30,11 +31,30 @@ The app is a Progressive Web App. `manifest.webmanifest` and the icons in `img/`
 
 The prompt appears only after the visitor sees results or spends 25 seconds on the page. It never appears once the app is installed or inside an embedded frame, and it stays hidden for 30 days after being dismissed.
 
-**When you ship changes,** bump `CACHE` in `sw.js` (for example `wtt-v2`) and add any new files to its `SHELL` list, so returning visitors get the new version. Service workers need HTTPS (GitHub Pages provides it) and do not run from a local `file://` page.
+**When you ship changes,** bump `CACHE` in `sw.js` (for example `wtt-v2`) and add any new files to its `SHELL` list, so returning visitors get the new version. Each page is cached under its own address once visited. Offline, a page not yet visited opens the home page. Service workers need HTTPS (GitHub Pages provides it) and do not run from a local `file://` page.
+
+## Web addresses and search engines
+
+On the live site, Explore lives at `/explore/` and each place at `/place/<id>/`, for example `/place/jp-kyoto/`. Opening a place in the app moves the address there, closing it moves it back, and Back and Forward work as expected. The Shortlist (`/#shortlist`) and quiz results (`/#r-…`) stay on the home page, since they belong to one visitor. Copies of the app that are not on the live domain or localhost, such as a `file://` page or an embedded preview, keep to `#explore`-style links.
+
+`tools/build-pages.js` generates a static page for each address (`explore/index.html` and `place/<id>/index.html`) from `index.html`. Each page has its own title, description, canonical address, link-preview tags, schema.org structured data (`TouristDestination` and a breadcrumb trail) and a no-JavaScript summary with the best months, typical highs, cost, World Heritage, national parks, festivals and nearby places. It also writes `sitemap.xml` with every address. **Run it after changing `js/data.js` or `index.html`:**
+
+```bash
+npm run build:pages
+```
+
+The test suite fails if any page is out of date. Other search basics:
+
+- `index.html` carries the home page's description, canonical address, Open Graph and X preview tags (with `img/og-image.png`, 1200 × 630), and structured data for the site, the app and All Trips Considered.
+- `robots.txt` allows crawling and points to the sitemap.
+- Each view has one main heading and its own page title, and an open place titles the tab with its name.
+- `404.html` is a branded "page not found" page that search engines are told not to list.
+
+After a release, submit `sitemap.xml` in Google Search Console to speed up indexing.
 
 ## Run it
 
-No build step or dependencies are needed. Open `index.html` in a browser, or serve the folder:
+No dependencies are needed. Open `index.html` in a browser, or serve the folder (needed to try the `/explore/` and `/place/<id>/` addresses):
 
 ```bash
 npm start
@@ -66,12 +86,21 @@ Unused factors drop out and the remaining weights are rescaled. A country's scor
 ## Project layout
 
 ```
-index.html        App shell
-css/styles.css    Styles and theme tokens
-js/data.js        Regions, countries and cities dataset
-js/engine.js      Scoring and itinerary logic (no DOM, unit tested)
-js/app.js         UI rendering and interactions
-tests/            Node test suite for the engine
+index.html            App shell and home page
+404.html              Page not found
+css/styles.css        Styles and theme tokens
+js/data.js            Regions, countries, places, festivals and other datasets
+js/engine.js          Scoring and itinerary logic (no DOM, unit tested)
+js/app.js             UI rendering, interactions and web addresses
+js/install.js         Install prompt and service worker registration
+sw.js                 Service worker (stays at the root so it covers every page)
+manifest.webmanifest  App name, colours and icons for installing
+img/                  Icons and the link-preview image
+explore/, place/      Generated pages (npm run build:pages)
+sitemap.xml           Generated list of every address
+robots.txt            Crawling rules
+tools/                Page generator and data helper scripts
+tests/                Node test suite
 ```
 
 To add a destination, append a city to a country's `cities` array in `js/data.js`. The comment at the top of that file explains the format. A place can also take a sixth element, `{ area, temps }`, giving its state or province and its own monthly highs. Capitals and parks live in the `FACTS` map. Typical lows come from the `RANGES` map, which holds each place's average daily temperature range by month from NASA POWER climate averages (MERRA-2 reanalysis). A low is that month's high minus the range. Ocean-dominated grid cells understate the daily swing on islands and coasts, so every range is raised to a floor of 6 °C within 30° of the equator and 5 °C elsewhere. Microstates and territories also take `kind`, `status` (shown to visitors), an optional `of` (a related country id used for pairing and the "Nearby microstates" line) and an optional `maxDays`. Territories name their country in `sovereign`, and day-trip microstates name their base in `visitFrom`. Micronations are ordinary places listed in the `MICRONATIONS` map. National parks reach places through park system sites, the `SITE_PLACES` map (which also tags a gateway place within about 1.5 hours when a park has no place of its own) and the `NP_EXTRA` map. `NP_EXTRA` also tags Hong Kong and Macau country parks, Taiwan's National Scenic Areas and Mexico's biosphere reserves as national parks. To label a place as UNESCO World Heritage, add its id and site name to the `UNESCO` map in the same file; the app refuses to load if an id does not match a place. The app labels these places WORLD HERITAGE. Places where nobody lives permanently are listed in the `REMOTE` map: UNINHABITED when closed to tourists, NO PERMANENT RESIDENTS when ordinary visits are possible, and EXPEDITION ONLY when only expedition cruises, liveaboards or permit trips go. Global Geoparks and Biosphere Reserves use the `GEOPARKS` and `BIOSPHERES` maps the same way.

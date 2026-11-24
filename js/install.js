@@ -17,8 +17,10 @@
     (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
   if (standalone) return;
 
+  // sw.js sits beside the js/ folder, so this works from /, /explore/ and /place/<id>/.
+  const SW_URL = new URL("../sw.js", document.currentScript.src).href;
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-    window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    window.addEventListener("load", () => navigator.serviceWorker.register(SW_URL).catch(() => {}));
   }
 
   function recentlyDismissed() {

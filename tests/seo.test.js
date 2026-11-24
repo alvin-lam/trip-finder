@@ -42,3 +42,26 @@ test("the not-found page is kept out of search results", () => {
   assert.match(page, /<a class="btn" href="\/">/);
   assert.ok(!/\u2014/.test(page), "404.html has no em dash");
 });
+
+test("Explore and every place have their own up-to-date page", () => {
+  const { build, SITE } = require("../tools/build-pages.js");
+  const files = build();
+  const E = require("../js/engine.js");
+  const index = E.buildIndex(require("../js/data.js"));
+  for (const city of index.cities) assert.ok(files[`place/${city.id}/index.html`], city.id);
+  // Pages on disk match what the data produces; run npm run build:pages after edits.
+  const stale = Object.entries(files).filter(([p, body]) => !fs.existsSync(path.join(root, p)) || read(p) !== body).map(([p]) => p);
+  assert.deepEqual(stale.slice(0, 5), [], `${stale.length} pages out of date`);
+  const onDisk = fs.readdirSync(path.join(root, "place"));
+  assert.equal(onDisk.length, index.cities.length, "no stale place folders");
+  // Every page points at its own address, and the sitemap lists them all.
+  const kyoto = files["place/jp-kyoto/index.html"];
+  assert.match(kyoto, new RegExp(`<link rel="canonical" href="${SITE}place/jp-kyoto/" />`));
+  assert.match(kyoto, /<title>Kyoto, Japan: when to go and what to see \| Trip Finder<\/title>/);
+  assert.match(kyoto, /<link rel="stylesheet" href="..\/..\/css\/styles.css" \/>/);
+  assert.equal(JSON.parse(kyoto.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"][0]["@type"], "TouristDestination");
+  assert.match(files["explore/index.html"], new RegExp(`<link rel="canonical" href="${SITE}explore/" />`));
+  const locs = files["sitemap.xml"].match(/<loc>/g).length;
+  assert.equal(locs, index.cities.length + 2);
+  assert.ok(!Object.values(files).some((b) => /—/.test(b)), "no em dashes in generated pages");
+});
