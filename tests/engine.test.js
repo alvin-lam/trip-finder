@@ -632,3 +632,18 @@ test("seasonal colors follow the local date, time zone and holidays", () => {
     assert.ok(ratio(s.dark, "#1a0f0a") >= 4.5 && ratio(s.dark, "#1c1f27") >= 4.5, `${id} dark contrast`);
   }
 });
+
+test("Christmas markets are festivals marked market", () => {
+  const markets = index.cities.flatMap((x) => x.festivals.filter((f) => f.market).map((f) => ({ id: x.id, ...f })));
+  assert.ok(markets.length >= 40, `${markets.length} Christmas markets`);
+  for (const m of markets) {
+    assert.ok(m.months.includes(12), `${m.id} ${m.name} runs in December`);
+    assert.equal(m.pride, false);
+  }
+  const has = (id, name) => index.cityById[id].festivals.some((f) => f.market && f.name === name);
+  assert.ok(has("hr-zagreb", "Advent in Zagreb"));
+  assert.ok(has("de-munich", "Christmas markets"));
+  assert.ok(has("us-chicago", "Christkindlmarket"));
+  // Other festivals stay unmarked.
+  assert.equal(index.cityById["de-munich"].festivals.find((f) => f.name === "Oktoberfest").market, false);
+});

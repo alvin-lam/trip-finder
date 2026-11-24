@@ -1045,6 +1045,7 @@
     if (n("site")) parts.push(`${n("site")} national park system ${n("site") === 1 ? "site" : "sites"}`);
     if (n("festival")) parts.push(`${n("festival")} ${n("festival") === 1 ? "festival" : "festivals"}`);
     if (n("pride")) parts.push(`${n("pride")} Pride ${n("pride") === 1 ? "event" : "events"}`);
+    if (n("market")) parts.push(`${n("market")} Christmas ${n("market") === 1 ? "market" : "markets"}`);
     return parts.map((x) => ` · ${x}`).join("");
   }
 
@@ -1059,19 +1060,27 @@
   const FESTIVAL_WORDS = /\b(festivals?|festivities|holidays?|celebrations?|fiestas?)\b/;
   // "pride", "gay", "queer" or "lgbtq" lists every Pride event, with the same month narrowing.
   const PRIDE_WORDS = /\b(pride|gay|queer|lgbt\w*)/;
+  // "christmas markets", "xmas market", "advent market" or "christkindl" lists every Christmas market.
+  const MARKET_WORDS = /\b(christmas|xmas|advent|holiday|winter)\s+markets?\b|\bchristkind/;
   function festivalMatches(c, q, month) {
     const qn = searchKey(q);
     if (qn.length < 3) return [];
-    const pride = PRIDE_WORDS.test(qn);
-    const general = !pride && FESTIVAL_WORDS.test(qn);
+    const market = MARKET_WORDS.test(qn);
+    const pride = !market && PRIDE_WORDS.test(qn);
+    const general = !pride && !market && FESTIVAL_WORDS.test(qn);
     const named = E.MONTHS_LONG.findIndex((m) => new RegExp(`\\b${m.toLowerCase()}\\b`).test(qn)) + 1;
     const want = named || month || 0;
     const out = [];
     for (const place of c.cities.concat(c.linked)) {
       for (const fest of place.festivals) {
         if (want && !fest.months.includes(want)) continue;
-        if (pride ? !fest.pride : !general && !searchKey(fest.name).includes(qn)) continue;
-        out.push({ kind: fest.pride ? "pride" : "festival", label: `${fest.pride ? "🏳️‍🌈" : "🎉"} ${fest.name}`, detail: `${place.name} · ${festivalWhen(fest)}`, place });
+        if (market ? !fest.market : pride ? !fest.pride : !general && !searchKey(fest.name).includes(qn)) continue;
+        out.push({
+          kind: fest.pride ? "pride" : fest.market ? "market" : "festival",
+          label: `${fest.pride ? "🏳️‍🌈" : fest.market ? "🎄" : "🎉"} ${fest.name}`,
+          detail: `${place.name} · ${festivalWhen(fest)}`,
+          place,
+        });
       }
     }
     return out;
@@ -1427,7 +1436,7 @@
       ${city.biosphere ? `<p class="unesco-line"><span class="ptag ptag--biosphere">BIOSPHERE</span> UNESCO Biosphere Reserve: <b>${esc(city.biosphere)}</b></p>` : ""}
       ${city.micronation ? `<p class="unesco-line"><span class="ptag ptag--micronation">MICRONATION</span> ${esc(city.micronation)}</p>` : ""}
       ${city.festivals
-        .map((f) => `<p class="unesco-line"><span class="ptag ptag--festival">${f.pride ? "PRIDE" : "FESTIVAL"}</span> <b>${esc(f.name)}</b> <span class="muted">${esc(festivalWhen(f))} · ${esc(f.note)}</span></p>`)
+        .map((f) => `<p class="unesco-line"><span class="ptag ptag--festival">${f.pride ? "PRIDE" : f.market ? "CHRISTMAS MARKET" : "FESTIVAL"}</span> <b>${esc(f.name)}</b> <span class="muted">${esc(festivalWhen(f))} · ${esc(f.note)}</span></p>`)
         .join("")}
       ${city.alsoIn.length ? `<p class="unesco-line">🌍 Shared site, also listed under ${city.alsoIn.map((o) => `${o.flag} ${esc(o.name)}`).join(", ")}</p>` : ""}
       ${city.nationalParks.length ? `<p class="unesco-line"><span class="npark">NATIONAL PARK</span> ${esc(city.nationalParks.join(", "))}</p>` : ""}
