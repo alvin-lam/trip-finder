@@ -1,0 +1,20 @@
+{
+  "id": "sx",
+  "kind": "territory",
+  "sovereign": "nl",
+  "status": "Constituent country of the Kingdom of the Netherlands",
+  "of": "mf",
+  "maxDays": 6,
+  "name": "Sint Maarten",
+  "flag": "🇸🇽",
+  "region": "cac",
+  "lat": 18.026,
+  "lon": -63.045,
+  "cost": 4,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,29,30,31,31,31,32,31,30,30],
+  "currency": "Guilder (XCG)",
+  "language": "English, Dutch",
+  "blurb": "The Dutch half of a two-nation island, with casinos, duty-free shopping and planes over Maho Beach.",
+  "cities": [["Philipsburg","32420152",3,"A cruise port on Great Bay, with Front Street shopping and Fort Amsterdam."],["Maho Beach & Simpson Bay","40250322",3,"Jets landing just above the sand, a lagoon marina and nightlife."]]
+}

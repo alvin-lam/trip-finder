@@ -1,0 +1,15 @@
+{
+  "id": "do",
+  "name": "Dominican Republic",
+  "flag": "🇩🇴",
+  "region": "cac",
+  "lat": 18.7,
+  "lon": -70.2,
+  "cost": 2,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,30,30,31,32,32,32,32,31,30,29],
+  "currency": "Peso (DOP)",
+  "language": "Spanish",
+  "blurb": "All-inclusive beaches, merengue and the Americas' oldest European city.",
+  "cities": [["Punta Cana","51333325",5,"All-inclusive resorts on long white beaches."],["Santo Domingo","34424232",3,"A colonial zone of firsts in the Americas."],["Samaná","41352414",2,"Humpback whales in winter and wild beaches."],["Puerto Plata & Cabarete","51244424",2,"Kitesurfing and a cable car up a mountain."]]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "sr",
+  "name": "Suriname",
+  "flag": "🇸🇷",
+  "region": "sam",
+  "lat": 5.85,
+  "lon": -55.2,
+  "cost": 2,
+  "best": [2,3,4,9,10,11],
+  "temps": [29,29,30,30,30,30,31,32,33,33,32,30],
+  "currency": "Dollar (SRD)",
+  "language": "Dutch",
+  "blurb": "A wooden colonial capital and vast rainforest.",
+  "cities": [
+    ["Paramaribo","04421132",1,"Dutch colonial wooden buildings by the river."],
+    ["Central Suriname Nature Reserve","00250402",1,"Pristine rainforest and granite domes."],
+    ["Jodensavanne","03030201",1,"Ruins of a 17th-century Jewish settlement in the rainforest.",null,{"temps":[29,29,29,30,30,30,31,32,32,32,31,30]}]
+  ]
+}

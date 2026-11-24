@@ -1,0 +1,27 @@
+{
+  "id": "bo",
+  "name": "Bolivia",
+  "flag": "🇧🇴",
+  "region": "sam",
+  "lat": -16.5,
+  "lon": -68.15,
+  "cost": 1,
+  "best": [5,6,7,8,9,10],
+  "temps": [17,17,17,17,16,15,15,16,17,18,19,18],
+  "currency": "Boliviano (BOB)",
+  "language": "Spanish, Quechua, Aymara",
+  "blurb": "Salt flats, high-altitude cities and Indigenous culture.",
+  "cities": [
+    ["Uyuni Salt Flats","00150502",4,"The world's largest salt flat, a mirror in the wet season.",[1,2,3,5,6,7,8,9,10]],
+    ["La Paz","04322331",3,"A cable-car city at 3,600 metres."],
+    ["Sucre","05322133",2,"A whitewashed colonial capital."],
+    ["Copacabana & Lake Titicaca","13240213",2,"Boat trips to the sacred Isla del Sol."],
+    ["Santa Cruz de la Sierra","13423142",1,"A tropical city and gateway to Amboró National Park."],
+    ["Potosí","05110311",3,"A silver-mining city at 4,000 metres, with colonial churches and Cerro Rico mine tours.",null,{"temps":[17,17,18,18,17,15,15,16,17,19,19,18]}],
+    ["Samaipata","04230322",2,"A carved sandstone ceremonial hill and a laid-back town near Amboró's cloud forests.",null,{"temps":[31,31,31,29,27,26,26,29,31,32,32,31]}],
+    ["Jesuit Missions of Chiquitos","05120112",2,"Painted wooden mission churches still used for Baroque music festivals.",null,{"temps":[33,32,32,31,29,28,29,31,33,34,33,33]}],
+    ["Noel Kempff Mercado National Park","01050501",1,"Remote waterfalls and tablelands deep in the Bolivian Amazon.",null,{"temps":[31,31,31,29,27,26,26,29,31,32,32,31]}],
+    ["Qhapaq Ñan in Bolivia","03030301",1,"Inca road sections along the shores of Lake Titicaca.",null,{"temps":[15,15,15,15,15,14,14,15,16,16,17,16]}],
+    ["Tiwanaku","05020212",3,"Monoliths and the Gate of the Sun from a pre-Inca empire near Lake Titicaca.",null,{"temps":[15,15,15,15,15,14,14,15,16,16,17,16]}]
+  ]
+}

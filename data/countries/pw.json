@@ -1,0 +1,18 @@
+{
+  "id": "pw",
+  "kind": "microstate",
+  "status": "Sovereign island microstate",
+  "maxDays": 10,
+  "name": "Palau",
+  "flag": "🇵🇼",
+  "region": "oce",
+  "lat": 7.51,
+  "lon": 134.58,
+  "cost": 4,
+  "best": [12,1,2,3,4],
+  "temps": [31,31,31,32,32,31,31,31,31,31,31,31],
+  "currency": "US dollar (USD)",
+  "language": "Palauan, English",
+  "blurb": "A Pacific island nation with some of the world's finest reef diving.",
+  "cities": [["Koror & Rock Islands","51251505",2,"Mushroom-shaped Rock Islands, coral walls and WWII wreck dives."],["Peleliu","11240303",1,"WWII battle sites and reef dives."]]
+}

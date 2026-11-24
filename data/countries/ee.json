@@ -1,0 +1,20 @@
+{
+  "id": "ee",
+  "name": "Estonia",
+  "flag": "🇪🇪",
+  "region": "cee",
+  "lat": 58.6,
+  "lon": 25,
+  "cost": 3,
+  "best": [5,6,7,8,9],
+  "temps": [-2,-2,2,9,15,19,22,20,15,9,3,0],
+  "currency": "Euro (EUR)",
+  "language": "Estonian",
+  "blurb": "Medieval Tallinn, digital culture and quiet forests.",
+  "cities": [
+    ["Tallinn","15433143",4,"A fairy-tale walled old town and a creative scene."],
+    ["Tartu","03323133",1,"A university town with a riverside café scene."],
+    ["Lahemaa National Park","11250314",1,"Bogs, manor houses and fishing villages."],
+    ["Struve Geodetic Arc (Estonia)","02010101",1,"Survey points of the 19th-century arc, including Tartu Observatory.",null,{"temps":[-2,-3,2,10,16,20,22,21,16,8,2,-1]}]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bl",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas collectivity of France",
+  "of": "sx",
+  "maxDays": 6,
+  "name": "Saint Barthélemy",
+  "flag": "🇧🇱",
+  "region": "cac",
+  "lat": 17.896,
+  "lon": -62.85,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,29,30,31,31,31,32,31,30,30],
+  "currency": "Euro (EUR)",
+  "language": "French",
+  "blurb": "A chic French island of yachts, designer shops and small white-sand coves.",
+  "cities": [["Gustavia","32430252",3,"A red-roofed Swedish-era harbour full of superyachts and boutiques."],["Saint-Jean","50330334",2,"A beach of boutique hotels at the end of the famously short runway."]]
+}

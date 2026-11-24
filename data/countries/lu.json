@@ -1,0 +1,18 @@
+{
+  "id": "lu",
+  "kind": "microstate",
+  "status": "Sovereign microstate",
+  "maxDays": 4,
+  "name": "Luxembourg",
+  "flag": "🇱🇺",
+  "region": "wne",
+  "lat": 49.61,
+  "lon": 6.13,
+  "cost": 4,
+  "best": [5,6,7,8,9],
+  "temps": [3,5,10,14,18,21,23,23,19,13,7,4],
+  "currency": "Euro (EUR)",
+  "language": "Luxembourgish, French, German",
+  "blurb": "A compact grand duchy of clifftop fortifications and Ardennes castles.",
+  "cities": [["Luxembourg City","04423143",3,"Clifftop old town and casemate tunnels above a green gorge."],["Vianden","04241213",2,"Hilltop castle above a river valley in the Ardennes."],["Mullerthal","01240314",1,"Sandstone gorges and forest trails in Little Switzerland."]]
+}

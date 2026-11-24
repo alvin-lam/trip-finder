@@ -1,0 +1,23 @@
+{
+  "id": "ug",
+  "name": "Uganda",
+  "flag": "🇺🇬",
+  "region": "ssa",
+  "lat": 1.4,
+  "lon": 32.3,
+  "cost": 2,
+  "best": [1,2,6,7,8,9],
+  "temps": [28,28,27,26,25,25,25,25,26,26,26,27],
+  "currency": "Shilling (UGX)",
+  "language": "English, Swahili",
+  "blurb": "Gorilla treks, the source of the Nile and tree-climbing lions.",
+  "cities": [
+    ["Bwindi","00250402",2,"Trek through dense forest to see mountain gorillas."],
+    ["Jinja","21242512",1,"White-water rafting at the source of the Nile."],
+    ["Murchison Falls","00250403",1,"The Nile forced through a narrow gorge."],
+    ["Queen Elizabeth National Park","00250403",1,"Tree-climbing lions and boat safaris."],
+    ["Kampala","03424132",1,"A hilly capital of markets and nightlife."],
+    ["Rwenzori Mountains","01050511",2,"The Mountains of the Moon, with glaciers on the equator.",null,{"temps":[31,31,31,30,29,30,29,30,30,29,29,29]}],
+    ["Kasubi Tombs","04010111",1,"Thatched royal tombs of the Buganda kings in Kampala.",null,{"temps":[28,29,28,26,26,26,25,26,27,27,27,27]}]
+  ]
+}

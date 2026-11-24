@@ -1,0 +1,19 @@
+{
+  "id": "qa",
+  "name": "Qatar",
+  "flag": "🇶🇦",
+  "region": "mena",
+  "lat": 25.3,
+  "lon": 51.5,
+  "cost": 4,
+  "best": [11,12,1,2,3],
+  "temps": [22,24,27,32,38,41,41,41,39,35,29,24],
+  "currency": "Riyal (QAR)",
+  "language": "Arabic",
+  "blurb": "Sleek museums, souqs and desert dunes.",
+  "cities": [
+    ["Doha","24412254",3,"The Museum of Islamic Art and Souq Waqif."],
+    ["Khor Al Adaid (Inland Sea)","40150303",1,"Desert dunes that run into the sea."],
+    ["Al Zubarah","03020101",1,"The ruins of an 18th-century pearl-trading town on Qatar's coast.",null,{"temps":[23,24,28,33,39,42,42,41,39,36,30,25]}]
+  ]
+}

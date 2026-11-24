@@ -1,0 +1,15 @@
+{
+  "id": "dj",
+  "name": "Djibouti",
+  "flag": "🇩🇯",
+  "region": "ssa",
+  "lat": 11.6,
+  "lon": 43.1,
+  "cost": 3,
+  "best": [11,12,1,2],
+  "temps": [29,29,31,32,34,37,41,40,36,33,31,29],
+  "currency": "Franc (DJF)",
+  "language": "French, Arabic",
+  "blurb": "Salt lakes, whale sharks and lunar landscapes.",
+  "cities": [["Lac Assal & Bay of Tadjoura","21150402",1,"A salt lake below sea level and whale-shark snorkelling."],["Lac Abbé","00150401",1,"Limestone chimneys steaming at dawn."]]
+}

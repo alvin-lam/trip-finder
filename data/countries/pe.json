@@ -1,0 +1,33 @@
+{
+  "id": "pe",
+  "name": "Peru",
+  "flag": "🇵🇪",
+  "region": "sam",
+  "lat": -9.2,
+  "lon": -75,
+  "cost": 2,
+  "best": [5,6,7,8,9],
+  "temps": [19,19,19,20,20,20,19,20,21,21,21,20],
+  "currency": "Sol (PEN)",
+  "language": "Spanish, Quechua",
+  "blurb": "Machu Picchu, Andean culture and a world-leading food scene.",
+  "cities": [
+    ["Cusco","05443442",4,"Inca stonework, colonial plazas and Sacred Valley trips."],
+    ["Machu Picchu","05250502",5,"The legendary Inca citadel in the clouds."],
+    ["Lima","24514232",3,"Ceviche, clifftop parks and top-rated restaurants.",[12,1,2,3,4]],
+    ["Arequipa","04532333",3,"The white city beneath volcanoes, gateway to Colca Canyon."],
+    ["Sacred Valley","04350413",4,"Inca terraces and market villages."],
+    ["Lake Titicaca (Puno)","03240212",3,"Floating reed islands on a high-altitude lake."],
+    ["Iquitos (Amazon)","01250402",2,"River lodges deep in the rainforest."],
+    ["Huacachina","11133512",2,"A desert oasis with dune buggies and sandboarding."],
+    ["Chan Chan","05020212",3,"The largest adobe city of the pre-Columbian Americas, near Trujillo.",null,{"temps":[27,28,28,26,24,22,21,21,21,22,23,25]}],
+    ["Chankillo","03020201",1,"A 2,300-year-old solar observatory of thirteen towers on a desert ridge.",null,{"temps":[27,28,27,26,24,23,22,22,22,22,24,25]}],
+    ["Chavín de Huántar","05020312",2,"Underground galleries and carved stone heads of an ancient Andean cult.",null,{"temps":[21,20,19,20,21,22,22,22,22,21,22,21]}],
+    ["Huascarán National Park","01150523",4,"Glacier lakes and the Cordillera Blanca's 6,000-metre peaks above Huaraz.",null,{"temps":[22,22,22,22,23,23,23,24,24,24,23,22]}],
+    ["Nazca Lines","03030312",4,"Giant desert drawings of animals and lines, best seen from a small plane.",null,{"temps":[32,32,33,32,30,28,27,28,30,31,32,32]}],
+    ["Manu National Park","01050502",3,"Cloud forest and lowland Amazon rich in jaguars, giant otters and macaws.",null,{"temps":[20,20,20,21,21,21,21,22,22,22,22,21]}],
+    ["Qhapaq Ñan in Peru","04040412",2,"The heart of the Inca road network, from mountain trails to Huánuco Pampa.",null,{"temps":[26,26,26,27,27,26,26,27,27,27,27,26]}],
+    ["Río Abiseo National Park","01050400",1,"Cloud forest ruins of the Chachapoya people, closed to tourism to protect them.",null,{"temps":[33,32,32,32,31,31,31,33,33,33,33,33]}],
+    ["Caral","04010211",2,"The 5,000-year-old pyramids of the oldest city in the Americas.",null,{"temps":[27,28,28,25,23,20,20,19,20,21,22,24]}]
+  ]
+}

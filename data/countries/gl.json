@@ -1,0 +1,24 @@
+{
+  "id": "gl",
+  "kind": "territory",
+  "sovereign": "dk",
+  "status": "Self-governing territory of the Kingdom of Denmark",
+  "maxDays": 10,
+  "name": "Greenland",
+  "flag": "🇬🇱",
+  "region": "wne",
+  "lat": 64.18,
+  "lon": -51.72,
+  "cost": 5,
+  "best": [6,7,8,9],
+  "temps": [-5,-5,-5,-1,4,8,10,9,6,1,-2,-5],
+  "currency": "Krone (DKK)",
+  "language": "Greenlandic, Danish",
+  "blurb": "The world's largest island: icebergs, fjords and Inuit culture.",
+  "cities": [
+    ["Ilulissat","02150503",3,"Giant icebergs drifting from the UNESCO-listed Icefjord."],
+    ["Nuuk","03241312",2,"Colourful capital with a national museum and fjord boat trips."],
+    ["Kangerlussuaq","00150502",1,"The edge of the ice sheet and musk oxen.",[6,7,8,9]],
+    ["Kujataa","03140302",1,"Norse ruins and Inuit sheep farms in green South Greenland fjords.",null,{"temps":[-2,-3,-1,5,10,14,16,14,10,5,0,-2]}]
+  ]
+}

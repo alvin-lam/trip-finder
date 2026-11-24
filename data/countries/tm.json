@@ -1,0 +1,22 @@
+{
+  "id": "tm",
+  "name": "Turkmenistan",
+  "flag": "🇹🇲",
+  "region": "cas",
+  "lat": 38.97,
+  "lon": 59.6,
+  "cost": 2,
+  "best": [4,5,9,10],
+  "temps": [4,7,13,20,27,33,35,33,27,19,11,6],
+  "currency": "Manat (TMT)",
+  "language": "Turkmen",
+  "blurb": "A white-marble capital and the burning Darvaza gas crater.",
+  "cities": [
+    ["Ashgabat & Darvaza","02150302",1,"Marble monuments and the fiery 'Door to Hell' crater."],
+    ["Merv","04110101",1,"Ruins of a great Silk Road oasis city."],
+    ["Repetek (Cold Winter Deserts)","00050301",1,"Sand desert reserve in the Karakum.",null,{"temps":[1,4,11,21,29,34,36,33,27,19,10,3]}],
+    ["Kunya-Urgench","04020211",2,"Minarets and mausoleums of a former Khorezm capital.",null,{"temps":[0,3,10,21,28,33,35,33,27,18,10,3]}],
+    ["Nisa","03010201",1,"Parthian fortresses near Ashgabat.",null,{"temps":[9,11,17,24,30,36,38,37,32,24,16,10]}],
+    ["Amul (Silk Roads)","03020201",1,"Caravan route ruins on the Amu Darya.",null,{"temps":[8,11,18,25,31,36,37,35,30,23,15,9]}]
+  ]
+}

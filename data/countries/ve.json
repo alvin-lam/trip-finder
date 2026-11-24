@@ -1,0 +1,20 @@
+{
+  "id": "ve",
+  "name": "Venezuela",
+  "flag": "🇻🇪",
+  "region": "sam",
+  "lat": 6.4,
+  "lon": -66.6,
+  "cost": 2,
+  "best": [12,1,2,3,4],
+  "temps": [27,28,28,28,28,27,27,27,28,28,28,27],
+  "currency": "Bolívar (VES)",
+  "language": "Spanish",
+  "blurb": "Table-top mountains, Caribbean islands and the world's highest waterfall.",
+  "cities": [
+    ["Angel Falls (Canaima)","00150502",1,"The world's highest uninterrupted waterfall."],
+    ["Los Roques","50250405",1,"A coral archipelago of white sand."],
+    ["Caracas University City","04110111",1,"A modernist campus with murals and sculptures.",null,{"temps":[27,28,29,29,29,28,28,28,29,29,28,27]}],
+    ["Coro","24230113",2,"A colonial town by the Médanos de Coro dunes.",null,{"temps":[30,30,31,32,33,33,33,34,34,32,31,30]}]
+  ]
+}

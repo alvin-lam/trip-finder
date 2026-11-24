@@ -1,0 +1,23 @@
+{
+  "id": "am",
+  "name": "Armenia",
+  "flag": "🇦🇲",
+  "region": "cas",
+  "lat": 40.1,
+  "lon": 45,
+  "cost": 1,
+  "best": [5,6,9,10],
+  "temps": [1,4,11,18,23,28,32,32,27,19,11,4],
+  "currency": "Dram (AMD)",
+  "language": "Armenian",
+  "blurb": "Ancient monasteries, apricots and views of Mount Ararat.",
+  "cities": [
+    ["Yerevan","04423132",3,"A pink-stone city with Ararat views and cafés."],
+    ["Lake Sevan","24240214",2,"A hilltop monastery above a high mountain lake."],
+    ["Dilijan","03341213",1,"A forested spa town known as Armenia's Switzerland."],
+    ["Tatev","04250212",2,"A clifftop monastery reached by a record-breaking cable car."],
+    ["Echmiatsin & Zvartnots","05110112",2,"The mother church of the Armenian Apostolic faith and the ruins of a 7th-century cathedral.",null,{"temps":[2,4,12,19,24,29,33,32,28,20,12,5]}],
+    ["Haghpat & Sanahin Monasteries","04130211",2,"Medieval monasteries perched above the Debed Canyon in Armenia's north.",null,{"temps":[1,2,6,10,15,19,22,23,18,13,7,3]}],
+    ["Geghard Monastery","05130212",3,"A monastery carved partly into the cliffs of the Azat Valley, famous for its acoustics.",null,{"temps":[2,6,14,20,25,31,34,34,29,22,13,4]}]
+  ]
+}

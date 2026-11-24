@@ -1,0 +1,20 @@
+{
+  "id": "gf",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas department and region of France",
+  "of": "sr",
+  "maxDays": 8,
+  "name": "French Guiana",
+  "flag": "🇬🇫",
+  "region": "sam",
+  "lat": 4.937,
+  "lon": -52.326,
+  "cost": 4,
+  "best": [8,9,10,11],
+  "temps": [29,29,29,29,29,29,29,29,30,30,30,29],
+  "currency": "Euro (EUR)",
+  "language": "French",
+  "blurb": "Amazon rainforest, Europe's spaceport and the old penal colony of Devil's Island.",
+  "cities": [["Cayenne","03320202",2,"The Creole capital, with markets, the Fort Cépérou view and Kaw marsh trips."],["Kourou & Îles du Salut","13140302",2,"Rocket launches at the Guiana Space Centre and the penal-colony islands offshore."],["Saint-Laurent-du-Maroni","03140302",1,"The Transportation Camp prison and pirogue trips up the Maroni River."]]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "af",
+  "name": "Afghanistan",
+  "flag": "🇦🇫",
+  "region": "sas",
+  "lat": 34.5,
+  "lon": 69.2,
+  "cost": 1,
+  "best": [4,5,9,10],
+  "temps": [5,7,13,19,25,30,32,31,27,20,12,7],
+  "currency": "Afghani (AFN)",
+  "language": "Dari, Pashto",
+  "blurb": "An ancient crossroads currently closed to normal tourism.",
+  "cities": [
+    ["Kabul","03211110",1,"Gardens and bazaars of an ancient crossroads."],
+    ["Bamiyan","03250202",1,"Cliffs that once held giant Buddhas, below the Hindu Kush."],
+    ["Minaret of Jam","04030201",1,"A soaring 12th-century brick minaret hidden in a remote mountain valley.",null,{"temps":[-2,-1,9,17,19,27,28,26,23,17,10,4]}]
+  ]
+}

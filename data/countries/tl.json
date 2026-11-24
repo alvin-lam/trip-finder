@@ -1,0 +1,15 @@
+{
+  "id": "tl",
+  "name": "Timor-Leste",
+  "flag": "🇹🇱",
+  "region": "sea",
+  "lat": -8.6,
+  "lon": 125.6,
+  "cost": 2,
+  "best": [5,6,7,8,9,10],
+  "temps": [31,31,31,31,31,30,30,30,31,32,32,31],
+  "currency": "US dollar (USD)",
+  "language": "Tetum, Portuguese",
+  "blurb": "Untouched reefs and mountain villages.",
+  "cities": [["Dili & Atauro Island","41241404",1,"World-class reef diving off Atauro Island."],["Baucau","21231213",1,"A Portuguese-era town above a turquoise coast."]]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "gp",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas department and region of France",
+  "of": "dm",
+  "maxDays": 10,
+  "name": "Guadeloupe",
+  "flag": "🇬🇵",
+  "region": "cac",
+  "lat": 16.21,
+  "lon": -61.49,
+  "cost": 4,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,29,30,31,31,31,31,31,30,30],
+  "currency": "Euro (EUR)",
+  "language": "French, Antillean Creole",
+  "blurb": "Butterfly-shaped French Caribbean islands of rainforest volcanoes and Creole cooking.",
+  "cities": [["Pointe-à-Pitre & Le Gosier","43430313",3,"The main town's markets and the beach resorts of Le Gosier."],["Basse-Terre & La Soufrière","12150502",2,"The national park's rainforest, waterfalls and the La Soufrière volcano hike."],["Deshaies","41330214",2,"A fishing village with Grande Anse beach and a botanical garden."],["Les Saintes","42330215",2,"Small islands with one of the Caribbean's loveliest bays and Fort Napoléon."],["Marie-Galante","42240105",1,"Ox carts, rum distilleries and empty beaches on a round, flat island."]]
+}

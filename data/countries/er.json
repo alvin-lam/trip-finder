@@ -1,0 +1,15 @@
+{
+  "id": "er",
+  "name": "Eritrea",
+  "flag": "🇪🇷",
+  "region": "ssa",
+  "lat": 15.3,
+  "lon": 38.9,
+  "cost": 2,
+  "best": [10,11,12,1,2,3],
+  "temps": [22,23,25,26,27,28,25,25,26,24,23,22],
+  "currency": "Nakfa (ERN)",
+  "language": "Tigrinya, Arabic",
+  "blurb": "Asmara's remarkable modernist architecture.",
+  "cities": [["Asmara","04321131",1,"Art Deco cinemas, cafés and a futurist petrol station."],["Massawa","34221214",1,"An Ottoman-era port on the Red Sea."]]
+}

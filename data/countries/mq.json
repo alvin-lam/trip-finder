@@ -1,0 +1,20 @@
+{
+  "id": "mq",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas region of France",
+  "of": "fr",
+  "maxDays": 10,
+  "name": "Martinique",
+  "flag": "🇲🇶",
+  "region": "cac",
+  "lat": 14.64,
+  "lon": -61.02,
+  "cost": 3,
+  "best": [12,1,2,3,4],
+  "temps": [28,28,29,29,30,30,30,31,31,30,30,29],
+  "currency": "Euro (EUR)",
+  "language": "French, Creole",
+  "blurb": "French-Caribbean island of rum distilleries, rainforest and volcano hikes.",
+  "cities": [["Fort-de-France","34433233",2,"Creole markets, rum distilleries and botanical gardens."],["Les Anses-d'Arlet","50340315",2,"Fishing village beaches and snorkelling with turtles."],["Mount Pelée","01250403",1,"Hike an active volcano above rainforest."]]
+}

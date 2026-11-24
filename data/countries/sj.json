@@ -1,0 +1,24 @@
+{
+  "id": "sj",
+  "kind": "territory",
+  "sovereign": "no",
+  "status": "Arctic archipelago of Norway",
+  "of": "no",
+  "maxDays": 6,
+  "name": "Svalbard and Jan Mayen",
+  "flag": "🇸🇯",
+  "region": "wne",
+  "lat": 78.22,
+  "lon": 15.65,
+  "cost": 5,
+  "best": [3,4,6,7,8],
+  "temps": [-12,-12,-12,-8,-2,4,7,6,2,-3,-7,-10],
+  "currency": "Krone (NOK)",
+  "language": "Norwegian",
+  "blurb": "High-Arctic wilderness of glaciers, polar bears and the midnight sun.",
+  "cities": [
+    ["Longyearbyen","02151512",2,"Glacier hikes, dog sledding and Arctic boat trips."],
+    ["Pyramiden","02150401",1,"An abandoned Soviet mining town reached by boat.",[6,7,8,9]],
+    ["Jan Mayen","00050500",1,"The Beerenberg volcano rising from the Arctic sea, landed on by a few expedition cruises.",null,{"temps":[1,1,0,1,3,5,8,9,8,5,2,2]}]
+  ]
+}

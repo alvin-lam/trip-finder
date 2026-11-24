@@ -1,0 +1,15 @@
+{
+  "id": "mu",
+  "name": "Mauritius",
+  "flag": "🇲🇺",
+  "region": "ssa",
+  "lat": -20.3,
+  "lon": 57.6,
+  "cost": 4,
+  "best": [5,6,9,10,11,12],
+  "temps": [30,30,30,29,27,25,24,24,25,27,28,29],
+  "currency": "Rupee (MUR)",
+  "language": "English, French, Creole",
+  "blurb": "Lagoon beaches, sugar-cane hills and multicultural food.",
+  "cities": [["Grand Baie","51443325",3,"Lagoon beaches, catamaran trips and nightlife."],["Le Morne & Chamarel","51251315",2,"A mountain-backed beach and the seven-coloured earth."],["Port Louis","03423232",1,"Markets, a waterfront and a historic immigration depot."]]
+}

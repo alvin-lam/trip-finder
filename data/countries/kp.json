@@ -1,0 +1,20 @@
+{
+  "id": "kp",
+  "name": "North Korea",
+  "flag": "🇰🇵",
+  "region": "eas",
+  "lat": 39,
+  "lon": 125.75,
+  "cost": 3,
+  "best": [4,5,9,10],
+  "temps": [-3,0,7,15,21,25,27,28,23,16,7,0],
+  "currency": "Won (KPW)",
+  "language": "Korean",
+  "blurb": "One of the world's most closed countries.",
+  "cities": [
+    ["Pyongyang","03111010",1,"Monumental architecture seen only on tightly controlled tours."],
+    ["Kaesong","03120001",1,"An old royal capital near the border, seen only on controlled tours."],
+    ["Koguryo Tombs (North Korea)","03010101",1,"Painted tombs of the Koguryo kings near Pyongyang.",null,{"temps":[0,3,10,18,24,28,29,30,26,19,10,1]}],
+    ["Mount Kumgang","02050412",1,"Diamond Mountain, rarely open to visitors.",null,{"temps":[4,5,10,16,21,24,27,27,24,19,13,6]}]
+  ]
+}

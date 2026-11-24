@@ -1,0 +1,24 @@
+{
+  "id": "kh",
+  "name": "Cambodia",
+  "flag": "🇰🇭",
+  "region": "sea",
+  "lat": 12.6,
+  "lon": 104.9,
+  "cost": 1,
+  "best": [11,12,1,2,3],
+  "temps": [31,32,34,35,34,33,32,32,31,31,30,30],
+  "currency": "Riel (KHR)",
+  "language": "Khmer",
+  "blurb": "Angkor's temples, a riverside capital and quiet islands.",
+  "cities": [
+    ["Siem Reap","05423233",5,"Sunrise over Angkor Wat and jungle-covered temples."],
+    ["Phnom Penh","04423132",3,"A royal palace, riverfront and sobering history."],
+    ["Koh Rong","51242425",2,"Laid-back island beaches and glowing plankton."],
+    ["Kampot & Kep","31341214",2,"Pepper farms, crab markets and riverside calm."],
+    ["Battambang","04331123",1,"Colonial streets and the bamboo train."],
+    ["Cambodian Memorial Sites","05000001",3,"Tuol Sleng and the Choeung Ek killing fields.",null,{"temps":[32,33,35,35,35,34,33,33,32,31,31,31]}],
+    ["Koh Ker","04020211",2,"A seven-tiered jungle pyramid of a short-lived Khmer capital.",null,{"temps":[32,34,35,36,35,34,33,32,32,32,31,31]}],
+    ["Sambor Prei Kuk","04020211",1,"Pre-Angkorian brick temples in a quiet forest.",null,{"temps":[32,34,35,36,35,34,33,32,32,32,31,31]}]
+  ]
+}

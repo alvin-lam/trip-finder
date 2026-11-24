@@ -1,0 +1,22 @@
+{
+  "id": "iq",
+  "name": "Iraq",
+  "flag": "🇮🇶",
+  "region": "mena",
+  "lat": 36.2,
+  "lon": 44,
+  "cost": 2,
+  "best": [3,4,10,11],
+  "temps": [16,19,24,30,37,42,44,44,41,34,24,18],
+  "currency": "Dinar (IQD)",
+  "language": "Arabic, Kurdish",
+  "blurb": "Mesopotamian ruins and Kurdish mountain towns.",
+  "cities": [
+    ["Erbil","04321131",1,"One of the oldest continuously inhabited citadels."],
+    ["Babylon","05110101",1,"Ruins of the ancient Mesopotamian capital."],
+    ["Ashur","03010101",1,"The first capital of the Assyrian Empire on the Tigris.",null,{"temps":[13,15,20,26,33,40,43,43,38,32,22,15]}],
+    ["Hatra","04010101",1,"A fortified Parthian trading city in the desert.",null,{"temps":[13,16,20,25,33,39,42,42,38,31,22,15]}],
+    ["Samarra","04010201",1,"The great spiral minaret and an Abbasid capital.",null,{"temps":[15,18,22,28,36,41,44,44,40,33,24,17]}],
+    ["Mesopotamian Marshes","11040303",1,"Reed islands and Ma'dan villages of the Ahwar.",null,{"temps":[18,21,27,33,40,44,47,46,43,36,26,20]}]
+  ]
+}

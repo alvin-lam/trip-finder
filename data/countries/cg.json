@@ -1,0 +1,15 @@
+{
+  "id": "cg",
+  "name": "Republic of the Congo",
+  "flag": "🇨🇬",
+  "region": "ssa",
+  "lat": 0.6,
+  "lon": 14.7,
+  "cost": 3,
+  "best": [6,7,8,9],
+  "temps": [31,31,32,32,31,28,27,28,30,31,31,31],
+  "currency": "CFA franc (XAF)",
+  "language": "French",
+  "blurb": "Gorillas in the deep Congo rainforest.",
+  "cities": [["Odzala-Kokoua","00250402",1,"Gorilla tracking from remote forest lodges."],["Brazzaville","03323131",1,"A riverside capital facing Kinshasa across the Congo."]]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "vi",
+  "kind": "territory",
+  "sovereign": "us",
+  "status": "Unincorporated territory of the United States",
+  "of": "pr",
+  "maxDays": 7,
+  "name": "US Virgin Islands",
+  "flag": "🇻🇮",
+  "region": "cac",
+  "lat": 18.342,
+  "lon": -64.931,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,29,30,31,31,32,32,31,31,30],
+  "currency": "US dollar (USD)",
+  "language": "English",
+  "blurb": "Three Caribbean islands with a national park, coral reefs and duty-free shopping.",
+  "cities": [["Charlotte Amalie","42331152",3,"St. Thomas's harbour capital, with Danish colonial streets, cruise ships and duty-free shops."],["St. John","51050404",3,"Two-thirds national park, with Trunk Bay's underwater snorkel trail and quiet hiking."],["St. Croix","43320314",2,"The largest island, with Christiansted's Danish forts, rum distilleries and Buck Island Reef."]]
+}

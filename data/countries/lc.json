@@ -1,0 +1,15 @@
+{
+  "id": "lc",
+  "name": "Saint Lucia",
+  "flag": "🇱🇨",
+  "region": "cac",
+  "lat": 13.9,
+  "lon": -61,
+  "cost": 4,
+  "best": [12,1,2,3,4,5],
+  "temps": [29,29,30,31,31,31,31,31,31,31,30,29],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "Twin volcanic Pitons rising from the sea.",
+  "cities": [["Soufrière & the Pitons","51352415",3,"Volcanic peaks, a drive-in volcano and reef snorkelling."],["Rodney Bay","41334324",2,"Marinas, a calm beach and Friday street parties."]]
+}

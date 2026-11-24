@@ -1,0 +1,15 @@
+{
+  "id": "mv",
+  "name": "Maldives",
+  "flag": "🇲🇻",
+  "region": "sas",
+  "lat": 3.2,
+  "lon": 73.2,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [30,31,31,32,31,31,30,30,30,30,30,30],
+  "currency": "Rufiyaa (MVR)",
+  "language": "Dhivehi",
+  "blurb": "Overwater villas, reef snorkelling and total seclusion.",
+  "cities": [["North Malé Atoll","50341305",4,"Easy-to-reach resort islands and surf breaks."],["Baa Atoll","50350405",2,"A protected marine area famous for manta ray encounters."],["Maafushi","51242415",2,"Local-island stays with budget guesthouses."],["Malé","13322131",2,"A tiny, dense island capital with a busy fish market."]]
+}

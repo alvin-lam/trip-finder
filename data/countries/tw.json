@@ -1,0 +1,29 @@
+{
+  "id": "tw",
+  "name": "Taiwan",
+  "flag": "🇹🇼",
+  "region": "eas",
+  "lat": 23.7,
+  "lon": 121,
+  "cost": 3,
+  "best": [3,4,10,11],
+  "temps": [19,20,22,26,29,32,34,33,31,27,24,21],
+  "currency": "Dollar (TWD)",
+  "language": "Mandarin",
+  "blurb": "Night markets, hot springs and marble gorges on a compact island.",
+  "cities": [
+    ["Taipei","04534242",3,"Night markets, tea houses and hot springs.",null,{"temps":[19,20,23,26,30,33,35,34,32,28,25,21]}],
+    ["Hualien & Taroko Gorge","21351503",2,"Marble canyons and dramatic Pacific coastline.",null,{"temps":[21,22,24,26,29,31,32,32,31,28,26,23]}],
+    ["Tainan","05521123",2,"Taiwan's old capital of temples and snacks.",null,{"temps":[23,24,26,29,31,32,33,33,32,31,28,24]}],
+    ["Sun Moon Lake","02240315",2,"A mountain lake with cycling paths and boat trips.",null,{"temps":[19,20,22,24,26,27,28,28,27,26,24,20]}],
+    ["Jiufen","14431133",3,"Lantern-lit teahouses on a hillside above the sea.",null,{"temps":[18,19,21,25,28,31,33,32,30,26,24,20]}],
+    ["Taichung","03523142",2,"The birthplace of bubble tea, with art districts and night markets.",null,{"temps":[22,23,25,28,31,32,33,33,32,30,28,24]}],
+    ["Kaohsiung","23423133",2,"A harbour city of art piers, the Lotus Pond and Cijin beach.",null,{"temps":[24,25,27,29,31,32,33,32,32,30,28,25]}],
+    ["Alishan","02250404",3,"Sunrise over a sea of clouds, tea farms and a forest railway.",null,{"temps":[11,12,14,16,17,18,19,19,18,17,16,13]}],
+    ["Kenting","51343314",3,"Tropical beaches and coral coast at Taiwan's southern tip.",null,{"temps":[24,26,27,30,31,32,32,32,31,30,28,25]}],
+    ["Yangmingshan","01250304",2,"Hot springs, steaming vents and spring flower fields above Taipei.",null,{"temps":[13,15,17,20,23,26,27,27,24,20,18,15]}],
+    ["Taitung & Green Island","42251404",2,"Hot-air balloons, rice fields and a seaside saltwater hot spring.",null,{"temps":[23,24,25,28,30,32,33,32,31,29,27,24]}],
+    ["Penghu","53331314",2,"Basalt islands with beaches, windsurfing and a summer fireworks festival.",null,{"temps":[19,20,23,26,29,31,32,32,31,28,25,21]}],
+    ["Lukang","05411132",1,"A preserved trading town of temples and old merchant streets.",null,{"temps":[20,21,24,27,30,32,33,33,33,30,27,22]}]
+  ]
+}

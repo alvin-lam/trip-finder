@@ -1,0 +1,33 @@
+{
+  "id": "ar",
+  "name": "Argentina",
+  "flag": "🇦🇷",
+  "region": "sam",
+  "lat": -38.4,
+  "lon": -63.6,
+  "cost": 2,
+  "best": [3,4,5,10,11],
+  "temps": [30,29,26,23,19,16,15,17,19,22,25,28],
+  "currency": "Peso (ARS)",
+  "language": "Spanish",
+  "blurb": "Tango, steak, Malbec and the wild landscapes of Patagonia.",
+  "cities": [
+    ["Buenos Aires","05515142",4,"Tango halls, steakhouses and grand avenues."],
+    ["Mendoza","02542414",3,"Malbec vineyards beneath the Andes."],
+    ["El Chaltén, Patagonia","00251503",3,"Trekking capital beneath Mount Fitz Roy.",[11,12,1,2,3]],
+    ["Iguazú Falls","01250403",3,"Hundreds of thundering waterfalls in the jungle."],
+    ["Ushuaia","02250403",3,"The world's southernmost city and gateway to Antarctica.",[11,12,1,2,3]],
+    ["Salta","04441233",2,"A colonial city near red-rock valleys."],
+    ["Bariloche","02441424",3,"Lakes, chocolate shops and ski slopes.",[1,2,3,7,8,12]],
+    ["Cueva de las Manos","04040301",2,"Thousands of stencilled hands painted on Patagonian canyon walls 9,000 years ago.",null,{"temps":[22,21,19,14,10,7,7,8,12,15,18,20]}],
+    ["ESMA Museum and Site of Memory","05000001",2,"A former detention centre of the military dictatorship, now a sober memorial museum in Buenos Aires.",null,{"temps":[30,29,27,23,19,16,16,18,20,23,26,29]}],
+    ["Ischigualasto & Talampaya","01050402",3,"Moon-like badlands full of dinosaur fossils and towering red canyon walls.",null,{"temps":[33,31,29,24,20,18,18,20,23,27,30,33]}],
+    ["Jesuit Block and Estancias of Córdoba","05220112",2,"A Jesuit university quarter and colonial ranch estates in the hills around Córdoba.",null,{"temps":[31,29,28,25,21,19,18,22,24,26,29,31]}],
+    ["San Ignacio Miní","04120111",2,"Red sandstone ruins of a Guaraní Jesuit mission in subtropical Misiones.",null,{"temps":[33,32,31,28,24,22,22,24,26,28,30,32]}],
+    ["Los Alerces National Park","02150414",2,"Lakes, glaciers and forests of thousand-year-old alerce trees in Patagonia.",null,{"temps":[22,22,19,15,10,7,6,9,12,15,18,20]}],
+    ["Península Valdés","21150303",3,"Southern right whales, elephant seals and orcas hunting on the beach.",null,{"temps":[23,23,21,19,15,12,11,12,14,17,19,22]}],
+    ["Qhapaq Ñan in Argentina","03030301",1,"Stretches of the Inca road and its waystations in the high valleys of the northwest.",null,{"temps":[30,29,27,24,21,20,20,24,26,29,30,31]}],
+    ["Quebrada de Humahuaca","04240322",3,"A rainbow-coloured gorge of adobe villages, cacti and Andean markets.",null,{"temps":[30,29,27,24,21,20,20,24,26,29,30,31]}],
+    ["Casa Curutchet (Le Corbusier)","04100011",1,"Le Corbusier's only house in the Americas, a modernist gem in La Plata.",null,{"temps":[30,29,27,23,19,16,16,18,20,23,26,29]}]
+  ]
+}

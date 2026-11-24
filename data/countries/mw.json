@@ -1,0 +1,20 @@
+{
+  "id": "mw",
+  "name": "Malawi",
+  "flag": "🇲🇼",
+  "region": "ssa",
+  "lat": -13.3,
+  "lon": 34.3,
+  "cost": 1,
+  "best": [5,6,7,8,9,10],
+  "temps": [27,27,27,26,25,23,23,25,28,30,30,28],
+  "currency": "Kwacha (MWK)",
+  "language": "English, Chichewa",
+  "blurb": "'The Warm Heart of Africa' and its vast freshwater lake.",
+  "cities": [
+    ["Lake Malawi (Cape Maclear)","40250415",1,"Snorkelling with colourful cichlid fish."],
+    ["Liwonde National Park","00250403",1,"River safaris among hippos and elephants."],
+    ["Chongoni Rock Art","03030301",1,"Rock paintings of the Chewa people in forested hills.",null,{"temps":[23,23,23,22,21,19,19,20,23,25,25,24]}],
+    ["Mount Mulanje","02150512",2,"A granite massif rising from tea plantations, with hiking huts.",null,{"temps":[28,28,28,27,26,24,24,26,29,31,31,29]}]
+  ]
+}

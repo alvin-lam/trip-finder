@@ -1,0 +1,19 @@
+{
+  "id": "bm",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "maxDays": 7,
+  "name": "Bermuda",
+  "flag": "🇧🇲",
+  "region": "cac",
+  "lat": 32.31,
+  "lon": -64.75,
+  "cost": 5,
+  "best": [5,6,7,8,9,10],
+  "temps": [21,20,21,22,24,27,29,30,29,26,24,22],
+  "currency": "Dollar (BMD)",
+  "language": "English",
+  "blurb": "Pink-sand beaches and pastel cottages in the North Atlantic.",
+  "cities": [["Hamilton","23423233",3,"Pastel harbour town with colonial architecture and ferries."],["South Shore beaches","50340305",3,"Pink-sand coves framed by limestone rocks."],["St. George's","24221123",1,"A historic town with old forts."]]
+}

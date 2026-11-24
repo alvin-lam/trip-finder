@@ -1,0 +1,29 @@
+{
+  "id": "bg",
+  "name": "Bulgaria",
+  "flag": "🇧🇬",
+  "region": "cee",
+  "lat": 42.7,
+  "lon": 25.5,
+  "cost": 1,
+  "best": [5,6,7,8,9],
+  "temps": [3,6,11,17,22,26,29,29,24,18,10,4],
+  "currency": "Euro (EUR)",
+  "language": "Bulgarian",
+  "blurb": "Black Sea beaches, rose valleys and mountain monasteries.",
+  "cities": [
+    ["Sofia","04323132",3,"Domed cathedrals with Vitosha mountain on the doorstep."],
+    ["Plovdiv","05322133",2,"A Roman theatre and a colourful old town."],
+    ["Rila Monastery","04150213",2,"A painted monastery deep in the mountains."],
+    ["Bansko","01242513",2,"Affordable skiing and Pirin mountain hikes.",[1,2,3,7,8]],
+    ["Sunny Beach","51325314",2,"A long Black Sea beach with busy nightlife.",[6,7,8]],
+    ["Nessebar","54420224",3,"A Black Sea peninsula town of Byzantine churches and wooden houses.",null,{"temps":[7,9,12,16,22,26,29,29,25,19,14,8]}],
+    ["Boyana Church","04020112",2,"A tiny medieval church in Sofia's suburbs, with remarkably lifelike 13th-century frescoes.",null,{"temps":[4,6,11,17,21,25,28,28,23,18,11,5]}],
+    ["Madara Rider","03020201",1,"An 8th-century horseman carved high into a cliff face.",null,{"temps":[4,6,11,18,23,26,30,30,25,19,12,6]}],
+    ["Pirin National Park","01250514",3,"Granite peaks, glacial lakes and the ski resort town of Bansko.",null,{"temps":[3,6,10,16,21,24,27,27,23,17,11,5]}],
+    ["Rock-Hewn Churches of Ivanovo","03030211",1,"Medieval cave churches with frescoes in the cliffs above the Rusenski Lom river.",null,{"temps":[3,6,13,19,25,29,31,31,26,19,11,5]}],
+    ["Srebarna Nature Reserve","01040103",1,"A Danube lake where Dalmatian pelicans nest.",null,{"temps":[3,5,12,18,24,28,30,30,24,17,11,5]}],
+    ["Thracian Tomb of Kazanlak","04120111",2,"A painted Thracian tomb in the heart of the Valley of the Roses.",null,{"temps":[6,9,14,19,24,28,32,31,27,20,14,8]}],
+    ["Thracian Tomb of Sveshtari","04020101",1,"A Thracian royal tomb with carved caryatids.",null,{"temps":[4,6,11,17,22,26,28,29,24,18,11,5]}]
+  ]
+}

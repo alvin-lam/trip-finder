@@ -1,0 +1,28 @@
+{
+  "id": "at",
+  "name": "Austria",
+  "flag": "🇦🇹",
+  "region": "wne",
+  "lat": 47.5,
+  "lon": 14.6,
+  "cost": 4,
+  "best": [5,6,7,8,9,12],
+  "temps": [3,5,10,16,20,24,26,26,21,15,8,3],
+  "currency": "Euro (EUR)",
+  "language": "German",
+  "blurb": "Imperial cities, classical music and Alpine villages.",
+  "cities": [
+    ["Vienna","05524143",5,"Palaces, coffee houses and world-class concerts."],
+    ["Salzburg","05332133",4,"Mozart's baroque birthplace beneath the Alps."],
+    ["Hallstatt","03250114",4,"Lakeside village beneath steep Alpine peaks."],
+    ["Innsbruck","02342513",3,"An Alpine city with slopes a cable car ride away.",[1,2,3,6,7,8,9]],
+    ["Wachau Valley","03441214",2,"Apricot orchards, vineyards and abbeys on the Danube."],
+    ["Graz","05432233",3,"A red-roofed old town, the Schlossberg clock tower and the Baroque Schloss Eggenberg.",null,{"temps":[4,8,12,17,21,25,26,25,21,15,9,4]}],
+    ["Lake Neusiedl (Austria)","24230214",2,"Reed-fringed steppe lake with wine villages, cycling paths and storks on the chimneys.",null,{"temps":[3,5,10,17,22,25,27,27,21,15,8,4]}],
+    ["Carnuntum (Danube Limes)","04020111",2,"A reconstructed Roman frontier city on the Danube east of Vienna.",null,{"temps":[4,7,11,17,21,26,27,27,22,15,10,5]}],
+    ["Schönbrunn Palace","05220112",5,"The Habsburgs' 1,441-room summer palace, with formal gardens and the world's oldest zoo.",null,{"temps":[4,7,11,17,21,26,27,27,22,15,10,5]}],
+    ["Attersee & Mondsee Pile Dwellings","11030213",1,"Prehistoric lakeside settlements beneath clear Alpine lakes in the Salzkammergut.",null,{"temps":[3,6,10,16,19,23,24,24,20,14,8,4]}],
+    ["Semmering Railway","02040312",2,"A 19th-century mountain railway of viaducts and tunnels through the Alps.",null,{"temps":[4,8,12,17,21,25,26,25,21,15,9,4]}],
+    ["Baden bei Wien","03320115",2,"A Biedermeier spa town with thermal baths, a casino and vineyards.",null,{"temps":[4,7,11,17,21,26,27,27,22,15,10,5]}]
+  ]
+}

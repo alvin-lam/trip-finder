@@ -1,0 +1,15 @@
+{
+  "id": "fm",
+  "name": "Micronesia",
+  "flag": "🇫🇲",
+  "region": "oce",
+  "lat": 6.9,
+  "lon": 158.2,
+  "cost": 3,
+  "best": [1,2,3,4],
+  "temps": [30,30,30,30,30,30,30,30,30,30,30,30],
+  "currency": "US dollar (USD)",
+  "language": "English",
+  "blurb": "The ancient stone city of Nan Madol and wreck-filled lagoons.",
+  "cities": [["Pohnpei","13250404",1,"The basalt ruins of Nan Madol and jungle waterfalls."],["Chuuk Lagoon","10150403",1,"World-famous WWII shipwreck diving."]]
+}

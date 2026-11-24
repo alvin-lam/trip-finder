@@ -1,0 +1,19 @@
+{
+  "id": "bq",
+  "kind": "territory",
+  "sovereign": "nl",
+  "status": "Special municipality of the Netherlands",
+  "maxDays": 10,
+  "name": "Caribbean Netherlands",
+  "flag": "🇧🇶",
+  "region": "cac",
+  "lat": 12.2,
+  "lon": -68.26,
+  "cost": 3,
+  "best": [1,2,3,4,5,6,7,8,9,10,11,12],
+  "temps": [29,29,30,30,31,31,31,32,32,31,30,29],
+  "currency": "US dollar (USD)",
+  "language": "Dutch, Papiamentu",
+  "blurb": "Bonaire, Saba and Sint Eustatius: dive islands ringed by protected marine parks.",
+  "cities": [["Kralendijk","31251405",1,"Shore diving capital with a marine park and pink flamingos."],["Lac Bay","40140514",1,"Windsurfing in a shallow, sheltered bay."],["Saba","02140403",1,"A steep volcanic island of white villages, Mount Scenery's cloud forest and wall dives."],["Sint Eustatius","12140203",1,"Statia's Fort Oranje, colonial ruins and a hike into The Quill crater."]]
+}

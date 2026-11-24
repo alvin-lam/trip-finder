@@ -1,0 +1,22 @@
+{
+  "id": "fk",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory, also claimed by Argentina",
+  "maxDays": 7,
+  "name": "Falkland Islands",
+  "flag": "🇫🇰",
+  "region": "sam",
+  "lat": -51.7,
+  "lon": -59.5,
+  "cost": 5,
+  "best": [11,12,1,2],
+  "temps": [15,14,13,10,7,5,5,6,8,10,12,14],
+  "currency": "Pound (FKP)",
+  "language": "English",
+  "blurb": "Remote South Atlantic islands teeming with penguins.",
+  "cities": [
+    ["Stanley & penguin colonies","02150302",1,"King and gentoo penguin colonies on remote sandy beaches."],
+    ["Sea Lion Island","00150403",1,"Elephant seals and penguins up close.",[11,12,1,2]]
+  ]
+}

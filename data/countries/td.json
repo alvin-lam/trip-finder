@@ -1,0 +1,19 @@
+{
+  "id": "td",
+  "name": "Chad",
+  "flag": "🇹🇩",
+  "region": "ssa",
+  "lat": 10.9,
+  "lon": 19.9,
+  "cost": 2,
+  "best": [11,12,1,2],
+  "temps": [33,35,38,41,40,38,34,32,34,36,36,33],
+  "currency": "CFA franc (XAF)",
+  "language": "French, Arabic",
+  "blurb": "Saharan massifs and Zakouma's recovering wildlife.",
+  "cities": [
+    ["Zakouma National Park","00250403",1,"A wildlife success story with large elephant herds."],
+    ["Ennedi Plateau","02150502",1,"Sandstone arches and rock art in the Sahara."],
+    ["Lakes of Ounianga","00050400",1,"Saharan lakes of blue, green and red water.",null,{"temps":[26,29,34,39,41,42,41,40,40,36,31,28]}]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ws",
+  "name": "Samoa",
+  "flag": "🇼🇸",
+  "region": "oce",
+  "lat": -13.8,
+  "lon": -172,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [30,30,30,30,29,29,29,29,29,29,30,30],
+  "currency": "Tālā (WST)",
+  "language": "Samoan, English",
+  "blurb": "Beach fale stays and the To Sua ocean trench.",
+  "cities": [["Upolu","53241315",2,"Open-sided beach huts and a swimming hole in a sea trench."],["Savai'i","41250315",1,"Lava fields, blowholes and beach fales."]]
+}

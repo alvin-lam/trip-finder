@@ -1,0 +1,20 @@
+{
+  "id": "ms",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "of": "ag",
+  "maxDays": 5,
+  "name": "Montserrat",
+  "flag": "🇲🇸",
+  "region": "cac",
+  "lat": 16.8,
+  "lon": -62.21,
+  "cost": 4,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,30,30,31,31,31,32,31,31,30],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "The 'Emerald Isle of the Caribbean', with a buried capital beneath an active volcano.",
+  "cities": [["Little Bay & Brades","21130203",1,"The new northern hub, with black-sand beaches and Centre Hills rainforest walks."],["Plymouth & the Exclusion Zone","03040300",1,"Guided permit tours into the ash-buried former capital below the Soufrière Hills volcano."]]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sz",
+  "name": "Eswatini",
+  "flag": "🇸🇿",
+  "region": "ssa",
+  "lat": -26.5,
+  "lon": 31.5,
+  "cost": 2,
+  "best": [4,5,6,7,8,9,10],
+  "temps": [27,27,26,24,22,20,20,22,24,25,26,27],
+  "currency": "Lilangeni (SZL)",
+  "language": "Siswati, English",
+  "blurb": "A small kingdom of game reserves and cultural festivals.",
+  "cities": [["Hlane & Mlilwane","02250413",1,"Easy game drives and mountain-bike safaris."],["Ezulwini Valley","03332223",1,"Craft markets, cultural villages and royal heritage."]]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "gg",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Crown Dependency",
+  "of": "je",
+  "maxDays": 5,
+  "name": "Guernsey",
+  "flag": "🇬🇬",
+  "region": "wne",
+  "lat": 49.455,
+  "lon": -2.536,
+  "cost": 5,
+  "best": [5,6,7,8,9],
+  "temps": [12,11,11,13,14,17,19,19,19,17,15,13],
+  "currency": "Pound (GBP)",
+  "language": "English",
+  "blurb": "Channel Islands of cliff paths, car-free Sark and Victor Hugo's house.",
+  "cities": [["St Peter Port","13320312",2,"A hillside harbour town with Castle Cornet and Victor Hugo's Hauteville House."],["Sark","12040005",1,"A car-free island of horse carts, cliff walks and dark skies."],["Herm","40030004",1,"A tiny island of shell beaches, a 20-minute boat ride from St Peter Port."],["Alderney","22030104",1,"The northernmost island, with Victorian forts, puffins and quiet bays."]]
+}

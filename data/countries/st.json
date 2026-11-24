@@ -1,0 +1,15 @@
+{
+  "id": "st",
+  "name": "São Tomé and Príncipe",
+  "flag": "🇸🇹",
+  "region": "ssa",
+  "lat": 0.3,
+  "lon": 6.7,
+  "cost": 3,
+  "best": [6,7,8,9],
+  "temps": [30,31,31,30,30,28,27,28,28,29,29,29],
+  "currency": "Dobra (STN)",
+  "language": "Portuguese",
+  "blurb": "Cocoa plantations and empty equatorial beaches.",
+  "cities": [["São Tomé","41341315",1,"Cocoa estates, rainforest and quiet beaches."],["Príncipe","50250405",1,"A protected rainforest island with empty beaches."]]
+}

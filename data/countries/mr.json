@@ -1,0 +1,15 @@
+{
+  "id": "mr",
+  "name": "Mauritania",
+  "flag": "🇲🇷",
+  "region": "ssa",
+  "lat": 20.5,
+  "lon": -12.4,
+  "cost": 2,
+  "best": [11,12,1,2,3],
+  "temps": [25,27,29,31,33,35,35,35,35,33,29,25],
+  "currency": "Ouguiya (MRU)",
+  "language": "Arabic",
+  "blurb": "Saharan caravan towns and one of the world's longest trains.",
+  "cities": [["Chinguetti","03150401",1,"A desert library town among the dunes."],["Banc d'Arguin","10250304",1,"A coastal refuge for millions of migrating birds."]]
+}

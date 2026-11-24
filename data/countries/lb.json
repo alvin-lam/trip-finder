@@ -1,0 +1,24 @@
+{
+  "id": "lb",
+  "name": "Lebanon",
+  "flag": "🇱🇧",
+  "region": "mena",
+  "lat": 33.9,
+  "lon": 35.9,
+  "cost": 3,
+  "best": [4,5,6,9,10],
+  "temps": [17,17,19,22,25,28,30,31,30,27,23,19],
+  "currency": "Pound (LBP)",
+  "language": "Arabic, French",
+  "blurb": "Mezze, Roman ruins and mountain cedars.",
+  "cities": [
+    ["Beirut","34525142",3,"A legendary food and nightlife scene by the sea."],
+    ["Byblos","34322223",2,"One of the world's oldest continuously inhabited towns."],
+    ["Baalbek","05140102",1,"Massive Roman temples in the Bekaa Valley."],
+    ["Anjar","04020111",1,"The ruins of an Umayyad trading city in the Beqaa Valley.",null,{"temps":[13,15,18,23,28,32,35,35,33,29,21,16]}],
+    ["Mount Amel Castles","03020201",1,"Crusader castles on hilltops in southern Lebanon.",null,{"temps":[18,19,21,23,26,28,30,31,30,28,25,20]}],
+    ["Qadisha Valley","03150413",2,"Rock-cut monasteries in a deep valley and the last groves of ancient cedars.",null,{"temps":[4,4,6,11,16,20,22,23,20,16,11,7]}],
+    ["Rachid Karami Fair","03000001",1,"Oscar Niemeyer's unfinished modernist fairground in Tripoli.",null,{"temps":[16,17,19,21,25,27,29,30,30,27,24,19]}],
+    ["Tyre","35420213",3,"Roman colonnades, a hippodrome and a fishing harbour on the sea.",null,{"temps":[18,19,21,23,26,28,30,31,30,28,25,20]}]
+  ]
+}

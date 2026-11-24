@@ -1,0 +1,19 @@
+{
+  "id": "bj",
+  "name": "Benin",
+  "flag": "🇧🇯",
+  "region": "ssa",
+  "lat": 6.4,
+  "lon": 2.1,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [32,33,33,32,31,29,28,28,29,30,32,32],
+  "currency": "CFA franc (XOF)",
+  "language": "French",
+  "blurb": "Birthplace of Vodun, stilt villages and royal palaces.",
+  "cities": [
+    ["Ouidah & Ganvié","24231122",1,"Vodun heritage and a village built on stilts."],
+    ["Pendjari National Park","00250403",1,"West Africa's best wildlife park."],
+    ["Royal Palaces of Abomey","05010111",2,"Earthen palaces of the Kingdom of Dahomey, decorated with bas-reliefs.",null,{"temps":[32,32,32,32,31,30,28,28,29,30,32,32]}]
+  ]
+}

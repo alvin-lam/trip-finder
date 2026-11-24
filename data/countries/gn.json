@@ -1,0 +1,19 @@
+{
+  "id": "gn",
+  "name": "Guinea",
+  "flag": "🇬🇳",
+  "region": "ssa",
+  "lat": 10.9,
+  "lon": -12.1,
+  "cost": 2,
+  "best": [11,12,1,2,3],
+  "temps": [31,32,32,32,31,29,28,28,29,30,30,30],
+  "currency": "Franc (GNF)",
+  "language": "French",
+  "blurb": "Waterfalls and highlands of the Fouta Djallon.",
+  "cities": [
+    ["Fouta Djallon","01250403",1,"Highland waterfalls and village treks."],
+    ["Conakry & Îles de Los","31231313",1,"A coastal capital with island beaches offshore."],
+    ["Mount Nimba (Guinea)","01050401",1,"Mountain grasslands with chimpanzees.",null,{"temps":[32,33,33,31,31,29,28,28,29,30,30,31]}]
+  ]
+}

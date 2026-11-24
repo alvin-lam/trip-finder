@@ -1,0 +1,19 @@
+{
+  "id": "pg",
+  "name": "Papua New Guinea",
+  "flag": "🇵🇬",
+  "region": "oce",
+  "lat": -6.3,
+  "lon": 143.9,
+  "cost": 4,
+  "best": [5,6,7,8,9,10],
+  "temps": [32,32,31,31,31,30,29,29,30,31,32,32],
+  "currency": "Kina (PGK)",
+  "language": "Tok Pisin, English",
+  "blurb": "Highland sing-sings, reefs and the Kokoda Track.",
+  "cities": [
+    ["Kokoda & the Highlands","03250501",1,"Cultural festivals and a famous WWII trek."],
+    ["Milne Bay","40250404",1,"Remote islands and muck diving."],
+    ["Kuk Early Agricultural Site","02030201",1,"Wetland drains showing 7,000 years of farming in the New Guinea highlands.",null,{"temps":[22,22,22,22,21,21,21,22,22,22,22,22]}]
+  ]
+}

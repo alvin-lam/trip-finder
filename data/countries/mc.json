@@ -1,0 +1,20 @@
+{
+  "id": "mc",
+  "kind": "microstate",
+  "visitFrom": "Nice",
+  "status": "Sovereign microstate",
+  "of": "fr",
+  "maxDays": 2,
+  "name": "Monaco",
+  "flag": "🇲🇨",
+  "region": "seu",
+  "lat": 43.7384,
+  "lon": 7.4246,
+  "cost": 5,
+  "best": [5,6,9,10],
+  "temps": [13,14,15,17,21,24,27,27,24,21,17,14],
+  "currency": "Euro (EUR)",
+  "language": "French",
+  "blurb": "A glamorous city-state of casinos, yachts and Riviera views.",
+  "cities": [["Monte Carlo","23415153",5,"Casino Square, superyachts and the Grand Prix circuit."],["Monaco-Ville","04321123",3,"The Prince's Palace, the changing of the guard and the Oceanographic Museum."],["Fontvieille","13321124",1,"A marina quarter with a rose garden and car collection."]]
+}

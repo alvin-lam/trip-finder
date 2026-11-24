@@ -1,0 +1,26 @@
+{
+  "id": "pf",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas collectivity of France",
+  "of": "fr",
+  "name": "French Polynesia",
+  "flag": "🇵🇫",
+  "region": "oce",
+  "lat": -17.68,
+  "lon": -149.41,
+  "cost": 5,
+  "best": [5,6,7,8,9,10],
+  "temps": [31,31,31,31,30,29,28,28,29,30,30,31],
+  "currency": "CFP franc (XPF)",
+  "language": "French, Tahitian",
+  "blurb": "Turquoise lagoons, volcanic peaks and overwater bungalows.",
+  "cities": [
+    ["Bora Bora","50341305",5,"Overwater bungalows beneath a volcanic peak."],
+    ["Moorea","41352415",3,"Jagged peaks, pineapple fields and lagoon snorkelling."],
+    ["Tahiti","33433333",3,"Papeete's food truck market and black-sand beaches."],
+    ["Rangiroa","50150405",1,"A vast atoll famous for shark dives."],
+    ["Taputapuātea","14140213",1,"A sacred Polynesian marae on Raiatea.",null,{"temps":[31,31,32,32,31,30,30,30,30,30,31,30]}],
+    ["Marquesas Islands","13150403",2,"Remote volcanic islands with tiki and sheer cliffs.",null,{"temps":[30,31,31,31,29,29,28,28,29,29,30,30]}]
+  ]
+}

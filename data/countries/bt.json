@@ -1,0 +1,15 @@
+{
+  "id": "bt",
+  "name": "Bhutan",
+  "flag": "🇧🇹",
+  "region": "sas",
+  "lat": 27.5,
+  "lon": 90.4,
+  "cost": 5,
+  "best": [3,4,5,10,11],
+  "temps": [12,14,17,20,23,25,25,25,23,21,17,14],
+  "currency": "Ngultrum (BTN)",
+  "language": "Dzongkha",
+  "blurb": "A Himalayan kingdom of cliffside monasteries.",
+  "cities": [["Paro","04351414",3,"The Tiger's Nest monastery clinging to a cliff."],["Thimphu","04331123",2,"A capital with no traffic lights and grand fortress-monasteries."],["Punakha","04341214",2,"A riverside fortress and rice valleys."],["Bumthang","04241213",1,"Bhutan's spiritual heartland of temples."]]
+}

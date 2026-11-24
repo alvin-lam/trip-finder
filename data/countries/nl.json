@@ -1,0 +1,30 @@
+{
+  "id": "nl",
+  "name": "Netherlands",
+  "flag": "🇳🇱",
+  "region": "wne",
+  "lat": 52.1,
+  "lon": 5.3,
+  "cost": 4,
+  "best": [4,5,6,9],
+  "temps": [6,7,10,14,18,20,23,22,19,15,10,7],
+  "currency": "Euro (EUR)",
+  "language": "Dutch",
+  "blurb": "Canals, cycling and masterpieces, all within a short train ride.",
+  "cities": [
+    ["Amsterdam","14325243",5,"Canals, bikes and world-class museums."],
+    ["Utrecht","03323134",2,"Relaxed canal city with a lively student scene."],
+    ["Rotterdam","03414142",2,"Bold modern architecture and a buzzing food hall."],
+    ["Delft","04321133",2,"A canal-side Vermeer town famous for blue pottery."],
+    ["The Hague","34322233",2,"The Mauritshuis, government buildings and Scheveningen beach."],
+    ["Frederiksoord (Colonies of Benevolence)","03030112",1,"Farm colonies built to lift poor families out of poverty.",null,{"temps":[5,5,9,13,17,20,22,22,19,14,9,5]}],
+    ["Beemster Polder","02040113",1,"A 17th-century polder of straight roads and dykes.",null,{"temps":[5,6,9,12,17,19,21,22,18,14,9,6]}],
+    ["Dutch Water Defence Lines","03030312",2,"Forts and flood defences around Amsterdam and Utrecht.",null,{"temps":[6,7,10,15,18,21,23,23,20,15,10,7]}],
+    ["Eisinga Planetarium","03000001",1,"The world's oldest working planetarium, built in a living room.",null,{"temps":[5,5,9,12,16,18,21,21,18,14,9,6]}],
+    ["Nijmegen (Lower German Limes)","04320112",2,"Roman frontier sites around Nijmegen, the oldest city in the Netherlands.",null,{"temps":[5,6,10,13,18,20,23,23,19,14,9,6]}],
+    ["Wouda Steam Pumping Station","02010101",1,"The largest steam pumping station ever built, still in service.",null,{"temps":[5,6,9,13,16,19,21,22,18,14,9,6]}],
+    ["Kinderdijk","03140213",4,"Nineteen windmills along a polder canal near Rotterdam.",null,{"temps":[6,7,10,14,18,20,22,22,19,15,10,7]}],
+    ["Schokland","02030102",1,"A former island fishing village now surrounded by farmland.",null,{"temps":[6,6,10,14,18,20,23,22,19,14,10,6]}],
+    ["Wadden Sea (Netherlands)","31050314",2,"Texel's dunes, seals and mudflat walks.",null,{"temps":[5,5,9,12,16,18,21,21,18,14,9,6]}]
+  ]
+}

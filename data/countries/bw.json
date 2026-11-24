@@ -1,0 +1,21 @@
+{
+  "id": "bw",
+  "name": "Botswana",
+  "flag": "🇧🇼",
+  "region": "ssa",
+  "lat": -22.3,
+  "lon": 24.7,
+  "cost": 5,
+  "best": [5,6,7,8,9,10],
+  "temps": [32,31,30,28,25,22,22,25,29,31,32,32],
+  "currency": "Pula (BWP)",
+  "language": "English, Setswana",
+  "blurb": "Okavango Delta safaris and Kalahari salt pans.",
+  "cities": [
+    ["Okavango Delta","00250404",3,"Mokoro canoe safaris through flooded wilderness."],
+    ["Chobe","00250403",2,"River safaris among vast elephant herds."],
+    ["Makgadikgadi Pans","00150403",1,"Endless salt pans and meerkats."],
+    ["Gaborone","02322131",1,"A small capital near the Mokolodi reserve."],
+    ["Tsodilo Hills","04040201",1,"Over 4,500 San rock paintings in the hills of the Kalahari.",null,{"temps":[32,32,31,29,27,24,24,27,31,33,34,33]}]
+  ]
+}

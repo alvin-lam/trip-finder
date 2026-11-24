@@ -1,0 +1,26 @@
+{
+  "id": "hu",
+  "name": "Hungary",
+  "flag": "🇭🇺",
+  "region": "cee",
+  "lat": 47.2,
+  "lon": 19.5,
+  "cost": 2,
+  "best": [4,5,6,9,10],
+  "temps": [2,5,11,17,22,25,27,27,22,16,8,3],
+  "currency": "Forint (HUF)",
+  "language": "Hungarian",
+  "blurb": "Thermal baths, ruin bars and grand Danube architecture.",
+  "cities": [
+    ["Budapest","05425135",4,"Thermal baths, ruin bars and Danube views."],
+    ["Lake Balaton","31333214",2,"Central Europe's largest lake with wine and beaches.",[6,7,8]],
+    ["Eger","03421133",2,"A castle, baroque streets and Bull's Blood wine cellars."],
+    ["Pécs","04321132",1,"A Mediterranean-feeling city with early Christian tombs."],
+    ["Aggtelek Caves","01040401",2,"The Baradla stalactite caves, with concerts held underground.",null,{"temps":[2,5,11,18,22,26,28,28,22,16,9,3]}],
+    ["Fertőd & Lake Fertő (Hungary)","13230213",1,"The Esterházy Palace and lake landscape.",null,{"temps":[4,6,12,18,22,26,28,28,22,16,10,4]}],
+    ["Hortobágy","01050303",2,"A puszta of horsemen and grey cattle.",null,{"temps":[2,5,11,18,22,26,28,28,23,17,10,3]}],
+    ["Pannonhalma Abbey","04220113",1,"A thousand-year-old Benedictine abbey.",null,{"temps":[4,6,12,18,22,26,28,28,22,16,10,4]}],
+    ["Hollókő","03220113",1,"A Palóc folk village below a castle.",null,{"temps":[3,6,11,18,23,26,28,28,22,16,9,4]}],
+    ["Tokaj","03530214",2,"Volcanic hills and cellars where sweet Tokaji wine is made.",null,{"temps":[2,5,11,18,22,26,28,28,22,16,9,3]}]
+  ]
+}

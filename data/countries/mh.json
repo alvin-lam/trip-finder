@@ -1,0 +1,19 @@
+{
+  "id": "mh",
+  "name": "Marshall Islands",
+  "flag": "🇲🇭",
+  "region": "oce",
+  "lat": 7.1,
+  "lon": 171.2,
+  "cost": 3,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,30,30,30,30,30,30,30,30,29],
+  "currency": "US dollar (USD)",
+  "language": "Marshallese, English",
+  "blurb": "Coral atolls and legendary wreck diving.",
+  "cities": [
+    ["Majuro","40140404",1,"A lagoon atoll capital and outer-island trips."],
+    ["Arno Atoll","40150305",1,"A quiet outer atoll a boat ride from Majuro."],
+    ["Bikini Atoll","11030500",1,"The atoll where the US tested nuclear bombs, now a wreck-diving site.",null,{"temps":[30,30,31,30,30,30,30,31,31,31,30,30]}]
+  ]
+}

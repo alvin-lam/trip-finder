@@ -1,0 +1,15 @@
+{
+  "id": "mz",
+  "name": "Mozambique",
+  "flag": "🇲🇿",
+  "region": "ssa",
+  "lat": -18.7,
+  "lon": 35.5,
+  "cost": 2,
+  "best": [5,6,7,8,9,10,11],
+  "temps": [31,31,30,29,27,25,25,26,27,29,30,31],
+  "currency": "Metical (MZN)",
+  "language": "Portuguese",
+  "blurb": "Island archipelagos, whale sharks and Portuguese-African food.",
+  "cities": [["Bazaruto & Vilankulo","50250405",2,"Dhow trips to dunes and coral reefs."],["Tofo","50241414",1,"Diving with whale sharks and manta rays."],["Island of Mozambique","35231114",1,"A historic trading island of coral-stone houses."],["Maputo","33424232",2,"Art Deco streets, prawns and live music."]]
+}

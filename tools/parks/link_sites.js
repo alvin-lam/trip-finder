@@ -2,7 +2,7 @@
 /*
  * Links park system sites that have no place of their own to a gateway place
  * within about 1.5 hours (110 km in a straight line), and writes the links into
- * js/data.js:
+ * the data/ files (then run npm run build):
  *
  *   - historic sites, historical parks, memorials, battlefields and military parks
  *     in the US and Canada (HISTORIC SITE label), and
@@ -13,15 +13,15 @@
  *   node tools/parks/link_sites.js --dry    print the summary only
  *
  * Coordinates come from tools/parks/site_coords.json (geocode_sites.py). Links to a
- * place in the same country go in the SITE_PLACES map, between the
- * "linked by tools/parks/link_sites.js" markers; links to a place in one of the
- * country's territories (a US site in Puerto Rico) go in HISTORIC_EXTRA or NP_EXTRA.
+ * place in the same country go in data/parks/site-places-generated.json; links to a
+ * place in one of the country's territories (a US site in Puerto Rico) go in
+ * data/parks/historic-extra.json (or np-extra.json); unlinked sites get their nearest
+ * place in data/parks/nearest-place.json.
  */
 const fs = require("node:fs");
 const path = require("node:path");
 
 const ROOT = path.join(__dirname, "..", "..");
-const DATA = path.join(ROOT, "js", "data.js");
 const E = require(path.join(ROOT, "js", "engine.js"));
 const coords = JSON.parse(fs.readFileSync(path.join(__dirname, "site_coords.json"), "utf8"));
 
@@ -30,8 +30,6 @@ const REACH_KM = 110;
 // place nearby get a nearest place for the "No place nearby" card.
 const PARKS = /^National (Park( Reserve)?|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)$/;
 const HISTORIC = /^(National (Historic Site|Historical Park|Memorial|Battlefield( Park| Site)?|Military Park)|International Historic Site)$/;
-const START = "    // --- linked by tools/parks/link_sites.js (do not edit by hand) ---";
-const END = "    // --- end of tools/parks/link_sites.js links ---";
 
 const km = (a, b) => {
   const r = Math.PI / 180;
@@ -40,16 +38,8 @@ const km = (a, b) => {
 };
 
 // Build the index without earlier generated links, so a rerun starts fresh.
-let src = fs.readFileSync(DATA, "utf8");
-const stripped = src.replace(new RegExp(`${START.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\s\\S]*?${END.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\n`), "");
-const tmp = path.join(ROOT, "js", ".data-unlinked.tmp.js");
-fs.writeFileSync(tmp, stripped);
-let index;
-try {
-  index = E.buildIndex(require(tmp));
-} finally {
-  fs.unlinkSync(tmp);
-}
+const F = require(path.join(ROOT, "tools", "data-files.js"));
+const index = E.buildIndex({ ...F.load({ withGeneratedSitePlaces: false }), HISTORIC_EXTRA: {}, NEAREST_PLACE: {} });
 
 const sitePlaces = {}; // site name -> [place names] (same country)
 const historicExtra = {}; // place id -> [site names] (a territory's place)
@@ -101,15 +91,11 @@ console.log(`Mexico (CONANP): ${tally.mxpark[1]} of ${tally.mxpark[0]} reach a p
 console.log(`${unlinked.length} sites stay unlinked; ${Object.keys(nearest).length} of them get a nearest place.`);
 if (process.argv.includes("--dry")) process.exit(0);
 
-const line = (k, v) => `    ${JSON.stringify(k)}: ${JSON.stringify(v.length === 1 ? v[0] : v)},`;
+const sorted = (map, flat) => Object.fromEntries(Object.keys(map).sort().map((k) => [k, flat && map[k].length === 1 ? map[k][0] : map[k]]));
 // SITE_PLACES values are always lists of place names.
-const block = `${START}\n${Object.keys(sitePlaces).sort().map((k) => `    ${JSON.stringify(k)}: ${JSON.stringify(sitePlaces[k])},`).join("\n")}\n${END}\n`;
-src = stripped.replace("  const SITE_PLACES = {\n", `  const SITE_PLACES = {\n${block}`);
-src = src.replace(/  const HISTORIC_EXTRA = \{[\s\S]*?\};/, `  const HISTORIC_EXTRA = {${Object.keys(historicExtra).length ? `\n${Object.keys(historicExtra).sort().map((k) => line(k, historicExtra[k])).join("\n")}\n  ` : ""}};`);
+F.writeJSON(F.SITE_PLACES_GENERATED, sorted(sitePlaces, false));
+F.save("HISTORIC_EXTRA", sorted(historicExtra, true));
+F.save("NEAREST_PLACE", sorted(nearest, false));
 // Mexico parks in a territory are not expected; NP_EXTRA is only extended if one appears.
-for (const [id, names] of Object.entries(npExtra)) {
-  src = src.replace("  const NP_EXTRA = {\n", `  const NP_EXTRA = {\n${line(id, names)}\n`);
-}
-src = src.replace(/  const NEAREST_PLACE = \{[\s\S]*?\};/, `  const NEAREST_PLACE = {${Object.keys(nearest).length ? `\n${Object.keys(nearest).sort().map((k) => `    ${JSON.stringify(k)}: ${JSON.stringify(nearest[k])},`).join("\n")}\n  ` : ""}};`);
-fs.writeFileSync(DATA, src);
-console.log("Wrote the links into js/data.js.");
+if (Object.keys(npExtra).length) F.save("NP_EXTRA", { ...F.readJSON(F.FILES.NP_EXTRA), ...sorted(npExtra, true) });
+console.log("Wrote data/parks/site-places-generated.json, historic-extra.json and nearest-place.json. Run npm run build.");

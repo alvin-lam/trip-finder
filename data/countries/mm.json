@@ -1,0 +1,20 @@
+{
+  "id": "mm",
+  "name": "Myanmar",
+  "flag": "🇲🇲",
+  "region": "sea",
+  "lat": 21.9,
+  "lon": 95.9,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [30,32,35,37,35,31,30,30,31,31,30,29],
+  "currency": "Kyat (MMK)",
+  "language": "Burmese",
+  "blurb": "Thousands of temples across the plains of Bagan.",
+  "cities": [
+    ["Bagan","05340213",3,"Thousands of temples rising from the plain."],
+    ["Yangon","04423132",2,"The golden Shwedagon Pagoda and colonial streets."],
+    ["Inle Lake","03341214",2,"Leg-rowing fishermen and floating gardens."],
+    ["Pyu Ancient Cities","03020101",1,"Brick stupas and walls of Myanmar's first cities.",null,{"temps":[30,33,36,38,36,34,34,33,33,33,31,29]}]
+  ]
+}

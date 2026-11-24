@@ -1,0 +1,21 @@
+{
+  "id": "lv",
+  "name": "Latvia",
+  "flag": "🇱🇻",
+  "region": "cee",
+  "lat": 56.9,
+  "lon": 24.6,
+  "cost": 2,
+  "best": [5,6,7,8,9],
+  "temps": [-2,-2,3,10,16,20,22,21,16,10,3,0],
+  "currency": "Euro (EUR)",
+  "language": "Latvian",
+  "blurb": "Art Nouveau Riga and long Baltic beaches.",
+  "cities": [
+    ["Riga","14424143",3,"Art Nouveau streets and a huge central market."],
+    ["Jūrmala","41232315",2,"A spa town with pine-backed Baltic beaches."],
+    ["Sigulda & Gauja Valley","02241413",1,"Castles and canoe trips in a forested valley."],
+    ["Kuldīga","04230213",2,"A Latvian town with a waterfall.",null,{"temps":[1,1,4,10,15,19,22,22,17,11,6,3]}],
+    ["Struve Geodetic Arc (Latvia)","02010101",1,"Arc survey points on Latvian hilltops, from a 19th-century effort to measure the Earth.",null,{"temps":[-2,-1,4,12,18,21,24,22,17,10,3,0]}]
+  ]
+}

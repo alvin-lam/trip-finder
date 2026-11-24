@@ -1,0 +1,26 @@
+{
+  "id": "tn",
+  "name": "Tunisia",
+  "flag": "🇹🇳",
+  "region": "mena",
+  "lat": 33.9,
+  "lon": 9.5,
+  "cost": 1,
+  "best": [4,5,6,9,10],
+  "temps": [16,17,19,22,26,30,33,34,30,26,21,17],
+  "currency": "Dinar (TND)",
+  "language": "Arabic, French",
+  "blurb": "Carthage, Saharan film sets and blue-and-white villages.",
+  "cities": [
+    ["Tunis & Carthage","35422233",3,"The medina's souqs and the ruins of ancient Carthage by the sea."],
+    ["Djerba","51332314",2,"Island beaches and whitewashed villages."],
+    ["Douz & the Sahara","02150403",1,"The gateway to Tunisia's dunes."],
+    ["El Jem","05110002",1,"A colossal Roman amphitheatre."],
+    ["Dougga","05020212",3,"A hilltop Roman town above olive groves.",null,{"temps":[15,16,19,22,28,33,36,37,32,27,21,16]}],
+    ["Ichkeul National Park","01040203",1,"A lake and marshes where migratory birds winter.",null,{"temps":[16,16,18,21,25,30,32,33,30,26,21,17]}],
+    ["Kairouan","05320132",3,"The Great Mosque and carpet shops of North Africa's holiest city.",null,{"temps":[18,19,22,25,30,35,38,38,33,28,23,19]}],
+    ["Sousse","35430233",3,"A medina and a ribat fort by the sea.",null,{"temps":[16,16,18,20,23,27,31,32,30,26,21,17]}],
+    ["Kerkouane","24010112",1,"A Punic town by the sea on Cap Bon.",null,{"temps":[15,16,17,18,22,26,29,30,28,24,20,16]}],
+    ["Sidi Bou Said","35420224",4,"A blue-and-white cliffside village above the Gulf of Tunis.",null,{"temps":[16,17,19,22,26,31,34,34,30,27,22,18]}]
+  ]
+}

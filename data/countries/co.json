@@ -1,0 +1,28 @@
+{
+  "id": "co",
+  "name": "Colombia",
+  "flag": "🇨🇴",
+  "region": "sam",
+  "lat": 4.6,
+  "lon": -74.3,
+  "cost": 1,
+  "best": [12,1,2,3,7,8],
+  "temps": [29,29,30,30,30,30,30,30,30,29,29,29],
+  "currency": "Peso (COP)",
+  "language": "Spanish",
+  "blurb": "Caribbean colonial towns, coffee country and salsa-filled cities.",
+  "cities": [
+    ["Cartagena","45415233",4,"Walled colonial city with Caribbean islands nearby."],
+    ["Medellín","03435332",4,"Spring-like climate, cable cars and nightlife."],
+    ["Salento & Coffee Region","02351414",2,"Wax palm valleys and coffee farm stays."],
+    ["Bogotá","05423142",3,"The Gold Museum, street art and mountain views."],
+    ["Tayrona","50250404",2,"Jungle-backed Caribbean beaches."],
+    ["Chiribiquete National Park","03050401",1,"Remote tepuis with ancient rock art, seen only by overflight.",null,{"temps":[33,34,33,32,31,30,30,31,32,32,32,32]}],
+    ["Mompox","04230214",2,"A riverside colonial town known for silver filigree and Holy Week.",null,{"temps":[35,36,36,35,34,34,35,34,33,33,33,34]}],
+    ["Los Katíos National Park","01050401",1,"Lowland rainforest and wetlands near the Panama border.",null,{"temps":[31,31,31,31,32,32,32,32,32,32,32,31]}],
+    ["Malpelo Island","10050500",1,"A remote rock in the Pacific famed among divers for hammerhead sharks.",null,{"temps":[30,31,31,31,31,30,30,30,30,30,30,30]}],
+    ["Tierradentro","04030311",1,"Painted underground tombs in green Andean hills.",null,{"temps":[25,25,25,25,25,26,26,26,26,25,24,25]}],
+    ["Qhapaq Ñan in Colombia","03030301",1,"The northernmost stretch of the Inca road near the Ecuadorian border.",null,{"temps":[16,16,16,16,16,15,15,15,16,17,17,17]}],
+    ["San Agustín","04040312",2,"Hundreds of stone statues guarding tombs in hills above the Magdalena river.",null,{"temps":[24,24,24,23,23,22,21,22,23,24,24,24]}]
+  ]
+}

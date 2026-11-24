@@ -1,0 +1,21 @@
+{
+  "id": "bd",
+  "name": "Bangladesh",
+  "flag": "🇧🇩",
+  "region": "sas",
+  "lat": 23.7,
+  "lon": 90.4,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [25,28,32,33,33,32,31,31,31,31,29,26],
+  "currency": "Taka (BDT)",
+  "language": "Bengali",
+  "blurb": "Rivers, rickshaws and the mangroves of the Sundarbans.",
+  "cities": [
+    ["Dhaka","03412142",1,"Old Dhaka's bustling river ghats and Mughal forts."],
+    ["Sundarbans","00250402",1,"Mangrove boat trips in tiger territory."],
+    ["Cox's Bazar","40221213",1,"One of the world's longest natural beaches."],
+    ["Sylhet","01241214",1,"Tea gardens and a swamp forest by boat."],
+    ["Paharpur","04020102",1,"The ruins of a great 8th-century Buddhist monastery on the Bengal plain.",null,{"temps":[24,28,33,36,35,34,33,33,33,32,29,25]}]
+  ]
+}

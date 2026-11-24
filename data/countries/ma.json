@@ -1,0 +1,30 @@
+{
+  "id": "ma",
+  "name": "Morocco",
+  "flag": "🇲🇦",
+  "region": "mena",
+  "lat": 31.8,
+  "lon": -7.1,
+  "cost": 2,
+  "best": [3,4,5,10,11],
+  "temps": [18,20,23,25,29,33,37,37,32,27,22,19],
+  "currency": "Dirham (MAD)",
+  "language": "Arabic, French",
+  "blurb": "Labyrinthine medinas, Atlas mountains and Saharan dunes.",
+  "cities": [
+    ["Marrakesh","05523253",5,"Souks, riads and the buzzing Jemaa el-Fnaa square."],
+    ["Fes","05411142",3,"The world's largest car-free medina and ancient tanneries."],
+    ["Chefchaouen","03341324",3,"The blue city in the Rif mountains."],
+    ["Merzouga & the Sahara","02250503",3,"Camel treks and nights under desert stars."],
+    ["Essaouira","43422334",3,"Windswept fortified port with surf, seafood and art galleries."],
+    ["Rabat","24331133",2,"A relaxed capital with a blue-and-white kasbah."],
+    ["Todra Gorge & Dades Valley","01250402",2,"Red canyons and kasbah-lined valleys."],
+    ["Tangier","23332132",2,"A gateway city between Africa and Europe."],
+    ["Casablanca","23424142",3,"The Hassan II Mosque and Art Deco boulevards."],
+    ["Volubilis","05030212",3,"Roman ruins with fine mosaics in olive country near Meknes.",null,{"temps":[16,17,20,22,26,30,34,34,30,26,20,17]}],
+    ["Meknes","05430232",3,"An imperial city of grand gates, stables and granaries.",null,{"temps":[16,17,20,22,26,30,34,34,30,26,20,17]}],
+    ["Aït Benhaddou","05030312",4,"A fortified earthen ksar on a hillside in the High Atlas.",null,{"temps":[17,19,23,27,31,36,39,38,33,28,22,18]}],
+    ["Tétouan","14330132",2,"A white Andalusian-style medina below the Rif mountains.",null,{"temps":[17,18,19,21,23,27,30,30,28,24,20,18]}],
+    ["El Jadida","34320122",2,"A Portuguese fortress town with a vaulted underground cistern.",null,{"temps":[17,18,19,20,22,24,26,28,26,24,21,18]}]
+  ]
+}

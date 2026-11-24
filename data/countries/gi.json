@@ -1,0 +1,20 @@
+{
+  "id": "gi",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory, also claimed by Spain",
+  "of": "es",
+  "maxDays": 2,
+  "name": "Gibraltar",
+  "flag": "🇬🇮",
+  "region": "seu",
+  "lat": 36.14,
+  "lon": -5.35,
+  "cost": 3,
+  "best": [4,5,6,9,10],
+  "temps": [16,17,18,20,22,25,28,28,26,23,19,17],
+  "currency": "Pound (GIP)",
+  "language": "English, Spanish",
+  "blurb": "A limestone rock at the mouth of the Mediterranean.",
+  "cities": [["The Rock","23342342",3,"Barbary macaques, siege tunnels and views across to Africa."]]
+}

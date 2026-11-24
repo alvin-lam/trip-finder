@@ -1,0 +1,22 @@
+{
+  "id": "la",
+  "name": "Laos",
+  "flag": "🇱🇦",
+  "region": "sea",
+  "lat": 19.9,
+  "lon": 102.5,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [28,31,33,34,33,32,31,31,31,30,29,27],
+  "currency": "Kip (LAK)",
+  "language": "Lao",
+  "blurb": "Slow river life, monasteries and limestone karsts.",
+  "cities": [
+    ["Luang Prabang","05442225",4,"Saffron-robed monks, waterfalls and night markets."],
+    ["Vang Vieng","01353514",3,"Kayaking, caves and hot-air balloons over karsts."],
+    ["Si Phan Don (4,000 Islands)","10240315",2,"Hammocks and river life on the Mekong."],
+    ["Vientiane","03321123",2,"A sleepy riverside capital of temples."],
+    ["Plain of Jars","04030212",3,"Hundreds of huge stone jars scattered across grassy hills.",null,{"temps":[23,26,28,29,27,27,27,26,27,25,24,22]}],
+    ["Vat Phou","04120212",2,"A hillside Khmer temple older than Angkor, above the Mekong.",null,{"temps":[32,34,35,36,34,32,31,31,31,32,32,31]}]
+  ]
+}

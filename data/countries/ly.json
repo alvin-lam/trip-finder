@@ -1,0 +1,21 @@
+{
+  "id": "ly",
+  "name": "Libya",
+  "flag": "🇱🇾",
+  "region": "mena",
+  "lat": 32.6,
+  "lon": 14.2,
+  "cost": 2,
+  "best": [3,4,10,11],
+  "temps": [18,19,21,24,27,30,32,33,31,28,24,19],
+  "currency": "Dinar (LYD)",
+  "language": "Arabic",
+  "blurb": "Spectacular Roman ruins on the Mediterranean coast.",
+  "cities": [
+    ["Leptis Magna","05120202",1,"One of the best-preserved Roman cities anywhere."],
+    ["Ghadames","04210112",1,"A whitewashed oasis town of covered alleys."],
+    ["Cyrene","04020211",1,"Greek temples and tombs of an ancient city on Libya's green mountain.",null,{"temps":[13,14,16,20,24,28,28,28,25,22,19,15]}],
+    ["Sabratha","24020211",1,"A seaside Roman theatre with a three-storey stage wall.",null,{"temps":[17,19,21,24,26,29,31,32,30,28,24,19]}],
+    ["Tadrart Acacus","01040401",1,"Saharan rock art among sandstone arches and dunes.",null,{"temps":[20,24,29,34,38,40,40,40,38,34,28,22]}]
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rs",
+  "name": "Serbia",
+  "flag": "🇷🇸",
+  "region": "cee",
+  "lat": 44,
+  "lon": 21,
+  "cost": 1,
+  "best": [5,6,9,10],
+  "temps": [4,6,12,18,23,26,29,29,24,18,11,5],
+  "currency": "Dinar (RSD)",
+  "language": "Serbian",
+  "blurb": "Rakija, river parties and Orthodox monasteries.",
+  "cities": [
+    ["Belgrade","03425132",3,"Fortress views and floating river clubs."],
+    ["Novi Sad","03334133",2,"A Danube fortress and the EXIT festival."],
+    ["Tara National Park","00250413",1,"Forested mountains above the Drina canyon."],
+    ["Felix Romuliana","04020111",1,"The palace complex of the Roman emperor Galerius.",null,{"temps":[5,8,13,19,24,28,30,30,25,18,11,6]}],
+    ["Stari Ras & Sopoćani","04030212",1,"A medieval Serbian capital and a monastery of luminous frescoes.",null,{"temps":[3,6,11,16,20,24,26,26,23,16,9,4]}],
+    ["Stećci of Serbia (Perućac)","02030301",1,"Carved medieval tombstones above the Drina river.",null,{"temps":[4,7,13,16,21,25,27,27,24,18,10,6]}],
+    ["Studenica Monastery","04030213",2,"A marble 12th-century monastery in the hills.",null,{"temps":[5,8,13,18,23,27,29,29,24,18,12,6]}]
+  ]
+}

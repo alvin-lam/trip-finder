@@ -1,0 +1,19 @@
+{
+  "id": "vg",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "maxDays": 10,
+  "name": "British Virgin Islands",
+  "flag": "🇻🇬",
+  "region": "cac",
+  "lat": 18.42,
+  "lon": -64.64,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [28,28,28,29,30,31,31,31,31,31,30,29],
+  "currency": "US dollar (USD)",
+  "language": "English",
+  "blurb": "The Caribbean's classic sailing playground.",
+  "cities": [["Tortola","41343515",2,"Island-hopping by sailboat between sheltered anchorages."],["Virgin Gorda","50240405",2,"The Baths: granite boulders and tidal pools."],["Jost Van Dyke","41131414",1,"Beach bars reachable only by boat."]]
+}

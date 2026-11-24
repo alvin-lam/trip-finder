@@ -1,0 +1,15 @@
+{
+  "id": "bi",
+  "name": "Burundi",
+  "flag": "🇧🇮",
+  "region": "ssa",
+  "lat": -3.4,
+  "lon": 29.4,
+  "cost": 1,
+  "best": [6,7,8,9],
+  "temps": [29,29,29,29,29,29,29,30,31,30,29,29],
+  "currency": "Franc (BIF)",
+  "language": "Kirundi, French",
+  "blurb": "Lake Tanganyika beaches and royal drumming traditions.",
+  "cities": [["Bujumbura","31331214",1,"Beaches on Lake Tanganyika below green hills."],["Gitega","03211112",1,"The highland capital, known for its royal drummers."]]
+}

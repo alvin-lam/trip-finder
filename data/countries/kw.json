@@ -1,0 +1,15 @@
+{
+  "id": "kw",
+  "name": "Kuwait",
+  "flag": "🇰🇼",
+  "region": "mena",
+  "lat": 29.3,
+  "lon": 47.9,
+  "cost": 4,
+  "best": [11,12,1,2,3],
+  "temps": [19,22,27,33,40,45,46,46,43,37,28,21],
+  "currency": "Dinar (KWD)",
+  "language": "Arabic",
+  "blurb": "Waterfront towers and traditional souqs.",
+  "cities": [["Kuwait City","23312141",1,"Kuwait Towers and Souq Al-Mubarakiya."],["Failaka Island","21130103",1,"Bronze Age and Greek ruins on a quiet island."]]
+}

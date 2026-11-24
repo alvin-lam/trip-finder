@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
  * Links UNESCO Global Geoparks and Biosphere Reserves to Trip Finder places and
- * writes the GEOPARKS and BIOSPHERES maps in js/data.js.
+ * writes data/unesco/geoparks.json and biosphere-reserves.json (then run npm run build).
  *
  *   node tools/unesco/link.js          write the maps and print a summary
  *   node tools/unesco/link.js --dry    print the summary only
@@ -16,9 +16,9 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const ROOT = path.join(__dirname, "..", "..");
-const DATA = path.join(ROOT, "js", "data.js");
 const E = require(path.join(ROOT, "js", "engine.js"));
-const index = E.buildIndex(require(DATA));
+const F = require(path.join(ROOT, "tools", "data-files.js"));
+const index = E.buildIndex(F.load());
 
 const MAX_PLACES = 3;
 const EXTRA_KM = 35;
@@ -125,12 +125,8 @@ for (const [label, r, total] of [["Geoparks", geo, read("geoparks.json", "geopar
 }
 
 if (!process.argv.includes("--dry")) {
-  let src = fs.readFileSync(DATA, "utf8");
-  for (const [name, r] of [["GEOPARKS", geo], ["BIOSPHERES", bio]]) {
-    const re = new RegExp(`  const ${name} = (\\{\\}|\\{\\n[\\s\\S]*?\\n  \\});`);
-    if (!re.test(src)) throw new Error(`${name} not found in js/data.js`);
-    src = src.replace(re, `  const ${name} = ${literal(r.map)};`);
-  }
-  fs.writeFileSync(DATA, src);
-  console.log("Wrote GEOPARKS and BIOSPHERES in js/data.js.");
+  const flat = (map) => Object.fromEntries(Object.keys(map).sort().map((k) => [k, map[k].length === 1 ? map[k][0] : map[k]]));
+  F.save("GEOPARKS", flat(geo.map));
+  F.save("BIOSPHERES", flat(bio.map));
+  console.log("Wrote data/unesco/geoparks.json and biosphere-reserves.json. Run npm run build.");
 }

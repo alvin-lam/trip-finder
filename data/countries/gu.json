@@ -1,0 +1,20 @@
+{
+  "id": "gu",
+  "kind": "territory",
+  "sovereign": "us",
+  "status": "Unincorporated territory of the United States",
+  "of": "mp",
+  "maxDays": 6,
+  "name": "Guam",
+  "flag": "🇬🇺",
+  "region": "oce",
+  "lat": 13.513,
+  "lon": 144.805,
+  "cost": 4,
+  "best": [1,2,3,4,5],
+  "temps": [31,30,30,31,31,32,32,31,31,31,32,31],
+  "currency": "US dollar (USD)",
+  "language": "English, Chamorro",
+  "blurb": "A US island in Micronesia mixing Chamorro culture, beach resorts and WWII history.",
+  "cities": [["Tumon Bay","52241433",3,"Hotel row on a calm reef lagoon, with snorkelling and duty-free malls."],["Hagåtña","13310102",2,"The capital, with the Plaza de España, Latte Stone Park and Chamorro night markets."],["Southern Guam","13140203",1,"Quiet villages, Spanish-era Umatac Bay and the War in the Pacific battle sites."]]
+}

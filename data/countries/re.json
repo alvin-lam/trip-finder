@@ -1,0 +1,20 @@
+{
+  "id": "re",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas region of France",
+  "of": "fr",
+  "maxDays": 10,
+  "name": "Réunion",
+  "flag": "🇷🇪",
+  "region": "ssa",
+  "lat": -21.12,
+  "lon": 55.53,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [30,30,30,29,27,26,25,25,26,27,28,29],
+  "currency": "Euro (EUR)",
+  "language": "French, Creole",
+  "blurb": "A volcanic Indian Ocean island made for hiking and canyoning.",
+  "cities": [["Cilaos & the cirques","01250503",2,"Volcanic amphitheatres, canyoning and Piton de la Fournaise."],["Saint-Gilles","41333324",2,"West-coast lagoon beaches and Creole food."],["Piton de la Fournaise","00150502",2,"Hike to the rim of one of the world's most active volcanoes."]]
+}

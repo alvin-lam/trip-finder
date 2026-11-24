@@ -1,0 +1,19 @@
+{
+  "id": "sl",
+  "name": "Sierra Leone",
+  "flag": "🇸🇱",
+  "region": "ssa",
+  "lat": 8.4,
+  "lon": -13.2,
+  "cost": 2,
+  "best": [11,12,1,2,3,4],
+  "temps": [30,31,31,31,31,30,28,28,29,30,30,30],
+  "currency": "Leone (SLE)",
+  "language": "English",
+  "blurb": "Palm beaches, chimpanzees and Freetown's green hills.",
+  "cities": [
+    ["Freetown Peninsula","51332314",1,"Palm-fringed beaches below forested hills."],
+    ["Tiwai Island","00250403",1,"A rainforest island full of primates."],
+    ["Gola-Tiwai","11050402",1,"Rainforest and river islands with pygmy hippos and chimpanzees.",null,{"temps":[32,34,34,33,32,30,29,28,29,31,31,31]}]
+  ]
+}

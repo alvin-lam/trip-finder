@@ -1,0 +1,19 @@
+{
+  "id": "ne",
+  "name": "Niger",
+  "flag": "🇳🇪",
+  "region": "ssa",
+  "lat": 17,
+  "lon": 8,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [30,33,37,40,41,39,35,33,35,37,34,31],
+  "currency": "CFA franc (XOF)",
+  "language": "French, Hausa",
+  "blurb": "Saharan trading towns and the Aïr Mountains.",
+  "cities": [
+    ["Agadez","03250201",1,"A Saharan trading town with a mud-brick minaret."],
+    ["W National Park","00250403",1,"Wildlife along a W-shaped bend of the Niger River."],
+    ["Aïr & Ténéré","00050401",1,"The Aïr mountains and Ténéré desert of the Sahara.",null,{"temps":[28,31,35,39,41,41,39,38,39,37,32,29]}]
+  ]
+}

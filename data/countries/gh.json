@@ -1,0 +1,21 @@
+{
+  "id": "gh",
+  "name": "Ghana",
+  "flag": "🇬🇭",
+  "region": "ssa",
+  "lat": 5.6,
+  "lon": -0.2,
+  "cost": 2,
+  "best": [11,12,1,2,3],
+  "temps": [31,32,32,32,31,29,28,28,29,30,31,31],
+  "currency": "Cedi (GHS)",
+  "language": "English",
+  "blurb": "A friendly welcome, slave-trade castles and rainforest canopy walks.",
+  "cities": [
+    ["Accra","23424242",2,"Vibrant markets, beaches and Jamestown's art scene."],
+    ["Cape Coast","35241213",2,"A castle museum and Kakum's canopy walkway."],
+    ["Kumasi","04412142",1,"Ashanti culture and a vast market."],
+    ["Mole National Park","00250402",1,"Walking safaris among elephants."],
+    ["Asante Traditional Buildings","04010101",1,"Shrines with carved and painted mud walls.",null,{"temps":[33,34,34,33,32,30,29,28,30,31,32,32]}]
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "aw",
+  "kind": "territory",
+  "sovereign": "nl",
+  "status": "Constituent country of the Kingdom of the Netherlands",
+  "maxDays": 10,
+  "name": "Aruba",
+  "flag": "🇦🇼",
+  "region": "cac",
+  "lat": 12.52,
+  "lon": -69.97,
+  "cost": 4,
+  "best": [1,2,3,4,5,6,7,8,9,10,11,12],
+  "temps": [30,30,31,31,32,32,32,33,33,32,31,30],
+  "currency": "Florin (AWG)",
+  "language": "Dutch, Papiamento",
+  "blurb": "Sunny, dry and outside the main hurricane belt, so good all year.",
+  "cities": [["Eagle & Palm Beach","51333325",4,"Wide white beaches, steady trade winds and sunset cruises."],["Arikok National Park","11150403",2,"Desert landscapes, caves and the Natural Pool by 4x4."],["Oranjestad","13323243",2,"Pastel Dutch buildings and duty-free shopping."]]
+}

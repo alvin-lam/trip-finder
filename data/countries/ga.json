@@ -1,0 +1,20 @@
+{
+  "id": "ga",
+  "name": "Gabon",
+  "flag": "🇬🇦",
+  "region": "ssa",
+  "lat": -2,
+  "lon": 9.6,
+  "cost": 4,
+  "best": [6,7,8,9],
+  "temps": [30,30,31,31,30,28,27,27,28,29,29,30],
+  "currency": "CFA franc (XAF)",
+  "language": "French",
+  "blurb": "Surfing hippos and rainforest that reaches the beach.",
+  "cities": [
+    ["Loango National Park","40250404",1,"Elephants and hippos on wild Atlantic beaches."],
+    ["Libreville","33323223",1,"A seafront capital with beaches and markets."],
+    ["Lopé National Park","02050401",1,"Savanna and rainforest with mandrills and rock art.",null,{"temps":[31,31,31,31,31,29,28,28,29,29,29,30]}],
+    ["Ivindo National Park","01050401",1,"Waterfalls and rainforest in Gabon.",null,{"temps":[29,30,30,30,30,28,26,27,29,29,29,28]}]
+  ]
+}

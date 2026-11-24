@@ -1,0 +1,15 @@
+{
+  "id": "vc",
+  "name": "Saint Vincent and the Grenadines",
+  "flag": "🇻🇨",
+  "region": "cac",
+  "lat": 13,
+  "lon": -61.25,
+  "cost": 4,
+  "best": [1,2,3,4,5],
+  "temps": [29,29,29,30,31,31,30,31,31,31,30,29],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "Sailing between tiny Grenadine islands.",
+  "cities": [["Bequia & the Grenadines","50250405",1,"Sailing between small, quiet islands and reefs."],["Mustique","50140305",1,"A private-feeling island of villas and calm bays."]]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "jo",
+  "name": "Jordan",
+  "flag": "🇯🇴",
+  "region": "mena",
+  "lat": 30.6,
+  "lon": 36.2,
+  "cost": 3,
+  "best": [3,4,5,10,11],
+  "temps": [13,14,18,23,28,31,32,33,31,27,20,15],
+  "currency": "Dinar (JOD)",
+  "language": "Arabic",
+  "blurb": "Petra, desert camps and floating in the Dead Sea.",
+  "cities": [
+    ["Petra","05240412",4,"The rose-red city carved into canyon walls."],
+    ["Wadi Rum","02251503",3,"Martian desert landscapes and Bedouin camps."],
+    ["Amman","04413132",2,"Roman theatre, citadel views and great mezze."],
+    ["Dead Sea","40140115",3,"Float in the salty water at the lowest point on land."],
+    ["Aqaba","41231413",2,"Red Sea snorkelling and diving."],
+    ["As-Salt","04320112",1,"Honey-coloured Ottoman-era houses climbing the hills of a Jordanian town.",null,{"temps":[13,14,18,24,28,31,33,33,31,27,20,15]}],
+    ["Bethany Beyond the Jordan","04020112",2,"The site on the Jordan River where Jesus is believed to have been baptised.",null,{"temps":[19,21,24,30,34,37,39,38,36,33,28,21]}],
+    ["Quseir Amra","04010101",1,"A desert bathhouse with rare Umayyad frescoes.",null,{"temps":[13,15,18,24,29,32,33,33,32,28,21,15]}],
+    ["Umm ar-Rasas","04010101",1,"Byzantine mosaics and a stylite tower.",null,{"temps":[12,14,17,22,26,29,30,30,29,26,20,14]}],
+    ["Umm el-Jimal","04010101",1,"A Byzantine town built entirely of black basalt.",null,{"temps":[14,15,20,25,30,32,34,34,32,28,21,15]}]
+  ]
+}

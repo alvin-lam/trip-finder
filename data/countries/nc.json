@@ -1,0 +1,25 @@
+{
+  "id": "nc",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Special collectivity of France",
+  "of": "fr",
+  "maxDays": 10,
+  "name": "New Caledonia",
+  "flag": "🇳🇨",
+  "region": "oce",
+  "lat": -21.3,
+  "lon": 165.6,
+  "cost": 4,
+  "best": [4,5,9,10,11],
+  "temps": [29,29,28,27,25,24,23,23,24,25,27,28],
+  "currency": "CFP franc (XPF)",
+  "language": "French",
+  "blurb": "French café culture beside one of the world's largest lagoons.",
+  "cities": [
+    ["Nouméa","43433334",2,"Café culture, Kanak cultural centre and lagoon beaches."],
+    ["Isle of Pines","50240405",2,"Tall araucaria pines and the natural pool at Oro Bay."],
+    ["Lifou (Loyalty Islands)","50240305",1,"Cliffs, caves and Kanak villages."],
+    ["New Caledonia Lagoons","41150505",3,"One of the world's largest lagoons, with reefs and dugongs.",null,{"temps":[30,30,30,29,27,26,25,25,26,27,28,29]}]
+  ]
+}

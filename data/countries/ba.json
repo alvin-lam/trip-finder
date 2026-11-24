@@ -1,0 +1,22 @@
+{
+  "id": "ba",
+  "name": "Bosnia and Herzegovina",
+  "flag": "🇧🇦",
+  "region": "seu",
+  "lat": 43.9,
+  "lon": 17.7,
+  "cost": 1,
+  "best": [5,6,9,10],
+  "temps": [4,6,11,16,21,25,28,28,23,17,10,5],
+  "currency": "Mark (BAM)",
+  "language": "Bosnian, Croatian, Serbian",
+  "blurb": "Ottoman bridges, coffee culture and green mountains.",
+  "cities": [
+    ["Mostar","04331213",3,"The iconic Old Bridge and its divers."],
+    ["Sarajevo","05412132",3,"Bazaars, mosques and moving recent history."],
+    ["Una National Park","00250503",1,"Waterfalls and rafting on an emerald river."],
+    ["Višegrad Bridge","04120112",2,"The 16th-century Ottoman bridge made famous by Ivo Andrić's novel.",null,{"temps":[5,8,13,18,23,27,29,30,24,18,11,5]}],
+    ["Stećci of Bosnia (Radimlja)","04010101",1,"Carved medieval tombstones in hillside necropolises.",null,{"temps":[9,11,15,19,24,29,33,33,28,22,16,9]}],
+    ["Vjetrenica Cave","01040401",1,"Bosnia's longest cave, with rare underground fauna and a cold wind at its mouth.",null,{"temps":[10,12,15,18,24,28,32,32,26,21,16,12]}]
+  ]
+}

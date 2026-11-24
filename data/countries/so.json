@@ -1,0 +1,15 @@
+{
+  "id": "so",
+  "name": "Somalia",
+  "flag": "🇸🇴",
+  "region": "ssa",
+  "lat": 2,
+  "lon": 45.3,
+  "cost": 2,
+  "best": [12,1,2,3],
+  "temps": [30,30,31,32,32,31,30,30,31,31,31,30],
+  "currency": "Shilling (SOS)",
+  "language": "Somali, Arabic",
+  "blurb": "A long Indian Ocean coastline and an ancient trading history.",
+  "cities": [["Mogadishu","31121110",1,"An Indian Ocean coastline and old town."],["Laas Geel (Somaliland)","03140101",1,"Vivid Neolithic rock paintings."]]
+}

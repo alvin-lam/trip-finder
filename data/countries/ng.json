@@ -1,0 +1,19 @@
+{
+  "id": "ng",
+  "name": "Nigeria",
+  "flag": "🇳🇬",
+  "region": "ssa",
+  "lat": 6.5,
+  "lon": 3.4,
+  "cost": 2,
+  "best": [11,12,1,2],
+  "temps": [31,32,33,33,32,30,29,29,30,31,32,31],
+  "currency": "Naira (NGN)",
+  "language": "English",
+  "blurb": "Afrobeats, art and Africa's biggest city.",
+  "cities": [
+    ["Lagos","23425242",2,"Afrobeats clubs, art galleries and beach weekends."],
+    ["Osogbo","03230112",1,"A sacred forest grove filled with sculptures."],
+    ["Sukur","04030301",1,"A hilltop kingdom of stone terraces and paved paths.",null,{"temps":[34,37,40,40,36,33,32,31,31,34,36,35]}]
+  ]
+}

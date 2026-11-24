@@ -1,0 +1,15 @@
+{
+  "id": "ht",
+  "name": "Haiti",
+  "flag": "🇭🇹",
+  "region": "cac",
+  "lat": 19.76,
+  "lon": -72.2,
+  "cost": 2,
+  "best": [12,1,2,3],
+  "temps": [31,31,32,32,33,34,34,34,33,32,31,31],
+  "currency": "Gourde (HTG)",
+  "language": "Haitian Creole, French",
+  "blurb": "Vibrant art, music and a mountaintop fortress.",
+  "cities": [["Cap-Haïtien & the Citadelle","24231213",1,"A vast mountaintop fortress and palace ruins."],["Jacmel","34221213",1,"A colourful arts town on the south coast."]]
+}

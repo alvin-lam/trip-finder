@@ -1,0 +1,19 @@
+{
+  "id": "md",
+  "name": "Moldova",
+  "flag": "🇲🇩",
+  "region": "cee",
+  "lat": 47.4,
+  "lon": 28.4,
+  "cost": 1,
+  "best": [5,6,9,10],
+  "temps": [1,3,9,16,22,26,28,28,22,15,8,2],
+  "currency": "Leu (MDL)",
+  "language": "Romanian",
+  "blurb": "Vast wine cellars and rural monasteries.",
+  "cities": [
+    ["Chișinău & wine country","03422123",1,"Underground wine cities at Mileștii Mici and Cricova."],
+    ["Orheiul Vechi","03240213",1,"A cave monastery above a river gorge."],
+    ["Struve Geodetic Arc (Moldova)","02010101",1,"An arc survey point near Soroca on the Dniester.",null,{"temps":[0,2,8,16,22,26,28,27,22,14,7,1]}]
+  ]
+}

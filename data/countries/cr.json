@@ -1,0 +1,26 @@
+{
+  "id": "cr",
+  "name": "Costa Rica",
+  "flag": "🇨🇷",
+  "region": "cac",
+  "lat": 9.7,
+  "lon": -83.8,
+  "cost": 3,
+  "best": [12,1,2,3,4],
+  "temps": [28,29,30,30,29,28,28,28,29,28,27,27],
+  "currency": "Colón (CRC)",
+  "language": "Spanish",
+  "blurb": "Rainforests, volcanoes, sloths and eco-adventure.",
+  "cities": [
+    ["Arenal & La Fortuna","01251504",3,"Volcano views, hot springs and ziplines."],
+    ["Manuel Antonio","50352414",3,"Beaches inside a wildlife-filled national park."],
+    ["Monteverde","01250513",2,"Cloud forest hanging bridges and night walks."],
+    ["Tamarindo","51334414",3,"A surf beach town on the Pacific."],
+    ["Tortuguero","10250404",2,"Jungle canals and nesting sea turtles.",[7,8,9,10]],
+    ["San José","03423132",2,"Museums of pre-Columbian gold and jade."],
+    ["Guanacaste Conservation Area","21150404",2,"Dry forest, volcanoes and nesting turtles in northwest Costa Rica.",null,{"temps":[28,29,30,30,28,28,28,29,27,27,27,28]}],
+    ["Cocos Island","10050500",2,"A remote Pacific island where divers swim with schools of hammerheads.",null,{"temps":[28,29,29,29,29,28,28,28,28,27,27,28]}],
+    ["Diquís Stone Spheres","23020102",1,"Mysterious stone spheres carved by pre-Columbian chiefdoms.",null,{"temps":[34,34,34,35,33,32,32,32,32,32,32,32]}],
+    ["La Amistad (Costa Rica)","01050501",1,"Cloud forests and páramo in Central America's largest reserve.",null,{"temps":[34,34,34,35,33,32,32,32,32,32,32,32]}]
+  ]
+}

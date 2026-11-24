@@ -1,0 +1,21 @@
+{
+  "id": "np",
+  "name": "Nepal",
+  "flag": "🇳🇵",
+  "region": "sas",
+  "lat": 28.4,
+  "lon": 84.1,
+  "cost": 1,
+  "best": [3,4,10,11],
+  "temps": [19,21,25,28,29,29,28,28,28,26,23,20],
+  "currency": "Rupee (NPR)",
+  "language": "Nepali",
+  "blurb": "Himalayan treks, Buddhist stupas and mountain villages.",
+  "cities": [
+    ["Kathmandu","05322241",3,"Ancient temples, stupas and trekking supply shops."],
+    ["Pokhara","01352514",3,"Lakeside base for Annapurna treks and paragliding."],
+    ["Chitwan","01250413",2,"Jungle safaris for rhinos and tigers.",[10,11,12,1,2,3]],
+    ["Everest region (Lukla)","02150501",3,"The trek to Everest Base Camp.",[3,4,5,10,11]],
+    ["Lumbini","05010113",3,"The birthplace of the Buddha, with the Maya Devi Temple and monasteries from many nations.",null,{"temps":[20,25,31,36,37,36,34,34,33,33,29,24]}]
+  ]
+}

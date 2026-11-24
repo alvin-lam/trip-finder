@@ -1,0 +1,20 @@
+{
+  "id": "nu",
+  "kind": "territory",
+  "sovereign": "nz",
+  "status": "Self-governing state in free association with New Zealand",
+  "of": "nz",
+  "maxDays": 6,
+  "name": "Niue",
+  "flag": "🇳🇺",
+  "region": "oce",
+  "lat": -19.06,
+  "lon": -169.92,
+  "cost": 4,
+  "best": [5,6,7,8,9,10],
+  "temps": [30,31,31,30,29,28,28,27,28,28,29,30],
+  "currency": "Dollar (NZD)",
+  "language": "Niuean, English",
+  "blurb": "A raised coral island of sea caves, rock pools and humpback whales.",
+  "cities": [["Alofi","21230104",1,"The small capital and the reef-walk tide pools along the west coast."],["Togo Chasm","10040405",1,"A rainforest trail down ladders to a hidden sandy chasm."]]
+}

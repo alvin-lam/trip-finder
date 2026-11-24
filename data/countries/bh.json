@@ -1,0 +1,20 @@
+{
+  "id": "bh",
+  "name": "Bahrain",
+  "flag": "🇧🇭",
+  "region": "mena",
+  "lat": 26,
+  "lon": 50.5,
+  "cost": 3,
+  "best": [11,12,1,2,3],
+  "temps": [20,21,25,29,34,37,38,38,36,33,27,22],
+  "currency": "Dinar (BHD)",
+  "language": "Arabic",
+  "blurb": "Pearling heritage, forts and a Formula 1 circuit.",
+  "cities": [
+    ["Manama","23413242",1,"A pearling heritage trail, old forts and a lively food scene."],
+    ["Qal'at al-Bahrain","04120112",1,"A seaside fort on a site settled for 4,000 years."],
+    ["Dilmun Burial Mounds","04010101",1,"Thousands of Bronze Age burial mounds across the north of the island.",null,{"temps":[21,22,26,31,36,39,40,40,38,34,28,23]}],
+    ["Pearling Path, Muharraq","14310112",2,"Pearl merchants' houses and a walking trail through Muharraq's old town.",null,{"temps":[21,22,26,31,36,39,40,40,38,34,28,23]}]
+  ]
+}

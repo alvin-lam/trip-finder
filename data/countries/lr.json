@@ -1,0 +1,15 @@
+{
+  "id": "lr",
+  "name": "Liberia",
+  "flag": "🇱🇷",
+  "region": "ssa",
+  "lat": 6.75,
+  "lon": -11.4,
+  "cost": 2,
+  "best": [11,12,1,2,3,4],
+  "temps": [30,30,31,31,30,28,27,27,28,29,29,29],
+  "currency": "Dollar (LRD)",
+  "language": "English",
+  "blurb": "Surf beaches and rainforest.",
+  "cities": [["Robertsport","50240414",1,"A remote surf town on palm-fringed beaches."],["Monrovia","13322232",1,"A seaside capital and its beaches."]]
+}

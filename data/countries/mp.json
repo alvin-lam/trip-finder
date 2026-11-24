@@ -1,0 +1,20 @@
+{
+  "id": "mp",
+  "kind": "territory",
+  "sovereign": "us",
+  "status": "Commonwealth in political union with the United States",
+  "of": "gu",
+  "maxDays": 6,
+  "name": "Northern Mariana Islands",
+  "flag": "🇲🇵",
+  "region": "oce",
+  "lat": 15.185,
+  "lon": 145.746,
+  "cost": 4,
+  "best": [1,2,3,4,5],
+  "temps": [30,30,30,31,31,32,32,32,32,32,32,31],
+  "currency": "US dollar (USD)",
+  "language": "English, Chamorro, Carolinian",
+  "blurb": "Pacific islands of WWII sites, clear lagoons and the Grotto dive.",
+  "cities": [["Saipan","42230322",2,"Managaha Island's lagoon, the Grotto dive site and the WWII Banzai and Suicide cliffs."],["Tinian","21130204",1,"A quiet island with the WWII airfield where the atomic bomb missions began."],["Rota","31040205",1,"The least developed island, with swimming holes, latte stones and empty roads."]]
+}

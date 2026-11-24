@@ -1,0 +1,21 @@
+{
+  "id": "by",
+  "name": "Belarus",
+  "flag": "🇧🇾",
+  "region": "cee",
+  "lat": 53.7,
+  "lon": 28,
+  "cost": 1,
+  "best": [5,6,7,8,9],
+  "temps": [-3,-3,3,12,18,21,23,22,16,10,3,-2],
+  "currency": "Ruble (BYN)",
+  "language": "Belarusian, Russian",
+  "blurb": "Primeval forests and Soviet-era boulevards.",
+  "cities": [
+    ["Minsk","03322132",1,"Grand Stalinist avenues and green parks."],
+    ["Białowieża Forest","00250303",1,"Primeval forest home to European bison."],
+    ["Mir & Nesvizh castles","05221113",1,"Two fairy-tale castles a short drive apart."],
+    ["Nesvizh Palace","05110112",2,"The Radziwiłł family's lakeside palace and park.",null,{"temps":[-2,-1,4,13,19,22,24,24,18,10,4,-1]}],
+    ["Struve Geodetic Arc (Belarus)","02010101",1,"Survey points of the 19th-century arc that measured the shape of the Earth.",null,{"temps":[-1,0,5,13,19,22,24,24,18,11,5,0]}]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ml",
+  "name": "Mali",
+  "flag": "🇲🇱",
+  "region": "ssa",
+  "lat": 13.9,
+  "lon": -4.6,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [31,34,37,40,41,39,34,32,34,36,35,32],
+  "currency": "CFA franc (XOF)",
+  "language": "French, Bambara",
+  "blurb": "Mud-brick mosques and legendary desert towns.",
+  "cities": [
+    ["Djenné","05210111",1,"The world's largest mud-brick mosque."],
+    ["Timbuktu","05110101",1,"A legendary desert city of mud-brick mosques."],
+    ["Bandiagara Cliffs","04030401",1,"Dogon villages and granaries built along a 150-kilometre sandstone cliff.",null,{"temps":[32,35,39,41,41,39,35,33,34,36,36,33]}],
+    ["Tomb of Askia","04010101",1,"A pyramid-shaped mud-brick tomb of the Songhai emperor in Gao.",null,{"temps":[31,34,37,41,42,42,38,37,38,39,36,31]}]
+  ]
+}

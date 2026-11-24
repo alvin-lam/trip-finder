@@ -1,0 +1,28 @@
+{
+  "id": "fi",
+  "name": "Finland",
+  "flag": "🇫🇮",
+  "region": "wne",
+  "lat": 61.9,
+  "lon": 25.7,
+  "cost": 4,
+  "best": [1,2,3,6,7,8,12],
+  "temps": [-3,-4,0,6,14,19,22,20,15,8,3,-1],
+  "currency": "Euro (EUR)",
+  "language": "Finnish, Swedish",
+  "blurb": "Saunas, lakes, design and Lapland's snowy wilds.",
+  "cities": [
+    ["Helsinki","13433234",3,"Seaside design capital with public saunas."],
+    ["Rovaniemi","01251514",3,"Santa Claus Village, husky rides and northern lights.",[12,1,2,3]],
+    ["Turku","03322133",1,"Finland's oldest city with a riverside castle."],
+    ["Lakeland (Savonlinna)","11241315",1,"Lakes, lakeside saunas and an opera festival in a castle.",[6,7,8]],
+    ["Alvar Aalto's Works","04110112",2,"Modernist buildings by Finland's great architect.",null,{"temps":[-1,-1,2,8,15,19,22,20,15,9,4,1]}],
+    ["Sammallahdenmäki","02020201",1,"Bronze Age stone burial cairns in the forest.",null,{"temps":[-1,-1,2,9,15,19,22,21,15,8,3,0]}],
+    ["Suomenlinna","24220214",4,"A sea fortress on islands off Helsinki.",null,{"temps":[-1,-1,2,8,15,19,22,20,15,9,4,1]}],
+    ["Kvarken Archipelago","01050314",1,"Rising land and islands in the Gulf of Bothnia.",null,{"temps":[-2,-2,1,7,14,18,21,20,14,8,2,0]}],
+    ["Old Rauma","24320113",2,"Wooden houses and lace-making in a Nordic old town.",null,{"temps":[-1,-1,2,9,15,19,22,21,15,8,3,0]}],
+    ["Petäjävesi Old Church","03010102",1,"A wooden church built by a local master.",null,{"temps":[-4,-4,1,8,15,19,22,20,14,6,1,-2]}],
+    ["Struve Geodetic Arc (Finland)","02010101",1,"Survey points of the arc in Finnish Lapland.",null,{"temps":[-8,-8,-4,1,6,12,16,14,9,2,-3,-6]}],
+    ["Verla Mill","02010102",1,"A preserved wood-processing mill in Kymenlaakso.",null,{"temps":[-3,-3,1,8,16,20,23,21,15,8,2,-1]}]
+  ]
+}

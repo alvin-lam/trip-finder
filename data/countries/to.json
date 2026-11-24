@@ -1,0 +1,15 @@
+{
+  "id": "to",
+  "name": "Tonga",
+  "flag": "🇹🇴",
+  "region": "oce",
+  "lat": -18.65,
+  "lon": -173.98,
+  "cost": 3,
+  "best": [7,8,9,10],
+  "temps": [29,29,29,28,26,25,24,24,25,26,27,28],
+  "currency": "Paʻanga (TOP)",
+  "language": "Tongan, English",
+  "blurb": "Swim with humpback whales in a Polynesian kingdom.",
+  "cities": [["Vavaʻu","40250405",1,"Swimming with humpback whales and sheltered sailing."],["Tongatapu","33231214",1,"Royal tombs, blowholes and Sunday church choirs."]]
+}

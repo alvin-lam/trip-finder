@@ -1,0 +1,26 @@
+{
+  "id": "cu",
+  "name": "Cuba",
+  "flag": "🇨🇺",
+  "region": "cac",
+  "lat": 21.5,
+  "lon": -77.8,
+  "cost": 2,
+  "best": [12,1,2,3,4],
+  "temps": [26,27,28,29,30,31,32,32,31,29,28,27],
+  "currency": "Peso (CUP)",
+  "language": "Spanish",
+  "blurb": "Vintage cars, salsa, cigars and colonial streets.",
+  "cities": [
+    ["Havana","25315122",4,"Classic cars, live music and crumbling grandeur."],
+    ["Trinidad","24333224",2,"Pastel colonial town near beaches and waterfalls."],
+    ["Viñales","02351404",2,"Tobacco farms and limestone valleys."],
+    ["Varadero","51332315",3,"A long, white beach resort strip."],
+    ["Cienfuegos","24321123",1,"An elegant French-founded bayside city."],
+    ["Alejandro de Humboldt National Park","11050402",1,"Rainforest and rivers with some of the Caribbean's richest wildlife.",null,{"temps":[28,28,29,30,30,32,32,32,32,31,29,28]}],
+    ["First Coffee Plantations of Cuba","03030201",1,"Ruins of French coffee plantations in the Sierra Maestra.",null,{"temps":[28,28,28,28,28,29,31,31,31,30,30,30]}],
+    ["Desembarco del Granma","21050302",1,"Marine terraces and cliffs where Fidel Castro's revolutionaries landed.",null,{"temps":[28,28,28,28,28,29,31,31,31,30,30,30]}],
+    ["Camagüey","04320122",2,"A maze of plazas and alleys with giant clay jars in every courtyard.",null,{"temps":[27,28,30,32,32,32,33,33,32,31,29,28]}],
+    ["San Pedro de la Roca Castle","04020112",2,"A clifftop fortress guarding Santiago de Cuba's bay.",null,{"temps":[28,28,28,28,28,29,31,31,31,30,30,30]}]
+  ]
+}

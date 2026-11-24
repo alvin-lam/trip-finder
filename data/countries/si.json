@@ -1,0 +1,23 @@
+{
+  "id": "si",
+  "name": "Slovenia",
+  "flag": "🇸🇮",
+  "region": "cee",
+  "lat": 46.2,
+  "lon": 14.9,
+  "cost": 3,
+  "best": [5,6,7,8,9],
+  "temps": [3,6,11,16,21,24,27,26,21,15,8,4],
+  "currency": "Euro (EUR)",
+  "language": "Slovene",
+  "blurb": "Alpine lakes, emerald rivers and a charming green capital.",
+  "cities": [
+    ["Ljubljana","03433224",2,"Car-free riverside capital with great food markets."],
+    ["Lake Bled","02251415",3,"Island church, castle views and rowing on the lake."],
+    ["Piran","33331224",2,"A Venetian-style harbour town on the Adriatic."],
+    ["Soča Valley","01251503",2,"An emerald river for rafting and hiking.",[5,6,7,8,9]],
+    ["Idrija Mercury Mine","02030211",1,"Mercury mines and lace-making in a mountain town.",null,{"temps":[4,7,12,17,22,26,28,28,22,16,10,4]}],
+    ["Ljubljana Marshes Pile Dwellings","02030112",1,"Prehistoric lakeside settlements near Ljubljana.",null,{"temps":[4,7,12,17,22,26,28,28,22,16,10,4]}],
+    ["Škocjan Caves","01050412",4,"An underground canyon with a bridge high above a roaring river.",null,{"temps":[4,6,10,15,19,24,26,26,20,15,10,5]}]
+  ]
+}

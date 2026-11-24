@@ -1,0 +1,24 @@
+{
+  "id": "om",
+  "name": "Oman",
+  "flag": "🇴🇲",
+  "region": "mena",
+  "lat": 21.5,
+  "lon": 57,
+  "cost": 3,
+  "best": [11,12,1,2,3],
+  "temps": [25,26,29,34,38,40,38,36,35,34,30,26],
+  "currency": "Rial (OMR)",
+  "language": "Arabic",
+  "blurb": "Fjords, wadis, forts and a gracious welcome.",
+  "cities": [
+    ["Muscat","34332234",3,"A grand mosque, a seafront corniche and Mutrah souq."],
+    ["Wadi Shab & Sur","20250404",2,"Turquoise pools and canyon swims."],
+    ["Nizwa","04321213",2,"A fort, a souq and mountain villages nearby."],
+    ["Salalah","41250314",1,"Monsoon-green hills and frankincense trees.",[7,8,9,10]],
+    ["Aflaj Irrigation Systems","03040212",1,"Ancient channels that still carry water to Oman's date-palm villages.",null,{"temps":[26,29,33,37,41,43,43,42,40,36,31,28]}],
+    ["Qalhat","24010112",1,"A medieval port visited by Ibn Battuta, with the domed tomb of Bibi Maryam.",null,{"temps":[26,28,32,37,41,42,41,40,39,36,31,27]}],
+    ["Bat, Al-Khutm & Al-Ayn","03030201",1,"Beehive-shaped Bronze Age tombs lined up along a rocky ridge.",null,{"temps":[26,29,32,38,42,45,45,44,42,38,32,28]}],
+    ["Bahla Fort","05030212",2,"A vast mud-brick fort and walled oasis town below the Jebel Akhdar.",null,{"temps":[26,28,32,36,40,43,42,41,39,36,31,27]}]
+  ]
+}

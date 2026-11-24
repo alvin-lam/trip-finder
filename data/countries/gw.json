@@ -1,0 +1,18 @@
+{
+  "id": "gw",
+  "name": "Guinea-Bissau",
+  "flag": "🇬🇼",
+  "region": "ssa",
+  "lat": 11.8,
+  "lon": -15.2,
+  "cost": 2,
+  "best": [12,1,2,3,4],
+  "temps": [31,32,33,33,32,30,29,29,30,31,31,30],
+  "currency": "CFA franc (XOF)",
+  "language": "Portuguese",
+  "blurb": "The remote and wildlife-rich Bijagós archipelago.",
+  "cities": [
+    ["Bissau","03322131",1,"A small, faded colonial capital with lively music."],
+    ["Bijagós Archipelago","31150405",1,"Mangrove islands where hippos swim in salt water and sea turtles nest.",null,{"temps":[32,35,36,35,35,33,31,30,31,32,33,33]}]
+  ]
+}

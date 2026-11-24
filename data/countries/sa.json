@@ -1,0 +1,24 @@
+{
+  "id": "sa",
+  "name": "Saudi Arabia",
+  "flag": "🇸🇦",
+  "region": "mena",
+  "lat": 23.9,
+  "lon": 45.1,
+  "cost": 4,
+  "best": [11,12,1,2,3],
+  "temps": [20,23,27,33,38,42,43,43,40,34,27,22],
+  "currency": "Riyal (SAR)",
+  "language": "Arabic",
+  "blurb": "Desert canyons, Nabataean tombs and new megaprojects.",
+  "cities": [
+    ["AlUla","04150413",3,"Tombs carved into sandstone at Hegra."],
+    ["Riyadh","03413141",2,"Mud-brick Diriyah and modern malls."],
+    ["Jeddah","34423242",2,"Coral-stone houses in the historic Al-Balad district."],
+    ["'Uruq Bani Mu'arid","00050401",1,"Red dunes of the Empty Quarter with Arabian oryx.",null,{"temps":[27,31,34,38,41,43,43,43,41,36,31,28]}],
+    ["Al-Ahsa Oasis","03240213",2,"Date palms, springs and caves in a vast oasis.",null,{"temps":[21,24,29,35,42,44,46,45,42,38,30,23]}],
+    ["Hail Rock Art","02030301",1,"Thousands of petroglyphs at Jubbah and Shuwaymis.",null,{"temps":[18,20,24,30,35,39,40,40,38,33,24,20]}],
+    ["Al-Faw","02020201",1,"A pre-Islamic caravan city on the edge of the Empty Quarter.",null,{"temps":[20,24,28,34,39,43,43,44,40,35,28,22]}],
+    ["Ḥimā Cultural Area","02030301",1,"Ancient wells and rock art on a desert caravan route.",null,{"temps":[26,29,32,35,38,39,40,40,37,33,29,26]}]
+  ]
+}

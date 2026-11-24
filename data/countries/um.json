@@ -1,0 +1,23 @@
+{
+  "id": "um",
+  "kind": "territory",
+  "sovereign": "us",
+  "status": "Uninhabited US island territories, closed to tourists",
+  "of": "us",
+  "maxDays": 3,
+  "name": "US Minor Outlying Islands",
+  "flag": "🇺🇲",
+  "region": "oce",
+  "lat": 28.21,
+  "lon": -177.38,
+  "cost": 5,
+  "best": [4,5,6,7,8,9,10],
+  "temps": [23,22,23,24,25,27,29,29,29,28,26,25],
+  "currency": "US dollar (USD)",
+  "language": "English",
+  "blurb": "Remote Pacific atolls of seabirds and WWII history, reached only by research or military flights.",
+  "cities": [
+    ["Midway Atoll","11050000",1,"A wildlife refuge of albatross colonies and the site of the 1942 Battle of Midway."],
+    ["Wake Island","01030000",1,"A military airfield atoll with WWII ruins, closed to visitors.",null,{"temps":[29,28,28,29,30,31,31,31,31,31,30,29]}]
+  ]
+}

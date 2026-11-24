@@ -1,0 +1,25 @@
+{
+  "id": "nz",
+  "name": "New Zealand",
+  "flag": "🇳🇿",
+  "region": "oce",
+  "lat": -40.9,
+  "lon": 174.9,
+  "cost": 4,
+  "best": [11,12,1,2,3,4],
+  "temps": [24,24,23,21,18,16,15,15,17,18,20,22],
+  "currency": "Dollar (NZD)",
+  "language": "English, Māori",
+  "blurb": "Fjords, glaciers, geothermal wonders and adrenaline sports.",
+  "cities": [
+    ["Queenstown","01454523",4,"Bungee, ski slopes and lakeside wine.",[1,2,3,7,8,12]],
+    ["Auckland","33433342",3,"Harbour city of volcanoes and island day trips."],
+    ["Rotorua","04341414",3,"Geysers, mud pools and Māori culture."],
+    ["Milford Sound","00150403",3,"Dramatic fjord cruises in Fiordland."],
+    ["Wellington","03433233",3,"A compact capital of cafés and the Te Papa museum."],
+    ["Bay of Islands","42341415",3,"Sailing, dolphins and Waitangi history."],
+    ["Franz Josef Glacier","00150502",2,"Glacier hikes on the wild West Coast."],
+    ["New Zealand Subantarctic Islands","00050400",1,"Remote islands of albatrosses, sea lions and giant megaherbs, reached by expedition ship.",null,{"temps":[19,19,18,15,12,10,10,11,13,14,16,18]}],
+    ["Tongariro National Park","01050513",4,"Volcanic peaks, emerald crater lakes and New Zealand's best day hike, the Alpine Crossing.",null,{"temps":[20,20,18,15,12,9,8,9,11,13,16,18]}]
+  ]
+}

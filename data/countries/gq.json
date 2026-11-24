@@ -1,0 +1,15 @@
+{
+  "id": "gq",
+  "name": "Equatorial Guinea",
+  "flag": "🇬🇶",
+  "region": "ssa",
+  "lat": 3.75,
+  "lon": 8.8,
+  "cost": 4,
+  "best": [12,1,2],
+  "temps": [31,31,31,31,30,29,28,28,29,29,30,30],
+  "currency": "CFA franc (XAF)",
+  "language": "Spanish, French",
+  "blurb": "Volcanic Bioko Island and its rainforest.",
+  "cities": [["Malabo & Bioko","21241312",1,"A Spanish-colonial capital and turtle-nesting beaches."],["Monte Alén National Park","00250402",1,"Mainland rainforest with gorillas and elephants."]]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ye",
+  "name": "Yemen",
+  "flag": "🇾🇪",
+  "region": "mena",
+  "lat": 15.6,
+  "lon": 48.5,
+  "cost": 1,
+  "best": [10,11,12,1,2,3],
+  "temps": [25,26,28,30,32,33,33,33,32,29,27,25],
+  "currency": "Rial (YER)",
+  "language": "Arabic",
+  "blurb": "Ancient mud-brick towns and the otherworldly island of Socotra.",
+  "cities": [
+    ["Socotra","40150403",1,"Otherworldly dragon's blood trees and empty beaches."],
+    ["Shibam","05110101",1,"The 'Manhattan of the desert', a city of mud-brick towers."],
+    ["Zabid","04010101",1,"A medieval Islamic town of mosques and Koranic schools.",null,{"temps":[29,29,30,33,34,36,37,36,36,36,31,29]}],
+    ["Marib","04010201",1,"The temples and great dam of the ancient kingdom of Saba.",null,{"temps":[26,26,28,30,32,33,32,32,31,29,26,26]}],
+    ["Sana'a","05320132",2,"Tower houses of rammed earth decorated with white gypsum.",null,{"temps":[22,25,26,25,26,28,27,26,25,22,20,20]}]
+  ]
+}

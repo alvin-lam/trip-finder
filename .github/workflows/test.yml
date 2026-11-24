@@ -1,0 +1,24 @@
+# Runs on every push and pull request: checks that js/data.js and the generated pages
+# match data/, then runs the whole test suite.
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install development tools
+        run: if [ -f package-lock.json ]; then npm ci; fi
+      - name: Data and pages are up to date
+        run: |
+          node tools/build-data.js --check
+          node tools/build-pages.js --check
+      - name: Tests
+        run: npm test

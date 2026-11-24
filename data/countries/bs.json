@@ -1,0 +1,15 @@
+{
+  "id": "bs",
+  "name": "Bahamas",
+  "flag": "🇧🇸",
+  "region": "cac",
+  "lat": 25,
+  "lon": -77.4,
+  "cost": 5,
+  "best": [12,1,2,3,4,5],
+  "temps": [25,25,26,28,29,31,32,32,31,29,27,26],
+  "currency": "Dollar (BSD)",
+  "language": "English",
+  "blurb": "Seven hundred islands of pale-blue shallows.",
+  "cities": [["Nassau & Paradise Island","51334335",4,"Resorts, waterparks and a bustling harbour."],["Exumas","50240305",3,"Swimming pigs, sandbars and empty cays."],["Eleuthera","50240305",1,"Pink-sand beaches and quiet coves."]]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rw",
+  "name": "Rwanda",
+  "flag": "🇷🇼",
+  "region": "ssa",
+  "lat": -1.9,
+  "lon": 29.9,
+  "cost": 3,
+  "best": [1,2,6,7,8,9,12],
+  "temps": [27,27,26,26,25,26,26,27,27,26,26,26],
+  "currency": "Franc (RWF)",
+  "language": "Kinyarwanda, English, French",
+  "blurb": "The land of a thousand hills, gorillas and a clean, safe capital.",
+  "cities": [
+    ["Volcanoes National Park","00250402",3,"Mountain gorilla and golden monkey treks."],
+    ["Kigali","04423132",2,"A hilly, orderly capital with a moving genocide memorial."],
+    ["Nyungwe Forest","00250402",1,"Chimpanzees and a canopy walkway."],
+    ["Lake Kivu","31241315",1,"Lakeside towns and island boat trips."],
+    ["Rwanda Genocide Memorials","05000001",3,"Memorials at Kigali, Nyamata, Murambi and Bisesero.",null,{"temps":[28,28,27,26,26,27,27,28,28,27,26,27]}]
+  ]
+}

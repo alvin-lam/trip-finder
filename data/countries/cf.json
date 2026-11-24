@@ -1,0 +1,19 @@
+{
+  "id": "cf",
+  "name": "Central African Republic",
+  "flag": "🇨🇫",
+  "region": "ssa",
+  "lat": 2.9,
+  "lon": 16.3,
+  "cost": 2,
+  "best": [12,1,2,3],
+  "temps": [32,34,34,33,32,30,29,29,30,31,32,32],
+  "currency": "CFA franc (XAF)",
+  "language": "French, Sango",
+  "blurb": "Deep rainforest with forest elephants and gorillas.",
+  "cities": [
+    ["Dzanga-Sangha","00250402",1,"Forest elephants and western lowland gorillas."],
+    ["Bangui","02221110",1,"A riverside capital on the Ubangi."],
+    ["Manovo-Gounda St. Floris National Park","00050400",1,"Remote savanna and floodplains, rarely visited because of insecurity.",null,{"temps":[36,38,38,37,35,32,30,29,30,32,33,35]}]
+  ]
+}

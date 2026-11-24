@@ -1,0 +1,27 @@
+{
+  "id": "cl",
+  "name": "Chile",
+  "flag": "🇨🇱",
+  "region": "sam",
+  "lat": -35.7,
+  "lon": -71.5,
+  "cost": 3,
+  "best": [10,11,12,1,2,3],
+  "temps": [30,30,27,23,18,15,15,17,19,23,26,29],
+  "currency": "Peso (CLP)",
+  "language": "Spanish",
+  "blurb": "Driest desert to southern glaciers, with wine valleys in between.",
+  "cities": [
+    ["Santiago","04434242",3,"Andes backdrop, wine day trips and lively barrios."],
+    ["San Pedro de Atacama","02251503",3,"Salt flats, geysers and incredible stargazing."],
+    ["Torres del Paine","00250502",3,"Granite towers and the famous W Trek.",[11,12,1,2,3]],
+    ["Valparaíso","24434232",3,"Hillside street art, funiculars and a bohemian port."],
+    ["Easter Island","15250204",2,"Mysterious moai statues on a remote island."],
+    ["Pucón & the Lake District","11251414",2,"Volcano climbs, hot springs and lakes.",[11,12,1,2,3]],
+    ["Churches of Chiloé","14240213",2,"Wooden churches with shingled towers on misty Chiloé Island.",null,{"temps":[20,20,19,16,13,11,11,11,13,16,18,20]}],
+    ["Humberstone & Santa Laura","03020211",1,"Ghost towns of the saltpetre boom in the Atacama Desert.",null,{"temps":[32,32,32,31,30,28,29,30,31,31,32,32]}],
+    ["Qhapaq Ñan in Chile","03030301",1,"Inca road segments across the Atacama highlands.",null,{"temps":[28,28,27,25,22,19,19,22,23,26,27,28]}],
+    ["Chinchorro Mummies","04010101",1,"The world's oldest artificial mummies, displayed in museums near Arica.",null,{"temps":[24,24,23,20,19,17,16,17,17,18,20,22]}],
+    ["Sewell","03020211",1,"A mining town of colourful stairways on a steep Andean mountainside.",null,{"temps":[20,20,18,16,12,9,9,10,11,14,16,19]}]
+  ]
+}

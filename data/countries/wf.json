@@ -1,0 +1,20 @@
+{
+  "id": "wf",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas collectivity of France",
+  "of": "fj",
+  "maxDays": 6,
+  "name": "Wallis and Futuna",
+  "flag": "🇼🇫",
+  "region": "oce",
+  "lat": -13.28,
+  "lon": -176.18,
+  "cost": 4,
+  "best": [5,6,7,8,9,10],
+  "temps": [31,31,31,31,31,31,30,30,30,31,31,31],
+  "currency": "Franc (XPF)",
+  "language": "French, Wallisian, Futunan",
+  "blurb": "Remote Polynesian islands ruled by traditional kings, with crater lakes and stone churches.",
+  "cities": [["Wallis (Uvea)","23130204",1,"Lake Lalolalo in a crater, Tongan-era forts and the Mata-Utu cathedral."],["Futuna","13040204",1,"A rugged island of hot springs, churches and two kingdoms."]]
+}

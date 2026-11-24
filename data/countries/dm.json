@@ -1,0 +1,15 @@
+{
+  "id": "dm",
+  "name": "Dominica",
+  "flag": "🇩🇲",
+  "region": "cac",
+  "lat": 15.4,
+  "lon": -61.4,
+  "cost": 3,
+  "best": [1,2,3,4,5],
+  "temps": [29,29,30,31,31,32,31,32,32,31,30,29],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "A rainforest island of boiling lakes and hot springs.",
+  "cities": [["Morne Trois Pitons","10250503",1,"Hikes to a boiling lake and hidden waterfalls."],["Champagne Reef","40140404",1,"Snorkelling through volcanic bubbles."]]
+}

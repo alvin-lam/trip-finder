@@ -1,0 +1,15 @@
+{
+  "id": "gd",
+  "name": "Grenada",
+  "flag": "🇬🇩",
+  "region": "cac",
+  "lat": 12.1,
+  "lon": -61.7,
+  "cost": 3,
+  "best": [1,2,3,4,5],
+  "temps": [29,29,30,30,31,31,30,31,31,31,30,29],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "The Spice Isle: nutmeg, waterfalls and an underwater sculpture park.",
+  "cities": [["Grand Anse","51341315",2,"A long, calm beach near St George's harbour."],["Carriacou","50240305",1,"A sleepy sister island with empty beaches."]]
+}

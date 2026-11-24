@@ -1,0 +1,32 @@
+{
+  "id": "cz",
+  "name": "Czechia",
+  "flag": "🇨🇿",
+  "region": "cee",
+  "lat": 49.8,
+  "lon": 15.5,
+  "cost": 2,
+  "best": [4,5,6,9,10,12],
+  "temps": [1,3,8,14,19,22,24,24,19,13,6,2],
+  "currency": "Koruna (CZK)",
+  "language": "Czech",
+  "blurb": "Gothic spires, beer halls and castle towns at friendly prices.",
+  "cities": [
+    ["Prague","05425133",5,"Fairy-tale old town, castle views and beer halls."],
+    ["Český Krumlov","04331224",3,"A riverside castle town straight out of a storybook."],
+    ["Brno","03424132",1,"A student city with modernist villas and bars."],
+    ["Kutná Hora","04211013",2,"A bone chapel and a soaring Gothic cathedral."],
+    ["Jáchymov & the Ore Mountains (Czechia)","03020311",1,"Silver and uranium mining towns in the Ore Mountains.",null,{"temps":[1,2,7,13,17,21,23,22,17,11,5,1]}],
+    ["Kroměříž","04120113",2,"A bishops' palace with a Baroque flower garden and a picture gallery.",null,{"temps":[3,5,9,15,19,23,27,26,21,14,6,3]}],
+    ["Telč","04220113",3,"A Renaissance square of pastel-gabled houses.",null,{"temps":[2,5,10,16,19,24,26,26,20,14,8,4]}],
+    ["Holašovice","03120113",1,"A village of folk Baroque farmhouses around a green.",null,{"temps":[3,5,10,16,20,24,26,26,20,14,8,4]}],
+    ["Holy Trinity Column, Olomouc","05330122",2,"A towering Baroque column in a lively university city.",null,{"temps":[1,4,9,16,20,24,26,26,20,14,8,2]}],
+    ["Třebíč","04110112",1,"A Jewish quarter and a Romanesque basilica on the Jihlava river.",null,{"temps":[2,5,10,16,19,24,26,26,20,14,8,4]}],
+    ["Kladruby nad Labem","03030212",1,"The stud farm and landscape for breeding white carriage horses.",null,{"temps":[3,5,9,16,20,24,26,26,20,14,8,4]}],
+    ["Lednice–Valtice","04340223",3,"Château gardens, follies and wine cellars across a designed landscape.",null,{"temps":[2,4,10,16,20,24,26,26,20,14,8,3]}],
+    ["Litomyšl Castle","04110112",1,"A sgraffito-covered Renaissance castle in Smetana's hometown.",null,{"temps":[3,5,9,16,20,24,26,26,20,14,8,4]}],
+    ["Zelená Hora Church","04010101",1,"Santini's star-shaped pilgrimage church on a green hill.",null,{"temps":[2,5,10,16,19,24,26,26,20,14,8,4]}],
+    ["Karlovy Vary","03320125",4,"Colonnades, healing springs and grand spa hotels in a wooded valley.",null,{"temps":[1,2,7,13,17,21,23,22,17,11,5,1]}],
+    ["Žatec","03410112",1,"The hop-growing capital of Bohemia and its brewing heritage.",null,{"temps":[3,5,10,16,21,24,26,26,21,14,7,4]}]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ph",
+  "name": "Philippines",
+  "flag": "🇵🇭",
+  "region": "sea",
+  "lat": 12.9,
+  "lon": 121.8,
+  "cost": 1,
+  "best": [12,1,2,3,4],
+  "temps": [30,31,32,34,34,32,31,31,31,31,31,30],
+  "currency": "Peso (PHP)",
+  "language": "Filipino, English",
+  "blurb": "Over 7,000 islands of lagoons, reefs and white-sand beaches.",
+  "cities": [
+    ["El Nido, Palawan","51252505",3,"Hidden lagoons and limestone island-hopping."],
+    ["Siargao","51243504",2,"Laid-back surf island with palm-lined roads."],
+    ["Cebu","42343433",3,"Whale sharks, waterfalls and canyoneering."],
+    ["Boracay","51335325",4,"White Beach, sunsets and lively nights."],
+    ["Bohol","41250414",3,"The Chocolate Hills and tiny tarsiers."],
+    ["Banaue","04250412",2,"Ancient rice terraces carved into the mountains."],
+    ["Manila","04424242",3,"Spanish-era Intramuros and a huge food scene."],
+    ["Baroque Churches of the Philippines","05110112",2,"Earthquake Baroque churches, from Manila's San Agustín to Paoay's buttressed walls.",null,{"temps":[30,31,32,34,34,33,32,31,31,31,31,30]}],
+    ["Vigan","04420223",3,"Cobbled Calle Crisologo, Spanish colonial houses and horse-drawn kalesa rides.",null,{"temps":[30,31,32,33,33,32,31,31,31,31,32,31]}],
+    ["Mount Hamiguitan","01050401",1,"A Mindanao mountain of pygmy forest and Philippine eagles.",null,{"temps":[29,29,30,30,30,29,29,29,30,30,29,30]}],
+    ["Puerto Princesa Underground River","21050313",4,"Boat trips into a navigable cave river that flows straight to the sea.",null,{"temps":[31,31,32,33,33,32,32,32,32,32,31,31]}],
+    ["Tubbataha Reefs","50050505",2,"Remote coral atolls in the Sulu Sea, reached only by liveaboard dive boats.",null,{"temps":[27,27,27,28,29,29,28,28,28,28,28,27]}]
+  ]
+}

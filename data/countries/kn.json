@@ -1,0 +1,15 @@
+{
+  "id": "kn",
+  "name": "Saint Kitts and Nevis",
+  "flag": "🇰🇳",
+  "region": "cac",
+  "lat": 17.3,
+  "lon": -62.7,
+  "cost": 4,
+  "best": [12,1,2,3,4,5],
+  "temps": [28,28,28,29,30,31,31,31,31,30,29,28],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "Volcanic twin islands with a hilltop fortress.",
+  "cities": [["Basseterre & Brimstone Hill","33332314",1,"A hilltop fortress, a scenic railway and quiet beaches."],["Nevis","41241215",1,"A quiet volcanic island of plantation inns."]]
+}

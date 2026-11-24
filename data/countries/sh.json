@@ -1,0 +1,25 @@
+{
+  "id": "sh",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "of": "gb",
+  "maxDays": 10,
+  "name": "Saint Helena, Ascension and Tristan da Cunha",
+  "flag": "🇸🇭",
+  "region": "ssa",
+  "lat": -15.924,
+  "lon": -5.718,
+  "cost": 5,
+  "best": [11,12,1,2,3],
+  "temps": [26,27,28,27,26,25,24,23,23,23,23,24],
+  "currency": "Pound (SHP)",
+  "language": "English",
+  "blurb": "Remote South Atlantic islands: Napoleon's place of exile, turtle beaches and the world's most isolated settlement.",
+  "cities": [
+    ["Jamestown","03140202",1,"Saint Helena's capital in a steep valley, with Jacob's Ladder and Napoleon's Longwood House nearby."],
+    ["Ascension Island","20040302",1,"Volcanic cinder cones, green turtle nesting beaches and the cloud forest of Green Mountain.",null,{"temps":[28,29,30,30,30,29,28,27,27,27,27,28]}],
+    ["Tristan da Cunha","02050400",1,"The world's most remote inhabited island, reached only by a week-long sea voyage.",null,{"temps":[20,21,20,19,17,16,15,15,15,15,17,18]}],
+    ["Gough and Inaccessible Islands","00050500",1,"Remote South Atlantic islands of seabirds.",null,{"temps":[18,18,17,16,14,13,12,12,12,13,15,17]}]
+  ]
+}

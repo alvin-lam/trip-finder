@@ -1,0 +1,18 @@
+{
+  "id": "sg",
+  "kind": "microstate",
+  "status": "Sovereign city-state",
+  "maxDays": 5,
+  "name": "Singapore",
+  "flag": "🇸🇬",
+  "region": "sea",
+  "lat": 1.35,
+  "lon": 103.82,
+  "cost": 4,
+  "best": [2,3,4,6,7,8],
+  "temps": [30,31,32,32,32,31,31,31,31,31,31,30],
+  "currency": "Dollar (SGD)",
+  "language": "English, Malay, Mandarin, Tamil",
+  "blurb": "A garden city-state famous for hawker food and futuristic architecture.",
+  "cities": [["Marina Bay & City","14535253",5,"Hawker centres, Gardens by the Bay and a glittering skyline."],["Sentosa","51323324",4,"Resort island with beaches, theme parks and beach clubs."],["Chinatown & Little India","04434232",4,"Temples, hawker centres and heritage shophouses."],["Singapore Botanic Gardens","03140114",3,"A tropical garden with a celebrated orchid collection and lawns for picnics."],["Kampong Glam","04413142",3,"The Sultan Mosque, Haji Lane boutiques and Middle Eastern cafés."],["Orchard Road","01313152",3,"Singapore's main shopping street of malls and Christmas lights."],["Mandai Wildlife Reserve","01250213",4,"Singapore Zoo, the Night Safari and Bird Paradise in the rainforest."],["Pulau Ubin","12250304",2,"Bike around a rustic island of kampong villages and mangroves."],["East Coast Park & Katong","33532224",2,"Seaside cycling, Peranakan shophouses and laksa in Katong."],["Jewel Changi","01331152",3,"The airport's indoor rainforest and the world's tallest indoor waterfall."],["Jurong Lake Gardens","01240213",1,"Lakeside gardens, the Science Centre and the quieter green west."],["Gardens by the Bay","03242114",5,"The Supertree Grove light show and two giant cooled conservatories, the Flower Dome and Cloud Forest."],["Clarke Quay & the Singapore River","03415131",3,"Riverside bars, bumboat rides and dinner along the old godowns of the Singapore River."],["Civic District & Raffles Hotel","05310022",3,"The National Gallery, colonial landmarks, the Padang and a Singapore Sling at Raffles Hotel."],["Fort Canning Park","03130103",2,"A historic hilltop park with spice gardens, colonial relics and the photogenic tree tunnel."],["Tiong Bahru","03420123",2,"Art deco housing blocks, an old wet market and some of the city's best cafes and bakeries."],["Haw Par Villa","04110102",2,"A free, eccentric theme park of Chinese myth, with dioramas of the Ten Courts of Hell."],["Southern Islands (St John's & Kusu)","31040004",1,"Ferry-reached islands with lagoons, a turtle temple and quiet picnic beaches."],["Bukit Timah Nature Reserve","00050402",2,"Primary rainforest and steep trails to Singapore's highest hill."],["MacRitchie Reservoir & TreeTop Walk","00050403",3,"Forest boardwalks and a suspension bridge across the rainforest canopy."],["Southern Ridges & Henderson Waves","01140303",2,"A 10 km trail of forest walkways and a wave-shaped bridge linking hilltop parks."],["Sungei Buloh Wetland Reserve","00050304",2,"Mangrove boardwalks with monitor lizards, crocodiles and migratory birds."],["Coney Island","21040104",1,"A rustic island park of casuarina woods and quiet beaches, reached by bridge."]]
+}

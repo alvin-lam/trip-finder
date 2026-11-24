@@ -1,0 +1,24 @@
+{
+  "id": "sk",
+  "name": "Slovakia",
+  "flag": "🇸🇰",
+  "region": "cee",
+  "lat": 48.7,
+  "lon": 19.7,
+  "cost": 2,
+  "best": [5,6,7,8,9],
+  "temps": [2,4,10,16,21,24,27,27,21,15,8,3],
+  "currency": "Euro (EUR)",
+  "language": "Slovak",
+  "blurb": "Castles, High Tatras hikes and a compact capital.",
+  "cities": [
+    ["Bratislava","03323132",2,"A hilltop castle and old town on the Danube."],
+    ["High Tatras","01252513",2,"Alpine lakes and peaks in a compact range."],
+    ["Banská Štiavnica","04331123",1,"A hillside mining town of old silver wealth."],
+    ["Bardejov","04220113",2,"A Gothic and Renaissance town square.",null,{"temps":[0,2,8,14,18,22,24,24,19,13,7,1]}],
+    ["Slovak Karst Caves (Domica)","01040401",1,"Domica Cave and its underground river boat trips.",null,{"temps":[1,4,10,16,21,25,27,27,21,15,8,2]}],
+    ["Gerulata (Danube Limes)","03020111",1,"A Roman fort near Bratislava on the Danube.",null,{"temps":[3,6,11,18,22,26,28,28,22,16,9,4]}],
+    ["Vlkolínec","02130214",2,"A mountain village of log houses.",null,{"temps":[-1,1,6,12,16,20,22,22,17,12,6,0]}],
+    ["Wooden Churches of the Slovak Carpathians","03130213",1,"Wooden churches in the Carpathian valleys of eastern Slovakia.",null,{"temps":[1,4,10,16,21,25,27,27,21,15,8,2]}]
+  ]
+}

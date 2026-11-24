@@ -1,0 +1,15 @@
+{
+  "id": "tv",
+  "name": "Tuvalu",
+  "flag": "🇹🇻",
+  "region": "oce",
+  "lat": -8.5,
+  "lon": 179.2,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [31,31,31,31,31,31,31,31,31,31,31,31],
+  "currency": "Australian dollar (AUD)",
+  "language": "Tuvaluan, English",
+  "blurb": "One of the world's least-visited countries.",
+  "cities": [["Funafuti","40140105",1,"A slender atoll and a calm, protected lagoon."],["Funafuti Conservation Area","40150305",1,"Uninhabited islets and a protected lagoon."]]
+}

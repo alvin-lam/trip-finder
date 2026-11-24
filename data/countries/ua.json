@@ -1,0 +1,24 @@
+{
+  "id": "ua",
+  "name": "Ukraine",
+  "flag": "🇺🇦",
+  "region": "cee",
+  "lat": 49,
+  "lon": 31.2,
+  "cost": 1,
+  "best": [5,6,9],
+  "temps": [-2,0,6,14,21,24,27,26,20,13,5,0],
+  "currency": "Hryvnia (UAH)",
+  "language": "Ukrainian",
+  "blurb": "Golden-domed churches and coffee-house culture.",
+  "cities": [
+    ["Kyiv","05423142",3,"Golden domes, monasteries and a lively café scene."],
+    ["Lviv","05432133",3,"A coffee-house city with a cobbled historic centre."],
+    ["Odesa","33425232",2,"A Black Sea port of grand staircases and beaches."],
+    ["Carpathians","01251413",1,"Wooden churches and mountain hikes."],
+    ["Chersonesus","24020212",1,"Greek city ruins on the Crimean coast.",null,{"temps":[6,6,9,14,19,24,26,26,22,18,12,8]}],
+    ["Chernivtsi University","04320122",2,"A Moorish-style residence, now Chernivtsi University.",null,{"temps":[0,2,8,15,21,24,26,26,20,14,7,1]}],
+    ["Struve Geodetic Arc (Ukraine)","02020201",1,"Survey points of the arc in Khmelnytskyi.",null,{"temps":[-1,0,6,14,20,23,25,25,19,13,5,0]}],
+    ["Wooden Tserkvas (Ukraine)","03130213",1,"Wooden Carpathian churches with tiered domes.",null,{"temps":[1,3,8,15,20,24,26,26,20,14,7,2]}]
+  ]
+}

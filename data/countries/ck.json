@@ -1,0 +1,20 @@
+{
+  "id": "ck",
+  "kind": "territory",
+  "sovereign": "nz",
+  "status": "Self-governing, in free association with New Zealand",
+  "of": "nz",
+  "maxDays": 10,
+  "name": "Cook Islands",
+  "flag": "🇨🇰",
+  "region": "oce",
+  "lat": -21.24,
+  "lon": -159.78,
+  "cost": 4,
+  "best": [5,6,7,8,9,10],
+  "temps": [28,29,28,27,26,25,24,24,25,26,27,28],
+  "currency": "NZ dollar (NZD)",
+  "language": "English, Cook Islands Māori",
+  "blurb": "Laid-back South Pacific islands with warm local hospitality.",
+  "cities": [["Rarotonga","42342315",2,"A lagoon-ringed island with a cross-island hike and Sunday church singing."],["Aitutaki","50240305",2,"One of the Pacific's most beautiful lagoons."],["Atiu","20250304",1,"Caves, birds and a tiny coffee plantation."]]
+}

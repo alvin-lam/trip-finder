@@ -1,0 +1,19 @@
+{
+  "id": "tc",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "maxDays": 7,
+  "name": "Turks and Caicos",
+  "flag": "🇹🇨",
+  "region": "cac",
+  "lat": 21.69,
+  "lon": -71.8,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [27,28,28,29,30,31,32,32,32,31,30,28],
+  "currency": "US dollar (USD)",
+  "language": "English",
+  "blurb": "Low-lying islands with famously clear, shallow water.",
+  "cities": [["Grace Bay","50330315",3,"Powder-white sand on a calm, reef-protected bay."],["Middle Caicos","40250304",1,"Caves and empty beaches."]]
+}

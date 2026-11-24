@@ -1,0 +1,19 @@
+{
+  "id": "ky",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "maxDays": 7,
+  "name": "Cayman Islands",
+  "flag": "🇰🇾",
+  "region": "cac",
+  "lat": 19.31,
+  "lon": -81.25,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [28,29,29,30,31,32,32,32,32,31,30,29],
+  "currency": "Dollar (KYD)",
+  "language": "English",
+  "blurb": "Calm turquoise water, resort dining and snorkelling with stingrays.",
+  "cities": [["Seven Mile Beach","51433335",3,"A long, calm beach with resort dining and Stingray City trips."],["Cayman Brac","40250404",1,"Wall diving and limestone cliffs."]]
+}

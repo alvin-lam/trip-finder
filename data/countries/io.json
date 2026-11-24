@@ -1,0 +1,20 @@
+{
+  "id": "io",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory; the UK has agreed to transfer sovereignty to Mauritius",
+  "of": "mv",
+  "maxDays": 3,
+  "name": "British Indian Ocean Territory",
+  "flag": "🇮🇴",
+  "region": "ssa",
+  "lat": -5.3,
+  "lon": 71.9,
+  "cost": 5,
+  "best": [3,4,5,10,11],
+  "temps": [30,31,31,31,31,31,30,30,30,30,30,30],
+  "currency": "US dollar (USD)",
+  "language": "English",
+  "blurb": "The Chagos atolls: a vast marine reserve, open only to permitted yachts.",
+  "cities": [["Chagos Archipelago","50050004",1,"Uninhabited atolls such as Peros Banhos, visited by yachts with a permit."],["Diego Garcia","10020000",1,"A US-UK military base atoll, closed to visitors."]]
+}

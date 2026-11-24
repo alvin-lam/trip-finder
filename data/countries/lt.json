@@ -1,0 +1,23 @@
+{
+  "id": "lt",
+  "name": "Lithuania",
+  "flag": "🇱🇹",
+  "region": "cee",
+  "lat": 55.2,
+  "lon": 23.9,
+  "cost": 2,
+  "best": [5,6,7,8,9],
+  "temps": [-2,-1,4,12,18,21,23,22,17,10,3,-1],
+  "currency": "Euro (EUR)",
+  "language": "Lithuanian",
+  "blurb": "Baroque Vilnius, lakes and the Curonian Spit's dunes.",
+  "cities": [
+    ["Vilnius","04423133",3,"A baroque old town and bohemian quarters."],
+    ["Curonian Spit","40250315",2,"Towering dunes between a lagoon and the sea."],
+    ["Trakai","04241114",2,"An island castle on a lake."],
+    ["Kernavė","03030212",1,"Grassy hill forts in the first capital of Lithuania.",null,{"temps":[-2,0,4,13,18,22,24,23,17,10,4,0]}],
+    ["Kaunas","04320122",2,"Interwar Art Deco and modernist buildings of Lithuania's former capital.",null,{"temps":[-1,0,5,13,19,22,24,24,18,11,5,1]}],
+    ["Struve Geodetic Arc (Lithuania)","02010101",1,"An arc survey point near Vilnius, part of a 19th-century effort to measure the Earth.",null,{"temps":[-2,0,4,13,18,22,24,23,17,10,4,0]}],
+    ["Užupis","04313123",2,"A bohemian artists' quarter of Vilnius that declared itself a republic in 1997, with a playful constitution on the wall.",[5,6,7,8,9],{"temps":[-2,-1,4,12,18,21,23,22,17,10,3,-1]}]
+  ]
+}

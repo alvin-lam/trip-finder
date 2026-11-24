@@ -1,0 +1,20 @@
+{
+  "id": "ai",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "of": "sx",
+  "maxDays": 7,
+  "name": "Anguilla",
+  "flag": "🇦🇮",
+  "region": "cac",
+  "lat": 18.252,
+  "lon": -63.015,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [29,28,28,29,30,31,31,31,31,31,30,30],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "A flat coral island of quiet white-sand beaches, beach bars and luxury hideaways.",
+  "cities": [["Shoal Bay","50230315",3,"A long powder-white beach with reef snorkelling and laid-back beach bars."],["Meads Bay & West End","50330215",2,"Calm western bays lined by boutique resorts and sunset restaurants."],["The Valley","13210113",1,"The small capital, with the Heritage Museum and Wallblake House."]]
+}

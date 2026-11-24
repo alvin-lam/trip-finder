@@ -1,0 +1,15 @@
+{
+  "id": "xk",
+  "name": "Kosovo",
+  "flag": "🇽🇰",
+  "region": "cee",
+  "lat": 42.6,
+  "lon": 20.9,
+  "cost": 1,
+  "best": [5,6,9],
+  "temps": [3,5,11,16,21,25,28,28,23,17,10,4],
+  "currency": "Euro (EUR)",
+  "language": "Albanian, Serbian",
+  "blurb": "A young, welcoming country of monasteries and mountains.",
+  "cities": [["Prizren","04331123",1,"A stone bridge, mosques and a hilltop fortress."],["Pristina","02324131",1,"Café culture in one of Europe's youngest capitals."],["Peja & Rugova Valley","02251513",1,"A patriarchal monastery and a dramatic gorge."]]
+}

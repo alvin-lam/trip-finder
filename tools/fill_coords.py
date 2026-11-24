@@ -11,7 +11,7 @@ import json, math, re, subprocess, sys, time, urllib.parse
 
 LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 250
 TRIED = "tools/coords_tried.json"
-DATA = "js/data.js"
+DATA = "data/places/coords.json"  # then run npm run build
 # Countries large enough that a place can be far from the country's centre point.
 BIG = set("ru us ca cn au br in ar kz dz cd sa mx id ly sd ir mn pe td ne ao ml za co et bo mr eg tz ng ve pk na mz tr cl zm mm af ss so cf ua mg bw ke fr ye th es tm cm pg se uz ma iq py zw no jp de fi vn my nz it ph ec gb ki fm mh pf sb fj vu nc ck cv pt gl dk sj".split())
 
@@ -86,11 +86,9 @@ def main():
             ll = tried.get(t)
             if ll and km(ll, (p["lat"], p["lon"])) <= lim:
                 found[p["id"]] = [round(ll[0], 3), round(ll[1], 3)]; break
-    s = open(DATA, encoding="utf-8").read()
-    m = re.search(r"const COORDS = (\{.*?\});\n", s)
-    coords = json.loads(m.group(1)); coords.update(found)
-    s = s[:m.start(1)] + json.dumps(coords, separators=(",", ":"), ensure_ascii=False) + s[m.end(1):]
-    open(DATA, "w", encoding="utf-8").write(s)
+    coords = json.load(open(DATA, encoding="utf-8")); coords.update(found)
+    subprocess.run(["node", "-e", "const F=require('./tools/data-files.js');F.save('COORDS',JSON.parse(require('fs').readFileSync(0,'utf8')))"],
+                   input=json.dumps(dict(sorted(coords.items())), ensure_ascii=False), text=True, check=True)
     json.dump(dict(sorted(tried.items())), open(TRIED, "w"), ensure_ascii=False, indent=0)
     left = len(missing) - len(found)
     untried = sum(1 for ts in cands.values() if any(t not in tried for t in ts))

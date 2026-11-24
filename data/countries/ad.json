@@ -1,0 +1,24 @@
+{
+  "id": "ad",
+  "kind": "microstate",
+  "status": "Sovereign microstate",
+  "of": "es",
+  "maxDays": 5,
+  "name": "Andorra",
+  "flag": "🇦🇩",
+  "region": "seu",
+  "lat": 42.51,
+  "lon": 1.52,
+  "cost": 3,
+  "best": [1,2,3,7,8,9],
+  "temps": [6,7,10,12,16,21,24,24,20,15,9,6],
+  "currency": "Euro (EUR)",
+  "language": "Catalan",
+  "blurb": "A Pyrenean principality for skiing, hiking and duty-free shopping.",
+  "cities": [
+    ["Andorra la Vella","02332254",3,"Duty-free shopping street and the Caldea thermal spa."],
+    ["Grandvalira","00252513",3,"The Pyrenees' largest ski area, with mountain biking in summer."],
+    ["Vallnord","00242513",1,"Ski slopes in winter and a bike park in summer."],
+    ["Madriu-Perafita-Claror Valley","01050412",2,"A glacial valley of stone shepherd huts and high mountain trails above Andorra la Vella.",null,{"temps":[7,9,12,13,18,22,26,25,21,16,11,8]}]
+  ]
+}

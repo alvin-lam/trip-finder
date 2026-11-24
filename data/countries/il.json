@@ -1,0 +1,27 @@
+{
+  "id": "il",
+  "name": "Israel",
+  "flag": "🇮🇱",
+  "region": "mena",
+  "lat": 31.8,
+  "lon": 35,
+  "cost": 5,
+  "best": [3,4,5,10,11],
+  "temps": [17,18,20,24,27,29,31,31,30,27,23,19],
+  "currency": "Shekel (ILS)",
+  "language": "Hebrew, Arabic",
+  "blurb": "Holy sites, beach cities and desert landscapes.",
+  "cities": [
+    ["Jerusalem","05412132",5,"Sacred sites of three faiths inside the Old City walls."],
+    ["Tel Aviv","54525243",4,"Bauhaus streets, beaches and late nights."],
+    ["Eilat","41232414",2,"Red Sea reefs and desert hikes."],
+    ["Haifa","24332223",2,"Terraced gardens above a port city."],
+    ["Megiddo & the Biblical Tels","04020201",2,"Mounds of ancient cities, including Megiddo.",null,{"temps":[17,18,22,26,30,32,34,35,33,31,25,19]}],
+    ["Beit Guvrin Caves","03030211",2,"Thousands of caves carved into soft chalk, from bell caves to dovecotes.",null,{"temps":[17,19,22,27,31,33,34,35,33,30,25,20]}],
+    ["Avdat & the Incense Route","03030301",2,"Nabataean desert towns like Avdat on the ancient incense trade route.",null,{"temps":[17,18,20,26,29,31,33,33,31,28,24,19]}],
+    ["Masada","05030412",4,"Herod's fortress above the Dead Sea.",null,{"temps":[17,19,22,27,31,33,34,35,33,30,25,20]}],
+    ["Beit She'arim","04020101",1,"Catacombs of carved stone coffins.",null,{"temps":[18,19,21,24,26,30,32,32,30,28,24,20]}],
+    ["Old City of Acre","35530213",3,"A walled Crusader port with Ottoman inns and busy souks.",null,{"temps":[17,18,20,23,26,28,30,31,30,28,24,19]}],
+    ["Mount Carmel Caves","02030301",1,"Prehistoric caves of human evolution.",null,{"temps":[18,19,21,24,26,30,32,32,30,28,24,20]}]
+  ]
+}

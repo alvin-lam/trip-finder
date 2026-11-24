@@ -1,0 +1,31 @@
+{
+  "id": "ae",
+  "name": "United Arab Emirates",
+  "flag": "🇦🇪",
+  "region": "mena",
+  "lat": 23.4,
+  "lon": 53.8,
+  "cost": 4,
+  "best": [11,12,1,2,3],
+  "temps": [24,26,29,34,39,41,42,42,40,36,30,26],
+  "currency": "Dirham (AED)",
+  "language": "Arabic",
+  "blurb": "Record-breaking skylines, desert safaris and luxury beaches.",
+  "cities": [
+    ["Dubai","42415353",5,"Skyscrapers, mega-malls, beach clubs and desert safaris."],
+    ["Abu Dhabi","44413244",3,"Grand mosque, Louvre Abu Dhabi and calm beaches."],
+    ["Ras Al Khaimah","41241414",2,"Mountain zip lines and quieter beaches."],
+    ["Sharjah","04311121",1,"Museums and a restored heritage quarter."],
+    ["Al Ain","04230223",3,"Oasis palm groves, mud-brick forts and Bronze Age tombs on the edge of the desert.",null,{"temps":[25,28,31,37,42,45,45,45,42,38,31,27]}],
+    ["Faya Palaeolandscape","02030301",1,"Rock shelters in the Sharjah desert used by Stone Age people for 200,000 years.",null,{"temps":[25,26,30,35,40,42,43,43,41,37,31,27]}],
+    ["Wadi Wurayah","11050403",1,"Mountain pools and a rare waterfall in a protected wadi of the Hajar range.",null,{"temps":[29,30,34,41,43,44,43,44,42,39,34,30]}],
+    ["Ajman","41320124",2,"Quiet beaches, the Ajman Museum in an 18th-century fort and a growing marina.",null,{"temps":[23,25,28,32,36,39,40,40,38,35,30,25]}],
+    ["Umm Al Quwain","21240214",1,"Mangrove kayaking, an old fort and a laid-back lagoon town.",null,{"temps":[23,25,28,32,36,39,40,40,38,35,30,25]}],
+    ["Fujairah & the East Coast","42240314",2,"Fujairah Fort, the Al Bidya Mosque and snorkelling off Snoopy Island on the Gulf of Oman.",null,{"temps":[24,26,30,35,40,41,40,39,38,35,30,26]}],
+    ["Hatta","02140403",2,"A mountain exclave of Dubai with a dam lake for kayaking and a heritage village.",null,{"temps":[24,26,30,35,40,41,40,39,38,35,30,26]}],
+    ["Jebel Jais","00050502",3,"The UAE's highest peak, with a mountain road, viewing decks and the world's longest zipline.",null,{"temps":[14,15,17,22,26,28,28,27,26,24,20,16]}],
+    ["Liwa Oasis & the Empty Quarter","01250304",2,"Date-palm oases at the edge of the Empty Quarter, with the towering Moreeb Dune and desert camps.",null,{"temps":[25,28,32,38,43,45,46,45,42,37,31,26]}],
+    ["Sir Bani Yas Island","40040304",1,"An island wildlife reserve with cheetahs, giraffes and Arabian oryx, plus quiet beaches.",null,{"temps":[23,23,25,28,32,35,37,37,37,34,30,25]}],
+    ["Khor Fakkan","41240214",1,"A Gulf of Oman beach town with a waterfall, an old fort and a mountain road through the Hajar range.",null,{"temps":[23,25,29,34,39,40,39,38,37,35,29,25]}]
+  ]
+}

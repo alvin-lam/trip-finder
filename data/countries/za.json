@@ -1,0 +1,32 @@
+{
+  "id": "za",
+  "name": "South Africa",
+  "flag": "🇿🇦",
+  "region": "ssa",
+  "lat": -30.6,
+  "lon": 22.9,
+  "cost": 2,
+  "best": [2,3,4,9,10,11],
+  "temps": [26,27,25,23,20,18,18,18,19,21,24,25],
+  "currency": "Rand (ZAR)",
+  "language": "English and others",
+  "blurb": "Safari, winelands, coastal drives and a spectacular mother city.",
+  "cities": [
+    ["Cape Town","44554443",5,"Table Mountain, penguins, winelands and beaches."],
+    ["Greater Kruger","01350503",4,"Big Five safaris in private game reserves.",[5,6,7,8,9]],
+    ["Garden Route","41352414",3,"Coastal road trip through forests and lagoons."],
+    ["Johannesburg","04424142",2,"The Apartheid Museum and Maboneng's art scene."],
+    ["Drakensberg","02250403",2,"Dramatic peaks and ancient San rock art."],
+    ["Durban","43423323",2,"Warm Indian Ocean beaches and curry."],
+    ["Pretoria","04322132",1,"Jacaranda-lined streets and the Union Buildings.",[9,10,11,3,4]],
+    ["Barberton Makhonjwa","01040411",1,"Some of the oldest rocks on Earth, crossed by a geotrail.",null,{"temps":[29,29,28,27,25,23,23,25,27,27,27,28]}],
+    ["Cradle of Humankind","04040212",3,"Fossil caves near Johannesburg.",null,{"temps":[26,26,24,22,20,17,16,20,24,25,25,26]}],
+    ["Nelson Mandela Legacy Sites","05000111",3,"Sites of the struggle against apartheid.",null,{"temps":[29,29,28,25,23,21,20,24,27,29,29,29]}],
+    ["Mapungubwe","04040301",2,"A medieval kingdom with a golden rhinoceros found on a hilltop.",null,{"temps":[33,32,31,30,28,25,25,27,29,31,32,32]}],
+    ["Richtersveld","01050401",1,"A mountain desert of succulents and Nama herders.",null,{"temps":[30,30,29,25,21,17,17,18,21,24,26,28]}],
+    ["Pleistocene Sites (Blombos & Sibudu)","13030201",1,"Caves of modern human behaviour.",null,{"temps":[27,27,26,24,21,18,18,18,20,22,24,26]}],
+    ["Vredefort Dome","01030312",1,"The world's largest impact crater.",null,{"temps":[32,31,30,27,24,22,22,25,29,31,32,32]}],
+    ["ǂKhomani Cultural Landscape","01040401",1,"Red Kalahari dunes and the heritage of the ǂKhomani San.",null,{"temps":[36,36,34,29,26,22,22,24,28,31,33,36]}],
+    ["iSimangaliso Wetland Park","31150404",3,"Hippos and crocodiles in Lake St Lucia, turtle beaches and coral reefs in one coastal wetland.",null,{"temps":[29,29,29,27,25,23,22,24,24,25,26,28]}]
+  ]
+}

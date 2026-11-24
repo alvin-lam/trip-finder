@@ -1,0 +1,27 @@
+{
+  "id": "kz",
+  "name": "Kazakhstan",
+  "flag": "🇰🇿",
+  "region": "cas",
+  "lat": 43.2,
+  "lon": 76.9,
+  "cost": 2,
+  "best": [5,6,9],
+  "temps": [-5,-3,4,15,21,26,28,27,21,13,4,-2],
+  "currency": "Tenge (KZT)",
+  "language": "Kazakh, Russian",
+  "blurb": "Mountain lakes, canyons and modern steppe cities.",
+  "cities": [
+    ["Almaty","03443333",2,"A leafy city at the foot of the Tian Shan."],
+    ["Charyn Canyon","00150402",1,"A red rock canyon likened to a small Grand Canyon."],
+    ["Astana","03323242",1,"A futuristic capital on the steppe."],
+    ["Kolsai Lakes","00250413",1,"Spruce-ringed alpine lakes in the Tian Shan.",[6,7,8,9]],
+    ["Barsakelmes (Cold Winter Deserts)","00050301",1,"Desert reserve near the Aral Sea.",null,{"temps":[-7,-5,5,18,26,32,34,33,25,16,4,-4]}],
+    ["Turkistan (Yasawi Mausoleum)","05110112",3,"The great turquoise-domed Timurid mausoleum of Khoja Ahmed Yasawi.",null,{"temps":[2,5,14,22,29,35,36,35,29,21,10,3]}],
+    ["Tamgaly Petroglyphs","03030201",1,"Bronze Age rock carvings of sun-headed figures in a rocky gorge.",null,{"temps":[0,3,10,18,23,28,30,30,24,17,8,2]}],
+    ["Mangystau Rock Mosques","03040302",1,"Underground mosques in the desert.",null,{"temps":[2,4,10,17,24,29,32,31,25,18,9,4]}],
+    ["Saryarka","01050301",1,"Steppe grasslands and lakes where flamingos and saiga live.",null,{"temps":[-10,-9,-2,12,21,26,27,26,19,10,-1,-8]}],
+    ["Akyrtas (Silk Road)","03010201",1,"The ruins of an unfinished Silk Road palace on the Kyrgyz border.",null,{"temps":[2,4,11,19,25,31,33,32,26,18,9,4]}],
+    ["Aksu-Zhabagly","01050412",1,"Spring tulip fields, ibex and snow leopards in Central Asia's oldest reserve.",null,{"temps":[-11,-9,-4,1,5,9,11,10,7,1,-5,-9]}]
+  ]
+}

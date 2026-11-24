@@ -1,0 +1,15 @@
+{
+  "id": "bz",
+  "name": "Belize",
+  "flag": "🇧🇿",
+  "region": "cac",
+  "lat": 17.2,
+  "lon": -88.5,
+  "cost": 3,
+  "best": [12,1,2,3,4],
+  "temps": [28,28,29,31,32,32,32,32,32,30,29,28],
+  "currency": "Dollar (BZD)",
+  "language": "English, Spanish",
+  "blurb": "Barrier-reef diving, Maya temples and jungle lodges.",
+  "cities": [["Ambergris Caye","51343415",3,"Island diving on the barrier reef and the Great Blue Hole."],["San Ignacio","13341413",2,"A jungle base for Maya ruins and cave tubing."],["Placencia","51242325",2,"A laid-back beach village on a long peninsula."]]
+}

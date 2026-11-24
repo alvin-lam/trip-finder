@@ -1,0 +1,24 @@
+{
+  "id": "uz",
+  "name": "Uzbekistan",
+  "flag": "🇺🇿",
+  "region": "cas",
+  "lat": 41.4,
+  "lon": 64.6,
+  "cost": 1,
+  "best": [4,5,9,10],
+  "temps": [6,9,15,22,28,34,36,34,28,21,13,7],
+  "currency": "Som (UZS)",
+  "language": "Uzbek",
+  "blurb": "Turquoise domes and caravan towns of the Silk Road.",
+  "cities": [
+    ["Samarkand","05411142",4,"Registan Square's dazzling tiled madrasas."],
+    ["Bukhara","05411143",3,"A living museum of mosques, minarets and bazaars."],
+    ["Khiva","05311122",2,"A walled desert city frozen in time."],
+    ["Tashkent","03423142",2,"Grand metro stations, bazaars and Soviet modernism."],
+    ["Lower Amudarya (Cold Winter Deserts)","00050301",1,"Deserts and tugay forests of Karakalpakstan.",null,{"temps":[1,4,13,22,30,35,36,35,28,20,10,3]}],
+    ["Shakhrisyabz","04220112",2,"Timur's birthplace, with the ruins of his giant palace.",null,{"temps":[9,11,17,23,29,35,37,36,31,24,16,11]}],
+    ["Rabat-i Malik (Silk Roads)","03020111",1,"A caravanserai on the road to Bukhara.",null,{"temps":[7,10,17,24,30,35,36,35,30,23,15,9]}],
+    ["Chatkal (Western Tien-Shan)","01050413",1,"Mountain valleys near Tashkent.",null,{"temps":[-11,-9,-4,1,5,9,11,10,7,1,-5,-9]}]
+  ]
+}

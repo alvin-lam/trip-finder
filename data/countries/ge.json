@@ -1,0 +1,24 @@
+{
+  "id": "ge",
+  "name": "Georgia",
+  "flag": "🇬🇪",
+  "region": "cas",
+  "lat": 42.3,
+  "lon": 43.4,
+  "cost": 1,
+  "best": [5,6,9,10],
+  "temps": [7,9,14,19,24,28,31,31,26,20,13,8],
+  "currency": "Lari (GEL)",
+  "language": "Georgian",
+  "blurb": "Wine, feasts, cave towns and high Caucasus villages.",
+  "cities": [
+    ["Tbilisi","04524142",4,"Sulphur baths, a balconied old town and natural wine bars."],
+    ["Kazbegi","02251403",3,"A hilltop church beneath snowy Mount Kazbek."],
+    ["Batumi","33424323",2,"A Black Sea boulevard and botanical gardens.",[6,7,8,9]],
+    ["Svaneti","03251502",2,"Medieval defence towers in high Caucasus villages.",[6,7,8,9]],
+    ["Kakheti","03441214",2,"Wine country of monasteries and clay-pot wine."],
+    ["Colchic Rainforests","11050403",1,"Humid forests and wetlands near the Black Sea.",null,{"temps":[7,8,12,19,23,28,31,31,26,19,12,8]}],
+    ["Gelati Monastery","05020212",2,"A medieval monastery with golden mosaics near Kutaisi.",null,{"temps":[10,11,15,20,24,28,29,30,27,22,16,12]}],
+    ["Mtskheta","05120212",3,"Georgia's ancient capital with Svetitskhoveli and Jvari.",null,{"temps":[7,8,13,19,24,28,32,32,26,20,13,8]}]
+  ]
+}

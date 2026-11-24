@@ -1,0 +1,19 @@
+{
+  "id": "ss",
+  "name": "South Sudan",
+  "flag": "🇸🇸",
+  "region": "ssa",
+  "lat": 4.85,
+  "lon": 31.6,
+  "cost": 2,
+  "best": [12,1,2,3],
+  "temps": [36,37,37,35,33,31,30,30,31,32,34,35],
+  "currency": "Pound (SSP)",
+  "language": "English",
+  "blurb": "The world's youngest country, on the White Nile.",
+  "cities": [
+    ["Juba","02221110",1,"The capital of the world's youngest country, on the Nile."],
+    ["Boma National Park","00250402",1,"A vast antelope migration that few have seen."],
+    ["Boma-Badingilo","00050400",1,"Savanna with one of the world's largest antelope migrations.",null,{"temps":[37,39,38,36,34,32,31,31,32,32,34,36]}]
+  ]
+}

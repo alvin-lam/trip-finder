@@ -1,0 +1,30 @@
+{
+  "id": "dk",
+  "name": "Denmark",
+  "flag": "🇩🇰",
+  "region": "wne",
+  "lat": 56.3,
+  "lon": 9.5,
+  "cost": 5,
+  "best": [5,6,7,8,9],
+  "temps": [2,2,5,10,15,19,22,21,17,12,7,4],
+  "currency": "Krone (DKK)",
+  "language": "Danish",
+  "blurb": "Design, cycling cities and New Nordic food.",
+  "cities": [
+    ["Copenhagen","14534243",4,"Harbour swims, design shops and Tivoli Gardens."],
+    ["Aarhus","13423133",2,"A rooftop rainbow walkway and a relaxed student city."],
+    ["Skagen","41241314",2,"Where two seas meet, under famous northern light.",[5,6,7,8]],
+    ["Odense","03321123",1,"Hans Christian Andersen's hometown."],
+    ["Jelling","04020101",1,"Royal burial mounds and the runestones known as Denmark's birth certificate.",null,{"temps":[4,4,7,12,16,19,22,22,18,12,8,5]}],
+    ["Kronborg Castle","05120213",3,"Hamlet's castle, guarding the strait between Denmark and Sweden.",null,{"temps":[3,4,6,12,17,20,22,22,18,13,8,4]}],
+    ["Møns Klint","21050304",2,"White chalk cliffs 120 metres above the Baltic, with fossils on the beach.",null,{"temps":[3,4,6,12,17,20,22,22,18,13,8,4]}],
+    ["Roskilde Cathedral","04120112",2,"The burial church of Danish royalty, near the Viking Ship Museum.",null,{"temps":[3,3,6,11,16,19,22,21,17,12,7,4]}],
+    ["Stevns Klint","11040203",1,"Coastal cliffs that hold the boundary layer from the dinosaurs' extinction.",null,{"temps":[3,4,6,12,17,20,22,22,18,13,8,4]}],
+    ["Limfjord Fossil Cliffs","11040203",1,"Mo-clay cliffs on Mors and Fur rich in fossil fish and insects.",null,{"temps":[3,4,6,12,16,19,21,21,17,12,8,4]}],
+    ["North Zealand Hunting Forests","02140213",1,"Royal deer-hunting forests laid out in star-shaped trails.",null,{"temps":[3,4,6,12,17,20,22,22,18,13,8,4]}],
+    ["Viking Ring Fortresses","04020201",1,"Perfectly circular Viking fortresses, including Trelleborg.",null,{"temps":[3,4,6,12,16,19,21,21,17,12,8,4]}],
+    ["Wadden Sea (Denmark)","31050314",1,"Mudflats, oyster safaris and black sun starling flocks around Rømø.",null,{"temps":[4,4,7,12,16,18,20,21,17,12,8,5]}],
+    ["Freetown Christiania","03323133",3,"A car-free commune of handmade houses and lakeside paths in Copenhagen. Respect the no-photo areas.",[5,6,7,8,9],{"temps":[2,2,5,10,15,19,22,21,17,12,7,4]}]
+  ]
+}

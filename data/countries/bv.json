@@ -1,0 +1,20 @@
+{
+  "id": "bv",
+  "kind": "territory",
+  "sovereign": "no",
+  "status": "Uninhabited dependency of Norway",
+  "of": "no",
+  "maxDays": 2,
+  "name": "Bouvet Island",
+  "flag": "🇧🇻",
+  "region": "sam",
+  "lat": -54.42,
+  "lon": 3.36,
+  "cost": 5,
+  "best": [12,1,2],
+  "temps": [3,4,3,3,2,1,0,-1,-1,1,2,2],
+  "currency": "Krone (NOK)",
+  "language": "Norwegian",
+  "blurb": "The world's most remote island: an ice-capped volcano in the South Atlantic, rarely landed on.",
+  "cities": [["Bouvet Island","00050500",1,"Glaciers and seal colonies, seen from passing expedition ships."]]
+}

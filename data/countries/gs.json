@@ -1,0 +1,20 @@
+{
+  "id": "gs",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory, also claimed by Argentina",
+  "of": "fk",
+  "maxDays": 5,
+  "name": "South Georgia and the South Sandwich Islands",
+  "flag": "🇬🇸",
+  "region": "sam",
+  "lat": -54.281,
+  "lon": -36.508,
+  "cost": 5,
+  "best": [11,12,1,2,3],
+  "temps": [5,5,5,4,2,1,0,0,1,2,3,4],
+  "currency": "Pound (GBP)",
+  "language": "English",
+  "blurb": "Glaciers, king penguin colonies and Shackleton's grave, visited by expedition cruise.",
+  "cities": [["Grytviken","02050400",1,"An old whaling station with a museum, a church and Shackleton's grave."],["Salisbury Plain & St Andrews Bay","00050500",1,"Vast king penguin colonies beneath glaciers."]]
+}

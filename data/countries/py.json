@@ -1,0 +1,15 @@
+{
+  "id": "py",
+  "name": "Paraguay",
+  "flag": "🇵🇾",
+  "region": "sam",
+  "lat": -27.3,
+  "lon": -55.9,
+  "cost": 1,
+  "best": [4,5,6,7,8,9],
+  "temps": [34,33,32,28,25,22,22,24,27,29,31,33],
+  "currency": "Guaraní (PYG)",
+  "language": "Spanish, Guaraní",
+  "blurb": "Jesuit mission ruins and a laid-back river capital.",
+  "cities": [["Encarnación & the Jesuit missions","14231213",1,"Red-stone mission ruins and riverside beaches."],["Asunción","03322131",1,"A relaxed riverside capital."]]
+}

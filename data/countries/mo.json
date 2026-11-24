@@ -1,0 +1,20 @@
+{
+  "id": "mo",
+  "kind": "territory",
+  "sovereign": "cn",
+  "status": "Special administrative region of China",
+  "of": "hk",
+  "maxDays": 3,
+  "name": "Macau",
+  "flag": "🇲🇴",
+  "region": "eas",
+  "lat": 22.2,
+  "lon": 113.54,
+  "cost": 4,
+  "best": [10,11,12],
+  "temps": [18,18,21,25,28,31,32,32,31,28,24,20],
+  "currency": "Pataca (MOP)",
+  "language": "Cantonese, Portuguese",
+  "blurb": "Portuguese heritage meets Chinese temples and Las Vegas-style resorts.",
+  "cities": [["Macau","04515242",4,"Portuguese-Chinese old town, egg tarts and casino resorts."],["Taipa & Coloane","13421123",2,"Village lanes, Portuguese food and quiet beaches."],["Cotai Strip","01405253",3,"Mega-resorts, casinos, shows and luxury malls between Taipa and Coloane."],["Coloane Village","23430115",2,"Lord Stow's egg tarts, a little chapel and quiet seaside lanes."],["Hac Sa Beach","40331204",1,"A black-sand beach with Portuguese grill restaurants."],["Macau Tower & Nam Van","02323522",2,"The world's highest commercial bungee jump and lakeside views."],["Guia Fortress","04130103",1,"A hilltop fort, chapel and lighthouse with city views."]]
+}

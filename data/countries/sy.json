@@ -1,0 +1,22 @@
+{
+  "id": "sy",
+  "name": "Syria",
+  "flag": "🇸🇾",
+  "region": "mena",
+  "lat": 33.5,
+  "lon": 36.3,
+  "cost": 1,
+  "best": [4,5,10],
+  "temps": [12,14,18,23,28,32,35,35,32,27,19,13],
+  "currency": "Pound (SYP)",
+  "language": "Arabic",
+  "blurb": "Ancient cities with a long history of trade.",
+  "cities": [
+    ["Damascus","05411131",1,"One of the oldest continuously inhabited cities."],
+    ["Palmyra","05110101",1,"Ruins of a caravan city, badly damaged in the war."],
+    ["Aleppo","05310122",2,"An ancient citadel and covered souks, slowly recovering from war.",null,{"temps":[11,13,18,23,29,34,37,37,34,28,19,12]}],
+    ["Bosra","04020111",1,"A black basalt Roman theatre inside a fortress.",null,{"temps":[12,14,17,22,27,31,32,32,31,27,20,14]}],
+    ["Dead Cities of Northern Syria","03020301",1,"Abandoned Byzantine villages in limestone hills.",null,{"temps":[10,12,17,22,27,31,32,34,31,26,19,12]}],
+    ["Krak des Chevaliers","05020312",3,"The finest surviving Crusader castle.",null,{"temps":[11,13,17,22,27,31,32,33,31,27,19,12]}]
+  ]
+}

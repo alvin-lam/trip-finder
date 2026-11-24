@@ -1,0 +1,15 @@
+{
+  "id": "zm",
+  "name": "Zambia",
+  "flag": "🇿🇲",
+  "region": "ssa",
+  "lat": -13.1,
+  "lon": 27.8,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [26,26,26,26,25,23,23,26,29,31,29,27],
+  "currency": "Kwacha (ZMW)",
+  "language": "English",
+  "blurb": "Walking safaris and the thundering Victoria Falls.",
+  "cities": [["Livingstone & Victoria Falls","01250513",3,"Victoria Falls, white-water rafting and sunset cruises."],["South Luangwa","00250403",2,"The birthplace of the walking safari."],["Lower Zambezi","00250404",1,"Canoe safaris past hippos and elephants."],["Lusaka","02323131",1,"A busy capital and a base for safaris."]]
+}

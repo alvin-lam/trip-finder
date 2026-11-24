@@ -1,0 +1,15 @@
+{
+  "id": "bb",
+  "name": "Barbados",
+  "flag": "🇧🇧",
+  "region": "cac",
+  "lat": 13.2,
+  "lon": -59.5,
+  "cost": 4,
+  "best": [12,1,2,3,4],
+  "temps": [28,28,29,30,30,31,30,31,31,30,29,28],
+  "currency": "Dollar (BBD)",
+  "language": "English",
+  "blurb": "Rum shops, calm west-coast beaches and cricket.",
+  "cities": [["Bridgetown & the west coast","54433315",3,"A historic capital and calm, sandy bays."],["Bathsheba","30240314",1,"A wild east coast of surf and rock formations."]]
+}

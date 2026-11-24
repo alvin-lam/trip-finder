@@ -1,0 +1,23 @@
+{
+  "id": "sc",
+  "kind": "microstate",
+  "status": "Sovereign island microstate",
+  "maxDays": 10,
+  "name": "Seychelles",
+  "flag": "🇸🇨",
+  "region": "ssa",
+  "lat": -4.68,
+  "lon": 55.49,
+  "cost": 5,
+  "best": [4,5,10,11],
+  "temps": [29,30,31,31,30,29,28,28,29,29,30,29],
+  "currency": "Rupee (SCR)",
+  "language": "Seychellois Creole, English, French",
+  "blurb": "Granite islands, giant tortoises and some of the world's most photographed beaches.",
+  "cities": [
+    ["Mahé","51342415",3,"Main island with mountain trails and Beau Vallon beach."],
+    ["Praslin & La Digue","50250405",3,"Granite-boulder beaches and the Vallée de Mai palm forest."],
+    ["Silhouette Island","40250305",1,"A mountainous, protected island retreat."],
+    ["Aldabra Atoll","21050401",1,"A remote atoll of giant tortoises.",null,{"temps":[30,31,31,32,31,30,29,29,29,30,30,30]}]
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "ec",
+  "name": "Ecuador",
+  "flag": "🇪🇨",
+  "region": "sam",
+  "lat": -0.2,
+  "lon": -78.5,
+  "cost": 2,
+  "best": [1,6,7,8,9,12],
+  "temps": [19,19,19,19,19,19,19,20,20,20,20,19],
+  "currency": "US dollar (USD)",
+  "language": "Spanish",
+  "blurb": "Galápagos wildlife, Andean markets and Amazon lodges.",
+  "cities": [
+    ["Galápagos Islands","40250504",4,"Sea lions, giant tortoises and fearless wildlife.",[1,2,3,4,5,6,12]],
+    ["Quito","05432132",3,"A colonial centre high in the Andes."],
+    ["Baños","01351513",2,"Waterfalls, canyoning and a swing at the edge of a volcano."],
+    ["Cuenca","05432133",2,"A colonial city of blue domes and rivers."],
+    ["Yasuní (Amazon)","00250402",1,"Remote rainforest lodges and wildlife."],
+    ["Guayaquil","13423132",1,"A riverside boardwalk and a gateway to the Galápagos."],
+    ["Qhapaq Ñan in Ecuador","03030301",1,"Inca road stretches in the southern highlands near Ingapirca.",null,{"temps":[22,21,21,21,21,20,19,20,20,22,22,22]}],
+    ["Sangay National Park","01050501",1,"Active volcanoes, glaciers and cloud forest descending to the Amazon.",null,{"temps":[21,21,21,21,20,20,19,20,20,22,22,21]}]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ao",
+  "name": "Angola",
+  "flag": "🇦🇴",
+  "region": "ssa",
+  "lat": -11.2,
+  "lon": 17.9,
+  "cost": 3,
+  "best": [5,6,7,8,9],
+  "temps": [30,31,31,30,28,25,24,24,26,28,29,29],
+  "currency": "Kwanza (AOA)",
+  "language": "Portuguese",
+  "blurb": "A desert coast, huge waterfalls and a fast-changing capital.",
+  "cities": [
+    ["Luanda","33424132",1,"A palm-lined bay and lively seafood restaurants."],
+    ["Kalandula Falls","00150302",1,"One of Africa's largest waterfalls by volume."],
+    ["Namibe Desert","10150402",1,"Where desert dunes meet the Atlantic."],
+    ["Mbanza Kongo","04010101",1,"The ruined capital of the Kingdom of Kongo, with the remains of an early cathedral.",null,{"temps":[28,29,30,29,28,26,25,25,26,27,28,28]}]
+  ]
+}

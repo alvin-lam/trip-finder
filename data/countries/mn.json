@@ -1,0 +1,25 @@
+{
+  "id": "mn",
+  "name": "Mongolia",
+  "flag": "🇲🇳",
+  "region": "eas",
+  "lat": 46.9,
+  "lon": 103.8,
+  "cost": 2,
+  "best": [6,7,8,9],
+  "temps": [-16,-11,-2,8,16,21,23,21,15,6,-5,-14],
+  "currency": "Tögrög (MNT)",
+  "language": "Mongolian",
+  "blurb": "Endless steppe, nomad stays and the Gobi Desert.",
+  "cities": [
+    ["Ulaanbaatar","03223231",2,"Monasteries, museums and the Naadam festival in July."],
+    ["Gobi Desert","00150503",2,"Singing dunes, camel treks and dinosaur fossils."],
+    ["Khövsgöl Lake","01250414",1,"A vast clear lake near the Siberian border.",[6,7,8]],
+    ["Orkhon Valley","04250302",1,"Nomad camps and the old capital Karakorum.",[6,7,8,9]],
+    ["Burkhan Khaldun","02040401",1,"The sacred mountain where Genghis Khan is said to be born and buried.",null,{"temps":[-16,-9,1,12,20,25,27,25,19,10,-4,-14]}],
+    ["Dauria (Mongolia)","00050301",1,"Grasslands and lakes where white-naped cranes breed.",null,{"temps":[-17,-10,0,10,18,25,27,24,17,7,-6,-16]}],
+    ["Altai Petroglyphs","02040401",1,"Thousands of rock carvings in the high Mongolian Altai.",null,{"temps":[-16,-10,3,13,20,25,26,25,19,10,-1,-12]}],
+    ["Xiongnu Cemeteries","03010101",1,"Burial grounds of the Xiongnu nomadic elite.",null,{"temps":[-16,-9,0,10,18,23,25,23,17,8,-5,-14]}],
+    ["Uvs Nuur (Mongolia)","01050401",1,"A huge salt lake surrounded by desert, steppe and mountains.",null,{"temps":[-26,-21,-9,10,20,26,27,25,18,8,-4,-19]}]
+  ]
+}

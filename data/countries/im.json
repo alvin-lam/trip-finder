@@ -1,0 +1,20 @@
+{
+  "id": "im",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Crown Dependency",
+  "of": "gb",
+  "maxDays": 5,
+  "name": "Isle of Man",
+  "flag": "🇮🇲",
+  "region": "wne",
+  "lat": 54.15,
+  "lon": -4.48,
+  "cost": 4,
+  "best": [5,6,7,8,9],
+  "temps": [10,9,9,11,13,16,17,18,17,15,13,11],
+  "currency": "Pound (GBP)",
+  "language": "English, Manx",
+  "blurb": "An Irish Sea island of Viking heritage, Victorian railways and the TT motorcycle races.",
+  "cities": [["Douglas","23330212",2,"A Victorian seafront with horse trams and the Manx Museum."],["Peel","23330003",1,"A fishing town with a sandstone castle on St Patrick's Isle and kippers."],["Castletown","03210003",1,"The old capital, dominated by medieval Castle Rushen."],["Laxey & Snaefell","02140302",1,"The giant Laxey Wheel and a mountain railway to the island's summit."]]
+}

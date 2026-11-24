@@ -1,0 +1,20 @@
+{
+  "id": "tf",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "French overseas territory (no permanent population)",
+  "of": "re",
+  "maxDays": 3,
+  "name": "French Southern and Antarctic Lands",
+  "flag": "🇹🇫",
+  "region": "ssa",
+  "lat": -49.35,
+  "lon": 70.22,
+  "cost": 5,
+  "best": [11,12,1,2],
+  "temps": [12,12,12,10,7,6,5,5,6,7,9,11],
+  "currency": "Euro (EUR)",
+  "language": "French",
+  "blurb": "Subantarctic islands of penguins and elephant seals, reached on the Marion Dufresne supply ship.",
+  "cities": [["French Southern and Antarctic Lands","10050500",1,"Remote subantarctic islands of penguins, by supply ship."]]
+}

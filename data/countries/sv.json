@@ -1,0 +1,21 @@
+{
+  "id": "sv",
+  "name": "El Salvador",
+  "flag": "🇸🇻",
+  "region": "cac",
+  "lat": 13.8,
+  "lon": -88.9,
+  "cost": 2,
+  "best": [11,12,1,2,3,4],
+  "temps": [30,31,32,32,31,30,31,31,30,30,30,30],
+  "currency": "US dollar (USD)",
+  "language": "Spanish",
+  "blurb": "Surf points, volcanoes and Pacific beaches.",
+  "cities": [
+    ["El Tunco & Surf City","51243414",2,"Black-sand surf breaks and beach bars."],
+    ["Ruta de las Flores","03341213",1,"Coffee villages and waterfalls in the hills."],
+    ["Suchitoto","04331123",1,"A cobbled colonial town above a lake."],
+    ["San Salvador","03323131",1,"A volcano-ringed capital with a revived historic centre."],
+    ["Joya de Cerén","04010101",2,"A Maya village preserved under volcanic ash.",null,{"temps":[31,32,33,33,31,30,31,31,30,30,30,31]}]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "al",
+  "name": "Albania",
+  "flag": "🇦🇱",
+  "region": "seu",
+  "lat": 41.2,
+  "lon": 20.2,
+  "cost": 1,
+  "best": [5,6,9,10],
+  "temps": [12,13,16,19,24,28,31,31,27,22,17,13],
+  "currency": "Lek (ALL)",
+  "language": "Albanian",
+  "blurb": "Undiscovered Riviera beaches, Ottoman towns and wild mountains.",
+  "cities": [
+    ["Albanian Riviera (Ksamil)","51341315",3,"Turquoise water and island-dotted bays at low prices."],
+    ["Berat","04331123",2,"The town of a thousand windows."],
+    ["Tirana","03424132",2,"Colourful buildings, cafés and Cold War bunkers turned museums."],
+    ["Gjirokastër","04331123",2,"A stone-roofed Ottoman town below a castle."],
+    ["Butrint","25120213",3,"Greek, Roman and Venetian ruins in a lagoon-side forest near the Greek border.",null,{"temps":[13,14,16,19,23,27,30,30,27,23,18,14]}],
+    ["Pogradec & the Albanian Shore of Lake Ohrid","24240214",2,"Lakeside fishing villages, springs and Byzantine churches on Lake Ohrid's southern shore.",null,{"temps":[3,8,13,17,22,27,30,30,25,19,12,5]}]
+  ]
+}

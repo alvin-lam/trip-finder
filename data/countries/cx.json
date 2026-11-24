@@ -1,0 +1,20 @@
+{
+  "id": "cx",
+  "kind": "territory",
+  "sovereign": "au",
+  "status": "External territory of Australia",
+  "of": "au",
+  "maxDays": 5,
+  "name": "Christmas Island",
+  "flag": "🇨🇽",
+  "region": "oce",
+  "lat": -10.42,
+  "lon": 105.67,
+  "cost": 4,
+  "best": [6,7,8,9,10,11],
+  "temps": [31,31,31,31,31,30,29,29,29,29,30,30],
+  "currency": "Dollar (AUD)",
+  "language": "English, Malay, Chinese",
+  "blurb": "An Indian Ocean island famous for its annual red crab migration.",
+  "cities": [["Flying Fish Cove","32230104",1,"The main settlement, with a Malay kampong, Chinese temples and a snorkelling cove."],["Christmas Island National Park","10050404",1,"Rainforest, the Dales waterfalls and the red crab migration."]]
+}

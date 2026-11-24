@@ -1,0 +1,15 @@
+{
+  "id": "ag",
+  "name": "Antigua and Barbuda",
+  "flag": "🇦🇬",
+  "region": "cac",
+  "lat": 17.1,
+  "lon": -61.8,
+  "cost": 4,
+  "best": [12,1,2,3,4,5],
+  "temps": [28,28,28,29,30,31,31,31,31,30,29,28],
+  "currency": "Dollar (XCD)",
+  "language": "English",
+  "blurb": "Famously, a beach for every day of the year.",
+  "cities": [["English Harbour","53332325",2,"A Georgian naval dockyard and sheltered bays."],["Barbuda","50140305",1,"Pink sand and a frigate bird colony."]]
+}

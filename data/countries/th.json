@@ -1,0 +1,32 @@
+{
+  "id": "th",
+  "name": "Thailand",
+  "flag": "🇹🇭",
+  "region": "sea",
+  "lat": 15.9,
+  "lon": 100.9,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [32,33,34,35,34,33,33,32,32,32,32,31],
+  "currency": "Baht (THB)",
+  "language": "Thai",
+  "blurb": "Golden temples, island beaches and some of the world's best street food.",
+  "cities": [
+    ["Bangkok","04515152",5,"Temples, rooftop bars and legendary street food."],
+    ["Chiang Mai","04543334",4,"Old city temples, night bazaars and jungle treks."],
+    ["Phuket","51434334",5,"Beach resorts, island boat trips and lively nightlife."],
+    ["Krabi","51353515",4,"Limestone cliffs, rock climbing and island hopping."],
+    ["Ayutthaya","05311122",3,"Ruined temples of the old Siamese capital, an easy trip from Bangkok."],
+    ["Koh Samui","51343425",4,"A palm-fringed island with resorts and waterfalls."],
+    ["Koh Lipe","50240405",2,"A small island with clear water and reefs.",[11,12,1,2,3,4]],
+    ["Sukhothai","05210113",2,"Ruined temples of Thailand's first capital."],
+    ["Ban Chiang","03020111",1,"Bronze Age pottery and burials in northeast Thailand.",null,{"temps":[30,33,35,36,35,34,33,32,32,32,31,30]}],
+    ["Khao Yai","01150414",3,"Waterfalls and wild elephants near Bangkok.",null,{"temps":[31,34,36,37,35,35,34,33,32,31,31,30]}],
+    ["Kaeng Krachan","01050412",2,"Thailand's largest national park.",null,{"temps":[32,34,35,36,35,34,33,33,33,32,31,31]}],
+    ["Phu Phrabat","02030311",1,"Sandstone rock formations and Dvaravati boundary stones.",null,{"temps":[30,33,35,36,35,34,33,32,32,32,31,30]}],
+    ["Si Thep","03020111",1,"A Dvaravati city and Khmer temple.",null,{"temps":[32,35,37,38,36,34,33,32,32,33,33,32]}],
+    ["Thungyai–Huai Kha Khaeng","01050400",1,"Wild forests of tigers and elephants.",null,{"temps":[33,35,37,38,36,35,34,34,34,32,32,32]}],
+    ["Wat Phra Mahathat, Nakhon Si Thammarat","04120112",2,"A great white stupa in southern Thailand.",null,{"temps":[30,32,33,34,34,34,34,34,33,32,30,30]}],
+    ["Pattaya","41325343",3,"Beach resort nightlife,  the Sanctuary of Truth and islands offshore.",[11,12,1,2,3],{"temps":[31,32,33,34,33,33,32,32,32,31,31,30]}]
+  ]
+}

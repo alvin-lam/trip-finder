@@ -1,0 +1,19 @@
+{
+  "id": "km",
+  "name": "Comoros",
+  "flag": "🇰🇲",
+  "region": "ssa",
+  "lat": -11.7,
+  "lon": 43.3,
+  "cost": 2,
+  "best": [5,6,7,8,9,10],
+  "temps": [30,30,30,30,29,28,27,27,28,29,30,30],
+  "currency": "Franc (KMF)",
+  "language": "Comorian, Arabic, French",
+  "blurb": "Volcanic islands of spice and sleepy medinas.",
+  "cities": [
+    ["Grande Comore","31341213",1,"Volcano hikes, ylang-ylang plantations and old medinas."],
+    ["Mohéli","40250304",1,"A marine park where turtles nest on quiet beaches."],
+    ["Medinas of the Comoros","24120113",1,"Sultanate towns of Moroni and Mutsamudu.",null,{"temps":[30,30,31,30,30,28,28,28,28,29,30,31]}]
+  ]
+}

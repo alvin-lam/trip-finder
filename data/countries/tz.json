@@ -1,0 +1,24 @@
+{
+  "id": "tz",
+  "name": "Tanzania",
+  "flag": "🇹🇿",
+  "region": "ssa",
+  "lat": -6.4,
+  "lon": 34.9,
+  "cost": 3,
+  "best": [1,2,6,7,8,9,10],
+  "temps": [29,29,28,25,23,22,22,23,25,27,28,28],
+  "currency": "Shilling (TZS)",
+  "language": "Swahili, English",
+  "blurb": "Serengeti plains, Kilimanjaro and the spice island of Zanzibar.",
+  "cities": [
+    ["Serengeti","02250503",4,"Endless plains and year-round wildlife viewing."],
+    ["Zanzibar","54433335",4,"Stone Town alleys, spice tours and dreamy beaches."],
+    ["Moshi & Kilimanjaro","01250501",3,"Base camp for climbing Africa's highest peak."],
+    ["Ngorongoro Crater","00250403",3,"Wildlife inside a vast volcanic caldera."],
+    ["Dar es Salaam","23424232",2,"A busy port and gateway to Zanzibar."],
+    ["Kondoa Rock Art","03030301",1,"Rock paintings in central Tanzania.",null,{"temps":[30,30,30,29,28,27,27,28,29,31,32,31]}],
+    ["Kilwa Kisiwani","24020312",1,"Ruins of a Swahili trading city on an island.",null,{"temps":[31,31,31,31,30,30,29,30,30,32,31,30]}],
+    ["Nyerere (Selous)","01050402",3,"Boat and walking safaris in Africa's largest game reserve.",null,{"temps":[32,33,32,30,29,28,28,29,30,32,32,33]}]
+  ]
+}

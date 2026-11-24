@@ -1,0 +1,31 @@
+{
+  "id": "id",
+  "name": "Indonesia",
+  "flag": "🇮🇩",
+  "region": "sea",
+  "lat": -0.8,
+  "lon": 113.9,
+  "cost": 1,
+  "best": [5,6,7,8,9],
+  "temps": [31,31,31,31,31,30,29,30,31,32,32,31],
+  "currency": "Rupiah (IDR)",
+  "language": "Indonesian",
+  "blurb": "Thousands of islands with temples, volcanoes, reefs and rice terraces.",
+  "cities": [
+    ["Ubud, Bali","25452335",5,"Rice terraces, yoga retreats and Hindu temples."],
+    ["Seminyak, Bali","51425344",4,"Beach clubs, surf and boutique shopping."],
+    ["Yogyakarta","05432333",3,"Gateway to Borobudur and Prambanan temples."],
+    ["Labuan Bajo","40251503",2,"Komodo dragons, pink beaches and world-class diving."],
+    ["Gili Islands","51242425",4,"Car-free islands with turtles and beach bars."],
+    ["Raja Ampat","40250504",2,"Some of the richest coral reefs on Earth.",[10,11,12,1,2,3,4]],
+    ["Lombok","41351414",3,"Surf, waterfalls and Mount Rinjani."],
+    ["Jakarta","03424242",2,"A megacity of malls, Old Batavia and street food."],
+    ["Borobudur","05020313",5,"The world's largest Buddhist temple.",null,{"temps":[30,30,31,32,31,31,30,31,32,32,31,30]}],
+    ["Lorentz National Park","01050500",1,"Glaciers and rainforest in Papua.",null,{"temps":[33,33,32,32,31,30,29,29,30,32,32,33]}],
+    ["Sawahlunto","03110111",1,"A Dutch colonial coal mining town.",null,{"temps":[30,31,31,31,31,31,30,30,30,30,30,30]}],
+    ["Prambanan","05020212",4,"Soaring 9th-century Hindu temples near Yogyakarta.",null,{"temps":[29,29,30,30,30,30,30,30,31,31,30,30]}],
+    ["Sangiran","03010101",1,"Fossil sites of early humans in Java.",null,{"temps":[30,30,30,31,31,31,31,32,32,33,32,31]}],
+    ["Sumatra Rainforests","01050502",2,"Sumatran rainforests where orangutans, tigers and rhinos survive.",null,{"temps":[31,32,33,33,33,33,33,32,32,31,31,31]}],
+    ["Ujung Kulon","31050403",1,"Coastal rainforest and the last refuge of the Javan rhino.",null,{"temps":[31,31,32,32,32,32,32,32,33,33,33,32]}]
+  ]
+}

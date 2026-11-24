@@ -1,0 +1,20 @@
+{
+  "id": "cm",
+  "name": "Cameroon",
+  "flag": "🇨🇲",
+  "region": "ssa",
+  "lat": 4,
+  "lon": 9.2,
+  "cost": 2,
+  "best": [11,12,1,2],
+  "temps": [30,31,31,30,29,28,27,27,27,28,29,30],
+  "currency": "CFA franc (XAF)",
+  "language": "French, English",
+  "blurb": "'Africa in miniature': rainforest, a volcano and beaches.",
+  "cities": [
+    ["Limbe & Mount Cameroon","31251413",1,"Black-sand beaches below an active volcano."],
+    ["Kribi","41241315",1,"Beaches and a waterfall that drops into the sea."],
+    ["Mandara Mountains (Diy-Gid-Biy)","03030301",1,"Stone ruins of hill settlements in northern Cameroon.",null,{"temps":[32,35,38,40,38,35,32,30,32,35,35,33]}],
+    ["Dja Faunal Reserve","01050401",1,"Dense rainforest with gorillas, elephants and Baka communities.",null,{"temps":[30,32,32,31,30,28,27,27,28,29,30,29]}]
+  ]
+}

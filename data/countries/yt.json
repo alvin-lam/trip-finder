@@ -1,0 +1,20 @@
+{
+  "id": "yt",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas department and region of France",
+  "of": "km",
+  "maxDays": 7,
+  "name": "Mayotte",
+  "flag": "🇾🇹",
+  "region": "ssa",
+  "lat": -12.78,
+  "lon": 45.23,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [31,31,31,31,31,29,28,28,28,29,30,31],
+  "currency": "Euro (EUR)",
+  "language": "French, Shimaore",
+  "blurb": "A French island in the Comoros with one of the world's largest lagoons.",
+  "cities": [["Mamoudzou","12210102",1,"The main town on Grande-Terre, with the market and ferries to Petite-Terre."],["N'Gouja Beach","40040204",1,"Snorkel with green sea turtles grazing in the shallows."],["Petite-Terre","21130204",1,"The airport island, with the Dziani Dzaha crater lake and beaches."]]
+}

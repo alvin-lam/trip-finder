@@ -1,0 +1,30 @@
+{
+  "id": "is",
+  "name": "Iceland",
+  "flag": "🇮🇸",
+  "region": "wne",
+  "lat": 64.9,
+  "lon": -19,
+  "cost": 5,
+  "best": [2,3,6,7,8,9],
+  "temps": [3,3,4,6,10,12,14,14,11,7,4,3],
+  "currency": "Króna (ISK)",
+  "language": "Icelandic",
+  "blurb": "Volcanoes, waterfalls, geothermal pools and northern lights.",
+  "cities": [
+    ["Reykjavík","03333224",4,"A colourful capital with geothermal pools and whale watching."],
+    ["Golden Circle & South Coast","00151504",5,"Geysers, waterfalls and black-sand beaches."],
+    ["Akureyri & Lake Mývatn","01251414",2,"Geothermal baths, lava fields and whale watching."],
+    ["Snæfellsnes Peninsula","01150403",2,"A glacier-topped volcano and black churches."],
+    ["Surtsey","00050200",1,"A volcanic island born in 1963, closed to visitors.",null,{"temps":[5,5,5,7,9,12,13,13,11,8,6,5]}],
+    ["Vatnajökull National Park","01050513",4,"Europe's largest glacier, ice caves and Jökulsárlón lagoon.",null,{"temps":[2,3,4,6,8,11,13,12,10,7,4,3]}],
+    ["Blue Lagoon & Reykjanes Peninsula","01251315",5,"A milky-blue geothermal spa among lava fields, near Keflavík Airport and the Reykjanes volcanoes."],
+    ["Westfjords (Ísafjörður & Dynjandi)","02250403",2,"Remote fjords, the tiered Dynjandi waterfall and the bird cliffs of Látrabjarg."],
+    ["Jökulsárlón & Diamond Beach","02150503",4,"Icebergs drift from the glacier to the sea, and ice chunks glitter on the black sand."],
+    ["Vík & Reynisfjara","12140403",4,"A black sand beach with basalt columns and sea stacks below the village of Vík."],
+    ["Húsavík","12240213",3,"Iceland's whale-watching capital, with a whale museum and geothermal sea baths."],
+    ["Landmannalaugar & the Highlands","00050504",3,"Rhyolite mountains, lava fields and a natural hot spring at the start of the Laugavegur Trail.",[7,8,9]],
+    ["Westman Islands (Heimaey)","12140213",2,"Puffin colonies, a museum of the 1973 eruption and a ferry ride from the south coast."],
+    ["Seyðisfjörður & the East Fjords","13140204",2,"An arty fjord village of wooden houses, where the ferry from Denmark arrives."]
+  ]
+}

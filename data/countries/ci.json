@@ -1,0 +1,22 @@
+{
+  "id": "ci",
+  "name": "Côte d'Ivoire",
+  "flag": "🇨🇮",
+  "region": "ssa",
+  "lat": 5.3,
+  "lon": -4,
+  "cost": 2,
+  "best": [11,12,1,2,3],
+  "temps": [31,32,32,32,31,29,28,27,28,30,31,31],
+  "currency": "CFA franc (XOF)",
+  "language": "French",
+  "blurb": "Lagoon city skylines and colonial Grand-Bassam.",
+  "cities": [
+    ["Abidjan","23424242",2,"A lagoon-side skyline, maquis restaurants and nightlife."],
+    ["Grand-Bassam","34222214",1,"Faded colonial buildings beside Atlantic beaches."],
+    ["Taï National Park","00250402",1,"Rainforest home to tool-using chimpanzees."],
+    ["Comoé National Park","01050401",1,"Savanna and gallery forests in northeast Côte d'Ivoire.",null,{"temps":[34,35,34,33,32,30,28,28,29,30,32,32]}],
+    ["Mount Nimba (Côte d'Ivoire)","01050401",1,"Misty mountain grasslands with rare toads and chimpanzees.",null,{"temps":[32,34,33,32,31,29,28,28,29,30,30,31]}],
+    ["Sudanese Mosques of Côte d'Ivoire","04010101",1,"Mud-brick mosques with wooden beams in northern villages.",null,{"temps":[33,36,35,35,33,31,30,30,30,30,33,32]}]
+  ]
+}

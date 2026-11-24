@@ -1,0 +1,23 @@
+{
+  "id": "na",
+  "name": "Namibia",
+  "flag": "🇳🇦",
+  "region": "ssa",
+  "lat": -22.9,
+  "lon": 18.5,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [30,28,27,25,23,20,20,23,27,29,30,31],
+  "currency": "Dollar (NAD)",
+  "language": "English",
+  "blurb": "Towering red dunes, desert wildlife and epic self-drive road trips.",
+  "cities": [
+    ["Sossusvlei","01150503",3,"Climb some of the world's tallest sand dunes."],
+    ["Etosha","01250403",3,"Salt-pan safari with waterhole wildlife spotting."],
+    ["Swakopmund","22342513",2,"Sandboarding, quad biking and Atlantic fog."],
+    ["Skeleton Coast","10150502",1,"Shipwrecks and seal colonies on a foggy desert coast."],
+    ["Fish River Canyon","00150501",1,"One of Africa's largest canyons.",[5,6,7,8,9]],
+    ["Windhoek","03322132",2,"A small, orderly capital with German colonial buildings."],
+    ["Twyfelfontein","03040301",2,"Thousands of San rock engravings in the Namibian desert.",null,{"temps":[22,23,22,21,21,20,20,18,18,19,21,22]}]
+  ]
+}

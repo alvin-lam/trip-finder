@@ -1,0 +1,15 @@
+{
+  "id": "ls",
+  "name": "Lesotho",
+  "flag": "🇱🇸",
+  "region": "ssa",
+  "lat": -29.6,
+  "lon": 28.2,
+  "cost": 2,
+  "best": [3,4,5,9,10,11],
+  "temps": [25,24,22,19,16,13,13,15,19,21,23,24],
+  "currency": "Loti (LSL)",
+  "language": "Sesotho, English",
+  "blurb": "A mountain kingdom of pony treks and high passes.",
+  "cities": [["Semonkong","01250403",1,"Pony treks to one of Africa's highest single-drop waterfalls."],["Sani Pass","01150502",1,"A dramatic mountain road to Africa's highest pub."]]
+}

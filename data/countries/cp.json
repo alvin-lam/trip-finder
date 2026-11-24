@@ -1,0 +1,20 @@
+{
+  "id": "cp",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "French Pacific island (uninhabited)",
+  "of": "fr",
+  "maxDays": 2,
+  "name": "Clipperton Island",
+  "flag": "🇨🇵",
+  "region": "oce",
+  "lat": 10.3,
+  "lon": -109.22,
+  "cost": 5,
+  "best": [3,4,5],
+  "temps": [30,30,30,31,31,31,30,30,30,30,30,30],
+  "currency": "Euro (EUR)",
+  "language": "French",
+  "blurb": "A lonely coral atoll off Mexico, visited only by research ships and radio expeditions.",
+  "cities": [["Clipperton Island","10050000",1,"A closed lagoon, Clipperton Rock and huge seabird colonies."]]
+}

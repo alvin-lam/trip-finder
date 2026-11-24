@@ -1,0 +1,20 @@
+{
+  "id": "mf",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas collectivity of France",
+  "of": "sx",
+  "maxDays": 6,
+  "name": "Saint Martin",
+  "flag": "🇲🇫",
+  "region": "cac",
+  "lat": 18.1,
+  "lon": -63.055,
+  "cost": 5,
+  "best": [12,1,2,3,4],
+  "temps": [29,29,29,29,30,31,31,31,32,31,30,30],
+  "currency": "Euro (EUR)",
+  "language": "French, English",
+  "blurb": "The French half of a two-nation island, famed for its food and beaches.",
+  "cities": [["Grand Case","40530214",2,"The island's restaurant row on a calm bay."],["Orient Bay","50230324",2,"A long beach of watersports and beach clubs."],["Marigot","22320132",1,"The capital's market, marina and Fort Louis."]]
+}

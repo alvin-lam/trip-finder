@@ -1,0 +1,24 @@
+{
+  "id": "pm",
+  "kind": "territory",
+  "sovereign": "fr",
+  "status": "Overseas collectivity of France",
+  "of": "ca",
+  "maxDays": 5,
+  "name": "Saint Pierre and Miquelon",
+  "flag": "🇵🇲",
+  "region": "nam",
+  "lat": 46.88,
+  "lon": -56.32,
+  "cost": 4,
+  "best": [6,7,8,9],
+  "temps": [0,0,1,4,8,12,17,19,16,11,7,3],
+  "currency": "Euro (EUR)",
+  "language": "French",
+  "blurb": "A corner of France off Newfoundland, with Basque heritage, lighthouses and seal-filled lagoons.",
+  "cities": [
+    ["Saint-Pierre","03321113",1,"The colourful harbour capital, with French bakeries, the Arche museum and a Basque pelota court.",[6,7,8,9]],
+    ["Île aux Marins","03030013",1,"A car-free island of fishermen's houses and a shipwreck, a short boat ride from Saint-Pierre.",[6,7,8,9]],
+    ["Miquelon-Langlade","11040303",1,"Wild dunes on the Langlade isthmus and the Grand Barachois lagoon, home to seals and wild horses.",[6,7,8,9]]
+  ]
+}

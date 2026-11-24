@@ -1,0 +1,22 @@
+{
+  "id": "uy",
+  "name": "Uruguay",
+  "flag": "🇺🇾",
+  "region": "sam",
+  "lat": -34.9,
+  "lon": -56.2,
+  "cost": 3,
+  "best": [11,12,1,2,3],
+  "temps": [28,27,25,22,18,15,14,16,18,20,23,26],
+  "currency": "Peso (UYU)",
+  "language": "Spanish",
+  "blurb": "Beach towns, colonial quarters and steakhouses.",
+  "cities": [
+    ["Montevideo","24423143",2,"A seafront promenade and parrilla grills."],
+    ["Colonia del Sacramento","24331224",2,"Cobbled lanes on the River Plate."],
+    ["Punta del Este","52424334",2,"A glamorous summer beach resort."],
+    ["Cabo Polonio","40250215",1,"A car-free fishing village of dunes and sea lions."],
+    ["Fray Bentos","03110111",1,"A former meat-processing plant on the Uruguay River.",null,{"temps":[32,30,28,24,20,17,17,19,21,24,27,30]}],
+    ["Church of Atlántida","04000111",1,"Eladio Dieste's undulating brick church.",null,{"temps":[28,27,25,22,18,16,15,17,18,21,24,26]}]
+  ]
+}

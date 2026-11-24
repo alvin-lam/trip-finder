@@ -1,0 +1,28 @@
+{
+  "id": "lk",
+  "name": "Sri Lanka",
+  "flag": "🇱🇰",
+  "region": "sas",
+  "lat": 7.9,
+  "lon": 80.8,
+  "cost": 1,
+  "best": [12,1,2,3,4],
+  "temps": [30,31,31,31,31,30,30,30,30,30,30,30],
+  "currency": "Rupee (LKR)",
+  "language": "Sinhala, Tamil",
+  "blurb": "Tea country, ancient cities, leopards and golden beaches.",
+  "cities": [
+    ["Kandy","05341223",3,"Temple of the Tooth and gateway to tea country."],
+    ["Ella","02351414",3,"Scenic train rides, tea estates and Nine Arch Bridge."],
+    ["Galle","44422234",3,"Dutch colonial fort town near surf beaches."],
+    ["Sigiriya","05240213",3,"Climb the ancient Lion Rock fortress."],
+    ["Mirissa","51332315",3,"Whale watching and palm-lined beaches."],
+    ["Yala","10250403",2,"Leopard safaris near the coast."],
+    ["Colombo","23424242",3,"A seafront city of markets and colonial buildings."],
+    ["Polonnaruwa","05020212",4,"A medieval royal city of temples and giant stone Buddhas.",null,{"temps":[28,29,32,33,34,34,34,34,34,32,29,28]}],
+    ["Central Highlands (Horton Plains)","01050413",3,"Cloud forests, misty plateaus and the World's End cliff.",null,{"temps":[20,21,22,22,22,19,19,19,20,20,20,19]}],
+    ["Dambulla","05030212",4,"Painted cave temples full of Buddhas on a rock outcrop.",null,{"temps":[31,33,34,34,32,31,31,31,32,31,31,30]}],
+    ["Anuradhapura","05020212",4,"Giant ancient stupas and the sacred Bodhi tree.",null,{"temps":[30,32,35,35,34,33,34,34,34,32,31,30]}],
+    ["Sinharaja","01050402",2,"Sri Lanka's last lowland rainforest, rich in birds.",null,{"temps":[32,34,34,34,32,31,31,31,31,31,31,31]}]
+  ]
+}

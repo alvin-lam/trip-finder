@@ -1,0 +1,27 @@
+{
+  "id": "ro",
+  "name": "Romania",
+  "flag": "🇷🇴",
+  "region": "cee",
+  "lat": 45.9,
+  "lon": 25,
+  "cost": 2,
+  "best": [5,6,7,8,9],
+  "temps": [2,4,10,16,22,26,28,28,23,17,9,3],
+  "currency": "Leu (RON)",
+  "language": "Romanian",
+  "blurb": "Transylvanian castles, painted monasteries and wild mountains.",
+  "cities": [
+    ["Brașov","04342223",3,"A medieval square near Bran Castle and the Carpathians."],
+    ["Bucharest","03324132",3,"Grand boulevards and a lively old town."],
+    ["Sighișoara","05311122",2,"A hilltop citadel and birthplace of Vlad the Impaler."],
+    ["Danube Delta","00250404",1,"Birdlife-rich wetlands explored by boat."],
+    ["Maramureș","04331113",1,"Wooden churches and village traditions."],
+    ["Painted Monasteries of Bucovina","05130213",3,"Churches covered inside and out with vivid frescoes.",null,{"temps":[1,3,8,15,21,24,26,26,20,14,8,2]}],
+    ["Dacian Fortresses","03040412",1,"Mountain fortresses of the Dacian kings, including Sarmizegetusa.",null,{"temps":[3,6,12,18,23,26,28,29,23,17,10,4]}],
+    ["Frontiers of the Roman Empire – Dacia","03030311",1,"Roman forts and camps along the frontier of the province of Dacia.",null,{"temps":[4,8,14,19,22,28,30,30,25,18,10,5]}],
+    ["Horezu Monastery","04130213",2,"A Brâncovenesc monastery famous for its pottery village nearby.",null,{"temps":[4,7,12,18,23,27,29,30,24,18,11,5]}],
+    ["Roșia Montană","03030311",1,"Roman gold-mining galleries in the Apuseni Mountains.",null,{"temps":[1,3,7,14,18,21,23,23,18,13,8,2]}],
+    ["Fortified Churches of Transylvania","04240313",3,"Saxon villages like Biertan, with fortified hilltop churches.",null,{"temps":[2,6,11,17,21,25,27,27,22,17,10,3]}]
+  ]
+}

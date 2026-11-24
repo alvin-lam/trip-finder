@@ -1,0 +1,23 @@
+{
+  "id": "pn",
+  "kind": "territory",
+  "sovereign": "gb",
+  "status": "British Overseas Territory",
+  "of": "pf",
+  "maxDays": 7,
+  "name": "Pitcairn Islands",
+  "flag": "🇵🇳",
+  "region": "oce",
+  "lat": -25.066,
+  "lon": -130.1,
+  "cost": 5,
+  "best": [10,11,12,1,2,3,4],
+  "temps": [28,28,29,28,26,25,24,24,24,25,25,27],
+  "currency": "Dollar (NZD)",
+  "language": "English, Pitkern",
+  "blurb": "Home of the Bounty mutineers' descendants, one of the world's smallest communities.",
+  "cities": [
+    ["Adamstown","13040203",1,"The only settlement, with the Bounty's anchor, Christian's Cave and about 40 residents."],
+    ["Henderson Island","10050500",1,"An uninhabited coral island in the Pitcairns.",null,{"temps":[26,26,26,25,23,22,21,21,21,22,23,24]}]
+  ]
+}

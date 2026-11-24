@@ -1,0 +1,15 @@
+{
+  "id": "gy",
+  "name": "Guyana",
+  "flag": "🇬🇾",
+  "region": "sam",
+  "lat": 5,
+  "lon": -59,
+  "cost": 3,
+  "best": [2,3,9,10,11],
+  "temps": [29,29,30,30,30,29,30,31,31,31,31,30],
+  "currency": "Dollar (GYD)",
+  "language": "English",
+  "blurb": "Kaieteur Falls and deep rainforest lodges.",
+  "cities": [["Kaieteur & the interior","00150402",1,"A towering single-drop waterfall in untouched forest."],["Rupununi","00250403",1,"Savannah ranches, giant otters and jaguars."]]
+}

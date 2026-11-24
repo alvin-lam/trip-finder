@@ -1,0 +1,15 @@
+{
+  "id": "tg",
+  "name": "Togo",
+  "flag": "🇹🇬",
+  "region": "ssa",
+  "lat": 6.9,
+  "lon": 0.6,
+  "cost": 1,
+  "best": [11,12,1,2],
+  "temps": [31,31,31,31,30,29,28,27,28,29,30,31],
+  "currency": "CFA franc (XOF)",
+  "language": "French",
+  "blurb": "Bustling markets, hill villages and a palm-lined coast.",
+  "cities": [["Lomé & Kpalimé","22342223",1,"A seaside capital and cool, forested hills."],["Koutammakou","05240213",1,"Fortress-like mud tower houses in the north."]]
+}

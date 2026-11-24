@@ -1,0 +1,27 @@
+{
+  "id": "no",
+  "name": "Norway",
+  "flag": "🇳🇴",
+  "region": "wne",
+  "lat": 64.5,
+  "lon": 11.5,
+  "cost": 5,
+  "best": [6,7,8],
+  "temps": [0,1,5,10,16,20,22,21,16,10,4,1],
+  "currency": "Krone (NOK)",
+  "language": "Norwegian",
+  "blurb": "Fjords, midnight sun and northern lights in one of Europe's wildest landscapes.",
+  "cities": [
+    ["Bergen","03352424",3,"Colourful harbour town and gateway to the fjords."],
+    ["Oslo","04333233",3,"Waterfront museums, saunas and forest trails."],
+    ["Tromsø","02252513",3,"Arctic base for the northern lights and midnight sun.",[1,2,3,6,7,11,12]],
+    ["Lofoten Islands","12251414",4,"Red fishing cabins beneath jagged Arctic peaks.",[2,3,6,7,8]],
+    ["Geirangerfjord","01250314",4,"Waterfalls tumbling into a steep, narrow fjord.",[5,6,7,8,9]],
+    ["Rjukan–Notodden","02040311",1,"Hydropower towns linked to heavy water and wartime sabotage.",null,{"temps":[-1,1,7,13,18,22,24,22,18,10,4,-1]}],
+    ["Alta Rock Art","03030201",2,"Prehistoric rock carvings of reindeer and boats by a fjord.",null,{"temps":[-3,-4,0,4,9,14,18,16,12,5,0,-2]}],
+    ["Røros","03230313",3,"A copper-mining town of turf-roofed wooden houses, famous for its winter market.",null,{"temps":[5,4,5,8,10,13,16,16,14,10,7,6]}],
+    ["Struve Geodetic Arc (Norway)","02020201",1,"The Meridian Column in Hammerfest marks the arc's northern end at the edge of the Arctic.",null,{"temps":[-1,-2,0,3,7,11,15,14,10,5,2,1]}],
+    ["Urnes Stave Church","04030313",2,"Norway's oldest stave church, with Viking-style carvings above the Lustrafjord.",null,{"temps":[5,5,7,11,15,18,20,19,16,12,8,5]}],
+    ["Vega Archipelago","21140314",1,"Thousands of islands where families still tend eider ducks for their down.",null,{"temps":[2,2,4,8,12,15,18,17,14,9,6,4]}]
+  ]
+}

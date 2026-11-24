@@ -1,0 +1,20 @@
+{
+  "id": "hn",
+  "name": "Honduras",
+  "flag": "🇭🇳",
+  "region": "cac",
+  "lat": 15.2,
+  "lon": -86.2,
+  "cost": 2,
+  "best": [2,3,4,5],
+  "temps": [28,29,31,32,32,30,30,30,30,29,28,28],
+  "currency": "Lempira (HNL)",
+  "language": "Spanish",
+  "blurb": "Bay Islands diving and the Maya ruins of Copán.",
+  "cities": [
+    ["Roatán","51342414",2,"Affordable scuba diving on reef-fringed islands."],
+    ["Copán Ruinas","05331213",1,"Finely carved Maya stelae and a cobbled village."],
+    ["Utila","41243414",1,"A backpacker dive island known for whale sharks."],
+    ["Río Plátano","01050501",1,"Rainforest, rivers and Miskito villages in Honduras.",null,{"temps":[28,29,30,31,32,31,30,30,31,30,29,28]}]
+  ]
+}

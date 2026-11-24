@@ -1,0 +1,20 @@
+{
+  "id": "tk",
+  "kind": "territory",
+  "sovereign": "nz",
+  "status": "Dependent territory of New Zealand",
+  "of": "ws",
+  "maxDays": 5,
+  "name": "Tokelau",
+  "flag": "🇹🇰",
+  "region": "oce",
+  "lat": -8.55,
+  "lon": -172.5,
+  "cost": 4,
+  "best": [5,6,7,8,9,10],
+  "temps": [31,31,31,31,32,32,31,31,31,31,31,31],
+  "currency": "Dollar (NZD)",
+  "language": "Tokelauan, English",
+  "blurb": "Three tiny atolls reached only by a day-long boat trip from Samoa.",
+  "cities": [["Atafu","31040005",1,"The northernmost atoll, with a village of about 500 people."],["Nukunonu","31040005",1,"The largest atoll and its Catholic village on the lagoon."],["Fakaofo","31040005",1,"An atoll whose village packs onto a tiny islet."]]
+}

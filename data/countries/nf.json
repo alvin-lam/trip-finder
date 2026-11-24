@@ -1,0 +1,20 @@
+{
+  "id": "nf",
+  "kind": "territory",
+  "sovereign": "au",
+  "status": "External territory of Australia",
+  "of": "au",
+  "maxDays": 6,
+  "name": "Norfolk Island",
+  "flag": "🇳🇫",
+  "region": "oce",
+  "lat": -29.056,
+  "lon": 167.96,
+  "cost": 4,
+  "best": [10,11,12,1,2,3,4],
+  "temps": [26,26,26,25,24,22,21,21,21,22,23,24],
+  "currency": "Dollar (AUD)",
+  "language": "English, Norfuk",
+  "blurb": "A green Pacific island of convict ruins, Norfolk pines and Bounty descendants.",
+  "cities": [["Kingston","13230104",2,"World Heritage convict-era buildings around a reef-sheltered bay."],["Norfolk Island National Park","10040304",1,"Mount Pitt lookouts and trails through native forest to Captain Cook's landing."]]
+}

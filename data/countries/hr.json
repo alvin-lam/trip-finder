@@ -1,0 +1,27 @@
+{
+  "id": "hr",
+  "name": "Croatia",
+  "flag": "🇭🇷",
+  "region": "seu",
+  "lat": 45.1,
+  "lon": 15.2,
+  "cost": 3,
+  "best": [5,6,9],
+  "temps": [11,12,14,18,23,27,30,30,26,21,16,12],
+  "currency": "Euro (EUR)",
+  "language": "Croatian",
+  "blurb": "Walled Adriatic towns, island ferries and turquoise national parks.",
+  "cities": [
+    ["Dubrovnik","44333324",4,"Walk the old city walls above the Adriatic."],
+    ["Split","44334324",4,"A Roman palace turned lively old town and island hub."],
+    ["Plitvice Lakes","01250304",3,"Cascading turquoise lakes linked by boardwalks."],
+    ["Hvar","43334324",3,"Lavender fields, a yacht harbour and party nights.",[6,7,8,9]],
+    ["Zagreb","03423132",2,"Café culture and quirky museums."],
+    ["Šibenik","25420123",3,"A stone cathedral and an old town on the Dalmatian coast.",null,{"temps":[11,12,14,18,23,28,31,31,25,20,16,12]}],
+    ["Poreč","35430224",3,"The Euphrasian Basilica's gold mosaics in a seaside town.",null,{"temps":[10,10,13,16,21,25,28,28,24,20,14,10]}],
+    ["Trogir","35430224",3,"A medieval island town near Split.",null,{"temps":[11,12,14,18,23,28,31,31,25,20,16,12]}],
+    ["Stari Grad Plain","23240214",1,"Ancient Greek fields and vineyards on Hvar.",null,{"temps":[13,13,15,18,22,26,30,30,26,22,17,14]}],
+    ["Stećci of Croatia (Cista Velika)","03010101",1,"Medieval tombstones in the Dalmatian hinterland.",null,{"temps":[11,12,14,18,23,28,31,31,25,20,16,12]}],
+    ["Zadar's Venetian Walls","34330123",2,"Venetian ramparts and a sea organ in Zadar.",null,{"temps":[11,11,14,17,21,25,28,28,24,20,15,12]}]
+  ]
+}

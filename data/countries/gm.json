@@ -1,0 +1,20 @@
+{
+  "id": "gm",
+  "name": "Gambia",
+  "flag": "🇬🇲",
+  "region": "ssa",
+  "lat": 13.4,
+  "lon": -16.7,
+  "cost": 2,
+  "best": [11,12,1,2,3,4],
+  "temps": [31,32,33,33,32,31,30,30,31,32,32,31],
+  "currency": "Dalasi (GMD)",
+  "language": "English",
+  "blurb": "Birding, river cruises and Atlantic beaches.",
+  "cities": [
+    ["Kololi beaches","41332314",1,"Beach resorts and birdwatching trips on the river."],
+    ["River Gambia","01250214",1,"Slow boat trips for birds and chimpanzees."],
+    ["Kunta Kinteh Island","14020112",2,"The island fort linked to the slave trade.",null,{"temps":[32,34,34,33,32,32,31,30,31,32,33,32]}],
+    ["Wassu Stone Circles","03010101",1,"Megalithic stone circles in the Gambia.",null,{"temps":[32,34,34,33,32,32,31,30,31,32,33,32]}]
+  ]
+}

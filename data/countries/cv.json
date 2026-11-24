@@ -1,0 +1,20 @@
+{
+  "id": "cv",
+  "name": "Cabo Verde",
+  "flag": "🇨🇻",
+  "region": "ssa",
+  "lat": 16,
+  "lon": -24,
+  "cost": 3,
+  "best": [11,12,1,2,3,4,5,6],
+  "temps": [25,25,26,26,27,28,28,29,30,29,28,26],
+  "currency": "Escudo (CVE)",
+  "language": "Portuguese",
+  "blurb": "Volcanic islands, morna music and windsurfing beaches.",
+  "cities": [
+    ["Sal","51332415",3,"Long beaches and kitesurfing winds."],
+    ["Santo Antão","02251404",1,"Dramatic green valleys made for hiking."],
+    ["Boa Vista","50240405",2,"Huge empty beaches and nesting turtles."],
+    ["Cidade Velha","24120113",1,"The first colonial town in the tropics, with a fortress and a pillory.",null,{"temps":[27,27,28,28,28,30,29,30,31,31,30,27]}]
+  ]
+}

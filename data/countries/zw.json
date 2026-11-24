@@ -1,0 +1,23 @@
+{
+  "id": "zw",
+  "name": "Zimbabwe",
+  "flag": "🇿🇼",
+  "region": "ssa",
+  "lat": -19,
+  "lon": 29.2,
+  "cost": 3,
+  "best": [5,6,7,8,9,10],
+  "temps": [26,26,26,25,23,21,21,23,26,28,27,26],
+  "currency": "US dollar and ZiG",
+  "language": "English, Shona, Ndebele",
+  "blurb": "Victoria Falls, Hwange's elephants and ancient stone ruins.",
+  "cities": [
+    ["Victoria Falls","01250513",3,"Rainforest viewpoints facing the falls."],
+    ["Hwange","00250403",2,"Huge elephant herds at waterholes."],
+    ["Great Zimbabwe","05140212",1,"The stone ruins of a medieval city."],
+    ["Mana Pools","00250403",1,"Walking safaris on the Zambezi floodplain."],
+    ["Harare","03323131",1,"Jacaranda-lined avenues, galleries and craft markets."],
+    ["Khami Ruins","04020101",1,"Stone ruins of a city of the Torwa dynasty.",null,{"temps":[28,27,27,26,24,22,22,24,28,29,29,28]}],
+    ["Matobo Hills","03050412",3,"Granite kopjes, rock art and rhinos.",null,{"temps":[28,27,27,26,24,22,22,24,28,29,29,28]}]
+  ]
+}

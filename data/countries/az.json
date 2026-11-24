@@ -1,0 +1,21 @@
+{
+  "id": "az",
+  "name": "Azerbaijan",
+  "flag": "🇦🇿",
+  "region": "cas",
+  "lat": 40.1,
+  "lon": 47.6,
+  "cost": 2,
+  "best": [4,5,6,9,10],
+  "temps": [7,7,10,16,22,27,30,30,25,19,13,9],
+  "currency": "Manat (AZN)",
+  "language": "Azerbaijani",
+  "blurb": "Flame Towers, a walled old city and mud volcanoes.",
+  "cities": [
+    ["Baku","14424242",3,"A walled old city beside futuristic towers."],
+    ["Sheki","04321123",1,"A silk-road town with a painted Khan's Palace."],
+    ["Gobustan","03150201",1,"Ancient rock carvings and bubbling mud volcanoes."],
+    ["Khinalig","03140312",1,"A mountain village of stone houses at 2,300 metres, on an ancient herding route.",null,{"temps":[7,8,11,17,23,28,30,31,26,20,13,9]}],
+    ["Hyrcanian Forests (Azerbaijan)","02150313",1,"Humid relict forests, tea gardens and waterfalls near Lankaran.",null,{"temps":[6,7,10,15,21,26,29,28,24,19,14,8]}]
+  ]
+}

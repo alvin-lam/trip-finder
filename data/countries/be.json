@@ -1,0 +1,33 @@
+{
+  "id": "be",
+  "name": "Belgium",
+  "flag": "🇧🇪",
+  "region": "wne",
+  "lat": 50.5,
+  "lon": 4.5,
+  "cost": 4,
+  "best": [4,5,6,7,8,9],
+  "temps": [6,7,11,15,18,21,23,23,19,15,10,6],
+  "currency": "Euro (EUR)",
+  "language": "Dutch, French, German",
+  "blurb": "Chocolate, beer, comic art and medieval squares.",
+  "cities": [
+    ["Brussels","04524142",4,"The Grand-Place, Art Nouveau facades and moules-frites."],
+    ["Bruges","04412133",4,"Canals and a perfectly preserved medieval centre."],
+    ["Ghent","04424133",3,"Medieval guildhalls and a lively student scene."],
+    ["Antwerp","03425152",2,"Fashion, diamonds and Rubens's house."],
+    ["Belfries of Belgium","05320122",2,"Medieval civic bell towers, with Ghent's belfry as the classic climb.",null,{"temps":[7,8,11,15,19,21,23,23,20,15,10,7]}],
+    ["Colonies of Benevolence (Wortel)","03020111",1,"19th-century farm colonies built to lift poor families out of poverty.",null,{"temps":[7,8,11,15,19,22,24,24,20,15,10,7]}],
+    ["Flemish Béguinages","05110113",2,"Quiet walled courtyards where religious women lived together in the Middle Ages.",null,{"temps":[7,8,11,14,18,20,22,23,20,15,10,7]}],
+    ["Ypres & the Western Front (Belgium)","05210111",3,"Flanders Fields cemeteries, the Menin Gate and the nightly Last Post.",null,{"temps":[7,8,11,15,18,21,24,24,20,15,10,7]}],
+    ["Wallonia's Mining Sites","03010111",1,"Coal mines and workers' towns, including the grand Grand-Hornu complex.",null,{"temps":[6,7,11,15,19,22,24,24,20,15,10,7]}],
+    ["Victor Horta Houses","05110111",2,"Art Nouveau town houses by Victor Horta, with flowing iron and stained glass.",null,{"temps":[6,7,11,15,18,21,23,23,20,15,10,7]}],
+    ["Spiennes Flint Mines","03010101",1,"Neolithic flint mines dug 6,000 years ago, open for underground visits.",null,{"temps":[6,7,10,14,18,21,24,23,19,15,10,6]}],
+    ["Tournai Cathedral","04220112",2,"A five-towered Romanesque and Gothic cathedral in one of Belgium's oldest cities.",null,{"temps":[7,8,11,15,18,21,24,24,20,15,10,7]}],
+    ["Plantin-Moretus Museum","05210111",2,"The world's oldest printing presses, in a Renaissance printing house in Antwerp.",null,{"temps":[7,8,11,15,19,22,24,24,20,15,10,7]}],
+    ["Stoclet House","04000001",1,"A Vienna Secession mansion with a Klimt frieze, seen only from the street.",null,{"temps":[6,7,11,15,18,21,23,23,20,15,10,7]}],
+    ["Maison Guiette (Le Corbusier)","03100011",1,"A Le Corbusier studio house in Antwerp's suburbs.",null,{"temps":[7,8,11,15,19,22,24,24,20,15,10,7]}],
+    ["Canal du Centre Boat Lifts","03030213",1,"Historic hydraulic boat lifts on a canal you can still cruise.",null,{"temps":[6,6,10,14,18,21,23,23,19,15,10,6]}],
+    ["Spa","02240315",2,"The original spa town, with thermal baths, forest walks and the Francorchamps circuit.",null,{"temps":[6,7,11,15,19,22,24,24,20,15,10,7]}]
+  ]
+}

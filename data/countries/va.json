@@ -1,0 +1,20 @@
+{
+  "id": "va",
+  "kind": "microstate",
+  "visitFrom": "Rome",
+  "status": "Sovereign microstate",
+  "of": "it",
+  "maxDays": 1,
+  "name": "Vatican City",
+  "flag": "🇻🇦",
+  "region": "seu",
+  "lat": 41.9029,
+  "lon": 12.4534,
+  "cost": 4,
+  "best": [3,4,5,10,11],
+  "temps": [12,13,16,19,23,28,31,31,27,22,16,13],
+  "currency": "Euro (EUR)",
+  "language": "Italian, Latin",
+  "blurb": "The world's smallest country, entirely surrounded by Rome.",
+  "cities": [["Vatican City","05110021",5,"St Peter's Basilica, the Sistine Chapel and the Vatican Museums."]]
+}
