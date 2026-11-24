@@ -18,7 +18,7 @@
     explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", remote: "", lgbtq: "", advisory: "" },
     saved: new Set(),
     includeAvoid: false, // show destinations under "avoid all travel" advisories in results
-    colors: "seasonal", // "seasonal" (season and holiday accents) or "classic"
+    colors: "seasonal", // "seasonal" (follows the date), "classic", or a chosen scheme id
   };
 
   // ---------- Helpers ----------
@@ -202,7 +202,8 @@
       if (data.prefs) state.prefs = E.normalizePrefs(data.prefs);
       if (Array.isArray(data.saved)) state.saved = new Set(data.saved.filter((k) => lookupSaved(k)));
       if (data.theme) document.documentElement.dataset.theme = data.theme;
-      if (data.colors === "classic") state.colors = "classic";
+      // "seasonal" (the default), "classic" or a chosen scheme such as "winter".
+      if (data.colors === "classic" || (data.colors && E.SEASON_SCHEMES[data.colors])) state.colors = data.colors;
     } catch (_) {
       /* storage unavailable: start fresh */
     }
@@ -1803,16 +1804,19 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     const root = document.documentElement;
     const scheme = E.seasonalScheme(new Date());
     const mode = root.dataset.theme || "system";
-    if (state.colors === "seasonal") {
-      root.dataset.season = scheme.id;
-      seasonStyle.textContent = seasonCSS(scheme.id);
-      themeBtn.textContent = scheme.icon;
+    // Seasonal follows the date; a chosen theme stays until the visitor changes it.
+    const id = state.colors === "seasonal" ? scheme.id : E.SEASON_SCHEMES[state.colors] ? state.colors : null;
+    const chosen = id && E.SEASON_SCHEMES[id];
+    if (id) {
+      root.dataset.season = id;
+      seasonStyle.textContent = seasonCSS(id);
+      themeBtn.textContent = chosen.icon;
     } else {
       delete root.dataset.season;
       seasonStyle.textContent = "";
       themeBtn.textContent = "◐";
     }
-    const label = `Appearance: ${mode} mode, ${state.colors === "seasonal" ? `${scheme.label} colors` : "classic colors"}`;
+    const label = `Appearance: ${mode} mode, ${id ? `${chosen.label} colors${state.colors === "seasonal" ? " (seasonal)" : ""}` : "classic colors"}`;
     themeBtn.setAttribute("aria-label", label);
     themeBtn.title = label;
     const item = (attr, value, text, on) =>
@@ -1825,7 +1829,20 @@ ${sel}[data-theme="dark"] { ${dark} }`;
       <p class="appearance-menu__head">Colors</p>
       ${item("colors", "seasonal", `${scheme.icon} Seasonal: ${esc(scheme.label)}`, state.colors === "seasonal")}
       ${item("colors", "classic", "🎨 Classic", state.colors === "classic")}
-      <p class="appearance-menu__note">Seasonal colors follow your local date and time zone${scheme.southern ? ", with southern hemisphere seasons" : ""}.</p>`;
+      <p class="appearance-menu__head">Pick a theme</p>
+      <div class="appearance-menu__themes" role="group" aria-label="Themes">${Object.entries(E.SEASON_SCHEMES)
+        .map(
+          ([k, sc]) =>
+            `<button type="button" role="menuitemradio" class="theme-swatch" aria-checked="${state.colors === k}" data-colors="${k}" title="${esc(sc.label)}" aria-label="${esc(sc.label)} theme" style="--sw:${sc.light};--sw-dark:${sc.dark}"><span aria-hidden="true">${sc.icon}</span></button>`
+        )
+        .join("")}</div>
+      <p class="appearance-menu__note">${
+        state.colors === "seasonal"
+          ? `Seasonal colors follow your local date and time zone${scheme.southern ? ", with southern hemisphere seasons" : ""}.`
+          : id
+            ? `${esc(chosen.label)} colors stay until you choose Seasonal again.`
+            : "Choose Seasonal to follow the time of year again."
+      }</p>`;
   }
 
   function setMenu(open) {
