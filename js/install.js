@@ -1,7 +1,10 @@
 /*
  * "Add to Home Screen" prompt.
- *  - Chrome, Edge and Android: captures the browser's install event and offers an Install button.
- *  - iPhone and iPad Safari: no install API exists, so it shows the Share > Add to Home Screen steps.
+ *  - Chrome and Edge: capture the browser's install event and offer an Install button.
+ *  - iPhone and iPad: no install API exists, so it shows the Share > Add to Home Screen steps.
+ *  - Browsers that can add the app from their own menu but offer no install event
+ *    (Firefox and Samsung Internet on Android, other Android browsers, Safari on a Mac)
+ *    get that browser's steps instead. Browsers that cannot add apps at all show nothing.
  * It waits until the visitor is engaged (results shown, or 25 seconds on the page),
  * never shows once installed, and stays quiet for 30 days after being dismissed.
  */
@@ -19,6 +22,8 @@
 
   // sw.js sits beside the js/ folder, so this works from /, /explore/ and /place/<id>/.
   const SW_URL = new URL("../sw.js", document.currentScript.src).href;
+  // The icon is found from the script's own folder, so it shows on /place/<id>/ pages too.
+  const ICON_URL = new URL("../img/icon-192.png", document.currentScript.src).href;
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     window.addEventListener("load", () => navigator.serviceWorker.register(SW_URL).catch(() => {}));
   }
@@ -37,6 +42,17 @@
   const isIOS = /iPhone|iPad|iPod/.test(ua) || (ua.includes("Macintosh") && navigator.maxTouchPoints > 1);
   // Safari, and Chrome or Edge on iOS 16.4+, all offer Add to Home Screen from their Share menu.
   const isIOSSafari = isIOS && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
+  const isAndroid = /Android/.test(ua);
+  const isMacSafari = !isIOS && /Macintosh/.test(ua) && /Safari/.test(ua) && !/Chrome|Chromium|Edg|Firefox|OPR/.test(ua);
+  // Steps for browsers that add the app from their own menu, with no install event.
+  const MENU = '<b aria-label="menu">⋮</b>';
+  const manualSteps = (() => {
+    if (isAndroid && /Firefox/.test(ua)) return [`Tap the ${MENU} menu.`, "Tap <b>Install</b> or <b>Add to Home screen</b>."];
+    if (isAndroid && /SamsungBrowser/.test(ua)) return ['Tap the <b aria-label="menu">☰</b> menu.', "Tap <b>Add page to</b>, then <b>Home screen</b>."];
+    if (isAndroid) return [`Open your browser's ${MENU} menu.`, "Tap <b>Add to Home screen</b> or <b>Install app</b>."];
+    if (isMacSafari) return ["In the menu bar, choose <b>File</b>.", "Choose <b>Add to Dock</b>."];
+    return null;
+  })();
 
   let deferred = null; // the browser's install event, when it offers one
   let engaged = false;
@@ -67,6 +83,9 @@
     if (shown || !engaged || recentlyDismissed()) return;
     if (deferred) render("native");
     else if (isIOS) render("ios");
+    // The install event can arrive a moment late; give it a few seconds before
+    // falling back to the browser's own menu steps.
+    else if (manualSteps) setTimeout(() => !shown && !deferred && !recentlyDismissed() && render("manual"), 4000);
   }
 
   function render(mode) {
@@ -84,15 +103,19 @@
              <button class="btn btn--primary btn--sm" data-install="go">Install</button>
              <button class="btn btn--ghost btn--sm" data-install="later">Not now</button>
            </div>`
+        : mode === "manual"
+        ? `<p>Your browser adds apps from its own menu. It works offline too.</p>
+           <ol class="install__steps">${manualSteps.map((s) => `<li>${s}</li>`).join("")}</ol>
+           <div class="install__actions"><button class="btn btn--ghost btn--sm" data-install="later">Got it</button></div>`
         : `<ol class="install__steps">
              <li>Tap ${share} <b>Share</b> ${isIOSSafari ? "in Safari's toolbar" : "in your browser's address bar or menu"}.</li>
              <li>Scroll and tap <b>Add to Home Screen</b>.</li>
            </ol>
            <div class="install__actions"><button class="btn btn--ghost btn--sm" data-install="later">Got it</button></div>`;
     el.innerHTML = `
-      <img class="install__icon" src="img/icon-192.png" alt="" width="48" height="48" />
+      <img class="install__icon" src="${ICON_URL}" alt="" width="48" height="48" />
       <div class="install__text">
-        <h2 id="install-title">Add Trip Finder to your home screen</h2>
+        <h2 id="install-title">${mode === "manual" && isMacSafari ? "Add Trip Finder to your Dock" : "Add Trip Finder to your home screen"}</h2>
         ${body}
       </div>
       <button class="install__close" data-install="later" aria-label="Dismiss">✕</button>`;

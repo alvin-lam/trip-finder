@@ -1419,10 +1419,10 @@
             return `<tr>
               <td><button class="city-row__main" data-action="open-city" data-id="${city.id}"><span class="city-row__name">${esc(city.name)} ${placeTags(city)}</span><span class="city-row__blurb">${city.country.flag} ${placeWhere(city)}</span></button></td>
               ${state.results ? `<td data-label="Match">${s === null ? "–" : `${s}%`}</td>` : ""}
-              <td data-label="Best time">${esc(E.formatMonths(city.best))}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
+              <td data-label="Best time">${E.formatMonths(city.best).split(", ").map((r) => `<span class="nowrap">${esc(r)}</span>`).join(", ")}${month ? (city.best.includes(month) ? " ✓" : "") : ""}</td>
               <td data-label="${month ? `${E.MONTHS[month - 1]} high` : "Typical high"}">${E.fmtTemp(t)}</td>
               <td data-label="${month ? `${E.MONTHS[month - 1]} low` : "Typical low"}">${lo === null ? "–" : E.fmtTemp(lo)}</td>
-              <td data-label="Daily cost (USD)">${E.COST_DAILY[city.country.cost]}</td>
+              <td data-label="Daily cost (USD)">${E.COST_DAILY[city.country.cost].replace("–", "–\u2060")}</td>
               <td data-label="Great for">${esc(topStrengths(city).join(", ") || "All-rounder")}</td>
               <td>${heart("city", city.id, city.name)}</td>
             </tr>`;
