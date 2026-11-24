@@ -2,7 +2,7 @@
  "source": "https://www.unesco.org/en/iggp/geoparks",
  "stated_total": 241,
  "stated_countries": 51,
- "count": 242,
+ "count": 241,
  "geoparks": [
   {
    "name": "Karawanken / Karavanke",
@@ -10,28 +10,48 @@
     "Austria",
     "Slovenia"
    ],
-   "url": "https://www.unesco.org/en/iggp/karawanken/karavanke-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/karawanken/karavanke-unesco-global-geopark",
+   "area_ha": 106700.0,
+   "year": 2015,
+   "lat": 46.550493,
+   "lon": 14.7556395,
+   "geocode_query": "Karawanken / Karavanke Geopark, Austria"
   },
   {
    "name": "Ore of the Alps",
    "countries": [
     "Austria"
    ],
-   "url": "https://www.unesco.org/en/iggp/ore-alps-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/ore-alps-unesco-global-geopark",
+   "area_ha": 21100.0,
+   "year": 2015,
+   "lat": 47.42,
+   "lon": 13.15,
+   "geocode_query": "manual"
   },
   {
    "name": "Styrian Eisenwurzen",
    "countries": [
     "Austria"
    ],
-   "url": "https://www.unesco.org/en/iggp/styrian-eisenwurzen-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/styrian-eisenwurzen-unesco-global-geopark",
+   "area_ha": 63300.0,
+   "year": 2015,
+   "lat": 47.65,
+   "lon": 14.75,
+   "geocode_query": "manual"
   },
   {
    "name": "Famenne-Ardenne",
    "countries": [
     "Belgium"
    ],
-   "url": "https://www.unesco.org/en/iggp/famenne-ardenne-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/famenne-ardenne-unesco-global-geopark",
+   "area_ha": 91500.0,
+   "year": 2018,
+   "lat": 50.3531376,
+   "lon": 5.4581154,
+   "geocode_query": "Famenne-Ardenne Geopark, Belgium"
   },
   {
    "name": "Schelde Delta",
@@ -39,651 +59,1110 @@
     "Belgium",
     "Kingdom of the Netherlands"
    ],
-   "url": "https://www.unesco.org/en/iggp/schelde-delta-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/schelde-delta-unesco-global-geopark",
+   "area_ha": 546700.0,
+   "year": 2024,
+   "lat": 51.4,
+   "lon": 4.0,
+   "geocode_query": "manual"
   },
   {
    "name": "Araripe",
    "countries": [
     "Brazil"
    ],
-   "url": "https://www.unesco.org/en/iggp/araripe-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/araripe-unesco-global-geopark",
+   "area_ha": 378900.0,
+   "year": 2015,
+   "lat": -7.2384039,
+   "lon": -39.4151653,
+   "geocode_query": "Araripe Geopark, Brazil"
   },
   {
    "name": "Caçapava",
    "countries": [
     "Brazil"
    ],
-   "url": "https://www.unesco.org/en/iggp/cacapava-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/cacapava-unesco-global-geopark",
+   "area_ha": 304700.0,
+   "year": 2023,
+   "lat": -23.099204,
+   "lon": -45.707645,
+   "geocode_query": "Caçapava, Brazil"
   },
   {
    "name": "Quarta Colônia",
    "countries": [
     "Brazil"
    ],
-   "url": "https://www.unesco.org/en/iggp/quarta-colonia-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/quarta-colonia-unesco-global-geopark",
+   "area_ha": 292300.0,
+   "year": 2023,
+   "lat": -29.4238769,
+   "lon": -53.2399368,
+   "geocode_query": "Quarta Colônia, Brazil"
   },
   {
    "name": "Seridó",
    "countries": [
     "Brazil"
    ],
-   "url": "https://www.unesco.org/en/iggp/serido-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/serido-unesco-global-geopark",
+   "area_ha": 280300.0,
+   "year": 2022,
+   "lat": -6.933337,
+   "lon": -36.400864,
+   "geocode_query": "Seridó, Brazil"
   },
   {
    "name": "Southern Canyons Pathways",
    "countries": [
     "Brazil"
    ],
-   "url": "https://www.unesco.org/en/iggp/southern-canyons-pathways-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/southern-canyons-pathways-unesco-global-geopark",
+   "area_ha": 283100.0,
+   "year": 2022,
+   "lat": -29.1,
+   "lon": -50.05,
+   "geocode_query": "manual"
   },
   {
    "name": "Uberaba",
    "countries": [
     "Brazil"
    ],
-   "url": "https://www.unesco.org/en/iggp/uberaba-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/uberaba-unesco-global-geopark",
+   "area_ha": 452300.0,
+   "year": 2024,
+   "lat": -19.750833,
+   "lon": -47.936666,
+   "geocode_query": "Uberaba, Brazil"
   },
   {
    "name": "Cliffs of Fundy",
    "countries": [
     "Canada"
    ],
-   "url": "https://www.unesco.org/en/iggp/cliffs-fundy-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/cliffs-fundy-unesco-global-geopark",
+   "area_ha": 254600.0,
+   "year": 2020,
+   "lat": 45.3520973,
+   "lon": -66.0711056,
+   "geocode_query": "Cliffs of Fundy, Canada"
   },
   {
    "name": "Discovery",
    "countries": [
     "Canada"
    ],
-   "url": "https://www.unesco.org/en/iggp/discovery-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/discovery-unesco-global-geopark",
+   "area_ha": 189282.0,
+   "year": 2020,
+   "lat": 48.5983004,
+   "lon": -53.3699549,
+   "geocode_query": "Discovery Geopark, Canada"
   },
   {
    "name": "Percé",
    "countries": [
     "Canada"
    ],
-   "url": "https://www.unesco.org/en/iggp/perce-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/perce-unesco-global-geopark",
+   "area_ha": 55500.0,
+   "year": 2018,
+   "lat": 48.5222989,
+   "lon": -64.2136423,
+   "geocode_query": "Percé, Canada"
   },
   {
    "name": "Stonehammer",
    "countries": [
     "Canada"
    ],
-   "url": "https://www.unesco.org/en/iggp/stonehammer-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/stonehammer-unesco-global-geopark",
+   "area_ha": 250000.0,
+   "year": 2015,
+   "lat": 45.3034196,
+   "lon": -65.9922081,
+   "geocode_query": "Stonehammer, Canada"
   },
   {
    "name": "Tumbler Ridge",
    "countries": [
     "Canada"
    ],
-   "url": "https://www.unesco.org/en/iggp/tumbler-ridge-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/tumbler-ridge-unesco-global-geopark",
+   "area_ha": 847800.0,
+   "year": 2015,
+   "lat": 55.1262007,
+   "lon": -120.998067,
+   "geocode_query": "Tumbler Ridge, Canada"
   },
   {
    "name": "Kütralkura",
    "countries": [
     "Chile"
    ],
-   "url": "https://www.unesco.org/en/iggp/kutralkura-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/kutralkura-unesco-global-geopark",
+   "area_ha": 1207000.0,
+   "year": 2019,
+   "lat": -38.7766748,
+   "lon": -71.6336447,
+   "geocode_query": "Kütralkura Geopark, Chile"
   },
   {
    "name": "Alxa Desert",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/alxa-desert-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/alxa-desert-unesco-global-geopark",
+   "area_ha": 27000000.0,
+   "year": 2015,
+   "lat": 38.4625434,
+   "lon": 105.1528129,
+   "geocode_query": "Alxa Desert"
   },
   {
    "name": "Arxan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/arxan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/arxan-unesco-global-geopark",
+   "area_ha": 365321.0,
+   "year": 2017,
+   "lat": 47.126311,
+   "lon": 120.396568,
+   "geocode_query": "Arxan, China"
   },
   {
    "name": "Changshan",
    "countries": [
     "China"
    ],
-   "url": null
+   "url": null,
+   "lat": 28.9060233,
+   "lon": 118.5063585,
+   "geocode_query": "Changshan, China"
   },
   {
    "name": "Dali-Cangshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/dali-cangshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/dali-cangshan-unesco-global-geopark",
+   "area_ha": 93300.0,
+   "year": 2015,
+   "lat": 25.5976684,
+   "lon": 100.2476445,
+   "geocode_query": "Dali-Cangshan, China"
   },
   {
    "name": "Danxiashan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/danxiashan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/danxiashan-unesco-global-geopark",
+   "area_ha": 29200.0,
+   "year": 2015,
+   "lat": 24.9577249,
+   "lon": 113.7999644,
+   "geocode_query": "Danxiashan, China"
   },
   {
    "name": "Dunhuang",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/dunhuang-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/dunhuang-unesco-global-geopark",
+   "area_ha": 218075.0,
+   "year": 2015,
+   "lat": 40.5102076,
+   "lon": 93.2376966,
+   "geocode_query": "Dunhuang Geopark, China"
   },
   {
    "name": "Enshi Grand Canyon-Tenglongdong Cave",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/enshi-grand-canyon-tenglongdong-cave-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/enshi-grand-canyon-tenglongdong-cave-unesco-global-geopark",
+   "area_ha": 67919.0,
+   "year": 2024,
+   "lat": 30.424202,
+   "lon": 109.1746676,
+   "geocode_query": "Enshi Grand Canyon"
   },
   {
    "name": "Fangshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/fangshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/fangshan-unesco-global-geopark",
+   "area_ha": 104500.0,
+   "year": 2015,
+   "lat": 28.4250051,
+   "lon": 121.2397946,
+   "geocode_query": "Fangshan Geopark, China"
   },
   {
    "name": "Funiushan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/funiushan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/funiushan-unesco-global-geopark",
+   "area_ha": 585800.0,
+   "year": 2015,
+   "lat": 33.55,
+   "lon": 111.7,
+   "geocode_query": "manual"
   },
   {
    "name": "Guangwushan-Nuoshuihe",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/guangwushan-nuoshuihe-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/guangwushan-nuoshuihe-unesco-global-geopark",
+   "area_ha": 181800.0,
+   "year": 2018,
+   "lat": 32.6696047,
+   "lon": 106.8029218,
+   "geocode_query": "Guangwushan"
   },
   {
    "name": "Hexigten",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/hexigten-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/hexigten-unesco-global-geopark",
+   "area_ha": 2067300.0,
+   "year": 2015,
+   "lat": 43.9309106,
+   "lon": 117.5351638,
+   "geocode_query": "Hexigten Geopark, China"
   },
   {
    "name": "Hong Kong",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/hong-kong-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/hong-kong-unesco-global-geopark",
+   "area_ha": 43900.0,
+   "year": 2015,
+   "lat": 22.500311,
+   "lon": 114.3581822,
+   "geocode_query": "Hong Kong Geopark, China"
   },
   {
    "name": "Huanggang Dabieshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/huanggang-dabieshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/huanggang-dabieshan-unesco-global-geopark",
+   "area_ha": 262554.0,
+   "year": 2018,
+   "lat": 31.1410421,
+   "lon": 114.8914292,
+   "geocode_query": "Huanggang Dabieshan, China"
   },
   {
    "name": "Huangshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/huangshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/huangshan-unesco-global-geopark",
+   "area_ha": 17343.0,
+   "year": 2015,
+   "lat": 29.7172627,
+   "lon": 118.3324811,
+   "geocode_query": "Huangshan, China"
   },
   {
    "name": "Jingpohu",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/jingpohu-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/jingpohu-unesco-global-geopark",
+   "area_ha": 140000.0,
+   "year": 2015,
+   "lat": 31.3451889,
+   "lon": 121.3661615,
+   "geocode_query": "Jingpohu, China"
   },
   {
    "name": "Jiuhuashan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/jiuhuashan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/jiuhuashan-unesco-global-geopark",
+   "area_ha": 13970.0,
+   "year": 2019,
+   "lat": 30.7414921,
+   "lon": 117.6854623,
+   "geocode_query": "Jiuhuashan, China"
   },
   {
    "name": "Kanbula",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/kanbula-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/kanbula-unesco-global-geopark",
+   "area_ha": 314934.0,
+   "year": 2025,
+   "lat": 36.113714,
+   "lon": 101.849105,
+   "geocode_query": "Kanbula, China"
   },
   {
    "name": "Keketuohai",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/keketuohai-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/keketuohai-unesco-global-geopark",
+   "area_ha": 233790.0,
+   "year": 2017,
+   "lat": 47.2127198,
+   "lon": 89.8693877,
+   "geocode_query": "Keketuohai Geopark, China"
   },
   {
    "name": "Leiqiong",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/leiqiong-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/leiqiong-unesco-global-geopark",
+   "area_ha": 305000.0,
+   "year": 2015,
+   "lat": 19.93,
+   "lon": 110.2,
+   "geocode_query": "manual"
   },
   {
    "name": "Leye Fengshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/leye-fengshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/leye-fengshan-unesco-global-geopark",
+   "area_ha": 111300.0,
+   "year": 2015,
+   "lat": 24.7763192,
+   "lon": 106.5494992,
+   "geocode_query": "Leye Fengshan Geopark, China"
   },
   {
    "name": "Linxia",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/linxia-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/linxia-unesco-global-geopark",
+   "area_ha": 212000.0,
+   "year": 2024,
+   "lat": 35.7003215,
+   "lon": 103.2791334,
+   "geocode_query": "Linxia, China"
   },
   {
    "name": "Longhushan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/longhushan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/longhushan-unesco-global-geopark",
+   "area_ha": 99663.0,
+   "year": 2015,
+   "lat": 28.123463,
+   "lon": 116.975919,
+   "geocode_query": "Longhushan, China"
   },
   {
    "name": "Longyan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/longyan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/longyan-unesco-global-geopark",
+   "area_ha": 217500.0,
+   "year": 2024,
+   "lat": 25.0767425,
+   "lon": 117.0123483,
+   "geocode_query": "Longyan, China"
   },
   {
    "name": "Lushan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/lushan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/lushan-unesco-global-geopark",
+   "area_ha": 54800.0,
+   "year": 2015,
+   "lat": 29.5434303,
+   "lon": 116.01876,
+   "geocode_query": "Lushan Geopark, China"
   },
   {
    "name": "Mount Changbaishan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/mount-changbaishan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mount-changbaishan-unesco-global-geopark",
+   "area_ha": 272383.0,
+   "year": 2024,
+   "lat": 42.0,
+   "lon": 128.06,
+   "geocode_query": "manual"
   },
   {
    "name": "Mount Kunlun",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/mount-kunlun-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mount-kunlun-unesco-global-geopark",
+   "area_ha": 703317.0,
+   "year": 2015,
+   "lat": 35.65,
+   "lon": 94.1,
+   "geocode_query": "manual"
   },
   {
    "name": "Mt. Siguniang",
    "countries": [
     "China"
    ],
-   "url": null
+   "url": null,
+   "lat": 31.047021,
+   "lon": 102.9402963,
+   "geocode_query": "Mt. Siguniang, China"
   },
   {
    "name": "Ningde",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/ningde-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/ningde-unesco-global-geopark",
+   "area_ha": 266034.0,
+   "year": 2015,
+   "lat": 27.0143281,
+   "lon": 119.4385501,
+   "geocode_query": "Ningde, China"
   },
   {
    "name": "Qinling Zhongnanshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/qinling-zhongnanshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/qinling-zhongnanshan-unesco-global-geopark",
+   "area_ha": 107485.0,
+   "year": 2015,
+   "lat": 33.95,
+   "lon": 108.9,
+   "geocode_query": "manual"
   },
   {
    "name": "Sanqingshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/sanqingshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sanqingshan-unesco-global-geopark",
+   "area_ha": 43300.0,
+   "year": 2015,
+   "lat": 44.3445697,
+   "lon": 124.510609,
+   "geocode_query": "Sanqingshan, China"
   },
   {
    "name": "Shennongjia",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/shennongjia-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/shennongjia-unesco-global-geopark",
+   "area_ha": 102272.0,
+   "year": 2015,
+   "lat": 31.58339,
+   "lon": 110.497198,
+   "geocode_query": "Shennongjia, China"
   },
   {
    "name": "Shilin",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/shilin-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/shilin-unesco-global-geopark",
+   "area_ha": 36570.0,
+   "year": 2015,
+   "lat": 24.7611768,
+   "lon": 103.4269371,
+   "geocode_query": "Shilin, China"
   },
   {
    "name": "Songshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/songshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/songshan-unesco-global-geopark",
+   "area_ha": 46400.0,
+   "year": 2015,
+   "lat": 42.2948264,
+   "lon": 118.9133771,
+   "geocode_query": "Songshan, China"
   },
   {
    "name": "Taining",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/taining-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/taining-unesco-global-geopark",
+   "area_ha": 49250.0,
+   "year": 2015,
+   "lat": 26.8473545,
+   "lon": 117.1046434,
+   "geocode_query": "Taining, China"
   },
   {
    "name": "Taishan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/taishan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/taishan-unesco-global-geopark",
+   "area_ha": 41836.0,
+   "year": 2015,
+   "lat": 36.2088383,
+   "lon": 117.1222833,
+   "geocode_query": "Taishan Geopark, China"
   },
   {
    "name": "Tianzhushan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/tianzhushan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/tianzhushan-unesco-global-geopark",
+   "area_ha": 41314.0,
+   "year": 2015,
+   "lat": 30.6832997,
+   "lon": 116.4905144,
+   "geocode_query": "Tianzhushan, China"
   },
   {
    "name": "Wangwushan-Daimeishan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/wangwushan-daimeishan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/wangwushan-daimeishan-unesco-global-geopark",
+   "area_ha": 98600.0,
+   "year": 2015,
+   "lat": 35.9547312,
+   "lon": 120.192456,
+   "geocode_query": "Wangwushan"
   },
   {
    "name": "Wudalianchi",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/wudalianchi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/wudalianchi-unesco-global-geopark",
+   "area_ha": 79011.0,
+   "year": 2015,
+   "lat": 48.7059647,
+   "lon": 126.239649,
+   "geocode_query": "Wudalianchi Geopark, China"
   },
   {
    "name": "Wugongshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/wugongshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/wugongshan-unesco-global-geopark",
+   "area_ha": 147100.0,
+   "year": 2024,
+   "lat": 29.0187441,
+   "lon": 116.8891622,
+   "geocode_query": "Wugongshan, China"
   },
   {
    "name": "Xiangxi",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/xiangxi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/xiangxi-unesco-global-geopark",
+   "area_ha": 271000.0,
+   "year": 2020,
+   "lat": 28.7595238,
+   "lon": 109.8321139,
+   "geocode_query": "Xiangxi Geopark, China"
   },
   {
    "name": "Xingwen",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/xingwen-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/xingwen-unesco-global-geopark",
+   "area_ha": 15600.0,
+   "year": 2015,
+   "lat": 28.24471,
+   "lon": 105.136384,
+   "geocode_query": "Xingwen, China"
   },
   {
    "name": "Xingyi",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/xingyi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/xingyi-unesco-global-geopark",
+   "area_ha": 145600.0,
+   "year": 2024,
+   "lat": 25.1399714,
+   "lon": 104.7914246,
+   "geocode_query": "Xingyi Geopark, China"
   },
   {
    "name": "Yandangshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/yandangshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/yandangshan-unesco-global-geopark",
+   "area_ha": 29880.0,
+   "year": 2015,
+   "lat": 28.3444955,
+   "lon": 121.1478227,
+   "geocode_query": "Yandangshan, China"
   },
   {
    "name": "Yanqing",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/yanqing-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/yanqing-unesco-global-geopark",
+   "area_ha": 139800.0,
+   "year": 2015,
+   "lat": 40.4568127,
+   "lon": 115.9705791,
+   "geocode_query": "Yanqing, China"
   },
   {
    "name": "Yimengshan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/yimengshan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/yimengshan-unesco-global-geopark",
+   "area_ha": 180476.0,
+   "year": 2019,
+   "lat": 35.7723507,
+   "lon": 118.6424085,
+   "geocode_query": "Yimengshan, China"
   },
   {
    "name": "Yuntaishan",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/yuntaishan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/yuntaishan-unesco-global-geopark",
+   "area_ha": 55600.0,
+   "year": 2015,
+   "lat": 35.4177467,
+   "lon": 113.3735815,
+   "geocode_query": "Yuntaishan, China"
   },
   {
    "name": "Yunyang",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/yunyang-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/yunyang-unesco-global-geopark",
+   "area_ha": 112400.0,
+   "year": 2025,
+   "lat": 30.6734976,
+   "lon": 109.0115115,
+   "geocode_query": "Yunyang Geopark, China"
   },
   {
    "name": "Zhangjiajie",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/zhangjiajie-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/zhangjiajie-unesco-global-geopark",
+   "area_ha": 39800.0,
+   "year": 2015,
+   "lat": 29.373828,
+   "lon": 110.530142,
+   "geocode_query": "Zhangjiajie, China"
   },
   {
    "name": "Zhangye",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/zhangye-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/zhangye-unesco-global-geopark",
+   "area_ha": 128971.0,
+   "year": 2020,
+   "lat": 38.9320514,
+   "lon": 100.4196396,
+   "geocode_query": "Zhangye Geopark, China"
   },
   {
    "name": "Zhijindong Cave",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/zhijindong-cave-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/zhijindong-cave-unesco-global-geopark",
+   "area_ha": 18331.0,
+   "year": 2015,
+   "lat": 26.65,
+   "lon": 105.95,
+   "geocode_query": "manual"
   },
   {
    "name": "Zigong",
    "countries": [
     "China"
    ],
-   "url": "https://www.unesco.org/en/iggp/zigong-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/zigong-unesco-global-geopark",
+   "area_ha": 163046.0,
+   "year": 2015,
+   "lat": 29.2995746,
+   "lon": 104.6928392,
+   "geocode_query": "Zigong, China"
   },
   {
    "name": "Biokovo-Imotski Lakes",
    "countries": [
     "Croatia"
    ],
-   "url": "https://www.unesco.org/en/iggp/biokovo-imotski-lakes-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/biokovo-imotski-lakes-unesco-global-geopark",
+   "area_ha": 43100.0,
+   "year": 2024,
+   "lat": 43.3392874,
+   "lon": 17.04885,
+   "geocode_query": "Biokovo"
   },
   {
    "name": "Papuk",
    "countries": [
     "Croatia"
    ],
-   "url": "https://www.unesco.org/en/iggp/papuk-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/papuk-unesco-global-geopark",
+   "area_ha": 52400.0,
+   "year": 2015,
+   "lat": 45.5223931,
+   "lon": 17.6033384,
+   "geocode_query": "Papuk, Croatia"
   },
   {
    "name": "Vis Archipelago",
    "countries": [
     "Croatia"
    ],
-   "url": "https://www.unesco.org/en/iggp/vis-archipelago-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/vis-archipelago-unesco-global-geopark",
+   "area_ha": 666100.0,
+   "year": 2019,
+   "lat": 43.06,
+   "lon": 16.18,
+   "geocode_query": "manual"
   },
   {
    "name": "Troodos",
    "countries": [
     "Cyprus"
    ],
-   "url": "https://www.unesco.org/en/iggp/troodos-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/troodos-unesco-global-geopark",
+   "area_ha": 114700.0,
+   "year": 2015,
+   "lat": 34.9267406,
+   "lon": 32.9176271,
+   "geocode_query": "Troodos Geopark, Cyprus"
   },
   {
    "name": "Bohemian Paradise",
    "countries": [
     "Czechia"
    ],
-   "url": "https://www.unesco.org/en/iggp/bohemian-paradise-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/bohemian-paradise-unesco-global-geopark",
+   "area_ha": 83300.0,
+   "year": 2015,
+   "lat": 50.2756875,
+   "lon": 14.8699982,
+   "geocode_query": "Bohemian Paradise"
   },
   {
    "name": "Mt Paektu",
    "countries": [
     "Democratic People's Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/mt-paektu-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mt-paektu-unesco-global-geopark",
+   "area_ha": 132600.0,
+   "year": 2025,
+   "lat": 42.0013311,
+   "lon": 128.0813517,
+   "geocode_query": "Mt Paektu, Democratic People's Republic of Korea"
   },
   {
    "name": "Odsherred",
    "countries": [
     "Denmark"
    ],
-   "url": "https://www.unesco.org/en/iggp/odsherred-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/odsherred-unesco-global-geopark",
+   "area_ha": 35500.0,
+   "year": 2015,
+   "lat": 55.7856101,
+   "lon": 11.3849451,
+   "geocode_query": "Odsherred Geopark, Denmark"
   },
   {
    "name": "The South Fyn Archipelago",
    "countries": [
     "Denmark"
    ],
-   "url": "https://www.unesco.org/en/iggp/south-fyn-archipelago-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/south-fyn-archipelago-unesco-global-geopark",
+   "area_ha": 273300.0,
+   "year": 2024,
+   "lat": 55.0,
+   "lon": 10.55,
+   "geocode_query": "manual"
   },
   {
    "name": "Vestjylland",
    "countries": [
     "Denmark"
    ],
-   "url": "https://www.unesco.org/en/iggp/vestjylland-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/vestjylland-unesco-global-geopark",
+   "area_ha": 425900.0,
+   "year": 2021,
+   "lat": 56.149793,
+   "lon": 8.9680461,
+   "geocode_query": "Vestjylland, Denmark"
   },
   {
    "name": "Imbabura",
    "countries": [
     "Ecuador"
    ],
-   "url": "https://www.unesco.org/en/iggp/imbabura-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/imbabura-unesco-global-geopark",
+   "area_ha": 479100.0,
+   "year": 2019,
+   "lat": 0.3753621,
+   "lon": -78.355681,
+   "geocode_query": "Imbabura, Ecuador"
   },
   {
    "name": "Napo Sumaco",
    "countries": [
     "Ecuador"
    ],
-   "url": "https://www.unesco.org/en/iggp/napo-sumaco-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/napo-sumaco-unesco-global-geopark",
+   "area_ha": 180000.0,
+   "year": 2025,
+   "lat": -0.3505534,
+   "lon": -77.5558244,
+   "geocode_query": "Napo Sumaco, Ecuador"
   },
   {
    "name": "Tungurahua Volcano",
    "countries": [
     "Ecuador"
    ],
-   "url": "https://www.unesco.org/en/iggp/tungurahua-volcano-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/tungurahua-volcano-unesco-global-geopark",
+   "area_ha": 239700.0,
+   "year": 2025,
+   "lat": -1.4627425,
+   "lon": -78.4459464,
+   "geocode_query": "Tungurahua Volcano, Ecuador"
   },
   {
    "name": "Impact Crater Lake – Lappajärvi",
    "countries": [
     "Finland"
    ],
-   "url": "https://www.unesco.org/en/iggp/impact-crater-lake-lappajarvi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/impact-crater-lake-lappajarvi-unesco-global-geopark",
+   "area_ha": 230400.0,
+   "year": 2024,
+   "lat": 63.15,
+   "lon": 23.65,
+   "geocode_query": "manual"
   },
   {
    "name": "Lauhanvuori-Haemeenkangas",
    "countries": [
     "Finland"
    ],
-   "url": "https://www.unesco.org/en/iggp/lauhanvuori-hameenkangas-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/lauhanvuori-hameenkangas-unesco-global-geopark",
+   "area_ha": 490796.0,
+   "year": 2020,
+   "lat": 62.1528414,
+   "lon": 22.1733313,
+   "geocode_query": "Lauhanvuori"
   },
   {
    "name": "Rokua",
    "countries": [
     "Finland"
    ],
-   "url": "https://www.unesco.org/en/iggp/rokua-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/rokua-unesco-global-geopark",
+   "area_ha": 132600.0,
+   "year": 2015,
+   "lat": 64.589468,
+   "lon": 26.4233981,
+   "geocode_query": "Rokua, Finland"
   },
   {
    "name": "Saimaa",
    "countries": [
     "Finland"
    ],
-   "url": "https://www.unesco.org/en/iggp/saimaa-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/saimaa-unesco-global-geopark",
+   "area_ha": 606300.0,
+   "year": 2021,
+   "lat": 61.5496177,
+   "lon": 27.9624509,
+   "geocode_query": "Saimaa Geopark, Finland"
   },
   {
    "name": "Salpausselkä",
    "countries": [
     "Finland"
    ],
-   "url": "https://www.unesco.org/en/iggp/salpausselka-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/salpausselka-unesco-global-geopark",
+   "area_ha": 450600.0,
+   "year": 2022,
+   "lat": 61.1781257,
+   "lon": 25.5349662,
+   "geocode_query": "Salpausselkä Geopark, Finland"
   },
   {
    "name": "Armorique",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/armorique-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/armorique-unesco-global-geopark",
+   "area_ha": 158700.0,
+   "year": 2024,
+   "lat": 48.2704057,
+   "lon": -4.2616709,
+   "geocode_query": "Armorique Geopark, France"
   },
   {
    "name": "Beaujolais",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/beaujolais-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/beaujolais-unesco-global-geopark",
+   "area_ha": 158600.0,
+   "year": 2018,
+   "lat": 46.1057662,
+   "lon": 4.6526669,
+   "geocode_query": "Beaujolais Geopark, France"
   },
   {
    "name": "Causses du Quercy",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/causses-de-quercy-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/causses-de-quercy-unesco-global-geopark",
+   "area_ha": 185500.0,
+   "year": 2017,
+   "lat": 44.5564729,
+   "lon": 1.6907748,
+   "geocode_query": "Causses du Quercy, France"
   },
   {
    "name": "Chablais",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/chablais-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/chablais-unesco-global-geopark",
+   "area_ha": 87000.0,
+   "year": 2015,
+   "lat": 46.1529769,
+   "lon": 6.6716143,
+   "geocode_query": "Chablais Geopark, France"
   },
   {
    "name": "Haute-Provence",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/haute-provence-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/haute-provence-unesco-global-geopark",
+   "area_ha": 218056.0,
+   "year": 2015,
+   "lat": 44.1430996,
+   "lon": 5.6407399,
+   "geocode_query": "Haute-Provence, France"
   },
   {
    "name": "Luberon",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/luberon-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/luberon-unesco-global-geopark",
+   "area_ha": 195000.0,
+   "year": 2015,
+   "lat": 43.8279743,
+   "lon": 5.5480039,
+   "geocode_query": "Luberon, France"
   },
   {
    "name": "Massif des Bauges",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/massif-des-bauges-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/massif-des-bauges-unesco-global-geopark",
+   "area_ha": 87900.0,
+   "year": 2015,
+   "lat": 45.7015531,
+   "lon": 6.1861363,
+   "geocode_query": "Massif des Bauges, France"
   },
   {
    "name": "Monts d'Ardèche",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/monts-dardeche-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/monts-dardeche-unesco-global-geopark",
+   "area_ha": 248200.0,
+   "year": 2015,
+   "lat": 44.8776102,
+   "lon": 4.2072695,
+   "geocode_query": "Monts d'Ardèche, France"
   },
   {
    "name": "Normandie-Maine",
    "countries": [
     "France"
    ],
-   "url": "https://www.unesco.org/en/iggp/normandie-maine-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/normandie-maine-unesco-global-geopark",
+   "area_ha": 265000.0,
+   "year": 2024,
+   "lat": 48.4156185,
+   "lon": -0.1227042,
+   "geocode_query": "Normandie-Maine, France"
   },
   {
    "name": "Terres d’Hérault",
    "countries": [
     "France"
    ],
-   "url": null
+   "url": null,
+   "lat": 43.703635,
+   "lon": 3.1326397,
+   "geocode_query": "Terres d’Hérault, France"
   },
   {
    "name": "Bergstraße-Odenwald",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/bergstrasse-odenwald-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/bergstrasse-odenwald-unesco-global-geopark",
+   "area_ha": 377800.0,
+   "year": 2015,
+   "lat": 49.8289656,
+   "lon": 8.9072243,
+   "geocode_query": "Bergstraße-Odenwald Geopark, Germany"
   },
   {
    "name": "Harz, Braunschweiger Land",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/harz-braunschweiger-land-ostfalen-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/harz-braunschweiger-land-ostfalen-unesco-global-geopark",
+   "area_ha": 964600.0,
+   "year": 2015,
+   "lat": 51.8206122,
+   "lon": 10.2348312,
+   "geocode_query": "Harz, Braunschweiger Land"
   },
   {
    "name": "Muskauer Faltenbogen / Łuk Mużakowa",
@@ -691,126 +1170,214 @@
     "Germany",
     "Poland"
    ],
-   "url": "https://www.unesco.org/en/iggp/muskauer-faltenbogen/luk-muzakowa-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/muskauer-faltenbogen/luk-muzakowa-unesco-global-geopark",
+   "area_ha": 57880.0,
+   "year": 2015,
+   "lat": 51.6138152,
+   "lon": 14.4916536,
+   "geocode_query": "Muskauer Faltenbogen, Germany"
   },
   {
    "name": "Ries",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/ries-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/ries-unesco-global-geopark",
+   "area_ha": 174880.0,
+   "year": 2022,
+   "lat": 48.8411012,
+   "lon": 10.6253849,
+   "geocode_query": "Ries Geopark, Germany"
   },
   {
    "name": "Swabian Alb",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/swabian-alb-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/swabian-alb-unesco-global-geopark",
+   "area_ha": 619100.0,
+   "year": 2015,
+   "lat": 48.3812677,
+   "lon": 9.4149595,
+   "geocode_query": "Swabian Alb, Germany"
   },
   {
    "name": "TERRA.vita",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/terravita-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/terravita-unesco-global-geopark",
+   "area_ha": 156000.0,
+   "year": 2015,
+   "lat": 52.3366957,
+   "lon": 8.1534955,
+   "geocode_query": "TERRA.vita Geopark, Germany"
   },
   {
    "name": "Thuringia Inselsberg -Drei Gleichen",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/thuringia-inselsberg-drei-gleichen-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/thuringia-inselsberg-drei-gleichen-unesco-global-geopark",
+   "area_ha": 72510.0,
+   "year": 2021,
+   "lat": 50.8511626,
+   "lon": 10.4665051,
+   "geocode_query": "Thuringia Inselsberg"
   },
   {
    "name": "Vulkaneifel",
    "countries": [
     "Germany"
    ],
-   "url": "https://www.unesco.org/en/iggp/vulkaneifel-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/vulkaneifel-unesco-global-geopark",
+   "area_ha": 129000.0,
+   "year": 2015,
+   "lat": 50.2034301,
+   "lon": 6.8289303,
+   "geocode_query": "Vulkaneifel Geopark, Germany"
   },
   {
    "name": "Chelmos Vouraikos",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/chelmos-vouraikos-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/chelmos-vouraikos-unesco-global-geopark",
+   "area_ha": 71200.0,
+   "year": 2015,
+   "lat": 38.0067465,
+   "lon": 22.1452965,
+   "geocode_query": "Chelmos Vouraikos, Greece"
   },
   {
    "name": "Grevena - Kozani",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/grevena-kozani-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/grevena-kozani-unesco-global-geopark",
+   "area_ha": 248600.0,
+   "year": 2021,
+   "lat": 40.0243034,
+   "lon": 21.2718282,
+   "geocode_query": "Grevena - Kozani Geopark, Greece"
   },
   {
    "name": "Kefalonia-Ithaca",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/kefalonia-ithaca-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/kefalonia-ithaca-unesco-global-geopark",
+   "area_ha": 300600.0,
+   "year": 2022,
+   "lat": 38.3016408,
+   "lon": 20.6623448,
+   "geocode_query": "Kefalonia-Ithaca, Greece"
   },
   {
    "name": "Lavreotiki",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/lavreotiki-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/lavreotiki-unesco-global-geopark",
+   "area_ha": 17687.0,
+   "year": 2023,
+   "lat": 37.7528118,
+   "lon": 24.0187068,
+   "geocode_query": "Lavreotiki, Greece"
   },
   {
    "name": "Lesvos Island",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/lesvos-island-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/lesvos-island-unesco-global-geopark",
+   "area_ha": 163600.0,
+   "year": 2015,
+   "lat": 39.1758419,
+   "lon": 25.9989135,
+   "geocode_query": "Lesvos Island, Greece"
   },
   {
    "name": "Meteora Pyli",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/meteora-pyli-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/meteora-pyli-unesco-global-geopark",
+   "area_ha": 240954.0,
+   "year": 2024,
+   "lat": 39.55,
+   "lon": 21.55,
+   "geocode_query": "manual"
   },
   {
    "name": "Nisyros",
    "countries": [
     "Greece"
    ],
-   "url": null
+   "url": null,
+   "lat": 36.5890457,
+   "lon": 27.169184,
+   "geocode_query": "Nisyros, Greece"
   },
   {
    "name": "Psiloritis",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/psiloritis-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/psiloritis-unesco-global-geopark",
+   "area_ha": 127200.0,
+   "year": 2015,
+   "lat": 35.3296125,
+   "lon": 25.0175222,
+   "geocode_query": "Psiloritis Geopark, Greece"
   },
   {
    "name": "Sitia",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/sitia-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sitia-unesco-global-geopark",
+   "area_ha": 71350.0,
+   "year": 2015,
+   "lat": 35.1387727,
+   "lon": 25.8991938,
+   "geocode_query": "Sitia Geopark, Greece"
   },
   {
    "name": "Vikos - Aoos",
    "countries": [
     "Greece"
    ],
-   "url": "https://www.unesco.org/en/iggp/vikos-aoos-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/vikos-aoos-unesco-global-geopark",
+   "area_ha": 121770.0,
+   "year": 2015,
+   "lat": 39.963122,
+   "lon": 20.7715919,
+   "geocode_query": "Vikos - Aoos, Greece"
   },
   {
    "name": "Bakony-Balaton",
    "countries": [
     "Hungary"
    ],
-   "url": "https://www.unesco.org/en/iggp/bakony-balaton-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/bakony-balaton-unesco-global-geopark",
+   "area_ha": 324400.0,
+   "year": 2015,
+   "lat": 47.6948841,
+   "lon": 19.0501749,
+   "geocode_query": "Bakony-Balaton, Hungary"
   },
   {
    "name": "Bükk Region",
    "countries": [
     "Hungary"
    ],
-   "url": "https://www.unesco.org/en/iggp/bukk-region-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/bukk-region-unesco-global-geopark",
+   "area_ha": 281700.0,
+   "year": 2024,
+   "lat": 47.9533718,
+   "lon": 20.452648,
+   "geocode_query": "Bükk Region, Hungary"
   },
   {
    "name": "Novohrad-Nógrád",
@@ -818,140 +1385,240 @@
     "Hungary",
     "Slovakia"
    ],
-   "url": "https://www.unesco.org/en/iggp/novohrad-nograd-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/novohrad-nograd-unesco-global-geopark",
+   "area_ha": 161900.0,
+   "year": 2015,
+   "lat": 48.0464754,
+   "lon": 19.6961865,
+   "geocode_query": "Novohrad-Nógrád Geopark, Hungary"
   },
   {
    "name": "Katla",
    "countries": [
     "Iceland"
    ],
-   "url": "https://www.unesco.org/en/iggp/katla-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/katla-unesco-global-geopark",
+   "area_ha": 954200.0,
+   "year": 2015,
+   "lat": 63.5945031,
+   "lon": -18.4643551,
+   "geocode_query": "Katla Geopark, Iceland"
   },
   {
    "name": "Reykjanes",
    "countries": [
     "Iceland"
    ],
-   "url": "https://www.unesco.org/en/iggp/reykjanes-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/reykjanes-unesco-global-geopark",
+   "area_ha": 81800.0,
+   "year": 2015,
+   "lat": 63.9415014,
+   "lon": -22.2018627,
+   "geocode_query": "Reykjanes Geopark, Iceland"
   },
   {
    "name": "Batur",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/batur-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/batur-unesco-global-geopark",
+   "area_ha": 36640.0,
+   "year": 2015,
+   "lat": -7.8569903,
+   "lon": 113.5076561,
+   "geocode_query": "Batur, Indonesia"
   },
   {
    "name": "Belitong",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/belitong-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/belitong-unesco-global-geopark",
+   "area_ha": 480000.0,
+   "year": 2021,
+   "lat": -2.7399984,
+   "lon": 107.6270449,
+   "geocode_query": "Belitong Geopark, Indonesia"
   },
   {
    "name": "Ciletuh - Palabuhanratu",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/ciletuh-palabuhanratu-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/ciletuh-palabuhanratu-unesco-global-geopark",
+   "area_ha": 126000.0,
+   "year": 2018,
+   "lat": -7.1760937,
+   "lon": 106.4500093,
+   "geocode_query": "Ciletuh"
   },
   {
    "name": "Gunung Sewu",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/gunung-sewu-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/gunung-sewu-unesco-global-geopark",
+   "area_ha": 180200.0,
+   "year": 2015,
+   "lat": -7.223611,
+   "lon": 109.478056,
+   "geocode_query": "Gunung Sewu, Indonesia"
   },
   {
    "name": "Ijen",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/ijen-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/ijen-unesco-global-geopark",
+   "area_ha": 472300.0,
+   "year": 2023,
+   "lat": -8.0579332,
+   "lon": 114.2430975,
+   "geocode_query": "Ijen, Indonesia"
   },
   {
    "name": "Kebumen",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/kebumen-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/kebumen-unesco-global-geopark",
+   "area_ha": 116100.0,
+   "year": 2025,
+   "lat": -7.6439744,
+   "lon": 109.6077921,
+   "geocode_query": "Kebumen, Indonesia"
   },
   {
    "name": "Maros Pangkep",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/maros-pangkep-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/maros-pangkep-unesco-global-geopark",
+   "area_ha": 507725.0,
+   "year": 2023,
+   "lat": -4.9583133,
+   "lon": 119.5695954,
+   "geocode_query": "Maros Pangkep, Indonesia"
   },
   {
    "name": "Merangin Jambi",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/merangin-jambi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/merangin-jambi-unesco-global-geopark",
+   "area_ha": 483200.0,
+   "year": 2023,
+   "lat": -2.0718855,
+   "lon": 102.2759737,
+   "geocode_query": "Merangin Jambi, Indonesia"
   },
   {
    "name": "Meratus",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/meratus-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/meratus-unesco-global-geopark",
+   "area_ha": 346500.0,
+   "year": 2025,
+   "lat": -7.2118415,
+   "lon": 112.7269293,
+   "geocode_query": "Meratus, Indonesia"
   },
   {
    "name": "Raja Ampat",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/raja-ampat-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/raja-ampat-unesco-global-geopark",
+   "area_ha": 3666000.0,
+   "year": 2023,
+   "lat": -8.7369333,
+   "lon": 115.1660205,
+   "geocode_query": "Raja Ampat Geopark, Indonesia"
   },
   {
    "name": "Rinjani-Lombok",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/rinjani-lombok-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/rinjani-lombok-unesco-global-geopark",
+   "area_ha": 285000.0,
+   "year": 2018,
+   "lat": -8.4117272,
+   "lon": 116.4581059,
+   "geocode_query": "Rinjani-Lombok, Indonesia"
   },
   {
    "name": "Toba Caldera",
    "countries": [
     "Indonesia"
    ],
-   "url": "https://www.unesco.org/en/iggp/toba-caldera-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/toba-caldera-unesco-global-geopark",
+   "area_ha": 300000.0,
+   "year": 2020,
+   "lat": 2.5935892,
+   "lon": 98.6336253,
+   "geocode_query": "Toba Caldera Geopark, Indonesia"
   },
   {
    "name": "Aras",
    "countries": [
     "Iran (Islamic Republic of)"
    ],
-   "url": "https://www.unesco.org/en/iggp/aras-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/aras-unesco-global-geopark",
+   "area_ha": 167000.0,
+   "year": 2023,
+   "lat": 37.1456467,
+   "lon": 47.7643548,
+   "geocode_query": "Aras"
   },
   {
    "name": "Qeshm Island",
    "countries": [
     "Iran (Islamic Republic of)"
    ],
-   "url": "https://www.unesco.org/en/iggp/qeshm-island-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/qeshm-island-unesco-global-geopark",
+   "area_ha": 206300.0,
+   "year": 2017,
+   "lat": 26.7687296,
+   "lon": 55.8476653,
+   "geocode_query": "Qeshm Island"
   },
   {
    "name": "Tabas",
    "countries": [
     "Iran (Islamic Republic of)"
    ],
-   "url": "https://www.unesco.org/en/iggp/tabas-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/tabas-unesco-global-geopark",
+   "area_ha": 2277100.0,
+   "year": 2023,
+   "lat": 33.5962283,
+   "lon": 56.9249087,
+   "geocode_query": "Tabas"
   },
   {
    "name": "Burren & Cliffs of Moher",
    "countries": [
     "Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/burren-and-cliffs-moher-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/burren-and-cliffs-moher-unesco-global-geopark",
+   "area_ha": 53000.0,
+   "year": 2015,
+   "lat": 53.9385818,
+   "lon": -9.3298461,
+   "geocode_query": "Burren"
   },
   {
    "name": "Copper Coast",
    "countries": [
     "Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/copper-coast-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/copper-coast-unesco-global-geopark",
+   "area_ha": 9140.0,
+   "year": 2015,
+   "lat": 52.1424983,
+   "lon": -7.3649808,
+   "geocode_query": "Copper Coast Geopark, Ireland"
   },
   {
    "name": "Cuilcagh Lakelands",
@@ -960,567 +1627,958 @@
     "United Kingdom of Great Britain and Northern Ireland"
    ],
    "url": "https://www.unesco.org/en/iggp/cuilcagh-lakelands-unesco-global-geopark",
-   "note": "formerly Marble Arch Cave"
+   "note": "formerly Marble Arch Cave",
+   "area_ha": 178100.0,
+   "year": 2015,
+   "lat": 54.2910832,
+   "lon": -7.8782493,
+   "geocode_query": "Cuilcagh Lakelands Geopark, Ireland"
   },
   {
    "name": "Joyce Country and Western Lakes",
    "countries": [
     "Ireland"
    ],
-   "url": null
+   "url": null,
+   "lat": 53.544902,
+   "lon": -9.365147,
+   "geocode_query": "Joyce Country"
   },
   {
    "name": "Adamello-Brenta",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/adamello-brenta-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/adamello-brenta-unesco-global-geopark",
+   "area_ha": 118800.0,
+   "year": 2015,
+   "lat": 46.1816352,
+   "lon": 10.6619924,
+   "geocode_query": "Adamello-Brenta, Italy"
   },
   {
    "name": "Alpi Apuane",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/apuan-alps-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/apuan-alps-unesco-global-geopark",
+   "area_ha": 49400.0,
+   "year": 2015,
+   "lat": 44.0613167,
+   "lon": 10.2788792,
+   "geocode_query": "Alpi Apuane, Italy"
   },
   {
    "name": "Aspromonte",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/aspromonte-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/aspromonte-unesco-global-geopark",
+   "area_ha": 64541.0,
+   "year": 2021,
+   "lat": 45.6215403,
+   "lon": 11.3614413,
+   "geocode_query": "Aspromonte, Italy"
   },
   {
    "name": "Beigua",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/beigua-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/beigua-unesco-global-geopark",
+   "area_ha": 43247.0,
+   "year": 2015,
+   "lat": 44.4790398,
+   "lon": 8.6717374,
+   "geocode_query": "Beigua, Italy"
   },
   {
    "name": "Cilento, Vallo di Diano e Alburni",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/cilento-vallo-di-diano-e-alburni-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/cilento-vallo-di-diano-e-alburni-unesco-global-geopark",
+   "area_ha": 181000.0,
+   "year": 2015,
+   "lat": 40.259204,
+   "lon": 15.075756,
+   "geocode_query": "Cilento"
   },
   {
    "name": "Madonie",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/madonie-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/madonie-unesco-global-geopark",
+   "area_ha": 161800.0,
+   "year": 2015,
+   "lat": 37.899044,
+   "lon": 14.0347111,
+   "geocode_query": "Madonie, Italy"
   },
   {
    "name": "Maiella",
    "countries": [
     "Italy"
    ],
-   "url": null
+   "url": null,
+   "lat": 41.4836562,
+   "lon": 14.4612683,
+   "geocode_query": "Maiella, Italy"
   },
   {
    "name": "MurGEopark",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/murgeopark-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/murgeopark-unesco-global-geopark",
+   "area_ha": 255000.0,
+   "year": 2025,
+   "lat": 40.95,
+   "lon": 16.45,
+   "geocode_query": "manual"
   },
   {
    "name": "Pollino",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/pollino-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/pollino-unesco-global-geopark",
+   "area_ha": 192500.0,
+   "year": 2015,
+   "lat": 45.9761482,
+   "lon": 8.6129406,
+   "geocode_query": "Pollino, Italy"
   },
   {
    "name": "Rocca di Cerere",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/rocca-di-cerere-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/rocca-di-cerere-unesco-global-geopark",
+   "area_ha": 129800.0,
+   "year": 2015,
+   "lat": 37.5693351,
+   "lon": 14.2889217,
+   "geocode_query": "Rocca di Cerere, Italy"
   },
   {
    "name": "Sesia Val Grande",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/sesia-val-grande-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sesia-val-grande-unesco-global-geopark",
+   "area_ha": 220200.0,
+   "year": 2015,
+   "lat": 45.95,
+   "lon": 8.3,
+   "geocode_query": "manual"
   },
   {
    "name": "Tuscan Mining Park",
    "countries": [
     "Italy"
    ],
-   "url": "https://www.unesco.org/en/iggp/tuscan-mining-park-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/tuscan-mining-park-unesco-global-geopark",
+   "area_ha": 108700.0,
+   "year": 2015,
+   "lat": 43.0860396,
+   "lon": 10.8181591,
+   "geocode_query": "Tuscan Mining Park, Italy"
   },
   {
    "name": "Aso",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/aso-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/aso-unesco-global-geopark",
+   "area_ha": 119800.0,
+   "year": 2015,
+   "lat": 32.9524903,
+   "lon": 131.1214674,
+   "geocode_query": "Aso, Japan"
   },
   {
    "name": "Hakusan Tedorigawa",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/hakusan-tedorigawa-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/hakusan-tedorigawa-unesco-global-geopark",
+   "area_ha": 75493.0,
+   "year": 2023,
+   "lat": 36.264979,
+   "lon": 136.6449364,
+   "geocode_query": "Hakusan Tedorigawa"
   },
   {
    "name": "Itoigawa",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/itoigawa-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/itoigawa-unesco-global-geopark",
+   "area_ha": 74624.0,
+   "year": 2015,
+   "lat": 37.0431702,
+   "lon": 137.8615283,
+   "geocode_query": "Itoigawa Geopark, Japan"
   },
   {
    "name": "Izu Peninsula",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/izu-peninsula-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/izu-peninsula-unesco-global-geopark",
+   "area_ha": 202700.0,
+   "year": 2018,
+   "lat": 35.007719,
+   "lon": 139.0859221,
+   "geocode_query": "Izu Peninsula Geopark, Japan"
   },
   {
    "name": "Miné-Akiyoshidai Karst Plateau",
    "countries": [
     "Japan"
    ],
-   "url": null
+   "url": null,
+   "lat": 34.1667992,
+   "lon": 131.2062283,
+   "geocode_query": "Miné"
   },
   {
    "name": "Mt. Apoi",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/mt-apoi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mt-apoi-unesco-global-geopark",
+   "area_ha": 36430.0,
+   "year": 2015,
+   "lat": 42.1078829,
+   "lon": 143.0256734,
+   "geocode_query": "Mt. Apoi, Japan"
   },
   {
    "name": "Muroto",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/muroto-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/muroto-unesco-global-geopark",
+   "area_ha": 14822.0,
+   "year": 2015,
+   "lat": 33.2992584,
+   "lon": 134.1867504,
+   "geocode_query": "Muroto Geopark, Japan"
   },
   {
    "name": "Oki Islands",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/oki-islands-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/oki-islands-unesco-global-geopark",
+   "area_ha": 67350.0,
+   "year": 2015,
+   "lat": 34.2440216,
+   "lon": 130.1044577,
+   "geocode_query": "Oki Islands, Japan"
   },
   {
    "name": "San'in Kaigan",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/sanin-kaigan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sanin-kaigan-unesco-global-geopark",
+   "area_ha": 245844.0,
+   "year": 2015,
+   "lat": 35.7414704,
+   "lon": 135.1107806,
+   "geocode_query": "San'in Kaigan Geopark, Japan"
   },
   {
    "name": "Toya - Usu",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/toya-usu-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/toya-usu-unesco-global-geopark",
+   "area_ha": 106400.0,
+   "year": 2015,
+   "lat": 42.6257611,
+   "lon": 140.7995501,
+   "geocode_query": "Toya - Usu Geopark, Japan"
   },
   {
    "name": "Unzen Volcanic Area",
    "countries": [
     "Japan"
    ],
-   "url": "https://www.unesco.org/en/iggp/unzen-volcanic-area-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/unzen-volcanic-area-unesco-global-geopark",
+   "area_ha": 45952.0,
+   "year": 2015,
+   "lat": 32.7392627,
+   "lon": 130.3672484,
+   "geocode_query": "Unzen Volcanic Area Geopark, Japan"
   },
   {
    "name": "Mëllerdall",
    "countries": [
     "Luxembourg"
    ],
-   "url": "https://www.unesco.org/en/iggp/mellerdall-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mellerdall-unesco-global-geopark",
+   "area_ha": 25600.0,
+   "year": 2022,
+   "lat": 49.8101562,
+   "lon": 6.4178769,
+   "geocode_query": "Mëllerdall Geopark, Luxembourg"
   },
   {
    "name": "Kinabalu",
    "countries": [
     "Malaysia"
    ],
-   "url": "https://www.unesco.org/en/iggp/kinabalu-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/kinabalu-unesco-global-geopark",
+   "area_ha": 475000.0,
+   "year": 2023,
+   "lat": 5.9780066,
+   "lon": 116.0728988,
+   "geocode_query": "Kinabalu, Malaysia"
   },
   {
    "name": "Langkawi",
    "countries": [
     "Malaysia"
    ],
-   "url": "https://www.unesco.org/en/iggp/langkawi-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/langkawi-unesco-global-geopark",
+   "area_ha": 92000.0,
+   "year": 2015,
+   "lat": 6.4048356,
+   "lon": 99.8576696,
+   "geocode_query": "Langkawi Geopark, Malaysia"
   },
   {
    "name": "Lenggong",
    "countries": [
     "Malaysia"
    ],
-   "url": null
+   "url": null,
+   "lat": 5.107897,
+   "lon": 100.9676758,
+   "geocode_query": "Lenggong Geopark, Malaysia"
   },
   {
    "name": "Sarawak Delta",
    "countries": [
     "Malaysia"
    ],
-   "url": null
+   "url": null,
+   "lat": 2.3057311,
+   "lon": 111.8238973,
+   "geocode_query": "Sarawak Delta"
   },
   {
    "name": "Comarca Minera, Hidalgo",
    "countries": [
     "Mexico"
    ],
-   "url": "https://www.unesco.org/en/iggp/comarca-minera-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/comarca-minera-unesco-global-geopark",
+   "area_ha": 184800.0,
+   "year": 2017,
+   "lat": 20.15,
+   "lon": -98.7,
+   "geocode_query": "manual"
   },
   {
    "name": "Mixteca Alta, Oaxaca",
    "countries": [
     "Mexico"
    ],
-   "url": "https://www.unesco.org/en/iggp/mixteca-alta-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mixteca-alta-unesco-global-geopark",
+   "area_ha": 41540.0,
+   "year": 2017,
+   "lat": 17.8084278,
+   "lon": -97.8151395,
+   "geocode_query": "Mixteca Alta, Oaxaca, Mexico"
   },
   {
    "name": "M'Goun",
    "countries": [
     "Morocco"
    ],
-   "url": "https://www.unesco.org/en/iggp/mgoun-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mgoun-unesco-global-geopark",
+   "area_ha": 573000.0,
+   "year": 2015,
+   "lat": 31.5090927,
+   "lon": -6.4441533,
+   "geocode_query": "M'Goun, Morocco"
   },
   {
    "name": "De Hondsrug",
    "countries": [
     "Netherlands (Kingdom of the)"
    ],
-   "url": "https://www.unesco.org/en/iggp/de-hondsrug-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/de-hondsrug-unesco-global-geopark",
+   "area_ha": 100000.0,
+   "year": 2015,
+   "lat": 52.8197493,
+   "lon": 6.9225355,
+   "geocode_query": "De Hondsrug"
   },
   {
    "name": "Waitaki Whitestone",
    "countries": [
     "New Zealand"
    ],
-   "url": "https://www.unesco.org/en/iggp/waitaki-whitestone-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/waitaki-whitestone-unesco-global-geopark",
+   "area_ha": 721400.0,
+   "year": 2023,
+   "lat": -45.0702062,
+   "lon": 170.9840489,
+   "geocode_query": "Waitaki Whitestone"
   },
   {
    "name": "Gea Norvegica",
    "countries": [
     "Norway"
    ],
-   "url": "https://www.unesco.org/en/iggp/gea-norvegica-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/gea-norvegica-unesco-global-geopark",
+   "area_ha": 445000.0,
+   "year": 2015,
+   "lat": 58.8698573,
+   "lon": 9.4097924,
+   "geocode_query": "Gea Norvegica Geopark, Norway"
   },
   {
    "name": "Magma",
    "countries": [
     "Norway"
    ],
-   "url": "https://www.unesco.org/en/iggp/magma-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/magma-unesco-global-geopark",
+   "area_ha": 232900.0,
+   "year": 2015,
+   "lat": 58.3484369,
+   "lon": 6.3315482,
+   "geocode_query": "Magma Geopark, Norway"
   },
   {
    "name": "Sunnhordland",
    "countries": [
     "Norway"
    ],
-   "url": "https://www.unesco.org/en/iggp/sunnhordland-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sunnhordland-unesco-global-geopark",
+   "area_ha": 448000.0,
+   "year": 2023,
+   "lat": 59.7810997,
+   "lon": 5.5020794,
+   "geocode_query": "Sunnhordland, Norway"
   },
   {
    "name": "The Fjord Coast",
    "countries": [
     "Norway"
    ],
-   "url": "https://www.unesco.org/en/iggp/fjord-coast-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/fjord-coast-unesco-global-geopark",
+   "area_ha": 450000.0,
+   "year": 2025,
+   "lat": 61.8,
+   "lon": 5.3,
+   "geocode_query": "manual"
   },
   {
    "name": "Trollfjell",
    "countries": [
     "Norway"
    ],
-   "url": "https://www.unesco.org/en/iggp/trollfjell-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/trollfjell-unesco-global-geopark",
+   "area_ha": 1008200.0,
+   "year": 2019,
+   "lat": 65.1054773,
+   "lon": 11.6968966,
+   "geocode_query": "Trollfjell Geopark, Norway"
   },
   {
    "name": "Rio Coco",
    "countries": [
     "Nicaragua"
    ],
-   "url": "https://www.unesco.org/en/iggp/rio-coco-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/rio-coco-unesco-global-geopark",
+   "area_ha": 95400.0,
+   "year": 2020,
+   "lat": 14.3007699,
+   "lon": -85.1529597,
+   "geocode_query": "Rio Coco, Nicaragua"
   },
   {
    "name": "Colca y Volcanes de Andagua",
    "countries": [
     "Peru"
    ],
-   "url": "https://www.unesco.org/en/iggp/colca-y-volcanes-de-andagua-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/colca-y-volcanes-de-andagua-unesco-global-geopark",
+   "area_ha": 658243.0,
+   "year": 2019,
+   "lat": -15.6,
+   "lon": -72.0,
+   "geocode_query": "manual"
   },
   {
    "name": "Bohol Island",
    "countries": [
     "Philippines"
    ],
-   "url": "https://www.unesco.org/en/iggp/bohol-island-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/bohol-island-unesco-global-geopark",
+   "area_ha": 880825.0,
+   "year": 2023,
+   "lat": 11.5865764,
+   "lon": 124.9189142,
+   "geocode_query": "Bohol Island, Philippines"
   },
   {
    "name": "Holy Cross Mountains",
    "countries": [
     "Poland"
    ],
-   "url": "https://www.unesco.org/en/iggp/holy-cross-mountains-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/holy-cross-mountains-unesco-global-geopark",
+   "area_ha": 52600.0,
+   "year": 2021,
+   "lat": 50.87,
+   "lon": 20.85,
+   "geocode_query": "manual"
   },
   {
    "name": "Land of Extinct Volcanoes",
    "countries": [
     "Poland"
    ],
-   "url": "https://www.unesco.org/en/iggp/land-extinct-volcanoes-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/land-extinct-volcanoes-unesco-global-geopark",
+   "area_ha": 126275.0,
+   "year": 2024,
+   "lat": 51.05,
+   "lon": 16.0,
+   "geocode_query": "manual"
   },
   {
    "name": "Algarvensis",
    "countries": [
     "Portugal"
    ],
-   "url": null
+   "url": null,
+   "lat": 37.2,
+   "lon": -8.2,
+   "geocode_query": "manual"
   },
   {
    "name": "Arouca",
    "countries": [
     "Portugal"
    ],
-   "url": "https://www.unesco.org/en/iggp/arouca-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/arouca-unesco-global-geopark",
+   "area_ha": 32800.0,
+   "year": 2015,
+   "lat": 40.930343,
+   "lon": -8.2730535,
+   "geocode_query": "Arouca Geopark, Portugal"
   },
   {
    "name": "Azores",
    "countries": [
     "Portugal"
    ],
-   "url": "https://www.unesco.org/en/iggp/azores-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/azores-unesco-global-geopark",
+   "area_ha": 1288400.0,
+   "year": 2015,
+   "lat": 37.8429353,
+   "lon": -25.7636167,
+   "geocode_query": "Azores Geopark, Portugal"
   },
   {
    "name": "Estrela",
    "countries": [
     "Portugal"
    ],
-   "url": "https://www.unesco.org/en/iggp/estrela-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/estrela-unesco-global-geopark",
+   "area_ha": 221600.0,
+   "year": 2020,
+   "lat": 38.7108223,
+   "lon": -9.1596848,
+   "geocode_query": "Estrela, Portugal"
   },
   {
    "name": "Naturtejo",
    "countries": [
     "Portugal"
    ],
-   "url": "https://www.unesco.org/en/iggp/naturtejo-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/naturtejo-unesco-global-geopark",
+   "area_ha": 506700.0,
+   "year": 2015,
+   "lat": 39.8,
+   "lon": -7.35,
+   "geocode_query": "manual"
   },
   {
    "name": "Oeste",
    "countries": [
     "Portugal"
    ],
-   "url": "https://www.unesco.org/en/iggp/oeste-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/oeste-unesco-global-geopark",
+   "area_ha": 115400.0,
+   "year": 2024,
+   "lat": 39.3315979,
+   "lon": -9.1786393,
+   "geocode_query": "Oeste, Portugal"
   },
   {
    "name": "Terras de Cavaleiros",
    "countries": [
     "Portugal"
    ],
-   "url": "https://www.unesco.org/en/iggp/terras-de-cavaleiros-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/terras-de-cavaleiros-unesco-global-geopark",
+   "area_ha": 70000.0,
+   "year": 2015,
+   "lat": 41.55,
+   "lon": -6.95,
+   "geocode_query": "manual"
   },
   {
    "name": "Cheongsong",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/cheongsong-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/cheongsong-unesco-global-geopark",
+   "area_ha": 84606.0,
+   "year": 2017,
+   "lat": 36.4358,
+   "lon": 129.0571,
+   "geocode_query": "Cheongsong, Republic of Korea"
   },
   {
    "name": "Danyang",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/danyang-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/danyang-unesco-global-geopark",
+   "area_ha": 78100.0,
+   "year": 2025,
+   "lat": 36.9848,
+   "lon": 128.3659,
+   "geocode_query": "Danyang, Republic of Korea"
   },
   {
    "name": "Gyeongbuk Donghaean",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/gyeongbuk-donghaean-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/gyeongbuk-donghaean-unesco-global-geopark",
+   "area_ha": 269300.0,
+   "year": 2025,
+   "lat": 35.7610034,
+   "lon": 129.4925225,
+   "geocode_query": "Gyeongbuk Donghaean"
   },
   {
    "name": "Hantangang",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/hantangang-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/hantangang-unesco-global-geopark",
+   "area_ha": 116561.0,
+   "year": 2020,
+   "lat": 38.1998666,
+   "lon": 127.2758704,
+   "geocode_query": "Hantangang, Republic of Korea"
   },
   {
    "name": "Jeju Island",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/jeju-island-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/jeju-island-unesco-global-geopark",
+   "area_ha": 185000.0,
+   "year": 2015,
+   "lat": 33.3803475,
+   "lon": 126.5482545,
+   "geocode_query": "Jeju Island, Republic of Korea"
   },
   {
    "name": "Jeonbuk West Coast",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/jeonbuk-west-coast-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/jeonbuk-west-coast-unesco-global-geopark",
+   "area_ha": 189300.0,
+   "year": 2023,
+   "lat": 35.55,
+   "lon": 126.55,
+   "geocode_query": "manual"
   },
   {
    "name": "Mudeungsan",
    "countries": [
     "Republic of Korea"
    ],
-   "url": "https://www.unesco.org/en/iggp/mudeungsan-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mudeungsan-unesco-global-geopark",
+   "area_ha": 105136.0,
+   "year": 2018,
+   "lat": 35.1244369,
+   "lon": 127.0090773,
+   "geocode_query": "Mudeungsan, Republic of Korea"
   },
   {
    "name": "Buzău Land",
    "countries": [
     "Romania"
    ],
-   "url": "https://www.unesco.org/en/iggp/buzau-land-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/buzau-land-unesco-global-geopark",
+   "area_ha": 103600.0,
+   "year": 2022,
+   "lat": 45.2143048,
+   "lon": 26.7478238,
+   "geocode_query": "Buzău Land"
   },
   {
    "name": "Haţeg",
    "countries": [
     "Romania"
    ],
-   "url": "https://www.unesco.org/en/iggp/hateg-country-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/hateg-country-unesco-global-geopark",
+   "area_ha": 112400.0,
+   "year": 2015,
+   "lat": 45.6104474,
+   "lon": 22.949396,
+   "geocode_query": "Haţeg, Romania"
   },
   {
    "name": "Toratau",
    "countries": [
     "Russian Federation"
    ],
-   "url": null
+   "url": null,
+   "lat": 53.5546934,
+   "lon": 56.0976425,
+   "geocode_query": "Toratau, Russian Federation"
   },
   {
    "name": "Yangan-Tau",
    "countries": [
     "Russian Federation"
    ],
-   "url": "https://www.unesco.org/en/iggp/yangan-tau-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/yangan-tau-unesco-global-geopark",
+   "area_ha": 177400.0,
+   "year": 2020,
+   "lat": 55.2345715,
+   "lon": 58.3075166,
+   "geocode_query": "Yangan-Tau Geopark, Russian Federation"
   },
   {
    "name": "North Riyadh",
    "countries": [
     "Saudi Arabia"
    ],
-   "url": "https://www.unesco.org/en/iggp/north-riyadh-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/north-riyadh-unesco-global-geopark",
+   "area_ha": 322100.0,
+   "year": 2025,
+   "lat": 24.769382,
+   "lon": 46.6048893,
+   "geocode_query": "North Riyadh, Saudi Arabia"
   },
   {
    "name": "Salma",
    "countries": [
     "Saudi Arabia"
    ],
-   "url": "https://www.unesco.org/en/iggp/salma-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/salma-unesco-global-geopark",
+   "area_ha": 314500.0,
+   "year": 2025,
+   "lat": 17.3466162,
+   "lon": 43.1253461,
+   "geocode_query": "Salma, Saudi Arabia"
   },
   {
    "name": "Djerdap",
    "countries": [
     "Serbia"
    ],
-   "url": "https://www.unesco.org/en/iggp/djerdap-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/djerdap-unesco-global-geopark",
+   "area_ha": 133000.0,
+   "year": 2020,
+   "lat": 44.5555097,
+   "lon": 21.9694277,
+   "geocode_query": "Djerdap, Serbia"
   },
   {
    "name": "Idrija",
    "countries": [
     "Slovenia"
    ],
-   "url": "https://www.unesco.org/en/iggp/idrija-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/idrija-unesco-global-geopark",
+   "area_ha": 29370.0,
+   "year": 2015,
+   "lat": 46.0007758,
+   "lon": 14.0200121,
+   "geocode_query": "Idrija Geopark, Slovenia"
   },
   {
    "name": "Basque Coast",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/basque-coast-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/basque-coast-unesco-global-geopark",
+   "area_ha": 8900.0,
+   "year": 2015,
+   "lat": 43.29,
+   "lon": -2.25,
+   "geocode_query": "manual"
   },
   {
    "name": "Cabo de Gata-Níjar",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/cabo-de-gata-nijar-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/cabo-de-gata-nijar-unesco-global-geopark",
+   "area_ha": 49512.0,
+   "year": 2015,
+   "lat": 37.356631,
+   "lon": -2.0370162,
+   "geocode_query": "Cabo de Gata-Níjar, Spain"
   },
   {
    "name": "Cabo Ortegal",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/cabo-ortegal-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/cabo-ortegal-unesco-global-geopark",
+   "area_ha": 79972.0,
+   "year": 2023,
+   "lat": 43.7736728,
+   "lon": -7.8685317,
+   "geocode_query": "Cabo Ortegal, Spain"
   },
   {
    "name": "Calatrava Volcanoes. Ciudad Real",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/calatrava-volcanoes-ciudad-real-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/calatrava-volcanoes-ciudad-real-unesco-global-geopark",
+   "area_ha": 438371.0,
+   "year": 2024,
+   "lat": 38.8348333,
+   "lon": -3.8548947,
+   "geocode_query": "Calatrava Volcanoes. Ciudad Real, Spain"
   },
   {
    "name": "Central Catalonia",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/central-catalonia-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/central-catalonia-unesco-global-geopark",
+   "area_ha": 131720.0,
+   "year": 2015,
+   "lat": 41.8761986,
+   "lon": 1.9767727,
+   "geocode_query": "Central Catalonia, Spain"
   },
   {
    "name": "Costa Quebrada",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/costa-quebrada-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/costa-quebrada-unesco-global-geopark",
+   "area_ha": 34500.0,
+   "year": 2025,
+   "lat": 43.4719805,
+   "lon": -3.9243891,
+   "geocode_query": "Costa Quebrada, Spain"
   },
   {
    "name": "Courel Mountains",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/courel-mountains-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/courel-mountains-unesco-global-geopark",
+   "area_ha": 57800.0,
+   "year": 2019,
+   "lat": 42.6,
+   "lon": -7.1,
+   "geocode_query": "manual"
   },
   {
    "name": "El Hierro",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/el-hierro-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/el-hierro-unesco-global-geopark",
+   "area_ha": 37950.0,
+   "year": 2015,
+   "lat": 27.7435084,
+   "lon": -18.0381796,
+   "geocode_query": "El Hierro, Spain"
   },
   {
    "name": "Granada",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/granada-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/granada-unesco-global-geopark",
+   "area_ha": 472200.0,
+   "year": 2020,
+   "lat": 37.6065413,
+   "lon": -2.6752595,
+   "geocode_query": "Granada Geopark, Spain"
   },
   {
    "name": "Lanzarote and Chinijo Islands",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/lanzarote-and-chinijo-islands-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/lanzarote-and-chinijo-islands-unesco-global-geopark",
+   "area_ha": 250000.0,
+   "year": 2015,
+   "lat": 29.0397081,
+   "lon": -13.6362916,
+   "geocode_query": "Lanzarote"
   },
   {
    "name": "Las Loras",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/las-loras-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/las-loras-unesco-global-geopark",
+   "area_ha": 95076.0,
+   "year": 2017,
+   "lat": 38.0754211,
+   "lon": -4.2717575,
+   "geocode_query": "Las Loras, Spain"
   },
   {
    "name": "Maestrazgo",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/maestrazgo-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/maestrazgo-unesco-global-geopark",
+   "area_ha": 262200.0,
+   "year": 2020,
+   "lat": 40.6414466,
+   "lon": -0.4995674,
+   "geocode_query": "Maestrazgo, Spain"
   },
   {
    "name": "Molina-Alto Tajo",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/molina-alto-tajo-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/molina-alto-tajo-unesco-global-geopark",
+   "area_ha": 430859.0,
+   "year": 2015,
+   "lat": 40.7853101,
+   "lon": -1.9985344,
+   "geocode_query": "Molina-Alto Tajo Geopark, Spain"
   },
   {
    "name": "Origens",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/origens-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/origens-unesco-global-geopark",
+   "area_ha": 204000.0,
+   "year": 2018,
+   "lat": 42.1237042,
+   "lon": 3.136564,
+   "geocode_query": "Origens, Spain"
   },
   {
    "name": "Sierra Morena de Sevilla",
@@ -1528,63 +2586,106 @@
     "Spain"
    ],
    "url": "https://www.unesco.org/en/iggp/sierra-morena-de-sevilla-unesco-global-geopark",
-   "note": "formerly Sierra Norte de Sevilla UNESCO Global Geopark"
+   "note": "formerly Sierra Norte de Sevilla UNESCO Global Geopark",
+   "area_ha": 177484.0,
+   "year": 2015,
+   "lat": 37.3693772,
+   "lon": -5.9704056,
+   "geocode_query": "Sierra Morena de Sevilla, Spain"
   },
   {
    "name": "Sierras Subbéticas",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/sierras-subbeticas-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sierras-subbeticas-unesco-global-geopark",
+   "area_ha": 32056.0,
+   "year": 2015,
+   "lat": 37.4384749,
+   "lon": -4.3363536,
+   "geocode_query": "Sierras Subbéticas, Spain"
   },
   {
    "name": "Sobrarbe-Pirineos",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/sobrarbe-pirineos-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/sobrarbe-pirineos-unesco-global-geopark",
+   "area_ha": 220300.0,
+   "year": 2015,
+   "lat": 42.4933802,
+   "lon": 0.0710545,
+   "geocode_query": "Sobrarbe-Pirineos, Spain"
   },
   {
    "name": "Villuercas Ibores Jara",
    "countries": [
     "Spain"
    ],
-   "url": "https://www.unesco.org/en/iggp/villuercas-ibores-jara-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/villuercas-ibores-jara-unesco-global-geopark",
+   "area_ha": 254440.0,
+   "year": 2015,
+   "lat": 39.4822666,
+   "lon": -5.302083,
+   "geocode_query": "Villuercas Ibores Jara, Spain"
   },
   {
    "name": "Platåbergens",
    "countries": [
     "Sweden"
    ],
-   "url": "https://www.unesco.org/en/iggp/platabergens-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/platabergens-unesco-global-geopark",
+   "area_ha": 369000.0,
+   "year": 2022,
+   "lat": 58.4941444,
+   "lon": 13.7440349,
+   "geocode_query": "Platåbergens Geopark, Sweden"
   },
   {
    "name": "Ngorongoro Lengai",
    "countries": [
     "Tanzania"
    ],
-   "url": "https://www.unesco.org/en/iggp/ngorongoro-lengai-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/ngorongoro-lengai-unesco-global-geopark",
+   "area_ha": 1200000.0,
+   "year": 2018,
+   "lat": -2.7526248,
+   "lon": 35.8952409,
+   "geocode_query": "Ngorongoro Lengai"
   },
   {
    "name": "Khorat",
    "countries": [
     "Thailand"
    ],
-   "url": "https://www.unesco.org/en/iggp/khorat-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/khorat-unesco-global-geopark",
+   "area_ha": 316738.0,
+   "year": 2023,
+   "lat": 14.9749389,
+   "lon": 102.0981358,
+   "geocode_query": "Khorat, Thailand"
   },
   {
    "name": "Satun",
    "countries": [
     "Thailand"
    ],
-   "url": "https://www.unesco.org/en/iggp/satun-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/satun-unesco-global-geopark",
+   "area_ha": 259700.0,
+   "year": 2018,
+   "lat": 7.0366682,
+   "lon": 99.9615397,
+   "geocode_query": "Satun, Thailand"
   },
   {
    "name": "Dahar",
    "countries": [
     "Tunisia"
    ],
-   "url": null
+   "url": null,
+   "lat": 33.0927957,
+   "lon": 10.3530901,
+   "geocode_query": "Dahar, Tunisia"
   },
   {
    "name": "Kula-Salihli",
@@ -1592,119 +2693,190 @@
     "Türkiye"
    ],
    "url": "https://www.unesco.org/en/iggp/kula-salihli-unesco-global-geopark",
-   "note": "formerly known as Kula Volcanic UGGp, extended and renamed in 2020"
+   "note": "formerly known as Kula Volcanic UGGp, extended and renamed in 2020",
+   "area_ha": 232000.0,
+   "year": 2015,
+   "lat": 38.2358751,
+   "lon": 39.6640818,
+   "geocode_query": "Kula-Salihli, Türkiye"
   },
   {
    "name": "Arran",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/arran-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/arran-unesco-global-geopark",
+   "area_ha": 94680.0,
+   "year": 2025,
+   "lat": 55.577451,
+   "lon": -5.2521609,
+   "geocode_query": "Arran, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "Black Country",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/black-country-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/black-country-unesco-global-geopark",
+   "area_ha": 35600.0,
+   "year": 2020,
+   "lat": 52.5019896,
+   "lon": -2.0209184,
+   "geocode_query": "Black Country, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "English Riviera",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/english-riviera-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/english-riviera-unesco-global-geopark",
+   "area_ha": 10400.0,
+   "year": 2015,
+   "lat": 50.45,
+   "lon": -3.55,
+   "geocode_query": "manual"
   },
   {
    "name": "Fforest Fawr",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/fforest-fawr-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/fforest-fawr-unesco-global-geopark",
+   "area_ha": 76310.0,
+   "year": 2015,
+   "lat": 51.8524086,
+   "lon": -3.6008021,
+   "geocode_query": "Fforest Fawr, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "GeoMôn",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/geomon-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/geomon-unesco-global-geopark",
+   "area_ha": 180000.0,
+   "year": 2015,
+   "lat": 53.2207225,
+   "lon": -4.1982935,
+   "geocode_query": "GeoMôn Geopark, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "Mourne Gullion Strangford",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/mourne-gullion-strangford-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/mourne-gullion-strangford-unesco-global-geopark",
+   "area_ha": 196000.0,
+   "year": 2023,
+   "lat": 54.2363328,
+   "lon": -5.8914311,
+   "geocode_query": "Mourne Gullion Strangford Geopark, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "North Pennines AONB",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/north-pennines-aonb-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/north-pennines-aonb-unesco-global-geopark",
+   "area_ha": 198300.0,
+   "year": 2015,
+   "lat": 54.7026203,
+   "lon": -2.2215177,
+   "geocode_query": "North Pennines AONB, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "North-West Highlands",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/north-west-highlands-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/north-west-highlands-unesco-global-geopark",
+   "area_ha": 209337.0,
+   "year": 2015,
+   "lat": 51.3411698,
+   "lon": -2.6782872,
+   "geocode_query": "North-West Highlands"
   },
   {
    "name": "Shetland",
    "countries": [
     "United Kingdom of Great Britain and Northern Ireland"
    ],
-   "url": "https://www.unesco.org/en/iggp/shetland-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/shetland-unesco-global-geopark",
+   "area_ha": 146800.0,
+   "year": 2015,
+   "lat": 60.333333,
+   "lon": -1.333333,
+   "geocode_query": "Shetland, United Kingdom of Great Britain and Northern Ireland"
   },
   {
    "name": "Grutas del Palacio",
    "countries": [
     "Uruguay"
    ],
-   "url": "https://www.unesco.org/en/iggp/grutas-del-palacio-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/grutas-del-palacio-unesco-global-geopark",
+   "area_ha": 364100.0,
+   "year": 2015,
+   "lat": -33.280371,
+   "lon": -57.1444726,
+   "geocode_query": "Grutas del Palacio, Uruguay"
   },
   {
    "name": "Manantiales Serranos",
    "countries": [
     "Uruguay"
    ],
-   "url": null
+   "url": null,
+   "lat": -34.37,
+   "lon": -55.23,
+   "geocode_query": "manual"
   },
   {
    "name": "Dak Nong",
    "countries": [
     "Vietnam"
    ],
-   "url": "https://www.unesco.org/en/iggp/dak-nong-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/dak-nong-unesco-global-geopark",
+   "area_ha": 476000.0,
+   "year": 2020,
+   "lat": 12.2807367,
+   "lon": 107.742636,
+   "geocode_query": "Dak Nong, Vietnam"
   },
   {
    "name": "Dong Van Karst Plateau",
    "countries": [
     "Vietnam"
    ],
-   "url": "https://www.unesco.org/en/iggp/dong-van-karst-plateau-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/dong-van-karst-plateau-unesco-global-geopark",
+   "area_ha": 234500.0,
+   "year": 2015,
+   "lat": 23.25,
+   "lon": 105.25,
+   "geocode_query": "manual"
   },
   {
    "name": "Lang Son",
    "countries": [
     "Vietnam"
    ],
-   "url": "https://www.unesco.org/en/iggp/lang-son-unesco-global-geopark"
+   "url": "https://www.unesco.org/en/iggp/lang-son-unesco-global-geopark",
+   "area_ha": 484900.0,
+   "year": 2025,
+   "lat": 21.8487579,
+   "lon": 106.6140692,
+   "geocode_query": "Lang Son, Vietnam"
   },
   {
    "name": "Non nuoc Cao Bang",
    "countries": [
     "Vietnam"
    ],
-   "url": "https://www.unesco.org/en/iggp/non-nuoc-cao-bang-unesco-global-geopark"
-  },
-  {
-   "name": "Transnational",
-   "countries": [
-    "Vietnam"
-   ],
-   "url": null
+   "url": "https://www.unesco.org/en/iggp/non-nuoc-cao-bang-unesco-global-geopark",
+   "area_ha": 339000.0,
+   "year": 2018,
+   "lat": 22.7,
+   "lon": 106.2,
+   "geocode_query": "manual"
   }
  ]
 }

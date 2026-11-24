@@ -943,10 +943,10 @@
             const countryHit =
               !q ||
               exact.has(c) ||
-              c.name.toLowerCase().includes(q) ||
+              searchKey(c.name).includes(qn) ||
               (qn.length >= 4 && c.aliases.some((a) => searchKey(a).includes(qn))) ||
               r.name.toLowerCase().includes(q) ||
-              c.blurb.toLowerCase().includes(q) ||
+              searchKey(c.blurb).includes(qn) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             const matches = q && f.unesco !== "wh" ? factMatches(c, q) : [];
             const fests = festivalMatches(c, q, f.month);
@@ -967,9 +967,10 @@
               if (f.kind === "micronation" && !city.micronation) return false;
               if (!q || countryHit) return true;
               return (
-                city.name.toLowerCase().includes(q) ||
-                city.blurb.toLowerCase().includes(q) ||
-                (city.area && city.area.toLowerCase().includes(q)) ||
+                // Accents are ignored: "galapagos" finds Galápagos.
+                searchKey(city.name).includes(qn) ||
+                searchKey(city.blurb).includes(qn) ||
+                (city.area && searchKey(city.area).includes(qn)) ||
                 city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
                 matches.some((m) => m.place === city) ||
                 fests.some((m) => m.place === city) ||

@@ -17,7 +17,8 @@ import sys
 
 SOURCE = "https://www.unesco.org/en/iggp/geoparks"
 ENTRY = re.compile(r"(UNESCO )?Global Geopark|UGGp")
-END = "List of transnational UNESCO Global Geoparks"
+# The list by country ends at the headings of the separate transnational list.
+END = re.compile(r"^(List of )?[Tt]ransnational UNESCO Global Geoparks$")
 
 
 def split(s):
@@ -44,7 +45,8 @@ def lines_of(page):
     text = html.unescape(re.sub(r"<[^>]+>", "\n", re.sub(r"<(script|style).*?</\1>", "", seg, flags=re.S)))
     lines = [re.sub(r"\s+", " ", l).strip() for l in text.split("\n")]
     lines = [l for l in lines if l][3:]  # the heading and the note about asterisks
-    return lines[: lines.index(END)] if END in lines else lines, seg
+    stop = next((k for k, l in enumerate(lines) if END.match(l)), len(lines))
+    return lines[:stop], seg
 
 
 def parse(page):

@@ -198,11 +198,12 @@
       cityById[id].remote = kind;
     }
 
-    // UNESCO Global Geoparks and Biosphere Reserves (empty until their data is added).
+    // UNESCO Global Geoparks and Biosphere Reserves near each place (tools/unesco/link.js).
     for (const [key, field] of [["GEOPARKS", "geopark"], ["BIOSPHERES", "biosphere"]]) {
       for (const [id, site] of Object.entries(data[key] || {})) {
         if (!cityById[id]) throw new Error(`${key} entry ${id} matches no place`);
-        cityById[id][field] = site;
+        // A place near several sites lists them all: "Hong Kong" or ["A", "B"].
+        cityById[id][field] = [].concat(site).join(", ");
       }
     }
 

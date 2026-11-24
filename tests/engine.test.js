@@ -220,10 +220,25 @@ test("US National Park System and Parks Canada sites are loaded", () => {
   assert.equal(new Set(ca.map((x) => x.name)).size, ca.length, "no duplicate Canadian sites");
 });
 
-test("Global Geopark and Biosphere Reserve lists are ready but empty", () => {
-  assert.deepEqual(data.GEOPARKS, {});
-  assert.deepEqual(data.BIOSPHERES, {});
-  assert.ok(index.cities.every((c) => c.geopark === null && c.biosphere === null));
+test("UNESCO Global Geoparks and Biosphere Reserves link to nearby places", () => {
+  const fs = require("node:fs");
+  const geo = JSON.parse(fs.readFileSync(`${__dirname}/../tools/unesco/geoparks.json`, "utf8"));
+  const bio = JSON.parse(fs.readFileSync(`${__dirname}/../tools/unesco/biosphere-reserves.json`, "utf8"));
+  // UNESCO's own totals, and every site has a centre.
+  assert.equal(geo.count, geo.stated_total);
+  assert.equal(bio.count, bio.stated_total);
+  assert.ok(geo.geoparks.every((g) => typeof g.lat === "number") && bio.reserves.every((r) => typeof r.lat === "number"));
+  const withGeo = index.cities.filter((c) => c.geopark).length;
+  const withBio = index.cities.filter((c) => c.biosphere).length;
+  assert.ok(withGeo >= 150 && withBio >= 500, `${withGeo} geopark places, ${withBio} biosphere places`);
+  assert.match(index.cityById["es-lanzarote"].geopark, /Lanzarote and Chinijo Islands/);
+  assert.match(index.cityById["es-lanzarote"].biosphere, /Lanzarote/);
+  assert.match(index.cityById["us-yellowstone"].biosphere, /Yellowstone/);
+  assert.match(index.cityById["cn-zhangjiajie"].geopark, /Zhangjiajie/);
+  // Big cities far from any site stay unlabelled.
+  for (const id of ["us-new-york-city", "gb-london", "jp-tokyo"]) assert.ok(!index.cityById[id].geopark && !index.cityById[id].biosphere, id);
+  // A place near several sites lists them all.
+  assert.ok(Object.values(data.BIOSPHERES).some(Array.isArray));
   // An entry attaches to its place, and an unknown id is refused.
   const withSites = E.buildIndex({ ...data, GEOPARKS: { "ie-galway-connemara": "Test Geopark" }, BIOSPHERES: { "ie-dublin": "Test Reserve" } });
   assert.equal(withSites.cityById["ie-galway-connemara"].geopark, "Test Geopark");
