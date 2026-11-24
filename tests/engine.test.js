@@ -275,7 +275,8 @@ test("national parks are labelled on the places that hold them", () => {
   assert.ok(parks("us-fort-collins").includes("Rocky Mountain National Park"));
   assert.ok(parks("cl-torres-del-paine").length);
   assert.equal(parks("us-greeley").length, 0);
-  assert.equal(parks("us-new-york-city").length, 0);
+  // National monuments and recreation areas count too: the Statue of Liberty, Stonewall and Gateway.
+  assert.ok(parks("us-new-york-city").includes("Statue of Liberty National Monument"));
   assert.ok(index.cities.filter((c) => c.nationalParks.length).length > 100);
 });
 
@@ -397,7 +398,7 @@ test("US, Canada and Mexico parks reach their gateway places", () => {
   assert.deepEqual(np("mx-tulum"), ["Tulum National Park"]);
   assert.deepEqual(np("mx-sian-ka-an"), ["Sian Ka'an Biosphere Reserve"]);
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
-  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [45, 23, 25]);
+  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [109, 23, 25]);
 });
 
 test("Saint Pierre and Miquelon is a French territory near Canada", () => {
@@ -421,7 +422,7 @@ test("overseas territories and crown dependencies are complete", () => {
   assert.ok(index.cityById["pn-henderson-island"].unesco);
   assert.ok(index.cityById["sh-gough-and-inaccessible-islands"].unesco);
   assert.equal(index.cityById["gb-henderson-island"], undefined);
-  assert.deepEqual(index.cityById["vi-st-john"].nationalParks, ["Virgin Islands National Park"]);
+  assert.deepEqual(index.cityById["vi-st-john"].nationalParks, ["Virgin Islands National Park", "Virgin Islands Coral Reef National Monument"]);
 });
 
 test("Russia groups by federal district, and Crimea stays with Ukraine", () => {
@@ -646,4 +647,24 @@ test("Christmas markets are festivals marked market", () => {
   assert.ok(has("us-chicago", "Christkindlmarket"));
   // Other festivals stay unmarked.
   assert.equal(index.cityById["de-munich"].festivals.find((f) => f.name === "Oktoberfest").market, false);
+});
+
+test("national monuments, preserves, reserves, recreation areas, seashores and lakeshores carry the national park label", () => {
+  const np = (id) => index.cityById[id].nationalParks;
+  assert.ok(np("us-grand-canyon").includes("Walnut Canyon National Monument"));
+  assert.ok(np("us-san-francisco").includes("Muir Woods National Monument"));
+  assert.ok(np("us-san-francisco").includes("Golden Gate National Recreation Area"));
+  assert.ok(np("us-las-vegas").includes("Lake Mead National Recreation Area"));
+  assert.ok(np("us-pensacola").includes("Gulf Islands National Seashore"));
+  assert.ok(np("us-new-york-city").includes("Fire Island National Seashore"));
+  assert.ok(np("us-traverse-city-sleeping-bear-dunes").includes("Sleeping Bear Dunes National Lakeshore"));
+  assert.ok(np("us-twin-falls").includes("City of Rocks National Reserve"));
+  assert.ok(np("us-santa-fe").includes("Valles Caldera National Preserve"));
+  assert.ok(np("vi-st-croix").includes("Buck Island Reef National Monument"));
+  // All three National Lakeshores are listed.
+  const lake = index.countryById.us.sites.filter((s) => s.type === "National Lakeshore").map((s) => s.name);
+  assert.equal(lake.length, 3);
+  // A site more than about 1.5 hours from any place stays unlinked.
+  assert.ok(!index.cities.some((x) => x.nationalParks.includes("Mill Springs Battlefield National Monument")));
+  assert.ok(!index.cities.some((x) => x.nationalParks.includes("Noatak National Preserve")));
 });

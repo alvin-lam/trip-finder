@@ -310,6 +310,8 @@
   // Marks every place that is, or contains, a national park, from four sources: US and
   // Canadian park system sites, UNESCO site names, place names, and the country's
   // famous parks list.
+  const NP_SITE_TYPES = /^National (Park|Park Reserve|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)$/;
+
   function markNationalParks(countries, extra) {
     for (const c of countries) {
       // "Hawaii Volcanoes National Park" and "Hawaiʻi Volcanoes National Park", or a park and
@@ -326,7 +328,9 @@
         else if (name.length < city.nationalParks[i].length) city.nationalParks[i] = name;
       };
       for (const site of c.sites || []) {
-        if (site.type === "National Park" || site.type === "National Park Reserve") {
+        // National monuments, preserves, reserves, recreation areas, seashores and lakeshores
+        // carry the NATIONAL PARK label too.
+        if (NP_SITE_TYPES.test(site.type)) {
           for (const place of placesForSite(c, site)) add(place, site.name);
         }
       }

@@ -1119,10 +1119,14 @@
   // the data (they still label places with NATIONAL PARK) but are not search results.
   const HIDDEN_CA_SITES = /^National (Park|Park Reserve|Historic Site)$/;
   const HIDDEN_CA_PARKS = /National (Park|Park Reserve|Historic Site)\b/;
-  const UNTAGGED_PARK = /^National Park( Reserve| and Preserve)?$/;
+  const UNTAGGED_PARK = /^National (Park( Reserve| and Preserve)?|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)$/;
   // A park's own name without its designation, so "national park" alone does not list
   // every unlinked park: "Big Bend National Park" -> "big bend".
-  const ownName = (name) => name.replace(/\b(Marine )?National Park\b( Reserve| and Preserve)?/i, "").trim().toLowerCase();
+  const ownName = (name) =>
+    name
+      .replace(/\b(Marine )?National (Park|Monument|Preserve|Reserve|Historical Reserve|Recreation Area|Seashore|Lakeshore)\b( Reserve| and Preserve| and Historic Shrine)?/i, "")
+      .trim()
+      .toLowerCase();
   function siteMatches(c, q) {
     const out = [];
     for (const site of c.sites) {
