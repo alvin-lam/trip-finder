@@ -410,11 +410,13 @@ test("US, Canada and Mexico parks reach their gateway places", () => {
   const np = (id) => index.cityById[id].nationalParks;
   assert.ok(np("us-yellowstone").includes("Grand Teton National Park"));
   assert.deepEqual(np("ca-windsor"), ["Point Pelee National Park"]);
+  assert.deepEqual(np("ca-revelstoke"), ["Glacier National Park", "Mount Revelstoke National Park"]);
+  assert.deepEqual(np("us-glacier-national-park"), ["Glacier National Park"]);
   assert.deepEqual(np("mx-tulum"), ["Tulum National Park"]);
   assert.ok(np("mx-sian-ka-an").includes("Sian Ka'an Biosphere Reserve"));
   const tagged = (c) => index.countryById[c].cities.filter((x) => x.nationalParks.length).length;
   // Mexico's count includes CONANP's national parks, biosphere reserves and natural monuments.
-  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [112, 23, 62]);
+  assert.deepEqual([tagged("us"), tagged("ca"), tagged("mx")], [123, 33, 62]);
 });
 
 test("Saint Pierre and Miquelon is a French territory near Canada", () => {

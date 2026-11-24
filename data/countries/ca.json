@@ -78,6 +78,16 @@
     ["Writing-on-Stone (Áísínai'pi)","04040203",1,"Blackfoot rock art among sandstone hoodoos on the Milk River.",[6,7,8,9],{"area":"Alberta","temps":[0,2,6,13,18,22,26,26,21,13,6,1]}],
     ["Dawson City (Tr'ondëk-Klondike)","04132212",2,"Klondike Gold Rush boardwalks, a historic casino and the midnight sun.",[6,7,8],{"area":"Yukon","temps":[-22,-15,-4,8,16,22,23,20,13,0,-14,-19]}],
     ["Anticosti Island","11050303",1,"A wild Gulf of St. Lawrence island of canyons, waterfalls and white-tailed deer.",[7,8],{"area":"Quebec","temps":[-6,-6,-2,4,9,16,19,18,14,8,3,-4]}],
-    ["Whistler","01354533",4,"North America's largest ski resort,  with summer mountain biking and the Peak 2 Peak Gondola.",[1,2,3,7,8,9],{"area":"British Columbia","temps":[-1,1,5,10,15,19,23,23,18,10,3,-1]}]
+    ["Whistler","01354533",4,"North America's largest ski resort,  with summer mountain biking and the Peak 2 Peak Gondola.",[1,2,3,7,8,9],{"area":"British Columbia","temps":[-1,1,5,10,15,19,23,23,18,10,3,-1]}],
+    ["Tobermory","20141203",3,"Clear Georgian Bay water, shipwrecks and the Grotto.",[6,7,8,9],{"area":"Ontario","temps":[-3,-3,1,8,15,21,24,23,19,12,6,0]}],
+    ["Gaspé","11241202",2,"Sea cliffs, whales and the tip of the Gaspé Peninsula.",[6,7,8,9],{"area":"Quebec","temps":[-7,-6,-1,6,13,19,23,22,17,10,3,-4]}],
+    ["Revelstoke","00151412",2,"Deep powder, alpine meadows and Columbia River views.",[1,2,7,8,9],{"area":"British Columbia","temps":[-3,0,6,13,19,22,27,27,20,11,3,-3]}],
+    ["Waskesiu","10041203",2,"A beach town inside Prince Albert National Park's boreal lakes.",[6,7,8],{"area":"Saskatchewan","temps":[-13,-9,-2,8,16,20,23,22,15,7,-3,-11]}],
+    ["Marathon","00040201",1,"A Lake Superior town near rugged coastal hiking.",[7,8,9],{"area":"Ontario","temps":[-10,-8,-2,6,13,18,22,21,16,9,1,-6]}],
+    ["Wasagaming","10141203",2,"A lakeside resort village in Riding Mountain's forests.",[6,7,8],{"area":"Manitoba","temps":[-13,-9,-2,9,17,21,24,23,17,9,-2,-11]}],
+    ["Terra Nova","00041202",1,"Sheltered fjords, kayaking and boreal trails in Newfoundland.",[7,8,9],{"area":"Newfoundland and Labrador","temps":[-3,-4,0,6,12,17,22,21,17,10,5,0]}],
+    ["Havre-Saint-Pierre","01241202",1,"Sea-sculpted limestone monoliths along the Côte-Nord.",[7,8],{"area":"Quebec","temps":[-9,-8,-3,3,9,15,19,19,14,7,1,-6]}],
+    ["Tofino","40251213",4,"Surf beaches, storm watching and temperate rainforest.",[6,7,8,9],{"area":"British Columbia","temps":[8,9,10,12,15,17,19,19,18,14,10,8]}],
+    ["Happy Valley-Goose Bay","00140301",1,"A Labrador hub for the Mealy Mountains and the far north.",[7,8],{"area":"Newfoundland and Labrador","temps":[-13,-11,-5,3,11,18,21,20,14,6,-2,-10]}]
   ]
 }

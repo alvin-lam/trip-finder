@@ -431,6 +431,17 @@
     ["Sedona","02352435",4,"Red rock buttes,  vortex hikes and Jeep tours near Oak Creek Canyon.",[3,4,5,9,10,11],{"area":"Arizona","temps":[14,16,19,23,28,34,36,34,31,25,18,14]}],
     ["Monument Valley","03150413",3,"Towering sandstone buttes on Navajo land,  best seen from the Valley Drive.",[4,5,9,10],{"area":"Utah","temps":[7,10,15,19,25,31,34,32,27,20,12,7]}],
     ["Page & Antelope Canyon","12251523",4,"Light beams in slot canyons,  Horseshoe Bend and boating on Lake Powell.",[4,5,6,9,10],{"area":"Arizona","temps":[8,11,16,21,27,33,36,34,29,21,13,8]}],
-    ["Aspen","02454544",3,"World-class skiing,  summer hikes to the Maroon Bells and a glamorous mountain town.",[1,2,3,6,7,8,9],{"area":"Colorado","temps":[1,3,7,12,17,23,26,25,21,14,6,1]}]
+    ["Aspen","02454544",3,"World-class skiing,  summer hikes to the Maroon Bells and a glamorous mountain town.",[1,2,3,6,7,8,9],{"area":"Colorado","temps":[1,3,7,12,17,23,26,25,21,14,6,1]}],
+    ["Big Bend & Terlingua","00151301",2,"Desert canyons, the Rio Grande and dark night skies.",[2,3,4,10,11],{"area":"Texas","temps":[17,20,25,29,33,34,33,33,31,27,21,17]}],
+    ["Death Valley & Furnace Creek","00051302",3,"Salt flats, dunes and the hottest place on Earth.",[2,3,4,11],{"area":"California","temps":[19,23,28,33,38,43,47,46,41,33,25,18]}],
+    ["Great Basin & Baker","00051202",1,"Ancient bristlecone pines, caves and a quiet high desert.",[6,7,8,9],{"area":"Nevada","temps":[4,6,10,14,19,26,31,30,25,18,10,4]}],
+    ["Great Sand Dunes & Alamosa","00151302",2,"North America's tallest dunes below snowy peaks.",[5,6,9,10],{"area":"Colorado","temps":[0,4,10,15,20,26,28,27,23,17,8,1]}],
+    ["Isle Royale & Houghton","01141102",1,"A ferry to a roadless wilderness island in Lake Superior.",[7,8,9],{"area":"Michigan","temps":[-5,-3,2,9,17,22,25,24,19,12,4,-2]}],
+    ["Petrified Forest & Holbrook","00241212",2,"Rainbow fossil logs and the Painted Desert on Route 66.",[4,5,9,10],{"area":"Arizona","temps":[10,13,18,22,27,33,34,33,29,23,15,9]}],
+    ["Voyageurs & International Falls","00041202",1,"Lake country for houseboats, paddling and northern lights.",[6,7,8,9],{"area":"Minnesota","temps":[-11,-7,1,10,18,23,26,25,19,11,1,-8]}],
+    ["Seward","01351303",3,"Fjord cruises to glaciers and whales from Resurrection Bay.",[6,7,8],{"area":"Alaska","temps":[0,1,3,8,12,15,17,17,13,7,2,0]}],
+    ["Homer","01341212",2,"The Spit, halibut fishing and flights to see brown bears.",[6,7,8],{"area":"Alaska","temps":[-1,0,2,7,11,15,17,17,13,7,2,-1]}],
+    ["Bettles","00050501",1,"A tiny Arctic air hub for the Brooks Range wilderness.",[6,7,8],{"area":"Alaska","temps":[-20,-17,-10,1,12,20,21,17,9,-4,-15,-18]}],
+    ["Kotzebue","01140401",1,"An Inupiaq town above the Arctic Circle, gateway to dunes.",[6,7,8],{"area":"Alaska","temps":[-15,-15,-12,-5,4,11,15,13,8,-1,-8,-13]}]
   ]
 }
