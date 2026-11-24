@@ -65,3 +65,11 @@ test("Explore and every place have their own up-to-date page", () => {
   assert.equal(locs, index.cities.length + 2);
   assert.ok(!Object.values(files).some((b) => /—/.test(b)), "no em dashes in generated pages");
 });
+
+test("place pages name nearby parks in search data", () => {
+  const html = fs.readFileSync(path.join(__dirname, "..", "place", "us-big-bend-terlingua", "index.html"), "utf8");
+  assert.match(html, /<meta name="description" content="[^"]*Near Big Bend National Park\./);
+  const ld = JSON.parse(html.match(/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  assert.deepEqual(ld["@graph"][0].includesAttraction.map((a) => a.name), ["Big Bend National Park"]);
+  assert.equal(ld["@graph"][0].address.addressRegion, "Texas");
+});

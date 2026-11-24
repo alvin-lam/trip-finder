@@ -1,7 +1,7 @@
 {
   "name": "Trip Finder | All Trips Considered",
   "short_name": "Trip Finder",
-  "description": "Find where to travel next. Ranked destinations for your month, budget and interests, plus festivals, Pride events, national parks and World Heritage sites.",
+  "description": "Find where to travel next. Ranked places for your month, budget and interests, plus festivals, Pride, national parks, historic sites and World Heritage.",
   "id": "./",
   "start_url": "./",
   "scope": "./",

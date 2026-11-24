@@ -64,7 +64,7 @@ const crumbs = (items) => ({
 
 function explorePage() {
   const n = index.cities.length;
-  const description = `Browse ${fmt(n)} places in ${index.countries.length} countries and territories. Filter by region, month, interest, cost, festivals, Pride events, national parks and World Heritage.`;
+  const description = `Browse ${fmt(n)} places in ${index.countries.length} countries and territories. Filter by region, month, interest, cost, festivals, Pride events, Christmas markets, national parks, historic sites and World Heritage.`;
   const regions = index.regions
     .map((r) => `        <li>${esc(r.name)}: ${r.countries.length} destinations</li>`)
     .join("\n");
@@ -95,7 +95,11 @@ function placePage(city) {
   const url = `${SITE}place/${city.id}/`;
   const temps = city.temps || c.temps;
   const best = E.formatMonths(city.best);
-  const description = `${city.blurb} Best time to visit: ${best}.`;
+  // Name the best-known nearby attraction when it still fits a search result (160 characters).
+  const near1 = city.nationalParks[0] || city.unesco || city.historicSites[0];
+  const plain = `${city.blurb} Best time to visit: ${best}.`;
+  const withSight = near1 && `${city.blurb} Near ${near1}. Best time to visit: ${best}.`;
+  const description = withSight && withSight.length <= 160 ? withSight : plain;
   const where = [city.area, city.name === c.name ? "" : c.name, city.region.name].filter(Boolean).join(" · ");
   const facts = [
     `<li>Where: ${esc(where)}</li>`,
@@ -121,6 +125,13 @@ function placePage(city) {
     description: city.blurb,
     containedInPlace: { "@type": c.kind === "territory" ? "AdministrativeArea" : "Country", name: c.name },
   };
+  if (city.area) dest.address = { "@type": "PostalAddress", addressRegion: city.area, addressCountry: c.name };
+  const sights = [
+    ...city.nationalParks.map((n) => ["Park", n]),
+    ...(city.unesco ? [["LandmarksOrHistoricalBuildings", city.unesco]] : []),
+    ...city.historicSites.map((n) => ["LandmarksOrHistoricalBuildings", n]),
+  ];
+  if (sights.length) dest.includesAttraction = sights.map(([t, n]) => ({ "@type": ["TouristAttraction", t], name: n }));
   if (city.ll) dest.geo = { "@type": "GeoCoordinates", latitude: city.ll[0], longitude: city.ll[1] };
   return page({
     depth: 2,
