@@ -598,3 +598,37 @@ test("Brighton, Manchester, Gran Canaria and Sitges are listed with Pride events
   // Gran Canaria stays warm at night in winter.
   assert.ok(E.lowFor(c("es-gran-canaria"), 1) >= 15);
 });
+
+test("seasonal colors follow the local date, time zone and holidays", () => {
+  const at = (iso, zone) => E.seasonalScheme(new Date(iso), zone).id;
+  // Seasons flip south of the equator.
+  assert.equal(at("2026-11-24T12:00:00Z", "America/Los_Angeles"), "autumn");
+  assert.equal(at("2026-11-24T12:00:00Z", "Australia/Sydney"), "spring");
+  assert.equal(at("2026-07-15T12:00:00Z", "Europe/Berlin"), "summer");
+  assert.equal(at("2026-07-15T12:00:00Z", "America/Argentina/Buenos_Aires"), "winter");
+  assert.equal(at("2027-01-20T12:00:00Z", "Pacific/Auckland"), "summer");
+  // Holidays, on the visitor's own calendar date.
+  assert.equal(at("2026-12-25T12:00:00Z", "Australia/Sydney"), "christmas");
+  assert.equal(at("2026-12-31T20:00:00Z", "Pacific/Auckland"), "newyear"); // already 1 January there
+  assert.equal(at("2026-12-31T20:00:00Z", "America/Los_Angeles"), "newyear");
+  assert.equal(at("2026-12-28T12:00:00Z", "Europe/London"), "winter");
+  assert.equal(at("2026-02-14T12:00:00Z", "Europe/Paris"), "valentine");
+  assert.equal(at("2026-02-18T12:00:00Z", "Asia/Hong_Kong"), "lunar");
+  assert.equal(at("2026-03-17T12:00:00Z", "Europe/Dublin"), "stpatrick");
+  assert.equal(at("2026-04-05T12:00:00Z", "Europe/Rome"), "easter");
+  assert.equal(at("2027-03-28T12:00:00Z", "Europe/Rome"), "easter"); // Easter Sunday 2027
+  assert.equal(at("2026-06-20T12:00:00Z", "America/New_York"), "pride");
+  assert.equal(at("2026-10-31T12:00:00Z", "America/Chicago"), "halloween");
+  assert.equal(at("2026-11-08T12:00:00Z", "Asia/Kolkata"), "diwali");
+  // Every scheme has light and dark accents with enough contrast for text.
+  const lum = (h) => {
+    const [r, g, b] = [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  };
+  const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+  for (const [id, s] of Object.entries(E.SEASON_SCHEMES)) {
+    assert.ok(s.label && s.icon, id);
+    assert.ok(ratio(s.light, "#ffffff") >= 4.5 && ratio(s.light, "#faf7f2") >= 4.5, `${id} light contrast`);
+    assert.ok(ratio(s.dark, "#1a0f0a") >= 4.5 && ratio(s.dark, "#1c1f27") >= 4.5, `${id} dark contrast`);
+  }
+});

@@ -110,6 +110,19 @@ button { font: inherit; color: inherit; }
 .tab[aria-current="page"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
 .badge { background: var(--accent); color: var(--accent-ink); border-radius: 999px; font-size: 0.72rem; padding: 0 7px; min-width: 20px; text-align: center; }
 .icon-btn { border: 1px solid var(--border); background: var(--surface); width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; flex: none; }
+/* Appearance menu: mode and seasonal colors. */
+.appearance { position: relative; flex: none; }
+.appearance .icon-btn { display: grid; place-items: center; line-height: 1; }
+.appearance-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: min(260px, calc(100vw - 32px)); display: grid; gap: 2px; padding: 8px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18); }
+.appearance-menu[hidden] { display: none; }
+.appearance-menu__head { margin: 6px 10px 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.appearance-menu button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 9px 10px; border: 0; border-radius: 9px; background: none; color: var(--text); font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.appearance-menu button:hover, .appearance-menu button:focus-visible { background: var(--surface-2); outline: none; }
+.appearance-menu button[aria-checked="true"] { color: var(--accent); }
+.appearance-menu button[aria-checked="true"]::after { content: "✓"; margin-left: auto; }
+.appearance-menu__note { margin: 6px 10px 2px; font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+/* Holidays add a thin colored stripe under the top bar. */
+.topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--season-stripe, transparent); pointer-events: none; }
 
 @media (max-width: 560px) {
   .brand__mark, .brand__sub { display: none; }

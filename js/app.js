@@ -18,6 +18,7 @@
     explore: { q: "", region: "", month: 0, interest: "", cost: 5, kind: "", only: "", unesco: "", remote: "", lgbtq: "", advisory: "" },
     saved: new Set(),
     includeAvoid: false, // show destinations under "avoid all travel" advisories in results
+    colors: "seasonal", // "seasonal" (season and holiday accents) or "classic"
   };
 
   // ---------- Helpers ----------
@@ -201,6 +202,7 @@
       if (data.prefs) state.prefs = E.normalizePrefs(data.prefs);
       if (Array.isArray(data.saved)) state.saved = new Set(data.saved.filter((k) => lookupSaved(k)));
       if (data.theme) document.documentElement.dataset.theme = data.theme;
+      if (data.colors === "classic") state.colors = "classic";
     } catch (_) {
       /* storage unavailable: start fresh */
     }
@@ -210,7 +212,7 @@
     try {
       localStorage.setItem(
         STORE_KEY,
-        JSON.stringify({ prefs: state.prefs, saved: [...state.saved], theme: document.documentElement.dataset.theme || "" })
+        JSON.stringify({ prefs: state.prefs, saved: [...state.saved], theme: document.documentElement.dataset.theme || "", colors: state.colors })
       );
     } catch (_) {
       /* ignore */
@@ -1770,12 +1772,102 @@
     }
   });
 
-  $("#theme-toggle").addEventListener("click", () => {
+  // ---------- Appearance ----------
+  // The appearance button opens a menu for light, dark or system mode and for seasonal
+  // or classic colors. Seasonal colors follow the season (flipped south of the equator)
+  // or a holiday, from the device's own date and time zone.
+  const themeBtn = $("#theme-toggle");
+  const seasonStyle = document.createElement("style");
+  seasonStyle.id = "season-colors";
+  document.head.appendChild(seasonStyle);
+  const appearance = document.createElement("div");
+  appearance.className = "appearance";
+  themeBtn.replaceWith(appearance);
+  appearance.appendChild(themeBtn);
+  themeBtn.setAttribute("aria-haspopup", "menu");
+  themeBtn.setAttribute("aria-expanded", "false");
+  themeBtn.setAttribute("aria-controls", "appearance-menu");
+  appearance.insertAdjacentHTML("beforeend", `<div class="appearance-menu" id="appearance-menu" role="menu" aria-label="Appearance" hidden></div>`);
+  const menu = $("#appearance-menu");
+
+  function seasonCSS(id) {
+    const s = E.SEASON_SCHEMES[id];
+    const sel = `html:root[data-season="${id}"]`;
+    const dark = `--accent: ${s.dark}; --accent-ink: #1a0f0a; --accent-soft: color-mix(in srgb, ${s.dark} 20%, #14161c);`;
+    return `${sel} { --accent: ${s.light}; --accent-ink: #ffffff; --accent-soft: color-mix(in srgb, ${s.light} 14%, #ffffff); --season-stripe: ${s.stripe || "transparent"}; }
+@media (prefers-color-scheme: dark) { ${sel}:not([data-theme="light"]) { ${dark} } }
+${sel}[data-theme="dark"] { ${dark} }`;
+  }
+
+  function applyAppearance() {
     const root = document.documentElement;
-    const isDark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = isDark ? "light" : "dark";
-    persist();
+    const scheme = E.seasonalScheme(new Date());
+    const mode = root.dataset.theme || "system";
+    if (state.colors === "seasonal") {
+      root.dataset.season = scheme.id;
+      seasonStyle.textContent = seasonCSS(scheme.id);
+      themeBtn.textContent = scheme.icon;
+    } else {
+      delete root.dataset.season;
+      seasonStyle.textContent = "";
+      themeBtn.textContent = "◐";
+    }
+    const label = `Appearance: ${mode} mode, ${state.colors === "seasonal" ? `${scheme.label} colors` : "classic colors"}`;
+    themeBtn.setAttribute("aria-label", label);
+    themeBtn.title = label;
+    const item = (attr, value, text, on) =>
+      `<button type="button" role="menuitemradio" aria-checked="${on}" data-${attr}="${value}">${text}</button>`;
+    menu.innerHTML = `
+      <p class="appearance-menu__head">Mode</p>
+      ${item("mode", "system", "💻 System", mode === "system")}
+      ${item("mode", "light", "☀️ Light", mode === "light")}
+      ${item("mode", "dark", "🌙 Dark", mode === "dark")}
+      <p class="appearance-menu__head">Colors</p>
+      ${item("colors", "seasonal", `${scheme.icon} Seasonal: ${esc(scheme.label)}`, state.colors === "seasonal")}
+      ${item("colors", "classic", "🎨 Classic", state.colors === "classic")}
+      <p class="appearance-menu__note">Seasonal colors follow your local date and time zone${scheme.southern ? ", with southern hemisphere seasons" : ""}.</p>`;
+  }
+
+  function setMenu(open) {
+    menu.hidden = !open;
+    themeBtn.setAttribute("aria-expanded", String(open));
+    if (open) (menu.querySelector('[aria-checked="true"]') || menu.querySelector("button")).focus();
+  }
+
+  themeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setMenu(menu.hidden);
   });
+  menu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const b = e.target.closest("button");
+    if (!b) return;
+    const root = document.documentElement;
+    if (b.dataset.mode) {
+      if (b.dataset.mode === "system") delete root.dataset.theme;
+      else root.dataset.theme = b.dataset.mode;
+    }
+    if (b.dataset.colors) state.colors = b.dataset.colors;
+    persist();
+    applyAppearance();
+    setMenu(false);
+    themeBtn.focus();
+  });
+  menu.addEventListener("keydown", (e) => {
+    const items = [...menu.querySelectorAll("button")];
+    const i = items.indexOf(document.activeElement);
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      items[(i + (e.key === "ArrowDown" ? 1 : items.length - 1)) % items.length].focus();
+    } else if (e.key === "Escape") {
+      setMenu(false);
+      themeBtn.focus();
+    }
+  });
+  document.addEventListener("click", () => !menu.hidden && setMenu(false));
+  // Pick up a new day or holiday when the visitor comes back, and once an hour.
+  document.addEventListener("visibilitychange", () => document.visibilityState === "visible" && applyAppearance());
+  setInterval(applyAppearance, 60 * 60 * 1000);
 
   // Closing a place (button, Escape or backdrop) restores the view's title.
   // On the live site it also returns the address to the view's own.
@@ -1805,6 +1897,7 @@
   // Keep the copyright year current.
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
   load();
+  applyAppearance();
   readHash();
   setView(state.view);
   // A place page (/place/<id>/) opens that place.

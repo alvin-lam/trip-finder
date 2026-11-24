@@ -749,6 +749,100 @@
     return p;
   }
 
+  // ---------- Seasonal and holiday colors ----------
+  // The app's accent color follows the visitor's season or a holiday, worked out from
+  // the device's own date and time zone. Each scheme passes WCAG AA contrast (4.5:1)
+  // for white text on the light accent and dark text on the dark accent.
+  const SEASON_SCHEMES = {
+    winter: { label: "Winter", icon: "❄️", light: "#2a65a8", dark: "#7fb4ee" },
+    spring: { label: "Spring", icon: "🌸", light: "#b13a6c", dark: "#f29cc2" },
+    summer: { label: "Summer", icon: "☀️", light: "#0b7581", dark: "#5fd0d9" },
+    autumn: { label: "Autumn", icon: "🍂", light: "#a5481a", dark: "#f0a06a" },
+    newyear: { label: "New Year", icon: "🎆", light: "#7f6417", dark: "#e6c35c", stripe: "linear-gradient(90deg, #7f6417, #e6c35c, #7f6417)" },
+    lunar: { label: "Lunar New Year", icon: "🧧", light: "#c0122d", dark: "#ff8a8a", stripe: "linear-gradient(90deg, #c0122d, #e6b422, #c0122d)" },
+    valentine: { label: "Valentine's Day", icon: "💝", light: "#bb1b58", dark: "#ff8fb8", stripe: "linear-gradient(90deg, #bb1b58, #ff8fb8, #bb1b58)" },
+    stpatrick: { label: "St. Patrick's Day", icon: "☘️", light: "#1d7a3a", dark: "#73d68f", stripe: "linear-gradient(90deg, #169b62, #ffffff, #ff883e)" },
+    easter: { label: "Easter", icon: "🐣", light: "#7346b3", dark: "#c3a4f2", stripe: "linear-gradient(90deg, #c3a4f2, #f6d36b, #9fd9b4, #f7a8c4)" },
+    pride: { label: "Pride Month", icon: "🏳️‍🌈", light: "#7a3db3", dark: "#c9a3f5", stripe: "linear-gradient(90deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787)" },
+    halloween: { label: "Halloween", icon: "🎃", light: "#b84a09", dark: "#ffa45c", stripe: "linear-gradient(90deg, #ff7a1a, #5b2a86, #ff7a1a)" },
+    diwali: { label: "Diwali", icon: "🪔", light: "#a8510a", dark: "#ffbf5c", stripe: "linear-gradient(90deg, #ffbf5c, #c0122d, #ffbf5c)" },
+    christmas: { label: "Christmas", icon: "🎄", light: "#b31b1b", dark: "#ff8c8c", stripe: "linear-gradient(90deg, #b31b1b, #1f7a4a, #b31b1b)" },
+  };
+
+  // Lunar New Year and Diwali follow lunar calendars; their dates are listed to 2035.
+  // Outside these years the season shows instead.
+  const LUNAR_NEW_YEAR = { 2025: "01-29", 2026: "02-17", 2027: "02-06", 2028: "01-26", 2029: "02-13", 2030: "02-03", 2031: "01-23", 2032: "02-11", 2033: "01-31", 2034: "02-19", 2035: "02-08" };
+  const DIWALI = { 2025: "10-20", 2026: "11-08", 2027: "10-29", 2028: "10-17", 2029: "11-05", 2030: "10-26", 2031: "11-14", 2032: "11-02", 2033: "10-22", 2034: "11-10", 2035: "10-30" };
+
+  // Time zones south of the equator, where the seasons are flipped.
+  const SOUTHERN_ZONE = new RegExp(
+    "^(Australia/|Antarctica/|America/Argentina/|America/(Buenos_Aires|Cordoba|Santiago|Punta_Arenas|Montevideo|Asuncion|Sao_Paulo|La_Paz|Lima|Campo_Grande|Cuiaba|Porto_Velho|Bahia|Maceio|Recife|Araguaina)$|" +
+      "Africa/(Johannesburg|Maseru|Mbabane|Windhoek|Gaborone|Harare|Maputo|Lusaka|Blantyre|Lubumbashi|Luanda|Dar_es_Salaam)$|" +
+      "Indian/(Mauritius|Reunion|Antananarivo|Mayotte|Comoro|Kerguelen)$|Atlantic/(Stanley|South_Georgia|St_Helena)$|" +
+      "Pacific/(Auckland|Chatham|Fiji|Tongatapu|Apia|Pago_Pago|Noumea|Efate|Tahiti|Rarotonga|Port_Moresby|Guadalcanal|Easter|Norfolk|Niue|Gambier|Marquesas|Fakaofo|Wallis|Funafuti)$|" +
+      "Asia/(Jakarta|Makassar|Jayapura|Dili)$)"
+  );
+  const isSouthern = (timeZone) => SOUTHERN_ZONE.test(timeZone || "");
+
+  // The visitor's own calendar date (year, month 1-12, day) in their time zone.
+  function localDate(date, timeZone) {
+    try {
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone, year: "numeric", month: "numeric", day: "numeric" }).formatToParts(date);
+      const get = (t) => Number(parts.find((p) => p.type === t).value);
+      return { y: get("year"), m: get("month"), d: get("day") };
+    } catch (_) {
+      return { y: date.getFullYear(), m: date.getMonth() + 1, d: date.getDate() };
+    }
+  }
+
+  // Easter Sunday (Gregorian), by the anonymous Gregorian algorithm.
+  function easterSunday(y) {
+    const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4;
+    const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
+    const i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
+    const month = Math.floor((h + l - 7 * m + 114) / 31);
+    return { m: month, d: ((h + l - 7 * m + 114) % 31) + 1 };
+  }
+
+  const dayNumber = (y, m, d) => Date.UTC(y, m - 1, d) / 86400000;
+
+  /** The color scheme for a moment: { id, label, icon, kind: "holiday" | "season", southern }. */
+  function seasonalScheme(date = new Date(), timeZone) {
+    const zone = timeZone || (typeof Intl !== "undefined" ? Intl.DateTimeFormat().resolvedOptions().timeZone : "");
+    const { y, m, d } = localDate(date, zone);
+    const today = dayNumber(y, m, d);
+    const near = (md, before, after) => {
+      if (!md) return false;
+      const [mm, dd] = md.split("-").map(Number);
+      const n = dayNumber(y, mm, dd);
+      return today >= n - before && today <= n + after;
+    };
+    const e = easterSunday(y);
+    const easter = dayNumber(y, e.m, e.d);
+    const holidays = [
+      ["newyear", (m === 12 && d === 31) || (m === 1 && d <= 2)],
+      ["valentine", m === 2 && d >= 12 && d <= 14],
+      ["stpatrick", m === 3 && d >= 15 && d <= 17],
+      ["easter", today >= easter - 2 && today <= easter + 1],
+      ["halloween", m === 10 && d >= 25],
+      ["diwali", near(DIWALI[y], 2, 2)],
+      ["lunar", near(LUNAR_NEW_YEAR[y], 2, 7)],
+      ["christmas", m === 12 && d <= 26],
+      ["pride", m === 6],
+    ];
+    const southern = isSouthern(zone);
+    const hit = holidays.find(([, on]) => on);
+    let id;
+    if (hit) id = hit[0];
+    else {
+      const north = ["winter", "winter", "spring", "spring", "spring", "summer", "summer", "summer", "autumn", "autumn", "autumn", "winter"][m - 1];
+      const flip = { winter: "summer", summer: "winter", spring: "autumn", autumn: "spring" };
+      id = southern ? flip[north] : north;
+    }
+    const s = SEASON_SCHEMES[id];
+    return { id, label: s.label, icon: s.icon, kind: hit ? "holiday" : "season", southern };
+  }
+
   const api = {
     TAG_ORDER,
     MONTHS,
@@ -778,6 +872,9 @@
     encodePrefs,
     decodePrefs,
     normalizePrefs,
+    SEASON_SCHEMES,
+    seasonalScheme,
+    isSouthern,
   };
   root.WTT_ENGINE = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
