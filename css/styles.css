@@ -81,6 +81,8 @@ body {
 h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0 0 0.4em; letter-spacing: -0.01em; }
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
 h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+/* A view's main heading that should look like a section heading. */
+h1.h1--sm { font-size: clamp(1.4rem, 3vw, 1.9rem); }
 h3 { font-size: 1.2rem; }
 p { margin: 0 0 0.8em; }
 a { color: var(--teal); text-decoration: none; }

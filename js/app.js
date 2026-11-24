@@ -389,8 +389,18 @@
     }
   }
 
+  // Each view, and each open place, gets its own browser tab title.
+  const SITE_TITLE = "Trip Finder | All Trips Considered";
+  function pageTitle() {
+    if (state.view === "explore") return `Explore destinations | ${SITE_TITLE}`;
+    if (state.view === "shortlist") return `Your shortlist | ${SITE_TITLE}`;
+    if (state.stage === "results" && state.results) return `Your trip matches | ${SITE_TITLE}`;
+    return SITE_TITLE;
+  }
+
   function render() {
     updateShortlistBadge();
+    if (!$("#detail").open) document.title = pageTitle();
     if (state.view === "plan") renderPlan();
     if (state.view === "explore") renderExplore();
     if (state.view === "shortlist") renderShortlist();
@@ -673,7 +683,7 @@
       <div class="results-head">
         <div>
           <p class="eyebrow">Your matches</p>
-          <h2>Your best match is ${esc(best.country.name)} ${best.country.flag}</h2>
+          <h1 class="h1--sm">Your best match is ${esc(best.country.name)} ${best.country.flag}</h1>
           <p class="muted" style="margin:0">Strongest region overall: ${esc(r.regions[0].region.name)}. Tap any place for weather, highlights and nearby stops.</p>
           <div class="summary">${summaryChips()}</div>
         </div>
@@ -829,7 +839,7 @@
     if (!$("#explore-filters", el)) {
       el.innerHTML = `
         <p class="eyebrow">Browse everything</p>
-        <h2>Explore regions, countries and cities</h2>
+        <h1 class="h1--sm">Explore regions, countries and cities</h1>
         <p class="muted">Filter by month, interest or cost, or search for a place you have in mind.</p>
         <div class="filters" id="explore-filters">
           <label>Search<input class="input" type="search" data-filter="q" placeholder="Places, countries or codes (US, FR)" value="${esc(state.explore.q)}" /></label>
@@ -1277,7 +1287,7 @@
       el.innerHTML = `
         <div class="empty">
           <div class="empty__icon">♡</div>
-          <h2>Your shortlist is empty</h2>
+          <h1 class="h1--sm">Your shortlist is empty</h1>
           <p>Tap the heart on any country or city to save it here and compare side by side.</p>
           <div class="row" style="justify-content:center">
             <button class="btn btn--primary" data-nav="plan">Find matches</button>
@@ -1297,7 +1307,7 @@
       <div class="results-head">
         <div>
           <p class="eyebrow">Shortlist</p>
-          <h2>Compare your favourites</h2>
+          <h1 class="h1--sm">Compare your favourites</h1>
           <p class="muted">${state.results ? "Match scores reflect your latest answers." : "Answer the quiz to add match scores."}</p>
         </div>
         <div class="shortlist-actions">
@@ -1479,6 +1489,7 @@
     }
     $("#detail-body").scrollTop = 0;
     dlg.scrollTop = 0;
+    document.title = `${city.name === city.country.name ? city.name : `${city.name}, ${city.country.name}`} | Trip Finder`;
   }
 
   function closeDetail() {
@@ -1740,6 +1751,9 @@
     root.dataset.theme = isDark ? "light" : "dark";
     persist();
   });
+
+  // Closing a place (button, Escape or backdrop) restores the view's title.
+  $("#detail").addEventListener("close", () => (document.title = pageTitle()));
 
   window.addEventListener("hashchange", () => {
     readHash();

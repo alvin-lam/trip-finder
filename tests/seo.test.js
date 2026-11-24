@@ -35,3 +35,10 @@ test("structured data parses and the preview image is 1200x630", () => {
   assert.equal(png.readUInt32BE(16), 1200);
   assert.equal(png.readUInt32BE(20), 630);
 });
+
+test("the not-found page is kept out of search results", () => {
+  const page = read("404.html");
+  assert.match(page, /<meta name="robots" content="noindex" \/>/);
+  assert.match(page, /<a class="btn" href="\/">/);
+  assert.ok(!/\u2014/.test(page), "404.html has no em dash");
+});
