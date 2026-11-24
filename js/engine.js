@@ -225,6 +225,13 @@
       for (const n of [].concat(names)) if (!cityById[id].historicSites.includes(n)) cityById[id].historicSites.push(n);
     }
 
+    // Nearest place for sites with no place nearby: { "Site name": [placeId, km] }.
+    const nearestForSite = {};
+    for (const [site, [id, km]] of Object.entries(data.NEAREST_PLACE || {})) {
+      if (!cityById[id]) throw new Error(`NEAREST_PLACE: "${site}" points at unknown place ${id}`);
+      nearestForSite[site] = { city: cityById[id], km };
+    }
+
     // Self-declared micronations inside their host countries.
     for (const [id, status] of Object.entries(data.MICRONATIONS || {})) {
       if (!cityById[id]) throw new Error(`MICRONATIONS entry ${id} matches no place`);
@@ -280,6 +287,7 @@
       regionById,
       countryById: byCountryId,
       cityById,
+      nearestForSite,
       homes: data.HOMES,
       interests: data.INTERESTS,
     };

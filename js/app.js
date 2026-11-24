@@ -887,7 +887,7 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">🏞️ National Parks</option><option value="historic">🏛️ Historic Sites</option><option value="family">👨‍👩‍👧 Family Friendly</option><option value="festival">🎉 Festivals</option><option value="market">🎄 Christmas Markets</option><option value="pride">🏳️‍🌈 Pride</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="market">🎄 Christmas Markets</option><option value="family">👨‍👩‍👧 Family Friendly</option><option value="festival">🎉 Festivals</option><option value="historic">🏛️ Historic Sites</option><option value="np">🏞️ National Parks</option><option value="pride">🏳️‍🌈 Pride</option></select></label>
           <label>Population<select class="select" data-filter="remote"><option value="">Any</option>${Object.entries(REMOTE_LABELS).map(([k, [, label]]) => `<option value="${k}">${label}</option>`).join("")}</select></label>
           <label>UNESCO sites<select class="select" data-filter="unesco"><option value="">Any</option><option value="wh">World Heritage</option>${unescoOption("geopark", "Global Geoparks")}${unescoOption("biosphere", "Biosphere Reserves")}</select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
@@ -1066,12 +1066,19 @@
   function unlinkedCard(list) {
     if (!list.length) return "";
     const q = state.explore.q.trim().toLowerCase();
+    // Each site links to its nearest place, however far, with the distance.
+    const nearest = (m) => {
+      const n = index.nearestForSite[m.label];
+      return n
+        ? `<span class="unlinked__near">Nearest place: <button class="linkish" data-action="open-city" data-id="${n.city.id}">${esc(n.city.name)}</button> · ${E.fmtDistance(n.km)}</span>`
+        : "";
+    };
     const item = (m) =>
-      `<li><span class="unlinked__name">${highlight(m.label, q)}</span> <span class="search-matches__detail">${m.c.flag} ${esc(m.c.name)} · ${esc(m.detail.replace(/ · no place in the app( nearby| links to it yet)$/, ""))}</span></li>`;
+      `<li><span class="unlinked__name">${highlight(m.label, q)}</span> <span class="search-matches__detail">${m.c.flag} ${esc(m.c.name)} · ${esc(m.detail.replace(/ · no place in the app( nearby| links to it yet)$/, ""))}</span>${nearest(m)}</li>`;
     const first = list.slice(0, MATCHES_SHOWN).map(item).join("");
     const rest = list.slice(MATCHES_SHOWN);
     return `<article class="card unlinked" aria-label="Sites with no place nearby">
-        <div class="card__head"><span class="card__flag" aria-hidden="true">📍</span><div class="card__title"><h3>No place nearby</h3><div class="card__meta">${list.length} matching ${list.length === 1 ? "site has" : "sites have"} no Trip Finder place within about 1.5 hours</div></div></div>
+        <div class="card__head"><span class="card__flag" aria-hidden="true">📍</span><div class="card__title"><h3>No place nearby</h3><div class="card__meta">${list.length} matching ${list.length === 1 ? "site has" : "sites have"} no Trip Finder place within about 1.5 hours. The nearest one is linked.</div></div></div>
         <ul class="unlinked__list">${first}</ul>${
           rest.length ? `<details class="more"><summary>Show ${rest.length} more</summary><ul class="unlinked__list">${rest.map(item).join("")}</ul></details>` : ""
         }

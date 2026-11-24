@@ -26,6 +26,9 @@ const E = require(path.join(ROOT, "js", "engine.js"));
 const coords = JSON.parse(fs.readFileSync(path.join(__dirname, "site_coords.json"), "utf8"));
 
 const REACH_KM = 110;
+// US and Canadian park kinds: not linked here beyond their own rules, but those with no
+// place nearby get a nearest place for the "No place nearby" card.
+const PARKS = /^National (Park( Reserve)?|Monument|Preserve|Reserve|Recreation Area|Seashore|Lakeshore)$/;
 const HISTORIC = /^(National (Historic Site|Historical Park|Memorial|Battlefield( Park| Site)?|Military Park)|International Historic Site)$/;
 const START = "    // --- linked by tools/parks/link_sites.js (do not edit by hand) ---";
 const END = "    // --- end of tools/parks/link_sites.js links ---";
@@ -51,13 +54,14 @@ try {
 const sitePlaces = {}; // site name -> [place names] (same country)
 const historicExtra = {}; // place id -> [site names] (a territory's place)
 const npExtra = {}; // place id -> [site names] (a territory's place, Mexico parks)
-const tally = { historic: [0, 0], mxpark: [0, 0] };
+const tally = { historic: [0, 0], mxpark: [0, 0], park: [0, 0] };
 const unlinked = [];
+const nearest = {}; // site name -> [place id, km], for sites with no place within reach
 
 for (const cid of ["us", "ca", "mx"]) {
   const c = index.countryById[cid];
   for (const site of c.sites || []) {
-    const kind = HISTORIC.test(site.type) ? "historic" : cid === "mx" ? "mxpark" : null;
+    const kind = HISTORIC.test(site.type) ? "historic" : cid === "mx" ? "mxpark" : PARKS.test(site.type) ? "park" : null;
     if (!kind) continue;
     tally[kind][0]++;
     const already = E.placeForSite(c, site) || index.cities.find((x) => x.nationalParks.includes(site.name) || x.historicSites.includes(site.name));
@@ -74,6 +78,13 @@ for (const cid of ["us", "ca", "mx"]) {
     const best = pool.map((x) => ({ x, d: km(at, x.ll) })).sort((a, b) => a.d - b.d)[0];
     if (!best || best.d > REACH_KM) {
       unlinked.push(site.name);
+      if (best) nearest[site.name] = [best.x.id, Math.round(best.d)];
+      continue;
+    }
+    if (kind === "park") {
+      // Parks keep their own linking rules: an unlinked park gets only a nearest place.
+      unlinked.push(site.name);
+      nearest[site.name] = [best.x.id, Math.round(best.d)];
       continue;
     }
     tally[kind][1]++;
@@ -87,7 +98,7 @@ for (const cid of ["us", "ca", "mx"]) {
 
 console.log(`Historic sites: ${tally.historic[1]} of ${tally.historic[0]} reach a place.`);
 console.log(`Mexico (CONANP): ${tally.mxpark[1]} of ${tally.mxpark[0]} reach a place.`);
-console.log(`${unlinked.length} sites stay unlinked.`);
+console.log(`${unlinked.length} sites stay unlinked; ${Object.keys(nearest).length} of them get a nearest place.`);
 if (process.argv.includes("--dry")) process.exit(0);
 
 const line = (k, v) => `    ${JSON.stringify(k)}: ${JSON.stringify(v.length === 1 ? v[0] : v)},`;
@@ -99,5 +110,6 @@ src = src.replace(/  const HISTORIC_EXTRA = \{[\s\S]*?\};/, `  const HISTORIC_EX
 for (const [id, names] of Object.entries(npExtra)) {
   src = src.replace("  const NP_EXTRA = {\n", `  const NP_EXTRA = {\n${line(id, names)}\n`);
 }
+src = src.replace(/  const NEAREST_PLACE = \{[\s\S]*?\};/, `  const NEAREST_PLACE = {${Object.keys(nearest).length ? `\n${Object.keys(nearest).sort().map((k) => `    ${JSON.stringify(k)}: ${JSON.stringify(nearest[k])},`).join("\n")}\n  ` : ""}};`);
 fs.writeFileSync(DATA, src);
 console.log("Wrote the links into js/data.js.");

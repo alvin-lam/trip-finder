@@ -155,7 +155,11 @@
   -98.6240739,
   "Lyndon B. Johnson National Historical Park, Texas"
  ],
- "Manhattan Project National Historical Park": null,
+ "Manhattan Project National Historical Park": [
+  35.6882405,
+  -105.9398739,
+  "Manhattan Project, New Mexico"
+ ],
  "Marsh-Billings-Rockefeller National Historical Park": [
   43.6334826,
   -72.5342884,
@@ -221,8 +225,16 @@
   -87.6074563,
   "Pullman National Historical Park, Illinois"
  ],
- "Puʻuhonua o Hōnaunau National Historical Park": null,
- "Reconstruction Era National Historical Park": null,
+ "Puʻuhonua o Hōnaunau National Historical Park": [
+  19.4142294,
+  -155.9051839,
+  "Puʻuhonua o Hōnaunau, Hawaii"
+ ],
+ "Reconstruction Era National Historical Park": [
+  32.4324768,
+  -80.6706879,
+  "Reconstruction Era, South Carolina"
+ ],
  "Rosie the Riveter/World War II Home Front National Historical Park": [
   37.9093178,
   -122.3665115,
@@ -288,8 +300,16 @@
   -75.4444377,
   "Valley Forge National Historical Park, Pennsylvania"
  ],
- "War in the Pacific National Historical Park": null,
- "Weir Farm National Historical Park": null,
+ "War in the Pacific National Historical Park": [
+  13.3869781,
+  144.6577973,
+  "War in the Pacific"
+ ],
+ "Weir Farm National Historical Park": [
+  41.257755,
+  -73.4569284,
+  "Weir Farm, Connecticut"
+ ],
  "Women's Rights National Historical Park": [
   42.9126638,
   -76.788064,
@@ -385,7 +405,11 @@
   -122.027716,
   "Eugene O'Neill National Historic Site, California"
  ],
- "Fort Miamis National Historic Site": null,
+ "Fort Miamis National Historic Site": [
+  41.5723156,
+  -83.6258228,
+  "Fort Miamis, Ohio"
+ ],
  "First Ladies National Historic Site": [
   40.7966224,
   -81.3759386,
@@ -511,7 +535,11 @@
   -81.3509009,
   "James A. Garfield National Historic Site, Ohio"
  ],
- "Jamestown National Historic Site": null,
+ "Jamestown National Historic Site": [
+  37.2089184,
+  -76.7783003,
+  "Jamestown, Virginia"
+ ],
  "John Fitzgerald Kennedy National Historic Site": [
   42.3468809,
   -71.1231987,
@@ -979,7 +1007,11 @@
   -75.1473051,
   "Thaddeus Kosciuszko National Memorial, Pennsylvania"
  ],
- "Theodore Roosevelt Island National Memorial": null,
+ "Theodore Roosevelt Island National Memorial": [
+  38.89541,
+  -77.0622019,
+  "Theodore Roosevelt Island, District of Columbia"
+ ],
  "Jefferson Memorial": [
   38.8814182,
   -77.0365506,
@@ -1007,8 +1039,16 @@
   "Wright Brothers National Memorial, North Carolina"
  ],
  "Abbot Pass Refuge Cabin National Historic Site": null,
- "Athabasca Pass National Historic Site": null,
- "Banff Park Museum National Historic Site": null,
+ "Athabasca Pass National Historic Site": [
+  52.3793395,
+  -118.1859472,
+  "Athabasca Pass, Alberta"
+ ],
+ "Banff Park Museum National Historic Site": [
+  51.1737871,
+  -115.571682,
+  "Banff Park Museum, Alberta"
+ ],
  "Bar U Ranch National Historic Site": [
   50.423388,
   -114.2453396,
@@ -1019,22 +1059,62 @@
   -115.590891,
   "Cave and Basin National Historic Site"
  ],
- "First Oil Well in Western Canada National Historic Site": null,
- "Frog Lake National Historic Site": null,
- "Howse Pass National Historic Site": null,
- "Jasper House National Historic Site": null,
- "Jasper Park Information Centre National Historic Site": null,
- "Maligne Lake Chalet and Guest House National Historic Site": null,
- "Prince of Wales Hotel National Historic Site": null,
+ "First Oil Well in Western Canada National Historic Site": [
+  49.0709994,
+  -113.9868217,
+  "First Oil Well in Western Canada, Alberta"
+ ],
+ "Frog Lake National Historic Site": [
+  53.8315649,
+  -110.4011144,
+  "Frog Lake, Alberta"
+ ],
+ "Howse Pass National Historic Site": [
+  51.799857,
+  -116.7564122,
+  "Howse Pass, Alberta"
+ ],
+ "Jasper House National Historic Site": [
+  53.5405945,
+  -113.5297972,
+  "Jasper House, Alberta"
+ ],
+ "Jasper Park Information Centre National Historic Site": [
+  52.8773204,
+  -118.0808287,
+  "Jasper Park Information Centre, Alberta"
+ ],
+ "Maligne Lake Chalet and Guest House National Historic Site": [
+  52.7288872,
+  -117.6423474,
+  "Maligne Lake Chalet and Guest House, Alberta"
+ ],
+ "Prince of Wales Hotel National Historic Site": [
+  49.0583723,
+  -113.9040707,
+  "Prince of Wales Hotel, Alberta"
+ ],
  "Rocky Mountain House National Historic Site": [
   52.3619988,
   -114.94583,
   "Rocky Mountain House National Historic Site, Alberta"
  ],
  "Skoki Ski Lodge National Historic Site": null,
- "Sulphur Mountain Cosmic Ray Station National Historic Site": null,
- "Yellowhead Pass National Historic Site": null,
- "Chilkoot Trail National Historic Site": null,
+ "Sulphur Mountain Cosmic Ray Station National Historic Site": [
+  51.1470726,
+  -115.5785579,
+  "Sulphur Mountain Cosmic Ray Station, Alberta"
+ ],
+ "Yellowhead Pass National Historic Site": [
+  52.8819339,
+  -118.4505137,
+  "Yellowhead Pass"
+ ],
+ "Chilkoot Trail National Historic Site": [
+  59.8365975,
+  -135.011756,
+  "Chilkoot Trail, British Columbia"
+ ],
  "Fisgard Lighthouse National Historic Site": [
   48.4303914,
   -123.447738,
@@ -1045,7 +1125,11 @@
   -122.5721735,
   "Fort Langley National Historic Site, British Columbia"
  ],
- "Fort Rodd Hill National Historic Site": null,
+ "Fort Rodd Hill National Historic Site": [
+  48.4329066,
+  -123.4529216,
+  "Fort Rodd Hill, British Columbia"
+ ],
  "Fort St. James National Historic Site": [
   54.440354,
   -124.2555757,
@@ -1061,7 +1145,11 @@
   -123.1869461,
   "Gulf of Georgia Cannery National Historic Site, British Columbia"
  ],
- "Kicking Horse Pass National Historic Site": null,
+ "Kicking Horse Pass National Historic Site": [
+  51.4519457,
+  -116.2862411,
+  "Kicking Horse Pass, British Columbia"
+ ],
  "Kootenae House National Historic Site": [
   50.5267937,
   -116.0454568,
@@ -1083,13 +1171,41 @@
   "Stanley Park National Historic Site, British Columbia"
  ],
  "Twin Falls Tea House National Historic Site": null,
- "HMCS Haida National Historic Site": null,
- "Bellevue House National Historic Site": null,
- "Fort Henry National Historic Site": null,
- "Kingston Fortifications National Historic Site": null,
- "Murney Tower National Historic Site": null,
- "Rideau Canal National Historic Site": null,
- "Shoal Tower National Historic Site": null,
+ "HMCS Haida National Historic Site": [
+  43.2752703,
+  -79.855221,
+  "HMCS Haida, Ontario"
+ ],
+ "Bellevue House National Historic Site": [
+  44.2230268,
+  -76.504108,
+  "Bellevue House, Ontario"
+ ],
+ "Fort Henry National Historic Site": [
+  44.2308845,
+  -76.4590198,
+  "Fort Henry, Ontario"
+ ],
+ "Kingston Fortifications National Historic Site": [
+  44.2294898,
+  -76.4794418,
+  "Kingston Fortifications, Ontario"
+ ],
+ "Murney Tower National Historic Site": [
+  44.222275,
+  -76.4904137,
+  "Murney Tower, Ontario"
+ ],
+ "Rideau Canal National Historic Site": [
+  45.4217801,
+  -75.6873893,
+  "Rideau Canal, Ontario"
+ ],
+ "Shoal Tower National Historic Site": [
+  44.2288267,
+  -76.478138,
+  "Shoal Tower, Ontario"
+ ],
  "Lower Fort Garry National Historic Site": [
   50.1105577,
   -96.9340527,
@@ -1106,24 +1222,52 @@
   -97.1362148,
   "Riel House National Historic Site, Manitoba"
  ],
- "St. Andrew's Rectory National Historic Site": null,
+ "St. Andrew's Rectory National Historic Site": [
+  50.0660903,
+  -96.9785776,
+  "St. Andrew's Rectory, Manitoba"
+ ],
  "The Forks National Historic Site": [
   49.8876488,
   -97.1295571,
   "The Forks National Historic Site, Manitoba"
  ],
- "York Factory National Historic Site": null,
- "Lachine Canal National Historic Site": null,
- "Louis-Joseph Papineau National Historic Site": null,
- "Sainte-Anne-de-Bellevue Canal National Historic Site": null,
- "Sir George-Étienne Cartier National Historic Site": null,
+ "York Factory National Historic Site": [
+  57.002813,
+  -92.3045913,
+  "York Factory, Manitoba"
+ ],
+ "Lachine Canal National Historic Site": [
+  45.4607603,
+  -73.6043939,
+  "Lachine Canal, Quebec"
+ ],
+ "Louis-Joseph Papineau National Historic Site": [
+  45.6173236,
+  -75.0271803,
+  "Louis-Joseph Papineau, Quebec"
+ ],
+ "Sainte-Anne-de-Bellevue Canal National Historic Site": [
+  45.4036602,
+  -73.9537603,
+  "Sainte-Anne-de-Bellevue Canal, Quebec"
+ ],
+ "Sir George-Étienne Cartier National Historic Site": [
+  45.5065752,
+  -73.6061513,
+  "Sir George-Étienne Cartier, Quebec"
+ ],
  "The Fur Trade at Lachine National Historic Site": [
   45.4314398,
   -73.6755356,
   "The Fur Trade at Lachine National Historic Site, Quebec"
  ],
  "Beaubears Island Shipbuilding National Historic Site": null,
- "Boishébert National Historic Site": null,
+ "Boishébert National Historic Site": [
+  47.5682319,
+  -64.9893541,
+  "Boishébert, New Brunswick"
+ ],
  "Carleton Martello Tower National Historic Site": [
   45.2519451,
   -66.0767364,
@@ -1155,8 +1299,16 @@
   -52.62771,
   "Cape Spear Lighthouse National Historic Site, Newfoundland and Labrador"
  ],
- "Castle Hill National Historic Site": null,
- "Hawthorne Cottage National Historic Site": null,
+ "Castle Hill National Historic Site": [
+  47.2528619,
+  -53.9729708,
+  "Castle Hill, Newfoundland and Labrador"
+ ],
+ "Hawthorne Cottage National Historic Site": [
+  47.53515,
+  -53.2098694,
+  "Hawthorne Cottage, Newfoundland and Labrador"
+ ],
  "Hopedale Mission National Historic Site": null,
  "Kitjigattalik - Ramah Chert Quarries National Historic Site": null,
  "L'Anse aux Meadows National Historic Site": [
@@ -1164,13 +1316,21 @@
   -55.5702812,
   "L'Anse aux Meadows National Historic Site, Newfoundland and Labrador"
  ],
- "Port au Choix National Historic Site": null,
+ "Port au Choix National Historic Site": [
+  50.7069038,
+  -57.3588984,
+  "Port au Choix, Newfoundland and Labrador"
+ ],
  "Red Bay National Historic Site": [
   51.7268234,
   -56.4287963,
   "Red Bay National Historic Site, Newfoundland and Labrador"
  ],
- "Ryan Premises National Historic Site": null,
+ "Ryan Premises National Historic Site": [
+  48.647766,
+  -53.1121275,
+  "Ryan Premises, Newfoundland and Labrador"
+ ],
  "Signal Hill National Historic Site": [
   47.5726079,
   -52.682298,
@@ -1184,25 +1344,53 @@
   -79.0615675,
   "Fort George National Historic Site, Ontario"
  ],
- "Fort Mississauga National Historic Site": null,
+ "Fort Mississauga National Historic Site": [
+  43.2616473,
+  -79.0767119,
+  "Fort Mississauga, Ontario"
+ ],
  "Mississauga Point Lighthouse National Historic Site": null,
- "Navy Island National Historic Site": null,
- "Queenston Heights National Historic Site": null,
+ "Navy Island National Historic Site": [
+  43.0554109,
+  -79.0104749,
+  "Navy Island, Ontario"
+ ],
+ "Queenston Heights National Historic Site": [
+  44.2355951,
+  -76.4514377,
+  "Queenston Heights, Ontario"
+ ],
  "Ridgeway Battlefield National Historic Site": null,
  "Alexander Graham Bell National Historic Site": [
   46.1035236,
   -60.7451469,
   "Alexander Graham Bell National Historic Site, Nova Scotia"
  ],
- "Beaubassin National Historic Site": null,
- "Bloody Creek National Historic Site": null,
+ "Beaubassin National Historic Site": [
+  44.6976983,
+  -63.6637578,
+  "Beaubassin, Nova Scotia"
+ ],
+ "Bloody Creek National Historic Site": [
+  43.8961148,
+  -65.6337136,
+  "Bloody Creek"
+ ],
  "Canso Islands National Historic Site": [
   45.341757,
   -60.9663543,
   "Canso Islands National Historic Site, Nova Scotia"
  ],
- "Charles Fort National Historic Site": null,
- "D'Anville's Encampment National Historic Site": null,
+ "Charles Fort National Historic Site": [
+  46.8163701,
+  -71.1469761,
+  "Charles Fort"
+ ],
+ "D'Anville's Encampment National Historic Site": [
+  44.6747008,
+  -63.6465147,
+  "D'Anville's Encampment"
+ ],
  "Fort Anne National Historic Site": [
   44.7413947,
   -65.5187913,
@@ -1213,7 +1401,11 @@
   -64.1336363,
   "Fort Edward National Historic Site, Nova Scotia"
  ],
- "Fort Lawrence National Historic Site": null,
+ "Fort Lawrence National Historic Site": [
+  45.847202,
+  -64.2499567,
+  "Fort Lawrence, Nova Scotia"
+ ],
  "Fort McNab National Historic Site": [
   44.5997609,
   -63.5161867,
@@ -1311,20 +1503,52 @@
   -83.1132858,
   "Fort Malden National Historic Site, Ontario"
  ],
- "Fort St. Joseph National Historic Site": null,
+ "Fort St. Joseph National Historic Site": [
+  46.063897,
+  -83.9455788,
+  "Fort St. Joseph, Ontario"
+ ],
  "Fort Wellington National Historic Site": [
   44.7131188,
   -75.5091346,
   "Fort Wellington National Historic Site, Ontario"
  ],
- "Glengarry Cairn National Historic Site": null,
- "Inverarden House National Historic Site": null,
- "Merrickville Blockhouse National Historic Site": null,
- "Mnjikaning Fish Weirs National Historic Site": null,
- "Peterborough Lift Lock National Historic Site": null,
- "Point Clark Lighthouse National Historic Site": null,
+ "Glengarry Cairn National Historic Site": [
+  45.1216517,
+  -74.4897616,
+  "Glengarry Cairn, Ontario"
+ ],
+ "Inverarden House National Historic Site": [
+  45.0313309,
+  -74.6711386,
+  "Inverarden House, Ontario"
+ ],
+ "Merrickville Blockhouse National Historic Site": [
+  44.9164282,
+  -75.8372894,
+  "Merrickville Blockhouse, Ontario"
+ ],
+ "Mnjikaning Fish Weirs National Historic Site": [
+  44.6035868,
+  -79.3689597,
+  "Mnjikaning Fish Weirs, Ontario"
+ ],
+ "Peterborough Lift Lock National Historic Site": [
+  44.3076283,
+  -78.3005458,
+  "Peterborough Lift Lock, Ontario"
+ ],
+ "Point Clark Lighthouse National Historic Site": [
+  44.0728222,
+  -81.757287,
+  "Point Clark Lighthouse, Ontario"
+ ],
  "Saint-Louis Mission National Historic Site": null,
- "Sault Ste. Marie Canal National Historic Site": null,
+ "Sault Ste. Marie Canal National Historic Site": [
+  46.5133066,
+  -84.3595338,
+  "Sault Ste. Marie Canal, Ontario"
+ ],
  "Sir John Johnson House National Historic Site": [
   45.1446172,
   -74.5788937,
@@ -1345,15 +1569,27 @@
   -80.4800573,
   "Woodside National Historic Site, Ontario"
  ],
- "Laurier House National Historic Site": null,
+ "Laurier House National Historic Site": [
+  45.4277515,
+  -75.6779419,
+  "Laurier House, Ontario"
+ ],
  "Ardgowan National Historic Site": [
   46.2520139,
   -63.1265834,
   "Ardgowan National Historic Site, Prince Edward Island"
  ],
- "Dalvay-by-the-Sea National Historic Site": null,
+ "Dalvay-by-the-Sea National Historic Site": [
+  46.4146956,
+  -63.073324,
+  "Dalvay-by-the-Sea, Prince Edward Island"
+ ],
  "L.M. Montgomery's Cavendish National Historic Site": null,
- "Province House National Historic Site": null,
+ "Province House National Historic Site": [
+  46.234996,
+  -63.1260057,
+  "Province House, Prince Edward Island"
+ ],
  "Skmaqn–Port-la-Joye–Fort Amherst National Historic Site": [
   46.1953584,
   -63.1353422,
@@ -1364,39 +1600,103 @@
   -73.9286513,
   "Battle of the Chateauguay National Historic Site, Quebec"
  ],
- "Battle of the Restigouche National Historic Site": null,
+ "Battle of the Restigouche National Historic Site": [
+  48.0129072,
+  -66.7359429,
+  "Battle of the Restigouche"
+ ],
  "Carillon Barracks National Historic Site": null,
- "Carillon Canal National Historic Site": null,
- "Chambly Canal National Historic Site": null,
- "Coteau-du-Lac National Historic Site": null,
+ "Carillon Canal National Historic Site": [
+  45.5701069,
+  -74.3809178,
+  "Carillon Canal, Quebec"
+ ],
+ "Chambly Canal National Historic Site": [
+  45.3821438,
+  -73.2574772,
+  "Chambly Canal, Quebec"
+ ],
+ "Coteau-du-Lac National Historic Site": [
+  45.2963957,
+  -74.1782005,
+  "Coteau-du-Lac"
+ ],
  "Forges du Saint-Maurice National Historic Site": [
   46.3986594,
   -72.6623357,
   "Forges du Saint-Maurice National Historic Site, Quebec"
  ],
- "Fort Chambly National Historic Site": null,
- "Fort Lennox National Historic Site": null,
- "Fort Ste. Thérèse National Historic Site": null,
+ "Fort Chambly National Historic Site": [
+  45.4486235,
+  -73.2759106,
+  "Fort Chambly, Quebec"
+ ],
+ "Fort Lennox National Historic Site": [
+  45.1210104,
+  -73.2697493,
+  "Fort Lennox, Quebec"
+ ],
+ "Fort Ste. Thérèse National Historic Site": [
+  45.3888159,
+  -73.2579725,
+  "Fort Ste. Thérèse, Quebec"
+ ],
  "Grosse Île and the Irish Memorial National Historic Site": null,
  "Lévis Forts National Historic Site": [
   46.8145498,
   -71.1578171,
   "Lévis Forts National Historic Site"
  ],
- "Louis S. St. Laurent National Historic Site": null,
- "Manoir Papineau National Historic Site": null,
- "Obadjiwan-Fort Témiscamingue National Historic Site": null,
- "Pointe-au-Père Lighthouse National Historic Site": null,
- "Saint-Ours Canal National Historic Site": null,
- "Sir Wilfrid Laurier National Historic Site": null,
- "57-63 St. Louis Street National Historic Site": null,
+ "Louis S. St. Laurent National Historic Site": [
+  45.5030278,
+  -73.6789408,
+  "Louis S. St. Laurent, Quebec"
+ ],
+ "Manoir Papineau National Historic Site": [
+  45.6496856,
+  -74.9437781,
+  "Manoir Papineau, Quebec"
+ ],
+ "Obadjiwan-Fort Témiscamingue National Historic Site": [
+  47.2904444,
+  -79.4556587,
+  "Obadjiwan-Fort Témiscamingue, Quebec"
+ ],
+ "Pointe-au-Père Lighthouse National Historic Site": [
+  48.5175224,
+  -68.4689663,
+  "Pointe-au-Père Lighthouse, Quebec"
+ ],
+ "Saint-Ours Canal National Historic Site": [
+  45.8645084,
+  -73.1465515,
+  "Saint-Ours Canal, Quebec"
+ ],
+ "Sir Wilfrid Laurier National Historic Site": [
+  45.8525098,
+  -73.757443,
+  "Sir Wilfrid Laurier, Quebec"
+ ],
+ "57-63 St. Louis Street National Historic Site": [
+  45.2473874,
+  -74.1524073,
+  "57-63 St. Louis Street, Quebec"
+ ],
  "Cartier-Brébeuf National Historic Site": [
   46.8252873,
   -71.2396803,
   "Cartier-Brébeuf National Historic Site, Quebec"
  ],
- "Fortifications of Quebec National Historic Site": null,
- "Montmorency Park National Historic Site": null,
+ "Fortifications of Quebec National Historic Site": [
+  46.8104827,
+  -71.2119707,
+  "Fortifications of Quebec, Quebec"
+ ],
+ "Montmorency Park National Historic Site": [
+  46.8136946,
+  -71.204226,
+  "Montmorency Park, Quebec"
+ ],
  "Quebec Garrison Club National Historic Site": null,
  "Saint-Louis Forts and Châteaux National Historic Site": null,
  "Batoche National Historic Site": [
@@ -1409,34 +1709,62 @@
   -106.1541386,
   "Battle of Tourond's Coulee / Fish Creek National Historic Site, Saskatchewan"
  ],
- "Cypress Hills Massacre National Historic Site": null,
- "Fort Battleford National Historic Site": null,
- "Fort Espérance National Historic Site": null,
+ "Cypress Hills Massacre National Historic Site": [
+  49.550992,
+  -109.8689157,
+  "Cypress Hills Massacre"
+ ],
+ "Fort Battleford National Historic Site": [
+  52.7268245,
+  -108.2949828,
+  "Fort Battleford, Saskatchewan"
+ ],
+ "Fort Espérance National Historic Site": [
+  51.4372567,
+  -57.8046902,
+  "Fort Espérance"
+ ],
  "Fort Livingstone National Historic Site": [
   51.9037474,
   -101.9575063,
   "Fort Livingstone National Historic Site, Saskatchewan"
  ],
- "Fort Pelly National Historic Site": null,
+ "Fort Pelly National Historic Site": [
+  51.7778348,
+  -102.0034412,
+  "Fort Pelly, Saskatchewan"
+ ],
  "Fort Walsh National Historic Site": [
   49.5675349,
   -109.8785667,
   "Fort Walsh National Historic Site, Saskatchewan"
  ],
- "Frenchman Butte National Historic Site": null,
+ "Frenchman Butte National Historic Site": [
+  53.5962735,
+  -109.5710366,
+  "Frenchman Butte"
+ ],
  "Motherwell Homestead National Historic Site": [
   50.7188619,
   -103.4250554,
   "Motherwell Homestead National Historic Site, Saskatchewan"
  ],
  "Dawson Historical Complex National Historic Site": null,
- "Dredge No. 4 National Historic Site": null,
+ "Dredge No. 4 National Historic Site": [
+  63.9435906,
+  -139.3355466,
+  "Dredge No. 4, Yukon"
+ ],
  "S.S. Keno National Historic Site": [
   64.0631717,
   -139.435081,
   "S.S. Keno National Historic Site, Yukon"
  ],
- "S.S. Klondike National Historic Site": null,
+ "S.S. Klondike National Historic Site": [
+  60.7134969,
+  -135.047363,
+  "S.S. Klondike, Yukon"
+ ],
  "Saoyú-ʔehdacho National Historic Site": null,
  "Alto Golfo de California y Delta del Río Colorado Biosphere Reserve": [
   32.6392535,
@@ -2081,5 +2409,1212 @@
   28.65,
   -112.85,
   "manual"
+ ],
+ "Acadia National Park": [
+  44.3563115,
+  -68.2154787,
+  "Acadia National Park, Maine"
+ ],
+ "National Park of American Samoa": [
+  -14.2491297,
+  -169.4490402,
+  "National Park of American Samoa, American Samoa"
+ ],
+ "Arches National Park": [
+  38.7265253,
+  -109.5630457,
+  "Arches National Park, Utah"
+ ],
+ "Badlands National Park": [
+  43.5271059,
+  -102.3616629,
+  "Badlands National Park, South Dakota"
+ ],
+ "Big Bend National Park": [
+  29.3332484,
+  -103.1943284,
+  "Big Bend National Park, Texas"
+ ],
+ "Biscayne National Park": [
+  25.5031223,
+  -80.2348496,
+  "Biscayne National Park, Florida"
+ ],
+ "Black Canyon of the Gunnison National Park": [
+  38.5798065,
+  -107.743697,
+  "Black Canyon of the Gunnison National Park, Colorado"
+ ],
+ "Bryce Canyon National Park": [
+  37.5707948,
+  -112.1855939,
+  "Bryce Canyon National Park, Utah"
+ ],
+ "Canyonlands National Park": [
+  38.2332586,
+  -109.9206627,
+  "Canyonlands National Park, Utah"
+ ],
+ "Capitol Reef National Park": [
+  38.0670286,
+  -111.1552562,
+  "Capitol Reef National Park, Utah"
+ ],
+ "Carlsbad Caverns National Park": [
+  32.1212489,
+  -104.6012306,
+  "Carlsbad Caverns National Park, New Mexico"
+ ],
+ "Channel Islands National Park": [
+  33.9663722,
+  -120.0954204,
+  "Channel Islands National Park, California"
+ ],
+ "Chiricahua National Park": [
+  32.0139728,
+  -109.3475406,
+  "Chiricahua National Park, Arizona"
+ ],
+ "Congaree National Park": [
+  33.7941553,
+  -80.7636521,
+  "Congaree National Park, South Carolina"
+ ],
+ "Crater Lake National Park": [
+  42.931692,
+  -122.1278905,
+  "Crater Lake National Park, Oregon"
+ ],
+ "Cuyahoga Valley National Park": [
+  41.2550938,
+  -81.5376417,
+  "Cuyahoga Valley National Park, Ohio"
+ ],
+ "Death Valley National Park": [
+  36.4702428,
+  -117.0883909,
+  "Death Valley National Park, California"
+ ],
+ "Denali National Park and Preserve": [
+  63.7347574,
+  -148.8851355,
+  "Denali National Park and Preserve, Alaska"
+ ],
+ "Dry Tortugas National Park": [
+  24.6377223,
+  -82.8767982,
+  "Dry Tortugas National Park, Florida"
+ ],
+ "Everglades National Park": [
+  25.3679443,
+  -80.8783066,
+  "Everglades National Park, Florida"
+ ],
+ "Gates of the Arctic National Park and Preserve": [
+  66.8661186,
+  -155.1351697,
+  "Gates of the Arctic, Alaska"
+ ],
+ "Gateway Arch National Park": [
+  38.6245067,
+  -90.1856833,
+  "Gateway Arch National Park, Missouri"
+ ],
+ "Glacier National Park": [
+  51.2613359,
+  -117.5341102,
+  "Glacier National Park, British Columbia (Canada's park; the US park of the same name links to its own place)"
+ ],
+ "Glacier Bay National Park and Preserve": [
+  58.73162,
+  -136.2245627,
+  "Glacier Bay, Alaska"
+ ],
+ "Grand Canyon National Park": [
+  36.3078548,
+  -112.292896,
+  "Grand Canyon National Park, Arizona"
+ ],
+ "Grand Teton National Park": [
+  43.8105668,
+  -110.6487948,
+  "Grand Teton National Park, Wyoming"
+ ],
+ "Great Basin National Park": [
+  38.9441564,
+  -114.2349457,
+  "Great Basin National Park, Nevada"
+ ],
+ "Great Sand Dunes National Park and Preserve": [
+  37.826126,
+  -105.4992241,
+  "Great Sand Dunes, Colorado"
+ ],
+ "Great Smoky Mountains National Park": [
+  35.63422,
+  -83.402366,
+  "Great Smoky Mountains National Park, North Carolina"
+ ],
+ "Guadalupe Mountains National Park": [
+  31.9161088,
+  -104.900737,
+  "Guadalupe Mountains National Park, Texas"
+ ],
+ "Haleakalā National Park": [
+  20.6991334,
+  -156.1324301,
+  "Haleakalā National Park, Hawaii"
+ ],
+ "Hawaii Volcanoes National Park": [
+  19.2608312,
+  -155.3578662,
+  "Hawaii Volcanoes National Park, Hawaii"
+ ],
+ "Hot Springs National Park": [
+  34.5290712,
+  -93.0301402,
+  "Hot Springs National Park, Arkansas"
+ ],
+ "Indiana Dunes National Park": [
+  41.6152664,
+  -87.2072619,
+  "Indiana Dunes National Park, Indiana"
+ ],
+ "Isle Royale National Park": [
+  48.0073825,
+  -88.8289875,
+  "Isle Royale National Park, Michigan"
+ ],
+ "Joshua Tree National Park": [
+  33.8970672,
+  -115.9511158,
+  "Joshua Tree National Park, California"
+ ],
+ "Katmai National Park and Preserve": [
+  58.5049844,
+  -155.0896226,
+  "Katmai, Alaska"
+ ],
+ "Kenai Fjords National Park": [
+  59.8685631,
+  -150.0257714,
+  "Kenai Fjords National Park, Alaska"
+ ],
+ "Kings Canyon National Park": [
+  36.9152785,
+  -118.6076559,
+  "Kings Canyon National Park, California"
+ ],
+ "Kobuk Valley National Park": [
+  67.3898231,
+  -159.0574319,
+  "Kobuk Valley National Park, Alaska"
+ ],
+ "Lake Clark National Park and Preserve": [
+  60.2080115,
+  -154.3758859,
+  "Lake Clark, Alaska"
+ ],
+ "Lassen Volcanic National Park": [
+  40.4937823,
+  -121.4044582,
+  "Lassen Volcanic National Park, California"
+ ],
+ "Mammoth Cave National Park": [
+  37.1841693,
+  -86.122991,
+  "Mammoth Cave National Park, Kentucky"
+ ],
+ "Mesa Verde National Park": [
+  37.253776,
+  -108.4555964,
+  "Mesa Verde National Park, Colorado"
+ ],
+ "Mount Rainier National Park": [
+  46.854338,
+  -121.7063343,
+  "Mount Rainier National Park, Washington"
+ ],
+ "New River Gorge National Park and Preserve": [
+  37.8967311,
+  -81.0429734,
+  "New River Gorge National Park and Preserve, West Virginia"
+ ],
+ "North Cascades National Park": [
+  48.8083484,
+  -121.406215,
+  "North Cascades National Park, Washington"
+ ],
+ "Olympic National Park": [
+  47.7865324,
+  -123.5360503,
+  "Olympic National Park, Washington"
+ ],
+ "Petrified Forest National Park": [
+  34.9744769,
+  -109.7079943,
+  "Petrified Forest National Park, Arizona"
+ ],
+ "Pinnacles National Park": [
+  36.4862515,
+  -121.1711408,
+  "Pinnacles National Park, California"
+ ],
+ "Redwood National and State Parks": [
+  41.4613522,
+  -124.0480956,
+  "Redwood National and State Parks, California"
+ ],
+ "Rocky Mountain National Park": [
+  40.3553915,
+  -105.7176957,
+  "Rocky Mountain National Park, Colorado"
+ ],
+ "Saguaro National Park": [
+  32.1683758,
+  -110.6183452,
+  "Saguaro National Park, Arizona"
+ ],
+ "Sequoia National Park": [
+  36.4958407,
+  -118.5599194,
+  "Sequoia National Park, California"
+ ],
+ "Shenandoah National Park": [
+  38.4719668,
+  -78.4636973,
+  "Shenandoah National Park, Virginia"
+ ],
+ "Theodore Roosevelt National Park": [
+  46.9584776,
+  -103.4650052,
+  "Theodore Roosevelt National Park, North Dakota"
+ ],
+ "Virgin Islands National Park": [
+  18.336883,
+  -64.7400118,
+  "Virgin Islands National Park, U.S. Virgin Islands"
+ ],
+ "Voyageurs National Park": [
+  48.465549,
+  -92.8853973,
+  "Voyageurs National Park, Minnesota"
+ ],
+ "White Sands National Park": [
+  32.7641809,
+  -106.331193,
+  "White Sands National Park, New Mexico"
+ ],
+ "Wind Cave National Park": [
+  43.5788651,
+  -103.4708532,
+  "Wind Cave National Park, South Dakota"
+ ],
+ "Wrangell–St. Elias National Park and Preserve": [
+  62.0199914,
+  -145.3633693,
+  "Wrangell–St. Elias, Alaska"
+ ],
+ "Yellowstone National Park": [
+  44.6200885,
+  -110.5606893,
+  "Yellowstone National Park"
+ ],
+ "Yosemite National Park": [
+  37.8393004,
+  -119.5164635,
+  "Yosemite National Park, California"
+ ],
+ "Zion National Park": [
+  37.3221673,
+  -113.0047934,
+  "Zion National Park, Utah"
+ ],
+ "African Burial Ground National Monument": [
+  40.7145252,
+  -74.0044657,
+  "African Burial Ground National Monument, New York"
+ ],
+ "Agate Fossil Beds National Monument": [
+  42.4222907,
+  -103.7589993,
+  "Agate Fossil Beds National Monument, Nebraska"
+ ],
+ "Alibates Flint Quarries National Monument": [
+  35.582063,
+  -101.6696436,
+  "Alibates Flint Quarries National Monument, Texas"
+ ],
+ "Aniakchak National Monument and Preserve": [
+  56.9017817,
+  -158.106723,
+  "Aniakchak, Alaska"
+ ],
+ "Avi Kwa Ame National Monument": [
+  35.3958822,
+  -115.0134294,
+  "Avi Kwa Ame National Monument, Nevada"
+ ],
+ "Aztec Ruins National Monument": [
+  36.8355868,
+  -108.0016505,
+  "Aztec Ruins National Monument, New Mexico"
+ ],
+ "Bandelier National Monument": [
+  35.7844734,
+  -106.3128786,
+  "Bandelier National Monument, New Mexico"
+ ],
+ "Belmont–Paul Women's Equality National Monument": [
+  38.8923313,
+  -77.0038631,
+  "Belmont–Paul Women's Equality National Monument, District of Columbia"
+ ],
+ "Birmingham Civil Rights National Monument": [
+  33.5159914,
+  -86.8141477,
+  "Birmingham Civil Rights National Monument, Alabama"
+ ],
+ "Booker T. Washington National Monument": [
+  37.114259,
+  -79.7328284,
+  "Booker T. Washington National Monument, Virginia"
+ ],
+ "Buck Island Reef National Monument": [
+  17.7910776,
+  -64.6206353,
+  "Buck Island Reef National Monument, U.S. Virgin Islands"
+ ],
+ "Cabrillo National Monument": [
+  32.6722263,
+  -117.2409395,
+  "Cabrillo National Monument, California"
+ ],
+ "Camp Nelson National Monument": [
+  37.7903557,
+  -84.5985048,
+  "Camp Nelson National Monument, Kentucky"
+ ],
+ "Canyon de Chelly National Monument": [
+  36.1433502,
+  -109.4416431,
+  "Canyon de Chelly National Monument, Arizona"
+ ],
+ "Cape Krusenstern National Monument": [
+  67.3907184,
+  -163.5346766,
+  "Cape Krusenstern National Monument, Alaska"
+ ],
+ "Capulin Volcano National Monument": [
+  36.7807714,
+  -103.9730457,
+  "Capulin Volcano National Monument, New Mexico"
+ ],
+ "Carlisle Federal Indian Boarding School National Monument": null,
+ "Casa Grande Ruins National Monument": [
+  32.9970473,
+  -111.532647,
+  "Casa Grande Ruins National Monument, Arizona"
+ ],
+ "Castillo de San Marcos National Monument": [
+  29.897554,
+  -81.3119061,
+  "Castillo de San Marcos National Monument, Florida"
+ ],
+ "Castle Clinton National Monument": [
+  40.7034567,
+  -74.016561,
+  "Castle Clinton National Monument, New York"
+ ],
+ "Castle Mountains National Monument": [
+  35.292628,
+  -115.0683041,
+  "Castle Mountains National Monument, California"
+ ],
+ "Cedar Breaks National Monument": [
+  37.6387738,
+  -112.8447452,
+  "Cedar Breaks National Monument, Utah"
+ ],
+ "César E. Chávez National Monument": [
+  35.2265826,
+  -118.5626048,
+  "César E. Chávez National Monument, California"
+ ],
+ "Charles Young Buffalo Soldiers National Monument": [
+  39.7089098,
+  -83.8953201,
+  "Charles Young Buffalo Soldiers National Monument, Ohio"
+ ],
+ "Colorado National Monument": [
+  39.0511386,
+  -108.6979455,
+  "Colorado National Monument, Colorado"
+ ],
+ "Craters of the Moon National Monument and Preserve": [
+  43.1414363,
+  -113.4925059,
+  "Craters of the Moon, Idaho"
+ ],
+ "Devils Postpile National Monument": [
+  37.6122529,
+  -119.0876813,
+  "Devils Postpile National Monument, California"
+ ],
+ "Devils Tower National Monument": [
+  44.5898033,
+  -104.7151634,
+  "Devils Tower National Monument, Wyoming"
+ ],
+ "Dinosaur National Monument": [
+  40.4936928,
+  -109.000787,
+  "Dinosaur National Monument, Utah"
+ ],
+ "Effigy Mounds National Monument": [
+  43.0870723,
+  -91.1920877,
+  "Effigy Mounds National Monument, Iowa"
+ ],
+ "El Malpais National Monument": [
+  34.8630407,
+  -108.0980193,
+  "El Malpais National Monument, New Mexico"
+ ],
+ "El Morro National Monument": [
+  35.0403532,
+  -108.3464187,
+  "El Morro National Monument, New Mexico"
+ ],
+ "Emmett Till and Mamie Till-Mobley National Monument": [
+  33.8314056,
+  -90.2705091,
+  "Emmett Till and Mamie Till-Mobley National Monument, Illinois"
+ ],
+ "Florissant Fossil Beds National Monument": [
+  38.9124375,
+  -105.2814312,
+  "Florissant Fossil Beds National Monument, Colorado"
+ ],
+ "Fort Frederica National Monument": [
+  31.2228076,
+  -81.3898968,
+  "Fort Frederica National Monument, Georgia"
+ ],
+ "Fort Matanzas National Monument": [
+  29.7097314,
+  -81.2327447,
+  "Fort Matanzas National Monument, Florida"
+ ],
+ "Fort McHenry National Monument and Historic Shrine": [
+  39.2637084,
+  -76.5803328,
+  "Fort McHenry National Monument and Historic Shrine, Maryland"
+ ],
+ "Fort Monroe National Monument": [
+  37.0039688,
+  -76.3068698,
+  "Fort Monroe National Monument, Virginia"
+ ],
+ "Fort Pulaski National Monument": [
+  32.0280835,
+  -80.8939505,
+  "Fort Pulaski National Monument, Georgia"
+ ],
+ "Fort Stanwix National Monument": [
+  43.2106046,
+  -75.4554773,
+  "Fort Stanwix National Monument, New York"
+ ],
+ "Fort Union National Monument": [
+  35.9074508,
+  -105.0121185,
+  "Fort Union National Monument, New Mexico"
+ ],
+ "Fossil Butte National Monument": [
+  41.8592117,
+  -110.7632795,
+  "Fossil Butte National Monument, Wyoming"
+ ],
+ "Frances Perkins National Monument": [
+  44.6688446,
+  -70.1445138,
+  "Frances Perkins, Maine"
+ ],
+ "Freedom Riders National Monument": [
+  33.6344555,
+  -85.9085235,
+  "Freedom Riders National Monument, Alabama"
+ ],
+ "George Washington Birthplace National Monument": [
+  38.1918855,
+  -76.9208322,
+  "George Washington Birthplace National Monument, Virginia"
+ ],
+ "George Washington Carver National Monument": [
+  36.9859984,
+  -94.3555747,
+  "George Washington Carver National Monument, Missouri"
+ ],
+ "Gila Cliff Dwellings National Monument": [
+  33.2271975,
+  -108.2731875,
+  "Gila Cliff Dwellings National Monument, New Mexico"
+ ],
+ "Governors Island National Monument": [
+  40.6916647,
+  -74.0164157,
+  "Governors Island National Monument, New York"
+ ],
+ "Grand Canyon–Parashant National Monument": [
+  36.31729,
+  -113.6087058,
+  "Grand Canyon–Parashant National Monument, Arizona"
+ ],
+ "Grand Portage National Monument": [
+  47.9894596,
+  -89.714653,
+  "Grand Portage National Monument, Minnesota"
+ ],
+ "Hagerman Fossil Beds National Monument": [
+  42.7937331,
+  -114.9465164,
+  "Hagerman Fossil Beds National Monument, Idaho"
+ ],
+ "Hohokam Pima National Monument": [
+  33.1866064,
+  -111.9225784,
+  "Hohokam Pima National Monument, Arizona"
+ ],
+ "Hovenweep National Monument": [
+  37.3835455,
+  -109.0729923,
+  "Hovenweep National Monument, Colorado"
+ ],
+ "Jewel Cave National Monument": [
+  43.7306701,
+  -103.831903,
+  "Jewel Cave National Monument, South Dakota"
+ ],
+ "John Day Fossil Beds National Monument": [
+  44.5508376,
+  -119.6483294,
+  "John Day Fossil Beds National Monument, Oregon"
+ ],
+ "Katahdin Woods and Waters National Monument": [
+  45.9765867,
+  -68.7334604,
+  "Katahdin Woods and Waters National Monument, Maine"
+ ],
+ "Lava Beds National Monument": [
+  41.7699242,
+  -121.5264796,
+  "Lava Beds National Monument, California"
+ ],
+ "Little Bighorn Battlefield National Monument": [
+  45.5653722,
+  -107.4276619,
+  "Little Bighorn Battlefield National Monument, Montana"
+ ],
+ "Medgar and Myrlie Evers Home National Monument": [
+  32.3409773,
+  -90.2126611,
+  "Medgar and Myrlie Evers Home National Monument, Mississippi"
+ ],
+ "Mill Springs Battlefield National Monument": [
+  37.0577113,
+  -84.7387473,
+  "Mill Springs Battlefield National Monument, Kentucky"
+ ],
+ "Montezuma Castle National Monument": [
+  34.6130884,
+  -111.8366661,
+  "Montezuma Castle National Monument, Arizona"
+ ],
+ "Muir Woods National Monument": [
+  37.8963907,
+  -122.5802183,
+  "Muir Woods National Monument, California"
+ ],
+ "Natural Bridges National Monument": [
+  37.6025953,
+  -110.0111751,
+  "Natural Bridges National Monument, Utah"
+ ],
+ "Navajo National Monument": [
+  36.6842583,
+  -110.5362587,
+  "Navajo National Monument, Arizona"
+ ],
+ "Oregon Caves National Monument and Preserve": [
+  42.1046446,
+  -123.4043689,
+  "Oregon Caves, Oregon"
+ ],
+ "Organ Pipe Cactus National Monument": [
+  32.0081745,
+  -112.8751837,
+  "Organ Pipe Cactus National Monument, Arizona"
+ ],
+ "Petroglyph National Monument": [
+  35.1349455,
+  -106.7478191,
+  "Petroglyph National Monument, New Mexico"
+ ],
+ "Pipe Spring National Monument": [
+  36.8628269,
+  -112.7398568,
+  "Pipe Spring National Monument, Arizona"
+ ],
+ "Pipestone National Monument": [
+  44.0123463,
+  -96.3246509,
+  "Pipestone National Monument, Minnesota"
+ ],
+ "Poverty Point National Monument": [
+  32.6523318,
+  -91.408337,
+  "Poverty Point National Monument, Louisiana"
+ ],
+ "Rainbow Bridge National Monument": [
+  37.0780946,
+  -110.9655096,
+  "Rainbow Bridge National Monument, Utah"
+ ],
+ "Russell Cave National Monument": [
+  34.9743321,
+  -85.8156643,
+  "Russell Cave National Monument, Alabama"
+ ],
+ "Salinas Pueblo Missions National Monument": [
+  34.2579235,
+  -106.0902,
+  "Salinas Pueblo Missions National Monument, New Mexico"
+ ],
+ "Scotts Bluff National Monument": [
+  41.8338796,
+  -103.7056688,
+  "Scotts Bluff National Monument, Nebraska"
+ ],
+ "Springfield 1908 Race Riot National Monument": [
+  39.8044442,
+  -89.6422994,
+  "Springfield 1908 Race Riot"
+ ],
+ "Statue of Liberty National Monument": [
+  40.6983251,
+  -74.0411319,
+  "Statue of Liberty National Monument, New York"
+ ],
+ "Stonewall National Monument": [
+  43.1117313,
+  -73.7941604,
+  "Stonewall, New York"
+ ],
+ "Sunset Crater Volcano National Monument": [
+  35.3711545,
+  -111.5113228,
+  "Sunset Crater Volcano National Monument, Arizona"
+ ],
+ "Timpanogos Cave National Monument": [
+  40.4390202,
+  -111.709404,
+  "Timpanogos Cave National Monument, Utah"
+ ],
+ "Tonto National Monument": [
+  33.6469254,
+  -111.1135531,
+  "Tonto National Monument, Arizona"
+ ],
+ "Tule Lake National Monument": [
+  41.8752846,
+  -121.3933338,
+  "Tule Lake National Monument, California"
+ ],
+ "Tule Springs Fossil Beds National Monument": [
+  36.4019469,
+  -115.3566933,
+  "Tule Springs Fossil Beds National Monument, Nevada"
+ ],
+ "Tuzigoot National Monument": [
+  34.7733961,
+  -112.0287689,
+  "Tuzigoot National Monument, Arizona"
+ ],
+ "Virgin Islands Coral Reef National Monument": [
+  18.2792296,
+  -64.703918,
+  "Virgin Islands Coral Reef National Monument, U.S. Virgin Islands"
+ ],
+ "Waco Mammoth National Monument": [
+  31.6044533,
+  -97.1751729,
+  "Waco Mammoth National Monument, Texas"
+ ],
+ "Walnut Canyon National Monument": [
+  35.1793072,
+  -111.4514117,
+  "Walnut Canyon National Monument, Arizona"
+ ],
+ "Wupatki National Monument": [
+  35.5649504,
+  -111.4058508,
+  "Wupatki National Monument, Arizona"
+ ],
+ "Yucca House National Monument": [
+  37.2430919,
+  -108.6821995,
+  "Yucca House National Monument, Colorado"
+ ],
+ "Bering Land Bridge National Preserve": [
+  65.9137073,
+  -164.1740479,
+  "Bering Land Bridge National Preserve, Alaska"
+ ],
+ "Big Cypress National Preserve": [
+  25.9361216,
+  -81.0951271,
+  "Big Cypress National Preserve, Florida"
+ ],
+ "Big Thicket National Preserve": [
+  30.7409665,
+  -94.2077244,
+  "Big Thicket National Preserve, Texas"
+ ],
+ "Little River Canyon National Preserve": [
+  34.39541,
+  -85.6168595,
+  "Little River Canyon National Preserve, Alabama"
+ ],
+ "Mojave National Preserve": [
+  35.0958672,
+  -115.5396535,
+  "Mojave National Preserve, California"
+ ],
+ "Noatak National Preserve": [
+  67.8450961,
+  -158.1445145,
+  "Noatak National Preserve"
+ ],
+ "Tallgrass Prairie National Preserve": [
+  38.4469955,
+  -96.5775012,
+  "Tallgrass Prairie National Preserve, Kansas"
+ ],
+ "Timucuan Ecological and Historic Preserve": [
+  30.5716756,
+  -81.4458648,
+  "Timucuan Ecological and Historic Preserve"
+ ],
+ "Valles Caldera National Preserve": [
+  35.9150925,
+  -106.5105025,
+  "Valles Caldera National Preserve, New Mexico"
+ ],
+ "Yukon–Charley Rivers National Preserve": [
+  65.0522811,
+  -143.1506099,
+  "Yukon–Charley Rivers National Preserve, Alaska"
+ ],
+ "Amistad National Recreation Area": [
+  29.5084351,
+  -100.9742404,
+  "Amistad National Recreation Area, Texas"
+ ],
+ "Bighorn Canyon National Recreation Area": [
+  45.041956,
+  -108.2622654,
+  "Bighorn Canyon National Recreation Area, Montana"
+ ],
+ "Boston Harbor Islands National Recreation Area": [
+  42.2695284,
+  -70.9211541,
+  "Boston Harbor Islands National Recreation Area, Massachusetts"
+ ],
+ "Chattahoochee River National Recreation Area": [
+  34.1423643,
+  -84.0860627,
+  "Chattahoochee River National Recreation Area, Georgia"
+ ],
+ "Chickasaw National Recreation Area": [
+  34.4592728,
+  -97.0087849,
+  "Chickasaw National Recreation Area, Oklahoma"
+ ],
+ "Curecanti National Recreation Area": [
+  38.4524429,
+  -107.3694713,
+  "Curecanti National Recreation Area, Colorado"
+ ],
+ "Delaware Water Gap National Recreation Area": [
+  41.1384391,
+  -74.9110215,
+  "Delaware Water Gap National Recreation Area"
+ ],
+ "Gateway National Recreation Area": [
+  40.5984789,
+  -73.8579271,
+  "Gateway National Recreation Area, New York"
+ ],
+ "Gauley River National Recreation Area": [
+  38.192808,
+  -81.0726093,
+  "Gauley River National Recreation Area, West Virginia"
+ ],
+ "Glen Canyon National Recreation Area": [
+  37.6580958,
+  -111.0932089,
+  "Glen Canyon National Recreation Area, Utah"
+ ],
+ "Golden Gate National Recreation Area": [
+  37.8556821,
+  -122.5337247,
+  "Golden Gate National Recreation Area"
+ ],
+ "Lake Chelan National Recreation Area": [
+  48.3485239,
+  -120.6903734,
+  "Lake Chelan National Recreation Area, Washington"
+ ],
+ "Lake Mead National Recreation Area": [
+  35.8722076,
+  -114.6900248,
+  "Lake Mead National Recreation Area, Nevada"
+ ],
+ "Lake Meredith National Recreation Area": [
+  35.6005129,
+  -101.709084,
+  "Lake Meredith National Recreation Area, Texas"
+ ],
+ "Lake Roosevelt National Recreation Area": [
+  48.331587,
+  -118.1713127,
+  "Lake Roosevelt National Recreation Area, Washington"
+ ],
+ "Ross Lake National Recreation Area": [
+  48.7862669,
+  -121.0676193,
+  "Ross Lake National Recreation Area, Washington"
+ ],
+ "Santa Monica Mountains National Recreation Area": [
+  34.1101099,
+  -118.7986218,
+  "Santa Monica Mountains National Recreation Area, California"
+ ],
+ "Whiskeytown National Recreation Area": [
+  40.6150592,
+  -122.5201272,
+  "Whiskeytown National Recreation Area"
+ ],
+ "Assateague Island National Seashore": [
+  38.1485979,
+  -75.1858333,
+  "Assateague Island National Seashore, Maryland"
+ ],
+ "Canaveral National Seashore": [
+  28.8882108,
+  -80.8205112,
+  "Canaveral National Seashore, Florida"
+ ],
+ "Cape Cod National Seashore": [
+  41.8425632,
+  -69.9521831,
+  "Cape Cod National Seashore, Massachusetts"
+ ],
+ "Cape Hatteras National Seashore": [
+  35.2312668,
+  -75.5413703,
+  "Cape Hatteras National Seashore, North Carolina"
+ ],
+ "Cape Lookout National Seashore": [
+  34.830777,
+  -76.342067,
+  "Cape Lookout National Seashore, North Carolina"
+ ],
+ "Cumberland Island National Seashore": [
+  30.8458476,
+  -81.450076,
+  "Cumberland Island National Seashore, Georgia"
+ ],
+ "Fire Island National Seashore": [
+  40.7084252,
+  -72.9513976,
+  "Fire Island National Seashore, New York"
+ ],
+ "Gulf Islands National Seashore": [
+  30.2369736,
+  -88.6804295,
+  "Gulf Islands National Seashore, Florida"
+ ],
+ "Padre Island National Seashore": [
+  27.0455361,
+  -97.3978908,
+  "Padre Island National Seashore, Texas"
+ ],
+ "Point Reyes National Seashore": [
+  38.0705316,
+  -122.9176122,
+  "Point Reyes National Seashore, California"
+ ],
+ "Apostle Islands National Lakeshore": [
+  46.9374957,
+  -90.5824154,
+  "Apostle Islands National Lakeshore, Wisconsin"
+ ],
+ "Pictured Rocks National Lakeshore": [
+  46.5482534,
+  -86.3447388,
+  "Pictured Rocks National Lakeshore, Michigan"
+ ],
+ "Sleeping Bear Dunes National Lakeshore": [
+  44.9309354,
+  -85.8983834,
+  "Sleeping Bear Dunes National Lakeshore, Michigan"
+ ],
+ "City of Rocks National Reserve": [
+  42.0724955,
+  -113.7061642,
+  "City of Rocks National Reserve, Idaho"
+ ],
+ "Ebey's Landing National Historical Reserve": [
+  48.2058665,
+  -122.6819342,
+  "Ebey's Landing National Historical Reserve, Washington"
+ ],
+ "Pinelands National Reserve": [
+  39.6229112,
+  -74.6254553,
+  "Pinelands National Reserve, New Jersey"
+ ],
+ "Aulavik National Park": [
+  73.7652065,
+  -119.6194037,
+  "Aulavik National Park, Northwest Territories"
+ ],
+ "Auyuittuq National Park": [
+  67.3458863,
+  -65.8612308,
+  "Auyuittuq National Park, Nunavut"
+ ],
+ "Banff National Park": [
+  51.4881335,
+  -115.9380498,
+  "Banff National Park"
+ ],
+ "Bruce Peninsula National Park": [
+  45.1941637,
+  -81.5320146,
+  "Bruce Peninsula National Park, Ontario"
+ ],
+ "Cape Breton Highlands National Park": [
+  46.7301026,
+  -60.6309036,
+  "Cape Breton Highlands National Park, Nova Scotia"
+ ],
+ "Elk Island National Park": [
+  53.6113726,
+  -112.877283,
+  "Elk Island National Park, Alberta"
+ ],
+ "Forillon National Park": [
+  48.8669242,
+  -64.3339235,
+  "Forillon National Park, Quebec"
+ ],
+ "Fundy National Park": [
+  45.6171649,
+  -65.0448762,
+  "Fundy National Park"
+ ],
+ "Georgian Bay Islands National Park": [
+  44.8648817,
+  -79.8714104,
+  "Georgian Bay Islands National Park, Ontario"
+ ],
+ "Grasslands National Park": [
+  49.1126209,
+  -107.3701047,
+  "Grasslands National Park, Saskatchewan"
+ ],
+ "Gros Morne National Park": [
+  49.6358763,
+  -57.6534612,
+  "Gros Morne National Park, Newfoundland and Labrador"
+ ],
+ "Ivvavik National Park": [
+  69.1042783,
+  -139.6894553,
+  "Ivvavik National Park, Yukon"
+ ],
+ "Jasper National Park": [
+  52.8041035,
+  -117.8048267,
+  "Jasper National Park, Alberta"
+ ],
+ "Kejimkujik National Park": [
+  44.3618681,
+  -65.3031249,
+  "Kejimkujik National Park, Nova Scotia"
+ ],
+ "Kootenay National Park": [
+  50.9418881,
+  -115.9908336,
+  "Kootenay National Park, British Columbia"
+ ],
+ "Kouchibouguac National Park": [
+  46.8317638,
+  -65.0132974,
+  "Kouchibouguac National Park, New Brunswick"
+ ],
+ "La Mauricie National Park": [
+  46.7828857,
+  -72.9647585,
+  "La Mauricie National Park, Quebec"
+ ],
+ "Mount Revelstoke National Park": [
+  51.0956794,
+  -118.0378813,
+  "Mount Revelstoke National Park, British Columbia"
+ ],
+ "Point Pelee National Park": [
+  41.9451919,
+  -82.513145,
+  "Point Pelee National Park, Ontario"
+ ],
+ "Prince Albert National Park": [
+  53.8999389,
+  -106.3775935,
+  "Prince Albert National Park, Saskatchewan"
+ ],
+ "Prince Edward Island National Park": [
+  46.4146236,
+  -63.0106555,
+  "Prince Edward Island National Park, Prince Edward Island"
+ ],
+ "Pukaskwa National Park": [
+  48.2973805,
+  -85.9012018,
+  "Pukaskwa National Park, Ontario"
+ ],
+ "Qausuittuq National Park": [
+  76.073125,
+  -100.203128,
+  "Qausuittuq National Park, Nunavut"
+ ],
+ "Quttinirpaaq National Park": [
+  82.1793171,
+  -70.4936535,
+  "Quttinirpaaq National Park"
+ ],
+ "Riding Mountain National Park": [
+  50.7605068,
+  -100.0491992,
+  "Riding Mountain National Park, Manitoba"
+ ],
+ "Sirmilik National Park": [
+  73.2549953,
+  -78.5622951,
+  "Sirmilik National Park, Nunavut"
+ ],
+ "Terra Nova National Park": [
+  48.53323,
+  -53.8919401,
+  "Terra Nova National Park, Newfoundland and Labrador"
+ ],
+ "Thousand Islands National Park": [
+  44.3709698,
+  -76.0400202,
+  "Thousand Islands National Park, Ontario"
+ ],
+ "Torngat Mountains National Park": [
+  59.3460911,
+  -64.1098792,
+  "Torngat Mountains National Park, Newfoundland and Labrador"
+ ],
+ "Tuktut Nogait National Park": [
+  68.6978605,
+  -122.006437,
+  "Tuktut Nogait National Park, Northwest Territories"
+ ],
+ "Ukkusiksalik National Park": [
+  65.764741,
+  -89.8080058,
+  "Ukkusiksalik National Park, Nunavut"
+ ],
+ "Vuntut National Park": [
+  68.3765393,
+  -139.801411,
+  "Vuntut National Park, Yukon"
+ ],
+ "Wapusk National Park": [
+  57.9510336,
+  -93.3349362,
+  "Wapusk National Park, Manitoba"
+ ],
+ "Waterton Lakes National Park": [
+  49.1011173,
+  -113.9810076,
+  "Waterton Lakes National Park"
+ ],
+ "Wood Buffalo National Park": [
+  59.627172,
+  -112.7369313,
+  "Wood Buffalo National Park, Alberta"
+ ],
+ "Yoho National Park": [
+  51.3747764,
+  -116.5358482,
+  "Yoho National Park, British Columbia"
+ ],
+ "Akami-Uapishkᵘ-KakKasuak-Mealy Mountains National Park Reserve": [
+  53.548536,
+  -58.5479684,
+  "Akami-Uapishkᵘ-KakKasuak-Mealy Mountains National Park Reserve"
+ ],
+ "Gulf Islands National Park Reserve": [
+  48.7787345,
+  -123.152021,
+  "Gulf Islands National Park Reserve, British Columbia"
+ ],
+ "Gwaii Haanas National Park Reserve and Haida Heritage Site": [
+  52.6592268,
+  -131.5573443,
+  "Gwaii Haanas National Park Reserve and Haida Heritage Site"
+ ],
+ "Kluane National Park Reserve": [
+  60.8116316,
+  -138.2493596,
+  "Kluane National Park Reserve, Yukon"
+ ],
+ "Mingan Archipelago National Park Reserve": [
+  50.2231499,
+  -63.1497056,
+  "Mingan Archipelago National Park Reserve, Quebec"
+ ],
+ "Nááts'ihch'oh National Park Reserve": [
+  62.6965279,
+  -128.1159962,
+  "Nááts'ihch'oh National Park Reserve, Northwest Territories"
+ ],
+ "Nahanni National Park Reserve": [
+  61.6885772,
+  -126.252597,
+  "Nahanni National Park Reserve"
+ ],
+ "Pacific Rim National Park Reserve": [
+  49.0486798,
+  -125.7366933,
+  "Pacific Rim, British Columbia"
+ ],
+ "Pituamkek National Park Reserve": null,
+ "Sable Island National Park Reserve": [
+  43.9878662,
+  -59.7426633,
+  "Sable Island National Park Reserve, Nova Scotia"
+ ],
+ "Thaidene Nëné National Park Reserve": [
+  62.851077,
+  -107.929348,
+  "Thaidene Nëné National Park Reserve, Northwest Territories"
  ]
 }
