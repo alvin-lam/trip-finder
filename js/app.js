@@ -887,7 +887,7 @@
           <label>Location type<select class="select" data-filter="kind"><option value="">All types</option>${Object.entries(KIND_PLURAL)
             .map(([k, v]) => `<option value="${k}">${v[0].toUpperCase() + v.slice(1)}</option>`)
             .join("")}<option value="micronation">Micronations</option></select></label>
-          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">🏞️ National Parks</option><option value="family">👨‍👩‍👧 Family Friendly</option><option value="festival">🎉 Festivals</option><option value="market">🎄 Christmas Markets</option><option value="pride">🏳️‍🌈 Pride</option></select></label>
+          <label>Show only<select class="select" data-filter="only"><option value="">Any place</option><option value="np">🏞️ National Parks</option><option value="historic">🏛️ Historic Sites</option><option value="family">👨‍👩‍👧 Family Friendly</option><option value="festival">🎉 Festivals</option><option value="market">🎄 Christmas Markets</option><option value="pride">🏳️‍🌈 Pride</option></select></label>
           <label>Population<select class="select" data-filter="remote"><option value="">Any</option>${Object.entries(REMOTE_LABELS).map(([k, [, label]]) => `<option value="${k}">${label}</option>`).join("")}</select></label>
           <label>UNESCO sites<select class="select" data-filter="unesco"><option value="">Any</option><option value="wh">World Heritage</option>${unescoOption("geopark", "Global Geoparks")}${unescoOption("biosphere", "Biosphere Reserves")}</select></label>
           <label>LGBTQ+<select class="select" data-filter="lgbtq"><option value="">Any</option><option value="welcoming">🌈 Welcoming</option><option value="mixed">🌈 Mixed</option><option value="caution">⚠️ Caution</option></select></label>
@@ -966,6 +966,7 @@
               if (f.unesco === "biosphere" && !city.biosphere) return false;
               if (f.only === "family" && !city.family) return false;
               if (f.only === "np" && !city.nationalParks.length) return false;
+              if (f.only === "historic" && !city.historicSites.length) return false;
               // With a "Good in" month, a festival must fall in that month.
               const kind = (x) => f.only === "festival" || (f.only === "pride" ? x.pride : x.market);
               if (events && !city.festivals.some((x) => kind(x) && (!f.month || x.months.includes(f.month)))) return false;
