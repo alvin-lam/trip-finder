@@ -1867,8 +1867,12 @@ ${sel}[data-theme="dark"] { ${dark} }`;
   }
 
   // The scheme in use: today's for Seasonal, the picked one, or none for Classic.
+  // A picked season gives way to a holiday while it lasts (Winter becomes Christmas in
+  // December, then Winter again); a picked holiday or Classic stays as chosen.
   function activeScheme() {
-    if (state.colors === "seasonal") return E.seasonalScheme(new Date()).id;
+    const today = E.seasonalScheme(new Date());
+    if (state.colors === "seasonal") return today.id;
+    if (SEASONS.includes(state.colors) && today.kind === "holiday") return today.id;
     return E.SEASON_SCHEMES[state.colors] ? state.colors : null;
   }
 
@@ -1893,6 +1897,7 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     // Seasonal follows the date; a chosen theme stays until the visitor changes it.
     const id = activeScheme();
     const chosen = id && E.SEASON_SCHEMES[id];
+    const holidayOverride = SEASONS.includes(state.colors) && id !== state.colors;
     paintScheme(id);
     const label = `Appearance: ${mode} mode, ${id ? `${chosen.label} colors${state.colors === "seasonal" ? " (seasonal)" : ""}` : "classic colors"}`;
     themeBtn.setAttribute("aria-label", label);
@@ -1912,7 +1917,11 @@ ${sel}[data-theme="dark"] { ${dark} }`;
       <p class="appearance-menu__note">${
         state.colors === "seasonal"
           ? `Seasonal colors follow your local date and time zone${scheme.southern ? ", with southern hemisphere seasons" : ""}.`
-          : id
+          : holidayOverride
+            ? `${esc(chosen.label)} colors for now; your ${esc(E.SEASON_SCHEMES[state.colors].label)} colors return after the holiday.`
+            : id && SEASONS.includes(state.colors)
+            ? `${esc(chosen.label)} colors stay, except during holidays.`
+            : id
             ? `${esc(chosen.label)} colors stay until you choose Seasonal again.`
             : "Choose Seasonal to follow the time of year again."
       }</p>`;
