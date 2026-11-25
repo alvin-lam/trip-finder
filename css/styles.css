@@ -111,26 +111,51 @@ button { font: inherit; color: inherit; }
 .badge { background: var(--accent); color: var(--accent-ink); border-radius: 999px; font-size: 0.72rem; padding: 0 7px; min-width: 20px; text-align: center; }
 .icon-btn { border: 1px solid var(--border); background: var(--surface); width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; flex: none; }
 /* Appearance menu: mode and seasonal colors. */
-.appearance { position: relative; flex: none; }
-.appearance .icon-btn { display: grid; place-items: center; line-height: 1; }
-.appearance-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: min(290px, calc(100vw - 32px)); max-height: calc(100vh - 90px); overflow-y: auto; display: grid; gap: 2px; padding: 8px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18); }
-.appearance-menu[hidden] { display: none; }
-.appearance-menu__head { margin: 6px 10px 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.appearance-menu button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 9px 10px; border: 0; border-radius: 9px; background: none; color: var(--text); font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
-.appearance-menu button:hover, .appearance-menu button:focus-visible { background: var(--surface-2); outline: none; }
-.appearance-menu button[aria-checked="true"] { color: var(--accent); }
-.appearance-menu button[aria-checked="true"]::after { content: "✓"; margin-left: auto; }
-.appearance-menu__note { margin: 6px 10px 2px; font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
-.appearance-menu__themes { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; padding: 2px 6px; }
-.appearance-menu .theme-swatch { justify-content: center; width: auto; aspect-ratio: 1; padding: 0; border-radius: 50%; font-size: 1.05rem; border: 2px solid var(--sw); background: color-mix(in srgb, var(--sw) 14%, var(--surface)); }
-.appearance-menu .theme-swatch[aria-checked="true"] { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--sw); }
-.appearance-menu .theme-swatch[aria-checked="true"]::after { content: none; }
-@media (hover: hover) and (pointer: fine) { .appearance-menu .theme-swatch { transition: transform 0.12s ease; } .appearance-menu .theme-swatch:hover { transform: scale(1.12); } }
-@media (prefers-reduced-motion: reduce) { .appearance-menu .theme-swatch { transition: none; } }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .appearance-menu .theme-swatch { --sw: var(--sw-dark); } }
-:root[data-theme="dark"] .appearance-menu .theme-swatch { --sw: var(--sw-dark); }
+/* Appearance panel, matching the All Trips Considered template. */
+.appearance-wrap { position: relative; flex: none; }
+.appearance-wrap .icon-btn { display: grid; place-items: center; line-height: 1; color: var(--text); }
+.appearance-panel { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: min(300px, calc(100vw - 32px)); padding: 16px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18); text-align: left; }
+.appearance-panel[hidden] { display: none; }
+.appearance-title { font-family: var(--font); font-size: 1rem; margin: 0 0 12px; }
+.appearance-group { border: 0; margin: 0; padding: 0; min-width: 0; }
+.appearance-group + .appearance-group { margin-top: 16px; padding-top: 14px; box-shadow: inset 0 1px 0 var(--border); }
+.appearance-group legend { float: left; width: 100%; padding: 0; margin-bottom: 8px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.appearance-group legend + * { clear: both; }
+.segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 4px; background: var(--bg); border-radius: 10px; }
+.segmented label { position: relative; }
+.segmented input, .scheme-option input, .switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.segmented span { display: grid; place-items: center; min-height: 36px; border-radius: 7px; font-weight: 600; font-size: 0.9rem; color: var(--muted); cursor: pointer; }
+.segmented input:checked + span { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
+.segmented input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 1px; }
+.mode-hint { margin: 8px 2px 0; font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+.scheme-list { max-height: min(300px, 45vh); overflow-y: auto; margin: 0 -6px; padding: 0 6px; }
+.scheme-subhead { margin: 10px 8px 4px; font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+.scheme-option { position: relative; display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.scheme-option:hover { background: var(--bg); }
+.scheme-option:has(input:focus-visible) { box-shadow: inset 0 0 0 2px var(--accent); }
+.scheme-option:has(input:checked) { background: var(--bg); }
+.scheme-flag { font-size: 1.15rem; line-height: 1; }
+.scheme-name { flex: 1; font-size: 0.95rem; }
+.scheme-option input:checked ~ .scheme-name { font-weight: 700; }
+.scheme-now { display: block; font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.scheme-check { width: 16px; color: var(--accent); font-weight: 700; visibility: hidden; }
+.scheme-option input:checked ~ .scheme-check { visibility: visible; }
+.scheme-swatch { display: flex; border-radius: 3px; overflow: hidden; box-shadow: 0 0 0 1px var(--border); }
+.scheme-swatch:empty { display: none; }
+.scheme-swatch i { width: 9px; height: 14px; }
+.scheme-swatch i:only-child { width: 27px; }
+/* Decorations on/off switch. */
+.switch { position: relative; display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 0.95rem; }
+.switch__text { flex: 1; }
+.switch__track { position: relative; flex: none; width: 40px; height: 24px; border-radius: 12px; background: var(--border); transition: background 0.15s ease; }
+.switch__track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--surface); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); transition: transform 0.15s ease; }
+.switch input:checked ~ .switch__track { background: var(--accent); }
+.switch input:checked ~ .switch__track::after { transform: translateX(16px); }
+.switch input:focus-visible ~ .switch__track { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .switch__track, .switch__track::after { transition: none; } }
 /* Holidays add a thin colored stripe under the top bar. */
 .topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--season-stripe, transparent); pointer-events: none; }
+:root[data-decor="off"] .topbar::after { content: none; }
 
 @media (max-width: 560px) {
   .topbar__inner { gap: 8px; }

@@ -25,6 +25,7 @@
     saved: new Set(),
     includeAvoid: false, // show destinations under "avoid all travel" advisories in results
     colors: "seasonal", // "seasonal" (follows the date), "classic", or a chosen scheme id
+    decorations: true, // the holiday stripe and the scheme's emoji on the Appearance button
   };
 
   // ---------- Helpers ----------
@@ -215,6 +216,7 @@
       if (data.theme === "light" || data.theme === "dark") document.documentElement.dataset.theme = data.theme;
       // "seasonal" (the default), "classic" or a chosen scheme such as "winter".
       if (data.colors === "classic" || (data.colors && E.SEASON_SCHEMES[data.colors])) state.colors = data.colors;
+      if (data.decorations === false) state.decorations = false;
     } catch (_) {
       /* storage unavailable: start fresh */
     }
@@ -224,7 +226,7 @@
     try {
       localStorage.setItem(
         STORE_KEY,
-        JSON.stringify({ prefs: state.prefs, saved: [...state.saved], theme: document.documentElement.dataset.theme || "", colors: state.colors })
+        JSON.stringify({ prefs: state.prefs, saved: [...state.saved], theme: document.documentElement.dataset.theme || "", colors: state.colors, decorations: state.decorations })
       );
     } catch (_) {
       /* ignore */
@@ -1856,15 +1858,47 @@
     document.head.appendChild(el);
     return { set: (css) => (el.textContent = css) };
   })();
+  // The panel matches the All Trips Considered template: Mode (Auto, Light, Dark),
+  // Color (Automatic, Classic, Seasons, Holidays) and Decorations. Choices apply at once
+  // and the panel stays open until the visitor closes it.
   const appearance = document.createElement("div");
-  appearance.className = "appearance";
+  appearance.className = "appearance-wrap";
   themeBtn.replaceWith(appearance);
   appearance.appendChild(themeBtn);
-  themeBtn.setAttribute("aria-haspopup", "menu");
   themeBtn.setAttribute("aria-expanded", "false");
-  themeBtn.setAttribute("aria-controls", "appearance-menu");
-  appearance.insertAdjacentHTML("beforeend", `<div class="appearance-menu" id="appearance-menu" role="menu" aria-label="Appearance" hidden></div>`);
-  const menu = $("#appearance-menu");
+  themeBtn.setAttribute("aria-controls", "appearance-panel");
+  appearance.insertAdjacentHTML(
+    "beforeend",
+    `<div id="appearance-panel" class="appearance-panel" role="dialog" aria-labelledby="appearance-title" hidden>
+      <h2 id="appearance-title" class="appearance-title">Appearance</h2>
+      <fieldset class="appearance-group">
+        <legend>Mode</legend>
+        <div class="segmented">
+          <label><input type="radio" name="mode" value="auto"><span>Auto</span></label>
+          <label><input type="radio" name="mode" value="light"><span>Light</span></label>
+          <label><input type="radio" name="mode" value="dark"><span>Dark</span></label>
+        </div>
+        <p class="mode-hint" id="mode-hint"></p>
+      </fieldset>
+      <fieldset class="appearance-group">
+        <legend>Color</legend>
+        <div class="scheme-list" id="scheme-list"></div>
+      </fieldset>
+      <fieldset class="appearance-group">
+        <legend>Decorations</legend>
+        <label class="switch">
+          <input type="checkbox" name="decorations" role="switch">
+          <span class="switch__text">Show seasonal and holiday decorations</span>
+          <span class="switch__track" aria-hidden="true"></span>
+        </label>
+        <p class="mode-hint">A colored stripe under the top bar and the season's or holiday's emoji on this button.</p>
+      </fieldset>
+    </div>`
+  );
+  const panel = $("#appearance-panel");
+  const schemeList = $("#scheme-list");
+  const modeHint = $("#mode-hint");
+  const HALF_MOON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>`;
 
   function seasonCSS(id) {
     const s = E.SEASON_SCHEMES[id];
@@ -1873,18 +1907,6 @@
     return `${sel} { --accent: ${s.light}; --accent-ink: #ffffff; --accent-soft: color-mix(in srgb, ${s.light} 14%, #ffffff); --season-stripe: ${s.stripe || "transparent"}; }
 @media (prefers-color-scheme: dark) { ${sel}:not([data-theme="light"]) { ${dark} } }
 ${sel}[data-theme="dark"] { ${dark} }`;
-  }
-
-  // The picker lists the four seasons, then the holidays.
-  const SEASONS = ["winter", "spring", "summer", "autumn"];
-  function swatchGroup(title, ids) {
-    return `<p class="appearance-menu__head">${title}</p>
-      <div class="appearance-menu__themes" role="group" aria-label="${title}">${ids
-        .map((k) => {
-          const sc = E.SEASON_SCHEMES[k];
-          return `<button type="button" role="menuitemradio" class="theme-swatch" aria-checked="${state.colors === k}" data-colors="${k}" title="${esc(sc.label)}" aria-label="${esc(sc.label)} theme" data-css="--sw:${sc.light};--sw-dark:${sc.dark}"><span aria-hidden="true">${sc.icon}</span></button>`;
-        })
-        .join("")}</div>`;
   }
 
   // The scheme in use: today's for Seasonal, the picked one, or none for Classic.
@@ -1897,85 +1919,132 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     return E.SEASON_SCHEMES[state.colors] ? state.colors : null;
   }
 
-  // Colors the page (and the button's emoji) with a scheme, or the classic colors for null.
+  // Colors the page with a scheme, or the classic colors for null. Decorations add the
+  // stripe under the top bar and put the scheme's emoji on the Appearance button.
   function paintScheme(id) {
     const root = document.documentElement;
     if (id) {
       root.dataset.season = id;
       seasonStyle.set(seasonCSS(id));
-      themeBtn.textContent = E.SEASON_SCHEMES[id].icon;
     } else {
       delete root.dataset.season;
       seasonStyle.set("");
-      themeBtn.textContent = "◐";
     }
+    root.dataset.decor = state.decorations ? "on" : "off";
+    if (state.decorations && id) themeBtn.textContent = E.SEASON_SCHEMES[id].icon;
+    else themeBtn.innerHTML = HALF_MOON;
+  }
+
+  const SEASONS = ["winter", "spring", "summer", "autumn"];
+  // Up to four colors for a row's swatch: the holiday stripe's colors, or the scheme's.
+  function swatchColors(id) {
+    const s = E.SEASON_SCHEMES[id];
+    if (!s) return [];
+    const stripe = (s.stripe || "").match(/#[0-9a-f]{6}/gi);
+    return stripe ? [...new Set(stripe)].slice(0, 4) : [s.light];
+  }
+  function schemeRow(value, icon, name, now, colorsOf) {
+    const colors = swatchColors(colorsOf);
+    return `<label class="scheme-option">
+        <input type="radio" name="scheme" value="${value}">
+        <span class="scheme-flag" aria-hidden="true">${icon}</span>
+        <span class="scheme-name">${esc(name)}${now ? `<small class="scheme-now">${esc(now)}</small>` : ""}</span>
+        <span class="scheme-swatch" aria-hidden="true">${colors.map((c) => `<i data-css="background:${c}"></i>`).join("")}</span>
+        <span class="scheme-check" aria-hidden="true">✓</span>
+      </label>`;
+  }
+  function renderSchemes() {
+    const today = E.seasonalScheme(new Date());
+    const holidays = Object.keys(E.SEASON_SCHEMES).filter((k) => !SEASONS.includes(k));
+    schemeList.innerHTML = [
+      schemeRow("seasonal", today.icon, "Automatic (default)", `Now: ${today.label}${today.southern ? ", southern seasons" : ""}`, today.id),
+      schemeRow("classic", "🎨", "Classic", "", null),
+      `<p class="scheme-subhead">Seasons</p>`,
+      ...SEASONS.map((k) => schemeRow(k, E.SEASON_SCHEMES[k].icon, E.SEASON_SCHEMES[k].label, "", k)),
+      `<p class="scheme-subhead">Holidays</p>`,
+      ...holidays.map((k) => schemeRow(k, E.SEASON_SCHEMES[k].icon, E.SEASON_SCHEMES[k].label, "", k)),
+    ].join("");
+  }
+
+  const modeNow = () => document.documentElement.dataset.theme || "auto";
+  const deviceDark = () => window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+  function syncPanel() {
+    const mode = modeNow();
+    for (const r of panel.querySelectorAll('input[name="mode"]')) r.checked = r.value === mode;
+    for (const r of panel.querySelectorAll('input[name="scheme"]')) r.checked = r.value === state.colors;
+    panel.querySelector('input[name="decorations"]').checked = state.decorations;
+    const id = activeScheme();
+    const held = SEASONS.includes(state.colors) && id !== state.colors;
+    modeHint.textContent =
+      mode === "auto"
+        ? `Follows your device, which is set to ${deviceDark() ? "dark" : "light"} right now.`
+        : mode === "light"
+          ? "Always light, whatever your device is set to."
+          : "Always dark, whatever your device is set to.";
+    if (held) modeHint.textContent += ` ${E.SEASON_SCHEMES[id].label} colors show during the holiday, then ${E.SEASON_SCHEMES[state.colors].label} returns.`;
   }
 
   function applyAppearance() {
-    const root = document.documentElement;
-    const scheme = E.seasonalScheme(new Date());
-    const mode = root.dataset.theme || "system";
-    // Seasonal follows the date; a chosen theme stays until the visitor changes it.
     const id = activeScheme();
-    const chosen = id && E.SEASON_SCHEMES[id];
-    const holidayOverride = SEASONS.includes(state.colors) && id !== state.colors;
     paintScheme(id);
-    const label = `Appearance: ${mode} mode, ${id ? `${chosen.label} colors${state.colors === "seasonal" ? " (seasonal)" : ""}` : "classic colors"}`;
+    const mode = modeNow();
+    const label = `Appearance: ${mode} mode, ${id ? `${E.SEASON_SCHEMES[id].label} colors` : "classic colors"}`;
     themeBtn.setAttribute("aria-label", label);
     themeBtn.title = label;
-    const item = (attr, value, text, on) =>
-      `<button type="button" role="menuitemradio" aria-checked="${on}" data-${attr}="${value}">${text}</button>`;
-    menu.innerHTML = `
-      <p class="appearance-menu__head">Mode</p>
-      ${item("mode", "system", "💻 System", mode === "system")}
-      ${item("mode", "light", "☀️ Light", mode === "light")}
-      ${item("mode", "dark", "🌙 Dark", mode === "dark")}
-      <p class="appearance-menu__head">Colors</p>
-      ${item("colors", "seasonal", `${scheme.icon} Seasonal: ${esc(scheme.label)}`, state.colors === "seasonal")}
-      ${item("colors", "classic", "🎨 Classic", state.colors === "classic")}
-      ${swatchGroup("Seasons", SEASONS)}
-      ${swatchGroup("Holidays", Object.keys(E.SEASON_SCHEMES).filter((k) => !SEASONS.includes(k)))}
-      <p class="appearance-menu__note">${
-        state.colors === "seasonal"
-          ? `Seasonal colors follow your local date and time zone${scheme.southern ? ", with southern hemisphere seasons" : ""}.`
-          : holidayOverride
-            ? `${esc(chosen.label)} colors for now; your ${esc(E.SEASON_SCHEMES[state.colors].label)} colors return after the holiday.`
-            : id && SEASONS.includes(state.colors)
-            ? `${esc(chosen.label)} colors stay, except during holidays.`
-            : id
-            ? `${esc(chosen.label)} colors stay until you choose Seasonal again.`
-            : "Choose Seasonal to follow the time of year again."
-      }</p>`;
+    if (!panel.hidden) syncPanel();
   }
 
-  function setMenu(open) {
-    if (!open) endPreview();
-    menu.hidden = !open;
-    themeBtn.setAttribute("aria-expanded", String(open));
-    if (open) (menu.querySelector('[aria-checked="true"]') || menu.querySelector("button")).focus();
+  function openPanel() {
+    renderSchemes();
+    syncPanel();
+    panel.hidden = false;
+    themeBtn.setAttribute("aria-expanded", "true");
+    const checked = panel.querySelector('input[name="mode"]:checked');
+    if (checked) checked.focus();
+  }
+  function closePanel(returnFocus) {
+    if (panel.hidden) return;
+    endPreview();
+    panel.hidden = true;
+    themeBtn.setAttribute("aria-expanded", "false");
+    if (returnFocus) themeBtn.focus();
   }
 
   themeBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    setMenu(menu.hidden);
+    if (panel.hidden) openPanel();
+    else closePanel(true);
   });
-  menu.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const b = e.target.closest("button");
-    if (!b) return;
+  panel.addEventListener("click", (e) => e.stopPropagation());
+  panel.addEventListener("change", (e) => {
     const root = document.documentElement;
-    if (b.dataset.mode) {
-      if (b.dataset.mode === "system") delete root.dataset.theme;
-      else root.dataset.theme = b.dataset.mode;
+    const t = e.target;
+    if (t.name === "mode") {
+      if (t.value === "auto") delete root.dataset.theme;
+      else root.dataset.theme = t.value;
     }
-    if (b.dataset.colors) state.colors = b.dataset.colors;
+    if (t.name === "scheme") {
+      endPreview();
+      state.colors = t.value;
+    }
+    if (t.name === "decorations") state.decorations = t.checked;
     persist();
     applyAppearance();
-    setMenu(false);
-    themeBtn.focus();
   });
-  // With a mouse or trackpad, hovering a color choice previews it across the page;
-  // leaving it (or closing the menu) restores the colors in use. Touch screens pick on tap.
+  panel.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closePanel(true);
+    }
+  });
+  panel.addEventListener("focusout", (e) => {
+    if (e.relatedTarget && !appearance.contains(e.relatedTarget)) closePanel(false);
+  });
+  document.addEventListener("click", () => closePanel(false));
+  if (window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => !panel.hidden && syncPanel());
+
+  // With a mouse or trackpad, hovering a color previews it across the page; leaving the
+  // list (or closing the panel) restores the colors in use. Touch screens pick on tap.
   const canHover = window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches;
   let previewing = false;
   function endPreview() {
@@ -1983,28 +2052,15 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     previewing = false;
     paintScheme(activeScheme());
   }
-  menu.addEventListener("pointerover", (e) => {
+  schemeList.addEventListener("pointerover", (e) => {
     if (!canHover || e.pointerType === "touch") return;
-    const b = e.target.closest("[data-colors]");
-    if (!b) return endPreview();
+    const row = e.target.closest(".scheme-option");
+    if (!row) return;
+    const v = row.querySelector("input").value;
     previewing = true;
-    const v = b.dataset.colors;
     paintScheme(v === "seasonal" ? E.seasonalScheme(new Date()).id : v === "classic" ? null : v);
   });
-  menu.addEventListener("pointerleave", endPreview);
-
-  menu.addEventListener("keydown", (e) => {
-    const items = [...menu.querySelectorAll("button")];
-    const i = items.indexOf(document.activeElement);
-    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-      e.preventDefault();
-      items[(i + (e.key === "ArrowDown" ? 1 : items.length - 1)) % items.length].focus();
-    } else if (e.key === "Escape") {
-      setMenu(false);
-      themeBtn.focus();
-    }
-  });
-  document.addEventListener("click", () => !menu.hidden && setMenu(false));
+  schemeList.addEventListener("pointerleave", endPreview);
   // Pick up a new day or holiday when the visitor comes back, and once an hour.
   document.addEventListener("visibilitychange", () => document.visibilityState === "visible" && applyAppearance());
   setInterval(applyAppearance, 60 * 60 * 1000);
