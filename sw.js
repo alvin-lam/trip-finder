@@ -2,12 +2,16 @@
  * Service worker: makes the app installable and usable offline.
  * Bump CACHE when shipping changes so returning visitors get fresh files.
  */
-const CACHE = "wtt-v118";
+const CACHE = "wtt-v119";
 const SHELL = [
   "./",
   "index.html",
   "manifest.webmanifest",
+  "css/fonts.css",
   "css/styles.css",
+  "fonts/inter-v20-latin.woff2",
+  "fonts/fraunces-v38-latin.woff2",
+  "fonts/instrument-serif-v5-latin.woff2",
   "js/data.js",
   "js/engine.js",
   "js/app.js",
@@ -55,14 +59,13 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Our own files and Google Fonts: serve from cache, refresh in the background.
-  const fonts = url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com";
-  if (url.origin === self.location.origin || fonts) {
+  // Our own files (fonts included): serve from cache, refresh in the background.
+  if (url.origin === self.location.origin) {
     event.respondWith(
       caches.match(req).then((cached) => {
         const network = fetch(req)
           .then((res) => {
-            if (res.ok || res.type === "opaque") {
+            if (res.ok) {
               const copy = res.clone();
               caches.open(CACHE).then((c) => c.put(req, copy));
             }

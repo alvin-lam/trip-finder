@@ -563,3 +563,13 @@ mark { background: var(--accent); color: var(--accent-ink); border-radius: 3px; 
   .quick-links a[aria-current="page"] .ql-arrow { font-size: 0; }
   .quick-links a[aria-current="page"] .ql-arrow::after { content: "¹3"; font-size: 1rem; letter-spacing: 0; }
 }
+
+/* ---------- Small utilities (used in place of inline styles, which the CSP blocks) ---------- */
+.u-small { font-size: 0.9rem; }
+.u-m0 { margin: 0; }
+.u-mt8 { margin-top: 8px; }
+.u-mt16 { margin-top: 16px; }
+.u-center { justify-content: center; }
+.u-grow { flex: 1; min-width: 0; }
+.swatch--best { background: var(--teal); }
+.swatch--yours { background: var(--accent); }

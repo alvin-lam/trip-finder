@@ -211,8 +211,8 @@
       if (!raw) return;
       const data = JSON.parse(raw);
       if (data.prefs) state.prefs = E.normalizePrefs(data.prefs);
-      if (Array.isArray(data.saved)) state.saved = new Set(data.saved.filter((k) => lookupSaved(k)));
-      if (data.theme) document.documentElement.dataset.theme = data.theme;
+      if (Array.isArray(data.saved)) state.saved = new Set(data.saved.filter((k) => typeof k === "string" && lookupSaved(k)));
+      if (data.theme === "light" || data.theme === "dark") document.documentElement.dataset.theme = data.theme;
       // "seasonal" (the default), "classic" or a chosen scheme such as "winter".
       if (data.colors === "classic" || (data.colors && E.SEASON_SCHEMES[data.colors])) state.colors = data.colors;
     } catch (_) {
@@ -246,7 +246,7 @@
   }
 
   function ring(score, cls = "") {
-    return `<div class="ring ${cls}" style="--v:${score}" role="img" aria-label="${score}% match"><span>${score}</span></div>`;
+    return `<div class="ring ${cls}" data-css="--v:${score}" role="img" aria-label="${score}% match"><span>${score}</span></div>`;
   }
 
   function monthStrip(best, sel) {
@@ -664,7 +664,7 @@
         <div class="wizard__foot">
           <button class="btn btn--ghost" data-action="back">${state.step === 0 ? "Cancel" : "← Back"}</button>
           <div class="row">
-            ${state.step === 0 && picked === 0 ? `<span class="muted" style="font-size:.9rem">Pick a few, or skip ahead</span>` : ""}
+            ${state.step === 0 && picked === 0 ? `<span class="muted u-small">Pick a few, or skip ahead</span>` : ""}
             ${!last && state.results ? `<button class="btn btn--ghost" data-action="show-results">Jump to results</button>` : ""}
             <button class="btn btn--primary" data-action="${last ? "show-results" : "next"}">${last ? "See my matches →" : "Next →"}</button>
           </div>
@@ -723,7 +723,7 @@
         <div>
           <p class="eyebrow">Your matches</p>
           <h1 class="h1--sm">Your best match is ${esc(best.country.name)} ${best.country.flag}</h1>
-          <p class="muted" style="margin:0">Strongest region overall: ${esc(r.regions[0].region.name)}. Tap any place for weather, highlights and nearby stops.</p>
+          <p class="muted u-m0">Strongest region overall: ${esc(r.regions[0].region.name)}. Tap any place for weather, highlights and nearby stops.</p>
           <div class="summary">${summaryChips()}</div>
         </div>
         <div class="row">
@@ -740,7 +740,7 @@
       <section class="section" aria-labelledby="h-regions">
         <div class="section__head">
           <h3 id="h-regions">1. Best regions</h3>
-          <span class="muted" style="font-size:.9rem">${focus ? `Showing ${esc(focus.region.name)}. <button class="btn btn--ghost btn--sm" data-action="focus-region" data-id="">Show all</button>` : "Tap a region to see all of its countries."}</span>
+          <span class="muted u-small">${focus ? `Showing ${esc(focus.region.name)}. <button class="btn btn--ghost btn--sm" data-action="focus-region" data-id="">Show all</button>` : "Tap a region to see all of its countries."}</span>
         </div>
         <div class="region-strip">
           ${regions
@@ -766,7 +766,7 @@
       <section class="section" aria-labelledby="h-countries">
         <div class="section__head">
           <h3 id="h-countries">2. ${focus ? `Destinations in ${esc(focus.region.name)}` : "Top destinations"}</h3>
-          <span class="muted" style="font-size:.9rem">Suggested route for ${E.LENGTHS[state.prefs.length].days} days included</span>
+          <span class="muted u-small">Suggested route for ${E.LENGTHS[state.prefs.length].days} days included</span>
         </div>
         ${advisoryNotice(r)}
         <div class="cards">
@@ -824,7 +824,7 @@
             ${cr.itinerary
               .map(
                 (s) =>
-                  `<button class="itinerary__seg" style="flex:${s.days}" data-action="open-city" data-id="${s.city.id}" title="${esc(s.city.name)}: ${s.days} days" aria-label="${esc(s.city.name)}, ${s.days} days">${s.days}d</button>`
+                  `<button class="itinerary__seg" data-css="flex:${s.days}" data-action="open-city" data-id="${s.city.id}" title="${esc(s.city.name)}: ${s.days} days" aria-label="${esc(s.city.name)}, ${s.days} days">${s.days}d</button>`
               )
               .join("")}
           </div>
@@ -832,7 +832,7 @@
             ${cr.itinerary
               .map(
                 (s, i) =>
-                  `<li><i style="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button><span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
+                  `<li><i data-css="background:${SEG_COLORS[i]}"></i><button data-action="open-city" data-id="${s.city.id}">${esc(s.city.name)}</button><span class="muted">${s.days} ${s.days === 1 ? "day" : "days"}</span></li>`
               )
               .join("")}
           </ol>
@@ -1015,7 +1015,7 @@
     if (!blocks.length && !unlinked.length)
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
-    const head = `<p class="muted" style="margin-top:16px">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>${unlinkedCard(unlinked)}`;
+    const head = `<p class="muted u-mt16">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>${unlinkedCard(unlinked)}`;
     if (f.kind === "territory") {
       // Territories are listed under the country they belong to.
       const bySov = new Map();
@@ -1032,7 +1032,7 @@
           .map(
             ([sov, list]) => `
         <section class="region-block">
-          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${sov.flag}</span><h3 style="margin:0">${esc(sov.name)}</h3></div>
+          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${sov.flag}</span><h3 class="u-m0">${esc(sov.name)}</h3></div>
           <p class="muted">${list.length} ${list.length === 1 ? "territory" : "territories"}</p>
           ${regionCards(`sov-${sov.id}`, list)}
         </section>`
@@ -1046,7 +1046,7 @@
         .map(
           ({ r, countries }) => `
         <section class="region-block">
-          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${r.icon}</span><h3 style="margin:0">${esc(r.name)}</h3></div>
+          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${r.icon}</span><h3 class="u-m0">${esc(r.name)}</h3></div>
           <p class="muted">${esc(r.blurb)}</p>
           ${regionCards(r.id, countries)}
         </section>`
@@ -1376,7 +1376,7 @@
           <div class="empty__icon">♡</div>
           <h1 class="h1--sm">Your shortlist is empty</h1>
           <p>Tap the heart on any country or city to save it here and compare side by side.</p>
-          <div class="row" style="justify-content:center">
+          <div class="row u-center">
             <button class="btn btn--primary" data-nav="plan">Find matches</button>
             <button class="btn btn--ghost" data-nav="explore">Browse places</button>
           </div>
@@ -1465,13 +1465,13 @@
       <button class="icon-btn detail__close" data-action="close-detail" aria-label="Close">✕</button>
       <div class="detail__hero">
         <span class="card__flag" aria-hidden="true">${city.country.flag}</span>
-        <div style="flex:1;min-width:0">
-          <h2 id="detail-title" style="margin:0">${esc(city.name)}</h2>
+        <div class="u-grow">
+          <h2 id="detail-title" class="u-m0">${esc(city.name)}</h2>
           <div class="card__meta">${city.area ? `${esc(city.area)} · ` : ""}${city.name === city.country.name ? "" : `${esc(city.country.name)} · `}${esc(city.region.name)}${city.country.kind === "country" ? "" : `<br />${kindTag(city.country)}${esc(city.country.status)}`}</div>
         </div>
         ${res ? ring(res.score, "ring--lg") : ""}
       </div>
-      <p style="margin:0">${esc(city.blurb)} <span class="muted">${esc(city.country.blurb)}</span></p>
+      <p class="u-m0">${esc(city.blurb)} <span class="muted">${esc(city.country.blurb)}</span></p>
       ${
         res
           ? `<ul class="reasons">${res.reasons.map((x) => `<li>${esc(x)}</li>`).join("")}${res.warnings.map((x) => `<li class="warn">${esc(x)}</li>`).join("")}</ul>`
@@ -1531,7 +1531,7 @@
         <div class="tagbars">
           ${E.TAG_ORDER.map(
             (t) =>
-              `<span>${interestLabel[t].icon} ${esc(interestLabel[t].label)}</span><div class="tagbar ${liked(t) ? "is-liked" : ""}" role="img" aria-label="${city.tags[t]} out of 5"><span style="width:${city.tags[t] * 20}%"></span></div>`
+              `<span>${interestLabel[t].icon} ${esc(interestLabel[t].label)}</span><div class="tagbar ${liked(t) ? "is-liked" : ""}" role="img" aria-label="${city.tags[t]} out of 5"><span data-css="width:${city.tags[t] * 20}%"></span></div>`
           ).join("")}
         </div>
       </div>
@@ -1542,13 +1542,13 @@
             .map((t, i) => {
               const h = 12 + ((t - tMin) / (tMax - tMin || 1)) * 70;
               return `<div class="temps__col ${city.best.includes(i + 1) ? "is-best" : ""} ${month === i + 1 ? "is-sel" : ""}" title="${E.MONTHS_LONG[i]}: ${E.fmtTemp(t)}">
-                <span class="temps__val">${E.tempValue(t)}°<span class="u">${E.UNITS.temp === "F" ? "F" : "C"}</span></span><div class="temps__bar" style="height:${h}%"></div><span class="temps__m">${E.MONTHS[i][0]}</span></div>`;
+                <span class="temps__val">${E.tempValue(t)}°<span class="u">${E.UNITS.temp === "F" ? "F" : "C"}</span></span><div class="temps__bar" data-css="height:${h}%"></div><span class="temps__m">${E.MONTHS[i][0]}</span></div>`;
             })
             .join("")}
         </div>
-        <div class="legend" style="margin-top:8px">
-          <span><i style="background:var(--teal)"></i>Best months (${esc(E.formatMonths(city.best))})</span>
-          ${month ? `<span><i style="background:var(--accent)"></i>Your month</span>` : ""}
+        <div class="legend u-mt8">
+          <span><i class="swatch--best"></i>Best months (${esc(E.formatMonths(city.best))})</span>
+          ${month ? `<span><i class="swatch--yours"></i>Your month</span>` : ""}
           <span>Average daily high in °${E.UNITS.temp === "F" ? "F" : "C"}</span>
         </div>
       </div>
@@ -1839,9 +1839,23 @@
   // or classic colors. Seasonal colors follow the season (flipped south of the equator)
   // or a holiday, from the device's own date and time zone.
   const themeBtn = $("#theme-toggle");
-  const seasonStyle = document.createElement("style");
-  seasonStyle.id = "season-colors";
-  document.head.appendChild(seasonStyle);
+  // Season colors go in a constructed stylesheet: the Content-Security-Policy blocks
+  // <style> elements added by script, but not stylesheets built through the CSSOM.
+  const seasonStyle = (() => {
+    if (typeof CSSStyleSheet === "function" && "adoptedStyleSheets" in document) {
+      try {
+        const sheet = new CSSStyleSheet();
+        document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
+        return { set: (css) => sheet.replaceSync(css) };
+      } catch (_) {
+        /* fall through to a <style> element */
+      }
+    }
+    const el = document.createElement("style");
+    el.id = "season-colors";
+    document.head.appendChild(el);
+    return { set: (css) => (el.textContent = css) };
+  })();
   const appearance = document.createElement("div");
   appearance.className = "appearance";
   themeBtn.replaceWith(appearance);
@@ -1868,7 +1882,7 @@ ${sel}[data-theme="dark"] { ${dark} }`;
       <div class="appearance-menu__themes" role="group" aria-label="${title}">${ids
         .map((k) => {
           const sc = E.SEASON_SCHEMES[k];
-          return `<button type="button" role="menuitemradio" class="theme-swatch" aria-checked="${state.colors === k}" data-colors="${k}" title="${esc(sc.label)}" aria-label="${esc(sc.label)} theme" style="--sw:${sc.light};--sw-dark:${sc.dark}"><span aria-hidden="true">${sc.icon}</span></button>`;
+          return `<button type="button" role="menuitemradio" class="theme-swatch" aria-checked="${state.colors === k}" data-colors="${k}" title="${esc(sc.label)}" aria-label="${esc(sc.label)} theme" data-css="--sw:${sc.light};--sw-dark:${sc.dark}"><span aria-hidden="true">${sc.icon}</span></button>`;
         })
         .join("")}</div>`;
   }
@@ -1888,11 +1902,11 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     const root = document.documentElement;
     if (id) {
       root.dataset.season = id;
-      seasonStyle.textContent = seasonCSS(id);
+      seasonStyle.set(seasonCSS(id));
       themeBtn.textContent = E.SEASON_SCHEMES[id].icon;
     } else {
       delete root.dataset.season;
-      seasonStyle.textContent = "";
+      seasonStyle.set("");
       themeBtn.textContent = "◐";
     }
   }
@@ -2018,6 +2032,28 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     readHash();
     setView(state.view);
   });
+
+  // ---------- Styles without style attributes ----------
+  // The Content-Security-Policy blocks style="" attributes in rendered HTML, so markup
+  // carries computed values (a bar's height, a swatch color) in data-css instead, and
+  // they are applied here through the CSSOM, which the policy allows. Only property
+  // names made of letters and hyphens are set.
+  function applyDataCss(root) {
+    const els = root.querySelectorAll ? [...(root.matches && root.matches("[data-css]") ? [root] : []), ...root.querySelectorAll("[data-css]")] : [];
+    for (const el of els) {
+      for (const decl of el.getAttribute("data-css").split(";")) {
+        const i = decl.indexOf(":");
+        if (i < 1) continue;
+        const prop = decl.slice(0, i).trim();
+        if (/^(--)?[a-z][a-z-]*$/.test(prop)) el.style.setProperty(prop, decl.slice(i + 1).trim());
+      }
+      el.removeAttribute("data-css");
+    }
+  }
+  applyDataCss(document.body);
+  new MutationObserver((records) => {
+    for (const r of records) for (const n of r.addedNodes) if (n.nodeType === 1) applyDataCss(n);
+  }).observe(document.body, { childList: true, subtree: true });
 
   // ---------- Boot ----------
   // Keep the copyright year current.

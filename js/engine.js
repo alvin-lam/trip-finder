@@ -78,7 +78,9 @@
   /** Flatten the raw dataset into linked region, country and city objects. */
   function buildIndex(data) {
     const regions = data.REGIONS.map((r) => ({ ...r, countries: [] }));
-    const regionById = Object.fromEntries(regions.map((r) => [r.id, r]));
+    // Lookup tables have no prototype, so ids such as "constructor" from a URL match nothing.
+    const lookup = (entries) => Object.assign(Object.create(null), Object.fromEntries(entries));
+    const regionById = lookup(regions.map((r) => [r.id, r]));
     const countries = [];
     const cities = [];
     for (const raw of data.COUNTRIES) {
@@ -124,7 +126,7 @@
         cities.push(city);
       }
     }
-    const cityById = Object.fromEntries(cities.map((c) => [c.id, c]));
+    const cityById = lookup(cities.map((c) => [c.id, c]));
     for (const [id, site] of Object.entries(data.UNESCO || {})) {
       if (!cityById[id]) throw new Error(`UNESCO entry ${id} matches no place`);
       cityById[id].unesco = site;
@@ -267,7 +269,7 @@
 
     // A site shared by several countries keeps one place, which is also listed under
     // the other countries in Explore: { placeId: [countryId, ...] }.
-    const byCountryId = Object.fromEntries(countries.map((c) => [c.id, c]));
+    const byCountryId = lookup(countries.map((c) => [c.id, c]));
     for (const c of countries) c.linked = [];
     for (const [id, ids] of Object.entries(data.LINKED || {})) {
       const city = cityById[id];
@@ -387,8 +389,28 @@
     return main === place || main === placeHead || main.split(/ and /).includes(placeHead);
   }
 
+  // Quiz answers come from saved storage and shared links, so every field is checked
+  // against its known values; anything else falls back to the default and unknown
+  // fields are dropped.
   function normalizePrefs(prefs) {
-    return { ...DEFAULT_PREFS, ...(prefs || {}), interests: { ...(prefs && prefs.interests) }, exclude: [...((prefs && prefs.exclude) || [])] };
+    const p = prefs && typeof prefs === "object" ? prefs : {};
+    const pick = (v, list, d) => (list.includes(v) ? v : d);
+    const interests = {};
+    if (p.interests && typeof p.interests === "object")
+      for (const t of TAG_ORDER) if (p.interests[t] === 1 || p.interests[t] === 2) interests[t] = p.interests[t];
+    const ID = /^[a-z0-9-]{1,40}$/;
+    return {
+      interests,
+      month: Number.isInteger(p.month) && p.month >= 0 && p.month <= 12 ? p.month : DEFAULT_PREFS.month,
+      length: pick(p.length, CODE_LENGTHS, DEFAULT_PREFS.length),
+      budget: BUDGETS[p.budget] && Number.isInteger(p.budget) ? p.budget : DEFAULT_PREFS.budget,
+      climate: pick(p.climate, CODE_CLIMATES, DEFAULT_PREFS.climate),
+      company: pick(p.company, CODE_COMPANY, DEFAULT_PREFS.company),
+      vibe: pick(p.vibe, CODE_VIBES, DEFAULT_PREFS.vibe),
+      home: typeof p.home === "string" && ID.test(p.home) ? p.home : "",
+      distance: pick(p.distance, CODE_DISTANCES, DEFAULT_PREFS.distance),
+      exclude: Array.isArray(p.exclude) ? [...new Set(p.exclude.filter((r) => typeof r === "string" && ID.test(r)))] : [],
+    };
   }
 
   function interestWeights(prefs) {

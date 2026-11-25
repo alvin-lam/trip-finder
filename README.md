@@ -55,6 +55,14 @@ The test suite fails if any page is out of date. Other search basics:
 
 After a release, submit `sitemap.xml` in Google Search Console to speed up indexing.
 
+## Security
+
+- **Content-Security-Policy.** `index.html`, `404.html` and every generated page carry a `<meta>` policy that allows scripts, styles, fonts, images and requests only from this site, with no inline code and no `eval`. `_headers` holds the same policy plus `frame-ancestors 'none'` and the other security headers, for hosts that read it (Cloudflare Pages, Netlify). GitHub Pages ignores `_headers`, so set those headers with a Cloudflare Transform Rule.
+- **No inline styles.** The policy blocks `style="…"` in rendered HTML. Use a class, or put a computed value in `data-css` (for example `data-css="height:40%"`), which `app.js` applies through the CSSOM. Season colors use a constructed stylesheet for the same reason.
+- **Self-hosted fonts.** Fraunces, Instrument Serif and Inter live in `fonts/` (Latin and Latin Extended, SIL Open Font License) and load through `css/fonts.css`, so pages make no requests to Google. Each file name carries the font's version; give a new version a new name.
+- **Checked input.** Shared links, saved quiz answers, the saved theme and saved places are checked against known values before use, and id lookups ignore names such as `constructor`. Rendered text goes through `esc()`.
+- `tests/security.test.js` checks all of this, including that the policy matches in every page and in `_headers`.
+
 ## Run it
 
 No dependencies are needed. Open `index.html` in a browser, or serve the folder (needed to try the `/explore/` and `/place/<id>/` addresses):
