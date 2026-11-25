@@ -32,7 +32,7 @@ The app is a Progressive Web App. `manifest.webmanifest` and the icons in `img/`
 - **Chrome, Edge and Android:** an Install button opens the browser's own install dialog.
 - **iPhone and iPad:** browsers there have no install API, so the prompt shows the steps (tap Share, then Add to Home Screen).
 
-The prompt appears only after the visitor sees results or spends 25 seconds on the page. It never appears once the app is installed or inside an embedded frame, and it stays hidden for 30 days after being dismissed.
+The prompt appears only after the visitor sees results or spends 25 seconds on the page. It never appears once the app is installed or inside an embedded frame, and it stays hidden for 24 hours after the visitor taps Close.
 
 **When you ship changes,** bump `CACHE` in `sw.js` (for example `wtt-v2`) and add any new files to its `SHELL` list, so returning visitors get the new version. Each page is cached under its own address once visited. Offline, a page not yet visited opens the home page. Service workers need HTTPS (GitHub Pages provides it) and do not run from a local `file://` page.
 

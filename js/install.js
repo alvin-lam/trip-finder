@@ -6,11 +6,11 @@
  *    (Firefox and Samsung Internet on Android, other Android browsers, Safari on a Mac)
  *    get that browser's steps instead. Browsers that cannot add apps at all show nothing.
  * It waits until the visitor is engaged (results shown, or 25 seconds on the page),
- * never shows once installed, and stays quiet for 30 days after being dismissed.
+ * never shows once installed, and stays quiet for 24 hours after being closed.
  */
 (function () {
   const KEY = "wtt:install-dismissed";
-  const QUIET_DAYS = 30;
+  const QUIET_HOURS = 24;
   const ENGAGE_MS = 25000;
 
   // Not inside an embedded viewer or frame: install prompts only make sense on the real site.
@@ -31,7 +31,7 @@
   function recentlyDismissed() {
     try {
       const t = Number(localStorage.getItem(KEY) || 0);
-      return t && Date.now() - t < QUIET_DAYS * 864e5;
+      return t && Date.now() - t < QUIET_HOURS * 36e5;
     } catch (_) {
       return false;
     }
@@ -101,7 +101,7 @@
         ? `<p>Get quick access from your home screen. It works offline too.</p>
            <div class="install__actions">
              <button class="btn btn--primary btn--sm" data-install="go">Install</button>
-             <button class="btn btn--ghost btn--sm" data-install="later">Not now</button>
+             <button class="btn btn--ghost btn--sm" data-install="later">Close</button>
            </div>`
         : mode === "manual"
         ? `<p>Your browser adds apps from its own menu. It works offline too.</p>
