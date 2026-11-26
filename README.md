@@ -4,6 +4,8 @@ An interactive trip finder that helps visitors decide which region, country and 
 
 Live site: https://tripfinder.alltripsconsidered.com/
 
+![Trip Finder link preview](docs/img/og-image.png)
+
 ## Features
 
 - **Five-step quiz.** Interests (like or must-have), travel month, trip length, daily budget, ideal weather, travel companions, crowd preference, home region and excluded regions.
@@ -259,5 +261,7 @@ Temperatures, costs and seasons are rough planning guides, not authoritative tra
 - **UNESCO lists.** World Heritage Sites, UNESCO Global Geoparks (unesco.org/en/iggp/geoparks) and Biosphere Reserves (unesco.org/en/mab/list).
 - **Parks.** Mexico's protected areas come from CONANP's SIMEC register. The US and Canadian park systems cover the US National Park Service and Parks Canada.
 - **Coordinates.** Park site and Geopark coordinates come from OpenStreetMap, and `tools/fill_coords.py` fills in missing place coordinates from Wikipedia.
+
+<img src="docs/img/icon-512.png" alt="Trip Finder app icon" width="96" height="96">
 
 © 2026 All Trips Considered. All rights reserved.
