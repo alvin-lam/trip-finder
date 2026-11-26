@@ -2,7 +2,7 @@
  * Service worker: makes the app installable and usable offline.
  * Bump CACHE when shipping changes so returning visitors get fresh files.
  */
-const CACHE = "wtt-v124";
+const CACHE = "wtt-v125";
 const SHELL = [
   "./",
   "index.html",
@@ -20,6 +20,9 @@ const SHELL = [
   "js/app.js",
   "js/install.js",
   "img/favicon-32.png",
+  "img/tabicon-32.png",
+  "img/tabicon-192.png",
+  "img/favicon.ico",
   "img/icon-192.png",
   "img/icon-512.png",
   "img/apple-touch-icon.png",
