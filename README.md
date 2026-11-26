@@ -113,7 +113,7 @@ docs/js/install.js            Install prompt and service worker registration
 docs/js/theme-boot.js         Applies the saved light or dark mode on the privacy page
 docs/sw.js                    Service worker (at the top of docs/ so it covers every page)
 docs/manifest.webmanifest     App name, colours and icons for installing
-docs/img/                     Icons and the link-preview image
+docs/img/                     App icons, favicon.ico (the app icon), browser tab icons (tabicon-32.png and tabicon-192.png, the All Trips Considered artwork) and the link-preview image
 docs/explore/, docs/place/    Generated pages (npm run build)
 docs/sitemap.xml              Generated list of every address
 docs/robots.txt               Crawling rules
