@@ -262,6 +262,8 @@ Temperatures, costs and seasons are rough planning guides, not authoritative tra
 - **Parks.** Mexico's protected areas come from CONANP's SIMEC register. The US and Canadian park systems cover the US National Park Service and Parks Canada.
 - **Coordinates.** Park site and Geopark coordinates come from OpenStreetMap, and `tools/fill_coords.py` fills in missing place coordinates from Wikipedia.
 
-<img src="docs/img/icon-512.png" alt="Trip Finder app icon" width="96" height="96">
+<p align="center">
+  <img src="docs/img/icon-512.png" alt="Trip Finder app icon" width="96" height="96">
+</p>
 
-© 2026 All Trips Considered. All rights reserved.
+<p align="center">© 2026 All Trips Considered. All rights reserved.</p>
