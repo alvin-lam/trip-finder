@@ -2,7 +2,7 @@
 
 Everything the app knows lives in these JSON files. `npm run build` combines them into
 `js/data.js` (the file the browser loads) and regenerates the place pages. Never edit
-`js/data.js` by hand: the tests fail if it does not match these files.
+`js/data.js` by hand: `node tools/build-data.js --check` reports when it does not match these files.
 
 Figures are rough planning guides, not authoritative travel advice.
 
@@ -64,4 +64,3 @@ Destination fields: `cost` is 1 (very cheap) to 5 (very expensive); `temps` are 
 
 1. Edit the JSON file (or run the tool that writes it).
 2. Run `npm run build`.
-3. Run `npm test`.
