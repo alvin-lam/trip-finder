@@ -513,7 +513,7 @@
   // ---------- Units ----------
   // The app shows temperatures, distances and numbers the way the visitor's device does:
   // its region decides °C or °F and kilometres or miles, and its locale formats numbers.
-  // Without a device (the tests), both systems show: "24°C (75°F)".
+  // Without a device (in Node), both systems show: "24°C (75°F)".
   const UNITS = { temp: "both", dist: "both", locale: "en-US" };
   // Regions that use °F, and regions whose road distances are in miles.
   const FAHRENHEIT = new Set(["US", "PR", "GU", "VI", "AS", "MP", "UM", "BS", "BZ", "KY", "PW", "FM", "MH", "LR"]);

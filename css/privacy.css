@@ -1,0 +1,132 @@
+/* All Trips Considered: shared privacy page styles.
+   The same file ships with every All Trips Considered app so the privacy pages look alike.
+   It stands alone: the privacy page loads this file and not the app's own stylesheet.
+   Only the font paths below differ between apps. */
+/* Instrument Serif, self-hosted (SIL Open Font License). */
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-v5-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-v5-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #1c2330;
+  --muted: #5d6676;
+  --border: #dde1e7;
+  --link: #1f5fd1;
+  --focus: #1f4fd6;
+  --radius: 12px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151b;
+    --surface: #1b2029;
+    --text: #e8ebf0;
+    --muted: #9aa3b2;
+    --border: #2c3340;
+    --link: #7a9ceb;
+    --focus: #5b84f5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12151b;
+  --surface: #1b2029;
+  --text: #e8ebf0;
+  --muted: #9aa3b2;
+  --border: #2c3340;
+  --link: #7a9ceb;
+  --focus: #5b84f5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+.privacy {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.privacy a { color: var(--link); text-underline-offset: 2px; }
+.privacy a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+/* Header: brand line, title, app name */
+.privacy-header { text-align: center; margin-bottom: 24px; }
+.privacy-brand {
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 2.8125rem;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin: 0 0 6px;
+  text-wrap: balance;
+}
+.privacy-brand a, .privacy-copyright a { text-decoration: none; }
+.privacy h1 { font-size: 1.5rem; line-height: 1.3; margin: 0 0 4px; }
+.privacy-app { color: var(--muted); margin: 0; text-wrap: balance; }
+.privacy-updated { color: var(--muted); font-size: .9rem; margin: 4px 0 0; }
+
+/* Sections */
+.privacy-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.privacy h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 10px; }
+.privacy-section p, .privacy-section ul { margin: 0 0 10px; }
+.privacy-section > :last-child { margin-bottom: 0; }
+.privacy-section ul { padding-left: 1.25em; }
+.privacy-section li + li { margin-top: 4px; }
+
+/* Footer: back link and serif copyright */
+.privacy-footer { margin-top: 24px; text-align: center; }
+.privacy-back { margin: 0; }
+.privacy-back-top { margin: 0 0 12px; }
+.privacy-back a { font-weight: 600; text-decoration: none; }
+.privacy-back a:hover { text-decoration: underline; }
+.privacy-copyright {
+  margin: 24px 0 0;
+  font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .privacy-brand { font-size: 2.375rem; }
+  .privacy-section { padding: 16px; }
+}
+
+@media print {
+  :root { --bg: #fff; --surface: #fff; --text: #000; --muted: #333; --border: #999; --link: #000; }
+  .privacy-section { break-inside: avoid; }
+}

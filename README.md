@@ -46,7 +46,7 @@ On the live site, Explore lives at `/explore/` and each place at `/place/<id>/`,
 npm run build:pages
 ```
 
-The test suite fails if any page is out of date. Other search basics:
+`node tools/build-pages.js --check` reports any page that is out of date. Other search basics:
 
 - `index.html` carries the home page's description, canonical address, Open Graph and X preview tags (with `img/og-image.png`, 1200 × 630), and structured data for the site, the app and All Trips Considered.
 - `robots.txt` allows crawling and points to the sitemap.
@@ -61,7 +61,6 @@ After a release, submit `sitemap.xml` in Google Search Console to speed up index
 - **No inline styles.** The policy blocks `style="…"` in rendered HTML. Use a class, or put a computed value in `data-css` (for example `data-css="height:40%"`), which `app.js` applies through the CSSOM. Season colors use a constructed stylesheet for the same reason.
 - **Self-hosted fonts.** Fraunces, Instrument Serif and Inter live in `fonts/` (Latin and Latin Extended, SIL Open Font License) and load through `css/fonts.css`, so pages make no requests to Google. Each file name carries the font's version; give a new version a new name.
 - **Checked input.** Shared links, saved quiz answers, the saved theme and saved places are checked against known values before use, and id lookups ignore names such as `constructor`. Rendered text goes through `esc()`.
-- `tests/security.test.js` checks all of this, including that the policy matches in every page and in `_headers`.
 
 ## Run it
 
@@ -73,19 +72,20 @@ npm start
 
 Then visit http://localhost:8080.
 
-## Build and test
+## Build
 
-The data lives in `data/` as JSON files, one per destination plus one per topic (see `data/README.md`). After changing anything there, rebuild `js/data.js` and the place pages, then run the tests:
+The data lives in `data/` as JSON files, one per destination plus one per topic (see `data/README.md`). After changing anything there, rebuild `js/data.js` and the place pages:
 
 ```bash
 npm run build
 ```
 
-```bash
-npm test
-```
+To confirm that `js/data.js` and the pages match `data/` without rewriting anything:
 
-The tests check that `js/data.js` and the pages match `data/`, that every data file is tidy JSON, that there are no em dashes, that every place has coordinates and a climate range, and that every link points at a real place. With the `@rapideditor/country-coder` development package installed, they also check that every place and park site lies inside its own country; without it, those two tests are skipped. GitHub Actions runs all of this on every push (`.github/workflows/test.yml`).
+```bash
+node tools/build-data.js --check
+node tools/build-pages.js --check
+```
 
 ## How scoring works
 
@@ -117,13 +117,11 @@ sw.js                 Service worker (stays at the root so it covers every page)
 manifest.webmanifest  App name, colours and icons for installing
 img/                  Icons and the link-preview image
 explore/, place/      Generated pages (npm run build)
-.github/workflows/    Runs the build checks and tests on every push
 sitemap.xml           Generated list of every address
 robots.txt            Crawling rules
 tools/                Page generator and data helper scripts
 tools/unesco/         UNESCO Global Geopark and Biosphere Reserve lists (JSON and CSV)
 tools/parks/          CONANP's Mexican protected areas, park site coordinates and the gateway linker
-tests/                Node test suite
 ```
 
 To add a destination, add a line to the `cities` list in its file in `data/countries/`, then run `npm run build`. `data/README.md` explains the format and which file holds each map named below (for example `UNESCO` is `data/unesco/world-heritage.json` and `FACTS` is `data/facts/capitals-and-parks.json`). A place can also take a sixth element, `{ area, temps }`, giving its state or province and its own monthly highs. Capitals and parks live in the `FACTS` map. Typical lows come from the `RANGES` map, which holds each place's average daily temperature range by month from NASA POWER climate averages (MERRA-2 reanalysis). A low is that month's high minus the range. Ocean-dominated grid cells understate the daily swing on islands and coasts, so every range is raised to a floor of 6 °C within 30° of the equator and 5 °C elsewhere. Microstates and territories also take `kind`, `status` (shown to visitors), an optional `of` (a related country id used for pairing and the "Nearby microstates" line) and an optional `maxDays`. Territories name their country in `sovereign`, and day-trip microstates name their base in `visitFrom`. Micronations are ordinary places listed in the `MICRONATIONS` map. National parks reach places through park system sites, the `SITE_PLACES` map (which also tags a gateway place within about 1.5 hours when a park has no place of its own) and the `NP_EXTRA` map. Mexico's 132 federal national parks, biosphere reserves and natural monuments come from CONANP's official SIMEC register (`tools/parks/mexico.py`, saved as `tools/parks/mexico_anp.json` and `.csv`) and join the US and Canadian park systems in `PARK_SYSTEMS`. US and Canadian historic sites, historical parks, memorials, battlefields and military parks carry their own HISTORIC SITE label instead of NATIONAL PARK. Sites with no place of their own link to the nearest place within about 1.5 hours (110 km): `tools/parks/geocode_sites.py` finds their coordinates in OpenStreetMap (`tools/parks/site_coords.json`), and `node tools/parks/link_sites.js` writes the links into `SITE_PLACES` (and `HISTORIC_EXTRA` for places in a territory). In Explore search, matching sites with no place nearby are listed in their own "No place nearby" card rather than under their country, each with a link to its nearest place and the distance (the `NEAREST_PLACE` map, also written by `link_sites.js`). US National Monuments, National Preserves, National Reserves, National Recreation Areas, National Seashores and National Lakeshores carry the NATIONAL PARK label the same way, through their own place or a gateway place within about 1.5 hours; those farther from any place still answer a search for their name. `NP_EXTRA` also tags Hong Kong and Macau country parks, Taiwan's National Scenic Areas and Mexico's biosphere reserves as national parks. To label a place as UNESCO World Heritage, add its id and site name to the `UNESCO` map (`data/unesco/world-heritage.json`); the app refuses to load if an id does not match a place. The app labels these places WORLD HERITAGE. Places where nobody lives permanently are listed in the `REMOTE` map: UNINHABITED when closed to tourists, NO PERMANENT RESIDENTS when ordinary visits are possible, and EXPEDITION ONLY when only expedition cruises, liveaboards or permit trips go. Global Geoparks and Biosphere Reserves use the `GEOPARKS` and `BIOSPHERES` maps the same way.
