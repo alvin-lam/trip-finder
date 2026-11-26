@@ -51,20 +51,19 @@ npm run build:pages
 - `index.html` carries the home page's description, canonical address, Open Graph and X preview tags (with `img/og-image.png`, 1200 × 630), and structured data for the site, the app and All Trips Considered.
 - `robots.txt` allows crawling and points to the sitemap.
 - Each view has one main heading and its own page title, and an open place titles the tab with its name.
-- `404.html` is a branded "page not found" page that search engines are told not to list.
 
 After a release, submit `sitemap.xml` in Google Search Console to speed up indexing.
 
 ## Security
 
-- **Content-Security-Policy.** `index.html`, `404.html` and every generated page carry a `<meta>` policy that allows scripts, styles, fonts, images and requests only from this site, with no inline code and no `eval`. `_headers` holds the same policy plus `frame-ancestors 'none'` and the other security headers, for hosts that read it (Cloudflare Pages, Netlify). GitHub Pages ignores `_headers`, so set those headers with a Cloudflare Transform Rule.
+- **Content-Security-Policy.** `index.html`, `privacy.html` and every generated page carry a `<meta>` policy that allows scripts, styles, fonts, images and requests only from this site, with no inline code and no `eval`. GitHub Pages cannot send custom headers, so set these with a Cloudflare Transform Rule (Rules > Transform Rules > Modify Response Header): the same Content-Security-Policy plus `frame-ancestors 'none'`, `Strict-Transport-Security: max-age=63072000; includeSubDomains`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()` and `Cross-Origin-Opener-Policy: same-origin`.
 - **No inline styles.** The policy blocks `style="…"` in rendered HTML. Use a class, or put a computed value in `data-css` (for example `data-css="height:40%"`), which `app.js` applies through the CSSOM. Season colors use a constructed stylesheet for the same reason.
 - **Self-hosted fonts.** Fraunces, Instrument Serif and Inter live in `fonts/` (Latin and Latin Extended, SIL Open Font License) and load through `css/fonts.css`, so pages make no requests to Google. Each file name carries the font's version; give a new version a new name.
 - **Checked input.** Shared links, saved quiz answers, the saved theme and saved places are checked against known values before use, and id lookups ignore names such as `constructor`. Rendered text goes through `esc()`.
 
 ## Run it
 
-No dependencies are needed. Open `index.html` in a browser, or serve the folder (needed to try the `/explore/` and `/place/<id>/` addresses):
+No dependencies are needed. Open `docs/index.html` in a browser, or serve the `docs/` folder (needed to try the `/explore/` and `/place/<id>/` addresses):
 
 ```bash
 npm start
@@ -104,9 +103,10 @@ Unused factors drop out and the remaining weights are rescaled. A country's scor
 
 ## Project layout
 
+Everything the site serves lives in `docs/`, which GitHub Pages publishes. Development files (this README, `data/`, `tools/` and `package.json`) stay at the repository root. Paths below for site files are relative to `docs/`.
+
 ```
 index.html            App shell and home page
-404.html              Page not found
 css/styles.css        Styles and theme tokens
 data/                 The dataset as JSON files (see data/README.md)
 js/data.js            Generated from data/ by npm run build; do not edit

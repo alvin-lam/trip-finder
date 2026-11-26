@@ -28,7 +28,7 @@ KINDS = ["National Historic Site", "National Historical Park", "National Memoria
 
 
 def sites():
-    js = ("const i=require('./js/engine.js').buildIndex(require('./js/data.js'));"
+    js = ("const i=require('./docs/js/engine.js').buildIndex(require('./docs/js/data.js'));"
           "console.log(JSON.stringify(['us','ca','mx'].flatMap(c=>(i.countryById[c].sites||[]).map(s=>({...s,country:c})))))")
     return json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout)
 
