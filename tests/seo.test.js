@@ -62,7 +62,7 @@ test("Explore and every place have their own up-to-date page", () => {
   assert.equal(JSON.parse(kyoto.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"][0]["@type"], "TouristDestination");
   assert.match(files["explore/index.html"], new RegExp(`<link rel="canonical" href="${SITE}explore/" />`));
   const locs = files["sitemap.xml"].match(/<loc>/g).length;
-  assert.equal(locs, index.cities.length + 2);
+  assert.equal(locs, index.cities.length + 3); // home, Explore and the privacy page, plus every place
   assert.ok(!Object.values(files).some((b) => /—/.test(b)), "no em dashes in generated pages");
 });
 
