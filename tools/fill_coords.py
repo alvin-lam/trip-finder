@@ -16,7 +16,7 @@ DATA = "data/places/coords.json"  # then run npm run build
 BIG = set("ru us ca cn au br in ar kz dz cd sa mx id ly sd ir mn pe td ne ao ml za co et bo mr eg tz ng ve pk na mz tr cl zm mm af ss so cf ua mg bw ke fr ye th es tm cm pg se uz ma iq py zw no jp de fi vn my nz it ph ec gb ki fm mh pf sb fj vu nc ck cv pt gl dk sj".split())
 
 def places():
-    js = """const d=require('./js/data.js');const i=require('./js/engine.js').buildIndex(d);
+    js = """const d=require('./docs/js/data.js');const i=require('./docs/js/engine.js').buildIndex(d);
     console.log(JSON.stringify(i.cities.map(c=>({id:c.id,name:c.name,area:c.area,country:c.country.name,
     lat:c.country.lat,lon:c.country.lon,cid:c.country.id,unesco:c.unesco,ll:c.ll}))))"""
     return json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout)

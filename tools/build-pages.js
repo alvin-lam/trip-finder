@@ -12,12 +12,13 @@
  *   node tools/build-pages.js           write the pages
  *   node tools/build-pages.js --check   exit 1 if any page is missing or out of date
  *
- * Run it after changing js/data.js or index.html (npm run build:pages).
+ * Run it after changing docs/js/data.js or index.html (npm run build:pages).
  */
 const fs = require("node:fs");
 const path = require("node:path");
 
-const ROOT = path.join(__dirname, "..");
+// The published site lives in docs/.
+const ROOT = path.join(__dirname, "..", "docs");
 const data = require(path.join(ROOT, "js/data.js"));
 const E = require(path.join(ROOT, "js/engine.js"));
 

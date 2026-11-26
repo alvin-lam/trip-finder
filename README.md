@@ -64,7 +64,7 @@ After a release, submit `sitemap.xml` in Google Search Console to speed up index
 
 ## Run it
 
-No dependencies are needed. Open `index.html` in a browser, or serve the folder (needed to try the `/explore/` and `/place/<id>/` addresses):
+No dependencies are needed. Open `docs/index.html` in a browser, or serve the `docs/` folder (needed to try the `/explore/` and `/place/<id>/` addresses):
 
 ```bash
 npm start
@@ -103,6 +103,8 @@ node tools/build-pages.js --check
 Unused factors drop out and the remaining weights are rescaled. A country's score is the average of its best cities for your trip length. A region's score is the average of its top two countries.
 
 ## Project layout
+
+Everything the site serves lives in `docs/`, which GitHub Pages publishes. Development files (this README, `data/`, `tools/` and `package.json`) stay at the repository root. Paths below for site files are relative to `docs/`.
 
 ```
 index.html            App shell and home page

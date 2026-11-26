@@ -13,7 +13,7 @@ federal protected areas (Áreas Naturales Protegidas). Run from the repository r
    first municipality), one request a second as its usage policy asks.
 
 Writes tools/parks/mexico_anp.json and .csv, and adds the coordinates to
-tools/parks/site_coords.json under the English site names used in js/data.js.
+tools/parks/site_coords.json under the English site names used in docs/js/data.js.
 Progress is saved as it goes, so the script can be stopped and rerun.
 """
 import csv

@@ -22,7 +22,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const ROOT = path.join(__dirname, "..", "..");
-const E = require(path.join(ROOT, "js", "engine.js"));
+const E = require(path.join(ROOT, "docs", "js", "engine.js"));
 const coords = JSON.parse(fs.readFileSync(path.join(__dirname, "site_coords.json"), "utf8"));
 
 const REACH_KM = 110;

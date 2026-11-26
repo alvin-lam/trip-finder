@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /*
- * Assembles js/data.js, the file the app loads, from the JSON files in data/.
- * Edit data/, never js/data.js; data/README.md explains each file.
+ * Assembles docs/js/data.js, the file the app loads, from the JSON files in data/.
+ * Edit data/, never docs/js/data.js; data/README.md explains each file.
  *
- *   node tools/build-data.js           write js/data.js
- *   node tools/build-data.js --check   exit 1 if js/data.js is out of date
+ *   node tools/build-data.js           write docs/js/data.js
+ *   node tools/build-data.js --check   exit 1 if docs/js/data.js is out of date
  *
  * npm run build runs this and then tools/build-pages.js.
  */
@@ -12,7 +12,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { load } = require("./data-files.js");
 
-const OUT = path.join(__dirname, "..", "js", "data.js");
+const OUT = path.join(__dirname, "..", "docs", "js", "data.js");
 
 function build() {
   const data = load();
@@ -41,12 +41,12 @@ if (require.main === module) {
   const current = fs.existsSync(OUT) ? fs.readFileSync(OUT, "utf8") : "";
   if (process.argv.includes("--check")) {
     if (out !== current) {
-      console.error("js/data.js is out of date with data/. Run: npm run build");
+      console.error("docs/js/data.js is out of date with data/. Run: npm run build");
       process.exit(1);
     }
-    console.log("js/data.js is up to date.");
+    console.log("docs/js/data.js is up to date.");
   } else {
     fs.writeFileSync(OUT, out);
-    console.log(`Wrote js/data.js (${(out.length / 1024).toFixed(0)} KB) from data/.`);
+    console.log(`Wrote docs/js/data.js (${(out.length / 1024).toFixed(0)} KB) from data/.`);
   }
 }

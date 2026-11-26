@@ -4,7 +4,7 @@
   "private": true,
   "description": "Trip Finder: recommends regions, countries and cities to visit.",
   "scripts": {
-    "start": "python3 -m http.server 8080",
+    "start": "python3 -m http.server 8080 --directory docs",
     "build": "node tools/build-data.js && node tools/build-pages.js",
     "build:data": "node tools/build-data.js",
     "build:pages": "node tools/build-pages.js"

@@ -1,6 +1,6 @@
 /*
  * Where each part of the dataset lives in data/, and how to read and write it.
- * Used by tools/build-data.js (which assembles js/data.js) and by the tools that
+ * Used by tools/build-data.js (which assembles docs/js/data.js) and by the tools that
  * update the data (tools/unesco/link.js, tools/parks/link_sites.js).
  */
 const fs = require("node:fs");
@@ -9,7 +9,7 @@ const path = require("node:path");
 const DIR = path.join(__dirname, "..", "data");
 
 // Dataset key -> file in data/. COUNTRIES, PARK_SYSTEMS and SITE_PLACES are split
-// further below. The order here is the order of the keys in js/data.js.
+// further below. The order here is the order of the keys in docs/js/data.js.
 const FILES = {
   INTERESTS: "core/interests.json",
   REGIONS: "core/regions.json",
@@ -65,7 +65,7 @@ function writeJSON(rel, value) {
   fs.writeFileSync(file(rel), format(value) + "\n");
 }
 
-/** The whole dataset, as js/data.js exports it. */
+/** The whole dataset, as docs/js/data.js exports it. */
 function load({ withGeneratedSitePlaces = true } = {}) {
   const data = {};
   for (const [key, rel] of Object.entries(FILES)) {
