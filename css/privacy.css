@@ -109,6 +109,7 @@ body {
 /* Footer: back link and serif copyright */
 .privacy-footer { margin-top: 24px; text-align: center; }
 .privacy-back { margin: 0; }
+.privacy-back-top { margin: 0 0 12px; }
 .privacy-back a { font-weight: 600; text-decoration: none; }
 .privacy-back a:hover { text-decoration: underline; }
 .privacy-copyright {
