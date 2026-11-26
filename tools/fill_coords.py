@@ -1,8 +1,8 @@
 """Add Wikipedia coordinates for places that still lack them.
 
 Each run checks up to LIMIT candidate Wikipedia titles (default 250), in
-batches of 50, and writes any coordinates it finds into the COORDS map in
-js/data.js. Titles already checked are kept in tools/coords_tried.json so
+batches of 50, and writes any coordinates it finds into
+data/places/coords.json (run npm run build afterward). Titles already checked are kept in tools/coords_tried.json so
 later runs move on to new candidates. Run from the repository root:
 
     python3 tools/fill_coords.py [limit]
