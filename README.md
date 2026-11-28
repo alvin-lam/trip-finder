@@ -50,7 +50,7 @@ Live site: https://tripfinder.alltripsconsidered.com/
 
 On the live site, Explore lives at `/explore/` and each place at `/place/<id>/`, for example `/place/jp-kyoto/`. Opening a place in the app moves the address there, and closing it returns to the address it was opened from, so one Back then leaves the view. Back and Forward also move between places. The Shortlist (`/#shortlist`) and quiz results (`/#r-…`) stay on the home page, since they belong to one visitor. Copies of the app that are not on the live domain or localhost, such as a `file://` page or an embedded preview, keep to `#explore`-style links.
 
-Each address also has its own static page with a title, description, canonical address, link-preview tags, schema.org structured data (`TouristDestination` and a breadcrumb trail) and a no-JavaScript summary. The summary gives the best months, typical highs, cost, World Heritage, national parks, festivals and nearby places. Each view has one main heading and its own page title, and an open place titles the tab with its name.
+Each address also has its own static page with a title, description, canonical address, link-preview tags, schema.org structured data (`TouristDestination` and a breadcrumb trail) and a no-JavaScript summary. The summary gives the best months, typical highs, cost, World Heritage, national parks, festivals and nearby places. Each view has one main heading. The browser tab always reads "Trip Finder | All Trips Considered", while link previews carry each page's own title. The sitemap gives each address the date its page last changed.
 
 ### Install and offline use
 
@@ -109,6 +109,7 @@ README.md                     This file
 data/                         The dataset as JSON files (see data/README.md)
 tools/build-data.js           Builds docs/js/data.js from data/
 tools/build-pages.js          Builds the Explore and place pages and the sitemap
+tools/page-dates.json         Each page's fingerprint and last-changed date, for the sitemap
 tools/data-files.js           Where each part of the dataset lives in data/
 tools/fill_coords.py          Adds Wikipedia coordinates to places that lack them
 tools/coords_tried.json       Wikipedia titles fill_coords.py has already checked
@@ -149,7 +150,7 @@ node tools/build-data.js --check
 node tools/build-pages.js --check
 ```
 
-`tools/build-pages.js` generates `docs/explore/index.html` and `docs/place/<id>/index.html` from `docs/index.html`, and writes `docs/sitemap.xml` with every address. Other search basics:
+`tools/build-pages.js` generates `docs/explore/index.html` and `docs/place/<id>/index.html` from `docs/index.html`, and writes `docs/sitemap.xml` with every address and the date each page last changed. The dates live in `tools/page-dates.json`: a page's date moves to the day of the build only when its content changes, so commit that file with the pages. Other search basics:
 
 - `docs/index.html` carries the home page's description, canonical address, Open Graph and X preview tags (with `docs/img/og-image.png`, 1200 × 630), and structured data for the site, the app and All Trips Considered.
 - `docs/robots.txt` allows crawling and points to the sitemap.

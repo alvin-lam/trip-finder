@@ -434,10 +434,8 @@
 
   // Each view, and each open place, gets its own browser tab title.
   const SITE_TITLE = "Trip Finder | All Trips Considered";
+  // Every view keeps the same tab title.
   function pageTitle() {
-    if (state.view === "explore") return `Explore destinations | ${SITE_TITLE}`;
-    if (state.view === "shortlist") return `Your shortlist | ${SITE_TITLE}`;
-    if (state.stage === "results" && state.results) return `Your trip matches | ${SITE_TITLE}`;
     return SITE_TITLE;
   }
 
@@ -1634,7 +1632,7 @@
       const depth = ((history.state && history.state.depth) || 0) + 1;
       history.pushState({ place: city.id, depth }, "", `/place/${city.id}/`);
     }
-    document.title = `${sameAsCountry(city) ? city.name : `${city.name}, ${city.country.name}`} | Trip Finder`;
+    document.title = SITE_TITLE;
   }
 
   // "Heard and McDonald Islands" in "Heard Island and McDonald Islands" is the same name.

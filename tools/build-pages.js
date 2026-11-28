@@ -36,12 +36,15 @@ function swap(html, re, value) {
   return html.replace(re, value);
 }
 
+const TAB_TITLE = "Trip Finder | All Trips Considered";
+
 function page({ depth, url, title, description, jsonld, noscript }) {
   let html = TEMPLATE;
   // Relative files (css/, js/, img/, the manifest) are one or two folders up.
   const up = "../".repeat(depth);
   html = html.replace(/(href|src)="(?!https?:|#|\/|data:)([^"]+)"/g, (_, attr, p) => `${attr}="${up}${p}"`);
-  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`);
+  // Every page keeps the same browser tab title; link previews use the page's own title.
+  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(TAB_TITLE)}</title>`);
   html = swap(html, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`);
   html = swap(html, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`);
   html = swap(html, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`);
@@ -158,27 +161,56 @@ function placePage(city) {
   });
 }
 
-function sitemap() {
-  const urls = [SITE, `${SITE}explore/`, `${SITE}privacy.html`, ...index.cities.map((x) => `${SITE}place/${x.id}/`)];
+// Last-changed dates for the sitemap. tools/page-dates.json keeps a fingerprint and a
+// date for each page; a page's date moves to today only when its content changes.
+const DATES_FILE = path.join(__dirname, "page-dates.json");
+const fingerprint = (body) => require("node:crypto").createHash("sha256").update(body).digest("hex").slice(0, 16);
+function today() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+function pageDates(pages) {
+  const saved = fs.existsSync(DATES_FILE) ? JSON.parse(fs.readFileSync(DATES_FILE, "utf8")) : {};
+  const out = {};
+  for (const [p, body] of Object.entries(pages)) {
+    const hash = fingerprint(body);
+    out[p] = saved[p] && saved[p].hash === hash ? saved[p] : { hash, date: today() };
+  }
+  return out;
+}
+
+function sitemap(dates) {
+  const entries = [
+    [SITE, "index.html"],
+    [`${SITE}explore/`, "explore/index.html"],
+    [`${SITE}privacy.html`, "privacy.html"],
+    ...index.cities.map((x) => [`${SITE}place/${x.id}/`, `place/${x.id}/index.html`]),
+  ];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
+${entries.map(([u, p]) => `  <url><loc>${u}</loc><lastmod>${dates[p].date}</lastmod></url>`).join("\n")}
 </urlset>
 `;
 }
 
 /** Every generated file, as { "relative/path": contents }. */
 function build() {
-  const files = { "explore/index.html": explorePage(), "sitemap.xml": sitemap() };
-  for (const city of index.cities) files[`place/${city.id}/index.html`] = placePage(city);
-  return files;
+  const pages = { "explore/index.html": explorePage() };
+  for (const city of index.cities) pages[`place/${city.id}/index.html`] = placePage(city);
+  // The home and privacy pages are written by hand; their dates follow the files on disk.
+  const dated = { ...pages };
+  for (const p of ["index.html", "privacy.html"]) dated[p] = fs.readFileSync(path.join(ROOT, p), "utf8");
+  const dates = pageDates(dated);
+  return { files: { ...pages, "sitemap.xml": sitemap(dates) }, dates };
 }
 
 module.exports = { build, SITE };
 
 if (require.main === module) {
   const check = process.argv.includes("--check");
-  const files = build();
+  const { files, dates } = build();
+  const datesText = JSON.stringify(dates, null, 0).replace(/},/g, "},\n") + "\n";
+  const datesChanged = !fs.existsSync(DATES_FILE) || fs.readFileSync(DATES_FILE, "utf8") !== datesText;
   const placeDir = path.join(ROOT, "place");
   const want = new Set(index.cities.map((x) => x.id));
   const stale = fs.existsSync(placeDir) ? fs.readdirSync(placeDir).filter((d) => !want.has(d)) : [];
@@ -187,12 +219,13 @@ if (require.main === module) {
     return !fs.existsSync(f) || fs.readFileSync(f, "utf8") !== body;
   });
   if (check) {
-    if (changed.length || stale.length) {
+    if (changed.length || stale.length || datesChanged) {
       console.error(`${changed.length} pages out of date and ${stale.length} stale. Run: npm run build:pages`);
       process.exit(1);
     }
     console.log(`All ${Object.keys(files).length} pages are up to date.`);
   } else {
+    if (datesChanged) fs.writeFileSync(DATES_FILE, datesText);
     for (const d of stale) fs.rmSync(path.join(placeDir, d), { recursive: true });
     for (const [p, body] of changed) {
       fs.mkdirSync(path.dirname(path.join(ROOT, p)), { recursive: true });
