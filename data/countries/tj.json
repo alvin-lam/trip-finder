@@ -13,7 +13,7 @@
   "blurb": "The Pamir Highway's epic high-altitude road trip.",
   "cities": [
     ["Pamir Highway","01150500",1,"One of the world's great high-altitude road trips.",null,{"temps":[-7,-5,1,6,11,16,21,20,15,7,1,-5]}],
-    ["Dushanbe","03322131",1,"Tree-lined avenues and a giant flagpole.",null,{"temps":[9,11,17,23,29,36,39,37,32,24,16,10]}],
+    ["Dushanbe","03322131",1,"Tree-lined avenues and a giant flagpole.",null,{"temps":[9,11,17,23,28,34,36,36,31,24,17,11]}],
     ["Iskanderkul","00150412",1,"A turquoise lake in the Fann Mountains.",[6,7,8,9],{"temps":[-2,0,5,12,17,23,26,25,21,13,5,0]}],
     ["Ancient Khuttal","03020201",1,"Medieval ruins of the Khuttal kingdom in southern Tajikistan.",null,{"temps":[8,11,16,23,29,36,38,37,31,24,17,11]}],
     ["Sarazm","03010101",1,"A Bronze Age settlement in the Zarafshan valley.",null,{"temps":[6,7,12,19,24,31,33,31,27,20,14,9]}],

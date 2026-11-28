@@ -16,7 +16,7 @@
     ["La Paz","04322331",3,"A cable-car city at 3,600 metres."],
     ["Sucre","05322133",2,"A whitewashed colonial capital."],
     ["Copacabana & Lake Titicaca","13240213",2,"Boat trips to the sacred Isla del Sol."],
-    ["Santa Cruz de la Sierra","13423142",1,"A tropical city and gateway to Amboró National Park.",null,{"temps":[31,30,30,29,27,26,27,30,32,33,33,32]}],
+    ["Santa Cruz de la Sierra","13423142",1,"A tropical city and gateway to Amboró National Park.",null,{"temps":[31,31,31,29,27,26,26,29,31,32,32,31]}],
     ["Potosí","05110311",3,"A silver-mining city at 4,000 metres, with colonial churches and Cerro Rico mine tours.",null,{"temps":[17,17,18,18,17,15,15,16,17,19,19,18]}],
     ["Samaipata","04230322",2,"A carved sandstone ceremonial hill and a laid-back town near Amboró's cloud forests.",null,{"temps":[31,31,31,29,27,26,26,29,31,32,32,31]}],
     ["Jesuit Missions of Chiquitos","05120112",2,"Painted wooden mission churches still used for Baroque music festivals.",null,{"temps":[33,32,32,31,29,28,29,31,33,34,33,33]}],

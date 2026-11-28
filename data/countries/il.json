@@ -14,7 +14,7 @@
   "cities": [
     ["Jerusalem","05412132",5,"Sacred sites of three faiths inside the Old City walls."],
     ["Tel Aviv","54525243",4,"Bauhaus streets, beaches and late nights."],
-    ["Eilat","41232414",2,"Red Sea reefs and desert hikes.",null,{"temps":[21,23,27,32,36,39,41,40,38,34,28,23]}],
+    ["Eilat","41232414",2,"Red Sea reefs and desert hikes.",null,{"temps":[21,23,26,31,36,39,40,40,37,33,28,23]}],
     ["Haifa","24332223",2,"Terraced gardens above a port city."],
     ["Megiddo & the Biblical Tels","04020201",2,"Mounds of ancient cities, including Megiddo.",null,{"temps":[17,18,22,26,30,32,34,35,33,31,25,19]}],
     ["Beit Guvrin Caves","03030211",2,"Thousands of caves carved into soft chalk, from bell caves to dovecotes.",null,{"temps":[17,19,22,27,31,33,34,35,33,30,25,20]}],

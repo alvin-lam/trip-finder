@@ -17,7 +17,7 @@
     ["Langkawi","51343425",3,"A duty-free island of beaches and rainforest."],
     ["Malacca","04421132",3,"A colonial port of temples, churches and night markets."],
     ["Kota Kinabalu (Borneo)","21351414",2,"Mount Kinabalu, islands and orangutans nearby."],
-    ["Cameron Highlands","01341214",2,"Tea plantations and cool hill air.",null,{"temps":[23,24,25,25,24,24,24,24,24,24,23,23]}],
+    ["Cameron Highlands","01341214",2,"Tea plantations and cool hill air.",null,{"temps":[21,22,23,23,23,23,22,22,22,22,22,21]}],
     ["Niah Caves","02040401",1,"Huge caves where early human remains were found in Borneo.",null,{"temps":[30,31,31,32,32,32,32,32,31,31,31,31]}],
     ["Lenggong Valley","02030201",1,"Prehistoric caves where Perak Man was discovered.",null,{"temps":[32,33,33,33,33,33,33,32,32,32,31,31]}],
     ["FRIM Selangor Forest Park","01040313",1,"A canopy walkway in a forest research park near Kuala Lumpur.",null,{"temps":[34,35,36,36,36,37,36,36,32,32,30,31]}],

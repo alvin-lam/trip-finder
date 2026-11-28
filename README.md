@@ -207,7 +207,7 @@ The season and holiday schemes live in `SEASON_SCHEMES` in `docs/js/engine.js`. 
 
 ### Releasing an update
 
-When any cached file changes, bump `CACHE` in `docs/sw.js` (for example from `wtt-v128` to `wtt-v129`) and add any new files to its `SHELL` list, so returning visitors get the new version. Service workers need HTTPS, which GitHub Pages provides.
+When any cached file changes, bump `CACHE` in `docs/sw.js` (for example from `wtt-v129` to `wtt-v130`) and add any new files to its `SHELL` list, so returning visitors get the new version. Service workers need HTTPS, which GitHub Pages provides.
 
 ## Security
 
@@ -245,7 +245,7 @@ Temperatures, costs and seasons are rough planning guides, not authoritative tra
 ## Credits and licenses
 
 - **Fonts.** Fraunces, Instrument Serif and Inter are licensed under the SIL Open Font License 1.1. The license text is in `docs/fonts/OFL.txt`.
-- **Climate data.** Typical daily temperature ranges come from NASA POWER climate averages (MERRA-2 reanalysis). Average daily highs for places in the US, Puerto Rico, Canada and Mexico come from the climate tables in their Wikipedia articles. Places whose climate is far from their country's, such as Bogotá, Ushuaia and Leh, take their highs from NASA POWER climate averages for 2001 to 2024, adjusted to the height of the ground around them.
+- **Climate data.** Typical daily temperature ranges come from NASA POWER climate averages (MERRA-2 reanalysis). Average daily highs for places in the US, Puerto Rico, Canada and Mexico come from the climate tables in their Wikipedia articles. Places whose climate is far from their country's, such as Bogotá, Ushuaia, Leh and Lima, take their highs from the climate table of a nearby weather station in its Wikipedia article. About 30 with no fitting station, such as remote parks and plateaus, use NASA POWER climate averages for 2001 to 2024, adjusted to the height of the ground around them.
 - **UNESCO lists.** World Heritage Sites, UNESCO Global Geoparks (unesco.org/en/iggp/geoparks) and Biosphere Reserves (unesco.org/en/mab/list).
 - **Parks.** Mexico's protected areas come from CONANP's SIMEC register. The US and Canadian park systems cover the US National Park Service and Parks Canada.
 - **Coordinates.** Park site and Geopark coordinates come from OpenStreetMap, and `tools/fill_coords.py` fills in missing place coordinates from Wikipedia.

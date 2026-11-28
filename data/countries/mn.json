@@ -13,7 +13,7 @@
   "blurb": "Endless steppe, nomad stays and the Gobi Desert.",
   "cities": [
     ["Ulaanbaatar","03223231",2,"Monasteries, museums and the Naadam festival in July."],
-    ["Gobi Desert","00150503",2,"Singing dunes, camel treks and dinosaur fossils.",null,{"temps":[-6,0,9,18,25,31,34,31,25,15,4,-5]}],
+    ["Gobi Desert","00150503",2,"Singing dunes, camel treks and dinosaur fossils.",null,{"temps":[-7,-2,6,15,21,27,29,27,21,13,3,-5]}],
     ["Khövsgöl Lake","01250414",1,"A vast clear lake near the Siberian border.",[6,7,8]],
     ["Orkhon Valley","04250302",1,"Nomad camps and the old capital Karakorum.",[6,7,8,9]],
     ["Burkhan Khaldun","02040401",1,"The sacred mountain where Genghis Khan is said to be born and buried.",null,{"temps":[-16,-9,1,12,20,25,27,25,19,10,-4,-14]}],

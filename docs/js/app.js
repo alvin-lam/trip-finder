@@ -349,7 +349,7 @@
       lines.push("");
     }
     if (countries.length) lines.push(`COUNTRIES (${countries.length})`, "");
-    for (const c of countries) lines.push(`${c.name} (${c.region}), ${c.dailyCostUSD} a day, ${c.places} places`);
+    for (const c of countries) lines.push(`${c.name} (${c.region}), ${c.dailyCostUSD} a day, ${c.places} ${c.places === 1 ? "place" : "places"}`);
     return lines.join("\n").trimEnd() + "\n";
   }
 
@@ -478,7 +478,7 @@
         <div>
           <p class="eyebrow">Trip finder</p>
           <h1>Not sure where to go next?</h1>
-          <p class="hero__lead">Answer five quick questions about what you enjoy, when you can travel and what you want to spend. We will rank ${index.regions.length} world regions and ${kindCounts()}, covering ${index.cities.length} cities and places, then sketch a route for your trip.</p>
+          <p class="hero__lead">Answer five quick questions about what you enjoy, when you can travel and what you want to spend. We will rank ${index.regions.length} world regions and ${kindCounts()}, covering ${E.num(index.cities.length)} cities and places, then sketch a route for your trip.</p>
           <div class="row">
             <button class="btn btn--primary" data-action="start">Find my destination →</button>
             ${hasPrev ? `<button class="btn btn--ghost" data-action="show-results">See my last results</button>` : ""}
@@ -1002,7 +1002,9 @@
               return (
                 // Accents are ignored: "galapagos" finds Galápagos.
                 searchKey(city.name).includes(qn) ||
+                wordHit(city.name, qn) ||
                 wordHit(city.blurb, qn) ||
+                (city.isCapital && /\bcapitals?\b/.test(qn)) ||
                 (city.area && searchKey(city.area).includes(qn)) ||
                 city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
                 matches.some((m) => m.place === city) ||
@@ -1037,7 +1039,7 @@
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
     const total = counted.size;
-    const head = `<p class="muted u-mt16">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>${unlinkedCard(unlinked)}`;
+    const head = `<p class="muted u-mt16">${E.num(total)} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>${unlinkedCard(unlinked)}`;
     if (f.kind === "territory") {
       // Territories are listed under the country they belong to.
       const bySov = new Map();
@@ -1277,19 +1279,31 @@
 
   // Search text without accents, dots or case: "U.S." -> "us", "España" -> "espana".
   const searchKey = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim().toLowerCase();
-  // True when the search starts a word, or ends one apart from a plural or "-ing", so
-  // "holi" finds Holi but not "Catholic", while "forest" still finds "rainforest" and
-  // "surf" finds "kitesurfing".
-  const wordHit = (text, qn) => {
-    const t = searchKey(text);
+  // British and American spellings match each other: "snorkeling" finds "snorkelling".
+  const fold = (t) => t.replace(/([aeiou])ll(ing|ed|er)/g, "$1l$2").replace(/\b(col|harb|flav|hon|neighb)our/g, "$1or").replace(/(cent|theat|met)re\b/g, "$1er");
+  // Words that mean the same thing to a visitor, so "wine" also finds vineyards.
+  const SYNONYMS = { wine: ["vineyard", "winery", "wineries"], wines: ["vineyard", "winery", "wineries"] };
+  // A search of four or more letters may also end a compound word whose first part has
+  // four or more letters, apart from a plural or "-ing": "forest" finds "rainforest" and
+  // "surf" finds "kitesurfing", but "art" does not find "quarter" and "holi" skips "Catholic".
+  function hitOne(t, qn) {
     let i = t.indexOf(qn);
     while (i !== -1) {
       if (i === 0 || !/[a-z0-9]/.test(t[i - 1])) return true;
+      const start = t.slice(0, i).search(/[a-z0-9]*$/);
       const rest = t.slice(i + qn.length).match(/^[a-z0-9]*/)[0];
-      if (/^(s|es|ing|ers?)?$/.test(rest)) return true;
+      if (qn.length >= 4 && i - start >= 4 && /^(s|es|ing|ers?)?$/.test(rest)) return true;
       i = t.indexOf(qn, i + 1);
     }
     return false;
+  }
+  const wordHit = (text, qn) => {
+    const t = fold(searchKey(text));
+    const q = fold(qn);
+    // "penguins" finds "penguin", as "penguin" finds "penguins".
+    const single = q.length > 4 && /s$/.test(q) && !/ss$/.test(q) ? q.replace(/ies$/, "y").replace(/(ch|sh|x|z)es$/, "$1").replace(/([^s])s$/, "$1") : null;
+    const forms = [q, ...(single && single !== q ? [single] : []), ...(SYNONYMS[q] || [])];
+    return forms.some((f) => hitOne(t, f));
   };
 
   // Each Explore region shows its first few country cards, then more per click:
@@ -1364,7 +1378,7 @@
     };
     // A search that keeps only some of a country's places shows them without another click.
     const searching = !!searchKey(state.explore.q || "");
-    const auto = searching && cities.length < c.cities.length + c.linked.length;
+    const auto = searching && (cities.length < c.cities.length + c.linked.length || cities.length <= 3);
     const open = !collapsible || (searching ? auto !== state.searchToggled.has(c.id) : state.exploreOpen.has(c.id));
     let list;
     if (byArea) {
@@ -1377,7 +1391,7 @@
       list = `<p class="area-summary">${
         cities.filter((x) => x.country === c).length === c.cities.length && AREA_SUMMARY[c.id]
           ? `Places in ${AREA_SUMMARY[c.id]}`
-          : `Places in ${new Set(cities.filter((x) => x.country === c && x.area).map((x) => x.area)).size} of ${new Set(c.cities.map((x) => x.area).filter(Boolean)).size} ${AREA_NOUN[c.id] || c.areaTerm || "areas"}`
+          : `Places in ${new Set(cities.filter((x) => x.country === c && x.area).map((x) => x.area)).size} of ${new Set(c.cities.map((x) => x.area).filter(Boolean)).size} ${esc(AREA_NOUN[c.id] || c.areaTerm || "areas")}`
       }</p>
         <div class="area-groups">${[...groups]
           .map(
@@ -2150,8 +2164,11 @@ ${sel}[data-theme="dark"] { ${dark} }`;
     }
     const m = location.pathname.match(PLACE_PATH);
     if (m && index.cityById[m[1]]) openCity(m[1]);
-    else {
-      if ($("#detail").open) closeDetail();
+    else if ($("#detail").open) {
+      // Back from a place: the view it was opened over is still on screen, with its
+      // open lists, scroll position and focus, so only the place closes.
+      closeDetail();
+    } else {
       readHash();
       setView(state.view);
     }

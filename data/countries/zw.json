@@ -13,7 +13,7 @@
   "blurb": "Victoria Falls, Hwange's elephants and ancient stone ruins.",
   "cities": [
     ["Victoria Falls","01250513",3,"Rainforest viewpoints facing the falls.",null,{"temps":[31,30,31,30,29,27,26,30,34,37,35,32]}],
-    ["Hwange","00250403",2,"Huge elephant herds at waterholes.",null,{"temps":[32,31,32,32,30,28,27,31,35,37,36,33]}],
+    ["Hwange","00250403",2,"Huge elephant herds at waterholes.",null,{"temps":[29,29,29,28,26,24,24,27,31,32,32,30]}],
     ["Great Zimbabwe","05140212",1,"The stone ruins of a medieval city."],
     ["Mana Pools","00250403",1,"Walking safaris on the Zambezi floodplain.",null,{"temps":[31,31,31,32,31,29,29,32,35,38,37,33]}],
     ["Harare","03323131",1,"Jacaranda-lined avenues, galleries and craft markets."],

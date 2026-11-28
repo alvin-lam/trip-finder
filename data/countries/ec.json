@@ -16,8 +16,8 @@
     ["Quito","05432132",3,"A colonial centre high in the Andes."],
     ["Baños","01351513",2,"Waterfalls, canyoning and a swing at the edge of a volcano."],
     ["Cuenca","05432133",2,"A colonial city of blue domes and rivers."],
-    ["Yasuní (Amazon)","00250402",1,"Remote rainforest lodges and wildlife.",null,{"temps":[28,28,28,28,27,27,27,28,28,28,28,28]}],
-    ["Guayaquil","13423132",1,"A riverside boardwalk and a gateway to the Galápagos.",null,{"temps":[34,32,31,32,33,34,36,36,36,35,35,35]}],
+    ["Yasuní (Amazon)","00250402",1,"Remote rainforest lodges and wildlife.",null,{"temps":[31,31,31,30,30,29,29,30,31,31,31,31]}],
+    ["Guayaquil","13423132",1,"A riverside boardwalk and a gateway to the Galápagos.",null,{"temps":[31,31,32,32,32,31,30,30,31,31,32,32]}],
     ["Qhapaq Ñan in Ecuador","03030301",1,"Inca road stretches in the southern highlands near Ingapirca.",null,{"temps":[22,21,21,21,21,20,19,20,20,22,22,22]}],
     ["Sangay National Park","01050501",1,"Active volcanoes, glaciers and cloud forest descending to the Amazon.",null,{"temps":[21,21,21,21,20,20,19,20,20,22,22,21]}]
   ]

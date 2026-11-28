@@ -50,7 +50,7 @@ Each destination file has a `cities` list. A place is one line:
 - **popularity:** 1 (hidden gem) to 5 (iconic and busy).
 - **best months:** months 1 to 12 that override the destination's own best months, or `null`.
 - **area:** the state, province or region (some countries keep this in `places/areas.json` instead).
-- **temps:** average daily highs in °C, January to December. Places in the US, Puerto Rico, Canada and Mexico take them from the climate tables in their Wikipedia articles (mostly 1991–2020 normals). Places whose climate is far from their country's take them from NASA POWER (T2M plus half of T2M_RANGE, 2001 to 2024), moved to the height of the lower ground around the place at 6.5 °C per km.
+- **temps:** average daily highs in °C, January to December. Places in the US, Puerto Rico, Canada and Mexico take them from the climate tables in their Wikipedia articles (mostly 1991–2020 normals). Places whose climate is far from their country's take them from the climate table of a nearby weather station in its Wikipedia article. Where no station fits, they come from NASA POWER (T2M plus half of T2M_RANGE, 2001 to 2024), moved to the height of the lower ground around the place at 6.5 °C per km.
 
 A place's id is `<destination id>-<name in lower case>`, with accents removed and anything other than letters and digits replaced by hyphens: "Reykjavík" in Iceland is `is-reykjavik`. The maps in the other files are keyed by these ids, and the app refuses to load if an id matches no place.
 

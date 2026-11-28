@@ -13,9 +13,9 @@
   "blurb": "Pyramids, Nile cruises and Red Sea diving.",
   "cities": [
     ["Cairo","05413141",4,"The Pyramids of Giza and the Egyptian Museum."],
-    ["Luxor","05321223",4,"Valley of the Kings and Karnak temple.",null,{"temps":[22,25,30,35,39,42,42,42,40,35,29,24]}],
-    ["Dahab","51342514",2,"Laid-back Red Sea town famous for diving.",null,{"temps":[23,25,29,34,38,41,43,43,40,36,30,25]}],
-    ["Aswan","04331224",3,"Nile felucca rides, Philae temple and trips to Abu Simbel.",null,{"temps":[24,27,32,37,41,43,43,44,42,38,31,26]}],
+    ["Luxor","05321223",4,"Valley of the Kings and Karnak temple.",null,{"temps":[23,25,30,35,39,41,41,41,39,36,29,24]}],
+    ["Dahab","51342514",2,"Laid-back Red Sea town famous for diving.",null,{"temps":[22,22,25,30,34,37,38,38,35,32,27,23]}],
+    ["Aswan","04331224",3,"Nile felucca rides, Philae temple and trips to Abu Simbel.",null,{"temps":[23,26,30,36,40,42,42,42,40,36,30,25]}],
     ["Hurghada","51233414",3,"Red Sea resorts and easy diving."],
     ["Alexandria","34421132",2,"A Mediterranean corniche and a modern great library."],
     ["Siwa Oasis","02240214",1,"Salt lakes and palm groves in the Western Desert."],

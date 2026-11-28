@@ -65,7 +65,7 @@ const crumbs = (items) => ({
 
 function explorePage() {
   const n = index.cities.length;
-  const description = `Browse ${fmt(n)} places in ${index.countries.length} countries and territories. Filter by region, month, interest, cost, festivals, Pride, Christmas markets, national parks and World Heritage.`;
+  const description = `Browse ${fmt(n)} places in ${index.countries.length} countries and territories. Filter by month, interest, cost, festivals, Pride, Christmas markets, national parks and World Heritage.`;
   const regions = index.regions
     .map((r) => `        <li>${esc(r.name)}: ${r.countries.length} destinations</li>`)
     .join("\n");

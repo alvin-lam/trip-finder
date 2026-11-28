@@ -41,7 +41,7 @@
     ["Struve Geodetic Arc (Russia)","12020201",1,"An arc survey point on Gogland island in the Gulf of Finland.",null,{"temps":[-2,-3,1,6,12,17,21,20,15,9,4,1]}],
     ["Uvs Nuur (Russia)","01050401",1,"Steppe, dunes and mountains in Tuva.",null,{"temps":[-24,-16,-2,14,21,27,28,25,18,8,-7,-20]}],
     ["Virgin Komi Forests","01050401",1,"Europe's largest primeval forest in the Northern Urals.",null,{"temps":[-13,-10,-2,6,14,20,23,18,12,3,-6,-10]}],
-    ["Yekaterinburg","04313122",2,"The Urals' capital, with constructivist buildings, the Church on the Blood where the Romanovs died and the Europe-Asia border nearby.",null,{"temps":[-13,-11,-3,6,16,20,23,21,14,5,-5,-12]}],
+    ["Yekaterinburg","04313122",2,"The Urals' capital, with constructivist buildings, the Church on the Blood where the Romanovs died and the Europe-Asia border.",null,{"temps":[-13,-11,-3,6,16,20,23,21,14,5,-5,-12]}],
     ["Tyumen","13220114",1,"A riverside city with open-air thermal hot springs, and the gateway to Tobolsk.",null,{"temps":[-15,-12,-3,8,18,22,24,23,15,6,-5,-13]}],
     ["Tobolsk","04120102",1,"Siberia's old capital, with the only stone kremlin east of the Urals high above the Irtysh River.",[6,7,8],{"temps":[-17,-13,-3,6,16,21,23,21,14,4,-6,-14]}],
     ["Taganay National Park","00140401",1,"Quartzite ridges and boulder 'stone rivers' in the Southern Urals, above the town of Zlatoust.",[6,7,8,9],{"temps":[-13,-10,-3,7,17,20,23,22,15,5,-4,-11]}],
