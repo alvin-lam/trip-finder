@@ -14,7 +14,7 @@
   "cities": [
     ["Dakar & Gorée","34434333",2,"Live mbalax, surf breaks and historic Gorée Island."],
     ["Saint-Louis","24331123",1,"A colonial island town on the Senegal River."],
-    ["Sine-Saloum Delta","20250314",1,"Mangrove channels and shell islands."],
+    ["Sine-Saloum Delta","20250314",1,"Mangrove channels and shell islands.",null,{"temps":[32,34,37,38,38,36,32,30,30,32,33,32]}],
     ["Bassari Country","03140401",1,"Hillside villages in southeast Senegal.",null,{"temps":[34,37,39,40,39,35,32,31,32,34,35,34]}],
     ["Djoudj Bird Sanctuary","01040203",1,"Flamingos and pelicans on the Senegal river delta.",null,{"temps":[31,32,33,32,30,31,31,32,33,34,35,32]}],
     ["Niokolo-Koba","01050401",1,"Savanna and gallery forest in Senegal.",null,{"temps":[35,37,40,41,41,38,34,32,33,36,38,36]}],

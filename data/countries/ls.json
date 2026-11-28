@@ -11,5 +11,8 @@
   "currency": "Loti (LSL)",
   "language": "Sesotho, English",
   "blurb": "A mountain kingdom of pony treks and high passes.",
-  "cities": [["Semonkong","01250403",1,"Pony treks to one of Africa's highest single-drop waterfalls."],["Sani Pass","01150502",1,"A dramatic mountain road to Africa's highest pub."]]
+  "cities": [
+    ["Semonkong","01250403",1,"Pony treks to one of Africa's highest single-drop waterfalls."],
+    ["Sani Pass","01150502",1,"A dramatic mountain road to Africa's highest pub.",null,{"temps":[18,17,16,13,10,8,8,11,15,17,18,18]}]
+  ]
 }

@@ -13,7 +13,7 @@
   "blurb": "Fjord-like bays, walled towns and dramatic mountains.",
   "cities": [
     ["Kotor","34342324",4,"A walled town at the head of a fjord-like bay."],
-    ["Durmitor","00251503",2,"Glacial lakes, canyon rafting and mountain trails."],
+    ["Durmitor","00251503",2,"Glacial lakes, canyon rafting and mountain trails.",null,{"temps":[2,3,6,10,15,19,21,22,17,13,8,3]}],
     ["Budva","53325324",3,"A walled old town and beach nightlife.",[6,7,8,9]],
     ["Podgorica","02322131",1,"A green, low-key capital near Lake Skadar."],
     ["Stećci of Montenegro (Žabljak)","02030301",1,"Carved medieval tombstones on high pastures near Žabljak.",null,{"temps":[2,3,6,10,15,19,21,22,16,13,8,3]}],

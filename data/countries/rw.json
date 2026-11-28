@@ -12,7 +12,7 @@
   "language": "Kinyarwanda, English, French",
   "blurb": "The land of a thousand hills, gorillas and a clean, safe capital.",
   "cities": [
-    ["Volcanoes National Park","00250402",3,"Mountain gorilla and golden monkey treks."],
+    ["Volcanoes National Park","00250402",3,"Mountain gorilla and golden monkey treks.",null,{"temps":[25,25,24,24,23,23,24,24,25,24,23,24]}],
     ["Kigali","04423132",2,"A hilly, orderly capital with a moving genocide memorial."],
     ["Nyungwe Forest","00250402",1,"Chimpanzees and a canopy walkway."],
     ["Lake Kivu","31241315",1,"Lakeside towns and island boat trips."],

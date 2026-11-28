@@ -13,7 +13,7 @@
   "blurb": "Castles, High Tatras hikes and a compact capital.",
   "cities": [
     ["Bratislava","03323132",2,"A hilltop castle and old town on the Danube."],
-    ["High Tatras","01252513",2,"Alpine lakes and peaks in a compact range."],
+    ["High Tatras","01252513",2,"Alpine lakes and peaks in a compact range.",null,{"temps":[-1,0,3,9,13,17,19,19,14,9,4,0]}],
     ["Banská Štiavnica","04331123",1,"A hillside mining town of old silver wealth."],
     ["Bardejov","04220113",2,"A Gothic and Renaissance town square.",null,{"temps":[0,2,8,14,18,22,24,24,19,13,7,1]}],
     ["Slovak Karst Caves (Domica)","01040401",1,"Domica Cave and its underground river boat trips.",null,{"temps":[1,4,10,16,21,25,27,27,21,15,8,2]}],

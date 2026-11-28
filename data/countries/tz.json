@@ -14,7 +14,7 @@
   "cities": [
     ["Serengeti","02250503",4,"Endless plains and year-round wildlife viewing."],
     ["Zanzibar","54433335",4,"Stone Town alleys, spice tours and dreamy beaches."],
-    ["Moshi & Kilimanjaro","01250501",3,"Base camp for climbing Africa's highest peak."],
+    ["Moshi & Kilimanjaro","01250501",3,"Base camp for climbing Africa's highest peak.",null,{"temps":[33,34,33,30,29,28,28,29,31,32,32,31]}],
     ["Ngorongoro Crater","00250403",3,"Wildlife inside a vast volcanic caldera."],
     ["Dar es Salaam","23424232",2,"A busy port and gateway to Zanzibar."],
     ["Kondoa Rock Art","03030301",1,"Rock paintings in central Tanzania.",null,{"temps":[30,30,30,29,28,27,27,28,29,31,32,31]}],

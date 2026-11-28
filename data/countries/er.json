@@ -11,5 +11,8 @@
   "currency": "Nakfa (ERN)",
   "language": "Tigrinya, Arabic",
   "blurb": "Asmara's remarkable modernist architecture.",
-  "cities": [["Asmara","04321131",1,"Art Deco cinemas, cafés and a futurist petrol station."],["Massawa","34221214",1,"An Ottoman-era port on the Red Sea."]]
+  "cities": [
+    ["Asmara","04321131",1,"Art Deco cinemas, cafés and a futurist petrol station."],
+    ["Massawa","34221214",1,"An Ottoman-era port on the Red Sea.",null,{"temps":[29,29,32,34,37,40,41,40,39,36,33,31]}]
+  ]
 }

@@ -16,7 +16,7 @@
     ["Porto","24524133",4,"Riverside wine cellars and azulejo-covered churches."],
     ["Algarve","51434415",3,"Golden cliffs, sea caves and surf beaches.",[5,6,7,8,9]],
     ["Sintra","05341223",4,"Fairy-tale palaces in misty, forested hills near Lisbon."],
-    ["Madeira","22352414",3,"Levada walks, sea cliffs and flowers all year.",[1,2,3,4,5,6,7,8,9,10,11,12]],
+    ["Madeira","22352414",3,"Levada walks, sea cliffs and flowers all year.",[1,2,3,4,5,6,7,8,9,10,11,12],{"temps":[20,20,21,21,22,24,25,27,27,25,23,21]}],
     ["Azores","11251404",2,"Volcanic crater lakes and whale watching.",[5,6,7,8,9]],
     ["Douro Valley","03550315",4,"Terraced port-wine vineyards along a winding river.",null,{"temps":[12,16,19,20,23,28,32,32,29,23,17,13]}],
     ["Tomar","05220113",3,"The Templars' Convent of Christ and its round church.",null,{"temps":[15,17,20,21,25,28,31,32,29,24,18,15]}],

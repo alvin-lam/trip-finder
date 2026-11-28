@@ -1428,7 +1428,7 @@
   "ye-shibam": "Hadhramaut",
   "ye-zabid": "Al Hudaydah",
   "ye-marib": "Marib",
-  "ye-sana-a": "Sanaa",
+  "ye-sana-a": "Sana'a",
   "gt-antigua": "Highlands",
   "gt-guatemala-city": "Highlands",
   "gt-lake-atitlan": "Highlands",
@@ -1629,5 +1629,8 @@
   "sg-macritchie-reservoir-treetop-walk": "Central Region",
   "sg-southern-ridges-henderson-waves": "Central Region",
   "sg-sungei-buloh-wetland-reserve": "North Region",
-  "sg-coney-island": "North-East Region"
+  "sg-coney-island": "North-East Region",
+  "kh-temple-of-preah-vihear": "Preah Vihear",
+  "fr-nord-pas-de-calais-mining-basin": "Hauts-de-France",
+  "ir-trans-iranian-railway": "Mazandaran"
 }

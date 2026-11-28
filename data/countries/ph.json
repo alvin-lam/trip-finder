@@ -17,7 +17,7 @@
     ["Cebu","42343433",3,"Whale sharks, waterfalls and canyoneering."],
     ["Boracay","51335325",4,"White Beach, sunsets and lively nights."],
     ["Bohol","41250414",3,"The Chocolate Hills and tiny tarsiers."],
-    ["Banaue","04250412",2,"Ancient rice terraces carved into the mountains."],
+    ["Banaue","04250412",2,"Ancient rice terraces carved into the mountains.",null,{"temps":[23,24,27,30,29,28,27,27,27,25,24,23]}],
     ["Manila","04424242",3,"Spanish-era Intramuros and a huge food scene."],
     ["Baroque Churches of the Philippines","05110112",2,"Earthquake Baroque churches, from Manila's San Agustín to Paoay's buttressed walls.",null,{"temps":[30,31,32,34,34,33,32,31,31,31,31,30]}],
     ["Vigan","04420223",3,"Cobbled Calle Crisologo, Spanish colonial houses and horse-drawn kalesa rides.",null,{"temps":[30,31,32,33,33,32,31,31,31,31,32,31]}],

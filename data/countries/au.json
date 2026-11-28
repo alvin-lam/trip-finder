@@ -14,12 +14,12 @@
   "cities": [
     ["Sydney","54534343",5,"Opera House, harbour ferries and Bondi beach."],
     ["Melbourne","24525152",4,"Laneway cafés, street art and sport culture."],
-    ["Cairns & Great Barrier Reef","41353514",4,"Reef snorkelling and rainforest tours.",[6,7,8,9,10]],
-    ["Uluru","04150402",3,"Sacred red monolith in the heart of the outback.",[5,6,7,8,9]],
+    ["Cairns & Great Barrier Reef","41353514",4,"Reef snorkelling and rainforest tours.",[6,7,8,9,10],{"temps":[32,32,31,30,28,27,26,27,29,30,31,32]}],
+    ["Uluru","04150402",3,"Sacred red monolith in the heart of the outback.",[5,6,7,8,9],{"temps":[38,37,35,30,24,20,21,24,29,33,35,36]}],
     ["Gold Coast","52335325",4,"Surf beaches and theme parks."],
-    ["Hobart & Tasmania","03441314",3,"The MONA museum, wilderness and fresh seafood.",[11,12,1,2,3]],
+    ["Hobart & Tasmania","03441314",3,"The MONA museum, wilderness and fresh seafood.",[11,12,1,2,3],{"temps":[23,23,21,18,16,13,13,14,16,18,20,21]}],
     ["Perth","43432324",3,"Sunny beaches and quokkas on Rottnest Island."],
-    ["Whitsundays","50250405",3,"Whitehaven Beach and island sailing.",[6,7,8,9,10]],
+    ["Whitsundays","50250405",3,"Whitehaven Beach and island sailing.",[6,7,8,9,10],{"temps":[30,29,29,27,26,24,23,24,26,28,29,30]}],
     ["Canberra","04321123",2,"National museums, galleries and Parliament House."],
     ["Australian Convict Sites","05020112",2,"Prisons, barracks and penal settlements from Port Arthur to Fremantle.",null,{"temps":[25,25,24,23,21,19,19,18,19,20,22,24]}],
     ["Riversleigh & Naracoorte Fossil Sites","02040201",1,"Caves and limestone beds holding the fossils of giant marsupials.",null,{"temps":[37,36,34,32,28,25,25,28,32,35,37,37]}],
@@ -35,7 +35,7 @@
     ["Purnululu (Bungle Bungles)","01050502",2,"Striped beehive domes and hidden gorges in the remote Kimberley.",null,{"temps":[37,36,35,34,30,27,27,30,34,37,38,38]}],
     ["Shark Bay","41050404",2,"Monkey Mia dolphins, stromatolites and shell beaches on Australia's western tip.",null,{"temps":[34,35,34,31,28,24,23,24,26,28,30,32]}],
     ["Willandra Lakes & Mungo","03040302",1,"Dry lakebeds where some of humanity's oldest remains in Australia were found.",null,{"temps":[33,32,29,24,20,16,16,18,21,25,28,31]}],
-    ["Brisbane","23434343",4,"A riverside city of South Bank parklands,  koala sanctuaries and nearby islands.",[4,5,6,7,8,9,10],{"temps":[30,29,28,27,24,22,22,23,26,27,28,29]}],
+    ["Brisbane","23434343",4,"A riverside city of South Bank parklands, koala sanctuaries and nearby islands.",[4,5,6,7,8,9,10],{"temps":[30,29,28,27,24,22,22,23,26,27,28,29]}],
     ["Adelaide","33533234",3,"A festival city between the Barossa wine region and Kangaroo Island.",[3,4,10,11],{"temps":[29,29,26,23,19,16,15,16,19,22,25,27]}]
   ]
 }

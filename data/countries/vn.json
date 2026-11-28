@@ -17,13 +17,13 @@
     ["Hạ Long Bay","21351404",4,"Overnight cruises among limestone islands."],
     ["Ho Chi Minh City","03515141",4,"Motorbike energy, rooftop bars and war history."],
     ["Huế","15421124",3,"Imperial citadel and royal tombs along the Perfume River."],
-    ["Sa Pa","02341413",3,"Rice terraces and treks to hill-tribe villages.",[3,4,5,9,10,11]],
+    ["Sa Pa","02341413",3,"Rice terraces and treks to hill-tribe villages.",[3,4,5,9,10,11],{"temps":[12,14,18,21,22,23,23,23,22,19,16,13]}],
     ["Phú Quốc","51333325",3,"Island beaches and night markets.",[11,12,1,2,3,4]],
     ["Phong Nha","01250503",2,"Enormous caves and jungle rivers."],
     ["Hồ Dynasty Citadel","03020101",1,"A stone citadel of the short-lived Hồ dynasty.",null,{"temps":[20,22,26,28,33,35,34,33,32,30,27,21]}],
     ["Mỹ Sơn","05020212",3,"Cham temples in a jungle valley near Hội An.",null,{"temps":[25,26,28,31,33,34,34,34,32,30,27,25]}],
     ["Tràng An","03250414",4,"Boat trips through karst caves and rice paddies.",null,{"temps":[20,22,26,28,33,35,34,33,32,30,27,21]}],
     ["Yên Tử","04040412",2,"A pilgrim mountain with pagodas and cable cars.",null,{"temps":[19,19,22,26,30,31,32,31,31,28,25,22]}],
-    ["Da Nang","53444334",4,"My Khe Beach,  the Golden Bridge at Ba Na Hills and the Marble Mountains.",[2,3,4,5,6,7,8],{"temps":[25,26,28,31,33,34,34,34,32,29,27,25]}]
+    ["Da Nang","53444334",4,"My Khe Beach, the Golden Bridge at Ba Na Hills and the Marble Mountains.",[2,3,4,5,6,7,8],{"temps":[25,26,28,31,33,34,34,34,32,29,27,25]}]
   ]
 }

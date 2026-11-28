@@ -71,10 +71,10 @@
     ["Würzburg Residence","05430213",3,"A Baroque palace with Tiepolo's giant ceiling fresco, amid Franconian vineyards.",null,{"temps":[4,6,10,16,20,23,26,25,20,14,8,4]}],
     ["Zollverein Coal Mine","04110211",2,"An Art Deco coal mine in Essen, now a design and culture hub.",null,{"temps":[5,6,10,14,18,21,24,23,19,14,9,6]}],
     ["Moravian Church Settlements","04130113",1,"Herrnhut, the founding town of the Moravian Church, with its plain squares and the God's Acre cemetery.",null,{"temps":[2,4,8,14,19,22,24,24,19,13,7,3]}],
-    ["Nuremberg","05412132",3,"A walled medieval old town,  the imperial castle and Germany's most famous Christmas market.",null,{"temps":[3,5,10,15,19,23,25,25,20,14,8,4]}],
-    ["Dresden","05423133",3,"Baroque palaces and the rebuilt Frauenkirche along the Elbe,  plus the Striezelmarkt Christmas market.",null,{"temps":[3,5,9,14,19,22,25,24,20,14,8,4]}],
-    ["Leipzig","04314132",2,"Bach's city,  with galleries in old cotton mills and a lively nightlife.",null,{"temps":[3,5,10,15,20,23,25,25,20,14,8,4]}],
-    ["Düsseldorf","03414152",2,"A Rhine promenade,  altbier pubs in the Altstadt and the shops of the Königsallee.",null,{"temps":[6,7,11,15,19,22,24,24,20,15,10,6]}],
+    ["Nuremberg","05412132",3,"A walled medieval old town, the imperial castle and Germany's most famous Christmas market.",null,{"temps":[3,5,10,15,19,23,25,25,20,14,8,4]}],
+    ["Dresden","05423133",3,"Baroque palaces and the rebuilt Frauenkirche along the Elbe, plus the Striezelmarkt Christmas market.",null,{"temps":[3,5,9,14,19,22,25,24,20,14,8,4]}],
+    ["Leipzig","04314132",2,"Bach's city, with galleries in old cotton mills and a lively nightlife.",null,{"temps":[3,5,10,15,20,23,25,25,20,14,8,4]}],
+    ["Düsseldorf","03414152",2,"A Rhine promenade, altbier pubs in the Altstadt and the shops of the Königsallee.",null,{"temps":[6,7,11,15,19,22,24,24,20,15,10,6]}],
     ["Heidelberg","04333223",3,"A ruined castle above a romantic old town and Germany's oldest university.",null,{"temps":[5,7,12,17,21,24,26,26,21,15,9,5]}],
     ["Rothenburg ob der Tauber","04220123",3,"A walled medieval town of half-timbered houses and cobbled lanes.",null,{"temps":[2,4,9,14,18,22,24,24,19,13,7,3]}]
   ]

@@ -12,7 +12,7 @@
   "language": "German, French, Italian",
   "blurb": "Lakes, glaciers, scenic trains and chocolate.",
   "cities": [
-    ["Zermatt","01352514",4,"Car-free village beneath the Matterhorn.",[1,2,3,7,8,9]],
+    ["Zermatt","01352514",4,"Car-free village beneath the Matterhorn.",[1,2,3,7,8,9],{"temps":[1,2,6,10,14,18,20,20,15,11,5,2]}],
     ["Lucerne","03342224",4,"Covered bridges, lake steamers and mountain railways."],
     ["Interlaken","01252514",4,"Adventure base between two lakes beneath the Jungfrau."],
     ["Geneva","03432143",3,"A lakeside city of fountains and international institutions."],

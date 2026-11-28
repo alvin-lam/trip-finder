@@ -14,7 +14,7 @@
   "cities": [
     ["Luanda","33424132",1,"A palm-lined bay and lively seafood restaurants."],
     ["Kalandula Falls","00150302",1,"One of Africa's largest waterfalls by volume."],
-    ["Namibe Desert","10150402",1,"Where desert dunes meet the Atlantic."],
+    ["Namibe Desert","10150402",1,"Where desert dunes meet the Atlantic.",null,{"temps":[27,28,29,28,26,22,21,21,22,24,25,26]}],
     ["Mbanza Kongo","04010101",1,"The ruined capital of the Kingdom of Kongo, with the remains of an early cathedral.",null,{"temps":[28,29,30,29,28,26,25,25,26,27,28,28]}]
   ]
 }

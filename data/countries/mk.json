@@ -11,5 +11,9 @@
   "currency": "Denar (MKD)",
   "language": "Macedonian, Albanian",
   "blurb": "Lakeside churches and mountain monasteries.",
-  "cities": [["Ohrid","34342224",3,"Byzantine churches above a clear, ancient lake."],["Skopje","03323132",2,"Statues, an Ottoman bazaar and Matka Canyon nearby."],["Mavrovo","01250413",1,"A mountain lake, ski slopes and a half-sunken church."]]
+  "cities": [
+    ["Ohrid","34342224",3,"Byzantine churches above a clear, ancient lake."],
+    ["Skopje","03323132",2,"Statues, an Ottoman bazaar and Matka Canyon nearby."],
+    ["Mavrovo","01250413",1,"A mountain lake, ski slopes and a half-sunken church.",null,{"temps":[2,3,6,11,16,19,22,22,19,13,8,4]}]
+  ]
 }

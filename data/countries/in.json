@@ -14,14 +14,14 @@
   "cities": [
     ["Jaipur","05412252",4,"The Pink City's forts, palaces and bazaars."],
     ["Agra","05311131",4,"Home of the Taj Mahal and Agra Fort."],
-    ["Kerala Backwaters","33451225",3,"Houseboats, palm-lined canals and Ayurveda."],
-    ["Goa","52425324",4,"Beach shacks, Portuguese churches and trance parties."],
+    ["Kerala Backwaters","33451225",3,"Houseboats, palm-lined canals and Ayurveda.",null,{"temps":[33,33,34,34,33,30,29,30,31,31,32,33]}],
+    ["Goa","52425324",4,"Beach shacks, Portuguese churches and trance parties.",null,{"temps":[33,32,33,33,34,31,29,30,30,32,34,33]}],
     ["Varanasi","05311122",3,"Sacred ghats and riverside ceremonies on the Ganges."],
-    ["Hampi","05140312",3,"Boulder-strewn ruins of the Vijayanagara capital."],
+    ["Hampi","05140312",3,"Boulder-strewn ruins of the Vijayanagara capital.",null,{"temps":[32,35,38,39,38,32,31,31,31,31,30,30]}],
     ["Udaipur","05433134",4,"Lakeside palaces in the City of Lakes."],
     ["Rishikesh","03351415",3,"The yoga capital on the Ganges, with rafting."],
-    ["Mumbai","14524152",4,"Bollywood, street food and Victorian architecture."],
-    ["Ladakh (Leh)","03250503",2,"High-desert monasteries and mountain passes.",[6,7,8,9]],
+    ["Mumbai","14524152",4,"Bollywood, street food and Victorian architecture.",null,{"temps":[31,32,33,33,34,33,30,30,31,34,34,33]}],
+    ["Ladakh (Leh)","03250503",2,"High-desert monasteries and mountain passes.",[6,7,8,9],{"temps":[2,4,10,15,20,24,29,28,23,17,11,5]}],
     ["Delhi","05524142",5,"Mughal monuments, bazaars and Old Delhi street food.",[10,11,12,1,2,3]],
     ["Ajanta Caves","05030312",4,"Buddhist cave murals in a horseshoe gorge.",null,{"temps":[30,32,36,39,40,35,30,29,30,33,31,29]}],
     ["Sarnath","05010112",3,"Where Buddha gave his first sermon.",null,{"temps":[22,27,33,39,40,38,34,33,33,32,29,24]}],
@@ -58,8 +58,8 @@
     ["Sundarbans (India)","11050402",3,"Boat safaris through mangroves, the home of the Bengal tiger.",null,{"temps":[28,32,36,39,38,36,33,33,33,32,31,28]}],
     ["Chandigarh Capitol Complex","03100011",2,"Le Corbusier's planned city and government buildings.",null,{"temps":[18,23,28,35,39,38,34,33,33,32,27,22]}],
     ["Western Ghats","02250413",3,"Tea hills, rainforests and waterfalls along India's west coast.",null,{"temps":[22,24,25,26,26,24,22,23,23,23,22,22]}],
-    ["Kolkata","05513142",3,"Colonial architecture,  the Victoria Memorial and Bengal's great Durga Puja festival.",[11,12,1,2],{"temps":[26,29,34,36,36,34,32,32,32,32,30,27]}],
-    ["Bengaluru","03425142",2,"India's tech capital,  with craft breweries,  gardens and a mild climate.",[10,11,12,1,2],{"temps":[28,31,33,34,33,29,28,28,28,28,27,27]}],
-    ["Amritsar","05501133",3,"The Golden Temple,  its free community kitchen and the Wagah border ceremony.",[10,11,12,1,2,3],{"temps":[19,22,27,34,39,39,35,34,34,32,26,21]}]
+    ["Kolkata","05513142",3,"Colonial architecture, the Victoria Memorial and Bengal's great Durga Puja festival.",[11,12,1,2],{"temps":[26,29,34,36,36,34,32,32,32,32,30,27]}],
+    ["Bengaluru","03425142",2,"India's tech capital, with craft breweries, gardens and a mild climate.",[10,11,12,1,2],{"temps":[28,31,33,34,33,29,28,28,28,28,27,27]}],
+    ["Amritsar","05501133",3,"The Golden Temple, its free community kitchen and the Wagah border ceremony.",[10,11,12,1,2,3],{"temps":[19,22,27,34,39,39,35,34,34,32,26,21]}]
   ]
 }

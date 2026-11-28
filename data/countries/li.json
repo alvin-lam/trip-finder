@@ -18,7 +18,7 @@
   "blurb": "An Alpine principality of castles, vineyards and mountain trails.",
   "cities": [
     ["Vaduz","03331123",2,"Castle-topped capital with art museums and vineyards."],
-    ["Malbun","00152403",1,"Small Alpine resort for skiing and summer hikes.",[1,2,3,7,8,9]],
+    ["Malbun","00152403",1,"Small Alpine resort for skiing and summer hikes.",[1,2,3,7,8,9],{"temps":[-3,-2,2,8,12,17,18,18,14,10,3,-1]}],
     ["Liechtenstein Trail","02240314",1,"A 75 km trail that crosses the whole country.",[5,6,7,8,9,10]]
   ]
 }

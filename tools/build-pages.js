@@ -68,7 +68,7 @@ const crumbs = (items) => ({
 
 function explorePage() {
   const n = index.cities.length;
-  const description = `Browse ${fmt(n)} places in ${index.countries.length} countries and territories. Filter by region, month, interest, cost, festivals, Pride events, Christmas markets, national parks, historic sites and World Heritage.`;
+  const description = `Browse ${fmt(n)} places in ${index.countries.length} countries and territories. Filter by month, interest, cost, festivals, Pride, Christmas markets, national parks and World Heritage.`;
   const regions = index.regions
     .map((r) => `        <li>${esc(r.name)}: ${r.countries.length} destinations</li>`)
     .join("\n");
@@ -93,9 +93,14 @@ ${regions}
   });
 }
 
+// "Heard and McDonald Islands" in "Heard Island and McDonald Islands" is the same name (as in docs/js/app.js).
+const searchKey = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim().toLowerCase();
+const nameKey = (s) => searchKey(s).replace(/\b(the|island|islands|and|&)\b/g, "").replace(/[^a-z0-9]/g, "");
+const sameName = (a, b) => nameKey(a) === nameKey(b);
+
 function placePage(city) {
   const c = city.country;
-  const label = city.name === c.name ? city.name : `${city.name}, ${c.name}`;
+  const label = sameName(city.name, c.name) ? city.name : `${city.name}, ${c.name}`;
   const url = `${SITE}place/${city.id}/`;
   const temps = city.temps || c.temps;
   const best = E.formatMonths(city.best);
@@ -104,7 +109,7 @@ function placePage(city) {
   const plain = `${city.blurb} Best time to visit: ${best}.`;
   const withSight = near1 && `${city.blurb} Near ${near1}. Best time to visit: ${best}.`;
   const description = withSight && withSight.length <= 160 ? withSight : plain;
-  const where = [city.area, city.name === c.name ? "" : c.name, city.region.name].filter(Boolean).join(" · ");
+  const where = [city.area, sameName(city.name, c.name) ? "" : c.name, city.region.name].filter(Boolean).join(" · ");
   const facts = [
     `<li>Where: ${esc(where)}</li>`,
     `<li>Best time to visit: ${esc(best)}</li>`,

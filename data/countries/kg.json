@@ -12,9 +12,9 @@
   "language": "Kyrgyz, Russian",
   "blurb": "Yurt camps, horse treks and alpine lakes.",
   "cities": [
-    ["Song-Kul Lake","01250503",1,"Yurt stays on a high mountain pasture."],
+    ["Song-Kul Lake","01250503",1,"Yurt stays on a high mountain pasture.",null,{"temps":[-10,-7,-1,6,11,15,18,18,14,5,-2,-8]}],
     ["Karakol","02341413",1,"A trekking base near Issyk-Kul lake."],
-    ["Bishkek","02323231",1,"A leafy capital and base for mountain trips."],
+    ["Bishkek","02323231",1,"A leafy capital and base for mountain trips.",null,{"temps":[3,5,12,19,24,30,32,31,26,19,10,5]}],
     ["Issyk-Kul","31241315",1,"A vast alpine lake with sandy beaches.",[6,7,8]],
     ["Burana Tower (Silk Road)","04030211",2,"A medieval minaret in the Chüy Valley.",null,{"temps":[3,5,12,19,24,30,32,31,26,18,10,5]}],
     ["Sulaiman-Too","04120312",2,"A sacred five-peaked mountain rising above the bazaar city of Osh.",null,{"temps":[3,4,12,18,23,28,31,30,26,18,10,4]}],

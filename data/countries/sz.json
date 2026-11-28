@@ -11,5 +11,8 @@
   "currency": "Lilangeni (SZL)",
   "language": "Siswati, English",
   "blurb": "A small kingdom of game reserves and cultural festivals.",
-  "cities": [["Hlane & Mlilwane","02250413",1,"Easy game drives and mountain-bike safaris."],["Ezulwini Valley","03332223",1,"Craft markets, cultural villages and royal heritage."]]
+  "cities": [
+    ["Hlane & Mlilwane","02250413",1,"Easy game drives and mountain-bike safaris.",null,{"temps":[32,32,31,29,27,25,25,27,30,31,31,32]}],
+    ["Ezulwini Valley","03332223",1,"Craft markets, cultural villages and royal heritage."]
+  ]
 }

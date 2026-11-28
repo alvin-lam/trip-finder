@@ -13,9 +13,9 @@
   "blurb": "Pyramids, Nile cruises and Red Sea diving.",
   "cities": [
     ["Cairo","05413141",4,"The Pyramids of Giza and the Egyptian Museum."],
-    ["Luxor","05321223",4,"Valley of the Kings and Karnak temple."],
-    ["Dahab","51342514",2,"Laid-back Red Sea town famous for diving."],
-    ["Aswan","04331224",3,"Nile felucca rides, Philae temple and trips to Abu Simbel."],
+    ["Luxor","05321223",4,"Valley of the Kings and Karnak temple.",null,{"temps":[23,25,30,35,39,41,41,41,39,36,29,24]}],
+    ["Dahab","51342514",2,"Laid-back Red Sea town famous for diving.",null,{"temps":[22,22,25,30,34,37,38,38,35,32,27,23]}],
+    ["Aswan","04331224",3,"Nile felucca rides, Philae temple and trips to Abu Simbel.",null,{"temps":[23,26,30,36,40,42,42,42,40,36,30,25]}],
     ["Hurghada","51233414",3,"Red Sea resorts and easy diving."],
     ["Alexandria","34421132",2,"A Mediterranean corniche and a modern great library."],
     ["Siwa Oasis","02240214",1,"Salt lakes and palm groves in the Western Desert."],
@@ -23,6 +23,6 @@
     ["Pyramids of Giza","05010322",5,"The Great Pyramid, the Sphinx and the pyramid fields stretching to Dahshur.",null,{"temps":[19,21,24,28,32,35,34,34,32,30,25,21]}],
     ["Mount Sinai & St. Catherine's","04140412",3,"An ancient desert monastery below the peak where Moses received the Commandments.",null,{"temps":[14,15,18,24,28,31,32,32,30,26,20,16]}],
     ["Wadi Al-Hitan","02040402",1,"Fossil whale skeletons lying in the desert sand.",null,{"temps":[21,22,26,31,35,38,39,39,36,33,27,22]}],
-    ["Sharm El Sheikh","51344435",4,"Red Sea reefs,  Ras Mohammed National Park and day trips to Mount Sinai.",[3,4,5,10,11],{"temps":[22,23,26,30,34,36,37,37,35,31,27,23]}]
+    ["Sharm El Sheikh","51344435",4,"Red Sea reefs, Ras Mohammed National Park and day trips to Mount Sinai.",[3,4,5,10,11],{"temps":[22,23,26,30,34,36,37,37,35,31,27,23]}]
   ]
 }
