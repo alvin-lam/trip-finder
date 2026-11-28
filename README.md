@@ -122,8 +122,6 @@ data/                         The dataset as JSON files (see data/README.md)
 tools/build-data.js           Builds docs/js/data.js from data/
 tools/build-pages.js          Builds the Explore and place pages and the sitemap
 tools/data-files.js           Where each part of the dataset lives in data/
-tools/qc.js                   QC & Bug Hunter: data, build, engine, security, SEO, PWA and browser checks
-.claude/agents/qc-bug-hunter.md  Claude Code agent that runs tools/qc.js and hunts for bugs (/qc)
 tools/fill_coords.py          Adds Wikipedia coordinates to places that lack them
 tools/coords_tried.json       Wikipedia titles fill_coords.py has already checked
 tools/unesco/                 UNESCO Global Geopark and Biosphere Reserve lists (JSON and CSV) and their scripts
@@ -167,28 +165,6 @@ node tools/build-pages.js --check
 
 - `docs/index.html` carries the home page's description, canonical address, Open Graph and X preview tags (with `docs/img/og-image.png`, 1200 × 630), and structured data for the site, the app and All Trips Considered.
 - `docs/robots.txt` allows crawling and points to the sitemap.
-
-### Quality checks and bug hunting
-
-`tools/qc.js` is the QC & Bug Hunter. It changes no files and exits with an error when any check fails:
-
-```bash
-npm run qc
-```
-
-`npm run qc:full` also drives the app in headless Chromium (Playwright). It covers:
-
-- **Build:** `docs/js/data.js`, the Explore and place pages and the sitemap match `data/`.
-- **Data:** valid costs, months, temperatures, coordinates and typical lows, and no clashing place ids.
-- **Text:** no double spaces, stray HTML or em dashes in visitor-facing text.
-- **Docs:** the counts and file paths in this README still match the data.
-- **Engine:** 400 random quizzes (seeded, so `--seed=<n>` reproduces one) must give scores from 0 to 100, full itineraries and share links that round-trip. The color schemes must work on every date.
-- **Security, SEO and PWA:** one CSP everywhere, no inline handlers, cleaned input, page titles and structured data, and a cached file list that exists. It also checks that `CACHE` was bumped since `prod`.
-- **Browser:** the quiz, Surprise me, shared links, place addresses, Back, Explore search, the Shortlist, hostile links and corrupt saved data. It also checks phone width for sideways scrolling and watches the console for CSP violations.
-
-`--only=data,engine` runs some sections, and `--json` prints the findings as JSON.
-
-In Claude Code, the `qc-bug-hunter` agent (`.claude/agents/qc-bug-hunter.md`) runs these checks. It then reads the code and probes the app for bugs the script cannot judge, and returns a ranked report with evidence. Run it with `/qc`, or `/qc engine` to narrow the focus. Add `fix` to have it fix what it finds.
 
 ### Adding a destination or place
 
