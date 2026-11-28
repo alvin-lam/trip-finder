@@ -58,8 +58,8 @@
     ["Sundarbans (India)","11050402",3,"Boat safaris through mangroves, the home of the Bengal tiger.",null,{"temps":[28,32,36,39,38,36,33,33,33,32,31,28]}],
     ["Chandigarh Capitol Complex","03100011",2,"Le Corbusier's planned city and government buildings.",null,{"temps":[18,23,28,35,39,38,34,33,33,32,27,22]}],
     ["Western Ghats","02250413",3,"Tea hills, rainforests and waterfalls along India's west coast.",null,{"temps":[22,24,25,26,26,24,22,23,23,23,22,22]}],
-    ["Kolkata","05513142",3,"Colonial architecture,  the Victoria Memorial and Bengal's great Durga Puja festival.",[11,12,1,2],{"temps":[26,29,34,36,36,34,32,32,32,32,30,27]}],
-    ["Bengaluru","03425142",2,"India's tech capital,  with craft breweries,  gardens and a mild climate.",[10,11,12,1,2],{"temps":[28,31,33,34,33,29,28,28,28,28,27,27]}],
-    ["Amritsar","05501133",3,"The Golden Temple,  its free community kitchen and the Wagah border ceremony.",[10,11,12,1,2,3],{"temps":[19,22,27,34,39,39,35,34,34,32,26,21]}]
+    ["Kolkata","05513142",3,"Colonial architecture, the Victoria Memorial and Bengal's great Durga Puja festival.",[11,12,1,2],{"temps":[26,29,34,36,36,34,32,32,32,32,30,27]}],
+    ["Bengaluru","03425142",2,"India's tech capital, with craft breweries, gardens and a mild climate.",[10,11,12,1,2],{"temps":[28,31,33,34,33,29,28,28,28,28,27,27]}],
+    ["Amritsar","05501133",3,"The Golden Temple, its free community kitchen and the Wagah border ceremony.",[10,11,12,1,2,3],{"temps":[19,22,27,34,39,39,35,34,34,32,26,21]}]
   ]
 }

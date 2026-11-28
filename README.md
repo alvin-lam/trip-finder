@@ -9,39 +9,27 @@ Live site: https://tripfinder.alltripsconsidered.com/
 ## Features
 
 - **Five-step quiz.** Interests (like or must-have), travel month, trip length, daily budget, ideal weather, travel companions, crowd preference, home region and excluded regions.
-- **Ranked results.** The app ranks 13 world regions and 249 destinations: every sovereign country (187 countries plus 10 microstates such as Monaco and Singapore, 197 in all) and 52 territories. Each match comes with plain-language reasons and warnings, such as "July is off season" or "Pricier than your budget".
+- **Ranked results.** The app ranks 13 world regions and 249 destinations: every sovereign country (187 countries plus 10 microstates such as Monaco and Singapore, 197 in all) and 52 territories. Each match comes with plain-language reasons and warnings, such as "July is off season" or "Pricier than your budget". Tapping a summary chip edits that answer, and Cancel puts the earlier answers back.
 - **Territories, microstates and micronations.** The territories cover every inhabited overseas territory of the United States, United Kingdom, France, the Netherlands, Denmark, Norway, New Zealand, Australia and China. They also include the British Crown Dependencies (Jersey, Guernsey and the Isle of Man) and remote uninhabited islands such as Bouvet Island and Heard Island. Each territory stays in its region, and choosing Territories in the Location type filter groups them under the country they belong to. Four visitable micronations, such as Užupis, appear as places in their host countries with a MICRONATION tag. Choosing Micronations in the Location type filter lists just them under their host countries. The small microstates name their best day-trip base and link from their neighbour.
-- **Places.** Together the destinations cover 2,566 cities and places, including a place for every UNESCO World Heritage Site. A site shared by several countries keeps one place, which Explore also lists under the other countries (the `LINKED` map, `data/places/linked.json`). Every country has at least two World Heritage places except single-site Vatican City.
-- **Explore mode.** Browse every destination with search and filters for region, month, interest, location type and cost.
+- **Places.** Together the destinations cover 2,566 cities and places, including a place for every UNESCO World Heritage Site. A site shared by several countries keeps one place, which Explore also lists under the other countries (the `LINKED` map, `data/places/linked.json`).
+- **Explore mode.** Browse every destination with search and filters for region, month, interest, location type and cost. Each country card keeps its places behind a Show places button, but a search opens the cards it narrows, so the matching places show at once.
 - **Explore filters.** Explore can also filter UNESCO sites (World Heritage, Global Geoparks or Biosphere Reserves). It can show only national parks, historic sites, family-friendly places, festivals, Christmas markets or Pride events. It can filter by population (uninhabited, no permanent residents, or expedition only), by LGBTQ+ climate (welcoming, mixed or caution) and by travel advisory (no advisory, reconsider travel or do not travel).
-- **Accent-free search.** Searching ignores accents, so "galapagos" finds Galápagos and "zurich" finds Zürich.
+- **Accent-free search.** Searching ignores accents, so "galapagos" finds Galápagos and "reykjavik" finds Reykjavík. Words in descriptions match from their start, so "holi" finds Holi but not "Catholic".
 - **Search by code or other name.** Explore search finds a destination by its two-letter code (FR, DE, GB) or a common short or alternative name (US, USA, UK, UAE, Holland, Burma, Ivory Coast). An exact code or name lists just that destination. Other names live in `data/places/country-aliases.json`.
 - **Country facts.** Every destination lists its capital and famous national parks and trails. Places that are the capital carry a CAPITAL tag, and Explore search covers these facts.
 - **US states and Canadian provinces.** The US has a place in all 50 states plus D.C., and Canada in all 10 provinces and 3 territories. Each of these places shows its state or province and uses its own monthly temperatures. Places in the US, Puerto Rico, Canada and Mexico take their average daily highs from the climate table in their Wikipedia article (mostly 1991–2020 normals), or from the nearest town with one.
-- **Grouping by subdivision.** Explore groups the US and Canada by state or province, and the United Kingdom by its four countries (England, Scotland, Wales and Northern Ireland). It also groups places by subdivision in:
-  - Germany and Switzerland (states and cantons), and Austria (states)
-  - France, Italy and Iceland (regions)
-  - Spain (autonomous communities)
-  - the Netherlands, China, South Korea and South Africa (provinces)
-  - Japan (prefectures)
-  - Hong Kong (Hong Kong Island, Kowloon and the New Territories)
-  - India (states and union territories), Brazil (states) and Australia (states and territories)
-  - Thailand (provinces), Taiwan (counties and cities) and Singapore (planning regions)
-  - Macau (Macau Peninsula, Taipa, Cotai and Coloane)
-  - Russia (federal districts)
-  - Iran and Argentina (provinces)
-  - Turkey (its seven geographic regions)
-  - Greece, Portugal, Peru and Czechia (regions)
-  - Poland (voivodeships) and Sweden (counties)
-  - Belgium (Flanders, Wallonia and Brussels)
-  - Indonesia, Bulgaria and Sri Lanka (provinces)
-  - Morocco, Ethiopia, Denmark and Finland (regions)
+- **Grouping by subdivision.** Explore groups the US and Canada by state or province, and the United Kingdom by its four countries (England, Scotland, Wales and Northern Ireland). It also groups 94 other destinations by their own subdivisions, named in `data/places/area-terms.json`. Examples include:
+  - Germany (states), Switzerland (cantons) and Spain (autonomous communities)
+  - Mexico and Brazil (states), and Argentina and Iran (provinces)
+  - Japan (prefectures), South Korea and China (provinces), and Taiwan (counties and cities)
+  - India (states and union territories) and Australia (states and territories)
+  - Hong Kong (Hong Kong Island, Kowloon and the New Territories) and Macau (Macau Peninsula, Taipa, Cotai and Coloane)
   - Vietnam (North, Central and South) and the Philippines (Luzon, Visayas and Mindanao)
-  - Kenya (counties) and Colombia (departments)
+  - New Zealand (its islands), Ireland (provinces), Jamaica (parishes) and French Polynesia (archipelagos)
 
   A country is grouped only when it has more than five places in the results. Smaller lists show the subdivision in each row.
 - **Stay limits.** Tiny places get a capped stay, such as one day for Vatican City, and the app suggests where to spend the rest of the trip.
-- **Suggested route.** Each country card splits your trip days across its best stops. For trips of three weeks or more, it also suggests a neighbouring country to pair with.
+- **Suggested route.** Each country card splits your trip days across its best stops. Places closed to tourists (UNINHABITED) stay in the ranked list but never become a stop. For trips of three weeks or more, or when a destination cannot fill the whole trip, it also suggests a neighbouring country to pair with.
 - **Place details.** A details view for each city shows interest ratings, a 12-month temperature chart with the best months marked, typical cost, currency and language.
 - **Festivals and Pride.** Major festivals and holidays, 125 Pride events and 48 Christmas markets are attached to their places in the `FESTIVALS` map, each with its usual months and a short note. Places with one carry a FESTIVAL tag, and their details list each event (Pride events are labelled PRIDE). Searching works like this:
   - A festival's name finds it, and "festivals" or "holidays" lists them all.
@@ -60,7 +48,7 @@ Live site: https://tripfinder.alltripsconsidered.com/
 
 ### Web addresses
 
-On the live site, Explore lives at `/explore/` and each place at `/place/<id>/`, for example `/place/jp-kyoto/`. Opening a place in the app moves the address there, closing it moves it back, and Back and Forward work as expected. The Shortlist (`/#shortlist`) and quiz results (`/#r-…`) stay on the home page, since they belong to one visitor. Copies of the app that are not on the live domain or localhost, such as a `file://` page or an embedded preview, keep to `#explore`-style links.
+On the live site, Explore lives at `/explore/` and each place at `/place/<id>/`, for example `/place/jp-kyoto/`. Opening a place in the app moves the address there, and closing it returns to the address it was opened from, so one Back then leaves the view. Back and Forward also move between places. The Shortlist (`/#shortlist`) and quiz results (`/#r-…`) stay on the home page, since they belong to one visitor. Copies of the app that are not on the live domain or localhost, such as a `file://` page or an embedded preview, keep to `#explore`-style links.
 
 Each address also has its own static page with a title, description, canonical address, link-preview tags, schema.org structured data (`TouristDestination` and a breadcrumb trail) and a no-JavaScript summary. The summary gives the best months, typical highs, cost, World Heritage, national parks, festivals and nearby places. Each view has one main heading and its own page title, and an open place titles the tab with its name.
 
@@ -83,8 +71,8 @@ The prompt appears only after the visitor sees results or spends 25 seconds on t
 | --- | --- | --- |
 | Interest fit | 40% | Uses your liked and must-have interests, nudged by who you travel with |
 | Season | 15% | Best months score highest. Flexible dates reduce this weight. |
-| Budget | 15% | Penalises countries above your daily budget |
-| Distance | 15% | Only applies when you give a home region and a distance preference |
+| Budget | 15% | Penalises countries above your daily budget. Luxury instead gives pricier countries a small lift. |
+| Distance | 15% | Only applies when you give a home region and a distance preference. Measured to each place, so New York and San Francisco differ. |
 | Climate | 12% | Average daily high in your month against your preferred range |
 | Crowds | 8% | Iconic versus off the beaten path |
 
@@ -219,7 +207,7 @@ The season and holiday schemes live in `SEASON_SCHEMES` in `docs/js/engine.js`. 
 
 ### Releasing an update
 
-When any cached file changes, bump `CACHE` in `docs/sw.js` (for example from `wtt-v124` to `wtt-v125`) and add any new files to its `SHELL` list, so returning visitors get the new version. Service workers need HTTPS, which GitHub Pages provides.
+When any cached file changes, bump `CACHE` in `docs/sw.js` (for example from `wtt-v127` to `wtt-v128`) and add any new files to its `SHELL` list, so returning visitors get the new version. Service workers need HTTPS, which GitHub Pages provides.
 
 ## Security
 

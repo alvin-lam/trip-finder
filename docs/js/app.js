@@ -215,7 +215,7 @@
       if (Array.isArray(data.saved)) state.saved = new Set(data.saved.filter((k) => typeof k === "string" && lookupSaved(k)));
       if (data.theme === "light" || data.theme === "dark") document.documentElement.dataset.theme = data.theme;
       // "seasonal" (the default), "classic" or a chosen scheme such as "winter".
-      if (data.colors === "classic" || (data.colors && E.SEASON_SCHEMES[data.colors])) state.colors = data.colors;
+      if (data.colors === "classic" || (typeof data.colors === "string" && Object.prototype.hasOwnProperty.call(E.SEASON_SCHEMES, data.colors))) state.colors = data.colors;
       if (data.decorations === false) state.decorations = false;
     } catch (_) {
       /* storage unavailable: start fresh */
@@ -302,7 +302,7 @@
           lowF: lo === null ? null : E.cToF(lo),
           dailyCostUSD: E.COST_DAILY[city.country.cost],
           greatFor: topStrengths(city).join(", ") || "All-rounder",
-          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "World Heritage", city.geopark && "Global Geopark", city.biosphere && "Biosphere Reserve", city.remote && REMOTE_LABELS[city.remote][1], city.nationalParks.length && "National park", city.family && "Family friendly"].filter(Boolean).join(", "),
+          tags: [city.isCapital && "Capital", city.micronation && "Micronation", city.unesco && "World Heritage", city.geopark && "Global Geopark", city.biosphere && "Biosphere Reserve", city.remote && REMOTE_LABELS[city.remote][1], city.nationalParks.length && "National park", city.historicSites.length && "Historic site", city.festivals.length && "Festival", city.family && "Family friendly"].filter(Boolean).join(", "),
         };
       })
       .sort((a, b) => (b.match ?? 0) - (a.match ?? 0));
@@ -527,8 +527,8 @@
             .map((i) => {
               const lvl = state.prefs.interests[i.id] || 0;
               return `<button class="choice" data-action="interest" data-id="${i.id}" data-level="${lvl}" aria-pressed="${lvl > 0}">
-                <span class="choice__icon" aria-hidden="true">${i.icon}</span>
-                <span class="choice__title">${i.label}</span>
+                <span class="choice__icon" aria-hidden="true">${esc(i.icon)}</span>
+                <span class="choice__title">${esc(i.label)}</span>
                 ${lvl ? `<span class="choice__level">${lvl === 2 ? "Must" : "Like"}</span>` : ""}
               </button>`;
             })
@@ -608,7 +608,7 @@
           <label class="field__label" for="home">Home region</label>
           <select class="select" id="home" data-pref="home">
             <option value="">Prefer not to say</option>
-            ${index.homes.map((h) => `<option value="${h.id}" ${state.prefs.home === h.id ? "selected" : ""}>${esc(h.label)}</option>`).join("")}
+            ${index.homes.map((h) => `<option value="${esc(h.id)}" ${state.prefs.home === h.id ? "selected" : ""}>${esc(h.label)}</option>`).join("")}
           </select>
         </div>
         <div class="field" ${state.prefs.home ? "" : "hidden"}>
@@ -659,7 +659,7 @@
         </div>
         <div class="wizard__head">
           <p class="eyebrow">Step ${state.step + 1} of ${STEPS.length}</p>
-          <h2 id="step-title" tabindex="-1">${s.title}</h2>
+          <h1 id="step-title" class="h1--sm" tabindex="-1">${s.title}</h1>
           <p class="muted">${s.sub}</p>
         </div>
         ${s.body()}
@@ -714,7 +714,7 @@
     if (!state.results) runRecommend();
     const r = state.results;
     if (!r.countries.length) {
-      return `<div class="empty"><div class="empty__icon">🗺️</div><p>Every region is excluded. Loosen your filters to see matches.</p><button class="btn btn--primary" data-action="goto" data-step="4">Edit regions</button></div>`;
+      return `<div class="empty"><div class="empty__icon">🗺️</div><h1 class="h1--sm">No matches</h1><p>Every region is excluded. Loosen your filters to see matches.</p><button class="btn btn--primary" data-action="goto" data-step="4">Edit regions</button></div>`;
     }
     const regions = r.regions.filter((x) => x.countries.length);
     const focus = state.focusRegion && regions.find((x) => x.region.id === state.focusRegion);
@@ -736,7 +736,7 @@
       </div>
       <div class="share-box" id="share-box" hidden>
         <label for="share-url">Link to these results</label>
-        <input class="input" id="share-url" readonly onclick="this.select()" />
+        <input class="input" id="share-url" readonly />
       </div>
 
       <section class="section" aria-labelledby="h-regions">
@@ -821,8 +821,9 @@
         <div class="facts">${costFact(c.cost)}<span class="fact">💱 ${esc(c.currency)}</span><span class="fact">🗣️ ${esc(c.language)}</span>${unescoFact(c)}${familyFact(c)}${lgbtqFact(c)}${advisoryFact(c)}</div>
         ${keyFacts(c)}
         <div class="itinerary">
-          <div class="itinerary__title">${cr.spareDays > 0 ? `Suggested ${days}-day stop` : `Suggested ${days}-day route`}</div>
-          <div class="itinerary__bar">
+          <div class="itinerary__title">${!days ? "No stops open to visitors" : cr.spareDays > 0 ? `Suggested ${days}-day stop` : `Suggested ${days}-day route`}</div>
+          ${!days ? `<p class="muted u-small u-m0">Its places are closed to tourists.</p>` : ""}
+          <div class="itinerary__bar"${days ? "" : " hidden"}>
             ${cr.itinerary
               .map(
                 (s) =>
@@ -841,7 +842,9 @@
           ${
             cr.pairWith
               ? `<div class="itinerary__pair">${
-                  cr.spareDays > 0
+                  !days
+                    ? `Spend your ${cr.spareDays} days in`
+                    : cr.spareDays > 0
                     ? `Spend the other ${cr.spareDays} ${cr.spareDays === 1 ? "day" : "days"} in`
                     : "Got extra time? Pair it with"
                 } ${cr.pairWith.flag} <a href="#" data-action="open-country" data-id="${cr.pairWith.id}">${esc(cr.pairWith.name)}</a>.</div>`
@@ -935,7 +938,7 @@
     const f = state.explore;
     const q = f.q.trim().toLowerCase();
     const interestQ = index.interests.find((i) => q && i.label.toLowerCase().includes(q));
-    let total = 0;
+    const counted = new Set();
     const kindTotals = {};
     // A search that exactly matches a destination's code or another name for it (US,
     // UK, UAE, FR) lists just those destinations.
@@ -961,7 +964,7 @@
               searchKey(c.name).includes(qn) ||
               (qn.length >= 4 && c.aliases.some((a) => searchKey(a).includes(qn))) ||
               r.name.toLowerCase().includes(q) ||
-              searchKey(c.blurb).includes(qn) ||
+              wordHit(c.blurb, qn) ||
               (c.kind !== "country" && (c.status.toLowerCase().includes(q) || c.kind.includes(q)));
             const matches = q && f.unesco !== "wh" ? factMatches(c, q) : [];
             const fests = festivalMatches(c, q, f.month);
@@ -985,7 +988,7 @@
               return (
                 // Accents are ignored: "galapagos" finds Galápagos.
                 searchKey(city.name).includes(qn) ||
-                searchKey(city.blurb).includes(qn) ||
+                wordHit(city.blurb, qn) ||
                 (city.area && searchKey(city.area).includes(qn)) ||
                 city.metros.some((m) => m.name.toLowerCase().includes(q)) ||
                 matches.some((m) => m.place === city) ||
@@ -1007,7 +1010,7 @@
             return { c, cities, matches: kept.filter((m) => !m.untagged) };
           })
           .filter((x) => x.cities.length || x.matches.length);
-        total += countries.reduce((a, x) => a + x.cities.length, 0);
+        for (const x of countries) for (const city of x.cities) counted.add(city.id);
         for (const x of countries) for (const m of x.matches) kindTotals[m.kind] = (kindTotals[m.kind] || 0) + 1;
         return { r, countries };
       })
@@ -1017,6 +1020,7 @@
     if (!blocks.length && !unlinked.length)
       return `<div class="empty"><div class="empty__icon">🔍</div><p>No places match those filters.</p><button class="btn btn--ghost" data-action="clear-filters">Clear filters</button></div>`;
 
+    const total = counted.size;
     const head = `<p class="muted u-mt16">${total} place${total === 1 ? "" : "s"} found${matchSummary(kindTotals)}</p>${unlinkedCard(unlinked)}`;
     if (f.kind === "territory") {
       // Territories are listed under the country they belong to.
@@ -1034,7 +1038,7 @@
           .map(
             ([sov, list]) => `
         <section class="region-block">
-          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${sov.flag}</span><h3 class="u-m0">${esc(sov.name)}</h3></div>
+          <div class="region-block__head"><span class="region-block__icon" aria-hidden="true">${esc(sov.flag)}</span><h3 class="u-m0">${esc(sov.name)}</h3></div>
           <p class="muted">${list.length} ${list.length === 1 ? "territory" : "territories"}</p>
           ${regionCards(`sov-${sov.id}`, list)}
         </section>`
@@ -1083,7 +1087,7 @@
         : "";
     };
     const item = (m) =>
-      `<li><span class="unlinked__name">${highlight(m.label, q)}</span> <span class="search-matches__detail">${m.c.flag} ${esc(m.c.name)} · ${esc(m.detail.replace(/ · no place in the app( nearby| links to it yet)$/, ""))}</span>${nearest(m)}</li>`;
+      `<li><span class="unlinked__name">${highlight(m.label, q)}</span> <span class="search-matches__detail">${esc(m.c.flag)} ${esc(m.c.name)} · ${esc(m.detail.replace(/ · no place in the app( nearby| links to it yet)$/, ""))}</span>${nearest(m)}</li>`;
     const first = list.slice(0, MATCHES_SHOWN).map(item).join("");
     const rest = list.slice(MATCHES_SHOWN);
     return `<article class="card unlinked" aria-label="Sites with no place nearby">
@@ -1257,6 +1261,16 @@
 
   // Search text without accents, dots or case: "U.S." -> "us", "España" -> "espana".
   const searchKey = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim().toLowerCase();
+  // True when the search appears at the start of a word, so "holi" finds Holi but not "Catholic".
+  const wordHit = (text, qn) => {
+    const t = searchKey(text);
+    let i = t.indexOf(qn);
+    while (i !== -1) {
+      if (i === 0 || !/[a-z0-9]/.test(t[i - 1])) return true;
+      i = t.indexOf(qn, i + 1);
+    }
+    return false;
+  };
 
   // Each Explore region shows its first few country cards, then more per click:
   // 6 then 3 more on desktop, 3 then 3 more on phones.
@@ -1277,8 +1291,8 @@
   }
 
   // Explore shows each country card with its places collapsed behind this toggle.
-  function placesToggle(c, n, open) {
-    return `<button class="places-toggle" data-action="toggle-places" data-id="${c.id}" aria-expanded="${open}">${placesLabel(n, open)}</button>`;
+  function placesToggle(c, n, open, auto = false) {
+    return `<button class="places-toggle" data-action="toggle-places" data-id="${c.id}" data-auto="${auto}" aria-expanded="${open}">${placesLabel(n, open)}</button>`;
   }
   const placesLabel = (n, open) => `${open ? "Hide" : "Show"} ${n} ${n === 1 ? "place" : "places"} <span aria-hidden="true">${open ? "▴" : "▾"}</span>`;
 
@@ -1328,7 +1342,9 @@
       const w = (g) => (g === SHARED ? 2 : g === "Other places" ? 1 : 0);
       return w(a) - w(b) || rank(a) - rank(b) || a.localeCompare(b);
     };
-    const open = !collapsible || state.exploreOpen.has(c.id);
+    // A search that keeps only some of a country's places shows them without another click.
+    const auto = !!searchKey(state.explore.q || "") && cities.length < c.cities.length + c.linked.length;
+    const open = !collapsible || state.exploreOpen.has(c.id) !== auto;
     let list;
     if (byArea) {
       const groups = new Map();
@@ -1363,7 +1379,7 @@
         ${relationsLine(c)}
         ${matchBlock(matches)}
         ${keyFacts(c)}
-        ${cities.length ? (collapsible ? `${placesToggle(c, cities.length, open)}<div class="places"${open ? "" : " hidden"}>${list}</div>` : list) : ""}
+        ${cities.length ? (collapsible ? `${placesToggle(c, cities.length, open, auto)}<div class="places"${open ? "" : " hidden"}>${list}</div>` : list) : ""}
       </article>`;
   }
 
@@ -1469,7 +1485,7 @@
         <span class="card__flag" aria-hidden="true">${city.country.flag}</span>
         <div class="u-grow">
           <h2 id="detail-title" class="u-m0">${esc(city.name)}</h2>
-          <div class="card__meta">${city.area ? `${esc(city.area)} · ` : ""}${city.name === city.country.name ? "" : `${esc(city.country.name)} · `}${esc(city.region.name)}${city.country.kind === "country" ? "" : `<br />${kindTag(city.country)}${esc(city.country.status)}`}</div>
+          <div class="card__meta">${city.area ? `${esc(city.area)} · ` : ""}${sameAsCountry(city) ? "" : `${esc(city.country.name)} · `}${esc(city.region.name)}${city.country.kind === "country" ? "" : `<br />${kindTag(city.country)}${esc(city.country.status)}`}</div>
         </div>
         ${res ? ring(res.score, "ring--lg") : ""}
       </div>
@@ -1579,8 +1595,17 @@
     }
     $("#detail-body").scrollTop = 0;
     dlg.scrollTop = 0;
-    if (PATHS && location.pathname !== `/place/${city.id}/`) history.pushState({ place: city.id }, "", `/place/${city.id}/`);
-    document.title = `${city.name === city.country.name ? city.name : `${city.name}, ${city.country.name}`} | Trip Finder`;
+    if (PATHS && location.pathname !== `/place/${city.id}/`) {
+      const depth = ((history.state && history.state.depth) || 0) + 1;
+      history.pushState({ place: city.id, depth }, "", `/place/${city.id}/`);
+    }
+    document.title = `${sameAsCountry(city) ? city.name : `${city.name}, ${city.country.name}`} | Trip Finder`;
+  }
+
+  // "Heard and McDonald Islands" in "Heard Island and McDonald Islands" is the same name.
+  function sameAsCountry(city) {
+    const k = (s) => searchKey(s).replace(/\b(the|island|islands|and|&)\b/g, "").replace(/[^a-z0-9]/g, "");
+    return k(city.name) === k(city.country.name);
   }
 
   function closeDetail() {
@@ -1655,8 +1680,9 @@
     "toggle-places": (el) => {
       const card = el.closest(".card");
       const id = el.dataset.id;
-      const open = !state.exploreOpen.has(id);
-      if (open) state.exploreOpen.add(id);
+      // Cards a search opened start open, so the stored choice is the opposite of the default.
+      const open = el.getAttribute("aria-expanded") !== "true";
+      if (open !== (el.dataset.auto === "true")) state.exploreOpen.add(id);
       else state.exploreOpen.delete(id);
       card.querySelector(":scope > .places").hidden = !open;
       if (card.hasAttribute("data-wide")) card.classList.toggle("card--wide", open);
@@ -1686,16 +1712,24 @@
     next: () => goStep(state.step + 1),
     back: () => {
       if (state.step === 0) {
+        if (state.editFrom) {
+          state.prefs = E.normalizePrefs(JSON.parse(state.editFrom));
+          state.editFrom = null;
+          persist();
+        } else if (state.results) runRecommend();
         state.stage = state.results ? "results" : "intro";
         renderPlan();
         syncHash();
       } else goStep(state.step - 1);
     },
     goto: (el) => {
+      // Editing from the results: Cancel puts these answers back.
+      if (state.stage === "results" && !state.editFrom) state.editFrom = JSON.stringify(state.prefs);
       setView("plan");
       goStep(Number(el.dataset.step));
     },
     "show-results": () => {
+      state.editFrom = null;
       state.stage = "results";
       state.focusRegion = null;
       runRecommend();
@@ -2069,7 +2103,12 @@ ${sel}[data-theme="dark"] { ${dark} }`;
   // On the live site it also returns the address to the view's own.
   $("#detail").addEventListener("close", () => {
     document.title = pageTitle();
-    if (PATHS && PLACE_PATH.test(location.pathname)) history.replaceState(null, "", viewURL());
+    if (!PATHS || !PLACE_PATH.test(location.pathname)) return;
+    // Places opened in the app go back to the view they were opened from, so Back
+    // then leaves it. A place address opened directly just becomes the view's address.
+    const depth = history.state && history.state.depth;
+    if (depth) history.go(-depth);
+    else history.replaceState(null, "", viewURL());
   });
 
   // Back and Forward move between places and views.
@@ -2082,6 +2121,11 @@ ${sel}[data-theme="dark"] { ${dark} }`;
       readHash();
       setView(state.view);
     }
+  });
+
+  // The share link box selects its link when clicked (the CSP blocks inline handlers).
+  document.addEventListener("click", (e) => {
+    if (e.target && e.target.id === "share-url") e.target.select();
   });
 
   window.addEventListener("hashchange", () => {

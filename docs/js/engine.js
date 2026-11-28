@@ -384,9 +384,11 @@
   function namesPlace(desc, placeName) {
     const norm = (x) => slug(x).replace(/-/g, " ");
     const main = norm(desc.split(/[(;]/)[0]);
+    // Without bracketed notes, "Sucre (constitutional) and La Paz (seat of government)" names both.
+    const named = norm(desc.replace(/\([^)]*\)/g, "").split(";")[0]).split(/ and /).map((x) => x.trim());
     const place = norm(placeName);
     const placeHead = norm(placeName.split(/ & |, | \(/)[0]);
-    return main === place || main === placeHead || main.split(/ and /).includes(placeHead);
+    return main === place || main === placeHead || main.split(/ and /).includes(placeHead) || named.includes(placeHead);
   }
 
   // Quiz answers come from saved storage and shared links, so every field is checked
@@ -588,7 +590,9 @@
     const temp = tempFor(city, prefs.month);
     const climate = climateScore(temp, prefs.climate);
     const budget = budgetScore(city.country.cost, prefs.budget);
-    const km = ctx.home ? haversineKm(ctx.home.lat, ctx.home.lon, city.country.lat, city.country.lon) : null;
+    // Measure to the place itself; places without coordinates fall back to the country.
+    const [lat, lon] = city.ll || [city.country.lat, city.country.lon];
+    const km = ctx.home ? haversineKm(ctx.home.lat, ctx.home.lon, lat, lon) : null;
     const distance = km === null ? 1 : distanceScore(km, prefs.distance);
     const vibe = vibeScore(city.pop, prefs.vibe);
 
@@ -709,7 +713,8 @@
       if (list.length < L.stops) score -= (L.stops - list.length) * 2;
       // A place you can see in a day or two fits a long trip less well on its own.
       if (country.maxDays < L.days) score *= 0.85 + (0.15 * country.maxDays) / L.days;
-      const itinerary = planItinerary(list, prefs.length, country.maxDays);
+      // Places closed to tourists stay in the ranked list but never become a stop.
+      const itinerary = planItinerary(list.filter((r) => r.city.remote !== "uninhabited"), prefs.length, country.maxDays);
       countryResults.push({
         country,
         score: Math.max(0, Math.round(score)),
