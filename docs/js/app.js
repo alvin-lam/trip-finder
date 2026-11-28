@@ -432,10 +432,8 @@
 
   // Each view, and each open place, gets its own browser tab title.
   const SITE_TITLE = "Trip Finder | All Trips Considered";
+  // Every view keeps the same tab title.
   function pageTitle() {
-    if (state.view === "explore") return `Explore destinations | ${SITE_TITLE}`;
-    if (state.view === "shortlist") return `Your shortlist | ${SITE_TITLE}`;
-    if (state.stage === "results" && state.results) return `Your trip matches | ${SITE_TITLE}`;
     return SITE_TITLE;
   }
 
@@ -1580,7 +1578,7 @@
     $("#detail-body").scrollTop = 0;
     dlg.scrollTop = 0;
     if (PATHS && location.pathname !== `/place/${city.id}/`) history.pushState({ place: city.id }, "", `/place/${city.id}/`);
-    document.title = `${city.name === city.country.name ? city.name : `${city.name}, ${city.country.name}`} | Trip Finder`;
+    document.title = SITE_TITLE;
   }
 
   function closeDetail() {

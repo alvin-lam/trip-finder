@@ -36,12 +36,15 @@ function swap(html, re, value) {
   return html.replace(re, value);
 }
 
+const TAB_TITLE = "Trip Finder | All Trips Considered";
+
 function page({ depth, url, title, description, jsonld, noscript }) {
   let html = TEMPLATE;
   // Relative files (css/, js/, img/, the manifest) are one or two folders up.
   const up = "../".repeat(depth);
   html = html.replace(/(href|src)="(?!https?:|#|\/|data:)([^"]+)"/g, (_, attr, p) => `${attr}="${up}${p}"`);
-  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`);
+  // Every page keeps the same browser tab title; link previews use the page's own title.
+  html = swap(html, /<title>[^<]*<\/title>/, `<title>${esc(TAB_TITLE)}</title>`);
   html = swap(html, /<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(description)}" />`);
   html = swap(html, /<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`);
   html = swap(html, /<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`);
