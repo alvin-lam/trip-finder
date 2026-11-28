@@ -121,6 +121,7 @@ README.md                     This file
 data/                         The dataset as JSON files (see data/README.md)
 tools/build-data.js           Builds docs/js/data.js from data/
 tools/build-pages.js          Builds the Explore and place pages and the sitemap
+tools/page-dates.json         Each page's fingerprint and last-changed date, for the sitemap
 tools/data-files.js           Where each part of the dataset lives in data/
 tools/fill_coords.py          Adds Wikipedia coordinates to places that lack them
 tools/coords_tried.json       Wikipedia titles fill_coords.py has already checked
@@ -161,7 +162,7 @@ node tools/build-data.js --check
 node tools/build-pages.js --check
 ```
 
-`tools/build-pages.js` generates `docs/explore/index.html` and `docs/place/<id>/index.html` from `docs/index.html`, and writes `docs/sitemap.xml` with every address. Other search basics:
+`tools/build-pages.js` generates `docs/explore/index.html` and `docs/place/<id>/index.html` from `docs/index.html`, and writes `docs/sitemap.xml` with every address and the date each page last changed. The dates live in `tools/page-dates.json`: a page's date moves to the day of the build only when its content changes, so commit that file with the pages. Other search basics:
 
 - `docs/index.html` carries the home page's description, canonical address, Open Graph and X preview tags (with `docs/img/og-image.png`, 1200 × 630), and structured data for the site, the app and All Trips Considered.
 - `docs/robots.txt` allows crawling and points to the sitemap.
