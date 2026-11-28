@@ -11,5 +11,8 @@
   "currency": "Franc (DJF)",
   "language": "French, Arabic",
   "blurb": "Salt lakes, whale sharks and lunar landscapes.",
-  "cities": [["Lac Assal & Bay of Tadjoura","21150402",1,"A salt lake below sea level and whale-shark snorkelling."],["Lac Abbé","00150401",1,"Limestone chimneys steaming at dawn."]]
+  "cities": [
+    ["Lac Assal & Bay of Tadjoura","21150402",1,"A salt lake below sea level and whale-shark snorkelling."],
+    ["Lac Abbé","00150401",1,"Limestone chimneys steaming at dawn.",null,{"temps":[34,36,38,39,41,43,41,39,40,39,36,34]}]
+  ]
 }

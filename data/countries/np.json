@@ -14,7 +14,7 @@
   "cities": [
     ["Kathmandu","05322241",3,"Ancient temples, stupas and trekking supply shops."],
     ["Pokhara","01352514",3,"Lakeside base for Annapurna treks and paragliding."],
-    ["Chitwan","01250413",2,"Jungle safaris for rhinos and tigers.",[10,11,12,1,2,3]],
+    ["Chitwan","01250413",2,"Jungle safaris for rhinos and tigers.",[10,11,12,1,2,3],{"temps":[22,27,33,38,39,37,33,32,31,30,26,23]}],
     ["Everest region (Lukla)","02150501",3,"The trek to Everest Base Camp.",[3,4,5,10,11]],
     ["Lumbini","05010113",3,"The birthplace of the Buddha, with the Maya Devi Temple and monasteries from many nations.",null,{"temps":[20,25,31,36,37,36,34,34,33,33,29,24]}]
   ]

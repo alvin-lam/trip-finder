@@ -15,7 +15,7 @@
     ["Panama City","24424242",3,"Casco Viejo, the Canal locks and a glittering skyline."],
     ["Bocas del Toro","51343415",3,"Caribbean islands, surf and stilt hotels."],
     ["San Blas Islands","50240305",2,"Guna Yala's tiny palm-covered islands."],
-    ["Boquete","02341414",2,"Coffee farms and cloud-forest hikes."],
+    ["Boquete","02341414",2,"Coffee farms and cloud-forest hikes.",null,{"temps":[22,23,24,24,23,23,22,22,23,22,22,22]}],
     ["Coiba National Park","41050505",2,"A former prison island surrounded by reefs, whale sharks and humpback whales.",null,{"temps":[33,34,35,35,33,32,32,32,32,31,31,32]}],
     ["Darién National Park","01050501",1,"Remote rainforest on the Colombian border, home to Emberá and Guna villages.",null,{"temps":[32,33,33,33,32,32,32,32,31,31,31,32]}],
     ["Portobelo & San Lorenzo","24120213",2,"Spanish forts and cannons guarding Panama's Caribbean treasure ports.",null,{"temps":[32,33,33,33,32,31,31,31,31,30,31,32]}],

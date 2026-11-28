@@ -14,7 +14,7 @@
   "cities": [
     ["Beijing","05423241",4,"The Forbidden City and the Great Wall."],
     ["Shanghai","04515152",4,"Art deco Bund, skyline views and soup dumplings."],
-    ["Yangshuo","02351414",3,"Karst peaks, river rafting and cycling through rice paddies."],
+    ["Yangshuo","02351414",3,"Karst peaks, river rafting and cycling through rice paddies.",null,{"temps":[15,18,22,26,29,31,32,32,30,26,22,16]}],
     ["Xi'an","05412131",4,"The Terracotta Army, city walls and the Muslim Quarter's food street."],
     ["Chengdu","03524133",3,"Giant pandas, teahouses and fiery Sichuan food."],
     ["Zhangjiajie","00251502",3,"Towering sandstone pillars and a glass bridge."],

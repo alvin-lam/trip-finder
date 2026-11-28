@@ -12,10 +12,10 @@
   "language": "English, Māori",
   "blurb": "Fjords, glaciers, geothermal wonders and adrenaline sports.",
   "cities": [
-    ["Queenstown","01454523",4,"Bungee, ski slopes and lakeside wine.",[1,2,3,7,8,12]],
+    ["Queenstown","01454523",4,"Bungee, ski slopes and lakeside wine.",[1,2,3,7,8,12],{"temps":[21,20,18,15,11,8,7,9,11,14,17,19]}],
     ["Auckland","33433342",3,"Harbour city of volcanoes and island day trips."],
     ["Rotorua","04341414",3,"Geysers, mud pools and Māori culture."],
-    ["Milford Sound","00150403",3,"Dramatic fjord cruises in Fiordland."],
+    ["Milford Sound","00150403",3,"Dramatic fjord cruises in Fiordland.",null,{"temps":[18,18,17,14,12,10,9,10,11,13,15,17]}],
     ["Wellington","03433233",3,"A compact capital of cafés and the Te Papa museum."],
     ["Bay of Islands","42341415",3,"Sailing, dolphins and Waitangi history."],
     ["Franz Josef Glacier","00150502",2,"Glacier hikes on the wild West Coast."],

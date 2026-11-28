@@ -13,9 +13,9 @@
   "blurb": "Mughal Lahore and the high peaks of the Karakoram.",
   "cities": [
     ["Lahore","05522152",2,"Mughal forts, mosques and a famous food street."],
-    ["Hunza Valley","01251504",2,"Apricot orchards beneath the Karakoram peaks."],
+    ["Hunza Valley","01251504",2,"Apricot orchards beneath the Karakoram peaks.",null,{"temps":[0,2,8,14,18,23,28,27,22,15,8,3]}],
     ["Islamabad","03332132",1,"A green capital below the Margalla Hills."],
-    ["Skardu","00150502",1,"The gateway to K2 and the Deosai plains.",[5,6,7,8,9]],
+    ["Skardu","00150502",1,"The gateway to K2 and the Deosai plains.",[5,6,7,8,9],{"temps":[2,4,9,15,20,25,29,29,24,17,10,5]}],
     ["Karachi","23413142",1,"A seaside megacity of food streets and markets."],
     ["Mohenjo-daro","05010201",2,"Brick streets, baths and granaries of a great Indus Valley city.",null,{"temps":[25,26,32,39,44,44,42,39,38,35,30,25]}],
     ["Takht-i-Bahi","04020311",1,"A hilltop Buddhist monastery with Gandharan sculpture.",null,{"temps":[18,19,24,30,36,41,38,36,35,32,25,19]}],

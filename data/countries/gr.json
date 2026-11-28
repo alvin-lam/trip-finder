@@ -14,7 +14,7 @@
   "cities": [
     ["Athens","25414132",4,"The Acropolis, lively tavernas and rooftop bars."],
     ["Santorini","42433225",5,"Caldera sunsets, volcanic beaches and cliffside hotels."],
-    ["Crete","53443424",3,"Gorge hikes, Minoan palaces and long sandy beaches."],
+    ["Crete","53443424",3,"Gorge hikes, Minoan palaces and long sandy beaches.",null,{"temps":[14,14,16,19,24,28,31,31,28,23,19,15]}],
     ["Mykonos","52325325",4,"Windmills, beach clubs and famous nightlife.",[6,7,8,9]],
     ["Meteora","04250213",3,"Monasteries perched on towering rock pillars."],
     ["Rhodes","44332324",3,"A medieval walled town and sandy beaches."],

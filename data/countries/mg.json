@@ -15,7 +15,7 @@
     ["Avenue of the Baobabs","00150303",2,"Towering baobabs glowing at sunset."],
     ["Andasibe","00250403",2,"Rainforest home of the singing indri lemur."],
     ["Nosy Be","51342315",2,"Island beaches and whale-shark snorkelling."],
-    ["Tsingy de Bemaraha","00150502",1,"Razor-sharp limestone forests crossed by rope bridges.",[5,6,7,8,9,10]],
+    ["Tsingy de Bemaraha","00150502",1,"Razor-sharp limestone forests crossed by rope bridges.",[5,6,7,8,9,10],{"temps":[30,30,30,30,29,29,30,32,35,36,35,33]}],
     ["Antananarivo","03322131",1,"A hilly capital with a royal hilltop palace."],
     ["Andrefana Dry Forests (Tsingy)","01050501",2,"Razor-sharp tsingy limestone forests and baobabs.",null,{"temps":[31,31,31,32,31,30,29,29,30,31,32,32]}],
     ["Rainforests of the Atsinanana","01050412",2,"Rainforest parks full of lemurs, including the singing indri.",null,{"temps":[31,31,30,30,28,26,25,26,26,28,29,30]}],

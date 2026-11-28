@@ -15,7 +15,7 @@
     ["Lalibela","05230312",3,"Medieval churches carved into solid rock."],
     ["Simien Mountains","00250502",2,"Gelada monkeys and dramatic escarpments."],
     ["Addis Ababa","03423132",1,"Coffee houses, jazz bars and the fossil Lucy."],
-    ["Danakil Depression","00150501",1,"Colourful sulphur springs and a lava lake region.",[11,12,1,2]],
+    ["Danakil Depression","00150501",1,"Colourful sulphur springs and a lava lake region.",[11,12,1,2],{"temps":[35,36,38,40,42,43,41,39,40,38,37,35]}],
     ["Gondar","05211112",1,"The castles of Ethiopia's old royal capital."],
     ["Aksum","05010211",2,"Giant stelae and the reputed resting place of the Ark of the Covenant.",null,{"temps":[26,27,29,29,29,27,22,22,25,26,27,26]}],
     ["Bale Mountains National Park","01050502",2,"Afroalpine moorland with Ethiopian wolves and mountain nyala.",null,{"temps":[25,25,26,26,25,24,22,23,23,24,24,25]}],

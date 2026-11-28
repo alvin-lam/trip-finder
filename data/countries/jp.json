@@ -15,7 +15,7 @@
     ["Tokyo","05525252",5,"Neon districts, sushi counters and quiet shrines."],
     ["Kyoto","05532134",5,"Temples, geisha districts and bamboo groves."],
     ["Osaka","04515152",4,"Street food capital with a famously fun nightlife."],
-    ["Sapporo & Hokkaido","02553523",3,"Powder snow in winter and flower fields in summer.",[1,2,7,8]],
+    ["Sapporo & Hokkaido","02553523",3,"Powder snow in winter and flower fields in summer.",[1,2,7,8],{"temps":[-2,-2,2,10,17,21,25,26,22,15,7,0]}],
     ["Nara","05341024",4,"A giant Buddha temple and a park full of bowing deer."],
     ["Hiroshima","04422123",3,"Peace Memorial Park and a ferry to Miyajima's floating torii."],
     ["Hakone","02351125",4,"Hot springs and views of Mount Fuji."],

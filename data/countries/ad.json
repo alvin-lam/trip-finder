@@ -17,7 +17,7 @@
   "blurb": "A Pyrenean principality for skiing, hiking and duty-free shopping.",
   "cities": [
     ["Andorra la Vella","02332254",3,"Duty-free shopping street and the Caldea thermal spa."],
-    ["Grandvalira","00252513",3,"The Pyrenees' largest ski area, with mountain biking in summer."],
+    ["Grandvalira","00252513",3,"The Pyrenees' largest ski area, with mountain biking in summer.",null,{"temps":[-1,0,3,6,11,16,20,20,15,10,3,0]}],
     ["Vallnord","00242513",1,"Ski slopes in winter and a bike park in summer."],
     ["Madriu-Perafita-Claror Valley","01050412",2,"A glacial valley of stone shepherd huts and high mountain trails above Andorra la Vella.",null,{"temps":[7,9,12,13,18,22,26,25,21,16,11,8]}]
   ]

@@ -14,9 +14,9 @@
   "cities": [
     ["Maasai Mara","03250503",4,"Classic savannah safari and the Great Migration.",[7,8,9,10]],
     ["Nairobi","03333231",3,"Giraffe centre, national park and a lively food scene."],
-    ["Diani Beach","51332315",2,"White sand, kitesurfing and coral reefs."],
-    ["Amboseli","00250403",2,"Elephants with Kilimanjaro behind them."],
-    ["Lamu","34332125",2,"A Swahili town of donkeys and dhows."],
+    ["Diani Beach","51332315",2,"White sand, kitesurfing and coral reefs.",null,{"temps":[32,32,32,30,29,28,28,28,29,30,30,31]}],
+    ["Amboseli","00250403",2,"Elephants with Kilimanjaro behind them.",null,{"temps":[29,31,31,29,28,28,28,29,30,31,29,28]}],
+    ["Lamu","34332125",2,"A Swahili town of donkeys and dhows.",null,{"temps":[31,32,32,31,29,28,27,27,28,29,30,31]}],
     ["Fort Jesus","24110112",2,"A Portuguese fortress in Mombasa's old town.",null,{"temps":[33,33,33,32,30,29,29,28,29,30,31,32]}],
     ["Kenya Rift Valley Lakes","01050303",3,"Flamingo-pink soda lakes like Nakuru and Bogoria in the Rift Valley.",null,{"temps":[26,27,27,25,24,24,23,24,25,24,23,25]}],
     ["Lake Turkana","01050401",1,"A remote jade-green lake in the northern Kenyan desert.",null,{"temps":[36,38,37,36,36,35,34,34,36,36,35,36]}],

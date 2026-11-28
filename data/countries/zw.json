@@ -12,10 +12,10 @@
   "language": "English, Shona, Ndebele",
   "blurb": "Victoria Falls, Hwange's elephants and ancient stone ruins.",
   "cities": [
-    ["Victoria Falls","01250513",3,"Rainforest viewpoints facing the falls."],
-    ["Hwange","00250403",2,"Huge elephant herds at waterholes."],
+    ["Victoria Falls","01250513",3,"Rainforest viewpoints facing the falls.",null,{"temps":[31,30,31,30,29,27,26,30,34,37,35,32]}],
+    ["Hwange","00250403",2,"Huge elephant herds at waterholes.",null,{"temps":[32,31,32,32,30,28,27,31,35,37,36,33]}],
     ["Great Zimbabwe","05140212",1,"The stone ruins of a medieval city."],
-    ["Mana Pools","00250403",1,"Walking safaris on the Zambezi floodplain."],
+    ["Mana Pools","00250403",1,"Walking safaris on the Zambezi floodplain.",null,{"temps":[31,31,31,32,31,29,29,32,35,38,37,33]}],
     ["Harare","03323131",1,"Jacaranda-lined avenues, galleries and craft markets."],
     ["Khami Ruins","04020101",1,"Stone ruins of a city of the Torwa dynasty.",null,{"temps":[28,27,27,26,24,22,22,24,28,29,29,28]}],
     ["Matobo Hills","03050412",3,"Granite kopjes, rock art and rhinos.",null,{"temps":[28,27,27,26,24,22,22,24,28,29,29,28]}]

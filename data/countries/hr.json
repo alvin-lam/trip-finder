@@ -14,7 +14,7 @@
   "cities": [
     ["Dubrovnik","44333324",4,"Walk the old city walls above the Adriatic."],
     ["Split","44334324",4,"A Roman palace turned lively old town and island hub."],
-    ["Plitvice Lakes","01250304",3,"Cascading turquoise lakes linked by boardwalks."],
+    ["Plitvice Lakes","01250304",3,"Cascading turquoise lakes linked by boardwalks.",null,{"temps":[3,4,9,14,19,24,27,27,21,15,9,4]}],
     ["Hvar","43334324",3,"Lavender fields, a yacht harbour and party nights.",[6,7,8,9]],
     ["Zagreb","03423132",2,"Café culture and quirky museums."],
     ["Šibenik","25420123",3,"A stone cathedral and an old town on the Dalmatian coast.",null,{"temps":[11,12,14,18,23,28,31,31,25,20,16,12]}],

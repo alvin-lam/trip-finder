@@ -244,7 +244,7 @@
   "cu-havana": [["Havana Jazz Festival",[1],"Concerts across the city"]],
   "ar-mendoza": [["Fiesta de la Vendimia",[2,3],"Grape harvest festival with parades in the vineyards"]],
   "ar-buenos-aires": [
-    ["Tango BA Festival",[8],"Free tango shows and the world tango championships"],
+    ["Tango BA Festival",[8,9],"Free tango shows and the world tango championships"],
     ["Marcha del Orgullo",[11],"March from Plaza de Mayo to Congress in early November","pride"]
   ],
   "au-sydney": [
@@ -258,7 +258,7 @@
   ],
   "nz-wellington": [
     ["World of WearableArt",[9,10],"Theatrical wearable art show"],
-    ["Wellington Pride Festival",[2,3],"Festival and Out in the Park fair","pride"]
+    ["Wellington Pride Festival",[3],"Festival and Out in the Park fair","pride"]
   ],
   "za-cape-town": [
     ["Cape Town Minstrel Carnival",[1],"Tweede Nuwe Jaar street parade on January 2"],
@@ -449,5 +449,5 @@
   "in-kolkata": [["Durga Puja",[9,10],"Bengal's biggest festival, with themed pandals across the city"]],
   "in-amritsar": [["Bandi Chhor Divas & Diwali",[10,11],"The Golden Temple lit with lamps and fireworks"]],
   "th-pattaya": [["Wan Lai Water Festival",[4],"Pattaya's Songkran water fights in mid-April"]],
-  "vn-da-nang": [["Da Nang International Fireworks Festival",[6,7],"Fireworks contests over the Han River"]]
+  "vn-da-nang": [["Da Nang International Fireworks Festival",[5,6,7],"Fireworks contests over the Han River"]]
 }

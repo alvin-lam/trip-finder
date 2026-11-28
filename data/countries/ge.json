@@ -13,9 +13,9 @@
   "blurb": "Wine, feasts, cave towns and high Caucasus villages.",
   "cities": [
     ["Tbilisi","04524142",4,"Sulphur baths, a balconied old town and natural wine bars."],
-    ["Kazbegi","02251403",3,"A hilltop church beneath snowy Mount Kazbek."],
+    ["Kazbegi","02251403",3,"A hilltop church beneath snowy Mount Kazbek.",null,{"temps":[-2,-1,3,9,15,20,23,23,18,12,5,0]}],
     ["Batumi","33424323",2,"A Black Sea boulevard and botanical gardens.",[6,7,8,9]],
-    ["Svaneti","03251502",2,"Medieval defence towers in high Caucasus villages.",[6,7,8,9]],
+    ["Svaneti","03251502",2,"Medieval defence towers in high Caucasus villages.",[6,7,8,9],{"temps":[-4,-3,0,5,12,17,20,21,16,10,3,-2]}],
     ["Kakheti","03441214",2,"Wine country of monasteries and clay-pot wine."],
     ["Colchic Rainforests","11050403",1,"Humid forests and wetlands near the Black Sea.",null,{"temps":[7,8,12,19,23,28,31,31,26,19,12,8]}],
     ["Gelati Monastery","05020212",2,"A medieval monastery with golden mosaics near Kutaisi.",null,{"temps":[10,11,15,20,24,28,29,30,27,22,16,12]}],

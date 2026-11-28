@@ -13,7 +13,7 @@
   "blurb": "Tea country, ancient cities, leopards and golden beaches.",
   "cities": [
     ["Kandy","05341223",3,"Temple of the Tooth and gateway to tea country."],
-    ["Ella","02351414",3,"Scenic train rides, tea estates and Nine Arch Bridge."],
+    ["Ella","02351414",3,"Scenic train rides, tea estates and Nine Arch Bridge.",null,{"temps":[22,23,25,26,26,25,26,26,26,25,23,22]}],
     ["Galle","44422234",3,"Dutch colonial fort town near surf beaches."],
     ["Sigiriya","05240213",3,"Climb the ancient Lion Rock fortress."],
     ["Mirissa","51332315",3,"Whale watching and palm-lined beaches."],

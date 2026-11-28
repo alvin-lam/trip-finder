@@ -14,8 +14,8 @@
   "cities": [
     ["Santiago","04434242",3,"Andes backdrop, wine day trips and lively barrios."],
     ["San Pedro de Atacama","02251503",3,"Salt flats, geysers and incredible stargazing."],
-    ["Torres del Paine","00250502",3,"Granite towers and the famous W Trek.",[11,12,1,2,3]],
-    ["Valparaíso","24434232",3,"Hillside street art, funiculars and a bohemian port."],
+    ["Torres del Paine","00250502",3,"Granite towers and the famous W Trek.",[11,12,1,2,3],{"temps":[12,12,10,8,6,4,3,4,6,8,10,11]}],
+    ["Valparaíso","24434232",3,"Hillside street art, funiculars and a bohemian port.",null,{"temps":[19,19,19,17,16,14,14,14,14,15,16,18]}],
     ["Easter Island","15250204",2,"Mysterious moai statues on a remote island."],
     ["Pucón & the Lake District","11251414",2,"Volcano climbs, hot springs and lakes.",[11,12,1,2,3]],
     ["Churches of Chiloé","14240213",2,"Wooden churches with shingled towers on misty Chiloé Island.",null,{"temps":[20,20,19,16,13,11,11,11,13,16,18,20]}],

@@ -13,7 +13,7 @@
   "blurb": "Roman cities, Saharan oases and a white Mediterranean capital.",
   "cities": [
     ["Algiers","24323132",1,"Kasbah lanes above a whitewashed bay."],
-    ["Djanet & Tassili n'Ajjer","02150403",1,"Saharan rock art and sandstone forests."],
+    ["Djanet & Tassili n'Ajjer","02150403",1,"Saharan rock art and sandstone forests.",null,{"temps":[18,22,27,32,36,38,38,38,36,31,25,20]}],
     ["Ghardaïa (M'zab Valley)","04210113",1,"Fortified hilltop towns in the desert."],
     ["Beni Hammad Fort","03020201",1,"Ruins of an 11th-century Hammadid capital in the Hodna mountains.",null,{"temps":[13,14,16,20,23,27,31,31,27,22,17,14]}],
     ["Djémila","04020211",2,"A Roman mountain town with well-preserved forums and mosaics.",null,{"temps":[6,7,13,17,25,29,33,33,25,16,12,9]}],

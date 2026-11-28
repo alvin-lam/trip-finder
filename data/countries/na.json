@@ -13,10 +13,10 @@
   "blurb": "Towering red dunes, desert wildlife and epic self-drive road trips.",
   "cities": [
     ["Sossusvlei","01150503",3,"Climb some of the world's tallest sand dunes."],
-    ["Etosha","01250403",3,"Salt-pan safari with waterhole wildlife spotting."],
-    ["Swakopmund","22342513",2,"Sandboarding, quad biking and Atlantic fog."],
+    ["Etosha","01250403",3,"Salt-pan safari with waterhole wildlife spotting.",null,{"temps":[34,33,33,31,29,26,26,30,34,37,36,35]}],
+    ["Swakopmund","22342513",2,"Sandboarding, quad biking and Atlantic fog.",null,{"temps":[22,22,22,23,23,21,21,19,19,19,20,21]}],
     ["Skeleton Coast","10150502",1,"Shipwrecks and seal colonies on a foggy desert coast."],
-    ["Fish River Canyon","00150501",1,"One of Africa's largest canyons.",[5,6,7,8,9]],
+    ["Fish River Canyon","00150501",1,"One of Africa's largest canyons.",[5,6,7,8,9],{"temps":[39,38,37,33,29,25,25,27,31,35,37,38]}],
     ["Windhoek","03322132",2,"A small, orderly capital with German colonial buildings."],
     ["Twyfelfontein","03040301",2,"Thousands of San rock engravings in the Namibian desert.",null,{"temps":[22,23,22,21,21,20,20,18,18,19,21,22]}]
   ]

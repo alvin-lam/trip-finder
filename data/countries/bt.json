@@ -11,5 +11,10 @@
   "currency": "Ngultrum (BTN)",
   "language": "Dzongkha",
   "blurb": "A Himalayan kingdom of cliffside monasteries.",
-  "cities": [["Paro","04351414",3,"The Tiger's Nest monastery clinging to a cliff."],["Thimphu","04331123",2,"A capital with no traffic lights and grand fortress-monasteries."],["Punakha","04341214",2,"A riverside fortress and rice valleys."],["Bumthang","04241213",1,"Bhutan's spiritual heartland of temples."]]
+  "cities": [
+    ["Paro","04351414",3,"The Tiger's Nest monastery clinging to a cliff."],
+    ["Thimphu","04331123",2,"A capital with no traffic lights and grand fortress-monasteries."],
+    ["Punakha","04341214",2,"A riverside fortress and rice valleys.",null,{"temps":[19,20,23,26,28,30,30,30,29,26,23,20]}],
+    ["Bumthang","04241213",1,"Bhutan's spiritual heartland of temples."]
+  ]
 }
